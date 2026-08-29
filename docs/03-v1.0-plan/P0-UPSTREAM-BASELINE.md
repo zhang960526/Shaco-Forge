@@ -1,6 +1,10 @@
 # P0 — Upstream Baseline & Product Capability Audit
 
-Status: READY_FOR_EXECUTION_AFTER-FREEZE
+Status: IN_PROGRESS
+P0-1: CLOSED / PASS
+P0-2 through P0-7: NOT_STARTED
+`P0_BASELINE_FROZEN = YES`
+`SHACO_FORGE_V1_0_P0 = NOT_PASS`
 
 ## Goal
 
@@ -26,19 +30,42 @@ Forbidden:
 - Harness source patch
 - production Shaco implementation
 
+## Frozen Baseline (P0-1 PASS)
+
+Exact identity is recorded in:
+
+`docs/06-testing-acceptance/evidence/P0-1-HARNESS-BASELINE-MANIFEST.md`
+
+Summary:
+
+- Repository: `https://github.com/deepseek-ai/deepseek-harness.git`
+- Branch: `master`
+- Commit: `cd5ef8148158c3a752a658978873241fdf8e2bbc`
+- CommitDate: `2026-08-28T00:57:43+08:00`
+- Release: `dsh-v0.1.2-alpha.1`
+- PackageVersion: `0.1.2-alpha.1`
+- Worktree: `D:\Project\Shaco-Forge-Upstream\deepseek-harness`
+- Distribution: `git-worktree`
+- `CHANGED_SINCE_PREVIOUS_AUDIT = NO`
+
+This exact baseline is now the official Shaco Forge V1.0 upstream pin for P0 through P8. Subsequent P0 steps may install/build inside this worktree only with frozen lockfile and must leave source + lockfile unmodified.
+
 ## P0-1 — Upstream Baseline Freeze
 
-Record:
+Status: CLOSED / PASS  
+Gate: `P0_BASELINE_FROZEN = YES`
+
+Recorded:
 
 - repository / branch / exact SHA / commit date / release
 - dsh package version
 - Node / pnpm / TypeScript
 - `pnpm-lock.yaml` content hash
-- Harness distribution form: worktree vs packed distribution
-- Windows version + CPU arch policy
-- clean/dirty state
+- Harness distribution form: `git-worktree`
+- Windows version + CPU arch
+- clean worktree state
 
-Gate: `P0_BASELINE_FROZEN = YES`
+P0-2 was not started by this step.
 
 ## P0-2 — Web + Standard Preset Composition Census
 
@@ -159,15 +186,17 @@ Gate: `P0S_SPIKE_INPUT_FROZEN = YES`
 
 ## Final Gate
 
-P0 passes only if all of the following are YES:
+P0 passes only if all of the following are YES. Current values after P0-1:
 
-- P0_BASELINE_FROZEN
-- P0_WEB_COMPOSITION_KNOWN
-- P0_STANDARD_PRESET_KNOWN
-- P0_CLIENT_HOST_CONTRACT_KNOWN
-- P0_EXACT_FETCH_ROUTES_ENUMERATED
-- P0_TRUST_SURFACE_KNOWN
-- P0_LOOPBACK_CLASSIFIER_LOCATED
-- P0_CORE_PARITY_SCOPE_FROZEN
-- P0_DEPENDENCY_BOUNDARY_FROZEN
-- P0S_SPIKE_INPUT_FROZEN
+- P0_BASELINE_FROZEN = YES
+- P0_WEB_COMPOSITION_KNOWN = NO
+- P0_STANDARD_PRESET_KNOWN = NO
+- P0_CLIENT_HOST_CONTRACT_KNOWN = NO
+- P0_EXACT_FETCH_ROUTES_ENUMERATED = NO
+- P0_TRUST_SURFACE_KNOWN = NO
+- P0_LOOPBACK_CLASSIFIER_LOCATED = NO
+- P0_CORE_PARITY_SCOPE_FROZEN = NO
+- P0_DEPENDENCY_BOUNDARY_FROZEN = NO
+- P0S_SPIKE_INPUT_FROZEN = NO
+
+Therefore `SHACO_FORGE_V1_0_P0 = NOT_PASS`.

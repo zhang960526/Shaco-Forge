@@ -11,9 +11,12 @@ Last Updated: 2026-08-29
 
 ## Current Phase
 
-- Phase: Pre-Implementation Documentation Freeze
-- Next Executable Phase: P0 — Upstream Baseline & Product Capability Audit
+- Phase: P0 — Upstream Baseline & Product Capability Audit
+- Step: P0-1 CLOSED / PASS
+- Next Executable Step: P0-2 — Web + Standard Preset Composition Census
 - Production Implementation: NOT_STARTED
+- `SHACO_FORGE_V1_0_P0_1 = PASS`
+- `SHACO_FORGE_V1_0_P0 = NOT_PASS` (P0-2 through P0-7 not executed)
 
 ## Architecture Review State
 
@@ -34,26 +37,38 @@ Last Updated: 2026-08-29
 - Dynamic Cordis: release default not enabled unless P0.S proves a required core dependency
 - Harness upgrades: exact baseline pin + compatibility test + backup + fail-closed; no down-migration promise
 
+## Frozen Harness Baseline (P0-1)
+
+Authority: `docs/06-testing-acceptance/evidence/P0-1-HARNESS-BASELINE-MANIFEST.md`
+
+- Repository: `https://github.com/deepseek-ai/deepseek-harness.git`
+- Branch: `master`
+- Commit: `cd5ef8148158c3a752a658978873241fdf8e2bbc`
+- Commit date: `2026-08-28T00:57:43+08:00`
+- Release: git tag `dsh-v0.1.2-alpha.1`
+- Package: `@deepseek-ai/dsh@0.1.2-alpha.1`
+- Distribution: `git-worktree`
+- Upstream path: `D:\Project\Shaco-Forge-Upstream\deepseek-harness`
+- `CHANGED_SINCE_PREVIOUS_AUDIT = NO`
+
+This exact SHA is now the Shaco Forge V1.0 upstream pin for P0 through P8. Do not pull, update, or switch SHA without an Architecture Decision.
+
 ## Audit Reference Baseline
 
-Previous audits used:
-
-- Harness commit: `cd5ef8148158c3a752a658978873241fdf8e2bbc`
-- Release: `dsh@0.1.2-alpha.1`
-
-This is an audit reference only. P0-1 must re-confirm and freeze the actual implementation baseline before any implementation phase.
+Previous audits used the same commit/release as a reference only. P0-1 re-confirmed it from a fresh official clone and GitHub REST, then froze it.
 
 ## Current Readiness
 
 - P0 Design: READY
-- P0.S Design: READY
-- P0.5 Design: READY
+- P0 execution: IN_PROGRESS
+- P0-1: PASS / CLOSED
+- P0.S Design: READY (execution not allowed until P0 PASS)
+- P0.5 Design: READY (freeze not allowed until P0.S PASS)
 - P1 Detailed Freeze: NOT_ALLOWED until P0.S PASS
 - P2+ Implementation: NOT_ALLOWED
 
 ## Immediate Next Action
 
-1. Freeze this documentation pack.
-2. Begin P0-1 using a pinned Harness worktree.
-3. P0 may perform read-only/diagnostic install/build on the pinned worktree without mutating the baseline.
-4. Do not begin P1 freeze before P0.S passes.
+1. Execute P0-2 Web + Standard Preset Composition Census against the frozen worktree.
+2. P0 may perform read-only/diagnostic install/build on the pinned worktree without mutating the baseline. Use frozen lockfile only.
+3. Do not begin P0.S, P1, Desktop, Worker, or Named Pipe work.

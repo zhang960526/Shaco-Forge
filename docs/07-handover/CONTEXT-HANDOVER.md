@@ -24,7 +24,7 @@ V1.0 = Harness Desktop Baseline using Electron Desktop + independent per-user lo
 
 ## Current Status
 
-P0/P0.S/P0.5 design has been audited and is ready with corrections incorporated. P0 execution is next. P1 cannot freeze until P0.S passes.
+P0 is IN_PROGRESS. P0-1 PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. Next step is P0-2. Entire P0 is not PASS. P0.S is not started. P1 cannot freeze until P0.S passes.
 
 ## First Files to Read
 

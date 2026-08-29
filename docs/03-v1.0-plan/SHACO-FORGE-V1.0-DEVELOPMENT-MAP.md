@@ -21,17 +21,19 @@ P0   Upstream Baseline & Product Capability Audit
 
 ## P0
 
-Status: READY_FOR_EXECUTION_AFTER_DOCUMENT_FREEZE
+Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0 = NOT_PASS`)
 
 Steps:
 
-- P0-1 Upstream Baseline Freeze
-- P0-2 Web + Standard Preset Composition Census
-- P0-3 Client↔Host Contract Census
-- P0-4 Authentication / Trust Surface Audit
-- P0-5 Core Feature Parity Matrix
-- P0-6 Dependency & Stability Matrix
-- P0-7 Risk Register & P0.S Input Freeze
+- P0-1 Upstream Baseline Freeze — PASS / CLOSED
+- P0-2 Web + Standard Preset Composition Census — NOT_STARTED
+- P0-3 Client↔Host Contract Census — NOT_STARTED
+- P0-4 Authentication / Trust Surface Audit — NOT_STARTED
+- P0-5 Core Feature Parity Matrix — NOT_STARTED
+- P0-6 Dependency & Stability Matrix — NOT_STARTED
+- P0-7 Risk Register & P0.S Input Freeze — NOT_STARTED
+
+Frozen Harness baseline: `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`). See `docs/06-testing-acceptance/evidence/P0-1-HARNESS-BASELINE-MANIFEST.md`.
 
 ## P0.S
 

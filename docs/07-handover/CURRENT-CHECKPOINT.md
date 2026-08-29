@@ -9,21 +9,40 @@ Date: 2026-08-29
 - Corrective architecture accepted
 - P0 / P0.S / P0.5 detailed design audited
 - Documentation skeleton created
+- Shaco Forge Git repository initialized (`master`, no remote, no push)
+- P0-1 Upstream Baseline Freeze: PASS
 
 ## Current Gate
 
 `ALLOW_P0_EXECUTION = YES`
 
+`P0_BASELINE_FROZEN = YES`
+
+`SHACO_FORGE_V1_0_P0_1 = PASS`
+
+`SHACO_FORGE_V1_0_P0 = NOT_PASS`
+
 `P1_FREEZE_ALLOWED = NO` until `SHACO_FORGE_V1_0_P0S = PASS`.
+
+## Frozen Baseline
+
+- `https://github.com/deepseek-ai/deepseek-harness.git` `master`
+- `cd5ef8148158c3a752a658978873241fdf8e2bbc`
+- `dsh@0.1.2-alpha.1` / tag `dsh-v0.1.2-alpha.1`
+- worktree: `D:\Project\Shaco-Forge-Upstream\deepseek-harness`
+- manifest: `docs/06-testing-acceptance/evidence/P0-1-HARNESS-BASELINE-MANIFEST.md`
 
 ## Next Step
 
-Execute P0-1 baseline freeze on the actual Harness baseline selected for implementation.
+P0-2 — WEB PRODUCT COMPOSITION CENSUS
+
+NOT EXECUTED in the P0-1 session.
 
 ## Important Constraints
 
 - no production implementation yet
-- P0 may install/build only inside pinned worktree without mutating baseline
+- do not pull/switch/update the frozen Harness SHA without an Architecture Decision
+- P0 may install/build only inside pinned worktree without mutating baseline; frozen lockfile only
 - P0 must include standard preset census
 - P0.S must prove carrier, trust, binary path, reconnect, packaging runtime strategy and fresh-Windows no-Node condition
 - P0.5 freezes only after P0.S evidence

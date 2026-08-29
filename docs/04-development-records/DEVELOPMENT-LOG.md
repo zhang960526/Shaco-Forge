@@ -4,6 +4,18 @@ Status: ACTIVE
 
 ## 2026-08-29
 
+- Shaco Forge Git repository initialized on `master`. No GitHub/Gitee remote added. No push.
+- Documentation baseline committed: `chore(docs): bootstrap Shaco Forge documentation baseline`.
+- P0-1 executed. Official DeepSeek Harness cloned to `D:\Project\Shaco-Forge-Upstream\deepseek-harness` (outside the product repo).
+- Official `master` re-confirmed and frozen at `cd5ef8148158c3a752a658978873241fdf8e2bbc` / `dsh@0.1.2-alpha.1` / tag `dsh-v0.1.2-alpha.1`.
+- `CHANGED_SINCE_PREVIOUS_AUDIT = NO`.
+- `HARNESS_BASELINE_MANIFEST` written. Upstream worktree left CLEAN. No Harness build, no source mutation, no lockfile change.
+- `SHACO_FORGE_V1_0_P0_1 = PASS`. Entire P0 remains `NOT_PASS`.
+- Next executable technical action: P0-2 Web + Standard Preset Composition Census.
+- Production implementation remains NOT_STARTED.
+
+Earlier the same day:
+
 - Shaco Forge name adopted as current project name.
 - V1.0 direction defined as DeepSeek Harness Desktop Baseline.
 - Initial architecture audit returned FAIL; core Desktop+Worker direction retained, custom Agent protocol/full plugin parity/down-migration assumptions rejected.
@@ -11,5 +23,3 @@ Status: ACTIVE
 - P0 / P0.S / P0.5 detailed design completed and audited PASS_WITH_REQUIRED_CORRECTIONS.
 - Architecture Owner accepted P0-stage corrections.
 - Documentation system initialized.
-- Production implementation remains NOT_STARTED.
-- Next executable technical action: P0-1 baseline freeze and P0 read-only discovery.
