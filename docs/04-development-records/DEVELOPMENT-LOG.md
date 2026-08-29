@@ -11,8 +11,14 @@ Status: ACTIVE
 - `CHANGED_SINCE_PREVIOUS_AUDIT = NO`.
 - `HARNESS_BASELINE_MANIFEST` written. Upstream worktree left CLEAN. No Harness build, no source mutation, no lockfile change.
 - `SHACO_FORGE_V1_0_P0_1 = PASS`. Entire P0 remains `NOT_PASS`.
-- Next executable technical action: P0-2 Web + Standard Preset Composition Census.
 - Production implementation remains NOT_STARTED.
+- P0-2 executed against frozen SHA `cd5ef8148158c3a752a658978873241fdf8e2bbc`.
+- Obtained pnpm 11.7.0 via Corepack; `pnpm install --frozen-lockfile`; `dsh web --dump-default-config` via tsx (no production build).
+- Upstream worktree remained CLEAN; lockfile SHA256 unchanged.
+- Web composition = dsh-base + dsh-web-app. Standard preset remounts host-disabled agent tools except `tool-str-replace-editor`.
+- Evidence: `docs/06-testing-acceptance/evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md`.
+- `SHACO_FORGE_V1_0_P0_2 = PASS`. Entire P0 remains `NOT_PASS`.
+- Next executable technical action: P0-3 Client↔Host Contract Census.
 
 Earlier the same day:
 

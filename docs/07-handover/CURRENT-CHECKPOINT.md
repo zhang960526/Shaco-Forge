@@ -11,6 +11,7 @@ Date: 2026-08-29
 - Documentation skeleton created
 - Shaco Forge Git repository initialized (`master`, no remote, no push)
 - P0-1 Upstream Baseline Freeze: PASS
+- P0-2 Web + Standard Preset Composition Census: PASS
 
 ## Current Gate
 
@@ -19,6 +20,12 @@ Date: 2026-08-29
 `P0_BASELINE_FROZEN = YES`
 
 `SHACO_FORGE_V1_0_P0_1 = PASS`
+
+`SHACO_FORGE_V1_0_P0_2 = PASS`
+
+`P0_WEB_COMPOSITION_KNOWN = YES`
+
+`P0_STANDARD_PRESET_KNOWN = YES`
 
 `SHACO_FORGE_V1_0_P0 = NOT_PASS`
 
@@ -34,9 +41,11 @@ Date: 2026-08-29
 
 ## Next Step
 
-P0-2 — WEB PRODUCT COMPOSITION CENSUS
+P0-3 — CLIENT ↔ HOST CONTRACT CENSUS
 
-NOT EXECUTED in the P0-1 session.
+NOT EXECUTED in the P0-2 session.
+
+Composition map: `docs/06-testing-acceptance/evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md`
 
 ## Important Constraints
 

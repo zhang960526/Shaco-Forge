@@ -2,8 +2,11 @@
 
 Status: IN_PROGRESS
 P0-1: CLOSED / PASS
-P0-2 through P0-7: NOT_STARTED
+P0-2: CLOSED / PASS
+P0-3 through P0-7: NOT_STARTED
 `P0_BASELINE_FROZEN = YES`
+`P0_WEB_COMPOSITION_KNOWN = YES`
+`P0_STANDARD_PRESET_KNOWN = YES`
 `SHACO_FORGE_V1_0_P0 = NOT_PASS`
 
 ## Goal
@@ -68,6 +71,21 @@ Recorded:
 P0-2 was not started by this step.
 
 ## P0-2 — Web + Standard Preset Composition Census
+
+Status: CLOSED / PASS  
+Gates: `P0_WEB_COMPOSITION_KNOWN = YES`, `P0_STANDARD_PRESET_KNOWN = YES`
+
+Evidence:
+
+- `docs/06-testing-acceptance/evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md`
+- `docs/06-testing-acceptance/evidence/P0-2-WEB-DUMP-DEFAULT-CONFIG.yml` (diagnostic only)
+
+Summary:
+
+- Web profile = `dsh-base` + `dsh-web-app`; `patchReload: live`.
+- Host plane disables agent tools; `standard` remounts them per session (except `tool-str-replace-editor`).
+- Default session persistence = JSONL; SQLite persistence package is not in the web tree.
+- Windows shell = standard `tool-pwsh`; sandbox = `sandbox-windows-acl` via `sandbox-local`.
 
 Must separately enumerate:
 
@@ -189,8 +207,8 @@ Gate: `P0S_SPIKE_INPUT_FROZEN = YES`
 P0 passes only if all of the following are YES. Current values after P0-1:
 
 - P0_BASELINE_FROZEN = YES
-- P0_WEB_COMPOSITION_KNOWN = NO
-- P0_STANDARD_PRESET_KNOWN = NO
+- P0_WEB_COMPOSITION_KNOWN = YES
+- P0_STANDARD_PRESET_KNOWN = YES
 - P0_CLIENT_HOST_CONTRACT_KNOWN = NO
 - P0_EXACT_FETCH_ROUTES_ENUMERATED = NO
 - P0_TRUST_SURFACE_KNOWN = NO

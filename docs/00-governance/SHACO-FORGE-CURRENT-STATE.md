@@ -12,11 +12,12 @@ Last Updated: 2026-08-29
 ## Current Phase
 
 - Phase: P0 — Upstream Baseline & Product Capability Audit
-- Step: P0-1 CLOSED / PASS
-- Next Executable Step: P0-2 — Web + Standard Preset Composition Census
+- Step: P0-2 CLOSED / PASS
+- Next Executable Step: P0-3 — Client↔Host Contract Census
 - Production Implementation: NOT_STARTED
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
-- `SHACO_FORGE_V1_0_P0 = NOT_PASS` (P0-2 through P0-7 not executed)
+- `SHACO_FORGE_V1_0_P0_2 = PASS`
+- `SHACO_FORGE_V1_0_P0 = NOT_PASS` (P0-3 through P0-7 not executed)
 
 ## Architecture Review State
 
@@ -62,6 +63,7 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - P0 Design: READY
 - P0 execution: IN_PROGRESS
 - P0-1: PASS / CLOSED
+- P0-2: PASS / CLOSED
 - P0.S Design: READY (execution not allowed until P0 PASS)
 - P0.5 Design: READY (freeze not allowed until P0.S PASS)
 - P1 Detailed Freeze: NOT_ALLOWED until P0.S PASS
@@ -69,6 +71,7 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 
 ## Immediate Next Action
 
-1. Execute P0-2 Web + Standard Preset Composition Census against the frozen worktree.
-2. P0 may perform read-only/diagnostic install/build on the pinned worktree without mutating the baseline. Use frozen lockfile only.
-3. Do not begin P0.S, P1, Desktop, Worker, or Named Pipe work.
+1. Execute P0-3 Client↔Host Contract Census against the frozen worktree.
+2. Composition authority: `docs/06-testing-acceptance/evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md`.
+3. P0 may perform read-only/diagnostic install/build on the pinned worktree without mutating the baseline. Use frozen lockfile only.
+4. Do not begin P0.S, P1, Desktop, Worker, or Named Pipe work.

@@ -50,7 +50,7 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | Document | Role | Status |
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
-| `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | IN_PROGRESS (P0-1 PASS) |
+| `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | IN_PROGRESS (P0-1 PASS, P0-2 PASS) |
 | `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract 候选 | READY-FOR-EXECUTION-AFTER-P0 |
 | `P05-COMPATIBILITY-VERSION.md` | P0.5 Compatibility Contract 候选 | READY-FOR-FREEZE-AFTER-P0S |
 | `P1-SYSTEM-CONTRACT.md` | P1 骨架 | NOT-DETAILED |
@@ -92,6 +92,8 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | `V1.0-ACCEPTANCE-MATRIX.md` | 最终验收矩阵骨架 |
 | `evidence/` | 阶段证据 |
 | `evidence/P0-1-HARNESS-BASELINE-MANIFEST.md` | P0-1 frozen Harness identity (HARNESS_BASELINE_MANIFEST) |
+| `evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md` | P0-2 Web + standard composition (HARNESS_WEB_COMPOSITION_MAP) |
+| `evidence/P0-2-WEB-DUMP-DEFAULT-CONFIG.yml` | P0-2 dump-config diagnostic (not a stable API) |
 
 ## 9. Handover
 
