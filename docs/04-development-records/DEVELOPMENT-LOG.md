@@ -2,6 +2,35 @@
 
 Status: ACTIVE
 
+## 2026-08-30
+
+- P0-5 executed against frozen Harness
+  `cd5ef8148158c3a752a658978873241fdf8e2bbc`; upstream SHA, clean worktree and
+  lockfile identity were reverified before scope synthesis.
+- Product Vision, V1.0 Master Goal, accepted architecture/ADRs and P0-2/P0-3/
+  P0-4 evidence were reconciled with current standard-preset and concrete
+  command/subagent/plugin registrations.
+- V1.0 REQUIRED scope is the complete local Desktop Agent loop: DeepSeek
+  credential/model, workspace/session persistence, text streaming,
+  PowerShell/fs/search tools, permission/approval/question interaction,
+  Settings persistence, core in-process subagent and Desktop/Worker
+  durability/reconnect.
+- Harness standard inclusion was not treated as automatic product scope.
+  Images/Export/Plan/Compaction/Jobs/Skills/web tools remain OPTIONAL;
+  Goal/Workflow/Ralph/Schedule and external subagent providers are DEFERRED.
+- Browser transport artifacts are WEB_ONLY. Official in-box components form
+  the plugin baseline; arbitrary npm/GitHub/marketplace/Dynamic Cordis product
+  scope is excluded.
+- `USER_QUESTION_CLASSIFICATION = REQUIRED`,
+  `DIRECTORY_PICKER_CLASSIFICATION = REQUIRED`,
+  `SETTINGS_PERSISTENCE_CLASSIFICATION = REQUIRED`, and binary carrier proof
+  remains REQUIRED independently of OPTIONAL Export.
+- Evidence:
+  `docs/06-testing-acceptance/evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md`.
+- `P0_CORE_PARITY_SCOPE_FROZEN = YES`;
+  `SHACO_FORGE_V1_0_P0_5 = PASS`. Entire P0 remains `NOT_PASS`.
+- Next executable technical action: P0-6 Dependency & Stability Matrix.
+
 ## 2026-08-29
 
 - Shaco Forge Git repository initialized on `master`. No GitHub/Gitee remote added. No push.

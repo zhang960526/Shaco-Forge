@@ -50,7 +50,7 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | Document | Role | Status |
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
-| `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | IN_PROGRESS (P0-1/P0-2/P0-3/P0-4 PASS) |
+| `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | IN_PROGRESS (P0-1 through P0-5 PASS) |
 | `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract 候选 | READY-FOR-EXECUTION-AFTER-P0 |
 | `P05-COMPATIBILITY-VERSION.md` | P0.5 Compatibility Contract 候选 | READY-FOR-FREEZE-AFTER-P0S |
 | `P1-SYSTEM-CONTRACT.md` | P1 骨架 | NOT-DETAILED |
@@ -96,6 +96,7 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | `evidence/P0-2-WEB-DUMP-DEFAULT-CONFIG.yml` | P0-2 dump-config diagnostic (not a stable API) |
 | `evidence/P0-3-CLIENT-HOST-CONTRACT-MAP.md` | P0-3 Client↔Host business, transport, stream, event, Fetch, boot, reconnect and cancellation census |
 | `evidence/P0-4-AUTHENTICATION-AND-TRUST-SURFACE.md` | P0-4 Web/Connection/Client trust architecture, loopback dependencies, failure surface and P0.S trust inputs |
+| `evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md` | P0-5 V1.0 REQUIRED/OPTIONAL/DEFERRED/WEB_ONLY/EXPERIMENTAL/NOT_PRODUCT product capability freeze |
 
 ## 9. Handover
 

@@ -6,7 +6,9 @@
 
 - Shaco Forge 1.0 总体架构：`PASS_WITH_REQUIRED_CORRECTIONS` 后已由 Architecture Owner 接受修正版。
 - P0 / P0.S / P0.5 详细阶段设计：专项审计通过。
-- P0：`IN_PROGRESS`。P0-1 Upstream Baseline Freeze、P0-2 Web + Standard Composition Census、P0-3 Client↔Host Contract Census、P0-4 Authentication / Trust Surface Audit：`PASS / CLOSED`。下一步为 P0-5；整个 P0 尚未 PASS。
+- P0：`IN_PROGRESS`。P0-1 至 P0-5：`PASS / CLOSED`。Shaco Forge
+  V1.0 Core Feature Parity Scope 已冻结；下一步为 P0-6。整个 P0 尚未
+  PASS。
 - Frozen Harness baseline：`cd5ef8148158c3a752a658978873241fdf8e2bbc` / `dsh@0.1.2-alpha.1`。见 `docs/06-testing-acceptance/evidence/P0-1-HARNESS-BASELINE-MANIFEST.md`。
 - P1–P8：只建立阶段骨架与目标，尚未冻结详细 Contract。
 - Production Implementation：`NOT_STARTED`。

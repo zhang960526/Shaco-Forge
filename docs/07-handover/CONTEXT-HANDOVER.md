@@ -24,7 +24,7 @@ V1.0 = Harness Desktop Baseline using Electron Desktop + independent per-user lo
 
 ## Current Status
 
-P0 is IN_PROGRESS. P0-1, P0-2, P0-3, and P0-4 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. The Client↔Host contract is mapped in `docs/06-testing-acceptance/evidence/P0-3-CLIENT-HOST-CONTRACT-MAP.md`; the Web/Connection/Client trust model and replacement requirements are mapped in `docs/06-testing-acceptance/evidence/P0-4-AUTHENTICATION-AND-TRUST-SURFACE.md`. BrowserAuth is an authority-bound bearer session, not Windows-user or current-Worker identity. Gateway assumes an already-authenticated Connection, and Client Settings Host persistence depends on loopback/owned-Host classification. Next step is P0-5. Entire P0 is not PASS. P0.S is not started. P1 cannot freeze until P0.S passes.
+P0 is IN_PROGRESS. P0-1 through P0-5 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. Client↔Host and trust facts are mapped in the P0-3/P0-4 evidence; the normative V1.0 product capability scope is `docs/06-testing-acceptance/evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md`. Core scope is the complete DeepSeek Desktop Agent loop, required Settings/picker/approval/question/subagent behavior and Desktop/Worker durability. Standard-preset presence is not automatic product scope; Goal/Workflow/Ralph/Schedule do not become the Shaco Automation domain, and external providers remain deferred. Next step is P0-6. Entire P0 is not PASS. P0.S is not started. P1 cannot freeze until P0.S passes.
 
 ## First Files to Read
 

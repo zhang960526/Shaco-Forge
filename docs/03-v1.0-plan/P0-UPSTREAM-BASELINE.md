@@ -5,7 +5,8 @@ P0-1: CLOSED / PASS
 P0-2: CLOSED / PASS
 P0-3: CLOSED / PASS
 P0-4: CLOSED / PASS
-P0-5 through P0-7: NOT_STARTED
+P0-5: CLOSED / PASS
+P0-6 through P0-7: NOT_STARTED
 `P0_BASELINE_FROZEN = YES`
 `P0_WEB_COMPOSITION_KNOWN = YES`
 `P0_STANDARD_PRESET_KNOWN = YES`
@@ -13,6 +14,7 @@ P0-5 through P0-7: NOT_STARTED
 `P0_EXACT_FETCH_ROUTES_ENUMERATED = YES`
 `P0_TRUST_SURFACE_KNOWN = YES`
 `P0_LOOPBACK_CLASSIFIER_LOCATED = YES`
+`P0_CORE_PARITY_SCOPE_FROZEN = YES`
 `SHACO_FORGE_V1_0_P0 = NOT_PASS`
 
 ## Goal
@@ -206,6 +208,33 @@ Gate:
 
 ## P0-5 — Core Feature Parity Matrix
 
+Status: CLOSED / PASS
+
+Evidence:
+
+`docs/06-testing-acceptance/evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md`
+
+Frozen product-scope result:
+
+- REQUIRED is limited to the complete Desktop→Workspace→Session→Agent
+  loop: DeepSeek credential/model, persistent workspace/session, text stream,
+  PowerShell/fs/search tools, all shipped permission choices, approval,
+  structured user questions, required Settings persistence and core in-process
+  continuable subagent control.
+- Desktop close/crash survival, truthful reconnect, Host-owned cold resume,
+  explicit cancel and transport-disconnect independence are REQUIRED product
+  behaviors.
+- Images/attachments, Export, Plan, Compaction, Jobs, Skills, web tools,
+  session fork, trajectory and other enhancements do not block V1.0.
+- Harness Goal/Workflow/Ralph/Schedule are not the Shaco Automation domain.
+  External Codex/Claude/ACP/SDK children are deferred to the V1.2 direction.
+- Browser WebServer/token/cookie/trusted-host/HMR/SPA delivery is WEB_ONLY.
+  Required Client/Connection behavior receives a Desktop replacement and P0.S
+  proof rather than reproducing a LAN/browser product.
+- Official in-box components form the V1.0 plugin baseline. Dynamic Cordis and
+  arbitrary npm/GitHub/marketplace installation are not V1.0 product scope.
+- OPTIONAL Export does not weaken the REQUIRED binary carrier proof.
+
 No vague labels. Every feature must include:
 
 - user behavior
@@ -226,7 +255,8 @@ Classification:
 - EXPERIMENTAL
 - NOT_PRODUCT
 
-Current candidate REQUIRED baseline must be replaced by actual P0 findings, especially real command names and standard-preset tools/subagent composition.
+The matrix replaces the prior candidate with exact product classifications,
+concrete command names and standard-preset tool/subagent decisions.
 
 Gate: `P0_CORE_PARITY_SCOPE_FROZEN = YES`
 
@@ -264,7 +294,7 @@ Gate: `P0S_SPIKE_INPUT_FROZEN = YES`
 
 ## Final Gate
 
-P0 passes only if all of the following are YES. Current values after P0-4:
+P0 passes only if all of the following are YES. Current values after P0-5:
 
 - P0_BASELINE_FROZEN = YES
 - P0_WEB_COMPOSITION_KNOWN = YES
@@ -273,7 +303,7 @@ P0 passes only if all of the following are YES. Current values after P0-4:
 - P0_EXACT_FETCH_ROUTES_ENUMERATED = YES
 - P0_TRUST_SURFACE_KNOWN = YES
 - P0_LOOPBACK_CLASSIFIER_LOCATED = YES
-- P0_CORE_PARITY_SCOPE_FROZEN = NO
+- P0_CORE_PARITY_SCOPE_FROZEN = YES
 - P0_DEPENDENCY_BOUNDARY_FROZEN = NO
 - P0S_SPIKE_INPUT_FROZEN = NO
 
