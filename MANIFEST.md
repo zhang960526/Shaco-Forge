@@ -1,19 +1,14 @@
 # Documentation Manifest
 
-Generated files: 55
+Generated files: 56
 
-- `README.md` — sha256:2a65e861ef502588
-- `docs/00-governance/SHACO-FORGE-CURRENT-STATE.md` — sha256:0583e3f5408421b9
-- `docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md` — sha256:964090bcee2747da
+- `README.md` — sha256:c5654bb80099b2e1
+- `docs/00-governance/SHACO-FORGE-CURRENT-STATE.md` — sha256:be6ebb9ae19583f0
+- `docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md` — sha256:3577c85c305b2266
 - `docs/00-governance/SHACO-FORGE-DOCUMENT-RULES.md` — sha256:f894e352b23749fe
 - `docs/01-product/SHACO-FORGE-PRODUCT-VISION.md` — sha256:ef6a32d4c83e8ab6
 - `docs/01-product/SHACO-FORGE-V1.0-MASTER-GOAL.md` — sha256:afefb580acc1eac5
 - `docs/01-product/SHACO-FORGE-VERSION-ROADMAP.md` — sha256:62917f0d86fbe727
-- `docs/02-architecture/SHACO-FORGE-DATA-OWNERSHIP.md` — sha256:655dfb0535819bfd
-- `docs/02-architecture/SHACO-FORGE-DESKTOP-WORKER-BOUNDARY.md` — sha256:b0e1ce9b860923c5
-- `docs/02-architecture/SHACO-FORGE-HARNESS-INTEGRATION-BOUNDARY.md` — sha256:18600bf9783ac541
-- `docs/02-architecture/SHACO-FORGE-SECURITY-MODEL.md` — sha256:ffc5a2e88ab6a81a
-- `docs/02-architecture/SHACO-FORGE-SYSTEM-ARCHITECTURE.md` — sha256:1caf801cc1b2a993
 - `docs/02-architecture/decisions/ADR-0001-DESKTOP-WORKER-DUAL-CORE-PROCESSES.md` — sha256:cc436335f45086ea
 - `docs/02-architecture/decisions/ADR-0002-WORKER-AS-HARNESS-HOST.md` — sha256:519ef51dd71fc7f9
 - `docs/02-architecture/decisions/ADR-0003-REUSE-HARNESS-CLIENT-HOST-CONTRACT.md` — sha256:5a9d3f36390621e8
@@ -22,9 +17,14 @@ Generated files: 55
 - `docs/02-architecture/decisions/ADR-0006-MINIMAL-SHACO-CONTROL-STORE.md` — sha256:d2f908add4f9a882
 - `docs/02-architecture/decisions/ADR-0007-CLOSE-STOP-EXIT-SEMANTICS.md` — sha256:da10205def1ac721
 - `docs/02-architecture/decisions/ADR-TEMPLATE.md` — sha256:360f87379fd41d29
-- `docs/03-v1.0-plan/P0-UPSTREAM-BASELINE.md` — sha256:c72b77047343392f
+- `docs/02-architecture/SHACO-FORGE-DATA-OWNERSHIP.md` — sha256:655dfb0535819bfd
+- `docs/02-architecture/SHACO-FORGE-DESKTOP-WORKER-BOUNDARY.md` — sha256:b0e1ce9b860923c5
+- `docs/02-architecture/SHACO-FORGE-HARNESS-INTEGRATION-BOUNDARY.md` — sha256:18600bf9783ac541
+- `docs/02-architecture/SHACO-FORGE-SECURITY-MODEL.md` — sha256:ffc5a2e88ab6a81a
+- `docs/02-architecture/SHACO-FORGE-SYSTEM-ARCHITECTURE.md` — sha256:1caf801cc1b2a993
 - `docs/03-v1.0-plan/P05-COMPATIBILITY-VERSION.md` — sha256:cd61c221205aa7ba
 - `docs/03-v1.0-plan/P0S-FEASIBILITY-SPIKE.md` — sha256:c33a6228cb626b4d
+- `docs/03-v1.0-plan/P0-UPSTREAM-BASELINE.md` — sha256:9c42af1e25dff720
 - `docs/03-v1.0-plan/P1-SYSTEM-CONTRACT.md` — sha256:d66ac30d8d5fef52
 - `docs/03-v1.0-plan/P2-HOST-WORKER.md` — sha256:11d83345e6252db0
 - `docs/03-v1.0-plan/P3-CONNECTION-CARRIER.md` — sha256:6cbdbfa2ed06f803
@@ -34,26 +34,27 @@ Generated files: 55
 - `docs/03-v1.0-plan/P6B-PLUGIN-COMPATIBILITY.md` — sha256:0a5d29c8a8437c3c
 - `docs/03-v1.0-plan/P7-PACKAGING-SECURITY-UPGRADE.md` — sha256:e27587ebc0bb8857
 - `docs/03-v1.0-plan/P8-FINAL-ACCEPTANCE.md` — sha256:fb0306b0195db32f
-- `docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` — sha256:cf7f0f388f0099f8
-- `docs/04-development-records/DEVELOPMENT-LOG.md` — sha256:1671284e5656becf
+- `docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` — sha256:49d1d728580a2ba4
+- `docs/04-development-records/DEVELOPMENT-LOG.md` — sha256:717cbc3dea1b860a
 - `docs/04-development-records/ISSUE-AND-BUG-INDEX.md` — sha256:7e71df957ef407d7
 - `docs/04-development-records/lessons/SHACO-FORGE-LESSONS-LEARNED.md` — sha256:31f741c4772d2374
 - `docs/04-development-records/templates/BUG-TEMPLATE.md` — sha256:7450333806d8148c
 - `docs/04-development-records/templates/EXPERIMENT-TEMPLATE.md` — sha256:322f918c2aa5f9cb
-- `docs/05-reviews/REVIEW-INDEX.md` — sha256:cd011f6cb72f561c
 - `docs/05-reviews/architecture/AUDIT-001-PRE-IMPLEMENTATION-ARCHITECTURE.md` — sha256:ba4f4efa9b025ae6
 - `docs/05-reviews/architecture/AUDIT-002-CORRECTIVE-ARCHITECTURE-REAUDIT.md` — sha256:77c8d14810d6b2f2
 - `docs/05-reviews/architecture/AUDIT-003-P0-P0S-P05-DESIGN-AUDIT.md` — sha256:9160437cd919a57e
 - `docs/05-reviews/architecture/REVIEW-001-SUMMARY.md` — sha256:76e5939979781e64
 - `docs/05-reviews/architecture/REVIEW-002-SUMMARY.md` — sha256:af1d120d900075c8
 - `docs/05-reviews/architecture/REVIEW-003-SUMMARY.md` — sha256:587d09fb77c80f1b
+- `docs/05-reviews/REVIEW-INDEX.md` — sha256:cd011f6cb72f561c
 - `docs/05-reviews/templates/REVIEW-TEMPLATE.md` — sha256:d5e6c41eeaad62ee
-- `docs/06-testing-acceptance/V1.0-ACCEPTANCE-MATRIX.md` — sha256:a0419a81ab8e53e0
-- `docs/06-testing-acceptance/V1.0-TEST-MATRIX.md` — sha256:31f702889a7dff33
-- `docs/06-testing-acceptance/evidence/README.md` — sha256:18421414c21b2495
 - `docs/06-testing-acceptance/evidence/P0-1-HARNESS-BASELINE-MANIFEST.md` — sha256:6b43d61152a1185d
 - `docs/06-testing-acceptance/evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md` — sha256:fa372fcdfada60a6
 - `docs/06-testing-acceptance/evidence/P0-2-WEB-DUMP-DEFAULT-CONFIG.yml` — sha256:ae8ebd78ba977dc5
-- `docs/07-handover/CONTEXT-HANDOVER.md` — sha256:c401879bec015ba4
-- `docs/07-handover/CURRENT-CHECKPOINT.md` — sha256:5ce6d69ee732eb12
+- `docs/06-testing-acceptance/evidence/P0-3-CLIENT-HOST-CONTRACT-MAP.md` — sha256:992dbdc328aca2a2
+- `docs/06-testing-acceptance/evidence/README.md` — sha256:aa58fd8e85ee2b73
+- `docs/06-testing-acceptance/V1.0-ACCEPTANCE-MATRIX.md` — sha256:a0419a81ab8e53e0
+- `docs/06-testing-acceptance/V1.0-TEST-MATRIX.md` — sha256:31f702889a7dff33
+- `docs/07-handover/CONTEXT-HANDOVER.md` — sha256:f7b758178f86fee7
+- `docs/07-handover/CURRENT-CHECKPOINT.md` — sha256:3f4c6cfeb7702bb7
 - `docs/99-archive/README.md` — sha256:889bc640839da543

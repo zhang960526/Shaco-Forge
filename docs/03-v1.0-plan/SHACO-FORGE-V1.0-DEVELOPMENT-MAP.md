@@ -27,7 +27,7 @@ Steps:
 
 - P0-1 Upstream Baseline Freeze — PASS / CLOSED
 - P0-2 Web + Standard Preset Composition Census — PASS / CLOSED
-- P0-3 Client↔Host Contract Census — NOT_STARTED
+- P0-3 Client↔Host Contract Census — PASS / CLOSED
 - P0-4 Authentication / Trust Surface Audit — NOT_STARTED
 - P0-5 Core Feature Parity Matrix — NOT_STARTED
 - P0-6 Dependency & Stability Matrix — NOT_STARTED

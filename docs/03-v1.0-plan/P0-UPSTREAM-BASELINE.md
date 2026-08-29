@@ -3,10 +3,13 @@
 Status: IN_PROGRESS
 P0-1: CLOSED / PASS
 P0-2: CLOSED / PASS
-P0-3 through P0-7: NOT_STARTED
+P0-3: CLOSED / PASS
+P0-4 through P0-7: NOT_STARTED
 `P0_BASELINE_FROZEN = YES`
 `P0_WEB_COMPOSITION_KNOWN = YES`
 `P0_STANDARD_PRESET_KNOWN = YES`
+`P0_CLIENT_HOST_CONTRACT_KNOWN = YES`
+`P0_EXACT_FETCH_ROUTES_ENUMERATED = YES`
 `SHACO_FORGE_V1_0_P0 = NOT_PASS`
 
 ## Goal
@@ -55,7 +58,7 @@ This exact baseline is now the official Shaco Forge V1.0 upstream pin for P0 thr
 
 ## P0-1 — Upstream Baseline Freeze
 
-Status: CLOSED / PASS  
+Status: CLOSED / PASS
 Gate: `P0_BASELINE_FROZEN = YES`
 
 Recorded:
@@ -110,6 +113,30 @@ Gate:
 - `P0_STANDARD_PRESET_KNOWN = YES`
 
 ## P0-3 — Client↔Host Contract Census
+
+Status: CLOSED / PASS
+Gates: `P0_CLIENT_HOST_CONTRACT_KNOWN = YES`,
+`P0_EXACT_FETCH_ROUTES_ENUMERATED = YES`
+
+Evidence:
+
+`docs/06-testing-acceptance/evidence/P0-3-CLIENT-HOST-CONTRACT-MAP.md`
+
+Frozen-source result:
+
+- Client business chain is Client adapter → Connection abstraction → generated
+  Typert Remote → API Gateway → Host controller/Cordis service.
+- Current Client assembly exposes 16 Remote namespaces, 71 unary endpoints,
+  three domain streams, and an internal `$events` generation/event channel.
+- Current Web transport uses JSON `/api`, WebSocket Remote mux, one binary ZIP
+  Fetch route, dynamic `/plugins` module bytes, HMR SSE, and index boot
+  injections. These are transport implementation, not the business API itself.
+- Connection reconnect is separate from session resume. Host-side session
+  resolution owns cold agent resume; no Client `session/resume` Remote exists.
+- Client turn cancellation is explicit. Transport disconnect aborts stream
+  pumps but does not invoke session/agent cancellation.
+- Approval and user question are pending Remote waterfalls; first answer wins
+  and an unsettled event is re-delivered across Connection generations.
 
 Enumerate from current source/generated remotes/routes/tests:
 
@@ -204,13 +231,13 @@ Gate: `P0S_SPIKE_INPUT_FROZEN = YES`
 
 ## Final Gate
 
-P0 passes only if all of the following are YES. Current values after P0-1:
+P0 passes only if all of the following are YES. Current values after P0-3:
 
 - P0_BASELINE_FROZEN = YES
 - P0_WEB_COMPOSITION_KNOWN = YES
 - P0_STANDARD_PRESET_KNOWN = YES
-- P0_CLIENT_HOST_CONTRACT_KNOWN = NO
-- P0_EXACT_FETCH_ROUTES_ENUMERATED = NO
+- P0_CLIENT_HOST_CONTRACT_KNOWN = YES
+- P0_EXACT_FETCH_ROUTES_ENUMERATED = YES
 - P0_TRUST_SURFACE_KNOWN = NO
 - P0_LOOPBACK_CLASSIFIER_LOCATED = NO
 - P0_CORE_PARITY_SCOPE_FROZEN = NO

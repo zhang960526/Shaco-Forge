@@ -12,6 +12,7 @@ Date: 2026-08-29
 - Shaco Forge Git repository initialized (`master`, no remote, no push)
 - P0-1 Upstream Baseline Freeze: PASS
 - P0-2 Web + Standard Preset Composition Census: PASS
+- P0-3 Client ↔ Host Contract Census: PASS
 
 ## Current Gate
 
@@ -23,9 +24,15 @@ Date: 2026-08-29
 
 `SHACO_FORGE_V1_0_P0_2 = PASS`
 
+`SHACO_FORGE_V1_0_P0_3 = PASS`
+
 `P0_WEB_COMPOSITION_KNOWN = YES`
 
 `P0_STANDARD_PRESET_KNOWN = YES`
+
+`P0_CLIENT_HOST_CONTRACT_KNOWN = YES`
+
+`P0_EXACT_FETCH_ROUTES_ENUMERATED = YES`
 
 `SHACO_FORGE_V1_0_P0 = NOT_PASS`
 
@@ -41,11 +48,11 @@ Date: 2026-08-29
 
 ## Next Step
 
-P0-3 — CLIENT ↔ HOST CONTRACT CENSUS
+P0-4 — AUTHENTICATION / TRUST SURFACE AUDIT
 
-NOT EXECUTED in the P0-2 session.
+NOT EXECUTED in the P0-3 session.
 
-Composition map: `docs/06-testing-acceptance/evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md`
+Contract map: `docs/06-testing-acceptance/evidence/P0-3-CLIENT-HOST-CONTRACT-MAP.md`
 
 ## Important Constraints
 

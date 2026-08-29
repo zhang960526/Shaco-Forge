@@ -24,7 +24,7 @@ V1.0 = Harness Desktop Baseline using Electron Desktop + independent per-user lo
 
 ## Current Status
 
-P0 is IN_PROGRESS. P0-1 and P0-2 PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. Web composition and `standard` preset are mapped in `docs/06-testing-acceptance/evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md`. Next step is P0-3. Entire P0 is not PASS. P0.S is not started. P1 cannot freeze until P0.S passes.
+P0 is IN_PROGRESS. P0-1, P0-2, and P0-3 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. The Client↔Host business/transport/stream/event/Fetch/boot/reconnect/cancellation contract is mapped in `docs/06-testing-acceptance/evidence/P0-3-CLIENT-HOST-CONTRACT-MAP.md`. Host owns cold session resume; Connection reconnect is a separate Client generation lifecycle. Next step is P0-4. Entire P0 is not PASS. P0.S is not started. P1 cannot freeze until P0.S passes.
 
 ## First Files to Read
 

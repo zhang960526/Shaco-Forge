@@ -9,3 +9,4 @@ Current evidence:
 - `P0-1-HARNESS-BASELINE-MANIFEST.md` — frozen DeepSeek Harness identity for Shaco Forge V1.0.
 - `P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md` — Web + standard preset composition census.
 - `P0-2-WEB-DUMP-DEFAULT-CONFIG.yml` — `dsh web --dump-default-config` diagnostic dump.
+- `P0-3-CLIENT-HOST-CONTRACT-MAP.md` — Client↔Host business contract, current Web transport, streams, events, exact Fetch, boot, reconnect, cancellation, and P0.S inputs.

@@ -18,7 +18,16 @@ Status: ACTIVE
 - Web composition = dsh-base + dsh-web-app. Standard preset remounts host-disabled agent tools except `tool-str-replace-editor`.
 - Evidence: `docs/06-testing-acceptance/evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md`.
 - `SHACO_FORGE_V1_0_P0_2 = PASS`. Entire P0 remains `NOT_PASS`.
-- Next executable technical action: P0-3 Client↔Host Contract Census.
+- P0-3 executed against the same frozen SHA. Generated Host library descriptors,
+  route registration, Gateway/Connection source, controllers, and current tests
+  were inspected; 18 targeted test files / 364 tests passed.
+- Contract result: 16 mounted Remote namespaces, 71 unary endpoints, three
+  domain streams, `$events` generation/waterfalls, one binary ZIP Fetch route,
+  Web module/HMR routes, and Host-authoritative cold session resume.
+- Evidence: `docs/06-testing-acceptance/evidence/P0-3-CLIENT-HOST-CONTRACT-MAP.md`.
+- Upstream remained CLEAN and lockfile identity unchanged after build/tests.
+- `SHACO_FORGE_V1_0_P0_3 = PASS`. Entire P0 remains `NOT_PASS`.
+- Next executable technical action: P0-4 Authentication / Trust Surface Audit.
 
 Earlier the same day:
 
