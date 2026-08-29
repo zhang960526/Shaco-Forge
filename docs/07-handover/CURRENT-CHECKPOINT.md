@@ -13,6 +13,7 @@ Date: 2026-08-29
 - P0-1 Upstream Baseline Freeze: PASS
 - P0-2 Web + Standard Preset Composition Census: PASS
 - P0-3 Client ↔ Host Contract Census: PASS
+- P0-4 Authentication / Trust Surface Audit: PASS
 
 ## Current Gate
 
@@ -26,6 +27,8 @@ Date: 2026-08-29
 
 `SHACO_FORGE_V1_0_P0_3 = PASS`
 
+`SHACO_FORGE_V1_0_P0_4 = PASS`
+
 `P0_WEB_COMPOSITION_KNOWN = YES`
 
 `P0_STANDARD_PRESET_KNOWN = YES`
@@ -33,6 +36,10 @@ Date: 2026-08-29
 `P0_CLIENT_HOST_CONTRACT_KNOWN = YES`
 
 `P0_EXACT_FETCH_ROUTES_ENUMERATED = YES`
+
+`P0_TRUST_SURFACE_KNOWN = YES`
+
+`P0_LOOPBACK_CLASSIFIER_LOCATED = YES`
 
 `SHACO_FORGE_V1_0_P0 = NOT_PASS`
 
@@ -48,11 +55,11 @@ Date: 2026-08-29
 
 ## Next Step
 
-P0-4 — AUTHENTICATION / TRUST SURFACE AUDIT
+P0-5 — CORE FEATURE PARITY MATRIX
 
-NOT EXECUTED in the P0-3 session.
+NOT EXECUTED in the P0-4 session.
 
-Contract map: `docs/06-testing-acceptance/evidence/P0-3-CLIENT-HOST-CONTRACT-MAP.md`
+Trust map: `docs/06-testing-acceptance/evidence/P0-4-AUTHENTICATION-AND-TRUST-SURFACE.md`
 
 ## Important Constraints
 

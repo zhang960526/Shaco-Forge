@@ -1,10 +1,10 @@
 # Documentation Manifest
 
-Generated files: 56
+Generated files: 57
 
-- `README.md` — sha256:c5654bb80099b2e1
-- `docs/00-governance/SHACO-FORGE-CURRENT-STATE.md` — sha256:be6ebb9ae19583f0
-- `docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md` — sha256:3577c85c305b2266
+- `README.md` — sha256:5c014c6a3218b74c
+- `docs/00-governance/SHACO-FORGE-CURRENT-STATE.md` — sha256:55ef884dbee7554d
+- `docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md` — sha256:1d67ff1324d5f2b3
 - `docs/00-governance/SHACO-FORGE-DOCUMENT-RULES.md` — sha256:f894e352b23749fe
 - `docs/01-product/SHACO-FORGE-PRODUCT-VISION.md` — sha256:ef6a32d4c83e8ab6
 - `docs/01-product/SHACO-FORGE-V1.0-MASTER-GOAL.md` — sha256:afefb580acc1eac5
@@ -24,7 +24,7 @@ Generated files: 56
 - `docs/02-architecture/SHACO-FORGE-SYSTEM-ARCHITECTURE.md` — sha256:1caf801cc1b2a993
 - `docs/03-v1.0-plan/P05-COMPATIBILITY-VERSION.md` — sha256:cd61c221205aa7ba
 - `docs/03-v1.0-plan/P0S-FEASIBILITY-SPIKE.md` — sha256:c33a6228cb626b4d
-- `docs/03-v1.0-plan/P0-UPSTREAM-BASELINE.md` — sha256:9c42af1e25dff720
+- `docs/03-v1.0-plan/P0-UPSTREAM-BASELINE.md` — sha256:2ecd41f8aee1a0cd
 - `docs/03-v1.0-plan/P1-SYSTEM-CONTRACT.md` — sha256:d66ac30d8d5fef52
 - `docs/03-v1.0-plan/P2-HOST-WORKER.md` — sha256:11d83345e6252db0
 - `docs/03-v1.0-plan/P3-CONNECTION-CARRIER.md` — sha256:6cbdbfa2ed06f803
@@ -34,8 +34,8 @@ Generated files: 56
 - `docs/03-v1.0-plan/P6B-PLUGIN-COMPATIBILITY.md` — sha256:0a5d29c8a8437c3c
 - `docs/03-v1.0-plan/P7-PACKAGING-SECURITY-UPGRADE.md` — sha256:e27587ebc0bb8857
 - `docs/03-v1.0-plan/P8-FINAL-ACCEPTANCE.md` — sha256:fb0306b0195db32f
-- `docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` — sha256:49d1d728580a2ba4
-- `docs/04-development-records/DEVELOPMENT-LOG.md` — sha256:717cbc3dea1b860a
+- `docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` — sha256:41dd603466ae174a
+- `docs/04-development-records/DEVELOPMENT-LOG.md` — sha256:10128cc65f38fea2
 - `docs/04-development-records/ISSUE-AND-BUG-INDEX.md` — sha256:7e71df957ef407d7
 - `docs/04-development-records/lessons/SHACO-FORGE-LESSONS-LEARNED.md` — sha256:31f741c4772d2374
 - `docs/04-development-records/templates/BUG-TEMPLATE.md` — sha256:7450333806d8148c
@@ -52,9 +52,10 @@ Generated files: 56
 - `docs/06-testing-acceptance/evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md` — sha256:fa372fcdfada60a6
 - `docs/06-testing-acceptance/evidence/P0-2-WEB-DUMP-DEFAULT-CONFIG.yml` — sha256:ae8ebd78ba977dc5
 - `docs/06-testing-acceptance/evidence/P0-3-CLIENT-HOST-CONTRACT-MAP.md` — sha256:992dbdc328aca2a2
-- `docs/06-testing-acceptance/evidence/README.md` — sha256:aa58fd8e85ee2b73
+- `docs/06-testing-acceptance/evidence/P0-4-AUTHENTICATION-AND-TRUST-SURFACE.md` — sha256:6d2faa8b0e5621d1
+- `docs/06-testing-acceptance/evidence/README.md` — sha256:528e8f17f8e234ab
 - `docs/06-testing-acceptance/V1.0-ACCEPTANCE-MATRIX.md` — sha256:a0419a81ab8e53e0
 - `docs/06-testing-acceptance/V1.0-TEST-MATRIX.md` — sha256:31f702889a7dff33
-- `docs/07-handover/CONTEXT-HANDOVER.md` — sha256:f7b758178f86fee7
-- `docs/07-handover/CURRENT-CHECKPOINT.md` — sha256:3f4c6cfeb7702bb7
+- `docs/07-handover/CONTEXT-HANDOVER.md` — sha256:3dd1904b8552a95a
+- `docs/07-handover/CURRENT-CHECKPOINT.md` — sha256:42f9b290be464d44
 - `docs/99-archive/README.md` — sha256:889bc640839da543

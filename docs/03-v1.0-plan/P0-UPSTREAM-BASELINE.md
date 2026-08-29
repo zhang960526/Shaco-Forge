@@ -4,12 +4,15 @@ Status: IN_PROGRESS
 P0-1: CLOSED / PASS
 P0-2: CLOSED / PASS
 P0-3: CLOSED / PASS
-P0-4 through P0-7: NOT_STARTED
+P0-4: CLOSED / PASS
+P0-5 through P0-7: NOT_STARTED
 `P0_BASELINE_FROZEN = YES`
 `P0_WEB_COMPOSITION_KNOWN = YES`
 `P0_STANDARD_PRESET_KNOWN = YES`
 `P0_CLIENT_HOST_CONTRACT_KNOWN = YES`
 `P0_EXACT_FETCH_ROUTES_ENUMERATED = YES`
+`P0_TRUST_SURFACE_KNOWN = YES`
+`P0_LOOPBACK_CLASSIFIER_LOCATED = YES`
 `SHACO_FORGE_V1_0_P0 = NOT_PASS`
 
 ## Goal
@@ -75,7 +78,7 @@ P0-2 was not started by this step.
 
 ## P0-2 — Web + Standard Preset Composition Census
 
-Status: CLOSED / PASS  
+Status: CLOSED / PASS
 Gates: `P0_WEB_COMPOSITION_KNOWN = YES`, `P0_STANDARD_PRESET_KNOWN = YES`
 
 Evidence:
@@ -158,7 +161,37 @@ Gate:
 
 ## P0-4 — Authentication / Trust Surface
 
-Locate actual source for:
+Status: CLOSED / PASS
+Gates: `P0_TRUST_SURFACE_KNOWN = YES`,
+`P0_LOOPBACK_CLASSIFIER_LOCATED = YES`
+
+Evidence:
+
+`docs/06-testing-acceptance/evidence/P0-4-AUTHENTICATION-AND-TRUST-SURFACE.md`
+
+Frozen-source result:
+
+- `dsh web` trust is layered: loopback default bind, process launch-token
+  bootstrap, authority-bound signed browser cookie, Host/Origin/Fetch-Metadata
+  fence, then authenticated API/mux dispatch.
+- BrowserAuth proves launch-token/cookie possession for a Harness-home signing
+  secret and authority. It does not prove Windows user or current Host process
+  identity.
+- `isLoopbackHostname` is in
+  `packages/client/connection/src/loopback-hostname.ts`. Its Client-derived
+  `connection.isLoopback` selects Host-backed versus unavailable/memory
+  settings behavior.
+- Gateway and Host controllers assume an already-authenticated Connection.
+  Alternate `rpc.call/open` and direct Fetch/stream seams carry no caller
+  identity; the composing transport owns authentication.
+- Exact export inherits `/api` authentication. Index is authenticated, while
+  non-index static assets, plugin combo/source-map bytes and HMR SSE are
+  public code/data routes.
+- Settings/credential/directory-picker controllers contain no per-caller
+  loopback authorization. The stock non-loopback Settings UI suppression is a
+  Client capability boundary, not a Host ACL.
+
+Audited actual source for:
 
 - launch token / cookie / Host / Origin checks
 - loopback classification (including actual symbol/file location)
@@ -231,15 +264,15 @@ Gate: `P0S_SPIKE_INPUT_FROZEN = YES`
 
 ## Final Gate
 
-P0 passes only if all of the following are YES. Current values after P0-3:
+P0 passes only if all of the following are YES. Current values after P0-4:
 
 - P0_BASELINE_FROZEN = YES
 - P0_WEB_COMPOSITION_KNOWN = YES
 - P0_STANDARD_PRESET_KNOWN = YES
 - P0_CLIENT_HOST_CONTRACT_KNOWN = YES
 - P0_EXACT_FETCH_ROUTES_ENUMERATED = YES
-- P0_TRUST_SURFACE_KNOWN = NO
-- P0_LOOPBACK_CLASSIFIER_LOCATED = NO
+- P0_TRUST_SURFACE_KNOWN = YES
+- P0_LOOPBACK_CLASSIFIER_LOCATED = YES
 - P0_CORE_PARITY_SCOPE_FROZEN = NO
 - P0_DEPENDENCY_BOUNDARY_FROZEN = NO
 - P0S_SPIKE_INPUT_FROZEN = NO
