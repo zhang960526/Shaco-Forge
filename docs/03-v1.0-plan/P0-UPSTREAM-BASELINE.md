@@ -1,0 +1,173 @@
+# P0 — Upstream Baseline & Product Capability Audit
+
+Status: READY_FOR_EXECUTION_AFTER-FREEZE
+
+## Goal
+
+Freeze the exact upstream facts Shaco Forge 1.0 depends on before any product implementation.
+
+## Execution Rule
+
+P0 may use a pinned Harness worktree and perform install/build/dump/test needed for discovery **without mutating the pinned baseline**.
+
+Allowed examples:
+
+- `pnpm install --frozen-lockfile` or equivalent pinned install
+- build required to run diagnostics
+- dump config / list profile composition
+- git/package/version queries
+- read/search/test discovery
+
+Forbidden:
+
+- `git pull master`
+- dependency upgrades
+- lockfile mutation
+- Harness source patch
+- production Shaco implementation
+
+## P0-1 — Upstream Baseline Freeze
+
+Record:
+
+- repository / branch / exact SHA / commit date / release
+- dsh package version
+- Node / pnpm / TypeScript
+- `pnpm-lock.yaml` content hash
+- Harness distribution form: worktree vs packed distribution
+- Windows version + CPU arch policy
+- clean/dirty state
+
+Gate: `P0_BASELINE_FROZEN = YES`
+
+## P0-2 — Web + Standard Preset Composition Census
+
+Must separately enumerate:
+
+1. Host/Web profile composition
+2. `standard` agent preset composition (tools/commands/subagent surface)
+
+Classify each row:
+
+- CORE_HOST
+- DESKTOP_CLIENT
+- WEB_TRANSPORT_ONLY
+- OPTIONAL_PRODUCT_CAPABILITY
+- DEFER_OR_REMOVE
+- EXPERIMENTAL
+- UNKNOWN_REQUIRES_SPIKE
+
+Do not treat `dump-config` as the only authority; preserve/compare source YAML and preset definitions.
+
+Gate:
+
+- `P0_WEB_COMPOSITION_KNOWN = YES`
+- `P0_STANDARD_PRESET_KNOWN = YES`
+
+## P0-3 — Client↔Host Contract Census
+
+Enumerate from current source/generated remotes/routes/tests:
+
+- unary Remote surface
+- stream surface / `rpc.open` / mux behavior
+- events / generation / reconnect
+- cancellation
+- exact Fetch/binary routes
+- uploads/body buffering
+- boot graph (`window.__DSH_BOOT__`)
+- directory picker capability
+
+Do not guess package paths.
+
+Gate:
+
+- `P0_CLIENT_HOST_CONTRACT_KNOWN = YES`
+- `P0_EXACT_FETCH_ROUTES_ENUMERATED = YES`
+
+## P0-4 — Authentication / Trust Surface
+
+Locate actual source for:
+
+- launch token / cookie / Host / Origin checks
+- loopback classification (including actual symbol/file location)
+- settings persistence fallback behavior
+- trusted-host / BrowserAuth assumptions
+- what breaks if WebServer is removed
+
+Gate:
+
+- `P0_TRUST_SURFACE_KNOWN = YES`
+- `P0_LOOPBACK_CLASSIFIER_LOCATED = YES`
+
+## P0-5 — Core Feature Parity Matrix
+
+No vague labels. Every feature must include:
+
+- user behavior
+- upstream package/preset
+- Web enabled?
+- runtime/client dependency
+- browser transport dependency
+- Desktop adaptation
+- classification
+- acceptance need
+
+Classification:
+
+- REQUIRED
+- OPTIONAL
+- DEFERRED
+- WEB_ONLY
+- EXPERIMENTAL
+- NOT_PRODUCT
+
+Current candidate REQUIRED baseline must be replaced by actual P0 findings, especially real command names and standard-preset tools/subagent composition.
+
+Gate: `P0_CORE_PARITY_SCOPE_FROZEN = YES`
+
+## P0-6 — Dependency & Stability Matrix
+
+Classify seams:
+
+- DOCUMENTED_PRODUCT_SEAM
+- DOCUMENTED_EXTENSION_SEAM
+- PREVIEW_PUBLIC_API
+- SUPPORT_API
+- INTERNAL
+- FORBIDDEN
+
+Explicitly produce a `FORBIDDEN_IMPORT_LIST`.
+
+Generated documented `remote` / `typert` surfaces are not automatically forbidden; arbitrary `packages/**/src` deep imports are.
+
+Gate: `P0_DEPENDENCY_BOUNDARY_FROZEN = YES`
+
+## P0-7 — Risk Register & P0.S Input Freeze
+
+Every risk must include:
+
+- ID / severity / evidence
+- affected phase
+- falsifiable spike hypothesis
+- acceptance
+- fallback
+- Owner decision required?
+
+Must include at least carrier, boot graph, no-cookie trust, exact Fetch, in-box modules, Dynamic Cordis dependency, packaging/runtime ABI, DSH_HOME, Windows sandbox/native differences, settings loopback behavior, host FetchHandler and standard preset risks.
+
+Gate: `P0S_SPIKE_INPUT_FROZEN = YES`
+
+## Final Gate
+
+P0 passes only if all of the following are YES:
+
+- P0_BASELINE_FROZEN
+- P0_WEB_COMPOSITION_KNOWN
+- P0_STANDARD_PRESET_KNOWN
+- P0_CLIENT_HOST_CONTRACT_KNOWN
+- P0_EXACT_FETCH_ROUTES_ENUMERATED
+- P0_TRUST_SURFACE_KNOWN
+- P0_LOOPBACK_CLASSIFIER_LOCATED
+- P0_CORE_PARITY_SCOPE_FROZEN
+- P0_DEPENDENCY_BOUNDARY_FROZEN
+- P0S_SPIKE_INPUT_FROZEN
