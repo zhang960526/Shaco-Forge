@@ -53,7 +53,7 @@ Generated files: 58
 - `docs/06-testing-acceptance/evidence/P0-2-WEB-DUMP-DEFAULT-CONFIG.yml` — sha256:ae8ebd78ba977dc5
 - `docs/06-testing-acceptance/evidence/P0-3-CLIENT-HOST-CONTRACT-MAP.md` — sha256:992dbdc328aca2a2
 - `docs/06-testing-acceptance/evidence/P0-4-AUTHENTICATION-AND-TRUST-SURFACE.md` — sha256:6d2faa8b0e5621d1
-- `docs/06-testing-acceptance/evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md` — sha256:369ca46fbf594722
+- `docs/06-testing-acceptance/evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md` — sha256:6249875860d61d7f
 - `docs/06-testing-acceptance/evidence/README.md` — sha256:6a86941981436547
 - `docs/06-testing-acceptance/V1.0-ACCEPTANCE-MATRIX.md` — sha256:a0419a81ab8e53e0
 - `docs/06-testing-acceptance/V1.0-TEST-MATRIX.md` — sha256:31f702889a7dff33
