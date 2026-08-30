@@ -6,7 +6,8 @@ P0-2: CLOSED / PASS
 P0-3: CLOSED / PASS
 P0-4: CLOSED / PASS
 P0-5: CLOSED / PASS
-P0-6 through P0-7: NOT_STARTED
+P0-6: CLOSED / PASS
+P0-7: NOT_STARTED
 `P0_BASELINE_FROZEN = YES`
 `P0_WEB_COMPOSITION_KNOWN = YES`
 `P0_STANDARD_PRESET_KNOWN = YES`
@@ -15,6 +16,7 @@ P0-6 through P0-7: NOT_STARTED
 `P0_TRUST_SURFACE_KNOWN = YES`
 `P0_LOOPBACK_CLASSIFIER_LOCATED = YES`
 `P0_CORE_PARITY_SCOPE_FROZEN = YES`
+`P0_DEPENDENCY_BOUNDARY_FROZEN = YES`
 `SHACO_FORGE_V1_0_P0 = NOT_PASS`
 
 ## Goal
@@ -262,6 +264,23 @@ Gate: `P0_CORE_PARITY_SCOPE_FROZEN = YES`
 
 ## P0-6 — Dependency & Stability Matrix
 
+Status: CLOSED / PASS
+Gate: `P0_DEPENDENCY_BOUNDARY_FROZEN = YES`
+
+Evidence:
+
+`docs/06-testing-acceptance/evidence/P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md`
+
+Frozen-source result:
+
+- Formal product dependencies are `dsh --profile` composition, `dsh-base` + a Shaco bundle, generated `./remote`/`./typert`, shipped `standard` load, and required in-box tool/UI package names.
+- Connection/Gateway/Client boot/`$events`/settings-capability/native FFI are `PREVIEW_PUBLIC_API` and require Shaco adapters plus compatibility tests.
+- Named Pipe is not a Harness extension seam. It remains a Shaco-owned carrier candidate.
+- Worker entry is spawn `dsh`; in-process `boot()` is forbidden as a production main.
+- `PRESET_COPY_REQUIRED = NO`. `HARNESS_DATA_DIRECT_WRITE_FORBIDDEN = YES`.
+- `list_subagent_models` stays CONDITIONAL / OPTIONAL.
+- `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S` because official Connection/modules plugins inject `webServer`.
+
 Classify seams:
 
 - DOCUMENTED_PRODUCT_SEAM
@@ -294,7 +313,7 @@ Gate: `P0S_SPIKE_INPUT_FROZEN = YES`
 
 ## Final Gate
 
-P0 passes only if all of the following are YES. Current values after P0-5:
+P0 passes only if all of the following are YES. Current values after P0-6:
 
 - P0_BASELINE_FROZEN = YES
 - P0_WEB_COMPOSITION_KNOWN = YES
@@ -304,7 +323,7 @@ P0 passes only if all of the following are YES. Current values after P0-5:
 - P0_TRUST_SURFACE_KNOWN = YES
 - P0_LOOPBACK_CLASSIFIER_LOCATED = YES
 - P0_CORE_PARITY_SCOPE_FROZEN = YES
-- P0_DEPENDENCY_BOUNDARY_FROZEN = NO
+- P0_DEPENDENCY_BOUNDARY_FROZEN = YES
 - P0S_SPIKE_INPUT_FROZEN = NO
 
 Therefore `SHACO_FORGE_V1_0_P0 = NOT_PASS`.

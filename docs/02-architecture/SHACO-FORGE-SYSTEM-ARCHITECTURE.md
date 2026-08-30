@@ -12,11 +12,11 @@ Shaco Forge Desktop (Electron)
   Renderer: Harness Client + Shaco branding + projection
         |
         | Harness Client/Host semantics
-        | physical: Electron IPC + candidate Named Pipe
+        | physical: Electron IPC + candidate Named Pipe (Shaco-owned; not a Harness extension seam)
         v
 Shaco Forge Worker
   per-user, long-running, Desktop-independent
-  dsh Host profile / documented equivalent boot seam
+  spawn `dsh --profile <shaco-host>` (`dsh-base` + Shaco bundle; not in-process `boot()`)
         |
         +-- Harness session/persistence/provider/tools/approval/subagent/...
         |

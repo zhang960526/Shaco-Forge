@@ -1,10 +1,10 @@
 # Documentation Manifest
 
-Generated files: 58
+Generated files: 59
 
-- `README.md` — sha256:18bbcf1565a273e6
-- `docs/00-governance/SHACO-FORGE-CURRENT-STATE.md` — sha256:a30e14136222be0c
-- `docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md` — sha256:b6d319b3df88ec8c
+- `README.md` — sha256:2f058e5e627384f9
+- `docs/00-governance/SHACO-FORGE-CURRENT-STATE.md` — sha256:dc729dfa371bb314
+- `docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md` — sha256:db6d1bc7e77f92f5
 - `docs/00-governance/SHACO-FORGE-DOCUMENT-RULES.md` — sha256:f894e352b23749fe
 - `docs/01-product/SHACO-FORGE-PRODUCT-VISION.md` — sha256:ef6a32d4c83e8ab6
 - `docs/01-product/SHACO-FORGE-V1.0-MASTER-GOAL.md` — sha256:afefb580acc1eac5
@@ -19,12 +19,12 @@ Generated files: 58
 - `docs/02-architecture/decisions/ADR-TEMPLATE.md` — sha256:360f87379fd41d29
 - `docs/02-architecture/SHACO-FORGE-DATA-OWNERSHIP.md` — sha256:655dfb0535819bfd
 - `docs/02-architecture/SHACO-FORGE-DESKTOP-WORKER-BOUNDARY.md` — sha256:b0e1ce9b860923c5
-- `docs/02-architecture/SHACO-FORGE-HARNESS-INTEGRATION-BOUNDARY.md` — sha256:18600bf9783ac541
+- `docs/02-architecture/SHACO-FORGE-HARNESS-INTEGRATION-BOUNDARY.md` — sha256:53e707da16ccef2e
 - `docs/02-architecture/SHACO-FORGE-SECURITY-MODEL.md` — sha256:ffc5a2e88ab6a81a
-- `docs/02-architecture/SHACO-FORGE-SYSTEM-ARCHITECTURE.md` — sha256:1caf801cc1b2a993
+- `docs/02-architecture/SHACO-FORGE-SYSTEM-ARCHITECTURE.md` — sha256:96e0a111c6b22cf0
 - `docs/03-v1.0-plan/P05-COMPATIBILITY-VERSION.md` — sha256:cd61c221205aa7ba
 - `docs/03-v1.0-plan/P0S-FEASIBILITY-SPIKE.md` — sha256:c33a6228cb626b4d
-- `docs/03-v1.0-plan/P0-UPSTREAM-BASELINE.md` — sha256:3750c4bdac70e7ef
+- `docs/03-v1.0-plan/P0-UPSTREAM-BASELINE.md` — sha256:bfb307451cf27dbe
 - `docs/03-v1.0-plan/P1-SYSTEM-CONTRACT.md` — sha256:d66ac30d8d5fef52
 - `docs/03-v1.0-plan/P2-HOST-WORKER.md` — sha256:11d83345e6252db0
 - `docs/03-v1.0-plan/P3-CONNECTION-CARRIER.md` — sha256:6cbdbfa2ed06f803
@@ -34,8 +34,8 @@ Generated files: 58
 - `docs/03-v1.0-plan/P6B-PLUGIN-COMPATIBILITY.md` — sha256:0a5d29c8a8437c3c
 - `docs/03-v1.0-plan/P7-PACKAGING-SECURITY-UPGRADE.md` — sha256:e27587ebc0bb8857
 - `docs/03-v1.0-plan/P8-FINAL-ACCEPTANCE.md` — sha256:fb0306b0195db32f
-- `docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` — sha256:0122fd60725db2f1
-- `docs/04-development-records/DEVELOPMENT-LOG.md` — sha256:8959559b5aede07b
+- `docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` — sha256:c80cfe6d2fd22cd6
+- `docs/04-development-records/DEVELOPMENT-LOG.md` — sha256:414f01ce4c9b08bf
 - `docs/04-development-records/ISSUE-AND-BUG-INDEX.md` — sha256:7e71df957ef407d7
 - `docs/04-development-records/lessons/SHACO-FORGE-LESSONS-LEARNED.md` — sha256:31f741c4772d2374
 - `docs/04-development-records/templates/BUG-TEMPLATE.md` — sha256:7450333806d8148c
@@ -54,9 +54,10 @@ Generated files: 58
 - `docs/06-testing-acceptance/evidence/P0-3-CLIENT-HOST-CONTRACT-MAP.md` — sha256:992dbdc328aca2a2
 - `docs/06-testing-acceptance/evidence/P0-4-AUTHENTICATION-AND-TRUST-SURFACE.md` — sha256:6d2faa8b0e5621d1
 - `docs/06-testing-acceptance/evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md` — sha256:6249875860d61d7f
-- `docs/06-testing-acceptance/evidence/README.md` — sha256:6a86941981436547
+- `docs/06-testing-acceptance/evidence/P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md` — sha256:2f2146a5b934364a
+- `docs/06-testing-acceptance/evidence/README.md` — sha256:0f4568e6e3dc76a3
 - `docs/06-testing-acceptance/V1.0-ACCEPTANCE-MATRIX.md` — sha256:a0419a81ab8e53e0
 - `docs/06-testing-acceptance/V1.0-TEST-MATRIX.md` — sha256:31f702889a7dff33
-- `docs/07-handover/CONTEXT-HANDOVER.md` — sha256:b11ff634ac653bed
-- `docs/07-handover/CURRENT-CHECKPOINT.md` — sha256:0179bf80836d4682
+- `docs/07-handover/CONTEXT-HANDOVER.md` — sha256:3654d64852c071fd
+- `docs/07-handover/CURRENT-CHECKPOINT.md` — sha256:4a7b9c9aef32ea85
 - `docs/99-archive/README.md` — sha256:889bc640839da543

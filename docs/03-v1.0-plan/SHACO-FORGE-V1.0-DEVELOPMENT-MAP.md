@@ -30,7 +30,7 @@ Steps:
 - P0-3 Client↔Host Contract Census — PASS / CLOSED
 - P0-4 Authentication / Trust Surface Audit — PASS / CLOSED
 - P0-5 Core Feature Parity Matrix — PASS / CLOSED
-- P0-6 Dependency & Stability Matrix — NOT_STARTED
+- P0-6 Dependency & Stability Matrix — PASS / CLOSED
 - P0-7 Risk Register & P0.S Input Freeze — NOT_STARTED
 
 Frozen Harness baseline: `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`). See `docs/06-testing-acceptance/evidence/P0-1-HARNESS-BASELINE-MANIFEST.md`.

@@ -4,6 +4,23 @@ Status: ACTIVE
 
 ## 2026-08-30
 
+- P0-6 executed against frozen Harness
+  `cd5ef8148158c3a752a658978873241fdf8e2bbc`; upstream SHA, clean worktree and
+  lockfile identity were reverified. No Harness source, lockfile, or baseline
+  change.
+- Dependency classes frozen: product/extension seams may be composed; preview
+  Connection/Gateway/Client-boot/`$events`/native FFI require adapters;
+  dump-config and invariants are support-only; `packages/**/src`, experimental,
+  test-support, and Worker `boot()` are forbidden.
+- Named Pipe is not a Harness extension seam. `PRESET_COPY_REQUIRED = NO`.
+  `HARNESS_DATA_DIRECT_WRITE_FORBIDDEN = YES`. `list_subagent_models` remains
+  CONDITIONAL. `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S`.
+- Evidence:
+  `docs/06-testing-acceptance/evidence/P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md`.
+- `P0_DEPENDENCY_BOUNDARY_FROZEN = YES`;
+  `SHACO_FORGE_V1_0_P0_6 = PASS`. Entire P0 remains `NOT_PASS`.
+- Next executable technical action: P0-7 Risk Register & P0.S Input Freeze.
+
 - P0-5 executed against frozen Harness
   `cd5ef8148158c3a752a658978873241fdf8e2bbc`; upstream SHA, clean worktree and
   lockfile identity were reverified before scope synthesis.

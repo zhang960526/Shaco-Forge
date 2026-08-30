@@ -15,6 +15,7 @@ Date: 2026-08-30
 - P0-3 Client ↔ Host Contract Census: PASS
 - P0-4 Authentication / Trust Surface Audit: PASS
 - P0-5 Core Feature Parity Matrix: PASS
+- P0-6 Dependency & Stability Matrix: PASS
 
 ## Current Gate
 
@@ -31,6 +32,10 @@ Date: 2026-08-30
 `SHACO_FORGE_V1_0_P0_4 = PASS`
 
 `SHACO_FORGE_V1_0_P0_5 = PASS`
+
+`SHACO_FORGE_V1_0_P0_6 = PASS`
+
+`P0_DEPENDENCY_BOUNDARY_FROZEN = YES`
 
 `P0_WEB_COMPOSITION_KNOWN = YES`
 
@@ -60,11 +65,13 @@ Date: 2026-08-30
 
 ## Next Step
 
-P0-6 — DEPENDENCY & STABILITY MATRIX
+P0-7 — RISK REGISTER & P0.S INPUT FREEZE
 
-NOT EXECUTED in the P0-5 session.
+NOT EXECUTED in the P0-6 session.
 
 Feature scope: `docs/06-testing-acceptance/evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md`
+
+Dependency boundary: `docs/06-testing-acceptance/evidence/P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md`
 
 ## Important Constraints
 

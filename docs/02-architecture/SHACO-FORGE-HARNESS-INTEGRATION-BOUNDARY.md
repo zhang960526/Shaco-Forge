@@ -15,12 +15,20 @@ Shaco Product
   -> Harness Runtime
 ```
 
+P0-6 fact freeze (`docs/06-testing-acceptance/evidence/P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md`):
+
+- Official Node entry is spawn `dsh --profile`. Direct `boot()` is not a production Worker main.
+- Generated `./remote` / `./typert` are documented product contracts.
+- Preview Connection/Gateway/Client-boot surfaces require a Shaco adapter.
+- Named Pipe is a Shaco carrier candidate, not a Harness documented extension seam.
+
 ## Prohibited Direction
 
 - arbitrary `packages/**/src` deep imports in production
 - test-support / experimental packages as hidden production dependencies
-- undocumented boot shortcuts
+- undocumented boot shortcuts, including in-process `dsh-app-boot` as Worker main
 - rewriting Harness Agent business protocol under `SHACO_FORGE_WORKER_PROTOCOL_V1`
+- treating dump-config, SRC/tsx Host, or Web cookie/HTTP as the Desktop runtime contract
 
 ## V1.0 Contract
 
