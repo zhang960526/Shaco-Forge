@@ -25,7 +25,7 @@ V1.0 = Harness Desktop Baseline using Electron Desktop + independent per-user lo
 
 ## Current Status
 
-P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. Executor applied F-01/F-02/F-03 wording. Risk register and P0.S inputs: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`. P0.S is NOT_STARTED. `P0_EXECUTOR_WORK = CLOSED`. `INDEPENDENT_P0_CLOSURE_AUDIT = PENDING_CORRECTIVE_REVIEW`. `ALLOW_P0S = NO`. Next step is Independent P0 Closure Corrective Review. P1 cannot freeze until P0.S passes.
+P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. AUDIT-004B = `PASS`. `P0_CLOSURE_AUDIT = PASS`. Risk register and P0.S inputs: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`. P0.S is NOT_STARTED. `P0_EXECUTOR_WORK = CLOSED`. `INDEPENDENT_P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. Next step is BEGIN P0.S FEASIBILITY SPIKE. P1 cannot freeze until P0.S passes.
 
 ## First Files to Read
 
@@ -35,14 +35,14 @@ P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baselin
 4. `../03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md`
 5. closed Phase Contract (`../03-v1.0-plan/P0-UPSTREAM-BASELINE.md`)
 6. `../06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`
-7. `../05-reviews/architecture/AUDIT-004-INDEPENDENT-P0-CLOSURE.md`
-8. `../05-reviews/architecture/CORRECTIVE-004-P0-CLOSURE-F01-F02-F03.md`
-9. `../03-v1.0-plan/P0S-FEASIBILITY-SPIKE.md` (not to execute until Independent Corrective Review PASS)
+7. `../05-reviews/architecture/AUDIT-004B-P0-CLOSURE-CORRECTIVE-REVIEW.md`
+8. `../05-reviews/architecture/AUDIT-004-INDEPENDENT-P0-CLOSURE.md`
+9. `../03-v1.0-plan/P0S-FEASIBILITY-SPIKE.md`
 
 ## Immediate Next
 
-INDEPENDENT P0 CLOSURE CORRECTIVE REVIEW
+BEGIN P0.S FEASIBILITY SPIKE
 
-NOT EXECUTED.
+NOT EXECUTED in the Reviewer session.
 
-`ALLOW_P0S = NO`. Do not begin P0.S, Electron, Worker, Named Pipe, or Harness Core work.
+`ALLOW_P0S = YES`. `P0_CLOSURE_AUDIT = PASS`.

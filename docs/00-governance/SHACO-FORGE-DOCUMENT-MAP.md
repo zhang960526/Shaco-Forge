@@ -50,8 +50,8 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | Document | Role | Status |
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
-| `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Executor F-01/F-02/F-03 wording applied; Independent Corrective Review pending |
-| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract 候选 | READY-AFTER-P0; NOT_STARTED until Independent P0 Closure Corrective Review PASS |
+| `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
+| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract 候选 | READY-AFTER-P0; `P0_CLOSURE_AUDIT = PASS`; Spike not started |
 | `P05-COMPATIBILITY-VERSION.md` | P0.5 Compatibility Contract 候选 | READY-FOR-FREEZE-AFTER-P0S |
 | `P1-SYSTEM-CONTRACT.md` | P1 骨架 | NOT-DETAILED |
 | `P2-HOST-WORKER.md` | P2 骨架 | NOT-DETAILED |
@@ -80,8 +80,9 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 |---|---|
 | `REVIEW-INDEX.md` | 所有 Review 索引 |
 | `architecture/` | 架构审计与复审 |
-| `architecture/AUDIT-004-INDEPENDENT-P0-CLOSURE.md` | Independent P0 Closure Audit (`PASS_WITH_REQUIRED_CORRECTIONS`; F-01/F-02/F-03 Executor wording pending re-review) |
-| `architecture/CORRECTIVE-004-P0-CLOSURE-F01-F02-F03.md` | Executor wording record for AUDIT-004 F-01/F-02/F-03; does not grant Closure PASS |
+| `architecture/AUDIT-004-INDEPENDENT-P0-CLOSURE.md` | Original Independent P0 Closure Audit (`PASS_WITH_REQUIRED_CORRECTIONS`; closure status now in AUDIT-004B) |
+| `architecture/CORRECTIVE-004-P0-CLOSURE-F01-F02-F03.md` | Executor wording record for AUDIT-004 F-01/F-02/F-03 |
+| `architecture/AUDIT-004B-P0-CLOSURE-CORRECTIVE-REVIEW.md` | Independent Corrective Re-Review (`PASS`; `P0_CLOSURE_AUDIT = PASS`; `ALLOW_P0S = YES`) |
 | `implementation/` | 实现审计 |
 | `corrective/` | Corrective 审计 |
 | `templates/` | Review 模板 |

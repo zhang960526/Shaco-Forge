@@ -1,10 +1,10 @@
 # Documentation Manifest
 
-Generated files: 63
+Generated files: 65
 
-- `README.md` — sha256:df3d1d6a4bb23afd
-- `docs/00-governance/SHACO-FORGE-CURRENT-STATE.md` — sha256:6eeeb102b7fd6274
-- `docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md` — sha256:31572f66a654ea7a
+- `README.md` — sha256:fb98d5f8e67e4808
+- `docs/00-governance/SHACO-FORGE-CURRENT-STATE.md` — sha256:ed42b04ce4909cae
+- `docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md` — sha256:29533114a5542ae8
 - `docs/00-governance/SHACO-FORGE-DOCUMENT-RULES.md` — sha256:f894e352b23749fe
 - `docs/01-product/SHACO-FORGE-PRODUCT-VISION.md` — sha256:ef6a32d4c83e8ab6
 - `docs/01-product/SHACO-FORGE-V1.0-MASTER-GOAL.md` — sha256:afefb580acc1eac5
@@ -34,8 +34,8 @@ Generated files: 63
 - `docs/03-v1.0-plan/P6B-PLUGIN-COMPATIBILITY.md` — sha256:0a5d29c8a8437c3c
 - `docs/03-v1.0-plan/P7-PACKAGING-SECURITY-UPGRADE.md` — sha256:e27587ebc0bb8857
 - `docs/03-v1.0-plan/P8-FINAL-ACCEPTANCE.md` — sha256:fb0306b0195db32f
-- `docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` — sha256:9d19ba73eb1b78aa
-- `docs/04-development-records/DEVELOPMENT-LOG.md` — sha256:44ec298c8fe6ff1e
+- `docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` — sha256:c6a5660941ee0f36
+- `docs/04-development-records/DEVELOPMENT-LOG.md` — sha256:928c37cd31f38ae8
 - `docs/04-development-records/ISSUE-AND-BUG-INDEX.md` — sha256:7e71df957ef407d7
 - `docs/04-development-records/lessons/SHACO-FORGE-LESSONS-LEARNED.md` — sha256:31f741c4772d2374
 - `docs/04-development-records/templates/BUG-TEMPLATE.md` — sha256:7450333806d8148c
@@ -43,13 +43,15 @@ Generated files: 63
 - `docs/05-reviews/architecture/AUDIT-001-PRE-IMPLEMENTATION-ARCHITECTURE.md` — sha256:ba4f4efa9b025ae6
 - `docs/05-reviews/architecture/AUDIT-002-CORRECTIVE-ARCHITECTURE-REAUDIT.md` — sha256:77c8d14810d6b2f2
 - `docs/05-reviews/architecture/AUDIT-003-P0-P0S-P05-DESIGN-AUDIT.md` — sha256:9160437cd919a57e
-- `docs/05-reviews/architecture/AUDIT-004-INDEPENDENT-P0-CLOSURE.md` — sha256:b906ea2f41d1b4e1
-- `docs/05-reviews/architecture/CORRECTIVE-004-P0-CLOSURE-F01-F02-F03.md` — sha256:a3de3c7e1f079212
+- `docs/05-reviews/architecture/AUDIT-004-INDEPENDENT-P0-CLOSURE.md` — sha256:f15e2489e037cf0c
+- `docs/05-reviews/architecture/AUDIT-004B-P0-CLOSURE-CORRECTIVE-REVIEW.md` — sha256:84f47634566094c6
+- `docs/05-reviews/architecture/CORRECTIVE-004-P0-CLOSURE-F01-F02-F03.md` — sha256:45cf9b9eb6510398
 - `docs/05-reviews/architecture/REVIEW-001-SUMMARY.md` — sha256:76e5939979781e64
 - `docs/05-reviews/architecture/REVIEW-002-SUMMARY.md` — sha256:af1d120d900075c8
 - `docs/05-reviews/architecture/REVIEW-003-SUMMARY.md` — sha256:587d09fb77c80f1b
 - `docs/05-reviews/architecture/REVIEW-004-SUMMARY.md` — sha256:f8df880930126cc8
-- `docs/05-reviews/REVIEW-INDEX.md` — sha256:5d90632a3fc572c5
+- `docs/05-reviews/architecture/REVIEW-004B-SUMMARY.md` — sha256:8643b27beff1471f
+- `docs/05-reviews/REVIEW-INDEX.md` — sha256:9da8bd75c0e6964e
 - `docs/05-reviews/templates/REVIEW-TEMPLATE.md` — sha256:d5e6c41eeaad62ee
 - `docs/06-testing-acceptance/evidence/P0-1-HARNESS-BASELINE-MANIFEST.md` — sha256:6b43d61152a1185d
 - `docs/06-testing-acceptance/evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md` — sha256:fa372fcdfada60a6
@@ -62,6 +64,6 @@ Generated files: 63
 - `docs/06-testing-acceptance/evidence/README.md` — sha256:6a652f69abf9d335
 - `docs/06-testing-acceptance/V1.0-ACCEPTANCE-MATRIX.md` — sha256:a0419a81ab8e53e0
 - `docs/06-testing-acceptance/V1.0-TEST-MATRIX.md` — sha256:31f702889a7dff33
-- `docs/07-handover/CONTEXT-HANDOVER.md` — sha256:fc36a1cecccf5582
-- `docs/07-handover/CURRENT-CHECKPOINT.md` — sha256:cd7a49dd8a3d9fcd
+- `docs/07-handover/CONTEXT-HANDOVER.md` — sha256:f628dfbc825c6988
+- `docs/07-handover/CURRENT-CHECKPOINT.md` — sha256:9ddc5d12fb34c9fa
 - `docs/99-archive/README.md` — sha256:889bc640839da543

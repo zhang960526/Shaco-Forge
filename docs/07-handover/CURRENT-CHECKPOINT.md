@@ -20,6 +20,7 @@ Date: 2026-08-30
 - Entire P0: PASS / CLOSED
 - AUDIT-004 Independent P0 Closure Audit: `PASS_WITH_REQUIRED_CORRECTIONS`
 - P0 Closure Corrective F-01 / F-02 / F-03: Executor wording applied
+- AUDIT-004B Independent P0 Closure Corrective Re-Review: PASS
 
 ## Current Gate
 
@@ -27,9 +28,11 @@ Date: 2026-08-30
 
 `P0_EXECUTOR_WORK = CLOSED`
 
-`INDEPENDENT_P0_CLOSURE_AUDIT = PENDING_CORRECTIVE_REVIEW`
+`INDEPENDENT_P0_CLOSURE_AUDIT = PASS`
 
-`ALLOW_P0S = NO`
+`P0_CLOSURE_AUDIT = PASS`
+
+`ALLOW_P0S = YES`
 
 `P0_BASELINE_FROZEN = YES`
 
@@ -85,11 +88,11 @@ Date: 2026-08-30
 
 ## Next Step
 
-INDEPENDENT P0 CLOSURE CORRECTIVE REVIEW
+BEGIN P0.S FEASIBILITY SPIKE
 
-NOT EXECUTED.
+NOT EXECUTED in the Independent Corrective Re-Review session.
 
-Do not begin P0.S. `ALLOW_P0S = NO`. Executor must not set `P0_CLOSURE_AUDIT = PASS`.
+`ALLOW_P0S = YES`. `P0_CLOSURE_AUDIT = PASS` (AUDIT-004B).
 
 Risk register: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
 
@@ -97,7 +100,5 @@ Risk register: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-I
 
 - no production implementation yet
 - do not pull/switch/update the frozen Harness SHA without an Architecture Decision
-- P0 may install/build only inside pinned worktree without mutating baseline; frozen lockfile only
-- P0 PASS does not authorize BEGIN P0.S
-- Independent P0 Closure Audit must PASS (after F-01/F-02/F-03 corrective review) before Spike
+- Spike code is NOT production by default
 - `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S`

@@ -1,6 +1,8 @@
 # AUDIT-004 — Independent P0 Closure Audit
 
-Status: COMPLETE (Reviewer verdict; Architecture Owner disposition pending)  
+**Closure status (current):** see `AUDIT-004B-P0-CLOSURE-CORRECTIVE-REVIEW.md`. This file remains the original Independent P0 Closure Audit. It is not rewritten. After corrective re-review: `P0_CLOSURE_AUDIT = PASS`, `ALLOW_P0S = YES`.
+
+Status: COMPLETE (original Reviewer verdict; Architecture Owner disposition pending at time of writing)  
 Reviewer: Independent Architecture Reviewer (not the P0-1..P0-7 Executor)  
 Date: 2026-08-30  
 Mode: Review only. No product code, Harness mutation, Spike, Named Pipe, Electron prototype, P0.5, or P1.

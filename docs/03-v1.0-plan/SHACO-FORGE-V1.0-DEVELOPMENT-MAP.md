@@ -37,11 +37,11 @@ Frozen Harness baseline: `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-
 
 Risk / Spike input freeze: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`.
 
-P0 PASS does not authorize P0.S. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. Executor applied F-01/F-02/F-03 wording. Next: INDEPENDENT P0 CLOSURE CORRECTIVE REVIEW. `ALLOW_P0S = NO`.
+P0 PASS does not by itself authorize P0.S. AUDIT-004B Independent Corrective Re-Review = `PASS`. `P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. Next: BEGIN P0.S FEASIBILITY SPIKE.
 
 ## P0.S
 
-Status: NOT_STARTED (`SHACO_FORGE_V1_0_P0S = NOT_STARTED`; execution only after `P0_CLOSURE_AUDIT = PASS`)
+Status: NOT_STARTED (`SHACO_FORGE_V1_0_P0S = NOT_STARTED`; `ALLOW_P0S = YES` after AUDIT-004B)
 
 Steps:
 

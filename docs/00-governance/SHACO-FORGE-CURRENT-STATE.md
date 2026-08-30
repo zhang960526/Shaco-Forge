@@ -12,8 +12,8 @@ Last Updated: 2026-08-30
 ## Current Phase
 
 - Phase: P0 — Upstream Baseline & Product Capability Audit
-- Step: P0 CLOSED / PASS; Independent Closure Audit corrective wording applied
-- Next Executable Step: INDEPENDENT P0 CLOSURE CORRECTIVE REVIEW (NOT EXECUTED)
+- Step: P0 CLOSED / PASS; Independent P0 Closure Corrective Re-Review PASS
+- Next Executable Step: BEGIN P0.S FEASIBILITY SPIKE (NOT EXECUTED in the Reviewer session)
 - Production Implementation: NOT_STARTED
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -25,24 +25,26 @@ Last Updated: 2026-08-30
 - `P0_CORE_PARITY_SCOPE_FROZEN = YES`
 - `P0_DEPENDENCY_BOUNDARY_FROZEN = YES`
 - `P0_UPSTREAM_RISK_REGISTER_FROZEN = YES`
-- `P0S_SPIKE_INPUT_FROZEN = YES` (H-01/H-07/H-26 wording corrected per AUDIT-004 F-01/F-02/F-03)
+- `P0S_SPIKE_INPUT_FROZEN = YES`
 - `SHACO_FORGE_V1_0_P0 = PASS`
 - `P0_STATE = CLOSED`
 - `P0_EXECUTOR_WORK = CLOSED`
-- `INDEPENDENT_P0_CLOSURE_AUDIT = PENDING_CORRECTIVE_REVIEW`
+- `INDEPENDENT_P0_CLOSURE_AUDIT = PASS`
+- `P0_CLOSURE_AUDIT = PASS`
 - `SHACO_FORGE_V1_0_P0S = NOT_STARTED`
-- `ALLOW_P0S = NO`
+- `ALLOW_P0S = YES`
 
-Executor must not set `P0_CLOSURE_AUDIT = PASS`. That remains Independent Reviewer / Architecture Owner.
+Authority for closure: `docs/05-reviews/architecture/AUDIT-004B-P0-CLOSURE-CORRECTIVE-REVIEW.md`.
 
 ## Architecture Review State
 
 - Initial Pre-Implementation Architecture Audit: FAIL
 - Corrective Architecture Re-Audit: PASS_WITH_REQUIRED_CORRECTIONS
 - P0 / P0.S / P0.5 Detailed Design Audit: PASS_WITH_REQUIRED_CORRECTIONS
-- Independent P0 Closure Audit (AUDIT-004): `PASS_WITH_REQUIRED_CORRECTIONS`; `ALLOW_P0S = NO`
-- P0 Closure Corrective F-01 / F-02 / F-03: Executor wording applied; pending Independent Corrective Review
-- Architecture Owner Decision: corrective architecture accepted; P0 stage design accepted with audit corrections incorporated into current Contract candidates. Closure Audit PASS not yet granted.
+- Independent P0 Closure Audit (AUDIT-004): `PASS_WITH_REQUIRED_CORRECTIONS` (original)
+- P0 Closure Corrective F-01 / F-02 / F-03: Executor wording applied
+- Independent P0 Closure Corrective Re-Review (AUDIT-004B): `PASS`
+- Architecture Owner Decision: corrective architecture accepted; P0 stage design accepted; Closure Audit PASS granted by Independent Corrective Re-Review
 
 ## Current Architecture Baseline
 
@@ -83,15 +85,17 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - P0 Design: READY
 - P0 execution: CLOSED / PASS
 - P0-1 through P0-7: PASS / CLOSED
-- P0.S Design: READY (execution not allowed until Independent Corrective Review sets `P0_CLOSURE_AUDIT = PASS`)
+- Independent P0 Closure Audit: PASS (AUDIT-004B)
+- P0.S Design: READY
+- P0.S execution: ALLOWED (`ALLOW_P0S = YES`); `SHACO_FORGE_V1_0_P0S = NOT_STARTED`
 - P0.5 Design: READY (freeze not allowed until P0.S PASS)
 - P1 Detailed Freeze: NOT_ALLOWED until P0.S PASS
 - P2+ Implementation: NOT_ALLOWED
 
 ## Immediate Next Action
 
-1. Independent P0 Closure **Corrective Review** (new Reviewer conversation).
-2. Do not begin P0.S, Electron Spike, Worker Spike, Named Pipe, P0.5, P1, or production code.
-3. P0 PASS does not authorize `BEGIN P0.S`. `ALLOW_P0S = NO`.
+1. BEGIN P0.S FEASIBILITY SPIKE (new Executor conversation).
+2. Do not pull/switch/update the frozen Harness SHA without an Architecture Decision.
+3. Spike code is NOT production by default.
 4. Risk / Spike input authority: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
-5. Do not pull/switch/update the frozen Harness SHA without an Architecture Decision.
+5. This Reviewer session did **not** begin P0.S.

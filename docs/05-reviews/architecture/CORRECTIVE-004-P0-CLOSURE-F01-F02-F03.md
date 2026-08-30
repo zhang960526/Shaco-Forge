@@ -1,9 +1,9 @@
 # CORRECTIVE-004 — P0 Closure F-01 / F-02 / F-03 (Executor)
 
-Status: APPLIED — pending Independent Corrective Review  
+Status: APPLIED — Independent Corrective Review PASS (AUDIT-004B)  
 Date: 2026-08-30  
 Authority: `AUDIT-004-INDEPENDENT-P0-CLOSURE.md`  
-Does not set `P0_CLOSURE_AUDIT = PASS`. Does not authorize `BEGIN P0.S`.
+Does not itself set `P0_CLOSURE_AUDIT = PASS`. Closure PASS is recorded in AUDIT-004B.
 
 ## Scope
 
@@ -56,3 +56,5 @@ Default persistence remains JSONL. Not a V1.0 REQUIRED Host package.
 - `ALLOW_P0S = NO`
 
 Next: INDEPENDENT P0 CLOSURE CORRECTIVE REVIEW. Not executed here.
+
+Independent Corrective Review (AUDIT-004B) later recorded `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES`. This Executor record is not rewritten.
