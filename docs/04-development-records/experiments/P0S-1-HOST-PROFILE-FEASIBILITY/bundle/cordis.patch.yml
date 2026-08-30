@@ -1,0 +1,50 @@
+# NOT_PRODUCTION: disposable P0.S-1 Host Profile feasibility composition.
+# This bundle deliberately omits dsh-web-app, dsh-host-webserver, client HMR,
+# client modules, SPA rows, browser startup, and browser opener rows.
+- insert:
+    - id: p0s1-connection-compatibility
+      name: '@shaco-forge/not-production-p0s1-host-bundle/connection-compatibility'
+
+    # Local, non-UI answerer used only for the safe ask_user_question probe. It
+    # activates before the Remote Events forwarder can wait for a Client.
+    - id: p0s1-question-answerer
+      name: '@shaco-forge/not-production-p0s1-host-bundle/question-answerer'
+
+    - id: subagent-model-selection-settings
+      name: '@deepseek-ai/dsh-tool-subagent/model-selection-settings'
+
+    - id: workspace
+      name: '@deepseek-ai/dsh-workspace'
+
+    - id: session-reference
+      name: '@deepseek-ai/dsh-session-reference'
+
+    - id: file-reference-local
+      name: '@deepseek-ai/dsh-file-reference-local'
+
+    - id: session-controller
+      name: '@deepseek-ai/dsh-api-session-controller'
+      config:
+        nativeOpen: false
+
+    - id: settings-controller
+      name: '@deepseek-ai/dsh-api-settings-controller'
+      config:
+        nativeOpen: false
+
+    - id: workspace-controller
+      name: '@deepseek-ai/dsh-api-workspace-controller'
+
+    - id: api-remotes
+      name: '@deepseek-ai/dsh-api-remotes'
+
+    - id: agent-presets
+      name: '@deepseek-ai/dsh-agent-presets'
+      config:
+        default: standard
+        roots: []
+        includeShippedRoot: true
+        includeUserRoot: false
+
+    - id: p0s1-host-probe
+      name: '@shaco-forge/not-production-p0s1-host-bundle/probe'

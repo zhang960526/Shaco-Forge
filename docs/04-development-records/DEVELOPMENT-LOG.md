@@ -4,6 +4,53 @@ Status: ACTIVE
 
 ## 2026-08-30
 
+- P0.S-1 formal closure completed as a documentation/governance action only.
+  The authoritative chronology is:
+
+  1. Executor returned `P0S1_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT` with a
+     non-listening Layer C adapter, `HOST_PROFILE_CORE_PATCH_REQUIRED = NO` and
+     `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`.
+  2. External Independent Review AUDIT-005 returned
+     `PASS_WITH_REQUIRED_CORRECTIONS` and recommended
+     `ACCEPT_PROVEN_WITH_CONSTRAINT`; its supplied result reports successful
+     independent reproduction and no Reviewer file mutation.
+  3. Architecture Owner accepted the non-listening Layer C constraint and
+     `ACCEPT_PROVEN_WITH_CONSTRAINT` technical disposition.
+  4. CORRECTIVE-005 applied documentation-only F-01/F-02/F-03: surface-census
+     reconciliation, unary-only boundary, and runner/environment prerequisites.
+  5. External Corrective Re-Review AUDIT-005B returned `PASS`; F-01/F-02/F-03
+     were closed, `P0S1_CAN_CLOSE = YES`, and
+     `FINAL_RECOMMENDATION = OWNER_MAY_CLOSE_P0S1`.
+  6. F-REV-01's LOW SHA256 transcription error was corrected in the Evidence;
+     the protected `profile/package.json` file itself remained unchanged.
+  7. `SHACO_FORGE_V1_0_P0S_1 = PASS`; `P0S1_STATE = CLOSED`; feasibility
+     remains `P0S_HOST_PROFILE_FEASIBLE = PROVEN_WITH_CONSTRAINT`.
+  8. P0.S remains `IN_PROGRESS`; P0.S-2 remains `NOT_STARTED`; P0.5 and P1
+     freeze remain disallowed. Full event/stream/settlement/cancel/
+     connection-loss/backpressure proof remains P0.S-4, while Win32 87 and
+     packaged no-system-Node/no-system-pnpm proof remain P0.S-7 inputs.
+  The F-REV-01 correction did not change the prototype, technical result or
+  gate. No Spike code/config or Frozen Harness file was changed, the Spike was
+  not rerun, and P0.S-2 was not started. Review chain: AUDIT-005,
+  CORRECTIVE-005, AUDIT-005B.
+
+- P0.S-1 Host Profile Feasibility Executor completed against Shaco Forge
+  `ae9080a3e4efdf0cb7075e0a46090532941e2409` and frozen Harness
+  `cd5ef8148158c3a752a658978873241fdf8e2bbc` / `0.1.2-alpha.1`.
+  Official built `dsh --profile shaco-host` equivalent ran twice for 20s/10s,
+  remained alive, exposed no listener or browser child, disposed gracefully and
+  exited 0. `dsh-base` + Shaco bundle retained Host/Gateway/Typert/Connection;
+  9 generated Host packages and 58 invocations loaded; Gateway
+  `agentPresets/list` returned shipped `standard`. All P0-5 REQUIRED tool
+  identities were present and bounded probes completed. No Harness source or
+  lock mutation. A non-listening Layer C compatibility adapter was required,
+  so Executor verdict is `PROVEN_WITH_CONSTRAINT`,
+  `HOST_PROFILE_CORE_PATCH_REQUIRED = NO`, `ADAPTER_OR_STUB_USED = YES`,
+  `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`; at that point the result was
+  pending independent Review. P0.S remained `IN_PROGRESS`; P0.S-2 had not
+  started. Evidence:
+  `docs/06-testing-acceptance/evidence/P0S-1-HOST-PROFILE-FEASIBILITY-EVIDENCE.md`.
+
 - Independent P0 Closure Corrective Re-Review (AUDIT-004B): PASS. F-01 / F-02 /
   F-03 CLOSED. F-04 / F-05 CLOSED. No corrective regression. Harness HEAD
   `cd5ef8148158c3a752a658978873241fdf8e2bbc` CLEAN. Shaco Forge HEAD

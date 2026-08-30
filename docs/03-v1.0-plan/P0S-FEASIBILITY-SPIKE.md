@@ -1,8 +1,8 @@
 # P0.S — Desktop / Connection / Packaging Feasibility Spike
 
-Status: READY_AFTER_P0 (`SHACO_FORGE_V1_0_P0S = NOT_STARTED`)
+Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0S = IN_PROGRESS`)
 
-Execution is not authorized by P0 PASS. Begin only after `P0_CLOSURE_AUDIT = PASS` from Independent Reviewer. After AUDIT-004, Executor applied F-01/F-02/F-03 wording only; **corrective review is pending**. Do not begin P0.S in this round.
+Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 is `PASS / CLOSED` with an Owner-accepted `PROVEN_WITH_CONSTRAINT` disposition. P0.S remains `IN_PROGRESS`; P0.S-2 has not started.
 
 P0-7 frozen inputs (do not re-open P0; do not redesign this architecture):
 
@@ -23,17 +23,48 @@ Use disposable evidence-producing prototypes to prove or falsify the highest-ris
 
 Spike code is NOT production by default.
 
-## P0.S-1 — Host Profile Feasibility
+## P0.S-1 — Host Profile Feasibility — PASS / CLOSED
+
+Closed state (2026-08-30):
+
+- `SHACO_FORGE_V1_0_P0S_1 = PASS`
+- `P0S1_STATE = CLOSED`
+- `P0S1_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT`
+- `P0S1_INDEPENDENT_REVIEW = PASS_WITH_REQUIRED_CORRECTIONS`
+- `P0S1_DOCUMENTATION_CORRECTIVE = PASS`
+- `P0S1_CORRECTIVE_REREVIEW = PASS`
+- `P0S_HOST_PROFILE_FEASIBLE = PROVEN_WITH_CONSTRAINT`
+- `ARCHITECTURE_OWNER_LAYER_C_CONSTRAINT_ACCEPTED = YES`
+- `P0S1_TECHNICAL_DISPOSITION = ACCEPT_PROVEN_WITH_CONSTRAINT`
+- `HOST_LONG_RUNNING = YES`
+- `P0S_STANDARD_PRESET_TOOLS_PRESENT = YES`
+- `HOST_PROFILE_CORE_PATCH_REQUIRED = NO`
+- `ADAPTER_OR_STUB_USED = YES`
+- `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
+- `P0S2 = NOT_STARTED`
+- Evidence: `docs/06-testing-acceptance/evidence/P0S-1-HOST-PROFILE-FEASIBILITY-EVIDENCE.md`
+
+Review chain: AUDIT-005 = `PASS_WITH_REQUIRED_CORRECTIONS`; CORRECTIVE-005 =
+`PASS`; AUDIT-005B = `PASS` with F-01/F-02/F-03 closed and
+`P0S1_CAN_CLOSE = YES`; Architecture Owner disposition =
+`ACCEPT_PROVEN_WITH_CONSTRAINT`. Other Core Patch areas remain
+`UNRESOLVED / NOT_YET_TESTED`; the global inventory is not closed.
 
 Prove a long-running Harness Host composition **without the stock `dsh-web-app` browser-facing HTTP/Web runtime** (no HMR, token URL, browser opener, LAN/browser-facing product host), using startup reload and the `standard` preset tool/command/subagent surface.
 
-Do **not** interpret this as “no Cordis service named `webServer` may exist”. Connection/modules may hard-inject that **service contract**. A non-listening compatibility service / adapter / stub that does not expose stock HTTP, does not patch Harness Core, does not give Renderer direct Worker access, and does not restore `dsh-web-app` is `PROVEN_WITH_CONSTRAINT`, not FAIL. Owner must accept that constraint at Spike closure.
+Do **not** interpret this as “no Cordis service named `webServer` may exist”. Connection/modules may hard-inject that **service contract**. A non-listening compatibility service / adapter / stub that does not expose stock HTTP, does not patch Harness Core, does not give Renderer direct Worker access, and does not restore `dsh-web-app` is `PROVEN_WITH_CONSTRAINT`, not FAIL. The Owner accepted this constraint for P0.S-1 only.
+
+The accepted proof is intentionally unary-only: it establishes Host Profile,
+Connection registry and Gateway invoke feasibility. It does not establish
+`$events`, `$events/result`, stream lifecycle/cancel/backpressure,
+approval/question settlement, complete cancel behavior or connection loss.
+Those remain P0.S-4 hard evidence and are not silently closed by P0.S-1.
 
 Hard evidence:
 
 - `P0S_HOST_PROFILE_FEASIBLE` (meanings: PASS / PROVEN_WITH_CONSTRAINT / FAIL — see P0-7 H-01)
 - HOST_LONG_RUNNING
-- HOST_STANDARD_PRESET_TOOLS_PRESENT (shipped `standard` loads; P0-5 REQUIRED tool subset usable — not a product Hard Gate for Jobs/Goal/Workflow/Ralph/Plan/Skills/web tools)
+- `P0S_STANDARD_PRESET_TOOLS_PRESENT` (shipped `standard` loads; P0-5 REQUIRED tool subset usable — not a product Hard Gate for Jobs/Goal/Workflow/Ralph/Plan/Skills/web tools)
 - `P0S_CORE_PATCH_INVENTORY_COMPLETE` with explicit YES/NO per area (`HOST_PROFILE_CORE_PATCH_REQUIRED`, `CONNECTION_CARRIER_CORE_PATCH_REQUIRED`, `CLIENT_BOOT_CORE_PATCH_REQUIRED`, `CLIENT_MODULE_CORE_PATCH_REQUIRED`, `NATIVE_PACKAGING_CORE_PATCH_REQUIRED`) plus `ADAPTER_OR_STUB_USED` (Surface / Why / PublicOrPreviewSeamUsed / ProductionImpact). Adapter/stub is not a Core Patch. Do not infer NONE without inventory.
 
 ## P0.S-2 — Electron Client Boot

@@ -11,9 +11,9 @@ Last Updated: 2026-08-30
 
 ## Current Phase
 
-- Phase: P0 — Upstream Baseline & Product Capability Audit
-- Step: P0 CLOSED / PASS; Independent P0 Closure Corrective Re-Review PASS
-- Next Executable Step: BEGIN P0.S FEASIBILITY SPIKE (NOT EXECUTED in the Reviewer session)
+- Phase: P0.S — Desktop / Connection / Packaging Feasibility Spike
+- Step: P0.S-1 `PASS / CLOSED`; accepted `PROVEN_WITH_CONSTRAINT`
+- Next Executable Step: `PREPARE P0.S-2 — Electron Client Boot`; P0.S-2 is not started
 - Production Implementation: NOT_STARTED
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -31,10 +31,30 @@ Last Updated: 2026-08-30
 - `P0_EXECUTOR_WORK = CLOSED`
 - `INDEPENDENT_P0_CLOSURE_AUDIT = PASS`
 - `P0_CLOSURE_AUDIT = PASS`
-- `SHACO_FORGE_V1_0_P0S = NOT_STARTED`
+- `SHACO_FORGE_V1_0_P0S = IN_PROGRESS`
+- `P0S = IN_PROGRESS`
+- `SHACO_FORGE_V1_0_P0S_1 = PASS`
+- `P0S1_STATE = CLOSED`
+- `P0S1_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT`
+- `P0S1_INDEPENDENT_REVIEW = PASS_WITH_REQUIRED_CORRECTIONS`
+- `P0S1_DOCUMENTATION_CORRECTIVE = PASS`
+- `P0S1_CORRECTIVE_REREVIEW = PASS`
+- `P0S_HOST_PROFILE_FEASIBLE = PROVEN_WITH_CONSTRAINT`
+- `ARCHITECTURE_OWNER_LAYER_C_CONSTRAINT_ACCEPTED = YES`
+- `P0S1_TECHNICAL_DISPOSITION = ACCEPT_PROVEN_WITH_CONSTRAINT`
+- `HOST_LONG_RUNNING = YES`
+- `P0S_STANDARD_PRESET_TOOLS_PRESENT = YES`
+- `HOST_PROFILE_CORE_PATCH_REQUIRED = NO`
+- `ADAPTER_OR_STUB_USED = YES`
+- `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
+- `P0S2 = NOT_STARTED`
 - `ALLOW_P0S = YES`
 
-Authority for closure: `docs/05-reviews/architecture/AUDIT-004B-P0-CLOSURE-CORRECTIVE-REVIEW.md`.
+Authority for P0 closure remains
+`docs/05-reviews/architecture/AUDIT-004B-P0-CLOSURE-CORRECTIVE-REVIEW.md`.
+P0.S-1 closure is based on AUDIT-005, CORRECTIVE-005, AUDIT-005B and the
+Architecture Owner acceptance recorded above. The stage closes as PASS while
+its feasibility disposition remains `PROVEN_WITH_CONSTRAINT`.
 
 ## Architecture Review State
 
@@ -44,7 +64,10 @@ Authority for closure: `docs/05-reviews/architecture/AUDIT-004B-P0-CLOSURE-CORRE
 - Independent P0 Closure Audit (AUDIT-004): `PASS_WITH_REQUIRED_CORRECTIONS` (original)
 - P0 Closure Corrective F-01 / F-02 / F-03: Executor wording applied
 - Independent P0 Closure Corrective Re-Review (AUDIT-004B): `PASS`
-- Architecture Owner Decision: corrective architecture accepted; P0 stage design accepted; Closure Audit PASS granted by Independent Corrective Re-Review
+- Independent P0.S-1 Review (AUDIT-005): `PASS_WITH_REQUIRED_CORRECTIONS`
+- P0.S-1 Documentation Corrective (CORRECTIVE-005): `PASS`; F-01 / F-02 / F-03 applied
+- Independent P0.S-1 Corrective Re-Review (AUDIT-005B): `PASS`; F-01 / F-02 / F-03 closed; `P0S1_CAN_CLOSE = YES`
+- Architecture Owner Decision: corrective architecture and P0 closure remain accepted; the P0.S-1 non-listening Layer C constraint and `ACCEPT_PROVEN_WITH_CONSTRAINT` disposition are accepted; P0.S-1 is closed
 
 ## Current Architecture Baseline
 
@@ -57,8 +80,10 @@ Authority for closure: `docs/05-reviews/architecture/AUDIT-004B-P0-CLOSURE-CORRE
 - Full third-party plugin parity: NOT a 1.0 requirement
 - Dynamic Cordis: release default not enabled unless P0.S proves a required core dependency
 - Harness upgrades: exact baseline pin + compatibility test + backup + fail-closed; no down-migration promise
-- `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S` (not NONE, not KNOWN_REQUIRED)
-- Cordis `webServer` **service inject** (Layer A) ≠ stock `dsh-web-app` HTTP (Layer B). Layer C stub/adapter = `PROVEN_WITH_CONSTRAINT`, not automatic Core Patch.
+- `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S`; only the Host Profile area is
+  now Executor-tested `NO`, while carrier/client/module/packaging areas remain
+  `UNRESOLVED / NOT_YET_TESTED`
+- Cordis `webServer` **service inject** (Layer A) ≠ stock `dsh-web-app` HTTP (Layer B). The P0.S-1 Layer C stub/adapter disposition is accepted as `PROVEN_WITH_CONSTRAINT`, not a Core Patch.
 
 ## Frozen Harness Baseline (P0-1)
 
@@ -87,15 +112,20 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - P0-1 through P0-7: PASS / CLOSED
 - Independent P0 Closure Audit: PASS (AUDIT-004B)
 - P0.S Design: READY
-- P0.S execution: ALLOWED (`ALLOW_P0S = YES`); `SHACO_FORGE_V1_0_P0S = NOT_STARTED`
-- P0.5 Design: READY (freeze not allowed until P0.S PASS)
+- P0.S execution: IN_PROGRESS (`ALLOW_P0S = YES`)
+- P0.S-1: PASS / CLOSED; Host Profile feasibility remains `PROVEN_WITH_CONSTRAINT`; Layer C constraint accepted
+- P0.S-2 through P0.S-8: NOT_STARTED
+- P0.5 Design: READY, but freeze remains NOT_ALLOWED while P0.S is IN_PROGRESS
 - P1 Detailed Freeze: NOT_ALLOWED until P0.S PASS
 - P2+ Implementation: NOT_ALLOWED
 
 ## Immediate Next Action
 
-1. BEGIN P0.S FEASIBILITY SPIKE (new Executor conversation).
+1. `PREPARE P0.S-2 — Electron Client Boot` from the closed P0.S-1 constraints.
+   This status update does not start P0.S-2.
 2. Do not pull/switch/update the frozen Harness SHA without an Architecture Decision.
 3. Spike code is NOT production by default.
 4. Risk / Spike input authority: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
-5. This Reviewer session did **not** begin P0.S.
+5. Preserve the P0.S-1 unary-only boundary: full event/stream/settlement/cancel/
+   connection-loss/backpressure proof belongs to P0.S-4.
+6. P0.S-1 Evidence: `docs/06-testing-acceptance/evidence/P0S-1-HOST-PROFILE-FEASIBILITY-EVIDENCE.md`.
