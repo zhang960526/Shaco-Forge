@@ -16,10 +16,12 @@ Date: 2026-08-30
 - P0-4 Authentication / Trust Surface Audit: PASS
 - P0-5 Core Feature Parity Matrix: PASS
 - P0-6 Dependency & Stability Matrix: PASS
+- P0-7 Risk Register & P0.S Input Freeze: PASS
+- Entire P0: PASS / CLOSED
 
 ## Current Gate
 
-`ALLOW_P0_EXECUTION = YES`
+`ALLOW_P0_EXECUTION = YES` (P0 itself is closed)
 
 `P0_BASELINE_FROZEN = YES`
 
@@ -35,7 +37,13 @@ Date: 2026-08-30
 
 `SHACO_FORGE_V1_0_P0_6 = PASS`
 
+`SHACO_FORGE_V1_0_P0_7 = PASS`
+
 `P0_DEPENDENCY_BOUNDARY_FROZEN = YES`
+
+`P0_UPSTREAM_RISK_REGISTER_FROZEN = YES`
+
+`P0S_SPIKE_INPUT_FROZEN = YES`
 
 `P0_WEB_COMPOSITION_KNOWN = YES`
 
@@ -51,7 +59,13 @@ Date: 2026-08-30
 
 `P0_CORE_PARITY_SCOPE_FROZEN = YES`
 
-`SHACO_FORGE_V1_0_P0 = NOT_PASS`
+`SHACO_FORGE_V1_0_P0 = PASS`
+
+`P0_STATE = CLOSED`
+
+`SHACO_FORGE_V1_0_P0S = NOT_STARTED`
+
+`P0_CLOSURE_AUDIT = NOT_EXECUTED`
 
 `P1_FREEZE_ALLOWED = NO` until `SHACO_FORGE_V1_0_P0S = PASS`.
 
@@ -65,19 +79,19 @@ Date: 2026-08-30
 
 ## Next Step
 
-P0-7 — RISK REGISTER & P0.S INPUT FREEZE
+INDEPENDENT P0 CLOSURE AUDIT
 
-NOT EXECUTED in the P0-6 session.
+NOT EXECUTED in the P0-7 session.
 
-Feature scope: `docs/06-testing-acceptance/evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md`
+Do not begin P0.S.
 
-Dependency boundary: `docs/06-testing-acceptance/evidence/P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md`
+Risk register: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`
 
 ## Important Constraints
 
 - no production implementation yet
 - do not pull/switch/update the frozen Harness SHA without an Architecture Decision
 - P0 may install/build only inside pinned worktree without mutating baseline; frozen lockfile only
-- P0 must include standard preset census
-- P0.S must prove carrier, trust, binary path, reconnect, packaging runtime strategy and fresh-Windows no-Node condition
-- P0.5 freezes only after P0.S evidence
+- P0 PASS does not authorize BEGIN P0.S
+- Independent P0 Closure Audit must PASS before Spike
+- `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S`

@@ -4,6 +4,21 @@ Status: ACTIVE
 
 ## 2026-08-30
 
+- P0-7 executed as document synthesis against frozen Harness
+  `cd5ef8148158c3a752a658978873241fdf8e2bbc`. Upstream SHA, clean worktree and
+  lockfile identity were reverified. No Harness source, lockfile, baseline, or
+  Spike/production change. No P0-2..P0-6 re-investigation.
+- Master Risk Register frozen. No P0 BLOCKER. `CORE_PATCH_REQUIREMENT` remains
+  `POSSIBLE_REQUIRES_P0S`. P0.S hypotheses H-01..H-26 and Hard Gates frozen.
+  Optional product features are not architecture Hard Gates. Failure branch
+  remains Named Pipe primary / Fallback A loopback HTTP / Fallback B Owner-gated.
+- Evidence:
+  `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`.
+- `P0_UPSTREAM_RISK_REGISTER_FROZEN = YES`; `P0S_SPIKE_INPUT_FROZEN = YES`;
+  `SHACO_FORGE_V1_0_P0_7 = PASS`; `SHACO_FORGE_V1_0_P0 = PASS`;
+  `P0_STATE = CLOSED`; `SHACO_FORGE_V1_0_P0S = NOT_STARTED`.
+- Next executable action: Independent P0 Closure Audit. Do not begin P0.S.
+
 - P0-6 executed against frozen Harness
   `cd5ef8148158c3a752a658978873241fdf8e2bbc`; upstream SHA, clean worktree and
   lockfile identity were reverified. No Harness source, lockfile, or baseline

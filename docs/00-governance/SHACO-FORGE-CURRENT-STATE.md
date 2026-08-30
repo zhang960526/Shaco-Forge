@@ -12,8 +12,8 @@ Last Updated: 2026-08-30
 ## Current Phase
 
 - Phase: P0 — Upstream Baseline & Product Capability Audit
-- Step: P0-6 CLOSED / PASS
-- Next Executable Step: P0-7 — Risk Register & P0.S Input Freeze
+- Step: P0 CLOSED / PASS
+- Next Executable Step: INDEPENDENT P0 CLOSURE AUDIT (NOT EXECUTED)
 - Production Implementation: NOT_STARTED
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -21,9 +21,15 @@ Last Updated: 2026-08-30
 - `SHACO_FORGE_V1_0_P0_4 = PASS`
 - `SHACO_FORGE_V1_0_P0_5 = PASS`
 - `SHACO_FORGE_V1_0_P0_6 = PASS`
+- `SHACO_FORGE_V1_0_P0_7 = PASS`
 - `P0_CORE_PARITY_SCOPE_FROZEN = YES`
 - `P0_DEPENDENCY_BOUNDARY_FROZEN = YES`
-- `SHACO_FORGE_V1_0_P0 = NOT_PASS` (P0-7 not executed)
+- `P0_UPSTREAM_RISK_REGISTER_FROZEN = YES`
+- `P0S_SPIKE_INPUT_FROZEN = YES`
+- `SHACO_FORGE_V1_0_P0 = PASS`
+- `P0_STATE = CLOSED`
+- `SHACO_FORGE_V1_0_P0S = NOT_STARTED`
+- `P0_CLOSURE_AUDIT = NOT_EXECUTED`
 
 ## Architecture Review State
 
@@ -43,6 +49,7 @@ Last Updated: 2026-08-30
 - Full third-party plugin parity: NOT a 1.0 requirement
 - Dynamic Cordis: release default not enabled unless P0.S proves a required core dependency
 - Harness upgrades: exact baseline pin + compatibility test + backup + fail-closed; no down-migration promise
+- `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S` (not rewritten to NONE by P0-7)
 
 ## Frozen Harness Baseline (P0-1)
 
@@ -67,22 +74,23 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 ## Current Readiness
 
 - P0 Design: READY
-- P0 execution: IN_PROGRESS
+- P0 execution: CLOSED / PASS
 - P0-1: PASS / CLOSED
 - P0-2: PASS / CLOSED
 - P0-3: PASS / CLOSED
 - P0-4: PASS / CLOSED
 - P0-5: PASS / CLOSED
 - P0-6: PASS / CLOSED
-- P0.S Design: READY (execution not allowed until P0 PASS)
+- P0-7: PASS / CLOSED
+- P0.S Design: READY (execution not allowed until `P0_CLOSURE_AUDIT = PASS`)
 - P0.5 Design: READY (freeze not allowed until P0.S PASS)
 - P1 Detailed Freeze: NOT_ALLOWED until P0.S PASS
 - P2+ Implementation: NOT_ALLOWED
 
 ## Immediate Next Action
 
-1. Execute P0-7 Risk Register & P0.S Input Freeze against the frozen worktree and P0-6 matrix.
-2. Product-scope authority: `docs/06-testing-acceptance/evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md`.
-3. Dependency-boundary authority: `docs/06-testing-acceptance/evidence/P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md`.
-4. P0 may perform read-only/diagnostic install/build on the pinned worktree without mutating the baseline. Use frozen lockfile only.
-5. Do not begin P0.S, P1, Desktop, Worker, or Named Pipe work.
+1. Independent P0 Closure Audit by a different Reviewer / new conversation.
+2. Do not begin P0.S, Electron Spike, Worker Spike, Named Pipe, P0.5, P1, or production code.
+3. P0 PASS does not authorize `BEGIN P0.S`.
+4. Risk / Spike input authority: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`.
+5. Do not pull/switch/update the frozen Harness SHA without an Architecture Decision.

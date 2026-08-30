@@ -21,7 +21,7 @@ P0   Upstream Baseline & Product Capability Audit
 
 ## P0
 
-Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0 = NOT_PASS`)
+Status: CLOSED (`SHACO_FORGE_V1_0_P0 = PASS`)
 
 Steps:
 
@@ -31,13 +31,17 @@ Steps:
 - P0-4 Authentication / Trust Surface Audit — PASS / CLOSED
 - P0-5 Core Feature Parity Matrix — PASS / CLOSED
 - P0-6 Dependency & Stability Matrix — PASS / CLOSED
-- P0-7 Risk Register & P0.S Input Freeze — NOT_STARTED
+- P0-7 Risk Register & P0.S Input Freeze — PASS / CLOSED
 
 Frozen Harness baseline: `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`). See `docs/06-testing-acceptance/evidence/P0-1-HARNESS-BASELINE-MANIFEST.md`.
 
+Risk / Spike input freeze: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`.
+
+P0 PASS does not authorize P0.S. Next: INDEPENDENT P0 CLOSURE AUDIT.
+
 ## P0.S
 
-Status: READY_FOR_EXECUTION_AFTER_P0
+Status: NOT_STARTED (`SHACO_FORGE_V1_0_P0S = NOT_STARTED`; execution only after `P0_CLOSURE_AUDIT = PASS`)
 
 Steps:
 

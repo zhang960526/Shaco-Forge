@@ -2,6 +2,25 @@
 
 Status: READY_FOR_FREEZE_AFTER_P0S
 
+P0-7 recorded inputs only. This file is not frozen and is not redesigned here.
+
+Authority: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` section N.
+
+Pinned identities P0.5 must consume:
+
+- HarnessBaselineVersion = package `0.1.2-alpha.1` + exact SHA `cd5ef8148158c3a752a658978873241fdf8e2bbc`
+- Lockfile identity `506ad1fc7c40f71ce8c6afe08724fdd55020c1a527d7a7a185c559d39ecfcaf1`
+- Node engines `^22.19.0 || >=24.0.0`; actual Node runtime pin comes from proven `WORKER_RUNTIME_STRATEGY`
+- `SESSION_FORMAT_VERSION = 0`
+- credentials v1; workspace v2; projcache v4
+- Host profile / shipped `standard` compatibility expectations (`PRESET_COPY_REQUIRED = NO`)
+- Preview/upgrade-sensitive surfaces from P0-6 (Connection, Gateway, Client boot, Settings capability, JSONL, windows-acl/koffi, Remote/Typert, standard composition, SessionEvent map, native ABI)
+- No Harness down-migration; backup + old binary/data restore
+- Fail-closed before Agent write on identity mismatch, including DSH_HOME mismatch
+- Disk full / backup fail / upgrade crash must not INSTALL
+
+Six handshake identities remain as designed below. Do not add ElectronVersion / NodeRuntimeVersion to every handshake.
+
 ## Goal
 
 Define which product identities may connect/write, how incompatibility fails closed, and how pinned Harness upgrades are backed up/restored.

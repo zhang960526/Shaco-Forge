@@ -1,13 +1,13 @@
 # P0 — Upstream Baseline & Product Capability Audit
 
-Status: IN_PROGRESS
+Status: CLOSED / PASS
 P0-1: CLOSED / PASS
 P0-2: CLOSED / PASS
 P0-3: CLOSED / PASS
 P0-4: CLOSED / PASS
 P0-5: CLOSED / PASS
 P0-6: CLOSED / PASS
-P0-7: NOT_STARTED
+P0-7: CLOSED / PASS
 `P0_BASELINE_FROZEN = YES`
 `P0_WEB_COMPOSITION_KNOWN = YES`
 `P0_STANDARD_PRESET_KNOWN = YES`
@@ -17,7 +17,18 @@ P0-7: NOT_STARTED
 `P0_LOOPBACK_CLASSIFIER_LOCATED = YES`
 `P0_CORE_PARITY_SCOPE_FROZEN = YES`
 `P0_DEPENDENCY_BOUNDARY_FROZEN = YES`
-`SHACO_FORGE_V1_0_P0 = NOT_PASS`
+`P0_UPSTREAM_RISK_REGISTER_FROZEN = YES`
+`P0S_HYPOTHESIS_MATRIX_FROZEN = YES`
+`P0S_HARD_GATES_FROZEN = YES`
+`P0S_FAILURE_BRANCH_FROZEN = YES`
+`P05_INPUTS_FROZEN = YES`
+`P1_INPUTS_FROZEN = YES`
+`P7_INPUTS_RECORDED = YES`
+`P0S_SPIKE_INPUT_FROZEN = YES`
+`P0_EVIDENCE_CONTRADICTIONS = NONE`
+`SHACO_FORGE_V1_0_P0 = PASS`
+`P0_STATE = CLOSED`
+`SHACO_FORGE_V1_0_P0S = NOT_STARTED`
 
 ## Goal
 
@@ -298,22 +309,27 @@ Gate: `P0_DEPENDENCY_BOUNDARY_FROZEN = YES`
 
 ## P0-7 — Risk Register & P0.S Input Freeze
 
-Every risk must include:
+Status: CLOSED / PASS
+Gates: `P0_UPSTREAM_RISK_REGISTER_FROZEN = YES`, `P0S_HYPOTHESIS_MATRIX_FROZEN = YES`, `P0S_HARD_GATES_FROZEN = YES`, `P0S_FAILURE_BRANCH_FROZEN = YES`, `P05_INPUTS_FROZEN = YES`, `P1_INPUTS_FROZEN = YES`, `P7_INPUTS_RECORDED = YES`, `P0S_SPIKE_INPUT_FROZEN = YES`
 
-- ID / severity / evidence
-- affected phase
-- falsifiable spike hypothesis
-- acceptance
-- fallback
-- Owner decision required?
+Evidence:
 
-Must include at least carrier, boot graph, no-cookie trust, exact Fetch, in-box modules, Dynamic Cordis dependency, packaging/runtime ABI, DSH_HOME, Windows sandbox/native differences, settings loopback behavior, host FetchHandler and standard preset risks.
+`docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`
+
+Frozen-source result:
+
+- Master Upstream Risk Register written. No P0 BLOCKER. Remaining architecture unknowns are `OPEN_FOR_P0S` (or correctly routed to P0.5 / P1 / P7).
+- `CORE_PATCH_REQUIREMENT` remains `POSSIBLE_REQUIRES_P0S`. P0-7 did not rewrite it to NONE.
+- P0.S Hypothesis Matrix H-01..H-26 and Hard Gates frozen. Optional product features are not architecture Hard Gates.
+- Failure branch frozen: Named Pipe primary; Fallback A private loopback HTTP; Fallback B Host-in-Main only with Owner re-approval of D1/D2. No third primary fallback.
+- `P0_EVIDENCE_CONTRADICTIONS = NONE`.
+- P0 PASS does not authorize BEGIN P0.S. Next step is Independent P0 Closure Audit.
 
 Gate: `P0S_SPIKE_INPUT_FROZEN = YES`
 
 ## Final Gate
 
-P0 passes only if all of the following are YES. Current values after P0-6:
+P0 passes only if all of the following are YES. Current values after P0-7:
 
 - P0_BASELINE_FROZEN = YES
 - P0_WEB_COMPOSITION_KNOWN = YES
@@ -324,6 +340,14 @@ P0 passes only if all of the following are YES. Current values after P0-6:
 - P0_LOOPBACK_CLASSIFIER_LOCATED = YES
 - P0_CORE_PARITY_SCOPE_FROZEN = YES
 - P0_DEPENDENCY_BOUNDARY_FROZEN = YES
-- P0S_SPIKE_INPUT_FROZEN = NO
+- P0_UPSTREAM_RISK_REGISTER_FROZEN = YES
+- P0S_HYPOTHESIS_MATRIX_FROZEN = YES
+- P0S_HARD_GATES_FROZEN = YES
+- P0S_FAILURE_BRANCH_FROZEN = YES
+- P05_INPUTS_FROZEN = YES
+- P1_INPUTS_FROZEN = YES
+- P7_INPUTS_RECORDED = YES
+- P0S_SPIKE_INPUT_FROZEN = YES
+- P0_EVIDENCE_CONTRADICTIONS = NONE
 
-Therefore `SHACO_FORGE_V1_0_P0 = NOT_PASS`.
+Therefore `SHACO_FORGE_V1_0_P0 = PASS`, `P0_STATE = CLOSED`, `SHACO_FORGE_V1_0_P0S = NOT_STARTED`.

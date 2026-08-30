@@ -21,10 +21,11 @@ V1.0 = Harness Desktop Baseline using Electron Desktop + independent per-user lo
 - Minimal Shaco Control Store exists for product/control-plane metadata.
 - Future 1.1 Automation domain is Shaco-owned.
 - Future 1.2 may use Worker-owned Codex/Claude/ACP/SDK child processes.
+- `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S` until P0.S inventory.
 
 ## Current Status
 
-P0 is IN_PROGRESS. P0-1 through P0-6 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. Client↔Host and trust facts are mapped in the P0-3/P0-4 evidence; the normative V1.0 product capability scope is `docs/06-testing-acceptance/evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md`. The formal Harness dependency boundary is `docs/06-testing-acceptance/evidence/P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md`. Core scope is the complete DeepSeek Desktop Agent loop, required Settings/picker/approval/question/subagent behavior and Desktop/Worker durability. Standard preset is loaded in place, not copied. Next step is P0-7. Entire P0 is not PASS. P0.S is not started. P1 cannot freeze until P0.S passes.
+P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. Risk register and P0.S inputs are frozen in `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`. P0.S is NOT_STARTED. P0 PASS does not authorize BEGIN P0.S. Next step is Independent P0 Closure Audit. P1 cannot freeze until P0.S passes.
 
 ## First Files to Read
 
@@ -32,6 +33,6 @@ P0 is IN_PROGRESS. P0-1 through P0-6 are PASS / CLOSED. Frozen Harness baseline 
 2. `../00-governance/SHACO-FORGE-CURRENT-STATE.md`
 3. `../01-product/SHACO-FORGE-V1.0-MASTER-GOAL.md`
 4. `../03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md`
-5. current Phase Contract (`../03-v1.0-plan/P0-UPSTREAM-BASELINE.md`)
-6. `../06-testing-acceptance/evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md`
-7. `../06-testing-acceptance/evidence/P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md`
+5. closed Phase Contract (`../03-v1.0-plan/P0-UPSTREAM-BASELINE.md`)
+6. `../06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`
+7. `../03-v1.0-plan/P0S-FEASIBILITY-SPIKE.md` (not to execute until audit PASS)
