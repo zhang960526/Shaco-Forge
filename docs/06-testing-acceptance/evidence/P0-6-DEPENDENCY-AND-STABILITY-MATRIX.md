@@ -56,9 +56,9 @@ Columns are abbreviated: `Pub` = public export, `Doc` = documented, `Ext` = offi
 | DEP-BOOT-06 | `@deepseek-ai/dsh-app-boot` `.` | `boot`/`loadProfile` | Internal launcher library | tests/CLI | CLI imports `.` | YES | embedders/tests | NO | runtime | SUPPORT_API via import; FORBIDDEN as Worker main | NO | N/A | YES | NO | NO | boot API | Bypasses only supported entry | spawn `dsh` | app-boot README |
 | DEP-BOOT-07 | `patchReload` | `dsh.profile.patchReload` | `live` \| `startup` | ARCH-02 | Manifest field | YAML | YES | YES | runtime | DOCUMENTED_EXTENSION_SEAM | YES field | NO | YES | YES | NO | watcher/HMR impl INTERNAL | Live watchers in Worker | set `startup` | architecture.md |
 | DEP-BOOT-08 | dump-config | `--dump-config` | Diagnostics | P0 only | CLI support | CLI | YES no byte-stability | NO | build | SUPPORT_API | DEV only | N/A | NO | NO | NO | dump shape | False runtime contract | ignore at runtime | dump-config.ts |
-| DEP-CONN-01 | ConnectionHandle / `rpc.call`/`open` | `dsh-client-connection` `.` / `./client` | Business RPC | ARCH-03/04 | Product Client/Host | YES | YES preview | NO | runtime | PREVIEW_PUBLIC_API | NO | YES carrier | YES | YES | possible | envelope/generation | All Remotes fail | loopback HTTP fallback | connection README |
+| DEP-CONN-01 | ConnectionHandle / `rpc.call` / optional `rpc.open` | `dsh-client-connection` `.` / `./client` | Business RPC | ARCH-03/04 | Product Client/Host | YES | YES preview | NO | runtime | PREVIEW_PUBLIC_API | NO | YES carrier | YES | YES | possible | envelope/generation | All Remotes fail | loopback HTTP fallback | connection README; `open?` is optional |
 | DEP-CONN-02 | `createSharedFetchHandler` | Host connection | Authenticated Fetch/bytes | ARCH-04 | Host + experimental WW | YES | YES preview | NO | runtime | PREVIEW_PUBLIC_API | NO | YES | YES | YES | possible | Fetch register | Binary/module bytes fail | P0.S-4 | rpc-host.ts |
-| DEP-CONN-03 | `__DSH_TRANSPORT__` | Client global | Injected carrier hooks | ARCH-01/03 | Client apply() | YES | YES preview | NO | runtime | PREVIEW_PUBLIC_API | NO | YES boot | YES | YES | possible | hook shape | Client falls to page fetch/WS | P0.S-2 | client/index.ts |
+| DEP-CONN-03 | `__DSH_TRANSPORT__` (`fetch` / `openStream` / `loadBundle` / `ownsHost`) | Client global | Injected carrier hooks | ARCH-01/03 | Client apply() | YES | YES preview | NO | runtime | PREVIEW_PUBLIC_API | NO | YES boot | YES | YES | possible | hook shape | Client falls to page fetch/WS | P0.S-2/4 | client/index.ts |
 | DEP-CONN-04 | HTTP/WS/cookie/BrowserAuth | `/api`, `/api/remote.mux` | Web transport | WEB_* | `dsh web` | YES | YES | NO | runtime | INTERNAL for Desktop identity | NO | N/A | YES | NO | NO | cookie/Host/Origin | Wrong trust model | Shaco carrier | P0-4 |
 | DEP-CONN-05 | Named Pipe | win32 stdout drain / sandbox deny | Not IPC | LIFE/ARCH carrier | FFI drain only | NO | NO as IPC | NO | N/A | FORBIDDEN as Harness extension claim | NO | Shaco-owned | N/A | YES product | NO | Shaco ACL/path | Carrier unproven | Electron IPC / loopback HTTP | ffi.ts; P0S contract |
 | DEP-GW-01 | API Gateway | `dsh-api-gateway` `.` / `./client` / `./types` | Unary/stream/`$events` | ARCH-03, PERM, TOOL-10 | Product | YES | YES preview | NO | runtime | PREVIEW_PUBLIC_API | NO | YES | YES | YES | possible | `$events` frames | Interaction/session streams fail | none | gateway README |
@@ -103,7 +103,15 @@ Columns are abbreviated: `Pub` = public export, `Doc` = documented, `Ext` = offi
 | DEP-FORB-01 | `packages/**/src` | `./src/*` | Source-launch | tests | workspace | listed | NO product | NO | N/A | FORBIDDEN | NO | N/A | N/A | N/A | NO | source | Upgrade magnet | published `.` | AGENTS.md |
 | DEP-FORB-02 | experimental / test-support | `packages/experimental/**`, `test-support/**` | Non-product | none | tests/exp | YES | YES exp | NO | N/A | FORBIDDEN | NO | N/A | N/A | N/A | NO | exp APIs | Hidden deps | omit | package paths |
 
-`CORE_PATCH_REQUIREMENT` for the matrix as a whole: `POSSIBLE_REQUIRES_P0S`. No REQUIRED Feature is known to need a Harness core patch today. Official Connection / client-modules / api-gateway plugins currently `inject` `webServer`; P0.S-1/2/3 must prove a Host/Client without that Web adapter or a Shaco plugin that constructs the preview services without HTTP.
+`CORE_PATCH_REQUIREMENT` for the matrix as a whole: `POSSIBLE_REQUIRES_P0S`. Do not rewrite to `NONE` or `KNOWN_REQUIRED`. No REQUIRED Feature is known to need a Harness core patch today. Classification of the inject question is `OPEN_FOR_P0S`.
+
+Three layers must not be conflated (AUDIT-004 F-01):
+
+- **Layer A — Cordis service contract.** Official Host `@deepseek-ai/dsh-client-connection` hard-injects `['webServer', 'credentials']`. Official Host `@deepseek-ai/dsh-client-modules` hard-injects `['webServer', 'loader']`. That means those plugins require a Cordis service named `webServer`. It does **not** prove that stock HTTP listen, SPA, token URL, HMR, `openBrowser`, or `dsh-web-app` are required.
+- **Layer B — stock `dsh-web-app` HTTP/Web product stack (`STOCK_WEB_TRANSPORT`).** HTTP listener, `/api`, `/api/remote.mux`, `/plugins`, SPA/static, token URL, BrowserAuth, HMR, `openBrowser`, web-runtime. Primary Shaco architecture still wants this browser-facing product path removed.
+- **Layer C — Shaco compatibility service / adapter (Spike candidate only).** P0.S may prove a profile/bundle/adapter/non-listening stub/carrier bridge that satisfies Layer A without Layer B. A stub/adapter is not automatically a Core Patch.
+
+**Gateway:** `TypertGatewayService.static inject = ['typert']`. Gateway does **not** hard-inject stock `webServer`. HTTP mux / Web adapter registration is optional `ctx.inject(['connection', 'webServer'], …)` composition. Do not write that Gateway and Connection/modules all hard-inject `webServer`.
 
 ## D. Boot / Profile / Bundle Boundary
 
@@ -134,7 +142,7 @@ Forbidden:
 Risks:
 
 - `dsh-base` alone has no session/settings/workspace controllers, Connection, or `dsh-agent-presets`.
-- Official Host connection/modules plugins inject `webServer`. Extension YAML may be insufficient (P0.S-1).
+- Official Host connection/modules plugins **hard-inject the Cordis `webServer` service contract** (Layer A). That is `OPEN_FOR_P0S`, not `KNOWN_CORE_PATCH_REQUIRED`. Extension YAML / a non-listening compatibility service / adapter may still suffice (P0.S-1). Do not equate Layer A with stock `dsh-web-app` HTTP (Layer B).
 - Whole-row patch replace is upgrade-sensitive.
 - AUDIT-001 allowed embedding `dsh-app-boot`. Frozen upstream architecture + `verify-application-entrypoints` say **only `dsh`**. This matrix follows source.
 
@@ -146,7 +154,8 @@ Business seam (`HARNESS_BUSINESS_CONNECTION_SEAM`):
 
 - `ctx.remote.*` / `$on` / `$stream` / `$mount`
 - Typert endpoint `"<namespace>/<method>"`
-- `ConnectionHandle` `{ generation, rpc.call, rpc.open? }`
+- `ConnectionHandle` `{ generation, rpc.call, rpc.open? }` — Client `rpc.open` is **optional**; browser transports omit it
+- Client `__DSH_TRANSPORT__.openStream` (preview stream hook used by `createWebConnectionRpc`)
 - Host `rpc.intercept`, `fetch.register`, `createSharedFetchHandler.fetch`
 - Gateway `invoke` / `stream` / `wireStream.open`, `$events`, `$events/result`
 - Envelopes, generation, `connection/reset`
@@ -155,7 +164,7 @@ Web transport (`WEB_TRANSPORT_IMPLEMENTATION`): HTTP `/api`, WS mux, BrowserAuth
 
 Public exports: `dsh-client-connection` `.` and `./client`; `HostConnectionHandle`, `createSharedFetchHandler`, `ClientTransportHooks`.
 
-Carrier extension status: **no documented Harness Named Pipe / IPC carrier**. Carrier candidates are preview APIs (`rpc.call`/`open`, shared Fetch, `wireStream`, `__DSH_TRANSPORT__`). Experimental `webworker-runtime` is seam evidence only and still requires `webServer`.
+Carrier extension status: **no documented Harness Named Pipe / IPC carrier**. Carrier candidates are preview APIs (`rpc.call`, optional `rpc.open`, shared Fetch, Host `wireStream`, `__DSH_TRANSPORT__.openStream`). Named Pipe must preserve the **streaming contract**, not a specific `rpc.open` method. Experimental `webworker-runtime` is seam evidence only and still requires a Cordis `webServer` **service** (Layer A); that is not proof of Layer B.
 
 Named Pipe status: **not** `DOCUMENTED_EXTENSION_SEAM`. Upstream uses `PeekNamedPipe` only while draining child stdout; sandbox teaching forbids confined processes from opening named pipes. Pre-classify as `SHACO_CUSTOM_CARRIER_PLUGIN`.
 
@@ -179,6 +188,8 @@ P0.S required: P0.S-2, P0.S-3, P0.S-4.
 | Generator internals / SRC fallback | INTERNAL / FORBIDDEN | NO |
 
 `api-remotes/client` always `$mount`s `dsh-cordis-host-runner/remote`. That is BFF selection, not proof that `ui-cordis` is boot-hard.
+
+Gateway Host plugin: `static inject = ['typert']`. It does **not** hard-inject `webServer`. The WebSocket mux registers only when both `connection` and `webServer` are present (optional composition). Logical Gateway invoke / `wireStream` / `$events` do not require stock HTTP.
 
 ## G. Client Boundary
 
@@ -353,7 +364,7 @@ P0.S-7 proofs still required: packaged Node sidecar (recommended) or Electron-re
 
 No REQUIRED Feature’s **product contract** exists only as an unexported type. Adapter-interesting internals (`pwsh-sandbox/helpers`, picker COM types, `win32.ts`) are INTERNAL; compose `.` / `./runner` / `./worker` / Remotes instead. `./src/*` remains forbidden even when listed.
 
-P0-5 L.2 implementation roster gaps (not a scope change): `dsh-pwsh-local`, `dsh-win32-process`, `dsh-native-command`, `dsh-host-directory-picker`, `dsh-fs-local`, `dsh-home-paths`, `koffi`, `node-pty`. L.2 over-include: `dsh-session-query-sqlite` (SES-10 OPTIONAL).
+P0-5 L.2 implementation roster gaps (not a scope change): `dsh-pwsh-local`, `dsh-win32-process`, `dsh-native-command`, `dsh-host-directory-picker`, `dsh-fs-local`, `dsh-home-paths`, `koffi`, `node-pty`. L.2 must **not** treat `dsh-session-query-sqlite` as V1.0 REQUIRED (SES-10 OPTIONAL; `openAt: never`; JSONL remains default persistence). AUDIT-004 F-03.
 
 ## P. Required Feature Traceability
 
@@ -526,7 +537,7 @@ Minimal set. Do not invent one adapter per package.
 | Boundary | Why | Hidden upstream | Phase |
 |---|---|---|---|
 | `HarnessHostLauncherAdapter` | official entry is process spawn, not JS `boot()` | `dsh` argv, `DSH_HOME`, profile, signals | P2/P7 |
-| `HarnessConnectionCarrierAdapter` | preview RPC/Fetch/stream; Named Pipe is Shaco-owned | HTTP/WS/cookie; `rpc.call`/`open`; `wireStream` | P3 |
+| `HarnessConnectionCarrierAdapter` | preview RPC/Fetch/stream; Named Pipe is Shaco-owned | HTTP/WS/cookie; `rpc.call`; optional `rpc.open`; `__DSH_TRANSPORT__.openStream`; Host `wireStream` | P3 |
 | `HarnessClientBootAdapter` | official inject is Web HTML/`/plugins` | `__DSH_BOOT__`, `__ModuleLoader__`, `loadBundle`, graph | P4 |
 | `HarnessVersionIdentityAdapter` | Preview + fail-closed upgrades | SHA, package version, format pins | P3/P0.5/P7 |
 | `HarnessSettingsCapabilityAdapter` | stock settings depend on loopback/`ownsHost` | `isLoopback`, memory mirror | P4 |
@@ -538,17 +549,19 @@ Session projection reuses `dsh-api-session-controller/client` behind the carrier
 
 `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S`
 
-No `KNOWN_REQUIRED` patch for boot, profile, preset, session, tools, or generated remotes.
+No `KNOWN_REQUIRED` patch for boot, profile, preset, session, tools, or generated remotes. Do not rewrite this to `NONE` without a complete Spike inventory. Do not rewrite it to `KNOWN_REQUIRED` because Connection/modules hard-inject the Cordis `webServer` **service**.
 
 Possible after P0.S if:
 
-- Official `@deepseek-ai/dsh-client-connection` / `dsh-client-modules` / gateway WS cannot load without a real `webServer`, and a Shaco Host plugin cannot construct `HostConnectionService` + intercept/Fetch + boot injections from published APIs.
-- Packaged Client cannot satisfy `__ModuleLoader__` / boot graph without Harness HTML inject.
+- Official `@deepseek-ai/dsh-client-connection` / `dsh-client-modules` cannot be satisfied except by stock Layer B `dsh-web-app` HTTP, **and** a Shaco Host plugin / non-listening compatibility service cannot construct `HostConnectionService` + intercept/Fetch + boot from published/preview APIs **without modifying Harness Core**.
+- Packaged Client cannot satisfy `__ModuleLoader__` / boot graph without Harness HTML inject **and** no documented/preview `loadBundle` path works.
 - Worker runs inside Electron without matching N-API for `koffi` / `node-pty` / `node-addon-require-builtin` (Node sidecar avoids this).
 - Packaged runtime still hits tsx/`src/runner.ts` or dialog tsx fallbacks because `lib/runner.js` / `worker.cjs` were asar-packed.
 - `subprocess-local` static `node-pty` import cannot load in the packaged Worker and cannot be optionalized by composition.
 
-If that happens: record Why, affected seam, why extension is insufficient, upgrade impact, and require Architecture Owner decision. Do not patch in P0.
+A Layer C stub/adapter/compatibility service that satisfies Layer A without Layer B is **not** a Core Patch. Record `ADAPTER_OR_STUB_USED = YES/NO` separately from `*_CORE_PATCH_REQUIRED`.
+
+If a true core patch is required: record Why, affected seam, why extension is insufficient, upgrade impact, and require Architecture Owner decision. Do not patch in P0.
 
 Windows notes that are **not** core patches: require system PowerShell; pin native/browse instead of picker-auto; omit Landlock; keep JSONL+koffi; drop query sqlite unless SES-10 is accepted; x64 only.
 
@@ -556,10 +569,10 @@ Windows notes that are **not** core patches: require system PowerShell; pin nati
 
 | Risk | KnownPublicSeam | Unknown | SpikeProof | FailureMeaning | CorePatch? |
 |---|---|---|---|---|---|
-| Custom Host without private imports | `dsh-base` + bundle YAML + public packages | whether Connection/modules apply without `webServer` | `HOST_PROFILE_WITHOUT_WEBSERVER`; controllers+standard present | Host is still a web-app fork | possible Connection/modules |
+| Custom Host without stock `dsh-web-app` HTTP | `dsh-base` + bundle YAML + public packages | whether Connection/modules Layer A inject can be satisfied without Layer B | `P0S_HOST_PROFILE_FEASIBLE` (see AUDIT-004 F-01); controllers+standard present | Host is still a web-app fork | possible Connection/modules **only if** Layer C adapter/stub cannot be used |
 | Standard without copying YAML | `includeShippedRoot` + `default: standard` | no-web mount still enumerates full standard | `HOST_STANDARD_PRESET_TOOLS_PRESENT` | tools vanish or YAML gets vendored | no if load works |
-| Carrier through exported seam | `rpc.call`/`open`, FetchHandler, `wireStream`, `__DSH_TRANSPORT__` | cross-process no-HTTP | unary+streams+cancel+generation+`$events` | must use loopback HTTP fallback | possible |
-| `rpc.call`/`open` without Web adapter | Host service constructable in tests | shipped plugin `apply()` always registers `/api` | Host plugin without `webServer.register` | official plugin is Web-only | possible |
+| Carrier through exported seam | `rpc.call`, optional `rpc.open`, FetchHandler, `wireStream`, `__DSH_TRANSPORT__.openStream` | cross-process no-HTTP streaming contract | unary + streams (open/item/error/end/cancel/concurrency/loss/backpressure) + generation + `$events` | must use loopback HTTP fallback | possible |
+| `rpc.call` / stream without stock HTTP adapter | Host service constructable in tests; Gateway `wireStream`; Client `openStream` | shipped Connection `apply()` registers `/api` when Layer A `webServer` is a listening HTTP server | Host plugin without stock HTTP `webServer.register`, or Layer C stub | official plugin is Web-only **product** | possible only if Core must change; stub/adapter is not a patch |
 | Client boot without loader hack | `__ModuleLoader__` / `__DSH_BOOT__` / `loadBundle` | custom-scheme inject | `AppWebEntry` starts; settings not memory | Client only works as browser | possible |
 | Packaged client modules | `loadBundle` + static modules | full required roster without `/plugins` | `INBOX_CLIENT_MODULES_PASS` | must keep HTTP `/plugins` | possible |
 | Dynamic Cordis omission | runners are extension rows | boot-hard or not | omit three rows; required UI still boots | runners become implementation closure | no (keep rows) |

@@ -17,7 +17,7 @@ Method: document synthesis from P0-1 through P0-6 evidence. No new Harness sourc
 
 `SHACO_FORGE_V1_0_P0S = NOT_STARTED`
 
-Next authorized action after this file: **INDEPENDENT P0 CLOSURE AUDIT**. This file does not authorize BEGIN P0.S.
+Next authorized action after AUDIT-004 F-01/F-02/F-03 wording corrections: **INDEPENDENT P0 CLOSURE CORRECTIVE REVIEW**. This file does not authorize BEGIN P0.S. Executor must not set `P0_CLOSURE_AUDIT = PASS`.
 
 ---
 
@@ -58,13 +58,13 @@ P0-1 through P0-6 are CLOSED / PASS. This step does not reopen them.
 Confirmed P0 facts used below (cite only; not re-audited):
 
 - Worker production entry is spawn `dsh --profile <shaco-host>` (`dsh-base` + Shaco bundle). In-process `boot()` is forbidden.
-- `dsh-web-app` is not the Shaco Host. Official Connection / client-modules / api-gateway plugins inject `webServer`.
+- `dsh-web-app` is not the Shaco Host. Official Connection and client-modules Host plugins **hard-inject the Cordis `webServer` service contract** (Layer A). That is not proof of stock HTTP `dsh-web-app` (Layer B). Gateway does **not** hard-inject `webServer`; mux registration is optional. See P0-6 three-layer freeze (AUDIT-004 F-01). Classification: `OPEN_FOR_P0S`, not `KNOWN_CORE_PATCH_REQUIRED`.
 - Generated `./remote` / `./typert` are documented product seams. `packages/**/src` and `./src/*` are forbidden production imports.
-- Named Pipe is **not** a Harness extension seam. Pre-class: `SHACO_CUSTOM_CARRIER_PLUGIN`. `rpc.call` / `rpc.open` are `PREVIEW_PUBLIC_API`.
+- Named Pipe is **not** a Harness extension seam. Pre-class: `SHACO_CUSTOM_CARRIER_PLUGIN`. `rpc.call` is `PREVIEW_PUBLIC_API`. Client `rpc.open` is **optional**. Stream contract may be satisfied via `rpc.open`, `__DSH_TRANSPORT__.openStream`, and/or Host `wireStream` (AUDIT-004 F-02).
 - `PRESET_COPY_REQUIRED = NO`. `HARNESS_DATA_DIRECT_WRITE_FORBIDDEN = YES`. Resume authority = Host only.
 - Settings persistence depends on loopback / `ownsHost` (not-memory canary).
 - BrowserAuth cookie proves token/cookie possession, not Windows user / Worker identity.
-- Gateway assumes the caller is already authenticated for alternate `rpc.call/open`.
+- Gateway assumes the caller is already authenticated for alternate `rpc.call` / stream open. Client `rpc.open` is not the sole stream path.
 - Exact Fetch: `/api/session.export` is the binary ZIP path; `/export` product UI is OPTIONAL and is not the binary architecture gate.
 - Web JSON `/api` buffers request bodies up to about 300 MiB.
 - `SESSION_FORMAT_VERSION = 0`; credentials v1; workspace v2; projcache v4.
@@ -93,12 +93,12 @@ When a risk needs both Spike feasibility and a later Contract, `CurrentStatus` i
 
 #### RISK-HOST-01
 
-- Title: Host without WebServer may lose required runtime/API surfaces
+- Title: Host without stock `dsh-web-app` HTTP may lose required runtime/API surfaces
 - Category: HOST_COMPOSITION
 - Severity: HIGH
-- KnownFact: `dsh-base` + custom bundle/profile is a documented extension seam. Worker entry is spawn `dsh --profile`. `dsh-web-app` is not the Shaco Host.
-- Unknown: Whether Connection / modules / controllers that `inject webServer` still expose required Gateway/Remote/runtime surfaces in a Host-only composition.
-- Evidence: P0-2 composition map; P0-6 DEP boot/connection rows; `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S`
+- KnownFact: `dsh-base` + custom bundle/profile is a documented extension seam. Worker entry is spawn `dsh --profile`. `dsh-web-app` is not the Shaco Host. Connection/modules hard-inject Cordis `webServer` **service** (Layer A). Gateway does not hard-inject `webServer`. Layer A ≠ Layer B stock HTTP.
+- Unknown: Whether REQUIRED Gateway/Remote/Connection/runtime surfaces can be preserved without stock `dsh-web-app` browser-facing HTTP (Layer B), using profile/bundle/adapter/non-listening compatibility service (Layer C).
+- Evidence: P0-2 composition map; P0-6 DEP boot/connection rows and three-layer freeze; `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S`
 - AffectedRequiredFeature: Host runtime, all REQUIRED tools via standard, session/settings/approval
 - AffectedArchitectureDecision: ADR-0002 Worker as Harness Host; Host-only Worker
 - AffectedPhase: P0.S-1, then P2
@@ -108,11 +108,11 @@ When a risk needs both Spike feasibility and a later Contract, `CurrentStatus` i
 - RequiresP1Contract?: NO
 - RequiresP7Verification?: NO
 - FallbackAvailable?: YES — Fallback A (private loopback HTTP) still Host-only; Fallback B only with Owner re-approval
-- OwnerDecisionRequired?: only if Spike proves a Harness core patch is required
+- OwnerDecisionRequired?: only if Spike proves a Harness core patch is required; `PROVEN_WITH_CONSTRAINT` (Layer C stub/adapter, no Core Patch, no stock public Web stack) requires Owner accept at P0.S closure
 - FailureImpact: Host-only Worker architecture fails; Desktop+Worker may still survive via Fallback A
 - SpikeProof: H-01
-- PassCondition: long-running Host without WebServer/HMR/token URL preserves required runtime/API surfaces
-- FailCondition: required surfaces exist only behind `dsh-web-app` and cannot be reconstructed without unacceptable core patch
+- PassCondition: Worker does not run stock `dsh-web-app` product Web stack (no browser opener, token URL, client HMR, LAN/browser-facing product host) while REQUIRED Host runtime and Gateway/Remote/Connection semantics remain. A non-listening/local compatibility service that satisfies Layer A without exposing stock HTTP, without Core Patch, without Renderer-direct Worker access, and without secretly restoring `dsh-web-app` is `PROVEN_WITH_CONSTRAINT`, not FAIL.
+- FailCondition: REQUIRED runtime / Connection / Client dependency exists only behind stock `dsh-web-app` HTTP/Web runtime and cannot be reconstructed via profile/bundle/public-or-preview seam/adapter/acceptable compatibility service at reasonable cost, **or** Harness Core must be modified.
 - CurrentStatus: OPEN_FOR_P0S
 
 #### RISK-HOST-02
@@ -144,7 +144,7 @@ When a risk needs both Spike feasibility and a later Contract, `CurrentStatus` i
 - Title: Host-only Worker may require Harness Core patch
 - Category: HOST_COMPOSITION / CORE_PATCH
 - Severity: HIGH
-- KnownFact: no REQUIRED feature currently has a proven need for a core patch. Official Connection/modules/gateway plugins inject `webServer`. `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S`.
+- KnownFact: no REQUIRED feature currently has a proven need for a core patch. Official Connection/modules plugins hard-inject the Cordis `webServer` **service** (Layer A). Gateway does not. `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S` (not `NONE`, not `KNOWN_REQUIRED`). Adapter/stub is not automatically a Core Patch.
 - Unknown: whether Host profile, Connection carrier, Client boot, Client modules, or native packaging actually require patching Harness core
 - Evidence: P0-6 core-patch classification and patch-area inventory
 - AffectedRequiredFeature: Host-only Worker; Client reuse; local carrier
@@ -159,7 +159,7 @@ When a risk needs both Spike feasibility and a later Contract, `CurrentStatus` i
 - OwnerDecisionRequired?: YES if any required patch is discovered
 - FailureImpact: silent fork, upgrade fragility, or architecture return to Owner
 - SpikeProof: H-26
-- PassCondition: `CORE_PATCH_INVENTORY_COMPLETE` with explicit YES/NO per area; NONE or Owner-approved inventory
+- PassCondition: `CORE_PATCH_INVENTORY_COMPLETE` with explicit YES/NO per area (`HOST_PROFILE`, `CONNECTION_CARRIER`, `CLIENT_BOOT`, `CLIENT_MODULE`, `NATIVE_PACKAGING`) plus `ADAPTER_OR_STUB_USED` with Surface/Why/PublicOrPreviewSeamUsed/ProductionImpact; NONE or Owner-approved inventory. Adapter/stub ≠ Core Patch.
 - FailCondition: required patch exists and is not fully inventoried, or is applied silently
 - CurrentStatus: OPEN_FOR_P0S
 
@@ -268,7 +268,7 @@ When a risk needs both Spike feasibility and a later Contract, `CurrentStatus` i
 - Title: Named Pipe is not an upstream Harness carrier seam
 - Category: CARRIER
 - Severity: HIGH
-- KnownFact: Named Pipe = `SHACO_CUSTOM_CARRIER_PLUGIN`. Connection `rpc.call` / `rpc.open` = `PREVIEW_PUBLIC_API`. PeekNamedPipe appears only in child-stdout drain; sandbox teaching forbids confined processes from opening named pipes.
+- KnownFact: Named Pipe = `SHACO_CUSTOM_CARRIER_PLUGIN`. Connection `rpc.call` = `PREVIEW_PUBLIC_API`. Client `rpc.open` is optional. Stream seams also include `__DSH_TRANSPORT__.openStream` and Host `wireStream`. PeekNamedPipe appears only in child-stdout drain; sandbox teaching forbids confined processes from opening named pipes.
 - Unknown: whether unary/stream/events/binary/trust can be mapped losslessly across Desktop Main ↔ Worker
 - Evidence: P0-6 Named Pipe classification; P0-3 ConnectionHandle; System Architecture fallback rule
 - AffectedRequiredFeature: all Connection-using REQUIRED features
@@ -292,9 +292,9 @@ When a risk needs both Spike feasibility and a later Contract, `CurrentStatus` i
 - Title: Streaming semantics may rely on Web mux behavior
 - Category: CARRIER
 - Severity: HIGH
-- KnownFact: `rpc.open` can supply AsyncIterable; Web mux covers item/error/end/cancel; concurrent Remote streams exist (`follow` / `control` / `workspace` / `$events`)
-- Unknown: whether a replacement carrier preserves cancel, error, end, and concurrent streams without mux
-- Evidence: P0-3 streaming/cancellation census
+- KnownFact: Client `rpc.open` can supply AsyncIterable **when present**; it is optional and omitted on browser transports. Web mux covers item/error/end/cancel. Concurrent Remote streams exist (`follow` / `control` / `workspace` / `$events`). Equivalent public/preview paths: `__DSH_TRANSPORT__.openStream`, Host `wireStream`.
+- Unknown: whether a replacement carrier preserves open, AsyncIterable delivery, item ordering, error, end, cancellation, concurrent streams, connection loss, and backpressure without the stock Web mux.
+- Evidence: P0-3 streaming/cancellation census; P0-6 Connection boundary (AUDIT-004 F-02)
 - AffectedRequiredFeature: conversation streaming; projection streams; `$events`
 - AffectedArchitectureDecision: reuse Connection semantics, not a second Agent RPC
 - AffectedPhase: P0.S-4
@@ -307,8 +307,8 @@ When a risk needs both Spike feasibility and a later Contract, `CurrentStatus` i
 - OwnerDecisionRequired?: if stream contract cannot be preserved
 - FailureImpact: live Agent UX / projection broken
 - SpikeProof: H-07
-- PassCondition: `rpc.open` streams honor cancel/error/end and concurrent streams
-- FailCondition: streams hang, leak, drop cancel, or serialize incorrectly
+- PassCondition: replacement carrier preserves the streaming contract (open / items / error / end / cancel / concurrency / loss / backpressure) via `rpc.open` **or** `openStream` / `wireStream` compatible seam. Do not treat Client `rpc.open` as the only product Hard Gate.
+- FailCondition: streams hang, leak, drop cancel, or serialize incorrectly on every available seam
 - CurrentStatus: OPEN_FOR_P0S
 
 #### RISK-CARRIER-03
@@ -1367,11 +1367,26 @@ Count: 2. Packaging feasibility remains on P0.S PKG/LIFE rows.
 |---|---|
 | `CORE_PATCH_REQUIREMENT` | `POSSIBLE_REQUIRES_P0S` |
 | CurrentKnownPatch | NONE proven required |
-| PotentialPatchAreas | Host profile (webServer injection); Connection carrier; Client boot; Client modules; Native packaging / Electron ABI |
+| PotentialPatchAreas | Host profile; Connection carrier; Client boot; Client modules; Native packaging / Electron ABI |
 | OwnerDecisionNowRequired | NO |
 | Allowed P0 PASS? | YES |
 
-P0.S Hard Gate `P0S_CORE_PATCH_INVENTORY_COMPLETE` must record YES/NO for each potential area. If any required patch appears, return to Architecture Owner. P0-7 must not and does not change the requirement to NONE.
+Do **not** rewrite to `NONE` or `KNOWN_REQUIRED`. A Layer C stub/adapter is not a Core Patch.
+
+P0.S Hard Gate `P0S_CORE_PATCH_INVENTORY_COMPLETE` must record, separately:
+
+```text
+HOST_PROFILE_CORE_PATCH_REQUIRED = YES / NO
+CONNECTION_CARRIER_CORE_PATCH_REQUIRED = YES / NO
+CLIENT_BOOT_CORE_PATCH_REQUIRED = YES / NO
+CLIENT_MODULE_CORE_PATCH_REQUIRED = YES / NO
+NATIVE_PACKAGING_CORE_PATCH_REQUIRED = YES / NO
+ADAPTER_OR_STUB_USED = YES / NO
+```
+
+If `ADAPTER_OR_STUB_USED = YES`, also record: Surface, Why, PublicOrPreviewSeamUsed, ProductionImpact.
+
+If any `*_CORE_PATCH_REQUIRED = YES`, return to Architecture Owner. P0-7 must not and does not change the requirement to NONE.
 
 ---
 
@@ -1379,13 +1394,13 @@ P0.S Hard Gate `P0S_CORE_PATCH_INVENTORY_COMPLETE` must record YES/NO for each p
 
 | HypothesisId | Hypothesis | WhyCritical | KnownEvidence | Unknown | MinimalSpike | PassCondition | FailCondition | Fallback | OwnerDecisionIfFailed | ProductionPhaseImpacted |
 |---|---|---|---|---|---|---|---|---|---|---|
-| H-01 | Host can run without WebServer while preserving required runtime surfaces | Host-only Worker | P0-2/P0-6 profile seam | webServer injection | P0.S-1 Host-only profile | required APIs live | APIs missing without web-app | Fallback A still Host-only | core patch or Fallback B | P2 |
+| H-01 | Worker can run without stock `dsh-web-app` browser-facing HTTP/Web runtime while preserving REQUIRED Host/Gateway/Connection/runtime surfaces via profile/bundle/adapter | Host-only Worker | P0-2/P0-6 three-layer freeze | whether Layer A inject can be satisfied without Layer B | P0.S-1 Host-only profile | see H-01 PASS below | see H-01 FAIL below | Fallback A still Host-only | core patch or Fallback B | P2 |
 | H-02 | Shipped standard preset works without copying source and preserves required tools | REQUIRED tools | P0-2/P0-5/P0-6 | no-web mount | P0.S-1 load shipped standard | REQUIRED tools present | tools missing or copy required | none acceptable | contradict P0-6 | P2/P5 |
 | H-03 | Harness Client can boot in secure Electron Renderer | Client reuse | P0-3/P0-6 boot seams | secure scheme/graph | P0.S-2 | Client inits, session UI enterable | only stock browser boot | approved loading model in Renderer | Client reuse fails | P4 |
 | H-04 | Electron loading model can retain persistent Settings capability | REQUIRED Settings | P0-4 ownsHost canary | custom scheme | P0.S-2 Settings canary | not-memory persistence | memory fallback | capability adapter | Settings architecture | P4 |
 | H-05 | Required in-box Client modules can load without stock `/plugins` | Core Client | P0-3/P0-6 | static inclusion | P0.S-6 | modules present | depend on live `/plugins` | static bundle | boot scope | P4 |
 | H-06 | Named Pipe carrier can preserve `rpc.call` | unary path | P0-3/P0-6 preview RPC | cross-process map | P0.S-3/4 | unary round-trip authenticated | unary broken | Fallback A | P0.S FAIL if A also fails | P3 |
-| H-07 | Named Pipe carrier can preserve `rpc.open` streaming semantics | streams | P0-3 mux/open | cancel/error/end/concurrency | P0.S-4 | streams complete/cancel cleanly | hang/leak/wrong cancel | Fallback A | P0.S FAIL if A also fails | P3 |
+| H-07 | Replacement carrier preserves Harness streaming contract independently of stock Web mux | streams | P0-3 mux; optional `rpc.open`; `openStream` / `wireStream` | cancel/error/end/concurrency/loss/backpressure | P0.S-4 | streaming contract complete/cancel cleanly on a compatible seam | hang/leak/wrong cancel on every seam | Fallback A | P0.S FAIL if A also fails | P3 |
 | H-08 | `$events` / ready / generation survive replacement carrier | projection | P0-3 events | new carrier frames | P0.S-4 | ready/generation/reset/waterfall | lost events | Fallback A | P0.S FAIL if A also fails | P3/P4 |
 | H-09 | Approval round-trip survives disconnect/reconnect without duplicate settlement | REQUIRED approval | P0-3 first-result-wins | replacement carrier | P0.S-4/5 negative test | one settlement | double or lost | none | interaction contract | P3/P5 |
 | H-10 | User Question round-trip survives disconnect/reconnect without duplicate settlement | REQUIRED question | P0-3/P0-5 | replacement carrier | P0.S-4/5 negative test | one settlement | double or lost | none | interaction contract | P3/P5 |
@@ -1404,7 +1419,7 @@ P0.S Hard Gate `P0S_CORE_PATCH_INVENTORY_COMPLETE` must record YES/NO for each p
 | H-23 | A single Worker runtime strategy is proven for native ABI dependencies | natives | P0-6 ABI | sidecar vs Electron | P0.S-7 | one proven strategy | UNRESOLVED or both fail | sidecar recommended | Fallback B if only in-Main works | P2/P7 |
 | H-24 | DSH_HOME is product-controlled, writable, per-user and stable | durable universe | P0-6 home-paths | packaged default | P0.S-7 | controlled writable home | wrong/read-only home | fail-closed | data ownership | P2/P0.5 |
 | H-25 | Required PowerShell / Windows ACL / native helper paths work packaged | Windows REQUIRED tools | P0-6 native map | asar/unpack/PS path | P0.S-7 | helpers resolve; no Landlock gate; no silent PS bundle | missing runner/rg/pty/ACL | Owner if bundle pwsh proposed | P7 | P2/P7 |
-| H-26 | No Harness Core patch is required, or every required patch is explicitly surfaced to Owner | no silent fork | P0-6 POSSIBLE_REQUIRES_P0S | Spike areas | inventory in P0.S-1/2/3/6/7 | inventory complete; NONE or Owner-listed | silent patch | Fallback A/B | Owner mandatory if patch required | all |
+| H-26 | No Harness Core patch is required, or every required patch is explicitly surfaced to Owner; adapter/stub inventoried separately | no silent fork | P0-6 POSSIBLE_REQUIRES_P0S | Spike areas | inventory in P0.S-1/2/3/6/7 | per-area YES/NO + ADAPTER_OR_STUB_USED; NONE or Owner-listed | silent patch or stub labeled as patch | Fallback A/B | Owner mandatory if patch required | all |
 
 Hypothesis classification:
 
@@ -1412,7 +1427,28 @@ Hypothesis classification:
 |---|---|
 | H-01..H-26 | HARD_GATE (architecture-falsifying) |
 
-No core hypothesis deleted. H-01 includes long-running Host. Custom-scheme is inside H-03/H-04 as `CUSTOM_SCHEME_OR_APPROVED_LOADING_MODEL`. Payload/backpressure evidence is supporting under H-13/H-07, not a separate optional-feature gate.
+No core hypothesis deleted. H-01 includes long-running Host. Do **not** read H-01 as “no Cordis service named `webServer` may exist”. Custom-scheme is inside H-03/H-04 as `CUSTOM_SCHEME_OR_APPROVED_LOADING_MODEL`. Payload/backpressure evidence is supporting under H-13/H-07, not a separate optional-feature gate.
+
+### H-01 PASS / PROVEN_WITH_CONSTRAINT / FAIL (AUDIT-004 F-01)
+
+**H-01 PASS** when all of:
+
+1. Worker does not run stock `dsh-web-app` product Web stack.
+2. No browser opener.
+3. No token URL bootstrap.
+4. No client HMR.
+5. No LAN/browser-facing product Web host.
+6. REQUIRED Host runtime still exists.
+7. REQUIRED Gateway / Remote / Connection semantics still exist.
+8. If a component requires the Cordis `webServer` **service contract**, it is satisfied by a non-listening / local compatibility service / adapter / stub that: does not expose stock HTTP product surface; does not require Harness Core modification; does not break the security boundary; does not let Renderer access Worker directly; does not secretly restore full `dsh-web-app`.
+
+Item 8, when used, is **`PROVEN_WITH_CONSTRAINT`**, not FAIL. At P0.S closure, Architecture Owner must explicitly accept `PROVEN_WITH_CONSTRAINT`.
+
+**H-01 FAIL** only when REQUIRED runtime / Connection / Client dependency can exist **only** behind stock `dsh-web-app` HTTP/Web runtime **and** cannot be reconstructed via profile, bundle, public/preview seam, adapter, or acceptable compatibility service at reasonable cost, **or** Harness Core must be modified. Then return to Architecture Owner.
+
+### H-07 stream seam (AUDIT-004 F-02)
+
+H-07 is **not** “Named Pipe must implement Client `rpc.open` itself”. Client `rpc.open` is optional. Prove the streaming contract (open, AsyncIterable, item ordering, error, end, cancellation, concurrent streams, connection loss, backpressure) via `rpc.open` **or** `__DSH_TRANSPORT__.openStream` / Host `wireStream` (or frozen-baseline equivalent public/preview path). Gate remains `P0S_STREAM_PASS`. Do not create a product Hard Gate solely for `rpc.open`.
 
 ---
 
@@ -1422,15 +1458,15 @@ Frozen, all required `= YES` for `SHACO_FORGE_V1_0_P0S = PASS`. Optional product
 
 | Gate | Maps to | Notes |
 |---|---|---|
-| `P0S_HOST_PROFILE_FEASIBLE` | H-01 | includes long-running Host without webserver |
-| `P0S_STANDARD_PRESET_TOOLS_PRESENT` | H-02 | shipped standard, no copy |
+| `P0S_HOST_PROFILE_FEASIBLE` | H-01 | No dependency on stock browser-facing `dsh-web-app` Web product stack for REQUIRED Worker runtime. **Not** “no Cordis service named `webServer` may exist”. Allowed: `PASS` / `PROVEN_WITH_CONSTRAINT` / `FAIL`. Constraint = Layer C adapter/stub, no Core Patch, no stock public Web stack, no Desktop+Worker architecture change. Owner must accept `PROVEN_WITH_CONSTRAINT` at Spike closure. |
+| `P0S_STANDARD_PRESET_TOOLS_PRESENT` | H-02 | Shipped `standard` loads complete and safely; P0-5 REQUIRED tool subset is usable. Does **not** make Jobs/Goal/Workflow/Ralph/Plan/Skills/web tools Product Release Hard Gates. |
 | `P0S_ELECTRON_RENDERER_BOOT` | H-03 | nodeIntegration off, contextIsolation on, sandbox on |
 | `P0S_CUSTOM_SCHEME_OR_APPROVED_LOADING_MODEL` | H-03 | renamed from `CUSTOM_SCHEME` only; still Electron Renderer |
 | `P0S_SETTINGS_PERSISTENCE` | H-04 | not-memory canary |
 | `P0S_LOCAL_CARRIER_FEASIBLE` | H-06..H-08 | Named Pipe primary; else approved Fallback A |
 | `P0S_LOCAL_TRUST_FEASIBLE` | H-14, H-15 | current-user; cookie ≠ identity; Renderer no pipe |
 | `P0S_UNARY_PASS` | H-06 | |
-| `P0S_STREAM_PASS` | H-07 | |
+| `P0S_STREAM_PASS` | H-07 | streaming contract; not a `rpc.open`-only gate |
 | `P0S_EVENT_GENERATION_PASS` | H-08 | |
 | `P0S_APPROVAL_PASS` | H-09 | |
 | `P0S_USER_QUESTION_PASS` | H-10 | **added** — P0-5 REQUIRED; was implicit in P0.S-4 |
@@ -1453,7 +1489,7 @@ Frozen, all required `= YES` for `SHACO_FORGE_V1_0_P0S = PASS`. Optional product
 | `P0S_WORKER_RUNTIME_STRATEGY_PROVEN` | H-23 | cannot be UNRESOLVED |
 | `P0S_DSH_HOME_CONTROLLED` | H-24 | |
 | `P0S_WINDOWS_NATIVE_DEPENDENCIES` | H-25 | windows-acl path, not Landlock |
-| `P0S_CORE_PATCH_INVENTORY_COMPLETE` | H-26 | YES/NO per area |
+| `P0S_CORE_PATCH_INVENTORY_COMPLETE` | H-26 | per-area YES/NO + `ADAPTER_OR_STUB_USED`; adapter/stub ≠ Core Patch |
 
 Retained supporting security checks inside the gates above: `NODE_INTEGRATION_REQUIRED = NO`, `CURRENT_USER_ONLY`, `COOKIE_NOT_PRODUCT_IDENTITY`, `RENDERER_DIRECT_PIPE_ACCESS = NO`, `HOST_LONG_RUNNING`.
 
@@ -1465,7 +1501,9 @@ Retained supporting security checks inside the gates above: `NODE_INTEGRATION_RE
 | Add `P0S_USER_QUESTION_PASS` and `P0S_NO_QUESTION_REPLAY` | P0-5 classified User Question REQUIRED | P0-5; P0-3 question census | P0.S-4/5 | NO |
 | Add `P0S_WORKER_RESTART_RECONNECT_PASS` | already in P0.S-5 prose; freeze as named gate | P0.S-5; P0-3 generation | P0.S-5 | NO |
 | Add `P0S_CORDIS_OMISSION_PASS` | P0-5/P0-6 split runners vs tool-cordis | P0-5; P0-6 | P0.S-6 | NO |
-| Keep `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S` | cannot set NONE without Spike | P0-6 | P0.S-8 | NO |
+| Keep `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S` | cannot set NONE without Spike; cannot set KNOWN_REQUIRED from Layer A inject | P0-6 | P0.S-8 | NO |
+| H-01 three-layer webServer wording | AUDIT-004 F-01; stub/adapter = `PROVEN_WITH_CONSTRAINT` | P0-6 | P0.S-1 | NO |
+| H-07 stream seam wording | AUDIT-004 F-02; `rpc.open` not sole path | P0-3/P0-6 | P0.S-4 | NO |
 
 No correction changes Desktop + Worker dual-core architecture. `ARCHITECTURE_OWNER_DECISION_REQUIRED = NO`.
 
@@ -1669,7 +1707,7 @@ P0.S only proves feasibility of packaged Worker/Harness/natives/DSH_HOME.
 
 All YES / NONE ⇒ `SHACO_FORGE_V1_0_P0 = PASS`, `P0 = CLOSED`, `P0.S = NOT_STARTED`.
 
-P0 PASS does not authorize BEGIN P0.S. Required next step: **INDEPENDENT P0 CLOSURE AUDIT**.
+P0 PASS does not authorize BEGIN P0.S. After AUDIT-004 F-01/F-02/F-03 wording corrections, required next step: **INDEPENDENT P0 CLOSURE CORRECTIVE REVIEW**. `P0_CLOSURE_AUDIT` remains Owner/Reviewer-owned and is **not** set to PASS by this Executor.
 
 ---
 
@@ -1699,7 +1737,9 @@ Authority files read: README, MANIFEST, Document Map/Rules/Current State, Produc
 
 `SHACO_FORGE_V1_0_P0S = NOT_STARTED`
 
-`P0_CLOSURE_AUDIT = NOT_EXECUTED`
+`P0_CLOSURE_AUDIT = PENDING_CORRECTIVE_REVIEW` (AUDIT-004 `PASS_WITH_REQUIRED_CORRECTIONS`; F-01/F-02/F-03 wording applied by Executor; Independent Reviewer re-verify required)
+
+`ALLOW_P0S = NO`
 
 ### P0-7 acceptance gates
 

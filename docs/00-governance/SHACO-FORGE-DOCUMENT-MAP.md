@@ -50,8 +50,8 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | Document | Role | Status |
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
-| `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS |
-| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract 候选 | READY-AFTER-P0; NOT_STARTED until Independent P0 Closure Audit PASS |
+| `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Executor F-01/F-02/F-03 wording applied; Independent Corrective Review pending |
+| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract 候选 | READY-AFTER-P0; NOT_STARTED until Independent P0 Closure Corrective Review PASS |
 | `P05-COMPATIBILITY-VERSION.md` | P0.5 Compatibility Contract 候选 | READY-FOR-FREEZE-AFTER-P0S |
 | `P1-SYSTEM-CONTRACT.md` | P1 骨架 | NOT-DETAILED |
 | `P2-HOST-WORKER.md` | P2 骨架 | NOT-DETAILED |
@@ -80,6 +80,8 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 |---|---|
 | `REVIEW-INDEX.md` | 所有 Review 索引 |
 | `architecture/` | 架构审计与复审 |
+| `architecture/AUDIT-004-INDEPENDENT-P0-CLOSURE.md` | Independent P0 Closure Audit (`PASS_WITH_REQUIRED_CORRECTIONS`; F-01/F-02/F-03 Executor wording pending re-review) |
+| `architecture/CORRECTIVE-004-P0-CLOSURE-F01-F02-F03.md` | Executor wording record for AUDIT-004 F-01/F-02/F-03; does not grant Closure PASS |
 | `implementation/` | 实现审计 |
 | `corrective/` | Corrective 审计 |
 | `templates/` | Review 模板 |
@@ -98,7 +100,7 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | `evidence/P0-4-AUTHENTICATION-AND-TRUST-SURFACE.md` | P0-4 Web/Connection/Client trust architecture, loopback dependencies, failure surface and P0.S trust inputs |
 | `evidence/P0-5-CORE-FEATURE-PARITY-MATRIX.md` | P0-5 V1.0 REQUIRED/OPTIONAL/DEFERRED/WEB_ONLY/EXPERIMENTAL/NOT_PRODUCT product capability freeze |
 | `evidence/P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md` | P0-6 Harness dependency/stability classes, forbidden imports, adapters, and P0.S/P0.5/P1 inputs |
-| `evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` | P0-7 master risk register, P0.S hypothesis/hard gates, fallback branch, and P0.5/P1/P7 inputs |
+| `evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` | P0-7 master risk register, P0.S hypothesis/hard gates (F-01/F-02/F-03 wording), fallback branch, and P0.5/P1/P7 inputs |
 
 ## 9. Handover
 

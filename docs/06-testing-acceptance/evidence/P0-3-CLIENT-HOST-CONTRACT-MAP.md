@@ -104,6 +104,8 @@ All mounted unary descriptors below use:
   `AbortSignal` is a local invocation lifetime and is not JSON data.
 
 The generated Client assembly mounts 16 namespaces with 71 unary endpoints.
+The surface map is authority; the integer count is `UNARY_COUNT_NON_AUTHORITATIVE`
+as an architecture gate (AUDIT-004 F-04).
 `session/control`, `session/follow`, and `workspace/follow` are streams and are
 listed in section E.
 
@@ -469,8 +471,8 @@ design is made here.
 
 | Input | KnownFact | Unknown | WhySpikeNeeded | WhatWouldProveIt |
 |---|---|---|---|---|
-| Unary carrier | Business RPC is endpoint + Typert args/result over `ConnectionHandle.rpc.call`; Web uses JSON POST. | Exact packaged carrier encoding/lifetime/error mapping. | Preserve all 72 unary calls without binding P1 to HTTP. | Run representative session/settings/credentials/model calls over candidate carrier with typed success/failure/cancel tests. |
-| Streaming carrier | Business streams are AsyncIterable; Web mux multiplexes item/error/end/cancel; `rpc.open` seam exists. | Backpressure, concurrent streams, abnormal termination, resource cleanup on candidate carrier. | Streams carry history, projections, events, approvals. | Concurrent `follow/control/workspace/$events` test with cancel, error, large frames, and forced carrier loss. |
+| Unary carrier | Business RPC is endpoint + Typert args/result over `ConnectionHandle.rpc.call`; Web uses JSON POST. | Exact packaged carrier encoding/lifetime/error mapping. | Preserve enumerated unary endpoints (P0-3 D census: 71 mounted unary methods; `UNARY_COUNT_NON_AUTHORITATIVE` as an architecture gate — the surface map is authority) without binding P1 to HTTP. | Run representative session/settings/credentials/model calls over candidate carrier with typed success/failure/cancel tests. |
+| Streaming carrier | Business streams are AsyncIterable; Web mux multiplexes item/error/end/cancel. Client `rpc.open` is **optional**. Compatible seams also include `__DSH_TRANSPORT__.openStream` and Host `wireStream`. | Backpressure, concurrent streams, abnormal termination, resource cleanup on candidate carrier. | Streams carry history, projections, events, approvals. Named Pipe need not implement `rpc.open` itself. | Concurrent `follow/control/workspace/$events` test with cancel, error, large frames, and forced carrier loss on a compatible seam. |
 | Event/generation | `$events.ready` establishes generation; `connection/reset` tells owners to repull. | New Host process vs new channel identity and readiness under Desktop/Worker lifecycle. | Incorrect generation semantics can retain stale projections. | Restart/reconnect matrix proving generation retraction, new id, ready/home, and owner repulls. |
 | Reconnect | Connection backoff is automatic; ordinary emits are not replayed; journals/snapshots own recovery. | Timing and failure behavior across Worker suspend/crash/restart. | Must distinguish channel reconnect from Host restart/session resume. | Fault-injection test with dropped carrier and restarted Host; verify cursors, baselines, waterfalls, no duplicate actions. |
 | Session resume | Host resolver resumes persisted agents; no Client resume RPC. | Host process restart behavior for every live/pending state. | Desktop must not become resume authority accidentally. | Cold persisted-session open/prompt after Worker restart; assert Host-only resume and deduplication. |

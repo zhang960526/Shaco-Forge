@@ -453,7 +453,7 @@ the upstream Web bundle mounts them.
 | Domain | Exact required packages/components |
 |---|---|
 | LLM route | `@deepseek-ai/dsh-llm`, `@deepseek-ai/dsh-llm-deepseek`, `@deepseek-ai/dsh-deepseek-llm-api-extensions`, `@deepseek-ai/dsh-llm-retry`, `@deepseek-ai/dsh-agent-default-model` |
-| Session/Agent | `@deepseek-ai/dsh-session`, `@deepseek-ai/dsh-session-log-deepseek`, `@deepseek-ai/dsh-agent`, `@deepseek-ai/dsh-agent-loop`, `@deepseek-ai/dsh-session-persistence-jsonl`, `@deepseek-ai/dsh-session-projection`, `@deepseek-ai/dsh-session-projection-cache`, `@deepseek-ai/dsh-session-checkpoint-policy`, `@deepseek-ai/dsh-attachment-local`, `@deepseek-ai/dsh-session-query-sqlite` |
+| Session/Agent | `@deepseek-ai/dsh-session`, `@deepseek-ai/dsh-session-log-deepseek`, `@deepseek-ai/dsh-agent`, `@deepseek-ai/dsh-agent-loop`, `@deepseek-ai/dsh-session-persistence-jsonl`, `@deepseek-ai/dsh-session-projection`, `@deepseek-ai/dsh-session-projection-cache`, `@deepseek-ai/dsh-session-checkpoint-policy`, `@deepseek-ai/dsh-attachment-local` |
 | Typed business contract | `@deepseek-ai/dsh-typert-registry`, `@deepseek-ai/dsh-typert-loader`, `@deepseek-ai/dsh-api-gateway`, `@deepseek-ai/dsh-api-remotes`, `@deepseek-ai/dsh-api-session-controller`, `@deepseek-ai/dsh-api-workspace-controller`, `@deepseek-ai/dsh-api-settings-controller` |
 | Workspace/reference | `@deepseek-ai/dsh-workspace`, `@deepseek-ai/dsh-file-reference-local`, `@deepseek-ai/dsh-host-directory-picker-auto`, `@deepseek-ai/dsh-host-directory-picker-native`, `@deepseek-ai/dsh-host-directory-picker-browse` |
 | Settings/credentials/storage | `@deepseek-ai/dsh-settings-file`, `@deepseek-ai/dsh-credentials-local`, `@deepseek-ai/dsh-storage`, `@deepseek-ai/dsh-storage-json`, `@deepseek-ai/dsh-storage-domain` |
@@ -466,6 +466,11 @@ The frozen full `standard` preset remains the P0.S-1 composition target. This
 roster defines product-required behavior inside that target; it does not
 reclassify Jobs, Skills, Goal, Plan, Compaction, Workflow, Ralph, todo or Web
 tools as release blockers.
+
+`@deepseek-ai/dsh-session-query-sqlite` is **CONDITIONAL / OPTIONAL** (SES-10).
+Default session persistence remains JSONL. Upstream mounts the query package
+with `openAt: never`. Do not treat it as a V1.0 REQUIRED Host dependency.
+Upgrade to REQUIRED only if P0.S proves a REQUIRED Client/runtime surface hard-depends on it. AUDIT-004 F-03.
 
 ## M. Desktop Adaptation Matrix
 

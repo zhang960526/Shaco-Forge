@@ -18,10 +18,18 @@ Date: 2026-08-30
 - P0-6 Dependency & Stability Matrix: PASS
 - P0-7 Risk Register & P0.S Input Freeze: PASS
 - Entire P0: PASS / CLOSED
+- AUDIT-004 Independent P0 Closure Audit: `PASS_WITH_REQUIRED_CORRECTIONS`
+- P0 Closure Corrective F-01 / F-02 / F-03: Executor wording applied
 
 ## Current Gate
 
 `ALLOW_P0_EXECUTION = YES` (P0 itself is closed)
+
+`P0_EXECUTOR_WORK = CLOSED`
+
+`INDEPENDENT_P0_CLOSURE_AUDIT = PENDING_CORRECTIVE_REVIEW`
+
+`ALLOW_P0S = NO`
 
 `P0_BASELINE_FROZEN = YES`
 
@@ -65,8 +73,6 @@ Date: 2026-08-30
 
 `SHACO_FORGE_V1_0_P0S = NOT_STARTED`
 
-`P0_CLOSURE_AUDIT = NOT_EXECUTED`
-
 `P1_FREEZE_ALLOWED = NO` until `SHACO_FORGE_V1_0_P0S = PASS`.
 
 ## Frozen Baseline
@@ -79,13 +85,13 @@ Date: 2026-08-30
 
 ## Next Step
 
-INDEPENDENT P0 CLOSURE AUDIT
+INDEPENDENT P0 CLOSURE CORRECTIVE REVIEW
 
-NOT EXECUTED in the P0-7 session.
+NOT EXECUTED.
 
-Do not begin P0.S.
+Do not begin P0.S. `ALLOW_P0S = NO`. Executor must not set `P0_CLOSURE_AUDIT = PASS`.
 
-Risk register: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`
+Risk register: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
 
 ## Important Constraints
 
@@ -93,5 +99,5 @@ Risk register: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-I
 - do not pull/switch/update the frozen Harness SHA without an Architecture Decision
 - P0 may install/build only inside pinned worktree without mutating baseline; frozen lockfile only
 - P0 PASS does not authorize BEGIN P0.S
-- Independent P0 Closure Audit must PASS before Spike
+- Independent P0 Closure Audit must PASS (after F-01/F-02/F-03 corrective review) before Spike
 - `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S`

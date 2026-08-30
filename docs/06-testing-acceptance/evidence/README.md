@@ -13,4 +13,4 @@ Current evidence:
 - `P0-4-AUTHENTICATION-AND-TRUST-SURFACE.md` — Web/Connection/Client authentication and trust layers, loopback/settings behavior, transport replacement requirements, and P0.S trust inputs.
 - `P0-5-CORE-FEATURE-PARITY-MATRIX.md` — Shaco Forge V1.0 product capability freeze, concrete standard tools/commands/subagents/plugins, Desktop adaptations, P0.S feature inputs, and explicit non-goals.
 - `P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md` — Harness dependency/stability matrix, direct-dependency policy, forbidden imports, adapter boundaries, and P0.S/P0.5/P1 inputs.
-- `P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` — master upstream risk register, P0.S hypothesis matrix and hard gates, fallback branch, P0.5/P1/P7 inputs, and P0 closure.
+- `P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` — master upstream risk register, P0.S hypothesis/hard gates (F-01/F-02/F-03 wording), fallback branch, P0.5/P1/P7 inputs, and P0 closure.

@@ -37,7 +37,7 @@ Frozen Harness baseline: `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-
 
 Risk / Spike input freeze: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`.
 
-P0 PASS does not authorize P0.S. Next: INDEPENDENT P0 CLOSURE AUDIT.
+P0 PASS does not authorize P0.S. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. Executor applied F-01/F-02/F-03 wording. Next: INDEPENDENT P0 CLOSURE CORRECTIVE REVIEW. `ALLOW_P0S = NO`.
 
 ## P0.S
 

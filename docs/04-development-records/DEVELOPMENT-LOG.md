@@ -4,6 +4,26 @@ Status: ACTIVE
 
 ## 2026-08-30
 
+- P0 Closure Corrective (AUDIT-004 F-01 / F-02 / F-03) applied as documentation
+  wording only against frozen Harness
+  `cd5ef8148158c3a752a658978873241fdf8e2bbc`. No P0 re-investigation. No P0.S.
+  No Harness source, lockfile, baseline, architecture, or feature-scope change.
+- F-01: three-layer `webServer` freeze (Cordis service vs stock `dsh-web-app`
+  HTTP vs adapter/stub). Gateway does not hard-inject `webServer`. H-01 PASS /
+  `PROVEN_WITH_CONSTRAINT` / FAIL rewritten. Core-patch inventory per-area plus
+  `ADAPTER_OR_STUB_USED`. `CORE_PATCH_REQUIREMENT` remains `POSSIBLE_REQUIRES_P0S`.
+- F-02: H-07 is streaming **contract**; Client `rpc.open` is optional; seams
+  include `openStream` / `wireStream`. Gate remains `P0S_STREAM_PASS`.
+- F-03: `session-query-sqlite` reclassified CONDITIONAL / OPTIONAL; JSONL
+  remains default persistence.
+- F-04: P0-3 Q “72 unary” reconciled to D-census 71; count is
+  `UNARY_COUNT_NON_AUTHORITATIVE` as an architecture gate.
+- F-05: `P0S_STANDARD_PRESET_TOOLS_PRESENT` annotated — shipped `standard` load
+  plus REQUIRED subset; optional standard tools are not Product Hard Gates.
+- `P0_EXECUTOR_WORK = CLOSED`. `INDEPENDENT_P0_CLOSURE_AUDIT =
+  PENDING_CORRECTIVE_REVIEW`. `ALLOW_P0S = NO`. Next: Independent P0 Closure
+  Corrective Review. Do not begin P0.S.
+
 - P0-7 executed as document synthesis against frozen Harness
   `cd5ef8148158c3a752a658978873241fdf8e2bbc`. Upstream SHA, clean worktree and
   lockfile identity were reverified. No Harness source, lockfile, baseline, or

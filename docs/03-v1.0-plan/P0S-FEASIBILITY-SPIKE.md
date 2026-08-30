@@ -2,13 +2,15 @@
 
 Status: READY_AFTER_P0 (`SHACO_FORGE_V1_0_P0S = NOT_STARTED`)
 
-Execution is not authorized by P0 PASS. Begin only after `P0_CLOSURE_AUDIT = PASS`.
+Execution is not authorized by P0 PASS. Begin only after `P0_CLOSURE_AUDIT = PASS` from Independent Reviewer. After AUDIT-004, Executor applied F-01/F-02/F-03 wording only; **corrective review is pending**. Do not begin P0.S in this round.
 
 P0-7 frozen inputs (do not re-open P0; do not redesign this architecture):
 
 - Evidence: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`
 - Hypothesis matrix: H-01 .. H-26 (all HARD_GATE)
-- `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S` until Spike inventory is complete
+- H-01 semantics: no stock `dsh-web-app` browser-facing HTTP/Web runtime; Cordis `webServer` **service** inject ≠ stock HTTP; Layer C stub/adapter = `PROVEN_WITH_CONSTRAINT`, not FAIL (AUDIT-004 F-01)
+- H-07 semantics: streaming **contract**, not Client `rpc.open`-only (AUDIT-004 F-02)
+- `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S` until Spike inventory is complete (not NONE, not KNOWN_REQUIRED)
 - Named Pipe remains `SHACO_CUSTOM_CARRIER_PLUGIN`
 - Optional features (Jobs / Goal / Workflow / Ralph / Plan / Export UI / Images / Skills / marketplace) are not Hard Gates
 - `/export` UI is not the binary-carrier gate
@@ -23,14 +25,16 @@ Spike code is NOT production by default.
 
 ## P0.S-1 — Host Profile Feasibility
 
-Prove a long-running Harness Host composition without browser webserver/HMR/token URL, using startup reload and the `standard` preset tool/command/subagent surface.
+Prove a long-running Harness Host composition **without the stock `dsh-web-app` browser-facing HTTP/Web runtime** (no HMR, token URL, browser opener, LAN/browser-facing product host), using startup reload and the `standard` preset tool/command/subagent surface.
+
+Do **not** interpret this as “no Cordis service named `webServer` may exist”. Connection/modules may hard-inject that **service contract**. A non-listening compatibility service / adapter / stub that does not expose stock HTTP, does not patch Harness Core, does not give Renderer direct Worker access, and does not restore `dsh-web-app` is `PROVEN_WITH_CONSTRAINT`, not FAIL. Owner must accept that constraint at Spike closure.
 
 Hard evidence:
 
-- HOST_PROFILE_WITHOUT_WEBSERVER
+- `P0S_HOST_PROFILE_FEASIBLE` (meanings: PASS / PROVEN_WITH_CONSTRAINT / FAIL — see P0-7 H-01)
 - HOST_LONG_RUNNING
-- HOST_STANDARD_PRESET_TOOLS_PRESENT
-- `P0S_CORE_PATCH_INVENTORY_COMPLETE` with explicit YES/NO per area (Host profile, Connection carrier, Client boot, Client modules, Native packaging). Do not infer NONE without inventory.
+- HOST_STANDARD_PRESET_TOOLS_PRESENT (shipped `standard` loads; P0-5 REQUIRED tool subset usable — not a product Hard Gate for Jobs/Goal/Workflow/Ralph/Plan/Skills/web tools)
+- `P0S_CORE_PATCH_INVENTORY_COMPLETE` with explicit YES/NO per area (`HOST_PROFILE_CORE_PATCH_REQUIRED`, `CONNECTION_CARRIER_CORE_PATCH_REQUIRED`, `CLIENT_BOOT_CORE_PATCH_REQUIRED`, `CLIENT_MODULE_CORE_PATCH_REQUIRED`, `NATIVE_PACKAGING_CORE_PATCH_REQUIRED`) plus `ADAPTER_OR_STUB_USED` (Surface / Why / PublicOrPreviewSeamUsed / ProductionImpact). Adapter/stub is not a Core Patch. Do not infer NONE without inventory.
 
 ## P0.S-2 — Electron Client Boot
 
@@ -72,7 +76,7 @@ Hard requirements:
 Hard:
 
 - unary
-- stream
+- stream **contract** (open / AsyncIterable / item order / error / end / cancel / concurrency / connection loss / backpressure) via `rpc.open` **or** `__DSH_TRANSPORT__.openStream` / Host `wireStream` (or equivalent public/preview seam). Client `rpc.open` is optional and is not a product Hard Gate by itself.
 - approval
 - user question
 - cancel
@@ -159,8 +163,8 @@ No third product path is currently required.
 
 Authority for the frozen names: P0-7 evidence section K. P0.S must not PASS unless all of the following are YES:
 
-- `P0S_HOST_PROFILE_FEASIBLE` (Host without WebServer, long-running)
-- `P0S_STANDARD_PRESET_TOOLS_PRESENT`
+- `P0S_HOST_PROFILE_FEASIBLE` (no stock browser-facing `dsh-web-app` Web product stack for REQUIRED Worker runtime; not “no Cordis `webServer` service”. PASS / PROVEN_WITH_CONSTRAINT / FAIL)
+- `P0S_STANDARD_PRESET_TOOLS_PRESENT` (shipped `standard` loads; REQUIRED tool subset usable; optional standard tools are not Product Release Hard Gates)
 - `P0S_ELECTRON_RENDERER_BOOT`
 - `P0S_CUSTOM_SCHEME_OR_APPROVED_LOADING_MODEL`
 - `NODE_INTEGRATION_REQUIRED = NO`
@@ -171,7 +175,7 @@ Authority for the frozen names: P0-7 evidence section K. P0.S must not PASS unle
 - `COOKIE_NOT_PRODUCT_IDENTITY`
 - `RENDERER_DIRECT_PIPE_ACCESS = NO`
 - `P0S_UNARY_PASS`
-- `P0S_STREAM_PASS`
+- `P0S_STREAM_PASS` (streaming contract; not `rpc.open`-only)
 - `P0S_EVENT_GENERATION_PASS`
 - `P0S_APPROVAL_PASS`
 - `P0S_USER_QUESTION_PASS`
@@ -194,6 +198,6 @@ Authority for the frozen names: P0-7 evidence section K. P0.S must not PASS unle
 - `P0S_WORKER_RUNTIME_STRATEGY_PROVEN` (cannot remain UNRESOLVED)
 - `P0S_DSH_HOME_CONTROLLED`
 - `P0S_WINDOWS_NATIVE_DEPENDENCIES`
-- `P0S_CORE_PATCH_INVENTORY_COMPLETE` (`CORE_PATCH_REQUIREMENT` stays `POSSIBLE_REQUIRES_P0S` until this inventory; do not assume NONE)
+- `P0S_CORE_PATCH_INVENTORY_COMPLETE` (`CORE_PATCH_REQUIREMENT` stays `POSSIBLE_REQUIRES_P0S` until this inventory; do not assume NONE; per-area YES/NO plus `ADAPTER_OR_STUB_USED`; adapter/stub ≠ Core Patch)
 
 Why renamed/added vs the pre-P0-7 list: P0-6 public/preview boot seams allow an approved loading model, not only a custom scheme; P0-5 made User Question REQUIRED; P0.S-5 Worker-restart and Cordis omission need named falsifiable gates. Source: P0-7 evidence K. These corrections do not change Desktop + Worker dual-core architecture.

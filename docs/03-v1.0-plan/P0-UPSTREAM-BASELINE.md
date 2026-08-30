@@ -29,6 +29,9 @@ P0-7: CLOSED / PASS
 `SHACO_FORGE_V1_0_P0 = PASS`
 `P0_STATE = CLOSED`
 `SHACO_FORGE_V1_0_P0S = NOT_STARTED`
+`P0_EXECUTOR_WORK = CLOSED`
+`INDEPENDENT_P0_CLOSURE_AUDIT = PENDING_CORRECTIVE_REVIEW`
+`ALLOW_P0S = NO`
 
 ## Goal
 
@@ -159,7 +162,7 @@ Frozen-source result:
 Enumerate from current source/generated remotes/routes/tests:
 
 - unary Remote surface
-- stream surface / `rpc.open` / mux behavior
+- stream surface / optional Client `rpc.open` / `__DSH_TRANSPORT__.openStream` / Host `wireStream` / mux behavior
 - events / generation / reconnect
 - cancellation
 - exact Fetch/binary routes
@@ -290,7 +293,7 @@ Frozen-source result:
 - Worker entry is spawn `dsh`; in-process `boot()` is forbidden as a production main.
 - `PRESET_COPY_REQUIRED = NO`. `HARNESS_DATA_DIRECT_WRITE_FORBIDDEN = YES`.
 - `list_subagent_models` stays CONDITIONAL / OPTIONAL.
-- `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S` because official Connection/modules plugins inject `webServer`.
+- `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S` because official Connection/modules plugins hard-inject the Cordis `webServer` **service contract**. That is `OPEN_FOR_P0S`, not `KNOWN_REQUIRED`. Gateway does not hard-inject `webServer`. Layer A inject ≠ stock `dsh-web-app` HTTP (AUDIT-004 F-01).
 
 Classify seams:
 
@@ -319,11 +322,13 @@ Evidence:
 Frozen-source result:
 
 - Master Upstream Risk Register written. No P0 BLOCKER. Remaining architecture unknowns are `OPEN_FOR_P0S` (or correctly routed to P0.5 / P1 / P7).
-- `CORE_PATCH_REQUIREMENT` remains `POSSIBLE_REQUIRES_P0S`. P0-7 did not rewrite it to NONE.
+- `CORE_PATCH_REQUIREMENT` remains `POSSIBLE_REQUIRES_P0S`. P0-7 did not rewrite it to NONE or KNOWN_REQUIRED.
 - P0.S Hypothesis Matrix H-01..H-26 and Hard Gates frozen. Optional product features are not architecture Hard Gates.
+- H-01: no stock `dsh-web-app` browser-facing HTTP/Web runtime; Cordis `webServer` service ≠ stock HTTP; Layer C stub/adapter = `PROVEN_WITH_CONSTRAINT` (AUDIT-004 F-01).
+- H-07: streaming contract via `rpc.open` or `openStream`/`wireStream`; `rpc.open` is optional (AUDIT-004 F-02).
 - Failure branch frozen: Named Pipe primary; Fallback A private loopback HTTP; Fallback B Host-in-Main only with Owner re-approval of D1/D2. No third primary fallback.
 - `P0_EVIDENCE_CONTRADICTIONS = NONE`.
-- P0 PASS does not authorize BEGIN P0.S. Next step is Independent P0 Closure Audit.
+- P0 PASS does not authorize BEGIN P0.S. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. Executor applied F-01/F-02/F-03 wording. Next: **INDEPENDENT P0 CLOSURE CORRECTIVE REVIEW**. `ALLOW_P0S = NO`.
 
 Gate: `P0S_SPIKE_INPUT_FROZEN = YES`
 
@@ -351,3 +356,5 @@ P0 passes only if all of the following are YES. Current values after P0-7:
 - P0_EVIDENCE_CONTRADICTIONS = NONE
 
 Therefore `SHACO_FORGE_V1_0_P0 = PASS`, `P0_STATE = CLOSED`, `SHACO_FORGE_V1_0_P0S = NOT_STARTED`.
+
+`P0_EXECUTOR_WORK = CLOSED`. `INDEPENDENT_P0_CLOSURE_AUDIT = PENDING_CORRECTIVE_REVIEW`. `ALLOW_P0S = NO`. Do not set `P0_CLOSURE_AUDIT = PASS` in this Executor corrective.

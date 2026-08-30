@@ -8,7 +8,9 @@
 - P0 / P0.S / P0.5 详细阶段设计：专项审计通过。
 - P0：`CLOSED / PASS`。P0-1 至 P0-7：`PASS / CLOSED`。Shaco Forge
   V1.0 Core Feature Parity Scope、Harness Dependency Boundary 与 P0.S Spike 输入已冻结。
-  整个 P0 已 PASS。下一步为 Independent P0 Closure Audit。**禁止**自动开始 P0.S。
+  AUDIT-004：`PASS_WITH_REQUIRED_CORRECTIONS`。Executor 已应用 F-01/F-02/F-03 表述修正。
+  `INDEPENDENT_P0_CLOSURE_AUDIT = PENDING_CORRECTIVE_REVIEW`。`ALLOW_P0S = NO`。
+  **禁止**开始 P0.S。
 - Frozen Harness baseline：`cd5ef8148158c3a752a658978873241fdf8e2bbc` / `dsh@0.1.2-alpha.1`。见 `docs/06-testing-acceptance/evidence/P0-1-HARNESS-BASELINE-MANIFEST.md`。
 - P1–P8：只建立阶段骨架与目标，尚未冻结详细 Contract。
 - Production Implementation：`NOT_STARTED`。
