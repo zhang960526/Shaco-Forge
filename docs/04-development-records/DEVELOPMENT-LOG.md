@@ -2,6 +2,48 @@
 
 Status: ACTIVE
 
+## 2026-08-31
+
+- P0.S-2 Electron Client Boot Executor completed against Shaco Forge
+  `292213a6b44b89c1513beab4c3b86d580d843830` and frozen Harness
+  `cd5ef8148158c3a752a658978873241fdf8e2bbc` / `0.1.2-alpha.1`.
+  A disposable Electron `35.7.5` shell loaded the 46-entry real Harness Client
+  graph from `shaco-forge://client`, mounted `AppWebEntry`, entered
+  `Fixture 历史会话` and reached the chat marker in two independent processes.
+- Renderer security passed statically and at runtime:
+  `nodeIntegration=false`, `contextIsolation=true`, `sandbox=true`, no Node
+  globals, no direct Worker transport function, no reusable credential and a
+  four-method allowlisted preload. Both runs exposed zero matching TCP
+  listeners and did not start stock `dsh-web-app`.
+- Settings used the generated `ctx.remote.settings.describe/mutate` contract
+  through a bounded capability adapter to a real Harness
+  `FileSettingsProvider`. PID `26420` wrote the canary and exited; PID `18364`
+  recovered it from `settings.yaml`. Both exited 0 and the evidence verifier
+  passed.
+- The initial strict-CSP run exposed the vendored loader's unconditional
+  dynamic evaluator. `unsafe-eval` was not enabled; a Spike-owned fail-closed
+  compatibility adapter disables dynamic `__jsExpr` evaluation in the
+  disposable shell output. Harness Core and the frozen worktree were not
+  modified. This implementation-sensitive constraint plus the Settings
+  adapter yields `P0S2_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT`,
+  `CLIENT_BOOT_CORE_PATCH_REQUIRED = NO` and `ADAPTER_OR_STUB_USED = YES`;
+  the Executor handed the two constraints to independent Review and Owner
+  disposition without closing the step.
+- External Independent Review AUDIT-006 returned `PASS`, confirmed the
+  Executor claim, H-03, H-04 and H-15 boot wiring, reproduced the 46-entry
+  custom-scheme boot and two-process Settings cycle, classified all five
+  bounded surfaces as `NON_CORE_ADAPTER`, reported no Blocking Finding and
+  modified no project file. F-01 through F-09 require no P0.S-2 Corrective;
+  F-05 routes to P4 and F-09 routes to P1/P7.
+- Architecture Owner accepted the strict-CSP and Settings constraints for
+  P0.S-2 only and recorded
+  `P0S2_TECHNICAL_DISPOSITION = ACCEPT_PROVEN_WITH_CONSTRAINT` and
+  `ARCHITECTURE_OWNER_P0S2_CONSTRAINTS_ACCEPTED = YES`. P0.S-2 is now
+  `SHACO_FORGE_V1_0_P0S_2 = PASS` / `P0S2_STATE = CLOSED`; P0.S remains
+  `IN_PROGRESS`, P0.S-3 remains `NOT_STARTED`, and
+  `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`. Evidence:
+  `docs/06-testing-acceptance/evidence/P0S-2-ELECTRON-CLIENT-BOOT-EVIDENCE.md`.
+
 ## 2026-08-30
 
 - P0.S-1 formal closure completed as a documentation/governance action only.

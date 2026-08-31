@@ -51,7 +51,7 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
-| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | IN_PROGRESS; P0.S-1 PASS / CLOSED with accepted constraint; P0.S-2 NOT_STARTED |
+| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | IN_PROGRESS; P0.S-1 and P0.S-2 PASS / CLOSED with accepted constraints; P0.S-3 NOT_STARTED |
 | `P05-COMPATIBILITY-VERSION.md` | P0.5 Compatibility Contract 候选 | READY-FOR-FREEZE-AFTER-P0S |
 | `P1-SYSTEM-CONTRACT.md` | P1 骨架 | NOT-DETAILED |
 | `P2-HOST-WORKER.md` | P2 骨架 | NOT-DETAILED |
@@ -86,6 +86,7 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | `architecture/AUDIT-005-P0S1-INDEPENDENT-REVIEW.md` | Faithful persisted summary of external P0.S-1 Independent Review (`PASS_WITH_REQUIRED_CORRECTIONS`) |
 | `architecture/CORRECTIVE-005-P0S1-DOCUMENTATION-F01-F02-F03.md` | P0.S-1 documentation-only F-01/F-02/F-03 corrective record |
 | `architecture/AUDIT-005B-P0S1-CORRECTIVE-REREVIEW.md` | Faithful persisted summary of external Corrective Re-Review (`PASS`; Owner may close P0.S-1) |
+| `architecture/AUDIT-006-P0S2-INDEPENDENT-REVIEW.md` | Faithful persisted summary of external P0.S-2 Independent Review (`PASS`; Owner accepted constrained disposition and closed P0.S-2) |
 | `implementation/` | 实现审计 |
 | `corrective/` | Corrective 审计 |
 | `templates/` | Review 模板 |
@@ -106,6 +107,7 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | `evidence/P0-6-DEPENDENCY-AND-STABILITY-MATRIX.md` | P0-6 Harness dependency/stability classes, forbidden imports, adapters, and P0.S/P0.5/P1 inputs |
 | `evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` | P0-7 master risk register, P0.S hypothesis/hard gates (F-01/F-02/F-03 wording), fallback branch, and P0.5/P1/P7 inputs |
 | `evidence/P0S-1-HOST-PROFILE-FEASIBILITY-EVIDENCE.md` | P0.S-1 closed Host Profile feasibility evidence; stage PASS with accepted `PROVEN_WITH_CONSTRAINT` disposition |
+| `evidence/P0S-2-ELECTRON-CLIENT-BOOT-EVIDENCE.md` | P0.S-2 closed Electron Client Boot evidence; stage PASS with accepted `PROVEN_WITH_CONSTRAINT` disposition |
 
 ## 9. Handover
 

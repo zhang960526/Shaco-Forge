@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "notProduction": true,
+  "gate": "P0.S-2",
+  "result": "PASS",
+  "independentElectronProcesses": true,
+  "runPidsDistinct": true,
+  "canarySha256": "46796de2b700cfaf8dd03bdfd49c9f64933dec1bd3746a906986a8d615f5b43a",
+  "settingsDocumentSha256": "80af6f84d4db5a7aee1d4b25ef4085761b9b32b41c9da6efbcfcd05f81118858",
+  "gates": {
+    "customScheme": true,
+    "realHarnessClient": true,
+    "sessionUiEnterable": true,
+    "harnessSettingsContract": true,
+    "fileSettingsPersistence": true,
+    "rendererIsolation": true,
+    "noWorkerTransport": true,
+    "noCredentialBridge": true,
+    "noStockWebApp": true,
+    "noTcpListener": true
+  }
+}

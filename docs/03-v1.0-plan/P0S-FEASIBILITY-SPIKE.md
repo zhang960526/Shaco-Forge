@@ -2,7 +2,7 @@
 
 Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0S = IN_PROGRESS`)
 
-Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 is `PASS / CLOSED` with an Owner-accepted `PROVEN_WITH_CONSTRAINT` disposition. P0.S remains `IN_PROGRESS`; P0.S-2 has not started.
+Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 and P0.S-2 are `PASS / CLOSED` with Owner-accepted `PROVEN_WITH_CONSTRAINT` dispositions. P0.S remains `IN_PROGRESS`; P0.S-3 remains `NOT_STARTED` and was not started by the P0.S-2 closure.
 
 P0-7 frozen inputs (do not re-open P0; do not redesign this architecture):
 
@@ -41,7 +41,7 @@ Closed state (2026-08-30):
 - `HOST_PROFILE_CORE_PATCH_REQUIRED = NO`
 - `ADAPTER_OR_STUB_USED = YES`
 - `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
-- `P0S2 = NOT_STARTED`
+- At P0.S-1 closure, P0.S-2 had not started.
 - Evidence: `docs/06-testing-acceptance/evidence/P0S-1-HOST-PROFILE-FEASIBILITY-EVIDENCE.md`
 
 Review chain: AUDIT-005 = `PASS_WITH_REQUIRED_CORRECTIONS`; CORRECTIVE-005 =
@@ -67,7 +67,40 @@ Hard evidence:
 - `P0S_STANDARD_PRESET_TOOLS_PRESENT` (shipped `standard` loads; P0-5 REQUIRED tool subset usable — not a product Hard Gate for Jobs/Goal/Workflow/Ralph/Plan/Skills/web tools)
 - `P0S_CORE_PATCH_INVENTORY_COMPLETE` with explicit YES/NO per area (`HOST_PROFILE_CORE_PATCH_REQUIRED`, `CONNECTION_CARRIER_CORE_PATCH_REQUIRED`, `CLIENT_BOOT_CORE_PATCH_REQUIRED`, `CLIENT_MODULE_CORE_PATCH_REQUIRED`, `NATIVE_PACKAGING_CORE_PATCH_REQUIRED`) plus `ADAPTER_OR_STUB_USED` (Surface / Why / PublicOrPreviewSeamUsed / ProductionImpact). Adapter/stub is not a Core Patch. Do not infer NONE without inventory.
 
-## P0.S-2 — Electron Client Boot
+## P0.S-2 — Electron Client Boot — PASS / CLOSED
+
+Closure state (2026-08-31):
+
+- `SHACO_FORGE_V1_0_P0S_2 = PASS`
+- `P0S2_STATE = CLOSED`
+- `P0S2_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT`
+- `P0S2_INDEPENDENT_REVIEW = PASS`
+- `P0S2_TECHNICAL_DISPOSITION = ACCEPT_PROVEN_WITH_CONSTRAINT`
+- `ARCHITECTURE_OWNER_P0S2_CONSTRAINTS_ACCEPTED = YES`
+- `P0S_ELECTRON_RENDERER_BOOT = YES`
+- `P0S_CUSTOM_SCHEME_OR_APPROVED_LOADING_MODEL = YES`
+- `CLIENT_INITIALIZED = YES`
+- `SESSION_UI_ENTERABLE = YES`
+- `NODE_INTEGRATION_REQUIRED = NO`
+- `P0S_SETTINGS_PERSISTENCE = YES`
+- `SETTINGS_PERSISTENCE_NOT_MEMORY = YES`
+- `SETTINGS_SURVIVES_FULL_DESKTOP_RESTART = YES`
+- `STOCK_DSH_WEB_APP_REQUIRED = NO`
+- `PRIVATE_OR_INTERNAL_LOADER_USED = NO`
+- `CLIENT_BOOT_CORE_PATCH_REQUIRED = NO`
+- `ADAPTER_OR_STUB_USED = YES`
+- `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
+- `P0S3_ALLOWED = NO`
+- Evidence: `docs/06-testing-acceptance/evidence/P0S-2-ELECTRON-CLIENT-BOOT-EVIDENCE.md`
+- Independent Review: `docs/05-reviews/architecture/AUDIT-006-P0S2-INDEPENDENT-REVIEW.md`
+
+AUDIT-006 independently confirmed the Executor claim, H-03, H-04 and H-15
+boot wiring, with no blocking Finding. The Architecture Owner accepted the
+strict-CSP loader and Settings capability constraints for P0.S-2 only and
+classified the preload bridge, frozen fixture and `ownsHost` hook as
+`NON_CORE_ADAPTER`. F-05 routes to P4, F-09 routes to P1/P7, and formal
+Carrier/trust wiring remains P0.S-3/P1 work. The closed Spike remains
+`NOT_PRODUCTION` and does not authorize P0.S-3 implementation in this run.
 
 Prove packaged Harness Client boot under a secure custom scheme **or an approved Electron Renderer loading model** that uses documented/preview public boot seams.
 

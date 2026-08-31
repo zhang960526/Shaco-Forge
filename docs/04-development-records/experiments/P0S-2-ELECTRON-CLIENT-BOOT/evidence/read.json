@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "notProduction": true,
+  "gate": "P0.S-2",
+  "runMode": "read",
+  "canarySha256": "46796de2b700cfaf8dd03bdfd49c9f64933dec1bd3746a906986a8d615f5b43a",
+  "startedAtUtc": "2026-08-31T01:31:37.636Z",
+  "completedAtUtc": "2026-08-31T01:31:38.290Z",
+  "runtime": {
+    "platform": "win32",
+    "arch": "x64",
+    "node": "22.16.0",
+    "electron": "35.7.5",
+    "chrome": "134.0.6998.205",
+    "processArgv": [
+      "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\electron.exe",
+      ".\\electron-main.mjs",
+      "--run-mode=read",
+      "--canary=<P0S2_CANARY>"
+    ],
+    "appMetrics": [
+      {
+        "pid": 18364,
+        "type": "Browser"
+      },
+      {
+        "pid": 16904,
+        "type": "Utility",
+        "serviceName": "network.mojom.NetworkService"
+      },
+      {
+        "pid": 21108,
+        "type": "Tab"
+      }
+    ]
+  },
+  "frozenHarness": {
+    "root": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+    "commit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "version": "0.1.2-alpha.1",
+    "worktreeMutatedByRuntime": false
+  },
+  "clientDistIdentity": {
+    "notProduction": true,
+    "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "harnessVersion": "0.1.2-alpha.1",
+    "harnessLockSha256": "506ad1fc7c40f71ce8c6afe08724fdd55020c1a527d7a7a185c559d39ecfcaf1",
+    "graphRevision": "p0s2-cd5ef81",
+    "entryCount": 46,
+    "bootstrapBundleSha256": "9361241bfbe8a02864df5df9fabf9fbbfa0f5a1914025badab36bdf1b9481751",
+    "applicationBundleSha256": "cbd702f1fdd551b5ab234a46f10ffafd31d60d5846407577bfadf95016ad4484",
+    "compatibilityAdapters": [
+      {
+        "id": "p0s2-strict-csp-loader-adapter",
+        "scope": "@deepseek-ai/cordis-plugin-loader dynamic __jsExpr evaluator",
+        "behavior": "reject dynamic loader expressions; preserve script-src self without unsafe-eval",
+        "applications": 1,
+        "harnessCoreModified": false
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "@deepseek-ai/dsh-typert-registry",
+        "source": "harness:packages/typert/registry/lib/client.js",
+        "sha256": "116a1d5ac12355d0713444368158c889cb0e926c7f89d4d35487d648fe30fd0a",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-gateway",
+        "source": "harness:packages/api/gateway/lib/client.js",
+        "sha256": "fe28e214b4bcc7fa35236e44ed541944e16bbf1ec003fc860e4d4bb09ec218b3",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-session-log-export",
+        "source": "harness:packages/session-query/session-log-export/lib/client.js",
+        "sha256": "a254f3ae74fc0f73d0b69858894f4df24f2199066ea289765f8e568cdf766ba9",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-session-controller",
+        "source": "harness:packages/api/session-controller/lib/client.js",
+        "sha256": "52c8210e144d570c88f436da9434984d01ecbf141075ea766427fae85bc70ddb",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-workspace-controller",
+        "source": "harness:packages/api/workspace-controller/lib/client.js",
+        "sha256": "6142956344e24492f88649d52c66618d99580738d6c4b7c6f4d1a5394c3e5e5a",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-hmr",
+        "source": "harness:packages/client/hmr/lib/client.js",
+        "sha256": "39cf44a8202214eca333d8f8fdf98b3fd35933ee27d75c42b5e98e1db96a84e0",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-modules",
+        "source": "harness:packages/client/modules/lib/client.js",
+        "sha256": "9361241bfbe8a02864df5df9fabf9fbbfa0f5a1914025badab36bdf1b9481751",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-connection",
+        "source": "harness:packages/client/connection/lib/client.js",
+        "sha256": "d90ac3ecd5a1fa6eda2ad19639b739daca4b3b5c988c544fc4bffcff6b3c030e",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-remotes",
+        "source": "harness:packages/api/remotes/lib/client.js",
+        "sha256": "7eb837812f3bd9978e9f20e0bef6cdb8c1d47f1e288912fab9b930827290cb3a",
+        "customAdapter": false
+      },
+      {
+        "id": "@shaco-forge/p0s2-settings-capability-adapter",
+        "source": "spike:src/settings-capability-adapter.js",
+        "sha256": "1d42ef17d7512de0eb435f4050be10ec30dbc651da83e69b9e6af45afe674ae2",
+        "customAdapter": true
+      },
+      {
+        "id": "@deepseek-ai/dsh-cordis-client-runner",
+        "source": "harness:packages/extensions/cordis-client-runner/lib/client.js",
+        "sha256": "1e975d3105fde8fdfbae8c7d1900c7d650fb501c6c7c7c05625b7fa59186ad98",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-theme",
+        "source": "harness:packages/client/ui-theme/lib/client.js",
+        "sha256": "8d8e115c5fb3ba1fcb1f857eea860a0cf02d1c25d3bd779be20a622477c0605a",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-locale",
+        "source": "harness:packages/client/locale/lib/client.js",
+        "sha256": "6eff57ca0085b7946344e99208a47d5794812dcd72e518ec7637565efec9cb50",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-layout",
+        "source": "harness:packages/client/ui-layout/lib/client.js",
+        "sha256": "5a9e93ec65359683fe660e91831e2299ff28483b67bdd06b8a7c6cdfdf3d8607",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-renderer",
+        "source": "harness:packages/client/ui-renderer/lib/client.js",
+        "sha256": "57cc5d86f23565ffe7909746fdcf5e84098ade4aaf3e8744e33654f1aac91144",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-session",
+        "source": "harness:packages/client/ui-session/lib/client.js",
+        "sha256": "a794b82a58f6e7740041456fc3690596db98db6619749b97c49cd2443a89d5ae",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-sidebar",
+        "source": "harness:packages/client/ui-sidebar/lib/client.js",
+        "sha256": "bde2fc86868432f804fbbc687ca5ef0890698e4d27522620ec997d6d15153816",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings",
+        "source": "harness:packages/client/ui-settings/lib/client.js",
+        "sha256": "0cb26d506adcf6a5ec51e62fea537c1d5afe19d7be41b4cccaaa40fc33d9e486",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings-general",
+        "source": "harness:packages/client/ui-settings-general/lib/client.js",
+        "sha256": "4faf105332b2e3beca646fa4c458d481faa06a7e9539c35c8f54a185b443189b",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings-models",
+        "source": "harness:packages/client/ui-settings-models/lib/client.js",
+        "sha256": "c4e99652b3f49cc4e36756381c49266c4bde1c2379848fbd6dbd8cd0c5cccc07",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings-plugin-inventory",
+        "source": "harness:packages/client/ui-settings-plugin-inventory/lib/client.js",
+        "sha256": "a4a9b9ed2bd47d1ba97330934420c723959dd985507c3bb907d42304324f40f3",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-conversation",
+        "source": "harness:packages/client/ui-conversation/lib/client.js",
+        "sha256": "08444b1f96e3e3e1046d1c4769b61cf6c09d8d839f057a607915514d5d123827",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-approval",
+        "source": "harness:packages/client/ui-approval/lib/client.js",
+        "sha256": "1cb6c0afad99e3a61f16da5078cbba2d6e8e33ce5a162947ac876674e7e74f54",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-chat",
+        "source": "harness:packages/client/ui-chat/lib/client.js",
+        "sha256": "2d94875cb2e9d04d4d6392d1e0e4dfea392c88029d53a35ee4a28359865c82e1",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-brand-official",
+        "source": "harness:packages/client/ui-brand-official/lib/client.js",
+        "sha256": "94c38834e1557d02ce426015fa4ea5e27e1185260901e1963fd46ab0f8b2f91c",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-attachment",
+        "source": "harness:packages/client/ui-attachment/lib/client.js",
+        "sha256": "d4ab83208367540304c5b441d36e234b8398f4345306a782b2a4402e55d8e40c",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-tool",
+        "source": "harness:packages/client/ui-tool/lib/client.js",
+        "sha256": "899647a2aae079137b37a7e171e46b0394e8000e796f74e52b9045496fbe7f17",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-cordis",
+        "source": "harness:packages/extensions/ui-cordis/lib/client.js",
+        "sha256": "faf902f53a7c3772f3452c40b80b755c74dacaacb21db1fe5c65fbb43c25afc7",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-workflow-run",
+        "source": "harness:packages/client/ui-workflow-run/lib/client.js",
+        "sha256": "34f774ab62e48ba9e7582d8445f0a4de166a1d5d0617ec94f96d2700c7f8ca1d",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-deliverables",
+        "source": "harness:packages/client/ui-deliverables/lib/client.js",
+        "sha256": "ac0dbb1ebcaa7760cd95eaf3cf40bdf13e8abd75014d7e876f02631267e20aaa",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-workspace",
+        "source": "harness:packages/client/ui-workspace/lib/client.js",
+        "sha256": "8c9836211951ec926134b50b0c0791e065a4e7c959cac289f13ec3d3753528af",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-input-trigger",
+        "source": "harness:packages/client/ui-input-trigger/lib/client.js",
+        "sha256": "cc782452a703a1106499bcc1c54bbdd68bc939c99e3a399541d59a04391bc282",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-commands",
+        "source": "harness:packages/client/ui-commands/lib/client.js",
+        "sha256": "3fb21f2f0ffc4c7e7bec57ab8029d3454a0f7f9d8990d274c4e20dcace051dc0",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-skill",
+        "source": "harness:packages/client/ui-skill/lib/client.js",
+        "sha256": "5498577cca7e3230632f24899f3e8fd2d01d91a9ba333e2b2c918a6668e5fe12",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-subagent",
+        "source": "harness:packages/client/ui-subagent/lib/client.js",
+        "sha256": "590b9224d3e5a99cce88ba1e72d4b96f40fb328ac7ed69ad0e869f5c2d2bd9fb",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-reference",
+        "source": "harness:packages/client/ui-reference/lib/client.js",
+        "sha256": "3598742a3882f8ffa76e6b48c0c245c0becef86b60d278de101ef596ac760ade",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-jobs",
+        "source": "harness:packages/client/ui-jobs/lib/client.js",
+        "sha256": "4f8071d13625569a9f24f7536bc5e13b6f22e0fee6b75f78c51d5cefe755a7f3",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-goal",
+        "source": "harness:packages/client/ui-goal/lib/client.js",
+        "sha256": "c55138e66b7da78d044cb22b6c346c71b8c92d9675a6531a546be3e14eeed181",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-message-feedback",
+        "source": "harness:packages/client/ui-message-feedback/lib/client.js",
+        "sha256": "3ae6456d90e119af5fd201ac74d1edfa04459b9d2fa1c9e74125751e5ce50423",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-model-selection",
+        "source": "harness:packages/client/ui-model-selection/lib/client.js",
+        "sha256": "7c1c4aeb06f5b057ba484fd6b4729f866cecc5c558dda7870adca8a3beea28fb",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-permission-presets",
+        "source": "harness:packages/client/ui-permission-presets/lib/client.js",
+        "sha256": "9a4279ba5fc1ca4e0b86175e88cd33a269294dd4cffbfd0f3a8badeb10de9ba8",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-agent-preset",
+        "source": "harness:packages/client/ui-agent-preset/lib/client.js",
+        "sha256": "6c16db6c5646f82a6b123ec4de83d2e2e8c68c4c51e29da3deb93953b170df22",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings-plugins",
+        "source": "harness:packages/client/ui-settings-plugins/lib/client.js",
+        "sha256": "3fda5e5bc41e1d3c572ad8c6af43e6cf0953068695805905551bb9ba70372fd3",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-plan",
+        "source": "harness:packages/client/ui-plan/lib/client.js",
+        "sha256": "1d4e37ff531638d8e92e176dcb08be26a0e6e5fa697509d567507d7e6987ad01",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-user-questions",
+        "source": "harness:packages/client/ui-user-questions/lib/client.js",
+        "sha256": "271fa5bae4a54fd92e217dd98b1286aaddde267ff31d3d93ed13dc8c0c60dbd5",
+        "customAdapter": false
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-trajectory",
+        "source": "harness:packages/client/ui-trajectory/lib/client.js",
+        "sha256": "7e77760384dbd0e5a20f837a891b1f11c3cd27745af6007eb7d7e6e6b260f769",
+        "customAdapter": false
+      }
+    ]
+  },
+  "electronBoundary": {
+    "browserWindowPreferences": {
+      "nodeIntegration": false,
+      "contextIsolation": true,
+      "sandbox": true,
+      "webSecurity": true,
+      "allowRunningInsecureContent": false
+    },
+    "preloadExports": [
+      "runRequest",
+      "settingsRpc",
+      "securitySnapshot",
+      "complete"
+    ],
+    "arbitraryIpcExposed": false,
+    "filesystemExposed": false,
+    "shellExposed": false,
+    "credentialBridgeExposed": false,
+    "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'"
+  },
+  "settingsPersistence": {
+    "provider": "@deepseek-ai/dsh-settings-file",
+    "contract": "ctx.remote.settings.describe/mutate",
+    "documentFormat": "settings.yaml",
+    "documentPath": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\runtime-data\\settings.yaml",
+    "memoryFallback": false
+  },
+  "network": {
+    "stockDshWebAppStarted": false,
+    "loadingOrigin": "shaco-forge://client",
+    "tcpListenerProbe": {
+      "pids": [
+        18364,
+        16904,
+        21108
+      ],
+      "listeners": [],
+      "probeError": null
+    }
+  },
+  "renderer": {
+    "ok": true,
+    "loading": {
+      "href": "shaco-forge://client/index.html?fixture&p0s2Run=read",
+      "protocol": "shaco-forge:",
+      "origin": "shaco-forge://client",
+      "customScheme": true,
+      "stockHttpOrigin": false
+    },
+    "harnessClient": {
+      "appWebEntryMounted": true,
+      "bootGraphEntries": 46,
+      "sessionTreeEntered": true,
+      "sessionTitle": "Fixture 历史会话",
+      "chatMarker": "bash",
+      "pluginStyleOwners": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings-models",
+        "@deepseek-ai/dsh-client-ui-settings-models",
+        "@deepseek-ai/dsh-client-ui-settings-models",
+        "@deepseek-ai/dsh-client-ui-settings-models",
+        "@deepseek-ai/dsh-client-ui-settings-plugin-inventory",
+        "@deepseek-ai/dsh-client-ui-settings-plugins",
+        "@deepseek-ai/dsh-client-ui-settings-plugins",
+        "@deepseek-ai/dsh-client-ui-settings-plugins",
+        "@deepseek-ai/dsh-client-ui-settings-plugins",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-jobs",
+        "@deepseek-ai/dsh-client-ui-plan",
+        "@deepseek-ai/dsh-client-ui-message-feedback",
+        "@deepseek-ai/dsh-client-ui-settings-general",
+        "@deepseek-ai/dsh-client-ui-settings-general",
+        "@deepseek-ai/dsh-client-ui-settings-general",
+        "@deepseek-ai/dsh-client-ui-settings-general",
+        "@deepseek-ai/dsh-client-ui-tool",
+        "@deepseek-ai/dsh-client-ui-tool",
+        "@deepseek-ai/dsh-client-ui-tool",
+        "@deepseek-ai/dsh-client-ui-tool",
+        "@deepseek-ai/dsh-client-ui-tool",
+        "@deepseek-ai/dsh-client-ui-input-trigger",
+        "@deepseek-ai/dsh-client-ui-approval",
+        "@deepseek-ai/dsh-client-ui-user-questions",
+        "@deepseek-ai/dsh-client-ui-user-questions",
+        "@deepseek-ai/dsh-client-ui-trajectory",
+        "@deepseek-ai/dsh-client-ui-trajectory",
+        "@deepseek-ai/dsh-client-ui-trajectory",
+        "@deepseek-ai/dsh-client-ui-trajectory",
+        "@deepseek-ai/dsh-client-ui-commands",
+        "@deepseek-ai/dsh-client-ui-agent-preset",
+        "@deepseek-ai/dsh-client-ui-agent-preset",
+        "@deepseek-ai/dsh-client-ui-agent-preset",
+        "@deepseek-ai/dsh-client-ui-agent-preset",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-subagent",
+        "@deepseek-ai/dsh-client-ui-subagent",
+        "@deepseek-ai/dsh-session-log-export",
+        "@deepseek-ai/dsh-client-ui-model-selection",
+        "@deepseek-ai/dsh-client-ui-deliverables",
+        "@deepseek-ai/dsh-client-ui-permission-presets",
+        "@deepseek-ai/dsh-client-ui-workflow-run",
+        "@deepseek-ai/dsh-client-ui-skill",
+        "@deepseek-ai/dsh-client-ui-goal",
+        "@deepseek-ai/dsh-client-ui-goal",
+        "@deepseek-ai/dsh-client-ui-attachment",
+        "@deepseek-ai/dsh-client-ui-attachment",
+        "@deepseek-ai/dsh-client-ui-attachment",
+        "@deepseek-ai/dsh-client-ui-attachment",
+        "@deepseek-ai/dsh-client-ui-attachment",
+        "@deepseek-ai/dsh-client-ui-cordis",
+        "@deepseek-ai/dsh-client-ui-cordis",
+        "@deepseek-ai/dsh-client-ui-cordis"
+      ]
+    },
+    "settings": {
+      "ok": true,
+      "contract": "ctx.remote.settings.describe/mutate",
+      "persistenceMode": "host",
+      "provider": "@deepseek-ai/dsh-settings-file",
+      "namespace": "p0s2-canary",
+      "runMode": "read",
+      "expectedCanary": "p0s2-e0c2cd8d4787414a8b8d0572b7ee827c",
+      "observedCanary": "p0s2-e0c2cd8d4787414a8b8d0572b7ee827c",
+      "writable": true,
+      "hasDocument": true,
+      "revisionBefore": 0,
+      "revisionAfter": 0,
+      "mutationOk": null
+    },
+    "security": {
+      "contextIsolated": true,
+      "sandboxed": true,
+      "rendererRequireType": "undefined",
+      "rendererProcessType": "undefined",
+      "exposedGlobals": [
+        "p0s2Bridge"
+      ],
+      "workerTransportPresent": false,
+      "dshTransportHookKeys": [
+        "ownsHost"
+      ],
+      "directTransportFunctionsPresent": false,
+      "credentialBridgePresent": false
+    },
+    "rendererFatalEvents": []
+  },
+  "console": [
+    {
+      "level": 3,
+      "message": "[cordis-client-runner] syncing inspect providers failed: Error: internal: client api: dynamicCordisRunner/syncInspectManifest failed: fixture connection RPC endpoint \"dynamicCordisRunner/syncInspectManifest\" is unavailable",
+      "line": 21523,
+      "sourceId": "shaco-forge://client/plugins/application.js?rev=p0s2-cd5ef81"
+    },
+    {
+      "level": 3,
+      "message": "[ui-cordis] reading the Cordis inventory failed: Error: internal: client api: dynamicCordisRunner/inventory failed: fixture connection RPC endpoint \"dynamicCordisRunner/inventory\" is unavailable",
+      "line": 64038,
+      "sourceId": "shaco-forge://client/plugins/application.js?rev=p0s2-cd5ef81"
+    },
+    {
+      "level": 3,
+      "message": "Refused to connect to 'shaco-forge://client/plugins/events' because it violates the following Content Security Policy directive: \"connect-src 'none'\".\n",
+      "line": 0,
+      "sourceId": "shaco-forge://client/index.html?fixture&p0s2Run=read"
+    },
+    {
+      "level": 3,
+      "message": "[ui-cordis] reading the Cordis inventory failed: Error: internal: client api: dynamicCordisRunner/inventory failed: fixture connection RPC endpoint \"dynamicCordisRunner/inventory\" is unavailable",
+      "line": 64038,
+      "sourceId": "shaco-forge://client/plugins/application.js?rev=p0s2-cd5ef81"
+    },
+    {
+      "level": 3,
+      "message": "[cordis-client-runner] syncing inspect providers failed: Error: internal: client api: dynamicCordisRunner/syncInspectManifest failed: fixture connection RPC endpoint \"dynamicCordisRunner/syncInspectManifest\" is unavailable",
+      "line": 21523,
+      "sourceId": "shaco-forge://client/plugins/application.js?rev=p0s2-cd5ef81"
+    },
+    {
+      "level": 3,
+      "message": "[ui-cordis] reading the Cordis inventory failed: Error: internal: client api: dynamicCordisRunner/inventory failed: fixture connection RPC endpoint \"dynamicCordisRunner/inventory\" is unavailable",
+      "line": 64038,
+      "sourceId": "shaco-forge://client/plugins/application.js?rev=p0s2-cd5ef81"
+    }
+  ]
+}

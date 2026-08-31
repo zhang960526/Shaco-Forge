@@ -13,5 +13,6 @@ Status: ACTIVE
 | REVIEW-005 | Independent P0.S-1 Host Profile Feasibility Review | PASS_WITH_REQUIRED_CORRECTIONS | Recommended `ACCEPT_PROVEN_WITH_CONSTRAINT`; F-01/F-02/F-03 corrected by CORRECTIVE-005 | `architecture/AUDIT-005-P0S1-INDEPENDENT-REVIEW.md` |
 | CORRECTIVE-005 | P0.S-1 Documentation F-01/F-02/F-03 | APPLIED | Accepted by Independent Corrective Re-Review (AUDIT-005B) | `architecture/CORRECTIVE-005-P0S1-DOCUMENTATION-F01-F02-F03.md` |
 | REVIEW-005B | Independent P0.S-1 Corrective Re-Review | PASS | F-01/F-02/F-03 CLOSED; `P0S1_CAN_CLOSE = YES`; Owner accepted constrained disposition and closed P0.S-1 | `architecture/AUDIT-005B-P0S1-CORRECTIVE-REREVIEW.md` |
+| REVIEW-006 | Independent P0.S-2 Electron Client Boot Review | PASS | Executor claim confirmed; Owner accepted `ACCEPT_PROVEN_WITH_CONSTRAINT` and closed P0.S-2 | `architecture/AUDIT-006-P0S2-INDEPENDENT-REVIEW.md` |
 
 Future implementation reviews must be stored separately from Phase Contracts.

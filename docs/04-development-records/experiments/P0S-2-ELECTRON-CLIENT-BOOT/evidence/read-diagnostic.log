@@ -1,0 +1,13 @@
+[P0S2] main started 2026-08-31T01:31:37.531Z
+[P0S2] Harness FileSettingsProvider ready 2026-08-31T01:31:37.598Z
+[P0S2] waiting for Electron app ready 2026-08-31T01:31:37.599Z
+[P0S2] Electron app ready 2026-08-31T01:31:37.628Z
+[P0S2] renderer console level=3 [cordis-client-runner] syncing inspect providers failed: Error: internal: client api: dynamicCordisRunner/syncInspectManifest failed: fixture connection RPC endpoint "dynamicCordisRunner/syncInspectManifest" is unavailable (shaco-forge://client/plugins/application.js?rev=p0s2-cd5ef81:21523) 2026-08-31T01:31:38.058Z
+[P0S2] renderer console level=3 [ui-cordis] reading the Cordis inventory failed: Error: internal: client api: dynamicCordisRunner/inventory failed: fixture connection RPC endpoint "dynamicCordisRunner/inventory" is unavailable (shaco-forge://client/plugins/application.js?rev=p0s2-cd5ef81:64038) 2026-08-31T01:31:38.070Z
+[P0S2] renderer console level=3 Refused to connect to 'shaco-forge://client/plugins/events' because it violates the following Content Security Policy directive: "connect-src 'none'".
+ (shaco-forge://client/index.html?fixture&p0s2Run=read:0) 2026-08-31T01:31:38.089Z
+[P0S2] custom-scheme document loaded 2026-08-31T01:31:38.098Z
+[P0S2] renderer console level=3 [ui-cordis] reading the Cordis inventory failed: Error: internal: client api: dynamicCordisRunner/inventory failed: fixture connection RPC endpoint "dynamicCordisRunner/inventory" is unavailable (shaco-forge://client/plugins/application.js?rev=p0s2-cd5ef81:64038) 2026-08-31T01:31:38.108Z
+[P0S2] renderer console level=3 [cordis-client-runner] syncing inspect providers failed: Error: internal: client api: dynamicCordisRunner/syncInspectManifest failed: fixture connection RPC endpoint "dynamicCordisRunner/syncInspectManifest" is unavailable (shaco-forge://client/plugins/application.js?rev=p0s2-cd5ef81:21523) 2026-08-31T01:31:38.108Z
+[P0S2] renderer console level=3 [ui-cordis] reading the Cordis inventory failed: Error: internal: client api: dynamicCordisRunner/inventory failed: fixture connection RPC endpoint "dynamicCordisRunner/inventory" is unavailable (shaco-forge://client/plugins/application.js?rev=p0s2-cd5ef81:64038) 2026-08-31T01:31:38.246Z
+[P0S2] renderer result {"ok":true,"target":"D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\evidence\\read.json"} 2026-08-31T01:31:38.292Z

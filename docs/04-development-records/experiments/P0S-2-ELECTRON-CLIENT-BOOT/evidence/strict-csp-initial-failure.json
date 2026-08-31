@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "notProduction": true,
+  "gate": "P0.S-2",
+  "attempt": "strict-csp-before-compatibility-adapter",
+  "result": "EXPECTED_FAILURE_RETAINED",
+  "observedAtUtc": "2026-08-30T16:39:23.659Z",
+  "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'",
+  "failure": {
+    "type": "EvalError",
+    "message": "Refused to evaluate a string as JavaScript because unsafe-eval is not allowed by script-src self.",
+    "source": "generated Vite application shell",
+    "rootCause": "@deepseek-ai/cordis-plugin-loader creates a dynamic __jsExpr evaluator at module evaluation time",
+    "clientInitialized": false,
+    "sessionUiEntered": false
+  },
+  "rejectedResolution": {
+    "unsafeEvalEnabled": false,
+    "reason": "P0.S-2 may not trade away the Chromium security boundary for boot success"
+  },
+  "acceptedSpikeResolution": {
+    "adapter": "p0s2-strict-csp-loader-adapter",
+    "behavior": "replace the unconditional evaluator with a fail-closed function that rejects __jsExpr",
+    "harnessWorktreeModified": false,
+    "harnessCoreSourceCopiedOrModified": false,
+    "ownerDecisionRequired": true
+  }
+}
+
