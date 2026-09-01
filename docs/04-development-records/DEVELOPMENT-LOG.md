@@ -4,6 +4,64 @@ Status: ACTIVE
 
 ## 2026-08-31
 
+- External Independent Review AUDIT-007 returned `PASS`, confirmed the P0.S-3
+  Executor claim and independently reproduced every core runtime gate with the
+  same C#/Electron/bundle source in a repository-external temporary copy. The
+  Reviewer machine had no `pwsh`, so the formal PowerShell 7 runner was not
+  executed unchanged; a temporary Node driver reproduced the real process/
+  Named Pipe topology, protected current-user DACL, nine pre-Gateway rejects,
+  38 real Gateway unary calls, 24-way correlation, three basic stream channels,
+  malformed/oversize rejection, zero TCP listeners and zero residual processes.
+  Reviewer modified no project file and Frozen Harness remained clean.
+- AUDIT-007 Findings F-01 through F-04 are informational and non-blocking:
+  preserve exact PS7/Node-driver provenance and route launcher choice to P1/P7;
+  bound the long-running nonce replay set in P1; treat hard-coded Electron
+  `35.7.5` as a later runner improvement; and retain the layered listener probe
+  model in P1 diagnostics. No P0.S-3 Corrective is required.
+- Architecture Owner accepted
+  `P0S3_TECHNICAL_DISPOSITION = ACCEPT_PROVEN_WITH_CONSTRAINT` and
+  `ARCHITECTURE_OWNER_P0S3_CONSTRAINTS_ACCEPTED = YES`. Named Pipe remains
+  `SHACO_CUSTOM_CARRIER_PLUGIN`; all C#/PowerShell, inherited-stdio,
+  Connection-compatibility, Electron and basic-stream surfaces retain their
+  recorded adapter/stub and `NOT_PRODUCTION` classifications.
+  `SHACO_FORGE_V1_0_P0S_3 = PASS`, `P0S3_STATE = CLOSED` and
+  `CONNECTION_CARRIER_CORE_PATCH_REQUIRED = NO`. P0.S remains `IN_PROGRESS`,
+  `P0S_LOCAL_CARRIER_FEASIBLE = PENDING_P0S4_COMPLETENESS`,
+  `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO` and
+  `CORE_PATCH_REQUIREMENT = POSSIBLE_REQUIRES_P0S`. P0.S-4 remains
+  `NOT_STARTED`; the closure run did not rerun the Spike or start P0.S-4.
+
+- P0.S-3 Local Carrier + Trust Executor completed against Shaco Forge
+  `8308b406aff6248b620b9a6a62c66feb7d0aeeb4` and frozen Harness
+  `cd5ef8148158c3a752a658978873241fdf8e2bbc` / `0.1.2-alpha.1`. A disposable
+  Electron Main opened a real Windows Named Pipe to an independent Worker
+  carrier and actual `dsh --profile shaco-host` process. The pipe used a
+  protected DACL containing only the current-user SID; the full endpoint and
+  32-byte per-start authentication material were not persisted.
+- Challenge/HMAC authentication bound protocol version, current-user SID,
+  Worker identity, endpoint identity, request correlation and fresh nonces
+  before route allowlisting or Gateway dispatch. Unauthenticated, invalid
+  proof, wrong Worker, wrong endpoint, wrong SID, malformed, oversize, replayed
+  and non-allowlisted requests all observed Gateway dispatch count 0.
+- A sandboxed Renderer exposed only `p0s3Bridge.run` and had no Node globals,
+  pipe path, reusable credential, transport global or direct pipe access. The
+  authenticated path completed 38 actual Harness
+  `typertGateway.invoke("agentPresets/list")` calls, including 24 concurrent
+  correlated unary calls, five payload sizes and eight unary calls mixed with
+  three 20-item basic stream framing channels. Partial reads/writes, ordering
+  and channel isolation passed; no stock Web stack, BrowserAuth cookie, TCP
+  listener, residual process or Frozen Harness mutation was observed.
+- The C#/PowerShell carrier helper, inherited-stdio bridge, non-listening
+  Connection compatibility surface, Electron adapter and basic-stream producer
+  are `NOT_PRODUCTION` adapters/stubs. The basic stream is not a P0.S-4 stream
+  contract proof. Executor disposition is
+  `P0S3_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT`,
+  `CONNECTION_CARRIER_CORE_PATCH_REQUIRED = NO`,
+  `P0S_LOCAL_CARRIER_FEASIBLE = PENDING_P0S4_COMPLETENESS` and
+  `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`. P0.S-3 is `WAITING_REVIEW`, not
+  PASS/CLOSED; `P0S4_ALLOWED = NO`. Evidence:
+  `docs/06-testing-acceptance/evidence/P0S-3-LOCAL-CARRIER-AND-TRUST-EVIDENCE.md`.
+
 - P0.S-2 Electron Client Boot Executor completed against Shaco Forge
   `292213a6b44b89c1513beab4c3b86d580d843830` and frozen Harness
   `cd5ef8148158c3a752a658978873241fdf8e2bbc` / `0.1.2-alpha.1`.

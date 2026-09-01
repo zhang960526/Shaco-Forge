@@ -2,7 +2,7 @@
 
 Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0S = IN_PROGRESS`)
 
-Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 and P0.S-2 are `PASS / CLOSED` with Owner-accepted `PROVEN_WITH_CONSTRAINT` dispositions. P0.S remains `IN_PROGRESS`; P0.S-3 remains `NOT_STARTED` and was not started by the P0.S-2 closure.
+Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-3 are `PASS / CLOSED` with Owner-accepted `PROVEN_WITH_CONSTRAINT` dispositions. P0.S remains `IN_PROGRESS`; P0.S-4 remains `NOT_STARTED` and disallowed.
 
 P0-7 frozen inputs (do not re-open P0; do not redesign this architecture):
 
@@ -90,7 +90,7 @@ Closure state (2026-08-31):
 - `CLIENT_BOOT_CORE_PATCH_REQUIRED = NO`
 - `ADAPTER_OR_STUB_USED = YES`
 - `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
-- `P0S3_ALLOWED = NO`
+- At P0.S-2 closure, `P0S3_ALLOWED = NO`; that value did not start P0.S-3.
 - Evidence: `docs/06-testing-acceptance/evidence/P0S-2-ELECTRON-CLIENT-BOOT-EVIDENCE.md`
 - Independent Review: `docs/05-reviews/architecture/AUDIT-006-P0S2-INDEPENDENT-REVIEW.md`
 
@@ -99,8 +99,9 @@ boot wiring, with no blocking Finding. The Architecture Owner accepted the
 strict-CSP loader and Settings capability constraints for P0.S-2 only and
 classified the preload bridge, frozen fixture and `ownsHost` hook as
 `NON_CORE_ADAPTER`. F-05 routes to P4, F-09 routes to P1/P7, and formal
-Carrier/trust wiring remains P0.S-3/P1 work. The closed Spike remains
-`NOT_PRODUCTION` and does not authorize P0.S-3 implementation in this run.
+Carrier/trust wiring remained P0.S-3/P1 work at P0.S-2 closure. The P0.S-2
+Spike remains `NOT_PRODUCTION`; the later explicit P0.S-3 Executor run is
+recorded separately below.
 
 Prove packaged Harness Client boot under a secure custom scheme **or an approved Electron Renderer loading model** that uses documented/preview public boot seams.
 
@@ -116,7 +117,63 @@ Hard requirements:
 
 Do not make OPTIONAL workspace/model UI completeness a boot gate.
 
-## P0.S-3 — Local Carrier + Trust
+## P0.S-3 — Local Carrier + Trust — PASS / CLOSED
+
+Closure state (2026-08-31):
+
+- `SHACO_FORGE_V1_0_P0S_3 = PASS`
+- `P0S3_FORMAL_CLOSURE = PASS`
+- `P0S3_STATE = CLOSED`
+- `P0S3_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT`
+- `P0S3_INDEPENDENT_REVIEW_VERDICT = PASS`
+- `P0S3_EXECUTOR_CLAIM_CONFIRMED = YES`
+- `RUNTIME_REPRODUCED = YES`
+- `P0S3_TECHNICAL_DISPOSITION = ACCEPT_PROVEN_WITH_CONSTRAINT`
+- `ARCHITECTURE_OWNER_P0S3_CONSTRAINTS_ACCEPTED = YES`
+- `P0S3_NAMED_PIPE_CARRIER_FOUNDATION = PROVEN`
+- `P0S_UNARY_PASS = YES`
+- `P0S3_STREAM_CONCURRENCY_DEMONSTRATED = YES`
+- `P0S_LOCAL_TRUST_FEASIBLE = YES`
+- `CURRENT_USER_ONLY = YES`
+- `COOKIE_NOT_PRODUCT_IDENTITY = YES`
+- `RENDERER_DIRECT_PIPE_ACCESS = NO`
+- `RENDERER_REUSABLE_WORKER_CREDENTIAL = NO`
+- `AUTHENTICATION_BEFORE_GATEWAY = YES`
+- `WORKER_IDENTITY_ENDPOINT_VALIDATED = YES`
+- `CONNECTION_CARRIER_CORE_PATCH_REQUIRED = NO`
+- `ADAPTER_OR_STUB_USED = YES`
+- `OWNER_DECISION_REQUIRED = YES`
+- `P0S_LOCAL_CARRIER_FEASIBLE = PENDING_P0S4_COMPLETENESS`
+- `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
+- `P0S4_ALLOWED = NO`
+- Evidence: `docs/06-testing-acceptance/evidence/P0S-3-LOCAL-CARRIER-AND-TRUST-EVIDENCE.md`
+- Independent Review: `docs/05-reviews/architecture/AUDIT-007-P0S3-INDEPENDENT-REVIEW.md`
+
+The Executor used a real Windows Named Pipe with an explicitly protected
+current-user DACL. A per-start challenge/HMAC bound protocol version, SID,
+Worker identity, endpoint identity and correlation ID before route allowlisting
+or Gateway dispatch. Renderer remained sandboxed behind one allowlisted preload
+method and received neither the pipe path nor reusable Worker credential. The
+authenticated carrier completed 38 actual Harness Gateway unary calls, a
+24-request correlation batch, five payload sizes and three concurrent basic
+stream framing channels. Nine fail-closed negative cases each observed zero
+Gateway dispatch before the positive phase.
+
+AUDIT-007 returned `PASS`, confirmed the Executor claim and independently
+reproduced the core runtime gates with the same experiment source and a
+repository-external temporary Node driver. The formal PowerShell 7 runner was
+not executed unchanged because the Reviewer machine had no `pwsh`; F-01 records
+that provenance. F-02 through F-04 record bounded nonce state, the hard-coded
+Electron version and the layered TCP-listener probe. All four Findings are
+informational and non-blocking.
+
+The Architecture Owner accepted `ACCEPT_PROVEN_WITH_CONSTRAINT`. The managed
+carrier helper, PowerShell launcher, inherited-stdio bridge, non-listening
+Connection compatibility surface, Electron IPC adapter and deterministic
+basic-stream producer retain their recorded `NOT_PRODUCTION` adapter/stub
+classifications. This closes P0.S-3 only. Complete stream/Connection semantics
+remain P0.S-4, PowerShell is not authorized for product bundling, and P0.S-4
+remains `NOT_STARTED`.
 
 Preferred topology:
 

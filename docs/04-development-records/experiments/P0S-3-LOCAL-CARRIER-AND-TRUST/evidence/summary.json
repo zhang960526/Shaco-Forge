@@ -1,0 +1,1285 @@
+{
+  "classification": "NOT_PRODUCTION",
+  "result": "PASS",
+  "startedAt": "2026-08-31T06:10:39.9808743+00:00",
+  "completedAt": "2026-08-31T06:10:55.0889863+00:00",
+  "runtimeRoot": "<TEMP>\\shaco-forge-p0s3-<RUN_ID>",
+  "baseline": {
+    "shacoBranch": "master",
+    "shacoHead": "8308b406aff6248b620b9a6a62c66feb7d0aeeb4",
+    "harnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "harnessPackage": "0.1.2-alpha.1",
+    "harnessLockSha256": "506ad1fc7c40f71ce8c6afe08724fdd55020c1a527d7a7a185c559d39ecfcaf1",
+    "harnessCleanBefore": true,
+    "harnessCleanAfter": true,
+    "nodeVersion": "v24.18.0",
+    "electronVersion": "35.7.5",
+    "windowsVersion": "Microsoft Windows NT 10.0.26200.0",
+    "powerShellVersion": "7.6.4"
+  },
+  "identities": {
+    "currentUserSid": "S-1-5-21-390745333-3527206759-1879520106-1001",
+    "workerIdentityHashPrefix": "615ee69d7acc1870",
+    "endpointIdentityHashPrefix": "331fa852625f799b",
+    "pipeEndpointHashPrefix": "eee1e73e21659242",
+    "pipeEndpointRedacted": true,
+    "ephemeralSecretPersisted": false,
+    "browserAuthCookieUsed": false
+  },
+  "profileValidation": {
+    "exitCode": 0,
+    "profileName": "shaco-host",
+    "hasBase": true,
+    "hasLocalBundle": true,
+    "hasDshWebApp": false,
+    "hasHostWebserver": false,
+    "hasClientHmr": false,
+    "stderrEmpty": true
+  },
+  "workerReady": {
+    "classification": "NOT_PRODUCTION",
+    "workerCarrierPid": 11652,
+    "dshPid": 27416,
+    "protocolVersion": 1,
+    "maxFrameBytes": 262144,
+    "framePrefixBytes": 4,
+    "pipeTransmissionMode": "Byte",
+    "pipeOptionsCurrentUserOnly": false,
+    "explicitProtectedCurrentUserAcl": true,
+    "currentUserSid": "S-1-5-21-390745333-3527206759-1879520106-1001",
+    "aclOwnerSid": "S-1-5-21-390745333-3527206759-1879520106-1001",
+    "aclProtected": true,
+    "aclSddl": "O:S-1-5-21-390745333-3527206759-1879520106-1001D:P(A;;0x1f019f;;;S-1-5-21-390745333-3527206759-1879520106-1001)",
+    "aclRules": [
+      {
+        "identitySid": "S-1-5-21-390745333-3527206759-1879520106-1001",
+        "accessControlType": "Allow",
+        "rights": "FullControl",
+        "isInherited": false
+      }
+    ],
+    "currentUserOnly": true,
+    "pipeEndpointHashPrefix": "eee1e73e21659242",
+    "pipeEndpointRedacted": true,
+    "workerIdentityHashPrefix": "615ee69d7acc1870",
+    "endpointIdentityHashPrefix": "331fa852625f799b",
+    "ephemeralSecretBytes": 32,
+    "ephemeralSecretPersisted": false
+  },
+  "dshReady": {
+    "classification": "NOT_PRODUCTION",
+    "pid": 27416,
+    "nodeExecutable": "D:\\Development\\nodejs\\node.exe",
+    "nodeVersion": "v24.18.0",
+    "profileName": "shaco-host",
+    "gatewayInvokePresent": true,
+    "gatewayStreamPresent": true,
+    "gatewayWireStreamPresent": true,
+    "connectionPresent": true,
+    "connectionRpcPresent": true,
+    "standardPresetResolved": true,
+    "startupGatewayCanaryExecuted": false,
+    "carrierGatewayDispatchCount": 0,
+    "browserAuthConstructed": false,
+    "stockWebStarted": false
+  },
+  "electron": {
+    "classification": "NOT_PRODUCTION",
+    "result": "PASS",
+    "processTopology": {
+      "electronMainPid": 20108,
+      "rendererPid": 27220,
+      "workerCarrierPid": 11652,
+      "dshWorkerPid": 27416,
+      "electronApplicationPids": [
+        20108,
+        29052,
+        11476,
+        27220
+      ],
+      "independentMainAndWorker": true,
+      "dshProfileEntry": "dsh --profile shaco-host"
+    },
+    "rendererIsolation": {
+      "renderer": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeNames": [
+          "p0s3Bridge"
+        ],
+        "bridgeKeys": [
+          "run"
+        ],
+        "transportGlobalPresent": false,
+        "cookie": "",
+        "protocol": "file:",
+        "origin": "file://"
+      },
+      "preload": {
+        "contextIsolated": true,
+        "sandboxed": true,
+        "preloadPid": 27220,
+        "exposedKeys": [
+          "run"
+        ],
+        "pipePathExposed": false,
+        "reusableCredentialExposed": false
+      },
+      "pipeEndpointExposed": false,
+      "reusableWorkerCredentialExposed": false,
+      "arbitraryIpcExposed": false,
+      "directNamedPipeAccess": false
+    },
+    "authentication": {
+      "protocolVersion": 1,
+      "explicitCompletionState": true,
+      "currentUserSid": "S-1-5-21-390745333-3527206759-1879520106-1001",
+      "workerIdentityHashPrefix": "615ee69d7acc1870",
+      "endpointIdentityHashPrefix": "331fa852625f799b",
+      "pipeEndpointHashPrefix": "eee1e73e21659242",
+      "pipeEndpointRedacted": true,
+      "ephemeralSecretBytes": 32,
+      "ephemeralPerStartMaterial": true,
+      "secretPersisted": false,
+      "browserAuthCookieUsed": false,
+      "negative": {
+        "results": [
+          {
+            "test": "unauthenticated-request",
+            "reason": "unauthenticated-request",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "wrong-proof",
+            "reason": "invalid-proof",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "wrong-worker-identity",
+            "reason": "worker-identity-mismatch",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "wrong-endpoint-identity",
+            "reason": "endpoint-identity-mismatch",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "wrong-user-sid",
+            "reason": "user-sid-mismatch",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "malformed-frame",
+            "reason": "malformed-frame",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "oversize-frame",
+            "reason": "oversize-frame",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "replayed-handshake",
+            "reason": "replayed-handshake",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "wrong-business-endpoint",
+            "reason": "endpoint-not-allowlisted",
+            "gatewayDispatchCount": 0
+          }
+        ],
+        "preGatewayStatus": {
+          "type": "diagnostic-status-response",
+          "requestId": "bcce927d-8ddb-4ac9-9078-8dae06301961",
+          "gatewayDispatchCount": 0,
+          "streamProbeOpenCount": 0,
+          "streamItemCount": 0
+        }
+      }
+    },
+    "positive": {
+      "unary": {
+        "pass": true,
+        "endpoint": "agentPresets/list",
+        "channel": "/api",
+        "standardPresetObserved": true,
+        "correlationIdPresent": true
+      },
+      "concurrentUnary": {
+        "pass": true,
+        "concurrentCount": 24,
+        "uniqueCorrelationIds": 24,
+        "responseOrderDifferentFromRequestOrder": false,
+        "requestOrder": [
+          "concurrent-0",
+          "concurrent-1",
+          "concurrent-2",
+          "concurrent-3",
+          "concurrent-4",
+          "concurrent-5",
+          "concurrent-6",
+          "concurrent-7",
+          "concurrent-8",
+          "concurrent-9",
+          "concurrent-10",
+          "concurrent-11",
+          "concurrent-12",
+          "concurrent-13",
+          "concurrent-14",
+          "concurrent-15",
+          "concurrent-16",
+          "concurrent-17",
+          "concurrent-18",
+          "concurrent-19",
+          "concurrent-20",
+          "concurrent-21",
+          "concurrent-22",
+          "concurrent-23"
+        ],
+        "gatewayDispatchOrder": [
+          "concurrent-0",
+          "concurrent-1",
+          "concurrent-2",
+          "concurrent-3",
+          "concurrent-4",
+          "concurrent-5",
+          "concurrent-6",
+          "concurrent-7",
+          "concurrent-8",
+          "concurrent-9",
+          "concurrent-10",
+          "concurrent-11",
+          "concurrent-12",
+          "concurrent-13",
+          "concurrent-14",
+          "concurrent-15",
+          "concurrent-16",
+          "concurrent-17",
+          "concurrent-18",
+          "concurrent-19",
+          "concurrent-20",
+          "concurrent-21",
+          "concurrent-22",
+          "concurrent-23"
+        ],
+        "promiseResultOrder": [
+          "concurrent-0",
+          "concurrent-1",
+          "concurrent-2",
+          "concurrent-3",
+          "concurrent-4",
+          "concurrent-5",
+          "concurrent-6",
+          "concurrent-7",
+          "concurrent-8",
+          "concurrent-9",
+          "concurrent-10",
+          "concurrent-11",
+          "concurrent-12",
+          "concurrent-13",
+          "concurrent-14",
+          "concurrent-15",
+          "concurrent-16",
+          "concurrent-17",
+          "concurrent-18",
+          "concurrent-19",
+          "concurrent-20",
+          "concurrent-21",
+          "concurrent-22",
+          "concurrent-23"
+        ]
+      },
+      "payloads": {
+        "pass": true,
+        "results": [
+          {
+            "payloadBytes": 0,
+            "correlated": true,
+            "gatewayOk": true
+          },
+          {
+            "payloadBytes": 1024,
+            "correlated": true,
+            "gatewayOk": true
+          },
+          {
+            "payloadBytes": 16384,
+            "correlated": true,
+            "gatewayOk": true
+          },
+          {
+            "payloadBytes": 65536,
+            "correlated": true,
+            "gatewayOk": true
+          },
+          {
+            "payloadBytes": 196608,
+            "correlated": true,
+            "gatewayOk": true
+          }
+        ]
+      },
+      "mixedUnaryAndStreams": {
+        "pass": true,
+        "concurrentUnaryCount": 8,
+        "streamChannelCount": 3,
+        "itemsPerStream": [
+          20,
+          20,
+          20
+        ],
+        "streamOrderPass": true,
+        "streamIsolationPass": true,
+        "streams": [
+          {
+            "streamIdHashPrefix": "d89869fc981490b9",
+            "channelLabel": "channel-0",
+            "items": [
+              {
+                "index": 0,
+                "value": "channel-0:0",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 1,
+                "value": "channel-0:1",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 2,
+                "value": "channel-0:2",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 3,
+                "value": "channel-0:3",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 4,
+                "value": "channel-0:4",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 5,
+                "value": "channel-0:5",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 6,
+                "value": "channel-0:6",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 7,
+                "value": "channel-0:7",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 8,
+                "value": "channel-0:8",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 9,
+                "value": "channel-0:9",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 10,
+                "value": "channel-0:10",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 11,
+                "value": "channel-0:11",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 12,
+                "value": "channel-0:12",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 13,
+                "value": "channel-0:13",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 14,
+                "value": "channel-0:14",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 15,
+                "value": "channel-0:15",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 16,
+                "value": "channel-0:16",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 17,
+                "value": "channel-0:17",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 18,
+                "value": "channel-0:18",
+                "channelLabel": "channel-0"
+              },
+              {
+                "index": 19,
+                "value": "channel-0:19",
+                "channelLabel": "channel-0"
+              }
+            ],
+            "endCount": 20
+          },
+          {
+            "streamIdHashPrefix": "3309c39a0c7e957f",
+            "channelLabel": "channel-1",
+            "items": [
+              {
+                "index": 0,
+                "value": "channel-1:0",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 1,
+                "value": "channel-1:1",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 2,
+                "value": "channel-1:2",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 3,
+                "value": "channel-1:3",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 4,
+                "value": "channel-1:4",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 5,
+                "value": "channel-1:5",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 6,
+                "value": "channel-1:6",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 7,
+                "value": "channel-1:7",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 8,
+                "value": "channel-1:8",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 9,
+                "value": "channel-1:9",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 10,
+                "value": "channel-1:10",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 11,
+                "value": "channel-1:11",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 12,
+                "value": "channel-1:12",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 13,
+                "value": "channel-1:13",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 14,
+                "value": "channel-1:14",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 15,
+                "value": "channel-1:15",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 16,
+                "value": "channel-1:16",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 17,
+                "value": "channel-1:17",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 18,
+                "value": "channel-1:18",
+                "channelLabel": "channel-1"
+              },
+              {
+                "index": 19,
+                "value": "channel-1:19",
+                "channelLabel": "channel-1"
+              }
+            ],
+            "endCount": 20
+          },
+          {
+            "streamIdHashPrefix": "2a209bf0f62eaaa2",
+            "channelLabel": "channel-2",
+            "items": [
+              {
+                "index": 0,
+                "value": "channel-2:0",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 1,
+                "value": "channel-2:1",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 2,
+                "value": "channel-2:2",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 3,
+                "value": "channel-2:3",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 4,
+                "value": "channel-2:4",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 5,
+                "value": "channel-2:5",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 6,
+                "value": "channel-2:6",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 7,
+                "value": "channel-2:7",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 8,
+                "value": "channel-2:8",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 9,
+                "value": "channel-2:9",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 10,
+                "value": "channel-2:10",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 11,
+                "value": "channel-2:11",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 12,
+                "value": "channel-2:12",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 13,
+                "value": "channel-2:13",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 14,
+                "value": "channel-2:14",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 15,
+                "value": "channel-2:15",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 16,
+                "value": "channel-2:16",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 17,
+                "value": "channel-2:17",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 18,
+                "value": "channel-2:18",
+                "channelLabel": "channel-2"
+              },
+              {
+                "index": 19,
+                "value": "channel-2:19",
+                "channelLabel": "channel-2"
+              }
+            ],
+            "endCount": 20
+          }
+        ]
+      },
+      "postStatus": {
+        "type": "diagnostic-status-response",
+        "requestId": "6d0f08bf-3388-4663-9c96-bfd05dabad0f",
+        "gatewayDispatchCount": 38,
+        "streamProbeOpenCount": 3,
+        "streamItemCount": 60
+      }
+    },
+    "framing": {
+      "protocol": "uint32-le byte length + UTF-8 JSON",
+      "prefixBytes": 4,
+      "maxFrameBytes": 262144,
+      "observedFrameSizes": [
+        {
+          "purpose": "unauthenticated-rpc",
+          "payloadProbeBytes": null,
+          "jsonBytes": 140,
+          "prefixBytes": 4,
+          "framedBytes": 144,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 453,
+          "prefixBytes": 4,
+          "framedBytes": 457,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "wrong-business-endpoint",
+          "payloadProbeBytes": null,
+          "jsonBytes": 161,
+          "prefixBytes": 4,
+          "framedBytes": 165,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "diagnostic-status",
+          "payloadProbeBytes": null,
+          "jsonBytes": 79,
+          "prefixBytes": 4,
+          "framedBytes": 83,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "gateway-unary-canary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 204,
+          "prefixBytes": 4,
+          "framedBytes": 208,
+          "envelopeOverheadBytes": 204
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 223,
+          "prefixBytes": 4,
+          "framedBytes": 227,
+          "envelopeOverheadBytes": 223
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 226,
+          "prefixBytes": 4,
+          "framedBytes": 230,
+          "envelopeOverheadBytes": 226
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 229,
+          "prefixBytes": 4,
+          "framedBytes": 233,
+          "envelopeOverheadBytes": 229
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 232,
+          "prefixBytes": 4,
+          "framedBytes": 236,
+          "envelopeOverheadBytes": 232
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 235,
+          "prefixBytes": 4,
+          "framedBytes": 239,
+          "envelopeOverheadBytes": 235
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 238,
+          "prefixBytes": 4,
+          "framedBytes": 242,
+          "envelopeOverheadBytes": 238
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 241,
+          "prefixBytes": 4,
+          "framedBytes": 245,
+          "envelopeOverheadBytes": 241
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 244,
+          "prefixBytes": 4,
+          "framedBytes": 248,
+          "envelopeOverheadBytes": 244
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 247,
+          "prefixBytes": 4,
+          "framedBytes": 251,
+          "envelopeOverheadBytes": 247
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 250,
+          "prefixBytes": 4,
+          "framedBytes": 254,
+          "envelopeOverheadBytes": 250
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 254,
+          "prefixBytes": 4,
+          "framedBytes": 258,
+          "envelopeOverheadBytes": 254
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 257,
+          "prefixBytes": 4,
+          "framedBytes": 261,
+          "envelopeOverheadBytes": 257
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 260,
+          "prefixBytes": 4,
+          "framedBytes": 264,
+          "envelopeOverheadBytes": 260
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 263,
+          "prefixBytes": 4,
+          "framedBytes": 267,
+          "envelopeOverheadBytes": 263
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 266,
+          "prefixBytes": 4,
+          "framedBytes": 270,
+          "envelopeOverheadBytes": 266
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 269,
+          "prefixBytes": 4,
+          "framedBytes": 273,
+          "envelopeOverheadBytes": 269
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 272,
+          "prefixBytes": 4,
+          "framedBytes": 276,
+          "envelopeOverheadBytes": 272
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 275,
+          "prefixBytes": 4,
+          "framedBytes": 279,
+          "envelopeOverheadBytes": 275
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 278,
+          "prefixBytes": 4,
+          "framedBytes": 282,
+          "envelopeOverheadBytes": 278
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 281,
+          "prefixBytes": 4,
+          "framedBytes": 285,
+          "envelopeOverheadBytes": 281
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 284,
+          "prefixBytes": 4,
+          "framedBytes": 288,
+          "envelopeOverheadBytes": 284
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 286,
+          "prefixBytes": 4,
+          "framedBytes": 290,
+          "envelopeOverheadBytes": 286
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 289,
+          "prefixBytes": 4,
+          "framedBytes": 293,
+          "envelopeOverheadBytes": 289
+        },
+        {
+          "purpose": "concurrent-unary",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 292,
+          "prefixBytes": 4,
+          "framedBytes": 296,
+          "envelopeOverheadBytes": 292
+        },
+        {
+          "purpose": "payload-0",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 219,
+          "prefixBytes": 4,
+          "framedBytes": 223,
+          "envelopeOverheadBytes": 219
+        },
+        {
+          "purpose": "payload-1024",
+          "payloadProbeBytes": 1024,
+          "jsonBytes": 1249,
+          "prefixBytes": 4,
+          "framedBytes": 1253,
+          "envelopeOverheadBytes": 225
+        },
+        {
+          "purpose": "payload-16384",
+          "payloadProbeBytes": 16384,
+          "jsonBytes": 16611,
+          "prefixBytes": 4,
+          "framedBytes": 16615,
+          "envelopeOverheadBytes": 227
+        },
+        {
+          "purpose": "payload-65536",
+          "payloadProbeBytes": 65536,
+          "jsonBytes": 65763,
+          "prefixBytes": 4,
+          "framedBytes": 65767,
+          "envelopeOverheadBytes": 227
+        },
+        {
+          "purpose": "payload-196608",
+          "payloadProbeBytes": 196608,
+          "jsonBytes": 196837,
+          "prefixBytes": 4,
+          "framedBytes": 196841,
+          "envelopeOverheadBytes": 229
+        },
+        {
+          "purpose": "mixed-unary-stream",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 351,
+          "prefixBytes": 4,
+          "framedBytes": 355,
+          "envelopeOverheadBytes": 351
+        },
+        {
+          "purpose": "mixed-unary-stream",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 352,
+          "prefixBytes": 4,
+          "framedBytes": 356,
+          "envelopeOverheadBytes": 352
+        },
+        {
+          "purpose": "mixed-unary-stream",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 353,
+          "prefixBytes": 4,
+          "framedBytes": 357,
+          "envelopeOverheadBytes": 353
+        },
+        {
+          "purpose": "mixed-unary-stream",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 354,
+          "prefixBytes": 4,
+          "framedBytes": 358,
+          "envelopeOverheadBytes": 354
+        },
+        {
+          "purpose": "mixed-unary-stream",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 355,
+          "prefixBytes": 4,
+          "framedBytes": 359,
+          "envelopeOverheadBytes": 355
+        },
+        {
+          "purpose": "mixed-unary-stream",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 356,
+          "prefixBytes": 4,
+          "framedBytes": 360,
+          "envelopeOverheadBytes": 356
+        },
+        {
+          "purpose": "mixed-unary-stream",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 357,
+          "prefixBytes": 4,
+          "framedBytes": 361,
+          "envelopeOverheadBytes": 357
+        },
+        {
+          "purpose": "mixed-unary-stream",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 358,
+          "prefixBytes": 4,
+          "framedBytes": 362,
+          "envelopeOverheadBytes": 358
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 215,
+          "prefixBytes": 4,
+          "framedBytes": 219,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 215,
+          "prefixBytes": 4,
+          "framedBytes": 219,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 215,
+          "prefixBytes": 4,
+          "framedBytes": 219,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "diagnostic-status",
+          "payloadProbeBytes": null,
+          "jsonBytes": 79,
+          "prefixBytes": 4,
+          "framedBytes": 83,
+          "envelopeOverheadBytes": null
+        },
+        {
+          "purpose": "carrier-finish",
+          "payloadProbeBytes": null,
+          "jsonBytes": 76,
+          "prefixBytes": 4,
+          "framedBytes": 80,
+          "envelopeOverheadBytes": null
+        }
+      ],
+      "clientParser": {
+        "inboundDataChunks": 463,
+        "parserPartialWaits": 420,
+        "logicalFramesReceived": 105,
+        "logicalFramesSent": 44,
+        "fragmentedFrameSends": 44
+      },
+      "partialWritesDeliberatelyFragmented": true
+    },
+    "memory": {
+      "mainRssBytesBefore": 96825344,
+      "mainRssBytesAfter": 102305792,
+      "mainObservedRssPeakBytes": 102305792
+    },
+    "stockWebExclusion": {
+      "browserAuthCookieUsed": false,
+      "stockDshWebAppStarted": false,
+      "tcpListenerProbeError": false,
+      "matchingTcpListeners": []
+    },
+    "finish": {
+      "type": "carrier-finished",
+      "requestId": "d49c30b9-9561-43de-a4af-47dff10d0bfc",
+      "gatewayForwardedCount": 38,
+      "streamForwardedCount": 3,
+      "rejectionCount": 9
+    }
+  },
+  "worker": {
+    "classification": "NOT_PRODUCTION",
+    "workerCarrierPid": 11652,
+    "dshPid": 27416,
+    "dshExitCode": 0,
+    "dshGracefulStopObserved": true,
+    "workerCarrierPeakWorkingSetBytes": 190361600,
+    "dshPeakWorkingSetBytes": 222998528,
+    "gatewayForwardedCount": 38,
+    "streamForwardedCount": 3,
+    "logicalFramesRead": 56,
+    "physicalReadOperations": 335,
+    "framesRequiringMultipleReads": 56,
+    "logicalFramesWritten": 129,
+    "fragmentedFrameWrites": 129,
+    "maxFrameBytes": 262144,
+    "framePrefixBytes": 4,
+    "rejections": [
+      {
+        "sequence": 1,
+        "reason": "unauthenticated-request",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 2,
+        "reason": "invalid-proof",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 3,
+        "reason": "worker-identity-mismatch",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 4,
+        "reason": "endpoint-identity-mismatch",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 5,
+        "reason": "user-sid-mismatch",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 6,
+        "reason": "malformed-frame",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 7,
+        "reason": "oversize-frame",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false,
+        "observedFrameBytes": 262145
+      },
+      {
+        "sequence": 8,
+        "reason": "replayed-handshake",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 9,
+        "reason": "endpoint-not-allowlisted",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      }
+    ],
+    "pipeEndpointRedacted": true,
+    "ephemeralSecretPersisted": false,
+    "cookieUsed": false
+  },
+  "dsh": {
+    "classification": "NOT_PRODUCTION",
+    "pid": 27416,
+    "gatewayDispatchCount": 38,
+    "streamProbeOpenCount": 3,
+    "streamItemCount": 60,
+    "realGatewayEndpoint": "agentPresets/list",
+    "basicStreamEndpoint": "p0s3/basic-stream",
+    "browserAuthConstructed": false,
+    "stockWebStarted": false
+  },
+  "tcp": {
+    "matchingListenersDuringRun": [],
+    "noMatchingTcpListener": true
+  },
+  "processCleanup": {
+    "observedPids": [
+      11476,
+      11652,
+      20108,
+      27220,
+      27416,
+      29052
+    ],
+    "residualPids": [],
+    "noResidualProcesses": true
+  },
+  "gates": {
+    "realWindowsNamedPipe": true,
+    "currentUserSidAcl": true,
+    "authenticationBeforeGateway": true,
+    "rendererIsolated": true,
+    "unaryHarnessGateway": true,
+    "concurrentUnary": true,
+    "basicStreamConcurrency": true,
+    "partialFrameAssembly": true,
+    "payloadMatrix": true,
+    "malformedAndOversizeFailClosed": true,
+    "noBrowserAuthCookie": true,
+    "noStockWebStack": true,
+    "noTcpListener": true,
+    "noResidualProcesses": true,
+    "harnessFinalClean": true
+  },
+  "sourceSha256": {
+    "bundle/carrier-gateway.mjs": "d4bca1b04e86795f88980577f43b128247eefa891f6f71bea4f9aea0c76b4035",
+    "bundle/connection-compatibility.mjs": "fba41a1951f289366e18ac1bfd2c6051501f1093ac4ed6b3015e7c6480102bfc",
+    "bundle/cordis.patch.yml": "93e182e882710cb06cf4202f26e909ccaa088288c66c40bce5c839aafd37fca7",
+    "bundle/package.json": "2f722e009fff8ff22291fe43176f8c5cbaa60c589939f81f06abe5d068814100",
+    "electron-main.mjs": "7bf8f3cbc15dfc60a4703d03bf065709e4be95f24f2d70556792c460b0a4d09c",
+    "index.html": "6f6922dcf8ee2af4fc02f09d5abd9138f0ca49823dd8e48db3e148b1eddb6e48",
+    "preload.cjs": "e7502168595cb780a2cff571725f923045fb13c5bb4c54c235e248fa2eedefef",
+    "profile/cordis.patch.yml": "63ccfc2f184d5388acdd5676a2a8dd36c99686603a8032dafadc0bdb671be181",
+    "profile/package.json": "8d3b7a1c2e7fca46673039260af969f96bf3fbda2baa3dcd635afe0fd93234f3",
+    "README.md": "7e8d750d20d6c0c736098b3ce8085b928be244ce6dd087cefbcb302223497a5d",
+    "renderer.js": "4a91949ad0f17b666510bd4b48c483ed0444ea5b8852d032ca75028ca53fc58d",
+    "run-spike.ps1": "12749d6e513e4d021ec54f40daa854a9c1462c05d94475b041447274f9c15ada",
+    "worker-carrier.cs": "3d8e10048081ec0caf6977b9d1b8794c20ffc1d6bce5d09a23f8fcc7a6a8ca89",
+    "worker-carrier.ps1": "e16b03a76c8b1c4ac6cabbd84d3b52a5be89aa5cc53fda199e87c62fd97e33eb"
+  },
+  "outputStreamsEmpty": {
+    "electronStdout": true,
+    "electronStderr": true,
+    "workerStdout": true,
+    "workerStderr": true
+  }
+}

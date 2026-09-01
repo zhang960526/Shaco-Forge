@@ -14,5 +14,6 @@ Status: ACTIVE
 | CORRECTIVE-005 | P0.S-1 Documentation F-01/F-02/F-03 | APPLIED | Accepted by Independent Corrective Re-Review (AUDIT-005B) | `architecture/CORRECTIVE-005-P0S1-DOCUMENTATION-F01-F02-F03.md` |
 | REVIEW-005B | Independent P0.S-1 Corrective Re-Review | PASS | F-01/F-02/F-03 CLOSED; `P0S1_CAN_CLOSE = YES`; Owner accepted constrained disposition and closed P0.S-1 | `architecture/AUDIT-005B-P0S1-CORRECTIVE-REREVIEW.md` |
 | REVIEW-006 | Independent P0.S-2 Electron Client Boot Review | PASS | Executor claim confirmed; Owner accepted `ACCEPT_PROVEN_WITH_CONSTRAINT` and closed P0.S-2 | `architecture/AUDIT-006-P0S2-INDEPENDENT-REVIEW.md` |
+| REVIEW-007 | Independent P0.S-3 Local Carrier + Trust Review | PASS | Runtime gates independently reproduced with recorded PS7 provenance; Owner accepted `ACCEPT_PROVEN_WITH_CONSTRAINT` and closed P0.S-3 | `architecture/AUDIT-007-P0S3-INDEPENDENT-REVIEW.md` |
 
 Future implementation reviews must be stored separately from Phase Contracts.

@@ -37,7 +37,7 @@ Frozen Harness baseline: `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-
 
 Risk / Spike input freeze: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`.
 
-P0 PASS does not by itself authorize P0.S. AUDIT-004B Independent Corrective Re-Review = `PASS`. `P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. P0.S is in progress; P0.S-1 and P0.S-2 are closed, while later P0.S steps remain gated.
+P0 PASS does not by itself authorize P0.S. AUDIT-004B Independent Corrective Re-Review = `PASS`. `P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. P0.S is in progress; P0.S-1 through P0.S-3 are closed, while later P0.S steps remain gated.
 
 ## P0.S
 
@@ -47,7 +47,7 @@ Steps:
 
 - P0.S-1 Host Profile Feasibility — PASS / CLOSED; Owner-accepted `PROVEN_WITH_CONSTRAINT`
 - P0.S-2 Electron Client Boot — PASS / CLOSED; Owner-accepted `PROVEN_WITH_CONSTRAINT`
-- P0.S-3 Local Carrier + Trust — NOT_STARTED
+- P0.S-3 Local Carrier + Trust — PASS / CLOSED; Owner-accepted `PROVEN_WITH_CONSTRAINT`
 - P0.S-4 Connection Feature Completeness — NOT_STARTED
 - P0.S-5 Desktop Independence & Reconnect — NOT_STARTED
 - P0.S-6 Client Module / Plugin Frontend — NOT_STARTED
@@ -56,7 +56,9 @@ Steps:
 
 P0.S-1 Evidence: `docs/06-testing-acceptance/evidence/P0S-1-HOST-PROFILE-FEASIBILITY-EVIDENCE.md`. AUDIT-005 required documentation corrections; CORRECTIVE-005 applied them; AUDIT-005B passed and authorized Owner closure. The Owner accepted the non-listening Layer C constraint. This closes P0.S-1 only.
 
-P0.S-2 Evidence: `docs/06-testing-acceptance/evidence/P0S-2-ELECTRON-CLIENT-BOOT-EVIDENCE.md`. The Executor proved custom-scheme real Client boot, session UI entry, strict Electron isolation and two-process Harness FileSettingsProvider persistence, with no stock Web stack, listener or Harness Core modification. AUDIT-006 independently confirmed H-03, H-04, H-15 boot wiring and the Executor claim with no blocking Finding. The Owner accepted the strict-CSP and Settings constraints and closed P0.S-2 as PASS with `ACCEPT_PROVEN_WITH_CONSTRAINT`. The global Core Patch inventory remains incomplete, P0.S remains `IN_PROGRESS`, and P0.S-3 remains `NOT_STARTED`.
+P0.S-2 Evidence: `docs/06-testing-acceptance/evidence/P0S-2-ELECTRON-CLIENT-BOOT-EVIDENCE.md`. The Executor proved custom-scheme real Client boot, session UI entry, strict Electron isolation and two-process Harness FileSettingsProvider persistence, with no stock Web stack, listener or Harness Core modification. AUDIT-006 independently confirmed H-03, H-04, H-15 boot wiring and the Executor claim with no blocking Finding. The Owner accepted the strict-CSP and Settings constraints and closed P0.S-2 as PASS with `ACCEPT_PROVEN_WITH_CONSTRAINT`.
+
+P0.S-3 Evidence: `docs/06-testing-acceptance/evidence/P0S-3-LOCAL-CARRIER-AND-TRUST-EVIDENCE.md`. A disposable real Windows Named Pipe carrier proved protected current-user ACL, explicit pre-Gateway authentication, sandboxed Renderer isolation, 38 actual Harness Gateway unary calls, 24-way unary correlation and three concurrent basic stream framing channels without stock Web/TCP or Harness Core modification. AUDIT-007 independently reproduced the core runtime gates with the same experiment source and an external temporary Node driver, accurately recording that the formal PowerShell 7 runner was not executed unchanged. The Review passed with four informational, non-blocking Findings. The Owner accepted `ACCEPT_PROVEN_WITH_CONSTRAINT` and closed P0.S-3 as PASS. `P0S_LOCAL_CARRIER_FEASIBLE = PENDING_P0S4_COMPLETENESS`, `P0S4_ALLOWED = NO`, the global Core Patch inventory remains incomplete, and P0.S remains `IN_PROGRESS`.
 
 ## P0.5
 
