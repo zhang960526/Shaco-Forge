@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'">
+  <title>NOT_PRODUCTION P0.S-5</title>
+</head>
+<body>
+  <main>
+    <output id="projection">EMPTY</output>
+    <section id="approval" hidden>
+      <button id="approve" type="button">Allow once</button>
+    </section>
+    <section id="question" hidden>
+      <label for="answer">Answer</label>
+      <input id="answer" value="Beta">
+      <button id="answer-submit" type="button">Submit answer</button>
+    </section>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>

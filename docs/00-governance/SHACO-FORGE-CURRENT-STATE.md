@@ -12,8 +12,8 @@ Last Updated: 2026-09-01
 ## Current Phase
 
 - Phase: P0.S — Desktop / Connection / Packaging Feasibility Spike
-- Step: P0.S-4 `PASS / CLOSED`; Owner-accepted `MET_WITH_CONSTRAINT`
-- Next Executable Step: Architecture Owner P0.S-4 Closure Commit decision; P0.S-5 remains `NOT_STARTED` and separately gated
+- Step: P0.S-5 Desktop Independence & Reconnect — Formal Closure `PASS / CLOSED`
+- Next Executable Step: return the completed P0.S-5 Closure Commit result to the Architecture Owner; P0.S-6 remains separately gated
 - Production Implementation: NOT_STARTED
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -108,10 +108,53 @@ Last Updated: 2026-09-01
 - `P0S_NATIVE_PICKER_OR_EQUIVALENT_PASS = YES`
 - `P0S4_NO_DUPLICATE_APPROVAL_SETTLEMENT = YES`
 - `P0S4_NO_DUPLICATE_USER_QUESTION_SETTLEMENT = YES`
-- `P0S5_ALLOWED = NO`
-- `P0S5_STATE = NOT_STARTED`
-- `READY_FOR_P0S5 = NO`
-- `CLOSURE_COMMIT_PERFORMED = NO`
+- `P0S5_FORMAL_CLOSURE_ALLOWED = YES`
+- `P0S5_FORMAL_CLOSURE = PASS`
+- `SHACO_FORGE_V1_0_P0S_5 = PASS`
+- `P0S5_STATE = CLOSED`
+- `P0S5_EXECUTOR_VERDICT = PASS`
+- `P0S5_INDEPENDENT_REVIEW_VERDICT = PASS_WITH_REQUIRED_CORRECTIONS`
+- `P0S5_EXECUTOR_CLAIM_CONFIRMED = YES`
+- `P0S5_DOCUMENTATION_AND_PROVENANCE_CORRECTIVE = PASS`
+- `P0S5_F01_PROVENANCE_STATUS = RECORDED`
+- `P0S5_F02_MERGE_SEMANTICS_STATUS = RECORDED_AND_ROUTED`
+- `P0S5_F03_SUMMARY_BOOLEAN_STATUS = RECORDED_INFORMATIONAL`
+- `P0S5_CORRECTIVE_REREVIEW_VERDICT = PASS`
+- `P0S5_CORRECTIVE_REREVIEW_ACCEPTED = YES`
+- `P0S5_CORRECTIVE_CLAIM_CONFIRMED = YES`
+- `P0S5_F01_PROVENANCE_CORRECTION_CONFIRMED = YES`
+- `P0S5_F02_MERGE_SEMANTICS_CORRECTION_CONFIRMED = YES`
+- `P0S5_F03_INFORMATIONAL_RECORD_CONFIRMED = YES`
+- `P0S5_CORRECTIVE_SCOPE_EXACT = YES`
+- `P0S5_TECHNICAL_GATE_INTEGRITY_PRESERVED = YES`
+- `P0S5_REMAINING_CORRECTIVE_FINDINGS = 0`
+- `P0S5_RUNTIME_RERUN_REQUIRED = NO`
+- `P0S5_FORMAL_RUN_REPLACED = NO`
+- `P0S5_SOURCE_SHA_CHAIN_PRESERVED = YES`
+- `P0S5_FORMAL_RAW_EVIDENCE_UNCHANGED = YES`
+- `P0S5_DOCUMENTATION_PACKAGING_CORRECTIVE = PASS`
+- `P0S5_CR_BYTE_GATE_CORRECTED = YES`
+- `P0S5_FROZEN_MIXED_EOL_PROFILE_CONFIRMED = YES`
+- `P0S5_FROZEN_JSON_CR_COUNT_TOTAL = 9691`
+- `P0S5_CR_AT_EOL_SEMANTIC_QUALIFICATION = ACCEPTED`
+- `P0S5_STAGED_RAW_BLOB_IDENTITY = PASS`
+- `P0S5_EXPECTATION_ASSESSMENT = MET_WITH_CONSTRAINT`
+- `P0S5_TECHNICALLY_READY_FOR_CLOSURE = YES`
+- `P0S5_CORE_PATCH_REQUIRED = NO`
+- `P0S_DESKTOP_CLOSE_WORKER_SURVIVES = YES`
+- `P0S_DESKTOP_CRASH_WORKER_SURVIVES = YES`
+- `P0S_SECOND_DESKTOP_POLICY_PASS = YES`
+- `P0S_WORKER_RESTART_RECONNECT_PASS = YES`
+- `P0S_NO_DUPLICATE_RESUME = YES`
+- `P0S_NO_APPROVAL_REPLAY = YES`
+- `P0S_NO_QUESTION_REPLAY = YES`
+- `P0S6_ALLOWED = NO`
+- `P0S6_STATE = NOT_STARTED`
+- `READY_FOR_P0S6 = NO`
+- `P0S4_CLOSURE_COMMIT_PERFORMED = YES`
+- `P0S5_CLOSURE_COMMIT_PERFORMED = YES`
+- `P0S5_PUSH_PERFORMED = NO`
+- `COMMIT_PERFORMED = YES`
 - `PUSH_PERFORMED = NO`
 - `ALLOW_P0S = YES`
 
@@ -147,8 +190,43 @@ Corrective Re-Review run `ed73b7779ab64c3ab4bbfde64011bf98` returned `PASS`
 after 146 checks and recommended closure. The Architecture Owner accepted the
 re-review and closed P0.S-4 as `PASS / CLOSED`, with expectation assessment
 `MET_WITH_CONSTRAINT` and technical disposition `PROVEN_WITH_CONSTRAINT`.
-AUDIT-008 is the formal review/closure record. P0.S-5 remains `NOT_STARTED`
-and disallowed pending separate Architecture Owner authorization.
+AUDIT-008 is the formal review/closure record. The P0.S-4 Closure Commit is
+present at `c51d6107eb6da3379490fcb9d8a9eecb4e63e647`. The Architecture Owner
+subsequently authorized the bounded P0.S-5 Executor run. Formal run
+`9f79aa5566ad4f6aac08502dc1943c37` passed 244 verifier checks and all seven
+gates. Independent Review returned `PASS_WITH_REQUIRED_CORRECTIONS`, confirmed
+the Executor claim and independently reproduced all seven gates with
+repository-external equivalent Node driver run
+`000ff24c78c0495a95695adc7f1c4c89` (222/222 checks). The Reviewer environment
+had neither PowerShell 7 nor network for installation, so neither formal
+PowerShell script was executed byte-for-byte. Required F-01 provenance and F-02
+merge-semantics documentation is now applied; F-03 summary-boolean provenance
+is recorded as informational. The original Reviewer returned Corrective
+Re-Review `PASS`, confirmed the corrective scope and technical Gate integrity,
+and reported zero remaining corrective Findings without executing Runtime or
+creating a runId. The Architecture Owner accepted that chain and closed P0.S-5
+as `PASS / CLOSED` with `MET_WITH_CONSTRAINT`. AUDIT-009 is the formal review
+and closure record. P0.S-6 remains separately gated, disallowed and not started.
+
+The P0.S-5 documentation/packaging completion records two historical Commit
+blockers as Gate-specification issues rather than Evidence corruption. The
+first raw worktree check exited `0` but emitted exactly six safecrlf working-copy
+warnings (`LF will be replaced by CRLF`) for Current State, Document Map,
+P0.S Feasibility Spike, V1.0 Development Map, Development Log and Review Index;
+the former absolute-zero-output requirement incorrectly treated those warnings
+as a blocker. The second blocker incorrectly required all 35 files to contain
+zero CR bytes. That Gate is withdrawn: six frozen Evidence JSON files contain
+225, 6644, 193, 58, 2526 and 45 CRLF pairs respectively (`9691` total), no lone
+CR, and one final bare LF; the other 29 files contain no CR.
+
+Raw-byte staging uses command-scoped `core.autocrlf=false`, and Git whitespace
+qualification uses `cr-at-eol`; neither changes persistent Git configuration or
+creates an attributes policy. All 27 experiment files, the 20/20 source hash
+chain and the eight fixed Evidence/verifier hashes remain byte-identical.
+Persistent EOL/checkout policy is routed to P1/P7. The earlier alternate-index
+initialization failure was an incomplete execution preflight, not a technical
+Finding; no unsupported root cause is asserted. The final deterministic
+alternate-index path proved raw blob identity before the bounded Closure Commit.
 
 ## Architecture Review State
 
@@ -170,6 +248,10 @@ and disallowed pending separate Architecture Owner authorization.
 - P0.S-4 Targeted Corrective: `PASS`; F-01 causal reset measurement and F-02 TEMP hygiene applied
 - Independent P0.S-4 Corrective Re-Review (AUDIT-008): `PASS`; 146 checks; corrective claim confirmed; recommendation `PROCEED_TO_CLOSURE`
 - Architecture Owner P0.S-4 Decision: Corrective Re-Review accepted; `MET_WITH_CONSTRAINT`; P0.S-4 closed
+- Independent P0.S-5 Review: `PASS_WITH_REQUIRED_CORRECTIONS`; Executor claim confirmed; equivalent Node driver run `000ff24c78c0495a95695adc7f1c4c89` reproduced S01-S11 and all seven gates; F-01/F-02 documentation required; F-03 informational
+- P0.S-5 Documentation / Provenance Corrective: `PASS`; F-01 provenance recorded, F-02 merge-ordinal semantics recorded/routed, F-03 summary booleans recorded non-authoritative; runtime and formal Evidence unchanged
+- Independent P0.S-5 Corrective Re-Review (AUDIT-009): `PASS`; corrective claim and exact scope confirmed; zero remaining corrective Findings; no Runtime or new runId
+- Architecture Owner P0.S-5 Decision: Corrective Re-Review accepted; `MET_WITH_CONSTRAINT`; P0.S-5 closed; P0.S-6 remains separately gated
 
 ## Current Architecture Baseline
 
@@ -219,15 +301,17 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - P0.S-2: PASS / CLOSED; Client Boot feasibility remains `PROVEN_WITH_CONSTRAINT`; constraints accepted
 - P0.S-3: PASS / CLOSED; Local Carrier + Trust feasibility remains `PROVEN_WITH_CONSTRAINT`; constraints accepted
 - P0.S-4: PASS / CLOSED; `MET_WITH_CONSTRAINT`; technical disposition remains `PROVEN_WITH_CONSTRAINT`
-- P0.S-5 through P0.S-8: NOT_STARTED; `P0S5_ALLOWED = NO`; separate Owner authorization required
+- P0.S-5: PASS / CLOSED; Independent Review `PASS_WITH_REQUIRED_CORRECTIONS`, Documentation Corrective PASS and Corrective Re-Review PASS accepted; `MET_WITH_CONSTRAINT`
+- P0.S-6: NOT_STARTED / NOT_ALLOWED / separately gated
+- P0.S-7 through P0.S-8: NOT_STARTED
 - P0.5 Design: READY, but freeze remains NOT_ALLOWED while P0.S is IN_PROGRESS
 - P1 Detailed Freeze: NOT_ALLOWED until P0.S PASS
 - P2+ Implementation: NOT_ALLOWED
 
 ## Immediate Next Action
 
-1. Return the bounded P0.S-4 closure set to the Architecture Owner for the
-   Closure Commit decision. Do not commit, push or start P0.S-5 in this run.
+1. Return the completed P0.S-5 Closure Commit result to the Architecture Owner.
+   Do not Push, and do not plan, authorize or start P0.S-6.
 2. Do not pull/switch/update the frozen Harness SHA without an Architecture Decision.
 3. Spike code is NOT production by default.
 4. Risk / Spike input authority: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
@@ -240,3 +324,5 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 10. P0.S-3 Independent Review: `docs/05-reviews/architecture/AUDIT-007-P0S3-INDEPENDENT-REVIEW.md`.
 11. P0.S-4 Executor Evidence: `docs/06-testing-acceptance/evidence/P0S-4-CONNECTION-FEATURE-COMPLETENESS-EVIDENCE.md`.
 12. P0.S-4 Independent Review / Corrective Re-Review / Formal Closure: `docs/05-reviews/architecture/AUDIT-008-P0S4-INDEPENDENT-REVIEW.md`.
+13. P0.S-5 Executor Evidence: `docs/06-testing-acceptance/evidence/P0S-5-DESKTOP-INDEPENDENCE-AND-RECONNECT-EVIDENCE.md`.
+14. P0.S-5 Independent Review / Corrective Re-Review / Formal Closure: `docs/05-reviews/architecture/AUDIT-009-P0S5-INDEPENDENT-REVIEW.md`.

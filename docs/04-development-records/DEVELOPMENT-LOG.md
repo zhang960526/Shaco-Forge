@@ -4,6 +4,114 @@ Status: ACTIVE
 
 ## 2026-09-01
 
+- P0.S-5 Documentation/Packaging Corrective and the authorized Closure Commit
+  completed as one bounded transaction. The first historical Commit attempt had
+  raw `git diff --check` exit `0` plus exactly six `LF will be replaced by CRLF`
+  safecrlf warnings for Current State, Document Map, P0.S Feasibility Spike,
+  V1.0 Development Map, Development Log and Review Index; an obsolete
+  absolute-zero-output Gate incorrectly blocked on those warnings. The next
+  attempt used an incorrect 35/35 zero-CR Gate. Architecture Owner withdrew
+  that Gate because six frozen Evidence JSON files intentionally contain
+  225/6644/193/58/2526/45 CRLF pairs (`9691` total), zero lone CR and exactly
+  one final bare LF, while the other 29 files contain no CR.
+- Final packaging used command-scoped `core.autocrlf=false` for raw-byte staging
+  and `cr-at-eol` for whitespace semantic qualification. It changed no
+  persistent Git configuration and created no `.gitattributes` or
+  `.editorconfig`. The 27 experiment files, 20/20 source chain and eight fixed
+  Evidence/verifier hashes stayed byte-identical; persistent EOL/checkout
+  policy remains routed to P1/P7. The earlier alternate-index initialization
+  failure was an incomplete execution preflight, not a technical Finding, and
+  no unproved root cause is recorded. Deterministic repository-external
+  alternate-index checks subsequently proved 35/35 raw blob identity.
+- `P0S5_DOCUMENTATION_PACKAGING_CORRECTIVE = PASS`,
+  `P0S5_CR_BYTE_GATE_CORRECTED = YES`,
+  `P0S5_FROZEN_MIXED_EOL_PROFILE_CONFIRMED = YES`,
+  `P0S5_FROZEN_JSON_CR_COUNT_TOTAL = 9691`,
+  `P0S5_CR_AT_EOL_SEMANTIC_QUALIFICATION = ACCEPTED`,
+  `P0S5_STAGED_RAW_BLOB_IDENTITY = PASS`,
+  `P0S5_CLOSURE_COMMIT_PERFORMED = YES`, and `COMMIT_PERFORMED = YES`.
+  No Push or Runtime rerun occurred. P0.S-6 remains independently gated:
+  `P0S5_PUSH_PERFORMED = NO`, `PUSH_PERFORMED = NO`, `P0S6_ALLOWED = NO`,
+  `P0S6_STATE = NOT_STARTED`, and `READY_FOR_P0S6 = NO`.
+- P0.S-5 Formal Closure completed as documentation/governance only. The
+  Architecture Owner accepted the Formal Executor `PASS`, original Independent
+  Review `PASS_WITH_REQUIRED_CORRECTIONS`, F-01/F-02 Documentation / Provenance
+  Corrective, F-03 informational disposition and targeted Corrective Re-Review
+  `PASS`. AUDIT-009 persists the accepted chain. `P0S5_FORMAL_CLOSURE = PASS`,
+  `SHACO_FORGE_V1_0_P0S_5 = PASS`, `P0S5_STATE = CLOSED`, and the expectation
+  remains `MET_WITH_CONSTRAINT`.
+- Corrective Re-Review confirmed exact scope, all documentation corrections and
+  technical Gate integrity, with zero remaining corrective Findings. It did not
+  execute Runtime, S01-S11, create a runId or modify project files. Formal run
+  `9f79aa5566ad4f6aac08502dc1943c37` and equivalent-driver reproduction run
+  `000ff24c78c0495a95695adc7f1c4c89` retain distinct identities.
+- Formal Closure changed only the eight authorized governance/review/Evidence
+  documents, created only AUDIT-009, and preserved 27/27 experiment files,
+  sourceSha256 20/20, raw Evidence, Frozen Harness and protected P0.S-1 through
+  P0.S-4 artifacts. No Runtime, verifier, Commit or Push was executed.
+- P0.S remains `IN_PROGRESS` and the global Core Patch inventory remains
+  incomplete. P0.S-6 is independently gated: `P0S6_ALLOWED = NO`,
+  `P0S6_STATE = NOT_STARTED`, and `READY_FOR_P0S6 = NO`.
+- P0.S-5 Independent Review returned `PASS_WITH_REQUIRED_CORRECTIONS`, confirmed
+  the Executor claim and independently reproduced S01-S11 and all seven gates.
+  Repository-external equivalent Node driver run
+  `000ff24c78c0495a95695adc7f1c4c89` used the same 20/20 source bytes, Worker
+  Carrier C# source, Frozen Harness Host/profile, Electron 35.7.5, environment
+  contract, PID/start-time identity, process-tree force-kill, event-merge
+  construction and equivalent Gate assertions. It reproduced 697 event
+  records, 18 Desktop records, two Worker authorities, 19 ready records, three
+  invalidations, 19 repulls, 37 Host truth rebuilds, `0 ms` overlap and 222/222
+  checks. The Reviewer had no PowerShell 7 and no install network, so the formal
+  PowerShell runner/verifier were not executed byte-for-byte; exact provenance
+  routes to P1/P7.
+- F-02 documentation now defines `globalSequence` as a contiguous persisted
+  merge ordinal, not strict cross-process UTC chronology. Re-sorting by
+  `(utc, source, sourceSequence)` changes 546/697 positions. Producer-local
+  sequence, record links, PID/start-time, identities, generation/clientId,
+  Host truth and exact envelope/settlement records preserve every Gate's causal
+  proof. Deterministic merge normalization and assertion route to P1.
+- F-03 records `hardGatePlannedAndExecuted`, `desktopRemainedAlive` and
+  `hostSideStartResumeCountsVerified` as derived summary booleans, not original
+  evidence authority. Reviewer re-derived the claims from raw records.
+- Documentation / Provenance Corrective changed only the five authorized
+  documents. It did not run runtime, replace formal run
+  `9f79aa5566ad4f6aac08502dc1943c37`, modify the 27 experiment files or regenerate
+  raw Evidence. At that historical point Corrective Re-Review and Owner closure
+  were still pending; P0.S-6 was disallowed and not started.
+- P0.S-5 Desktop Independence & Reconnect Executor completed. Authoritative
+  formal run `9f79aa5566ad4f6aac08502dc1943c37` passed 244 verifier checks and
+  all seven gates: Desktop close/crash Worker survival, second Desktop policy,
+  Worker restart reconnect, no duplicate resume, no Approval replay and no
+  Question replay. At that historical Executor boundary the Executor verdict
+  was `PASS`, while Independent Review and Formal Closure were still pending.
+- S09 force-killed the real Worker Carrier+dsh tree while the same Electron OS
+  process remained alive. The Runner sent no replacement notification,
+  authority overlap derived from exact OS lifecycle records was `0 ms`, the old
+  projection was invalidated, and new real `$events.ready` causally drove
+  repull and Host truth rebuild. S11 graceful Worker stop remained a supporting
+  scenario only.
+- Formal Evidence contains no reusable credential, Pipe name, secret, local
+  username or absolute TEMP path. All recorded Electron/Carrier/dsh processes
+  exited, and the exact final run directory was deleted without following
+  dependency reparse points. Frozen Harness and protected P0.S-1 through P0.S-4
+  digests were unchanged. No Commit, Push, AUDIT, Review Index or Document Map
+  change was performed.
+- Architecture Owner supplied explicit P0.S-5 implementation authorization
+  after accepting the A–R execution plan, B-01 targeted correction and CF-01
+  single-point amendment. The P0.S-4 Closure Commit is present at
+  `c51d6107eb6da3379490fcb9d8a9eecb4e63e647`; active state is synchronized to
+  `CLOSURE_COMMIT_PERFORMED = YES`, `P0S5_ALLOWED = YES`,
+  `READY_FOR_P0S5 = YES`, and `P0S5_STATE = IN_PROGRESS` before runtime.
+- The bounded Executor scope is the new `NOT_PRODUCTION` P0.S-5 experiment,
+  its raw Evidence and the allowed Current State/Development Map/P0.S Contract/
+  Development Log updates. Document Map, Review Index, AUDIT, P0.S-1 through
+  P0.S-4 artifacts and Frozen Harness remain protected. Executor will not
+  Commit, Push or close P0.S-5.
+- CF-01 is frozen: no Harness wire event named `connection/reset` is claimed or
+  consumed. Real transport loss, Worker identity change, authenticated
+  generation replacement and real `$events.ready` records causally drive the
+  test-owned Desktop-equivalent invalidation/repull/Host rebuild adapter.
+
 - The first P0.S-4 Closure Commit Gate stopped before commit because raw
   `git diff --cached --check` reported exactly five `new blank line at EOF`
   diagnostics after the approved 22 paths were staged. The earlier ordinary

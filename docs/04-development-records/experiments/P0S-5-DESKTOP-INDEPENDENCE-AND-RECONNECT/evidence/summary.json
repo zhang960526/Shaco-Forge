@@ -1,0 +1,46 @@
+{
+  "classification": "NOT_PRODUCTION",
+  "runId": "9f79aa5566ad4f6aac08502dc1943c37",
+  "result": "PASS",
+  "gates": {
+    "P0S_DESKTOP_CLOSE_WORKER_SURVIVES": true,
+    "P0S_DESKTOP_CRASH_WORKER_SURVIVES": true,
+    "P0S_SECOND_DESKTOP_POLICY_PASS": true,
+    "P0S_WORKER_RESTART_RECONNECT_PASS": true,
+    "P0S_NO_DUPLICATE_RESUME": true,
+    "P0S_NO_APPROVAL_REPLAY": true,
+    "P0S_NO_QUESTION_REPLAY": true
+  },
+  "workerCrashRestart": {
+    "hardGatePlannedAndExecuted": true,
+    "gracefulWorkerStopUsedAsHardGate": false,
+    "desktopRemainedAlive": true,
+    "runnerDirectReplacementNotificationAllowed": false,
+    "authorityOverlapAllowed": false,
+    "authorityOverlapMilliseconds": 0
+  },
+  "replay": {
+    "oldResultEnvelopeReplayProbeExecuted": true,
+    "newDesktopOldDraftImportAllowed": false,
+    "automaticResultReplayAllowed": false,
+    "approvalClose": true,
+    "approvalCrash": true,
+    "questionClose": true,
+    "questionCrash": true
+  },
+  "duplicateResume": {
+    "hostSideStartResumeCountsVerified": true,
+    "desktopTraceOnlyUsedAsProof": false
+  },
+  "cf01": {
+    "namedHarnessConnectionResetEventExists": false,
+    "realEventsReadyUsed": true,
+    "transportIdentityGenerationInvalidationUsed": true,
+    "desktopEquivalentInvalidationAdapter": "NOT_PRODUCTION",
+    "invalidationRepullCausalRecordsRequired": true,
+    "constantResetEvidenceAllowed": false
+  },
+  "secondDesktopPolicy": "ELECTRON_SINGLE_INSTANCE_FAIL_CLOSED_FOCUS_EXISTING; POST_CRASH_NEW_OWNER_REATTACHES_EXISTING_WORKER",
+  "corePatchExpectation": "NO",
+  "checksPassed": 244
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "kind": "desktop",
+    "scenarioId": "S01",
+    "action": "start-running-close",
+    "pid": 30932,
+    "startTimeUtc": "2026-09-01T08:31:00.1120597Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S01",
+    "action": "verify-running",
+    "pid": 6996,
+    "startTimeUtc": "2026-09-01T08:31:01.7479605Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S02",
+    "action": "hold",
+    "pid": 35816,
+    "startTimeUtc": "2026-09-01T08:31:04.7294775Z",
+    "endReason": "single-instance-denied",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S02",
+    "action": "hold",
+    "pid": 12272,
+    "startTimeUtc": "2026-09-01T08:31:03.2534620Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S03",
+    "action": "start-running-hold",
+    "pid": 29452,
+    "startTimeUtc": "2026-09-01T08:31:05.4751251Z",
+    "endReason": "force-kill",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S03",
+    "action": "verify-running",
+    "pid": 7256,
+    "startTimeUtc": "2026-09-01T08:31:06.9755339Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S04",
+    "action": "cancel-running",
+    "pid": 33064,
+    "startTimeUtc": "2026-09-01T08:31:08.4947723Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S05",
+    "action": "pending-capture",
+    "pid": 34180,
+    "startTimeUtc": "2026-09-01T08:31:10.2912970Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S05",
+    "action": "pending-settle",
+    "pid": 28328,
+    "startTimeUtc": "2026-09-01T08:31:11.9058021Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S06",
+    "action": "pending-capture",
+    "pid": 34896,
+    "startTimeUtc": "2026-09-01T08:31:13.6699824Z",
+    "endReason": "force-kill",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S06",
+    "action": "pending-settle",
+    "pid": 17384,
+    "startTimeUtc": "2026-09-01T08:31:15.1835414Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S07",
+    "action": "pending-capture",
+    "pid": 10824,
+    "startTimeUtc": "2026-09-01T08:31:16.8808046Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S07",
+    "action": "pending-settle",
+    "pid": 36072,
+    "startTimeUtc": "2026-09-01T08:31:18.4692747Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S08",
+    "action": "pending-capture",
+    "pid": 30640,
+    "startTimeUtc": "2026-09-01T08:31:20.2239894Z",
+    "endReason": "force-kill",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S08",
+    "action": "pending-settle",
+    "pid": 29116,
+    "startTimeUtc": "2026-09-01T08:31:21.8343077Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S09",
+    "action": "worker-crash-monitor",
+    "pid": 36592,
+    "startTimeUtc": "2026-09-01T08:31:23.5036275Z",
+    "endReason": "graceful-exit-after-self-reconnect",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S10",
+    "action": "stale-worker-probes",
+    "pid": 28652,
+    "startTimeUtc": "2026-09-01T08:31:31.3489748Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "desktop",
+    "scenarioId": "S11",
+    "action": "graceful-worker-stop",
+    "pid": 24132,
+    "startTimeUtc": "2026-09-01T08:31:34.9928746Z",
+    "endReason": "graceful-exit",
+    "exited": true
+  },
+  {
+    "kind": "worker-authority",
+    "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+    "carrierPid": 32796,
+    "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+    "dshPid": 32448,
+    "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+    "authorityStartUtc": "2026-09-01T08:30:56.1132387Z",
+    "authorityEndUtc": "2026-09-01T08:31:25.1009401Z",
+    "endReason": "force-kill-entire-process-tree",
+    "forceKill": true,
+    "gracefulStop": false,
+    "carrierExited": true,
+    "dshExited": true
+  },
+  {
+    "kind": "worker-authority",
+    "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+    "carrierPid": 34240,
+    "carrierStartTimeUtc": "2026-09-01T08:31:25.1232508Z",
+    "dshPid": 31692,
+    "dshStartTimeUtc": "2026-09-01T08:31:26.0390483Z",
+    "authorityStartUtc": "2026-09-01T08:31:25.1232508Z",
+    "authorityEndUtc": "2026-09-01T08:31:36.7205092Z",
+    "endReason": "graceful-stop-supporting-scenario",
+    "forceKill": false,
+    "gracefulStop": true,
+    "carrierExited": true,
+    "dshExited": true
+  }
+]

@@ -1,0 +1,226 @@
+[
+  {
+    "scenario": "S05_APPROVAL_CLOSE",
+    "kind": "approval",
+    "termination": "close",
+    "oldEnvelope": {
+      "endpoint": "$events/result",
+      "payload": {
+        "args": {
+          "clientId": "50f0b55f-9a0b-4246-a4a1-408fa44f647e",
+          "eventId": "384da152-4f39-401b-bb1e-c15f90dbb6c7",
+          "outcome": {
+            "kind": "result",
+            "value": "allowed-once"
+          }
+        }
+      }
+    },
+    "currentEnvelope": {
+      "endpoint": "$events/result",
+      "payload": {
+        "args": {
+          "clientId": "5e0c545e-9b20-439e-bcfa-161949114553",
+          "eventId": "384da152-4f39-401b-bb1e-c15f90dbb6c7",
+          "outcome": {
+            "kind": "result",
+            "value": "allowed-once"
+          }
+        }
+      }
+    },
+    "oldProbe": {
+      "accepted": false,
+      "response": {
+        "ok": false,
+        "error": {
+          "code": "internal",
+          "message": "typert gateway: Remote event result identifies no active event stream",
+          "details": {}
+        }
+      }
+    },
+    "duplicateProbe": {
+      "response": {
+        "ok": true
+      }
+    }
+  },
+  {
+    "scenario": "S06_APPROVAL_CRASH",
+    "kind": "approval",
+    "termination": "crash",
+    "oldEnvelope": {
+      "endpoint": "$events/result",
+      "payload": {
+        "args": {
+          "clientId": "69ed5736-19cc-41f2-8127-96da5a6baf2b",
+          "eventId": "a82af9a8-737a-4b2d-a672-e76890be9118",
+          "outcome": {
+            "kind": "result",
+            "value": "allowed-once"
+          }
+        }
+      }
+    },
+    "currentEnvelope": {
+      "endpoint": "$events/result",
+      "payload": {
+        "args": {
+          "clientId": "14c6c25a-0783-4061-9c72-7f1191b20a14",
+          "eventId": "a82af9a8-737a-4b2d-a672-e76890be9118",
+          "outcome": {
+            "kind": "result",
+            "value": "allowed-once"
+          }
+        }
+      }
+    },
+    "oldProbe": {
+      "accepted": false,
+      "response": {
+        "ok": false,
+        "error": {
+          "code": "internal",
+          "message": "typert gateway: Remote event result identifies no active event stream",
+          "details": {}
+        }
+      }
+    },
+    "duplicateProbe": {
+      "response": {
+        "ok": true
+      }
+    }
+  },
+  {
+    "scenario": "S07_QUESTION_CLOSE",
+    "kind": "question",
+    "termination": "close",
+    "oldEnvelope": {
+      "endpoint": "$events/result",
+      "payload": {
+        "args": {
+          "clientId": "ba22a180-64fb-4408-a59d-35f4f58e9f65",
+          "eventId": "46d5eb80-8448-405c-b8b8-7d4db554328e",
+          "outcome": {
+            "kind": "result",
+            "value": {
+              "answers": [
+                {
+                  "id": "p0s5-choice",
+                  "selected": [
+                    "Beta"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "currentEnvelope": {
+      "endpoint": "$events/result",
+      "payload": {
+        "args": {
+          "clientId": "3daadaa1-f81c-4647-af66-a91aaf02823f",
+          "eventId": "46d5eb80-8448-405c-b8b8-7d4db554328e",
+          "outcome": {
+            "kind": "result",
+            "value": {
+              "answers": [
+                {
+                  "id": "p0s5-choice",
+                  "selected": [
+                    "Beta"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "oldProbe": {
+      "accepted": false,
+      "response": {
+        "ok": false,
+        "error": {
+          "code": "internal",
+          "message": "typert gateway: Remote event result identifies no active event stream",
+          "details": {}
+        }
+      }
+    },
+    "duplicateProbe": {
+      "response": {
+        "ok": true
+      }
+    }
+  },
+  {
+    "scenario": "S08_QUESTION_CRASH",
+    "kind": "question",
+    "termination": "crash",
+    "oldEnvelope": {
+      "endpoint": "$events/result",
+      "payload": {
+        "args": {
+          "clientId": "28393d13-6856-42d5-b704-a5f49cb3dd48",
+          "eventId": "75508b2a-d7d4-4ecb-9397-86184eb0396e",
+          "outcome": {
+            "kind": "result",
+            "value": {
+              "answers": [
+                {
+                  "id": "p0s5-choice",
+                  "selected": [
+                    "Beta"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "currentEnvelope": {
+      "endpoint": "$events/result",
+      "payload": {
+        "args": {
+          "clientId": "142101a1-1389-4a34-b0f7-dc1307bd11d5",
+          "eventId": "75508b2a-d7d4-4ecb-9397-86184eb0396e",
+          "outcome": {
+            "kind": "result",
+            "value": {
+              "answers": [
+                {
+                  "id": "p0s5-choice",
+                  "selected": [
+                    "Beta"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "oldProbe": {
+      "accepted": false,
+      "response": {
+        "ok": false,
+        "error": {
+          "code": "internal",
+          "message": "typert gateway: Remote event result identifies no active event stream",
+          "details": {}
+        }
+      }
+    },
+    "duplicateProbe": {
+      "response": {
+        "ok": true
+      }
+    }
+  }
+]

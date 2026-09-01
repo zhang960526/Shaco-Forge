@@ -2,7 +2,7 @@
 
 Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0S = IN_PROGRESS`)
 
-Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-4 are `PASS / CLOSED` with Architecture Owner-accepted constrained dispositions. P0.S remains `IN_PROGRESS`; P0.S-5 remains `NOT_STARTED` and disallowed pending separate Owner authorization.
+Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-5 are `PASS / CLOSED` with Architecture Owner-accepted constrained dispositions. P0.S remains `IN_PROGRESS`; P0.S-6 is `NOT_STARTED / NOT_ALLOWED` and requires separate Architecture Owner planning/execution authorization.
 
 P0-7 frozen inputs (do not re-open P0; do not redesign this architecture):
 
@@ -277,16 +277,102 @@ Do not make `/export` itself REQUIRED solely to prove binary transport.
 
 ## P0.S-5 — Desktop Independence & Reconnect
 
-Current gate state after P0.S-4 closure:
+Current gate state after Architecture Owner Formal Closure:
 
-- `P0S5_ALLOWED = NO`
-- `P0S5_STATE = NOT_STARTED`
-- `READY_FOR_P0S5 = NO`
+- `P0S5_FORMAL_CLOSURE_ALLOWED = YES`
+- `P0S5_FORMAL_CLOSURE = PASS`
+- `SHACO_FORGE_V1_0_P0S_5 = PASS`
+- `P0S5_STATE = CLOSED`
+- `P0S5_EXECUTOR_VERDICT = PASS`
+- `P0S5_INDEPENDENT_REVIEW_VERDICT = PASS_WITH_REQUIRED_CORRECTIONS`
+- `P0S5_EXECUTOR_CLAIM_CONFIRMED = YES`
+- `P0S5_DOCUMENTATION_AND_PROVENANCE_CORRECTIVE = PASS`
+- `P0S5_F01_PROVENANCE_STATUS = RECORDED`
+- `P0S5_F02_MERGE_SEMANTICS_STATUS = RECORDED_AND_ROUTED`
+- `P0S5_F03_SUMMARY_BOOLEAN_STATUS = RECORDED_INFORMATIONAL`
+- `P0S5_CORRECTIVE_REREVIEW_VERDICT = PASS`
+- `P0S5_CORRECTIVE_REREVIEW_ACCEPTED = YES`
+- `P0S5_CORRECTIVE_CLAIM_CONFIRMED = YES`
+- `P0S5_F01_PROVENANCE_CORRECTION_CONFIRMED = YES`
+- `P0S5_F02_MERGE_SEMANTICS_CORRECTION_CONFIRMED = YES`
+- `P0S5_F03_INFORMATIONAL_RECORD_CONFIRMED = YES`
+- `P0S5_CORRECTIVE_SCOPE_EXACT = YES`
+- `P0S5_TECHNICAL_GATE_INTEGRITY_PRESERVED = YES`
+- `P0S5_REMAINING_CORRECTIVE_FINDINGS = 0`
+- `P0S5_RUNTIME_RERUN_REQUIRED = NO`
+- `P0S5_FORMAL_RUN_REPLACED = NO`
+- `P0S5_SOURCE_SHA_CHAIN_PRESERVED = YES`
+- `P0S5_FORMAL_RAW_EVIDENCE_UNCHANGED = YES`
+- `P0S5_EXPECTATION_ASSESSMENT = MET_WITH_CONSTRAINT`
+- `P0S5_TECHNICALLY_READY_FOR_CLOSURE = YES`
+- `P0S5_CORE_PATCH_REQUIRED = NO`
+- `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
+- `P0S6_ALLOWED = NO`
+- `P0S6_STATE = NOT_STARTED`
+- `READY_FOR_P0S6 = NO`
+- `P0S5_CLOSURE_COMMIT_PERFORMED = NO`
+- `P0S5_PUSH_PERFORMED = NO`
+- `P0S_DESKTOP_CLOSE_WORKER_SURVIVES = YES`
+- `P0S_DESKTOP_CRASH_WORKER_SURVIVES = YES`
+- `P0S_SECOND_DESKTOP_POLICY_PASS = YES`
+- `P0S_WORKER_RESTART_RECONNECT_PASS = YES`
+- `P0S_NO_DUPLICATE_RESUME = YES`
+- `P0S_NO_APPROVAL_REPLAY = YES`
+- `P0S_NO_QUESTION_REPLAY = YES`
 
 The frozen Contract defines the evidence below but does not make predecessor
-closure an automatic successor authorization. Consistent with P0.S-2 and
-P0.S-3 closure transitions, a separate Architecture Owner planning/execution
-authorization is required before P0.S-5 begins.
+closure an automatic successor authorization. The bounded P0.S-5 Executor,
+Independent Review, Documentation / Provenance Corrective and Corrective
+Re-Review have completed. The Architecture Owner accepted the chain and closed
+P0.S-5, but this Formal Closure does not authorize Commit, Push or any P0.S-6
+planning/execution work.
+
+CF-01 seam correction is binding for this execution. Frozen Harness exposes
+the Connection Client, generation/client identity, real `$events.ready`,
+Gateway, and Host lifecycle seams; it does not emit a named
+`connection/reset` wire event. Real transport loss, Worker identity
+`LOST/REPLACED`, authenticated generation replacement, and real ready records
+causally drive test-owned `NOT_PRODUCTION` Desktop-equivalent projection
+invalidation, repull request, and Host truth rebuild records. Verifier results
+must be derived from that raw causal chain, never from a reset constant or
+preselected count.
+
+Executor Evidence is
+`docs/06-testing-acceptance/evidence/P0S-5-DESKTOP-INDEPENDENCE-AND-RECONNECT-EVIDENCE.md`.
+The accepted review and closure chain is persisted in
+`docs/05-reviews/architecture/AUDIT-009-P0S5-INDEPENDENT-REVIEW.md`.
+Formal run `9f79aa5566ad4f6aac08502dc1943c37` passed 244 verifier checks and all
+seven gates. Independent Review returned `PASS_WITH_REQUIRED_CORRECTIONS` and
+confirmed the Executor claim. Repository-external equivalent Node driver run
+`000ff24c78c0495a95695adc7f1c4c89` executed S01-S11 against the same 20/20
+source bytes, Worker Carrier C# source, Frozen Harness Host/profile, Electron
+35.7.5, environment contract, PID/start-time identity and process-tree
+force-kill semantics. It independently reproduced 697 event records, 18
+Desktop process records, two Worker authorities, 19 real `$events.ready`, three
+invalidations, 19 repulls, 37 Host truth rebuilds, `0 ms` authority overlap,
+all seven gates and 222/222 equivalent checks. The Reviewer machine had no
+PowerShell 7 and no network for installation; it did not execute
+`run-spike.ps1` or `verify-summary.ps1` byte-for-byte. Exact PowerShell 7
+reproduction/provenance is routed to P1/P7.
+
+F-02 records that persisted `globalSequence` is a contiguous merge ordinal,
+not a reliable cross-process wall-clock total order. Re-sorting the formal 697
+records by `(utc, source, sourceSequence)` changes 546 positions. `utc` and
+`monotonicTicks` remain source-local observation metadata. Cross-source Gate
+causality is established by record links, producer `sourceSequence`, exact
+PID/start-time lifecycle, Worker/Desktop identity, generation/clientId, Host
+truth and exact envelope/settlement records; all existing Gate results remain
+valid. A deterministic merge-normalization contract and assertion route to P1.
+
+F-03 records that `hardGatePlannedAndExecuted`, `desktopRemainedAlive` and
+`hostSideStartResumeCountsVerified` are derived summary booleans, not original
+authority. Review re-derived their claims from raw records and did not use the
+booleans for self-proof. No verifier, summary, source, raw Evidence or runtime
+change is required. Corrective Re-Review returned `PASS`, confirmed exact
+corrective scope and technical Gate integrity, and reported zero remaining
+corrective Findings without Runtime or a new runId. Architecture Owner accepted
+the re-review and closed P0.S-5 as `MET_WITH_CONSTRAINT`. P0.S-6 remains
+disallowed, not started and separately gated.
 
 Prove:
 

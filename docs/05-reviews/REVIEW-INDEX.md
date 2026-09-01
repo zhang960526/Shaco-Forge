@@ -16,5 +16,6 @@ Status: ACTIVE
 | REVIEW-006 | Independent P0.S-2 Electron Client Boot Review | PASS | Executor claim confirmed; Owner accepted `ACCEPT_PROVEN_WITH_CONSTRAINT` and closed P0.S-2 | `architecture/AUDIT-006-P0S2-INDEPENDENT-REVIEW.md` |
 | REVIEW-007 | Independent P0.S-3 Local Carrier + Trust Review | PASS | Runtime gates independently reproduced with recorded PS7 provenance; Owner accepted `ACCEPT_PROVEN_WITH_CONSTRAINT` and closed P0.S-3 | `architecture/AUDIT-007-P0S3-INDEPENDENT-REVIEW.md` |
 | REVIEW-008 | Independent P0.S-4 Connection Feature Completeness Review and Corrective Re-Review | PASS | Corrective claim independently reproduced; Owner accepted `MET_WITH_CONSTRAINT` and closed P0.S-4; P0.S-5 remains separately gated | `architecture/AUDIT-008-P0S4-INDEPENDENT-REVIEW.md` |
+| REVIEW-009 | Independent P0.S-5 Desktop Independence & Reconnect Review and Corrective Re-Review | PASS | Original Review `PASS_WITH_REQUIRED_CORRECTIONS`; F-01/F-02 Documentation Corrective applied; Corrective Re-Review `PASS`; Owner accepted `MET_WITH_CONSTRAINT` and closed P0.S-5; P0.S-6 remains separately gated | `architecture/AUDIT-009-P0S5-INDEPENDENT-REVIEW.md` |
 
 Future implementation reviews must be stored separately from Phase Contracts.

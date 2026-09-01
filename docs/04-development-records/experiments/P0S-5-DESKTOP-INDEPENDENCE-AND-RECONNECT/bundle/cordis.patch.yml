@@ -1,0 +1,40 @@
+# NOT_PRODUCTION: no stock Web, HTTP server, browser opener, HMR, or SPA.
+- insert:
+    - id: p0s5-connection-compatibility
+      name: '@shaco-forge/not-production-p0s5-host-bundle/connection-compatibility'
+
+    - id: workspace
+      name: '@deepseek-ai/dsh-workspace'
+
+    - id: session-reference
+      name: '@deepseek-ai/dsh-session-reference'
+
+    - id: file-reference-local
+      name: '@deepseek-ai/dsh-file-reference-local'
+
+    - id: session-controller
+      name: '@deepseek-ai/dsh-api-session-controller'
+      config:
+        nativeOpen: false
+
+    - id: settings-controller
+      name: '@deepseek-ai/dsh-api-settings-controller'
+      config:
+        nativeOpen: false
+
+    - id: workspace-controller
+      name: '@deepseek-ai/dsh-api-workspace-controller'
+
+    - id: api-remotes
+      name: '@deepseek-ai/dsh-api-remotes'
+
+    - id: agent-presets
+      name: '@deepseek-ai/dsh-agent-presets'
+      config:
+        default: standard
+        roots: []
+        includeShippedRoot: true
+        includeUserRoot: false
+
+    - id: p0s5-carrier-gateway
+      name: '@shaco-forge/not-production-p0s5-host-bundle/carrier-gateway'

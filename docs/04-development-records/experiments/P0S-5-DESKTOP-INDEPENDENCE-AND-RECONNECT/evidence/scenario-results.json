@@ -1,0 +1,2527 @@
+{
+  "S01_DESKTOP_CLOSE": {
+    "oldDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "start-running-close",
+      "scenarioId": "S01",
+      "desktopIdentity": {
+        "desktopInstanceId": "a8888c0d-261f-44d8-a82e-3b38c873e4d7",
+        "electronPid": 30932,
+        "processStartTimeUtc": "2026-09-01T08:31:00.1120597Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "a8888c0d-261f-44d8-a82e-3b38c873e4d7",
+        "localGeneration": 1,
+        "harnessClientId": "d74794ac-43c3-4db4-af95-d93a6a2a8eed"
+      },
+      "label": "turn-close",
+      "runningTurn": {
+        "label": "turn-close",
+        "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+        "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+        "turn": 1,
+        "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+        "step": 1,
+        "status": "running",
+        "cancelCount": 0
+      },
+      "hostBefore": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 0,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 0,
+        "approvalSettlements": 0,
+        "questionSettlements": 0,
+        "cancelCompletions": 0,
+        "agents": []
+      },
+      "hostAfter": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 1,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 1,
+        "approvalSettlements": 0,
+        "questionSettlements": 0,
+        "cancelCompletions": 0,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "projection": {
+        "state": "CURRENT",
+        "workerIdentity": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "carrierPid": 32796,
+          "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+          "dshPid": 32448,
+          "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+          "endpointIdHashPrefix": "e473b926a5e4e1cb",
+          "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+        },
+        "generation": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "desktopInstanceId": "a8888c0d-261f-44d8-a82e-3b38c873e4d7",
+          "localGeneration": 1,
+          "harnessClientId": "d74794ac-43c3-4db4-af95-d93a6a2a8eed"
+        },
+        "harnessClientId": "d74794ac-43c3-4db4-af95-d93a6a2a8eed",
+        "projection": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "agentStartAuthorityCount": 1,
+          "agentResumeAuthorityCount": 0,
+          "turnCreationCount": 1,
+          "approvalSettlements": 0,
+          "questionSettlements": 0,
+          "cancelCompletions": 0,
+          "agents": [
+            {
+              "label": "turn-close",
+              "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+              "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+              "status": "running",
+              "turnCreationCount": 1,
+              "currentTurn": 1,
+              "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+              "approvalDecisions": 0
+            }
+          ]
+        }
+      },
+      "renderer": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 32404,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 4,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 0
+        }
+      }
+    },
+    "newDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "verify-running",
+      "scenarioId": "S01",
+      "desktopIdentity": {
+        "desktopInstanceId": "0f4abf68-f71f-4899-ada7-924399f24227",
+        "electronPid": 6996,
+        "processStartTimeUtc": "2026-09-01T08:31:01.7479605Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "0f4abf68-f71f-4899-ada7-924399f24227",
+        "localGeneration": 1,
+        "harnessClientId": "28affc46-0e2b-4620-a3a5-d7eea4aac543"
+      },
+      "runningTurn": {
+        "label": "turn-close",
+        "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+        "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+        "status": "running",
+        "turnCreationCount": 1,
+        "currentTurn": 1,
+        "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+        "approvalDecisions": 0
+      },
+      "hostTruth": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 1,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 1,
+        "approvalSettlements": 0,
+        "questionSettlements": 0,
+        "cancelCompletions": 0,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "projection": {
+        "state": "CURRENT",
+        "workerIdentity": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "carrierPid": 32796,
+          "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+          "dshPid": 32448,
+          "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+          "endpointIdHashPrefix": "e473b926a5e4e1cb",
+          "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+        },
+        "generation": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "desktopInstanceId": "0f4abf68-f71f-4899-ada7-924399f24227",
+          "localGeneration": 1,
+          "harnessClientId": "28affc46-0e2b-4620-a3a5-d7eea4aac543"
+        },
+        "harnessClientId": "28affc46-0e2b-4620-a3a5-d7eea4aac543",
+        "projection": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "agentStartAuthorityCount": 1,
+          "agentResumeAuthorityCount": 0,
+          "turnCreationCount": 1,
+          "approvalSettlements": 0,
+          "questionSettlements": 0,
+          "cancelCompletions": 0,
+          "agents": [
+            {
+              "label": "turn-close",
+              "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+              "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+              "status": "running",
+              "turnCreationCount": 1,
+              "currentTurn": 1,
+              "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+              "approvalDecisions": 0
+            }
+          ]
+        }
+      },
+      "renderer": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 10680,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 2,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 0
+        }
+      }
+    }
+  },
+  "S02_SECOND_DESKTOP": {
+    "primary": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "hold",
+      "scenarioId": "S02",
+      "desktopIdentity": {
+        "desktopInstanceId": "74b6ef1f-ba8f-4831-9549-fe822b60e6de",
+        "electronPid": 12272,
+        "processStartTimeUtc": "2026-09-01T08:31:03.253462Z"
+      },
+      "lockAcquired": true,
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "74b6ef1f-ba8f-4831-9549-fe822b60e6de",
+        "localGeneration": 1,
+        "harnessClientId": "a883b203-55b3-448b-92bb-cf9bb1ca6a3f"
+      },
+      "renderer": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 35968,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 1,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 0
+        }
+      }
+    },
+    "secondary": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "hold",
+      "scenarioId": "S02",
+      "desktopIdentity": {
+        "desktopInstanceId": "76e3a8a2-dfdd-4e27-aa59-1b6bd7783b5d",
+        "electronPid": 35816,
+        "processStartTimeUtc": "2026-09-01T08:31:04.7294775Z"
+      },
+      "lockAcquired": false,
+      "lifecycle": {
+        "state": "SECONDARY_DENIED",
+        "counters": {
+          "workerDiscoveryCount": 0,
+          "credentialAccessCount": 0,
+          "pipeAttachCount": 0,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 0,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 0
+        }
+      }
+    }
+  },
+  "S03_DESKTOP_CRASH": {
+    "oldDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "start-running-hold",
+      "scenarioId": "S03",
+      "desktopIdentity": {
+        "desktopInstanceId": "4a376ee5-c363-470f-a8b1-fa616eb25411",
+        "electronPid": 29452,
+        "processStartTimeUtc": "2026-09-01T08:31:05.4751251Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "4a376ee5-c363-470f-a8b1-fa616eb25411",
+        "localGeneration": 1,
+        "harnessClientId": "3eeb6943-01b3-4920-be63-a6c48a08bc2a"
+      },
+      "label": "turn-crash",
+      "runningTurn": {
+        "label": "turn-crash",
+        "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+        "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+        "turn": 1,
+        "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+        "step": 1,
+        "status": "running",
+        "cancelCount": 0
+      },
+      "hostBefore": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 1,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 1,
+        "approvalSettlements": 0,
+        "questionSettlements": 0,
+        "cancelCompletions": 0,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "hostAfter": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 2,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 2,
+        "approvalSettlements": 0,
+        "questionSettlements": 0,
+        "cancelCompletions": 0,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-crash",
+            "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "projection": {
+        "state": "CURRENT",
+        "workerIdentity": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "carrierPid": 32796,
+          "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+          "dshPid": 32448,
+          "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+          "endpointIdHashPrefix": "e473b926a5e4e1cb",
+          "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+        },
+        "generation": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "desktopInstanceId": "4a376ee5-c363-470f-a8b1-fa616eb25411",
+          "localGeneration": 1,
+          "harnessClientId": "3eeb6943-01b3-4920-be63-a6c48a08bc2a"
+        },
+        "harnessClientId": "3eeb6943-01b3-4920-be63-a6c48a08bc2a",
+        "projection": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "agentStartAuthorityCount": 2,
+          "agentResumeAuthorityCount": 0,
+          "turnCreationCount": 2,
+          "approvalSettlements": 0,
+          "questionSettlements": 0,
+          "cancelCompletions": 0,
+          "agents": [
+            {
+              "label": "turn-close",
+              "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+              "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+              "status": "running",
+              "turnCreationCount": 1,
+              "currentTurn": 1,
+              "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+              "approvalDecisions": 0
+            },
+            {
+              "label": "turn-crash",
+              "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+              "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+              "status": "running",
+              "turnCreationCount": 1,
+              "currentTurn": 1,
+              "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+              "approvalDecisions": 0
+            }
+          ]
+        }
+      },
+      "renderer": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 33628,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 4,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 0
+        }
+      }
+    },
+    "newDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "verify-running",
+      "scenarioId": "S03",
+      "desktopIdentity": {
+        "desktopInstanceId": "e02e0b83-276a-4655-98d2-941409577ae3",
+        "electronPid": 7256,
+        "processStartTimeUtc": "2026-09-01T08:31:06.9755339Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "e02e0b83-276a-4655-98d2-941409577ae3",
+        "localGeneration": 1,
+        "harnessClientId": "d089249f-da5a-41ff-b179-109fdfd60df5"
+      },
+      "runningTurn": {
+        "label": "turn-crash",
+        "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+        "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+        "status": "running",
+        "turnCreationCount": 1,
+        "currentTurn": 1,
+        "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+        "approvalDecisions": 0
+      },
+      "hostTruth": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 2,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 2,
+        "approvalSettlements": 0,
+        "questionSettlements": 0,
+        "cancelCompletions": 0,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-crash",
+            "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "projection": {
+        "state": "CURRENT",
+        "workerIdentity": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "carrierPid": 32796,
+          "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+          "dshPid": 32448,
+          "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+          "endpointIdHashPrefix": "e473b926a5e4e1cb",
+          "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+        },
+        "generation": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "desktopInstanceId": "e02e0b83-276a-4655-98d2-941409577ae3",
+          "localGeneration": 1,
+          "harnessClientId": "d089249f-da5a-41ff-b179-109fdfd60df5"
+        },
+        "harnessClientId": "d089249f-da5a-41ff-b179-109fdfd60df5",
+        "projection": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "agentStartAuthorityCount": 2,
+          "agentResumeAuthorityCount": 0,
+          "turnCreationCount": 2,
+          "approvalSettlements": 0,
+          "questionSettlements": 0,
+          "cancelCompletions": 0,
+          "agents": [
+            {
+              "label": "turn-close",
+              "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+              "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+              "status": "running",
+              "turnCreationCount": 1,
+              "currentTurn": 1,
+              "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+              "approvalDecisions": 0
+            },
+            {
+              "label": "turn-crash",
+              "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+              "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+              "status": "running",
+              "turnCreationCount": 1,
+              "currentTurn": 1,
+              "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+              "approvalDecisions": 0
+            }
+          ]
+        }
+      },
+      "renderer": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 11724,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 2,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 0
+        }
+      }
+    }
+  },
+  "S04_EXPLICIT_CANCEL": {
+    "classification": "NOT_PRODUCTION",
+    "result": "PASS",
+    "action": "cancel-running",
+    "scenarioId": "S04",
+    "desktopIdentity": {
+      "desktopInstanceId": "0205ab96-8947-426b-8362-8099a5a65687",
+      "electronPid": 33064,
+      "processStartTimeUtc": "2026-09-01T08:31:08.4947723Z"
+    },
+    "workerIdentity": {
+      "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+      "carrierPid": 32796,
+      "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+      "dshPid": 32448,
+      "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+      "endpointIdHashPrefix": "e473b926a5e4e1cb",
+      "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+    },
+    "generation": {
+      "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+      "desktopInstanceId": "0205ab96-8947-426b-8362-8099a5a65687",
+      "localGeneration": 1,
+      "harnessClientId": "ebf86dac-9de0-4e56-86f3-f78f4320157b"
+    },
+    "explicitCancel": {
+      "accepted": true
+    },
+    "hostBefore": {
+      "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+      "agentStartAuthorityCount": 2,
+      "agentResumeAuthorityCount": 0,
+      "turnCreationCount": 2,
+      "approvalSettlements": 0,
+      "questionSettlements": 0,
+      "cancelCompletions": 0,
+      "agents": [
+        {
+          "label": "turn-close",
+          "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+          "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+          "status": "running",
+          "turnCreationCount": 1,
+          "currentTurn": 1,
+          "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+          "approvalDecisions": 0
+        },
+        {
+          "label": "turn-crash",
+          "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+          "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+          "status": "running",
+          "turnCreationCount": 1,
+          "currentTurn": 1,
+          "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+          "approvalDecisions": 0
+        }
+      ]
+    },
+    "hostAfter": {
+      "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+      "agentStartAuthorityCount": 2,
+      "agentResumeAuthorityCount": 0,
+      "turnCreationCount": 2,
+      "approvalSettlements": 0,
+      "questionSettlements": 0,
+      "cancelCompletions": 1,
+      "agents": [
+        {
+          "label": "turn-close",
+          "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+          "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+          "status": "running",
+          "turnCreationCount": 1,
+          "currentTurn": 1,
+          "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+          "approvalDecisions": 0
+        },
+        {
+          "label": "turn-crash",
+          "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+          "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+          "status": "idle",
+          "turnCreationCount": 1,
+          "currentTurn": 1,
+          "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+          "approvalDecisions": 0
+        }
+      ]
+    },
+    "lifecycle": {
+      "state": "READY",
+      "counters": {
+        "workerDiscoveryCount": 1,
+        "credentialAccessCount": 1,
+        "pipeAttachCount": 1,
+        "workerSpawnCount": 0,
+        "gatewayDispatchCount": 4,
+        "promptRequestCount": 0,
+        "agentStartRequestCount": 0,
+        "agentResumeRequestCount": 0,
+        "automaticResultSendCount": 0,
+        "oldDraftImportCount": 0,
+        "explicitRendererActionCount": 0
+      }
+    }
+  },
+  "S05_APPROVAL_CLOSE": {
+    "kind": "approval",
+    "termination": "close",
+    "oldDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "pending-capture",
+      "scenarioId": "S05",
+      "desktopIdentity": {
+        "desktopInstanceId": "882bb7a7-9c17-4e6d-92ef-24d73bc8a40f",
+        "electronPid": 34180,
+        "processStartTimeUtc": "2026-09-01T08:31:10.291297Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "882bb7a7-9c17-4e6d-92ef-24d73bc8a40f",
+        "localGeneration": 1,
+        "harnessClientId": "50f0b55f-9a0b-4246-a4a1-408fa44f647e"
+      },
+      "kind": "approval",
+      "label": "approval-close",
+      "eventId": "384da152-4f39-401b-bb1e-c15f90dbb6c7",
+      "capturedEnvelope": {
+        "endpoint": "$events/result",
+        "payload": {
+          "args": {
+            "clientId": "50f0b55f-9a0b-4246-a4a1-408fa44f647e",
+            "eventId": "384da152-4f39-401b-bb1e-c15f90dbb6c7",
+            "outcome": {
+              "kind": "result",
+              "value": "allowed-once"
+            }
+          }
+        }
+      },
+      "hostTruth": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 3,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 3,
+        "approvalSettlements": 0,
+        "questionSettlements": 0,
+        "cancelCompletions": 1,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-crash",
+            "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "approval-close",
+            "sessionId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "agentId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "renderer": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 31536,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 3,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 1
+        }
+      }
+    },
+    "newDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "pending-settle",
+      "scenarioId": "S05",
+      "desktopIdentity": {
+        "desktopInstanceId": "687af23e-b3f5-47c7-9b43-6296416dd29a",
+        "electronPid": 28328,
+        "processStartTimeUtc": "2026-09-01T08:31:11.9058021Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "687af23e-b3f5-47c7-9b43-6296416dd29a",
+        "localGeneration": 1,
+        "harnessClientId": "5e0c545e-9b20-439e-bcfa-161949114553"
+      },
+      "kind": "approval",
+      "eventId": "384da152-4f39-401b-bb1e-c15f90dbb6c7",
+      "sameEventIdAfterReconnect": true,
+      "oldEnvelopeProbe": {
+        "accepted": false,
+        "response": {
+          "ok": false,
+          "error": {
+            "code": "internal",
+            "message": "typert gateway: Remote event result identifies no active event stream",
+            "details": {}
+          }
+        }
+      },
+      "currentEnvelope": {
+        "accepted": true,
+        "envelope": {
+          "endpoint": "$events/result",
+          "payload": {
+            "args": {
+              "clientId": "5e0c545e-9b20-439e-bcfa-161949114553",
+              "eventId": "384da152-4f39-401b-bb1e-c15f90dbb6c7",
+              "outcome": {
+                "kind": "result",
+                "value": "allowed-once"
+              }
+            }
+          }
+        }
+      },
+      "duplicateProbe": {
+        "response": {
+          "ok": true
+        }
+      },
+      "hostTruth": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 3,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 3,
+        "approvalSettlements": 1,
+        "questionSettlements": 0,
+        "cancelCompletions": 1,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-crash",
+            "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "approval-close",
+            "sessionId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "agentId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          }
+        ]
+      },
+      "rendererBefore": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 1584,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 5,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 1
+        }
+      }
+    }
+  },
+  "S06_APPROVAL_CRASH": {
+    "kind": "approval",
+    "termination": "crash",
+    "oldDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "pending-capture",
+      "scenarioId": "S06",
+      "desktopIdentity": {
+        "desktopInstanceId": "af050bed-e43f-4059-992d-6498a7b546c4",
+        "electronPid": 34896,
+        "processStartTimeUtc": "2026-09-01T08:31:13.6699824Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "af050bed-e43f-4059-992d-6498a7b546c4",
+        "localGeneration": 1,
+        "harnessClientId": "69ed5736-19cc-41f2-8127-96da5a6baf2b"
+      },
+      "kind": "approval",
+      "label": "approval-crash",
+      "eventId": "a82af9a8-737a-4b2d-a672-e76890be9118",
+      "capturedEnvelope": {
+        "endpoint": "$events/result",
+        "payload": {
+          "args": {
+            "clientId": "69ed5736-19cc-41f2-8127-96da5a6baf2b",
+            "eventId": "a82af9a8-737a-4b2d-a672-e76890be9118",
+            "outcome": {
+              "kind": "result",
+              "value": "allowed-once"
+            }
+          }
+        }
+      },
+      "hostTruth": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 4,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 4,
+        "approvalSettlements": 1,
+        "questionSettlements": 0,
+        "cancelCompletions": 1,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-crash",
+            "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "approval-close",
+            "sessionId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "agentId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "approval-crash",
+            "sessionId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "agentId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "renderer": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 32432,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 3,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 1
+        }
+      }
+    },
+    "newDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "pending-settle",
+      "scenarioId": "S06",
+      "desktopIdentity": {
+        "desktopInstanceId": "72852d5b-b67d-416c-81b9-658a9fa29d4c",
+        "electronPid": 17384,
+        "processStartTimeUtc": "2026-09-01T08:31:15.1835414Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "72852d5b-b67d-416c-81b9-658a9fa29d4c",
+        "localGeneration": 1,
+        "harnessClientId": "14c6c25a-0783-4061-9c72-7f1191b20a14"
+      },
+      "kind": "approval",
+      "eventId": "a82af9a8-737a-4b2d-a672-e76890be9118",
+      "sameEventIdAfterReconnect": true,
+      "oldEnvelopeProbe": {
+        "accepted": false,
+        "response": {
+          "ok": false,
+          "error": {
+            "code": "internal",
+            "message": "typert gateway: Remote event result identifies no active event stream",
+            "details": {}
+          }
+        }
+      },
+      "currentEnvelope": {
+        "accepted": true,
+        "envelope": {
+          "endpoint": "$events/result",
+          "payload": {
+            "args": {
+              "clientId": "14c6c25a-0783-4061-9c72-7f1191b20a14",
+              "eventId": "a82af9a8-737a-4b2d-a672-e76890be9118",
+              "outcome": {
+                "kind": "result",
+                "value": "allowed-once"
+              }
+            }
+          }
+        }
+      },
+      "duplicateProbe": {
+        "response": {
+          "ok": true
+        }
+      },
+      "hostTruth": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 4,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 4,
+        "approvalSettlements": 2,
+        "questionSettlements": 0,
+        "cancelCompletions": 1,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-crash",
+            "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "approval-close",
+            "sessionId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "agentId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "approval-crash",
+            "sessionId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "agentId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          }
+        ]
+      },
+      "rendererBefore": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 33584,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 5,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 1
+        }
+      }
+    }
+  },
+  "S07_QUESTION_CLOSE": {
+    "kind": "question",
+    "termination": "close",
+    "oldDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "pending-capture",
+      "scenarioId": "S07",
+      "desktopIdentity": {
+        "desktopInstanceId": "20fbc1eb-1602-4a87-baac-ee0654825aff",
+        "electronPid": 10824,
+        "processStartTimeUtc": "2026-09-01T08:31:16.8808046Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "20fbc1eb-1602-4a87-baac-ee0654825aff",
+        "localGeneration": 1,
+        "harnessClientId": "ba22a180-64fb-4408-a59d-35f4f58e9f65"
+      },
+      "kind": "question",
+      "label": "question-close",
+      "eventId": "46d5eb80-8448-405c-b8b8-7d4db554328e",
+      "capturedEnvelope": {
+        "endpoint": "$events/result",
+        "payload": {
+          "args": {
+            "clientId": "ba22a180-64fb-4408-a59d-35f4f58e9f65",
+            "eventId": "46d5eb80-8448-405c-b8b8-7d4db554328e",
+            "outcome": {
+              "kind": "result",
+              "value": {
+                "answers": [
+                  {
+                    "id": "p0s5-choice",
+                    "selected": [
+                      "Beta"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "hostTruth": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 5,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 4,
+        "approvalSettlements": 2,
+        "questionSettlements": 0,
+        "cancelCompletions": 1,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-crash",
+            "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "approval-close",
+            "sessionId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "agentId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "approval-crash",
+            "sessionId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "agentId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "question-close",
+            "sessionId": "71504546-dca8-43ca-a24c-9270970610ec",
+            "agentId": "71504546-dca8-43ca-a24c-9270970610ec",
+            "status": "idle",
+            "turnCreationCount": 0,
+            "currentTurn": null,
+            "turnId": null,
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "renderer": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 33200,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 3,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 1
+        }
+      }
+    },
+    "newDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "pending-settle",
+      "scenarioId": "S07",
+      "desktopIdentity": {
+        "desktopInstanceId": "151a78f5-7370-48c2-9236-87ed6b261bb4",
+        "electronPid": 36072,
+        "processStartTimeUtc": "2026-09-01T08:31:18.4692747Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "151a78f5-7370-48c2-9236-87ed6b261bb4",
+        "localGeneration": 1,
+        "harnessClientId": "3daadaa1-f81c-4647-af66-a91aaf02823f"
+      },
+      "kind": "question",
+      "eventId": "46d5eb80-8448-405c-b8b8-7d4db554328e",
+      "sameEventIdAfterReconnect": true,
+      "oldEnvelopeProbe": {
+        "accepted": false,
+        "response": {
+          "ok": false,
+          "error": {
+            "code": "internal",
+            "message": "typert gateway: Remote event result identifies no active event stream",
+            "details": {}
+          }
+        }
+      },
+      "currentEnvelope": {
+        "accepted": true,
+        "envelope": {
+          "endpoint": "$events/result",
+          "payload": {
+            "args": {
+              "clientId": "3daadaa1-f81c-4647-af66-a91aaf02823f",
+              "eventId": "46d5eb80-8448-405c-b8b8-7d4db554328e",
+              "outcome": {
+                "kind": "result",
+                "value": {
+                  "answers": [
+                    {
+                      "id": "p0s5-choice",
+                      "selected": [
+                        "Beta"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "duplicateProbe": {
+        "response": {
+          "ok": true
+        }
+      },
+      "hostTruth": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 5,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 4,
+        "approvalSettlements": 2,
+        "questionSettlements": 1,
+        "cancelCompletions": 1,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-crash",
+            "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "approval-close",
+            "sessionId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "agentId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "approval-crash",
+            "sessionId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "agentId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "question-close",
+            "sessionId": "71504546-dca8-43ca-a24c-9270970610ec",
+            "agentId": "71504546-dca8-43ca-a24c-9270970610ec",
+            "status": "idle",
+            "turnCreationCount": 0,
+            "currentTurn": null,
+            "turnId": null,
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "rendererBefore": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 34236,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 5,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 1
+        }
+      }
+    }
+  },
+  "S08_QUESTION_CRASH": {
+    "kind": "question",
+    "termination": "crash",
+    "oldDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "pending-capture",
+      "scenarioId": "S08",
+      "desktopIdentity": {
+        "desktopInstanceId": "2f658346-6318-4598-a66b-0fba824b23dc",
+        "electronPid": 30640,
+        "processStartTimeUtc": "2026-09-01T08:31:20.2239894Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "2f658346-6318-4598-a66b-0fba824b23dc",
+        "localGeneration": 1,
+        "harnessClientId": "28393d13-6856-42d5-b704-a5f49cb3dd48"
+      },
+      "kind": "question",
+      "label": "question-crash",
+      "eventId": "75508b2a-d7d4-4ecb-9397-86184eb0396e",
+      "capturedEnvelope": {
+        "endpoint": "$events/result",
+        "payload": {
+          "args": {
+            "clientId": "28393d13-6856-42d5-b704-a5f49cb3dd48",
+            "eventId": "75508b2a-d7d4-4ecb-9397-86184eb0396e",
+            "outcome": {
+              "kind": "result",
+              "value": {
+                "answers": [
+                  {
+                    "id": "p0s5-choice",
+                    "selected": [
+                      "Beta"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "hostTruth": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 6,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 4,
+        "approvalSettlements": 2,
+        "questionSettlements": 1,
+        "cancelCompletions": 1,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-crash",
+            "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "approval-close",
+            "sessionId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "agentId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "approval-crash",
+            "sessionId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "agentId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "question-close",
+            "sessionId": "71504546-dca8-43ca-a24c-9270970610ec",
+            "agentId": "71504546-dca8-43ca-a24c-9270970610ec",
+            "status": "idle",
+            "turnCreationCount": 0,
+            "currentTurn": null,
+            "turnId": null,
+            "approvalDecisions": 0
+          },
+          {
+            "label": "question-crash",
+            "sessionId": "6d885b71-27bd-437c-a38f-b954ef9d6df3",
+            "agentId": "6d885b71-27bd-437c-a38f-b954ef9d6df3",
+            "status": "idle",
+            "turnCreationCount": 0,
+            "currentTurn": null,
+            "turnId": null,
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "renderer": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 30088,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 3,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 1
+        }
+      }
+    },
+    "newDesktop": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "pending-settle",
+      "scenarioId": "S08",
+      "desktopIdentity": {
+        "desktopInstanceId": "de53a00b-2bef-494d-bbb3-8bf6bb0e92b4",
+        "electronPid": 29116,
+        "processStartTimeUtc": "2026-09-01T08:31:21.8343077Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "de53a00b-2bef-494d-bbb3-8bf6bb0e92b4",
+        "localGeneration": 1,
+        "harnessClientId": "142101a1-1389-4a34-b0f7-dc1307bd11d5"
+      },
+      "kind": "question",
+      "eventId": "75508b2a-d7d4-4ecb-9397-86184eb0396e",
+      "sameEventIdAfterReconnect": true,
+      "oldEnvelopeProbe": {
+        "accepted": false,
+        "response": {
+          "ok": false,
+          "error": {
+            "code": "internal",
+            "message": "typert gateway: Remote event result identifies no active event stream",
+            "details": {}
+          }
+        }
+      },
+      "currentEnvelope": {
+        "accepted": true,
+        "envelope": {
+          "endpoint": "$events/result",
+          "payload": {
+            "args": {
+              "clientId": "142101a1-1389-4a34-b0f7-dc1307bd11d5",
+              "eventId": "75508b2a-d7d4-4ecb-9397-86184eb0396e",
+              "outcome": {
+                "kind": "result",
+                "value": {
+                  "answers": [
+                    {
+                      "id": "p0s5-choice",
+                      "selected": [
+                        "Beta"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "duplicateProbe": {
+        "response": {
+          "ok": true
+        }
+      },
+      "hostTruth": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 6,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 4,
+        "approvalSettlements": 2,
+        "questionSettlements": 2,
+        "cancelCompletions": 1,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-crash",
+            "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "approval-close",
+            "sessionId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "agentId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "approval-crash",
+            "sessionId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "agentId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "question-close",
+            "sessionId": "71504546-dca8-43ca-a24c-9270970610ec",
+            "agentId": "71504546-dca8-43ca-a24c-9270970610ec",
+            "status": "idle",
+            "turnCreationCount": 0,
+            "currentTurn": null,
+            "turnId": null,
+            "approvalDecisions": 0
+          },
+          {
+            "label": "question-crash",
+            "sessionId": "6d885b71-27bd-437c-a38f-b954ef9d6df3",
+            "agentId": "6d885b71-27bd-437c-a38f-b954ef9d6df3",
+            "status": "idle",
+            "turnCreationCount": 0,
+            "currentTurn": null,
+            "turnId": null,
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "rendererBefore": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeKeys": [
+          "onProjection",
+          "snapshot",
+          "submit"
+        ],
+        "directNamedPipeAccess": false,
+        "draftStorageKeys": [],
+        "preload": {
+          "contextIsolated": true,
+          "sandboxed": true,
+          "preloadPid": 14968,
+          "pipePathExposed": false,
+          "reusableCredentialExposed": false,
+          "arbitraryFilesystemAccess": false
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 5,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 1
+        }
+      }
+    }
+  },
+  "S09_WORKER_CRASH_RESTART": {
+    "precrash": {
+      "classification": "NOT_PRODUCTION",
+      "result": "READY",
+      "action": "worker-crash-monitor",
+      "scenarioId": "S09",
+      "desktopIdentity": {
+        "desktopInstanceId": "ab8d3fcc-69b7-4171-aa06-a811241d82d5",
+        "electronPid": 36592,
+        "processStartTimeUtc": "2026-09-01T08:31:23.5036275Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "generation": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "desktopInstanceId": "ab8d3fcc-69b7-4171-aa06-a811241d82d5",
+        "localGeneration": 1,
+        "harnessClientId": "6f1857f5-ba08-4fd7-9aca-6defc3e55e18"
+      },
+      "runningTurn": {
+        "label": "turn-worker-crash",
+        "sessionId": "f427ed07-2ebc-49f3-8522-5d23e5644119",
+        "agentId": "f427ed07-2ebc-49f3-8522-5d23e5644119",
+        "turn": 1,
+        "turnId": "f427ed07-2ebc-49f3-8522-5d23e5644119:turn:1",
+        "step": 1,
+        "status": "running",
+        "cancelCount": 0
+      },
+      "hostTruth": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "agentStartAuthorityCount": 7,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 5,
+        "approvalSettlements": 2,
+        "questionSettlements": 2,
+        "cancelCompletions": 1,
+        "agents": [
+          {
+            "label": "turn-close",
+            "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-crash",
+            "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+            "approvalDecisions": 0
+          },
+          {
+            "label": "approval-close",
+            "sessionId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "agentId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "approval-crash",
+            "sessionId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "agentId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+            "status": "idle",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": null,
+            "approvalDecisions": 1
+          },
+          {
+            "label": "question-close",
+            "sessionId": "71504546-dca8-43ca-a24c-9270970610ec",
+            "agentId": "71504546-dca8-43ca-a24c-9270970610ec",
+            "status": "idle",
+            "turnCreationCount": 0,
+            "currentTurn": null,
+            "turnId": null,
+            "approvalDecisions": 0
+          },
+          {
+            "label": "question-crash",
+            "sessionId": "6d885b71-27bd-437c-a38f-b954ef9d6df3",
+            "agentId": "6d885b71-27bd-437c-a38f-b954ef9d6df3",
+            "status": "idle",
+            "turnCreationCount": 0,
+            "currentTurn": null,
+            "turnId": null,
+            "approvalDecisions": 0
+          },
+          {
+            "label": "turn-worker-crash",
+            "sessionId": "f427ed07-2ebc-49f3-8522-5d23e5644119",
+            "agentId": "f427ed07-2ebc-49f3-8522-5d23e5644119",
+            "status": "running",
+            "turnCreationCount": 1,
+            "currentTurn": 1,
+            "turnId": "f427ed07-2ebc-49f3-8522-5d23e5644119:turn:1",
+            "approvalDecisions": 0
+          }
+        ]
+      },
+      "projection": {
+        "state": "CURRENT",
+        "workerIdentity": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "carrierPid": 32796,
+          "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+          "dshPid": 32448,
+          "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+          "endpointIdHashPrefix": "e473b926a5e4e1cb",
+          "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+        },
+        "generation": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "desktopInstanceId": "ab8d3fcc-69b7-4171-aa06-a811241d82d5",
+          "localGeneration": 1,
+          "harnessClientId": "6f1857f5-ba08-4fd7-9aca-6defc3e55e18"
+        },
+        "harnessClientId": "6f1857f5-ba08-4fd7-9aca-6defc3e55e18",
+        "projection": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "agentStartAuthorityCount": 7,
+          "agentResumeAuthorityCount": 0,
+          "turnCreationCount": 5,
+          "approvalSettlements": 2,
+          "questionSettlements": 2,
+          "cancelCompletions": 1,
+          "agents": [
+            {
+              "label": "turn-close",
+              "sessionId": "3df0de49-ac39-4662-b4a5-009571949f43",
+              "agentId": "3df0de49-ac39-4662-b4a5-009571949f43",
+              "status": "running",
+              "turnCreationCount": 1,
+              "currentTurn": 1,
+              "turnId": "3df0de49-ac39-4662-b4a5-009571949f43:turn:1",
+              "approvalDecisions": 0
+            },
+            {
+              "label": "turn-crash",
+              "sessionId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+              "agentId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6",
+              "status": "idle",
+              "turnCreationCount": 1,
+              "currentTurn": 1,
+              "turnId": "15a37fbd-5cbd-4ef4-b7b0-a57b0c5c9fc6:turn:1",
+              "approvalDecisions": 0
+            },
+            {
+              "label": "approval-close",
+              "sessionId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+              "agentId": "3e6a2000-8f83-4955-bad4-2b7b2ea3e51a",
+              "status": "idle",
+              "turnCreationCount": 1,
+              "currentTurn": 1,
+              "turnId": null,
+              "approvalDecisions": 1
+            },
+            {
+              "label": "approval-crash",
+              "sessionId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+              "agentId": "2561d538-ca6e-433b-8a81-c5b5a6d5fe0e",
+              "status": "idle",
+              "turnCreationCount": 1,
+              "currentTurn": 1,
+              "turnId": null,
+              "approvalDecisions": 1
+            },
+            {
+              "label": "question-close",
+              "sessionId": "71504546-dca8-43ca-a24c-9270970610ec",
+              "agentId": "71504546-dca8-43ca-a24c-9270970610ec",
+              "status": "idle",
+              "turnCreationCount": 0,
+              "currentTurn": null,
+              "turnId": null,
+              "approvalDecisions": 0
+            },
+            {
+              "label": "question-crash",
+              "sessionId": "6d885b71-27bd-437c-a38f-b954ef9d6df3",
+              "agentId": "6d885b71-27bd-437c-a38f-b954ef9d6df3",
+              "status": "idle",
+              "turnCreationCount": 0,
+              "currentTurn": null,
+              "turnId": null,
+              "approvalDecisions": 0
+            },
+            {
+              "label": "turn-worker-crash",
+              "sessionId": "f427ed07-2ebc-49f3-8522-5d23e5644119",
+              "agentId": "f427ed07-2ebc-49f3-8522-5d23e5644119",
+              "status": "running",
+              "turnCreationCount": 1,
+              "currentTurn": 1,
+              "turnId": "f427ed07-2ebc-49f3-8522-5d23e5644119:turn:1",
+              "approvalDecisions": 0
+            }
+          ]
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 3,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 0
+        }
+      }
+    },
+    "lost": {
+      "classification": "NOT_PRODUCTION",
+      "result": "LOST",
+      "action": "worker-crash-monitor",
+      "scenarioId": "S09",
+      "desktopIdentity": {
+        "desktopInstanceId": "ab8d3fcc-69b7-4171-aa06-a811241d82d5",
+        "electronPid": 36592,
+        "processStartTimeUtc": "2026-09-01T08:31:23.5036275Z"
+      },
+      "workerIdentity": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "projection": {
+        "state": "INVALIDATED",
+        "workerIdentity": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "carrierPid": 32796,
+          "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+          "dshPid": 32448,
+          "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+          "endpointIdHashPrefix": "e473b926a5e4e1cb",
+          "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+        },
+        "generation": {
+          "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+          "desktopInstanceId": "ab8d3fcc-69b7-4171-aa06-a811241d82d5",
+          "localGeneration": 1,
+          "harnessClientId": "6f1857f5-ba08-4fd7-9aca-6defc3e55e18"
+        },
+        "harnessClientId": "6f1857f5-ba08-4fd7-9aca-6defc3e55e18",
+        "projection": null
+      },
+      "connectionLost": true,
+      "cancelDelta": 0,
+      "completionDelta": 0,
+      "promptStartResumeResultAnswerDelta": 0,
+      "lifecycle": {
+        "state": "RECONNECTING",
+        "counters": {
+          "workerDiscoveryCount": 1,
+          "credentialAccessCount": 1,
+          "pipeAttachCount": 1,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 3,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 0
+        }
+      }
+    },
+    "final": {
+      "classification": "NOT_PRODUCTION",
+      "result": "PASS",
+      "action": "worker-crash-monitor",
+      "scenarioId": "S09",
+      "desktopIdentity": {
+        "desktopInstanceId": "ab8d3fcc-69b7-4171-aa06-a811241d82d5",
+        "electronPid": 36592,
+        "processStartTimeUtc": "2026-09-01T08:31:23.5036275Z"
+      },
+      "sameElectronProcess": true,
+      "worker1": {
+        "workerInstanceId": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+        "carrierPid": 32796,
+        "carrierStartTimeUtc": "2026-09-01T08:30:56.1132387Z",
+        "dshPid": 32448,
+        "dshStartTimeUtc": "2026-09-01T08:30:56.9328212Z",
+        "endpointIdHashPrefix": "e473b926a5e4e1cb",
+        "credentialEpochHashPrefix": "1cfda2bb33c15f90"
+      },
+      "worker2": {
+        "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+        "carrierPid": 34240,
+        "carrierStartTimeUtc": "2026-09-01T08:31:25.1232508Z",
+        "dshPid": 31692,
+        "dshStartTimeUtc": "2026-09-01T08:31:26.0390483Z",
+        "endpointIdHashPrefix": "e7349812e50ed14d",
+        "credentialEpochHashPrefix": "971ed9c84dcd4bcf"
+      },
+      "oldGeneration": "14fd46cc-07b2-4df0-9b31-a2fca566e73e",
+      "newGeneration": {
+        "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+        "desktopInstanceId": "ab8d3fcc-69b7-4171-aa06-a811241d82d5",
+        "localGeneration": 2,
+        "harnessClientId": "b36aa472-8f18-4b7f-a50c-9c119c340c65"
+      },
+      "oldRunningTurn": {
+        "label": "turn-worker-crash",
+        "sessionId": "f427ed07-2ebc-49f3-8522-5d23e5644119",
+        "agentId": "f427ed07-2ebc-49f3-8522-5d23e5644119",
+        "turn": 1,
+        "turnId": "f427ed07-2ebc-49f3-8522-5d23e5644119:turn:1",
+        "step": 1,
+        "status": "running",
+        "cancelCount": 0
+      },
+      "worker2HostTruth": {
+        "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+        "agentStartAuthorityCount": 0,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 0,
+        "approvalSettlements": 0,
+        "questionSettlements": 0,
+        "cancelCompletions": 0,
+        "agents": []
+      },
+      "oldProjectionVisible": false,
+      "automaticStartResumeCount": 0,
+      "projection": {
+        "state": "CURRENT",
+        "workerIdentity": {
+          "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+          "carrierPid": 34240,
+          "carrierStartTimeUtc": "2026-09-01T08:31:25.1232508Z",
+          "dshPid": 31692,
+          "dshStartTimeUtc": "2026-09-01T08:31:26.0390483Z",
+          "endpointIdHashPrefix": "e7349812e50ed14d",
+          "credentialEpochHashPrefix": "971ed9c84dcd4bcf"
+        },
+        "generation": {
+          "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+          "desktopInstanceId": "ab8d3fcc-69b7-4171-aa06-a811241d82d5",
+          "localGeneration": 2,
+          "harnessClientId": "b36aa472-8f18-4b7f-a50c-9c119c340c65"
+        },
+        "harnessClientId": "b36aa472-8f18-4b7f-a50c-9c119c340c65",
+        "projection": {
+          "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+          "agentStartAuthorityCount": 0,
+          "agentResumeAuthorityCount": 0,
+          "turnCreationCount": 0,
+          "approvalSettlements": 0,
+          "questionSettlements": 0,
+          "cancelCompletions": 0,
+          "agents": []
+        }
+      },
+      "lifecycle": {
+        "state": "READY",
+        "counters": {
+          "workerDiscoveryCount": 2,
+          "credentialAccessCount": 2,
+          "pipeAttachCount": 2,
+          "workerSpawnCount": 0,
+          "gatewayDispatchCount": 5,
+          "promptRequestCount": 0,
+          "agentStartRequestCount": 0,
+          "agentResumeRequestCount": 0,
+          "automaticResultSendCount": 0,
+          "oldDraftImportCount": 0,
+          "explicitRendererActionCount": 0
+        }
+      }
+    },
+    "forceKill": true,
+    "gracefulStopUsed": false,
+    "crashInitiatedAtUtc": "2026-09-01T08:31:25.0605866+00:00"
+  },
+  "S10_STALE_WORKER": {
+    "classification": "NOT_PRODUCTION",
+    "result": "PASS",
+    "action": "stale-worker-probes",
+    "scenarioId": "S10",
+    "desktopIdentity": {
+      "desktopInstanceId": "2b12a322-a0eb-46da-9bc2-9c5d76e415f4",
+      "electronPid": 28652,
+      "processStartTimeUtc": "2026-09-01T08:31:31.3489748Z"
+    },
+    "workerIdentity": {
+      "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+      "carrierPid": 34240,
+      "carrierStartTimeUtc": "2026-09-01T08:31:25.1232508Z",
+      "dshPid": 31692,
+      "dshStartTimeUtc": "2026-09-01T08:31:26.0390483Z",
+      "endpointIdHashPrefix": "e7349812e50ed14d",
+      "credentialEpochHashPrefix": "971ed9c84dcd4bcf"
+    },
+    "oldPipeFailed": true,
+    "staleCredentialRejected": true,
+    "staleIdentityRejected": true,
+    "staleResultSafe": true,
+    "lifecycle": {
+      "state": "READY",
+      "counters": {
+        "workerDiscoveryCount": 2,
+        "credentialAccessCount": 2,
+        "pipeAttachCount": 2,
+        "workerSpawnCount": 0,
+        "gatewayDispatchCount": 3,
+        "promptRequestCount": 0,
+        "agentStartRequestCount": 0,
+        "agentResumeRequestCount": 0,
+        "automaticResultSendCount": 0,
+        "oldDraftImportCount": 0,
+        "explicitRendererActionCount": 0
+      }
+    }
+  },
+  "S11_GRACEFUL_WORKER_STOP_SUPPORT": {
+    "classification": "NOT_PRODUCTION",
+    "result": "PASS",
+    "action": "graceful-worker-stop",
+    "scenarioId": "S11",
+    "desktopIdentity": {
+      "desktopInstanceId": "9c886daf-9419-4e75-a5cf-2610f1226c61",
+      "electronPid": 24132,
+      "processStartTimeUtc": "2026-09-01T08:31:34.9928746Z"
+    },
+    "workerIdentity": {
+      "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+      "carrierPid": 34240,
+      "carrierStartTimeUtc": "2026-09-01T08:31:25.1232508Z",
+      "dshPid": 31692,
+      "dshStartTimeUtc": "2026-09-01T08:31:26.0390483Z",
+      "endpointIdHashPrefix": "e7349812e50ed14d",
+      "credentialEpochHashPrefix": "971ed9c84dcd4bcf"
+    },
+    "before": {
+      "state": "CURRENT",
+      "workerIdentity": {
+        "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+        "carrierPid": 34240,
+        "carrierStartTimeUtc": "2026-09-01T08:31:25.1232508Z",
+        "dshPid": 31692,
+        "dshStartTimeUtc": "2026-09-01T08:31:26.0390483Z",
+        "endpointIdHashPrefix": "e7349812e50ed14d",
+        "credentialEpochHashPrefix": "971ed9c84dcd4bcf"
+      },
+      "generation": {
+        "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+        "desktopInstanceId": "9c886daf-9419-4e75-a5cf-2610f1226c61",
+        "localGeneration": 1,
+        "harnessClientId": "ea0246ae-67d5-481f-a645-d347237ae0be"
+      },
+      "harnessClientId": "ea0246ae-67d5-481f-a645-d347237ae0be",
+      "projection": {
+        "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+        "agentStartAuthorityCount": 0,
+        "agentResumeAuthorityCount": 0,
+        "turnCreationCount": 0,
+        "approvalSettlements": 0,
+        "questionSettlements": 0,
+        "cancelCompletions": 0,
+        "agents": []
+      }
+    },
+    "after": {
+      "state": "INVALIDATED",
+      "workerIdentity": {
+        "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+        "carrierPid": 34240,
+        "carrierStartTimeUtc": "2026-09-01T08:31:25.1232508Z",
+        "dshPid": 31692,
+        "dshStartTimeUtc": "2026-09-01T08:31:26.0390483Z",
+        "endpointIdHashPrefix": "e7349812e50ed14d",
+        "credentialEpochHashPrefix": "971ed9c84dcd4bcf"
+      },
+      "generation": {
+        "workerInstanceId": "4e05ff89-2e6d-4423-9936-48711410af0c",
+        "desktopInstanceId": "9c886daf-9419-4e75-a5cf-2610f1226c61",
+        "localGeneration": 1,
+        "harnessClientId": "ea0246ae-67d5-481f-a645-d347237ae0be"
+      },
+      "harnessClientId": "ea0246ae-67d5-481f-a645-d347237ae0be",
+      "projection": null
+    },
+    "supportingScenarioOnly": true,
+    "usedForWorkerCrashRestartGate": false,
+    "lifecycle": {
+      "state": "READY",
+      "counters": {
+        "workerDiscoveryCount": 1,
+        "credentialAccessCount": 1,
+        "pipeAttachCount": 1,
+        "workerSpawnCount": 0,
+        "gatewayDispatchCount": 1,
+        "promptRequestCount": 0,
+        "agentStartRequestCount": 0,
+        "agentResumeRequestCount": 0,
+        "automaticResultSendCount": 0,
+        "oldDraftImportCount": 0,
+        "explicitRendererActionCount": 0
+      }
+    }
+  }
+}
