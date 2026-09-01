@@ -1,7 +1,7 @@
 # Shaco Forge Current State
 
 Status: ACTIVE
-Last Updated: 2026-08-31
+Last Updated: 2026-09-01
 
 ## Product
 
@@ -12,8 +12,8 @@ Last Updated: 2026-08-31
 ## Current Phase
 
 - Phase: P0.S — Desktop / Connection / Packaging Feasibility Spike
-- Step: P0.S-3 `PASS / CLOSED`; Owner-accepted `PROVEN_WITH_CONSTRAINT`
-- Next Executable Step: create the bounded P0.S-3 Closure Commit; P0.S-4 remains `NOT_STARTED`
+- Step: P0.S-4 `PASS / CLOSED`; Owner-accepted `MET_WITH_CONSTRAINT`
+- Next Executable Step: Architecture Owner P0.S-4 Closure Commit decision; P0.S-5 remains `NOT_STARTED` and separately gated
 - Production Implementation: NOT_STARTED
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -80,10 +80,39 @@ Last Updated: 2026-08-31
 - `WORKER_IDENTITY_ENDPOINT_VALIDATED = YES`
 - `CONNECTION_CARRIER_CORE_PATCH_REQUIRED = NO`
 - `ADAPTER_OR_STUB_USED = YES`
-- `OWNER_DECISION_REQUIRED = YES`
-- `P0S_LOCAL_CARRIER_FEASIBLE = PENDING_P0S4_COMPLETENESS`
+- `OWNER_DECISION_REQUIRED = NO`
+- `P0S_LOCAL_CARRIER_FEASIBLE = YES`
 - `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
-- `P0S4_ALLOWED = NO`
+- `P0S4_ALLOWED = YES`
+- `ALLOW_P0S4 = YES`
+- `SHACO_FORGE_V1_0_P0S_4 = PASS`
+- `P0S4_FORMAL_CLOSURE = PASS`
+- `P0S4_STATE = CLOSED`
+- `P0S4_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT`
+- `P0S4_INDEPENDENT_REVIEW_VERDICT = PASS`
+- `P0S4_REVIEW_RECOMMENDATION = ACCEPT_PROVEN_WITH_CONSTRAINT`
+- `P0S4_DOCUMENTATION_AND_MEASUREMENT_CORRECTIVE = PASS`
+- `F01_RESET_MEASUREMENT_STATUS = APPLIED`
+- `F02_TEMP_HYGIENE_STATUS = APPLIED`
+- `P0S4_CORRECTIVE_REREVIEW_VERDICT = PASS`
+- `P0S4_CORRECTIVE_REREVIEW_ACCEPTED = YES`
+- `P0S4_EXPECTATION_ASSESSMENT = MET_WITH_CONSTRAINT`
+- `P0S4_TECHNICALLY_READY_FOR_CLOSURE = YES`
+- `P0S_UNARY_PASS = YES`
+- `P0S_STREAM_PASS = YES`
+- `P0S_EVENT_GENERATION_PASS = YES`
+- `P0S_APPROVAL_PASS = YES`
+- `P0S_USER_QUESTION_PASS = YES`
+- `P0S_CANCEL_PASS = YES`
+- `P0S_BINARY_CARRIER_PASS = YES`
+- `P0S_NATIVE_PICKER_OR_EQUIVALENT_PASS = YES`
+- `P0S4_NO_DUPLICATE_APPROVAL_SETTLEMENT = YES`
+- `P0S4_NO_DUPLICATE_USER_QUESTION_SETTLEMENT = YES`
+- `P0S5_ALLOWED = NO`
+- `P0S5_STATE = NOT_STARTED`
+- `READY_FOR_P0S5 = NO`
+- `CLOSURE_COMMIT_PERFORMED = NO`
+- `PUSH_PERFORMED = NO`
 - `ALLOW_P0S = YES`
 
 Authority for P0 closure remains
@@ -101,8 +130,25 @@ recorded above. Independent Review confirmed the protected-current-user real
 Windows Named Pipe, pre-Gateway authentication, Renderer isolation, 38 real
 Harness Gateway unary calls and three concurrent basic stream framing channels.
 The stage closes as PASS while its feasibility disposition remains
-`PROVEN_WITH_CONSTRAINT`. Its adapters remain `NOT_PRODUCTION`; complete stream
-and Connection semantics remain P0.S-4.
+`PROVEN_WITH_CONSTRAINT`. Its adapters remain `NOT_PRODUCTION`.
+P0.S-4 Independent Review returned `PASS` with recommendation
+`ACCEPT_PROVEN_WITH_CONSTRAINT`; F-01 was LOW/NON_BLOCKING but required an
+evidence-truthfulness corrective before closure. Corrective run
+`1f16242307b04bc19cf1b9cb8295d813` retained all original gates and replaced
+the former reset constants with runtime causal records: each of four real
+`$events.ready` records triggered exactly one test-owned Desktop-equivalent
+projection invalidation and repull request, with no pre-ready or duplicate-
+generation reset. Frozen Harness emitted no named `connection/reset` wire
+event. F-02 validated and irreversibly removed 18 exact current-user TEMP
+P0.S-4 runtime directories; undeleted and remaining counts are zero. All final
+resources and processes reached zero, and Frozen Harness remained clean. The
+native picker runner still requires two user UI actions. Independent
+Corrective Re-Review run `ed73b7779ab64c3ab4bbfde64011bf98` returned `PASS`
+after 146 checks and recommended closure. The Architecture Owner accepted the
+re-review and closed P0.S-4 as `PASS / CLOSED`, with expectation assessment
+`MET_WITH_CONSTRAINT` and technical disposition `PROVEN_WITH_CONSTRAINT`.
+AUDIT-008 is the formal review/closure record. P0.S-5 remains `NOT_STARTED`
+and disallowed pending separate Architecture Owner authorization.
 
 ## Architecture Review State
 
@@ -120,6 +166,10 @@ and Connection semantics remain P0.S-4.
 - Architecture Owner P0.S-2 Decision: `ACCEPT_PROVEN_WITH_CONSTRAINT`; strict-CSP and Settings constraints accepted; P0.S-2 closed
 - Independent P0.S-3 Review (AUDIT-007): `PASS`; Executor claim and runtime gates confirmed; F-01 through F-04 informational and non-blocking
 - Architecture Owner P0.S-3 Decision: `ACCEPT_PROVEN_WITH_CONSTRAINT`; carrier/trust constraints accepted; P0.S-3 closed
+- Independent P0.S-4 Review: `PASS`; recommendation `ACCEPT_PROVEN_WITH_CONSTRAINT`; F-01 LOW required corrective before closure, F-02 through F-05 informational
+- P0.S-4 Targeted Corrective: `PASS`; F-01 causal reset measurement and F-02 TEMP hygiene applied
+- Independent P0.S-4 Corrective Re-Review (AUDIT-008): `PASS`; 146 checks; corrective claim confirmed; recommendation `PROCEED_TO_CLOSURE`
+- Architecture Owner P0.S-4 Decision: Corrective Re-Review accepted; `MET_WITH_CONSTRAINT`; P0.S-4 closed
 
 ## Current Architecture Baseline
 
@@ -168,23 +218,25 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - P0.S-1: PASS / CLOSED; Host Profile feasibility remains `PROVEN_WITH_CONSTRAINT`; Layer C constraint accepted
 - P0.S-2: PASS / CLOSED; Client Boot feasibility remains `PROVEN_WITH_CONSTRAINT`; constraints accepted
 - P0.S-3: PASS / CLOSED; Local Carrier + Trust feasibility remains `PROVEN_WITH_CONSTRAINT`; constraints accepted
-- P0.S-4 through P0.S-8: NOT_STARTED
+- P0.S-4: PASS / CLOSED; `MET_WITH_CONSTRAINT`; technical disposition remains `PROVEN_WITH_CONSTRAINT`
+- P0.S-5 through P0.S-8: NOT_STARTED; `P0S5_ALLOWED = NO`; separate Owner authorization required
 - P0.5 Design: READY, but freeze remains NOT_ALLOWED while P0.S is IN_PROGRESS
 - P1 Detailed Freeze: NOT_ALLOWED until P0.S PASS
 - P2+ Implementation: NOT_ALLOWED
 
 ## Immediate Next Action
 
-1. Create the bounded P0.S-3 Closure Commit containing the Executor, Evidence,
-   AUDIT-007 and formal Owner closure documents. This action does not start
-   P0.S-4.
+1. Return the bounded P0.S-4 closure set to the Architecture Owner for the
+   Closure Commit decision. Do not commit, push or start P0.S-5 in this run.
 2. Do not pull/switch/update the frozen Harness SHA without an Architecture Decision.
 3. Spike code is NOT production by default.
 4. Risk / Spike input authority: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
-5. Preserve the P0.S-1 unary-only boundary: full event/stream/settlement/cancel/
-   connection-loss/backpressure proof belongs to P0.S-4.
+5. Preserve the P0.S-4/P0.S-5 boundary: P0.S-4 proved carrier reconnect
+   settlement safety, but full Desktop lifecycle replay remains P0.S-5.
 6. P0.S-1 Evidence: `docs/06-testing-acceptance/evidence/P0S-1-HOST-PROFILE-FEASIBILITY-EVIDENCE.md`.
 7. P0.S-2 Evidence: `docs/06-testing-acceptance/evidence/P0S-2-ELECTRON-CLIENT-BOOT-EVIDENCE.md`.
 8. P0.S-2 Independent Review: `docs/05-reviews/architecture/AUDIT-006-P0S2-INDEPENDENT-REVIEW.md`.
 9. P0.S-3 Executor Evidence: `docs/06-testing-acceptance/evidence/P0S-3-LOCAL-CARRIER-AND-TRUST-EVIDENCE.md`.
 10. P0.S-3 Independent Review: `docs/05-reviews/architecture/AUDIT-007-P0S3-INDEPENDENT-REVIEW.md`.
+11. P0.S-4 Executor Evidence: `docs/06-testing-acceptance/evidence/P0S-4-CONNECTION-FEATURE-COMPLETENESS-EVIDENCE.md`.
+12. P0.S-4 Independent Review / Corrective Re-Review / Formal Closure: `docs/05-reviews/architecture/AUDIT-008-P0S4-INDEPENDENT-REVIEW.md`.

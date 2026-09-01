@@ -1,0 +1,2086 @@
+{
+  "classification": "NOT_PRODUCTION",
+  "runId": "1f16242307b04bc19cf1b9cb8295d813",
+  "result": "PASS",
+  "startedAt": "2026-09-01T05:10:33.5847567+00:00",
+  "completedAt": "2026-09-01T05:11:09.6309787+00:00",
+  "runtimeRoot": "<TEMP>\\shaco-forge-p0s4-<RUN_ID>",
+  "baseline": {
+    "shacoBranch": "master",
+    "shacoHead": "e1270ce2251b03972f33f32088a09408cd3880ef",
+    "harnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "harnessPackage": "0.1.2-alpha.1",
+    "harnessLockSha256": "506ad1fc7c40f71ce8c6afe08724fdd55020c1a527d7a7a185c559d39ecfcaf1",
+    "harnessCleanBefore": true,
+    "harnessCleanAfter": true,
+    "nodeVersion": "v24.18.0",
+    "electronVersion": "35.7.5",
+    "windowsVersion": "Microsoft Windows NT 10.0.26200.0",
+    "powerShellVersion": "7.6.4"
+  },
+  "identities": {
+    "currentUserSidHashPrefix": "62946077d6ae48fa",
+    "workerIdentityHashPrefix": "9cb657c1b0a54a12",
+    "endpointIdentityHashPrefix": "58a50068b663eaf4",
+    "pipeEndpointHashPrefix": "8ff61904b5754350",
+    "pipeEndpointRedacted": true,
+    "ephemeralSecretPersisted": false,
+    "browserAuthCookieUsed": false
+  },
+  "profileValidation": {
+    "exitCode": 0,
+    "profileName": "shaco-host",
+    "hasBase": true,
+    "hasLocalBundle": true,
+    "hasDshWebApp": false,
+    "hasHostWebserver": false,
+    "hasClientHmr": false,
+    "stderrEmpty": true
+  },
+  "workerReady": {
+    "classification": "NOT_PRODUCTION",
+    "workerCarrierPid": 34620,
+    "dshPid": 33824,
+    "protocolVersion": 1,
+    "maxFrameBytes": 262144,
+    "framePrefixBytes": 4,
+    "pipeTransmissionMode": "Byte",
+    "pipeOptionsCurrentUserOnly": false,
+    "explicitProtectedCurrentUserAcl": true,
+    "currentUserSidHashPrefix": "62946077d6ae48fa",
+    "aclOwnerSidHashPrefix": "62946077d6ae48fa",
+    "aclProtected": true,
+    "aclRules": [
+      {
+        "identityHashPrefix": "62946077d6ae48fa",
+        "accessControlType": "Allow",
+        "rights": "FullControl",
+        "isInherited": false
+      }
+    ],
+    "currentUserOnly": true,
+    "pipeEndpointHashPrefix": "8ff61904b5754350",
+    "pipeEndpointRedacted": true,
+    "workerIdentityHashPrefix": "9cb657c1b0a54a12",
+    "endpointIdentityHashPrefix": "58a50068b663eaf4",
+    "ephemeralSecretBytes": 32,
+    "ephemeralSecretPersisted": false
+  },
+  "dshReady": {
+    "classification": "NOT_PRODUCTION",
+    "pid": 33824,
+    "nodeExecutable": "D:\\Development\\nodejs\\node.exe",
+    "nodeVersion": "v24.18.0",
+    "profileName": "shaco-host",
+    "gatewayInvokePresent": true,
+    "gatewayWireStreamPresent": true,
+    "connectionFetchPresent": true,
+    "exactRoute": "/api/session.export",
+    "standardPresetResolved": true,
+    "streamCreditLimit": 4,
+    "binaryChunkBytes": 16384,
+    "maxBinaryBytes": 2097152,
+    "browserAuthConstructed": false,
+    "stockWebStarted": false
+  },
+  "electron": {
+    "classification": "NOT_PRODUCTION",
+    "result": "PASS",
+    "processTopology": {
+      "electronMainPid": 20684,
+      "rendererPid": 16876,
+      "workerCarrierPid": 34620,
+      "dshWorkerPid": 33824,
+      "electronApplicationPids": [
+        20684,
+        8236,
+        36284,
+        16876
+      ],
+      "independentMainAndWorker": true,
+      "dshProfileEntry": "dsh --profile shaco-host"
+    },
+    "rendererIsolation": {
+      "renderer": {
+        "requireType": "undefined",
+        "processType": "undefined",
+        "bridgeNames": [
+          "p0s4Bridge"
+        ],
+        "bridgeKeys": [
+          "run"
+        ],
+        "transportGlobalPresent": false,
+        "cookie": "",
+        "protocol": "data:",
+        "origin": "null"
+      },
+      "preload": {
+        "contextIsolated": true,
+        "sandboxed": true,
+        "preloadPid": 16876,
+        "exposedKeys": [
+          "run"
+        ],
+        "pipePathExposed": false,
+        "reusableCredentialExposed": false
+      },
+      "pipeEndpointExposed": false,
+      "reusableWorkerCredentialExposed": false,
+      "arbitraryIpcExposed": false,
+      "directNamedPipeAccess": false,
+      "arbitraryFilesystemCapability": false
+    },
+    "authentication": {
+      "protocolVersion": 1,
+      "explicitCompletionState": true,
+      "currentUserSidHashPrefix": "62946077d6ae48fa",
+      "workerIdentityHashPrefix": "9cb657c1b0a54a12",
+      "endpointIdentityHashPrefix": "58a50068b663eaf4",
+      "pipeEndpointHashPrefix": "8ff61904b5754350",
+      "pipeEndpointRedacted": true,
+      "ephemeralSecretBytes": 32,
+      "ephemeralPerStartMaterial": true,
+      "secretPersisted": false,
+      "browserAuthCookieUsed": false,
+      "negative": {
+        "results": [
+          {
+            "test": "unauthenticated-request",
+            "reason": "unauthenticated-request",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "unauthenticated-binary",
+            "reason": "unauthenticated-request",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "wrong-proof",
+            "reason": "invalid-proof",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "wrong-worker-identity",
+            "reason": "worker-identity-mismatch",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "wrong-endpoint-identity",
+            "reason": "endpoint-identity-mismatch",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "wrong-user-sid",
+            "reason": "user-sid-mismatch",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "malformed-frame",
+            "reason": "malformed-frame",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "oversize-frame",
+            "reason": "oversize-frame",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "replayed-handshake",
+            "reason": "replayed-handshake",
+            "gatewayDispatchCount": 0
+          },
+          {
+            "test": "wrong-business-endpoint",
+            "reason": "endpoint-not-allowlisted",
+            "gatewayDispatchCount": 0
+          }
+        ],
+        "preGatewayStatus": {
+          "type": "diagnostic-status-response",
+          "requestId": "91f3fce1-5b0e-4ff2-b703-de33f5ae0224",
+          "gatewayDispatchCount": 0,
+          "streamOpenCount": 0,
+          "streamItemCount": 0,
+          "streamEndCount": 0,
+          "streamErrorCount": 0,
+          "streamCancelCount": 0,
+          "maxStreamCreditsObserved": 0,
+          "binaryRouteDispatches": 0,
+          "binaryChunkCount": 0,
+          "binaryPeakChunkBytes": 0,
+          "binaryProducerCancels": 0,
+          "maxBinaryCreditsObserved": 0,
+          "activeStreams": 0,
+          "activeBinaries": 0,
+          "fixture": {
+            "approvalSettlements": 0,
+            "questionSettlements": 0,
+            "cancelCompletions": 0,
+            "streamOpens": 0,
+            "streamReturns": 0,
+            "agents": []
+          }
+        }
+      }
+    },
+    "unary": {
+      "pass": true,
+      "endpoint": "agentPresets/list",
+      "connectionFetchDispatch": true
+    },
+    "streams": {
+      "seam": "typertGateway.wireStream.open through authenticated Named Pipe adapter",
+      "endpoint": "p0s4Fixture/streamScenario",
+      "normal": {
+        "pass": true,
+        "itemCount": 12,
+        "ordered": true,
+        "endCount": 1
+      },
+      "producerError": {
+        "pass": true,
+        "itemCount": 2,
+        "errorCount": 1,
+        "errorCode": "p0s4-producer-error"
+      },
+      "consumerCancel": {
+        "pass": true,
+        "terminal": "stream-cancelled"
+      },
+      "concurrent": {
+        "pass": true,
+        "streamCount": 3,
+        "unaryCount": 8
+      },
+      "backpressure": {
+        "pass": true,
+        "creditLimit": 4,
+        "itemsProducedWhileStalled": 4,
+        "activeStreamsDuringStall": 1
+      },
+      "counters": {
+        "type": "diagnostic-status-response",
+        "requestId": "b3a81cce-4b5c-424d-b05e-f08c884c54d8",
+        "gatewayDispatchCount": 9,
+        "streamOpenCount": 7,
+        "streamItemCount": 79,
+        "streamEndCount": 4,
+        "streamErrorCount": 1,
+        "streamCancelCount": 2,
+        "maxStreamCreditsObserved": 4,
+        "binaryRouteDispatches": 0,
+        "binaryChunkCount": 0,
+        "binaryPeakChunkBytes": 0,
+        "binaryProducerCancels": 0,
+        "maxBinaryCreditsObserved": 0,
+        "activeStreams": 0,
+        "activeBinaries": 0,
+        "fixture": {
+          "approvalSettlements": 0,
+          "questionSettlements": 0,
+          "cancelCompletions": 0,
+          "streamOpens": 7,
+          "streamReturns": 7,
+          "agents": []
+        }
+      },
+      "connectionLoss": {
+        "pass": true,
+        "terminalPolicy": "connection-owned stream aborted; no Agent cancel mapping",
+        "activeStreamsAfterReconnect": 1,
+        "fixtureStreamReturnsAfterReconnect": 8
+      }
+    },
+    "events": {
+      "pass": true,
+      "endpoint": "$events",
+      "readyObserved": true,
+      "readyCount": 4,
+      "generations": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "uniqueClientIds": true,
+      "clientIdHashPrefixes": [
+        "6dcb64b64897cf05",
+        "c2b636780a336477",
+        "7438207d4d0ac6aa",
+        "9a58c6547220734c"
+      ],
+      "connectionResetObserved": true,
+      "connectionResetCount": 4,
+      "resetSource": "real Harness $events.ready triggers test-owned Desktop-equivalent reset/projection invalidation",
+      "resetMeasurement": {
+        "readyCount": 4,
+        "uniqueGenerationCount": 4,
+        "connectionResetObserved": true,
+        "connectionResetCount": 4,
+        "resetSource": "real Harness $events.ready triggers test-owned Desktop-equivalent reset/projection invalidation",
+        "preReadyResetCount": 0,
+        "noResetWithoutReady": true,
+        "oneResetPerReady": true,
+        "noDuplicateGenerationReset": true,
+        "projectionInvalidationCount": 4,
+        "projectionRepullRequestedCount": 4,
+        "everyRepullHasResetCause": true,
+        "readyRecords": [
+          {
+            "readySequence": 1,
+            "generation": 1,
+            "readyClientIdHashPrefix": "6dcb64b64897cf05",
+            "sourceEvent": "$events.ready"
+          },
+          {
+            "readySequence": 2,
+            "generation": 2,
+            "readyClientIdHashPrefix": "c2b636780a336477",
+            "sourceEvent": "$events.ready"
+          },
+          {
+            "readySequence": 3,
+            "generation": 3,
+            "readyClientIdHashPrefix": "7438207d4d0ac6aa",
+            "sourceEvent": "$events.ready"
+          },
+          {
+            "readySequence": 4,
+            "generation": 4,
+            "readyClientIdHashPrefix": "9a58c6547220734c",
+            "sourceEvent": "$events.ready"
+          }
+        ],
+        "resetRecords": [
+          {
+            "resetSequence": 1,
+            "causedByReadySequence": 1,
+            "generation": 1,
+            "readyClientIdHashPrefix": "6dcb64b64897cf05",
+            "source": "events.ready",
+            "action": "test-owned-desktop-projection-invalidate-and-request-repull",
+            "projectionInvalidated": true,
+            "cacheEntriesInvalidated": 1,
+            "projectionRepullRequested": true
+          },
+          {
+            "resetSequence": 2,
+            "causedByReadySequence": 2,
+            "generation": 2,
+            "readyClientIdHashPrefix": "c2b636780a336477",
+            "source": "events.ready",
+            "action": "test-owned-desktop-projection-invalidate-and-request-repull",
+            "projectionInvalidated": true,
+            "cacheEntriesInvalidated": 1,
+            "projectionRepullRequested": true
+          },
+          {
+            "resetSequence": 3,
+            "causedByReadySequence": 3,
+            "generation": 3,
+            "readyClientIdHashPrefix": "7438207d4d0ac6aa",
+            "source": "events.ready",
+            "action": "test-owned-desktop-projection-invalidate-and-request-repull",
+            "projectionInvalidated": true,
+            "cacheEntriesInvalidated": 1,
+            "projectionRepullRequested": true
+          },
+          {
+            "resetSequence": 4,
+            "causedByReadySequence": 4,
+            "generation": 4,
+            "readyClientIdHashPrefix": "9a58c6547220734c",
+            "source": "events.ready",
+            "action": "test-owned-desktop-projection-invalidate-and-request-repull",
+            "projectionInvalidated": true,
+            "cacheEntriesInvalidated": 1,
+            "projectionRepullRequested": true
+          }
+        ],
+        "projectionRepullRequests": [
+          {
+            "requestSequence": 1,
+            "causedByResetSequence": 1,
+            "generation": 1,
+            "readyClientIdHashPrefix": "6dcb64b64897cf05",
+            "requested": true
+          },
+          {
+            "requestSequence": 2,
+            "causedByResetSequence": 2,
+            "generation": 2,
+            "readyClientIdHashPrefix": "c2b636780a336477",
+            "requested": true
+          },
+          {
+            "requestSequence": 3,
+            "causedByResetSequence": 3,
+            "generation": 3,
+            "readyClientIdHashPrefix": "7438207d4d0ac6aa",
+            "requested": true
+          },
+          {
+            "requestSequence": 4,
+            "causedByResetSequence": 4,
+            "generation": 4,
+            "readyClientIdHashPrefix": "9a58c6547220734c",
+            "requested": true
+          }
+        ]
+      },
+      "staleResultsRejected": true,
+      "pendingStateReprojected": true,
+      "finalSubscriptionCancelRequested": true,
+      "finalSubscriptionTerminal": "stream-end"
+    },
+    "approval": {
+      "pass": true,
+      "eventIdHashPrefix": "a1fb126bff7541a3",
+      "sameEventIdAfterReconnect": true,
+      "staleGenerationRejected": true,
+      "accepted": true,
+      "duplicateSafeNoop": true,
+      "hostSettlementCount": 1,
+      "durableDecisionCount": 1
+    },
+    "userQuestion": {
+      "pass": true,
+      "eventIdHashPrefix": "a4d2ce0bbd24baef",
+      "sameEventIdAfterReconnect": true,
+      "staleGenerationRejected": true,
+      "accepted": true,
+      "duplicateSafeNoop": true,
+      "hostSettlementCount": 1
+    },
+    "explicitCancel": {
+      "pass": true,
+      "disconnectDidNotCancel": true,
+      "endpoint": "session/cancel",
+      "accepted": true,
+      "completionCount": 1,
+      "finalAgentStatus": "idle"
+    },
+    "binary": {
+      "pass": true,
+      "seam": "connection.fetch.register exact /api/session.export + raw Named Pipe binary frames",
+      "fixtureClassification": "NOT_PRODUCTION deterministic exact Fetch owner",
+      "matrix": [
+        {
+          "size": 3,
+          "pass": true,
+          "sha256": "f742b965f156c10374bc23aea96e3a8aff8facd6fc079defeaa30219ad86f211",
+          "chunkCount": 1,
+          "exactSpecialBytes": true
+        },
+        {
+          "size": 4096,
+          "pass": true,
+          "sha256": "2c91d0f9d590f91a982fe9118eba8e30e0b01e51a8fb1949620d554a65c40b21",
+          "chunkCount": 1,
+          "exactSpecialBytes": true
+        },
+        {
+          "size": 65537,
+          "pass": true,
+          "sha256": "7447cf47715adfbdf755d2772df4df46f83821b532649f749a70fb984f904a8e",
+          "chunkCount": 5,
+          "exactSpecialBytes": true
+        },
+        {
+          "size": 262144,
+          "pass": true,
+          "sha256": "1e434022c7f4382c5f2b45d1ee9b91080740a5cb2cbb3dd907e056eebc62be2a",
+          "chunkCount": 16,
+          "exactSpecialBytes": true
+        }
+      ],
+      "cancellation": {
+        "terminal": "binary-cancelled",
+        "chunksBeforeCancel": 4,
+        "bytesBeforeCancel": 65536
+      },
+      "malformedStatus": 400,
+      "oversizeStatus": 413,
+      "limits": {
+        "maxBinaryBytes": 2097152,
+        "binaryChunkBytes": 16384,
+        "observedPeakChunkBytes": 16384
+      }
+    },
+    "nativePicker": {
+      "pass": true,
+      "seam": "Electron dialog.showOpenDialog documented native directory picker",
+      "success": {
+        "canceled": false,
+        "selectedDirectoryName": "workspace",
+        "exactExpectedPath": true
+      },
+      "cancel": {
+        "canceled": true,
+        "returnedPathCount": 0
+      },
+      "automation": {
+        "runnerSelfAutomated": false,
+        "safeExternalUiAutomationSupported": true
+      },
+      "rendererArbitraryFilesystemCapability": false
+    },
+    "framing": {
+      "jsonProtocol": "uint32-le byte length + UTF-8 JSON",
+      "binaryProtocol": "uint32-le byte length + 0x42 + 36-byte stream id + raw bytes",
+      "prefixBytes": 4,
+      "maxFrameBytes": 262144,
+      "observedFrameSizes": [
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": null,
+          "jsonBytes": 140,
+          "prefixBytes": 4,
+          "framedBytes": 144
+        },
+        {
+          "purpose": "binary-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 133,
+          "prefixBytes": 4,
+          "framedBytes": 137
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 453,
+          "prefixBytes": 4,
+          "framedBytes": 457
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": null,
+          "jsonBytes": 138,
+          "prefixBytes": 4,
+          "framedBytes": 142
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "diagnostic-status",
+          "payloadProbeBytes": null,
+          "jsonBytes": 79,
+          "prefixBytes": 4,
+          "framedBytes": 83
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 213,
+          "prefixBytes": 4,
+          "framedBytes": 217
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 259,
+          "prefixBytes": 4,
+          "framedBytes": 263
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 264,
+          "prefixBytes": 4,
+          "framedBytes": 268
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 258,
+          "prefixBytes": 4,
+          "framedBytes": 262
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-cancel",
+          "payloadProbeBytes": null,
+          "jsonBytes": 152,
+          "prefixBytes": 4,
+          "framedBytes": 156
+        },
+        {
+          "purpose": "diagnostic-status",
+          "payloadProbeBytes": null,
+          "jsonBytes": 79,
+          "prefixBytes": 4,
+          "framedBytes": 83
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 261,
+          "prefixBytes": 4,
+          "framedBytes": 265
+        },
+        {
+          "purpose": "diagnostic-status",
+          "payloadProbeBytes": null,
+          "jsonBytes": 79,
+          "prefixBytes": 4,
+          "framedBytes": 83
+        },
+        {
+          "purpose": "stream-cancel",
+          "payloadProbeBytes": null,
+          "jsonBytes": 158,
+          "prefixBytes": 4,
+          "framedBytes": 162
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 264,
+          "prefixBytes": 4,
+          "framedBytes": 268
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 264,
+          "prefixBytes": 4,
+          "framedBytes": 268
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 264,
+          "prefixBytes": 4,
+          "framedBytes": 268
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 205,
+          "prefixBytes": 4,
+          "framedBytes": 209
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 205,
+          "prefixBytes": 4,
+          "framedBytes": 209
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 205,
+          "prefixBytes": 4,
+          "framedBytes": 209
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 205,
+          "prefixBytes": 4,
+          "framedBytes": 209
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 205,
+          "prefixBytes": 4,
+          "framedBytes": 209
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 205,
+          "prefixBytes": 4,
+          "framedBytes": 209
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 205,
+          "prefixBytes": 4,
+          "framedBytes": 209
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 205,
+          "prefixBytes": 4,
+          "framedBytes": 209
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "diagnostic-status",
+          "payloadProbeBytes": null,
+          "jsonBytes": 79,
+          "prefixBytes": 4,
+          "framedBytes": 83
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 267,
+          "prefixBytes": 4,
+          "framedBytes": 271
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 184,
+          "prefixBytes": 4,
+          "framedBytes": 188
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "diagnostic-status",
+          "payloadProbeBytes": null,
+          "jsonBytes": 79,
+          "prefixBytes": 4,
+          "framedBytes": 83
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 270,
+          "prefixBytes": 4,
+          "framedBytes": 274
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 184,
+          "prefixBytes": 4,
+          "framedBytes": 188
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 374,
+          "prefixBytes": 4,
+          "framedBytes": 378
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 374,
+          "prefixBytes": 4,
+          "framedBytes": 378
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 370,
+          "prefixBytes": 4,
+          "framedBytes": 374
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 229,
+          "prefixBytes": 4,
+          "framedBytes": 233
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 270,
+          "prefixBytes": 4,
+          "framedBytes": 274
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 184,
+          "prefixBytes": 4,
+          "framedBytes": 188
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 414,
+          "prefixBytes": 4,
+          "framedBytes": 418
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 414,
+          "prefixBytes": 4,
+          "framedBytes": 418
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 415,
+          "prefixBytes": 4,
+          "framedBytes": 419
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 229,
+          "prefixBytes": 4,
+          "framedBytes": 233
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 280,
+          "prefixBytes": 4,
+          "framedBytes": 284
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 229,
+          "prefixBytes": 4,
+          "framedBytes": 233
+        },
+        {
+          "purpose": "client-auth",
+          "payloadProbeBytes": null,
+          "jsonBytes": 490,
+          "prefixBytes": 4,
+          "framedBytes": 494
+        },
+        {
+          "purpose": "stream-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 184,
+          "prefixBytes": 4,
+          "framedBytes": 188
+        },
+        {
+          "purpose": "stream-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 229,
+          "prefixBytes": 4,
+          "framedBytes": 233
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 287,
+          "prefixBytes": 4,
+          "framedBytes": 291
+        },
+        {
+          "purpose": "rpc-call",
+          "payloadProbeBytes": 0,
+          "jsonBytes": 229,
+          "prefixBytes": 4,
+          "framedBytes": 233
+        },
+        {
+          "purpose": "binary-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 150,
+          "prefixBytes": 4,
+          "framedBytes": 154
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 153,
+          "prefixBytes": 4,
+          "framedBytes": 157
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 154,
+          "prefixBytes": 4,
+          "framedBytes": 158
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 155,
+          "prefixBytes": 4,
+          "framedBytes": 159
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 156,
+          "prefixBytes": 4,
+          "framedBytes": 160
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-credit",
+          "payloadProbeBytes": null,
+          "jsonBytes": 136,
+          "prefixBytes": 4,
+          "framedBytes": 140
+        },
+        {
+          "purpose": "binary-cancel",
+          "payloadProbeBytes": null,
+          "jsonBytes": 125,
+          "prefixBytes": 4,
+          "framedBytes": 129
+        },
+        {
+          "purpose": "binary-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 161,
+          "prefixBytes": 4,
+          "framedBytes": 165
+        },
+        {
+          "purpose": "binary-open",
+          "payloadProbeBytes": null,
+          "jsonBytes": 156,
+          "prefixBytes": 4,
+          "framedBytes": 160
+        },
+        {
+          "purpose": "diagnostic-status",
+          "payloadProbeBytes": null,
+          "jsonBytes": 79,
+          "prefixBytes": 4,
+          "framedBytes": 83
+        },
+        {
+          "purpose": "stream-cancel",
+          "payloadProbeBytes": null,
+          "jsonBytes": 166,
+          "prefixBytes": 4,
+          "framedBytes": 170
+        },
+        {
+          "purpose": "diagnostic-status",
+          "payloadProbeBytes": null,
+          "jsonBytes": 79,
+          "prefixBytes": 4,
+          "framedBytes": 83
+        },
+        {
+          "purpose": "carrier-finish",
+          "payloadProbeBytes": null,
+          "jsonBytes": 76,
+          "prefixBytes": 4,
+          "framedBytes": 80
+        }
+      ],
+      "parser": {
+        "inboundDataChunks": 143,
+        "parserPartialWaits": 104,
+        "logicalFramesReceived": 53,
+        "logicalFramesSent": 43,
+        "fragmentedFrameSends": 43,
+        "binaryFramesReceived": 27,
+        "maxBufferedMessages": 4
+      },
+      "partialWritesDeliberatelyFragmented": true
+    },
+    "boundedResources": {
+      "streamCreditLimit": 4,
+      "binaryChunkBytes": 16384,
+      "maxBinaryBytes": 2097152,
+      "mainRssBytesBefore": 95887360,
+      "mainRssBytesAfter": 145653760,
+      "mainObservedRssPeakBytes": 145653760,
+      "finalActiveStreams": 0,
+      "finalActiveBinaries": 0,
+      "finalResourceCleanupPass": true
+    },
+    "stockWebExclusion": {
+      "browserAuthCookieUsed": false,
+      "stockDshWebAppStarted": false,
+      "matchingTcpListeners": []
+    },
+    "finish": {
+      "type": "carrier-finished",
+      "requestId": "62923e5b-0e8b-4560-99d8-a628cecff749",
+      "gatewayForwardedCount": 24,
+      "streamForwardedCount": 12,
+      "rejectionCount": 10
+    }
+  },
+  "worker": {
+    "classification": "NOT_PRODUCTION",
+    "workerCarrierPid": 34620,
+    "dshPid": 33824,
+    "dshExitCode": 0,
+    "dshGracefulStopObserved": true,
+    "workerCarrierPeakWorkingSetBytes": 193323008,
+    "dshPeakWorkingSetBytes": 196898816,
+    "gatewayForwardedCount": 24,
+    "streamForwardedCount": 12,
+    "logicalFramesRead": 183,
+    "physicalReadOperations": 1097,
+    "framesRequiringMultipleReads": 183,
+    "logicalFramesWritten": 210,
+    "fragmentedFrameWrites": 183,
+    "binaryFramesWritten": 27,
+    "dshResponseQueueCapacity": 16,
+    "maxDshResponseQueueDepth": 9,
+    "connectionLossStreamCancels": 9,
+    "maxFrameBytes": 262144,
+    "framePrefixBytes": 4,
+    "rejections": [
+      {
+        "sequence": 1,
+        "reason": "unauthenticated-request",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 2,
+        "reason": "unauthenticated-request",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 3,
+        "reason": "invalid-proof",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 4,
+        "reason": "worker-identity-mismatch",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 5,
+        "reason": "endpoint-identity-mismatch",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 6,
+        "reason": "user-sid-mismatch",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 7,
+        "reason": "malformed-frame",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 8,
+        "reason": "oversize-frame",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false,
+        "observedFrameBytes": 262145
+      },
+      {
+        "sequence": 9,
+        "reason": "replayed-handshake",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      },
+      {
+        "sequence": 10,
+        "reason": "endpoint-not-allowlisted",
+        "gatewayForwardedCountAtDecision": 0,
+        "authenticated": false
+      }
+    ],
+    "pipeEndpointRedacted": true,
+    "ephemeralSecretPersisted": false,
+    "cookieUsed": false
+  },
+  "dsh": {
+    "classification": "NOT_PRODUCTION",
+    "pid": 33824,
+    "gatewayDispatchCount": 24,
+    "streamOpenCount": 12,
+    "streamItemCount": 91,
+    "streamEndCount": 8,
+    "streamErrorCount": 1,
+    "streamCancelCount": 7,
+    "maxStreamCreditsObserved": 4,
+    "binaryRouteDispatches": 5,
+    "binaryChunkCount": 27,
+    "binaryPeakChunkBytes": 16384,
+    "binaryProducerCancels": 1,
+    "maxBinaryCreditsObserved": 2,
+    "activeStreamsAtStop": 0,
+    "activeBinariesAtStop": 0,
+    "fixture": {
+      "approvalSettlements": 1,
+      "questionSettlements": 1,
+      "cancelCompletions": 1,
+      "streamOpens": 8,
+      "streamReturns": 8,
+      "agents": [
+        {
+          "label": "approval",
+          "sessionId": "ff991fdc-e6b1-4c6a-ab66-bcf941395875",
+          "status": "idle",
+          "approvalDecisions": 1
+        },
+        {
+          "label": "question",
+          "sessionId": "ee1f38ec-c052-4b6a-b1f5-03fffb3fd631",
+          "status": "idle",
+          "approvalDecisions": 0
+        },
+        {
+          "label": "explicit-cancel",
+          "sessionId": "989c6308-a3f5-40a6-8231-c3c7ad38e9a9",
+          "status": "idle",
+          "approvalDecisions": 0
+        }
+      ]
+    },
+    "seams": [
+      "connection.createSharedFetchHandler(/api)",
+      "connection.fetch.register(/api/session.export)",
+      "typertGateway.wireStream.open",
+      "$events",
+      "$events/result"
+    ],
+    "browserAuthConstructed": false,
+    "stockWebStarted": false
+  },
+  "tcp": {
+    "matchingListenersDuringRun": [],
+    "noMatchingTcpListener": true
+  },
+  "processCleanup": {
+    "observedPids": [
+      8236,
+      16876,
+      20684,
+      33824,
+      34620,
+      36284
+    ],
+    "residualPids": [],
+    "noResidualProcesses": true
+  },
+  "gates": {
+    "realWindowsNamedPipe": true,
+    "currentUserSidAcl": true,
+    "authenticationBeforeGateway": true,
+    "rendererIsolated": true,
+    "p0sUnaryPass": true,
+    "p0sStreamPass": true,
+    "p0sEventGenerationPass": true,
+    "p0sApprovalPass": true,
+    "p0sUserQuestionPass": true,
+    "p0sCancelPass": true,
+    "p0sBinaryCarrierPass": true,
+    "p0sNativePickerOrEquivalentPass": true,
+    "p0s4NoDuplicateApprovalSettlement": true,
+    "p0s4NoDuplicateUserQuestionSettlement": true,
+    "p0sLocalCarrierFeasible": true,
+    "partialFrameAssembly": true,
+    "boundedQueuesAndFrames": true,
+    "malformedAndOversizeFailClosed": true,
+    "noBrowserAuthCookie": true,
+    "noStockWebStack": true,
+    "noTcpListener": true,
+    "noResidualProcesses": true,
+    "harnessFinalClean": true
+  },
+  "adapters": [
+    {
+      "surface": "Electron Main Named Pipe Connection adapter",
+      "purpose": "Map authenticated local pipe frames to Connection Fetch and Gateway wireStream",
+      "publicOrPreviewSeamUsed": "HostConnectionService package-root API; TypertGateway.wireStream",
+      "notProduction": true,
+      "productionImpact": "NONE",
+      "changesDesktopWorkerArchitecture": false,
+      "corePatchRequired": false
+    },
+    {
+      "surface": "P0.S-4 deterministic Remote/Exact fixture",
+      "purpose": "Reproduce stream end/error and exact binary edge cases through real dispatch",
+      "publicOrPreviewSeamUsed": "TypertRemoteService/Remote; connection.fetch.register",
+      "notProduction": true,
+      "productionImpact": "NONE",
+      "changesDesktopWorkerArchitecture": false,
+      "corePatchRequired": false
+    },
+    {
+      "surface": "Desktop generation adapter",
+      "purpose": "Publish connection/reset only after real $events.ready",
+      "publicOrPreviewSeamUsed": "$events via TypertGateway.wireStream",
+      "notProduction": true,
+      "productionImpact": "NONE",
+      "changesDesktopWorkerArchitecture": false,
+      "corePatchRequired": false
+    },
+    {
+      "surface": "Electron native picker adapter",
+      "purpose": "Desktop-equivalent real Windows directory selection",
+      "publicOrPreviewSeamUsed": "Electron dialog.showOpenDialog",
+      "notProduction": true,
+      "productionImpact": "NONE",
+      "changesDesktopWorkerArchitecture": false,
+      "corePatchRequired": false
+    }
+  ],
+  "sourceSha256": {
+    "bundle/carrier-gateway.mjs": "50a899b9f3e3c577f8af1edc7596618136c27acb9dea06465b5de4ec2539e20f",
+    "bundle/connection-compatibility.mjs": "77ba75abb376e4f22f768352efb237fa20f03846fccb8b58140178f82cb69b22",
+    "bundle/cordis.patch.yml": "b6a48bfab1ef1e5263d6f5952305ed2f023b668f06b51c008e5d74817b8f5dac",
+    "bundle/package.json": "42c6a27c65dc0b97a0a1e74cf201a515df8eb7d4463af94baa900c506166a5a1",
+    "electron-main.mjs": "4a93e04006cf61b6d3b2cab4951a052870b73de155e82d41abc564248683b88a",
+    "preload.cjs": "b064b7ab0dcf4ae81209baa49c1408a118cb8c33963d67ec99036bf640305f2f",
+    "profile/cordis.patch.yml": "65a6fa2b1c85a43ce9cad1939725b4452b741bdd490afd984eefb6ef385cd1ae",
+    "profile/package.json": "10b7cfbe27b055a2fc4ac535f221d33c5e29f1cfa76c42f02746acda8dad8213",
+    "README.md": "c92298892bb89a3e13541c1394e0051b284a8f0b69a15a26248f171d9104e172",
+    "run-spike.ps1": "8e2400a1611e63579873710cbb5261807ab56ec884c38cb5fdf416a396c73003",
+    "worker-carrier.cs": "1cd98621b7d2c3e65853c1b7634357cb85e0d50015fe9e79c207878577fa5a8d",
+    "worker-carrier.ps1": "c5b0fbbe42b386240c2fa27c631040387d37b925405067984dc82d42ee3089ad"
+  },
+  "outputStreamsEmpty": {
+    "electronStdout": true,
+    "electronStderr": true,
+    "workerStdout": true,
+    "workerStderr": true
+  }
+}

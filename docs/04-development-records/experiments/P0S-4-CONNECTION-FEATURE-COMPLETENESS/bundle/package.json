@@ -1,0 +1,16 @@
+{
+  "name": "@shaco-forge/not-production-p0s4-host-bundle",
+  "version": "0.0.0-not-production",
+  "classification": "NOT_PRODUCTION",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./connection-compatibility": "./connection-compatibility.mjs",
+    "./carrier-gateway": "./carrier-gateway.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

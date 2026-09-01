@@ -2,6 +2,137 @@
 
 Status: ACTIVE
 
+## 2026-09-01
+
+- The first P0.S-4 Closure Commit Gate stopped before commit because raw
+  `git diff --cached --check` reported exactly five `new blank line at EOF`
+  diagnostics after the approved 22 paths were staged. The earlier ordinary
+  `git diff --check` result covered tracked diffs only and did not inspect the
+  then-untracked new experiment files. No other whitespace, credential, scope
+  or content diagnostic was present; no commit or push occurred at that Gate.
+- Architecture Owner accepted an exact-file protected-evidence EOF whitespace
+  waiver for `bundle/connection-compatibility.mjs`,
+  `bundle/cordis.patch.yml`, `preload.cjs`,
+  `profile/cordis.patch.yml`, and `worker-carrier.ps1`. Each file ends with one
+  extra LF, has no trailing space or BOM, passes its language syntax check, and
+  retains the SHA-256 recorded in Corrective `summary.json` `sourceSha256`.
+  The files were not formatted, rewritten or otherwise changed.
+- Final handling preserves the executed and independently reproduced runtime
+  bytes and replaces no raw result: `RAW_STAGED_DIFF_CHECK = FAIL_EXPECTED`.
+  The one-commit exact-diagnostic validation is
+  `STAGED_DIFF_CHECK_WHITELIST_GATE = PASS`, with
+  `P0S4_PROTECTED_EVIDENCE_EOF_WHITESPACE_WAIVER = ACCEPTED`,
+  `P0S4_EOF_WAIVER_DOCUMENTATION_CORRECTIVE = PASS`,
+  `WAIVER_SCOPE_FILE_COUNT = 5`, `WAIVER_SCOPE_EXACT = YES`,
+  `PROTECTED_RUNTIME_SOURCE_BYTES_CHANGED = NO`, and
+  `SOURCE_SHA256_CHAIN_PRESERVED = YES`. The waiver is not reusable outside
+  this Closure Commit and does not authorize P0.S-5 or a push.
+- P0.S-4 Formal Closure completed as documentation/governance only. No P0.S-4
+  runtime, Electron, Worker, `dsh`, Native Picker or Provider was rerun; no
+  P0.S-5 work, commit or push was performed. AUDIT-008 faithfully persists the
+  external Independent Review and Corrective Re-Review results and the
+  Architecture Owner closure decision.
+- The accepted chain is: original Executor run
+  `be9a04c29c24461c9fe01d7343be3893` =
+  `PROVEN_WITH_CONSTRAINT`; Independent Review = `PASS` with F-01 corrective
+  required; Corrective run `1f16242307b04bc19cf1b9cb8295d813` = `PASS` with
+  23/23 gates and 138 verifier checks; Independent Corrective Re-Review run
+  `ed73b7779ab64c3ab4bbfde64011bf98` = `PASS` with 146 checks and
+  `PROCEED_TO_CLOSURE`; Architecture Owner accepted the re-review.
+- Formal state is `P0S4_FORMAL_CLOSURE = PASS`,
+  `SHACO_FORGE_V1_0_P0S_4 = PASS`, `P0S4_STATE = CLOSED`,
+  `P0S4_EXPECTATION_ASSESSMENT = MET_WITH_CONSTRAINT`,
+  `P0S4_CORRECTIVE_REREVIEW_ACCEPTED = YES`,
+  `P0S_LOCAL_CARRIER_FEASIBLE = YES`, and
+  `CONNECTION_CARRIER_CORE_PATCH_REQUIRED = NO`. All experiment
+  implementations remain `NOT_PRODUCTION`; the global
+  `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`.
+- P0.S-5 remains `P0S5_STATE = NOT_STARTED`, `P0S5_ALLOWED = NO`, and
+  `READY_FOR_P0S5 = NO`. The frozen P0.S Contract defines P0.S-5 evidence but
+  does not automatically authorize successor execution; the P0.S-2/P0.S-3
+  closure pattern also retained the next step as disallowed until a separate
+  Architecture Owner action. This closure therefore does not infer or bypass
+  the missing P0.S-5 planning/execution authorization.
+- AUDIT-008 records CF-01 wording shorthand (P1), CF-02 irreversible cleanup
+  with Reviewer-confirmed residual `0` (no further corrective), and CF-03
+  equivalent-driver/PowerShell provenance (P1/P7). Original F-03 Electron
+  version, F-04 PowerShell 7 reproduction, and F-05 bounded nonce state keep
+  their existing downstream routes.
+- P0.S-4 Independent Review returned `PASS` with recommendation
+  `ACCEPT_PROVEN_WITH_CONSTRAINT`. F-01 was LOW/NON_BLOCKING but the
+  Architecture Owner required correction before closure because the prior
+  `connectionResetCount`, `connectionResetObserved`, and generations evidence
+  was constant-derived rather than a measured reset action. F-02 through F-05
+  were informational; this targeted corrective handled only F-01 and F-02.
+- Corrective run `1f16242307b04bc19cf1b9cb8295d813` returned `PASS` against
+  the unchanged Shaco and Frozen Harness baselines. Each valid real
+  `$events.ready` now causally performs one actual test-owned
+  Desktop-equivalent projection invalidation and queues one repull request.
+  Runtime records showed ready/reset/invalidation/repull counts of `4`, no
+  pre-ready reset, and no duplicate-generation reset. Frozen Harness did not
+  emit a named `connection/reset` wire event. Stale rejection and pending
+  approval/question reprojection continued to pass. The machine verifier
+  passed 138 checks, including full causal mappings and all original gates.
+- F-02 enumerated only exact `shaco-forge-p0s4-<32hex>` direct children of the
+  current-user TEMP root, resolved literal absolute paths, and validated the
+  P0.S-4 profile/bundle markers and run artifacts. Candidate/verified/deleted/
+  undeleted/remaining counts were `18/18/18/0/0`. Deletion included real
+  session JSONL and is irreversible; no repository, Frozen Harness, project,
+  or other application temporary path was removed.
+- Corrective handoff state before re-review was
+  `P0S4_DOCUMENTATION_AND_MEASUREMENT_CORRECTIVE = PASS`,
+  `F01_RESET_MEASUREMENT_STATUS = APPLIED`,
+  `F02_TEMP_HYGIENE_STATUS = APPLIED`, and
+  `P0S4_STATE = WAITING_CORRECTIVE_REVIEW`. The technical disposition remains
+  `PROVEN_WITH_CONSTRAINT`; `P0S4_CAN_CLOSE = NO`, `P0S5_ALLOWED = NO`,
+  `P0S_LOCAL_CARRIER_FEASIBLE = YES`,
+  `CONNECTION_CARRIER_CORE_PATCH_REQUIRED = NO`, and
+  `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`. F-03 Electron version pin, F-04
+  reviewer PowerShell availability, and F-05 bounded nonce state retain their
+  later runner/P1/P7 routing. P0.S-4 was not closed and P0.S-5 was not started.
+- Initial P0.S-4 Connection Feature Completeness Executor completed against Shaco
+  Forge `e1270ce2251b03972f33f32088a09408cd3880ef` and Frozen Harness
+  `cd5ef8148158c3a752a658978873241fdf8e2bbc` /
+  `@deepseek-ai/dsh@0.1.2-alpha.1`. Final run
+  `be9a04c29c24461c9fe01d7343be3893` returned `PASS`; the machine verifier
+  passed 93 checks and matched every recorded experiment source SHA-256.
+- A sandboxed Renderer called one allowlisted preload method. Electron Main
+  owned the ephemeral credentials and real Windows Named Pipe. The independent
+  protected-current-user carrier authenticated protocol, SID, Worker and
+  endpoint identity before Gateway dispatch. Ten unauthenticated, identity,
+  framing, replay and route negatives each observed zero Gateway dispatch.
+  No BrowserAuth cookie, stock Web stack, matching TCP listener, direct
+  Renderer pipe access, reusable credential or Frozen Harness mutation was
+  observed.
+- Real public/preview Connection seams passed `agentPresets/list`, complete
+  `typertGateway.wireStream.open` lifecycle/error/cancel/concurrency,
+  connection-loss behavior and four-credit backpressure. Four real
+  `$events.ready` generations drove reset identity. Approval and user-question
+  requests survived carrier reconnect, rejected stale generations, accepted
+  one Host-authoritative result and treated duplicates as safe no-ops. Real
+  `session/cancel` completed exactly once; transport disconnect alone did not
+  cancel the Agent.
+- An authenticated exact Fetch fixture at `/api/session.export` preserved raw
+  binary identity for 3, 4096, 65537 and 262144-byte payloads, including
+  non-UTF-8 and special bytes. Binary cancellation, 16384-byte chunks,
+  bounded credits, and malformed/oversize fail-closed behavior passed. The
+  final `$events` subscription was explicitly terminated; final active
+  stream/binary counts and residual process count were zero.
+- Electron's documented `dialog.showOpenDialog` returned the exact selected
+  directory and an explicit cancel result through narrow IPC. The repeatable
+  runner requires two external safe UI actions for the real Windows picker;
+  all carrier, fixture, generation and picker adapters remain
+  `NOT_PRODUCTION`. This constraint yields
+  `P0S4_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT`.
+- Initial Executor state was `P0S4_STATE = WAITING_REVIEW`, not PASS/CLOSED. All named
+  P0.S-4 gates are `YES`, including `P0S_LOCAL_CARRIER_FEASIBLE = YES` and both
+  no-duplicate-settlement gates. `CONNECTION_CARRIER_CORE_PATCH_REQUIRED = NO`,
+  `ADAPTER_OR_STUB_USED = YES`, `OWNER_DECISION_REQUIRED = NO`, and the global
+  `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`. P0.S-5 remains `NOT_STARTED` with
+  `P0S5_ALLOWED = NO`; the P0.S-5 approval/question lifecycle replay gates were
+  not set. Evidence:
+  `docs/06-testing-acceptance/evidence/P0S-4-CONNECTION-FEATURE-COMPLETENESS-EVIDENCE.md`.
+
 ## 2026-08-31
 
 - External Independent Review AUDIT-007 returned `PASS`, confirmed the P0.S-3

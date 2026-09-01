@@ -2,7 +2,7 @@
 
 Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0S = IN_PROGRESS`)
 
-Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-3 are `PASS / CLOSED` with Owner-accepted `PROVEN_WITH_CONSTRAINT` dispositions. P0.S remains `IN_PROGRESS`; P0.S-4 remains `NOT_STARTED` and disallowed.
+Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-4 are `PASS / CLOSED` with Architecture Owner-accepted constrained dispositions. P0.S remains `IN_PROGRESS`; P0.S-5 remains `NOT_STARTED` and disallowed pending separate Owner authorization.
 
 P0-7 frozen inputs (do not re-open P0; do not redesign this architecture):
 
@@ -171,9 +171,9 @@ The Architecture Owner accepted `ACCEPT_PROVEN_WITH_CONSTRAINT`. The managed
 carrier helper, PowerShell launcher, inherited-stdio bridge, non-listening
 Connection compatibility surface, Electron IPC adapter and deterministic
 basic-stream producer retain their recorded `NOT_PRODUCTION` adapter/stub
-classifications. This closes P0.S-3 only. Complete stream/Connection semantics
-remain P0.S-4, PowerShell is not authorized for product bundling, and P0.S-4
-remains `NOT_STARTED`.
+classifications. This closed P0.S-3 only. At that closure, complete stream/
+Connection semantics still belonged to P0.S-4 and P0.S-4 was `NOT_STARTED`;
+PowerShell was not authorized for product bundling.
 
 Preferred topology:
 
@@ -192,7 +192,73 @@ Hard requirements:
 - unary + stream concurrency demonstrated
 - payload/framing evidence captured for P1
 
-## P0.S-4 — Connection Feature Completeness
+## P0.S-4 — Connection Feature Completeness — PASS / CLOSED
+
+Formal closure state (2026-09-01):
+
+- `ALLOW_P0S4 = YES`
+- `P0S4_ALLOWED = YES`
+- `SHACO_FORGE_V1_0_P0S_4 = PASS`
+- `P0S4_FORMAL_CLOSURE = PASS`
+- `P0S4_STATE = CLOSED`
+- `P0S4_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT`
+- `P0S4_INDEPENDENT_REVIEW_VERDICT = PASS`
+- `P0S4_REVIEW_RECOMMENDATION = ACCEPT_PROVEN_WITH_CONSTRAINT`
+- `P0S4_DOCUMENTATION_AND_MEASUREMENT_CORRECTIVE = PASS`
+- `F01_RESET_MEASUREMENT_STATUS = APPLIED`
+- `F02_TEMP_HYGIENE_STATUS = APPLIED`
+- `P0S4_CORRECTIVE_REREVIEW_VERDICT = PASS`
+- `P0S4_CORRECTIVE_REREVIEW_ACCEPTED = YES`
+- `P0S4_EXPECTATION_ASSESSMENT = MET_WITH_CONSTRAINT`
+- `P0S4_TECHNICALLY_READY_FOR_CLOSURE = YES`
+- `P0S_UNARY_PASS = YES`
+- `P0S_STREAM_PASS = YES`
+- `P0S_EVENT_GENERATION_PASS = YES`
+- `P0S_APPROVAL_PASS = YES`
+- `P0S_USER_QUESTION_PASS = YES`
+- `P0S_CANCEL_PASS = YES`
+- `P0S_BINARY_CARRIER_PASS = YES`
+- `P0S_NATIVE_PICKER_OR_EQUIVALENT_PASS = YES`
+- `P0S4_NO_DUPLICATE_APPROVAL_SETTLEMENT = YES`
+- `P0S4_NO_DUPLICATE_USER_QUESTION_SETTLEMENT = YES`
+- `P0S_LOCAL_CARRIER_FEASIBLE = YES`
+- `CONNECTION_CARRIER_CORE_PATCH_REQUIRED = NO`
+- `ADAPTER_OR_STUB_USED = YES`
+- `OWNER_DECISION_REQUIRED = NO`
+- `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
+- `P0S5_ALLOWED = NO`
+- `P0S5_STATE = NOT_STARTED`
+- `READY_FOR_P0S5 = NO`
+- Evidence: `docs/06-testing-acceptance/evidence/P0S-4-CONNECTION-FEATURE-COMPLETENESS-EVIDENCE.md`
+- Independent Review / Corrective Re-Review / Formal Closure: `docs/05-reviews/architecture/AUDIT-008-P0S4-INDEPENDENT-REVIEW.md`
+
+Independent Review returned `PASS` with recommendation
+`ACCEPT_PROVEN_WITH_CONSTRAINT`; F-01 LOW/NON_BLOCKING required a measurement
+corrective before closure. Corrective run
+`1f16242307b04bc19cf1b9cb8295d813` passed the authenticated
+current-user Windows Named Pipe regression, real Connection unary, complete
+`typertGateway.wireStream.open` lifecycle, connection loss, bounded
+backpressure, reconnect-safe approval and user-question settlement, explicit
+`session/cancel`, exact raw binary bytes, and documented Electron native
+directory picker success/cancel. Four real `$events.ready` records each caused
+exactly one actual test-owned Desktop-equivalent projection invalidation and
+repull request; no reset occurred before ready and no generation was reset
+twice. Frozen Harness did not emit a named `connection/reset` wire event. The
+final event subscription was explicitly terminated, all stream/binary and
+process counts reached zero, and Frozen Harness stayed clean. F-02 validated
+and irreversibly deleted all 18 exact current-user TEMP P0.S-4 runtime
+directories; undeleted and remaining counts are zero.
+
+The carrier, deterministic Remote/exact fixture, desktop generation adapter,
+and native picker adapter are `NOT_PRODUCTION` and require no Harness Core
+patch. The native-picker runner requires two user UI actions, which is the
+recorded constraint. Independent Corrective Re-Review run
+`ed73b7779ab64c3ab4bbfde64011bf98` passed 146 checks, confirmed F-01/F-02 and
+recommended closure. The Reviewer used an equivalent temporary Driver rather
+than byte-for-byte execution of the PowerShell 7 launcher and did not modify
+project files. The Architecture Owner accepted the re-review and closed P0.S-4
+as `MET_WITH_CONSTRAINT`. Full Desktop lifecycle answer replay remains P0.S-5;
+neither `P0S_NO_APPROVAL_REPLAY` nor `P0S_NO_QUESTION_REPLAY` is set by P0.S-4.
 
 Hard:
 
@@ -210,6 +276,17 @@ Hard:
 Do not make `/export` itself REQUIRED solely to prove binary transport.
 
 ## P0.S-5 — Desktop Independence & Reconnect
+
+Current gate state after P0.S-4 closure:
+
+- `P0S5_ALLOWED = NO`
+- `P0S5_STATE = NOT_STARTED`
+- `READY_FOR_P0S5 = NO`
+
+The frozen Contract defines the evidence below but does not make predecessor
+closure an automatic successor authorization. Consistent with P0.S-2 and
+P0.S-3 closure transitions, a separate Architecture Owner planning/execution
+authorization is required before P0.S-5 begins.
 
 Prove:
 
