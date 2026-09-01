@@ -4,6 +4,13 @@ Status: ACTIVE
 
 ## 2026-09-01
 
+- Architecture Owner post-commit read-only verification found the sole stale
+  negative Closure Commit marker in the P0.S Phase Contract. It is aligned with
+  the completed `01ff17129b34a2831d4d45217d44483654b7ac43` Closure Commit. The
+  original 35-path Commit, technical Gates, Evidence and hashes remain
+  unchanged. This documentation-only alignment performs no Runtime, Review or
+  Evidence regeneration and grants no P0.S-6 authorization; it is persisted as
+  an independent two-file follow-up Commit.
 - P0.S-5 Documentation/Packaging Corrective and the authorized Closure Commit
   completed as one bounded transaction. The first historical Commit attempt had
   raw `git diff --check` exit `0` plus exactly six `LF will be replaced by CRLF`

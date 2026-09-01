@@ -310,7 +310,7 @@ Current gate state after Architecture Owner Formal Closure:
 - `P0S6_ALLOWED = NO`
 - `P0S6_STATE = NOT_STARTED`
 - `READY_FOR_P0S6 = NO`
-- `P0S5_CLOSURE_COMMIT_PERFORMED = NO`
+- `P0S5_CLOSURE_COMMIT_PERFORMED = YES`
 - `P0S5_PUSH_PERFORMED = NO`
 - `P0S_DESKTOP_CLOSE_WORKER_SURVIVES = YES`
 - `P0S_DESKTOP_CRASH_WORKER_SURVIVES = YES`
@@ -324,8 +324,12 @@ The frozen Contract defines the evidence below but does not make predecessor
 closure an automatic successor authorization. The bounded P0.S-5 Executor,
 Independent Review, Documentation / Provenance Corrective and Corrective
 Re-Review have completed. The Architecture Owner accepted the chain and closed
-P0.S-5, but this Formal Closure does not authorize Commit, Push or any P0.S-6
-planning/execution work.
+P0.S-5. The Formal Closure itself did not automatically authorize Commit or
+P0.S-6. Architecture Owner subsequently issued a separate bounded Closure
+Commit authorization, and commit
+`01ff17129b34a2831d4d45217d44483654b7ac43` completed that action without Push.
+That Commit does not authorize P0.S-6 planning or execution; P0.S-6 remains
+separately gated, disallowed and not started.
 
 CF-01 seam correction is binding for this execution. Frozen Harness exposes
 the Connection Client, generation/client identity, real `$events.ready`,
