@@ -25,7 +25,7 @@ V1.0 = Harness Desktop Baseline using Electron Desktop + independent per-user lo
 
 ## Current Status
 
-P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. AUDIT-004B = `PASS`. `P0_CLOSURE_AUDIT = PASS`. Risk register and P0.S inputs: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`. P0.S is NOT_STARTED. `P0_EXECUTOR_WORK = CLOSED`. `INDEPENDENT_P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. Next step is BEGIN P0.S FEASIBILITY SPIKE. P1 cannot freeze until P0.S passes.
+P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. AUDIT-004B = `PASS`. `P0_CLOSURE_AUDIT = PASS`. Risk register and P0.S inputs: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`. P0.S is `IN_PROGRESS`; P0.S-1 through P0.S-5 are PASS / CLOSED with accepted constraints. P0.S-6 is `NOT_STARTED`. The Architecture Owner authorizes only bounded, read-only, contract-only planning of the P0.S-6 Minimal Execution Contract. Implementation, Runtime, Diagnostic, Formal, experiment-source modification, new attempts and P0.S-7 are not authorized. `P0_EXECUTOR_WORK = CLOSED`. `INDEPENDENT_P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. P1 cannot freeze until P0.S passes.
 
 ## First Files to Read
 
@@ -41,8 +41,14 @@ P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baselin
 
 ## Immediate Next
 
-BEGIN P0.S FEASIBILITY SPIKE
+P0.S-6 MINIMAL EXECUTION CONTRACT — READ-ONLY PLANNING
 
-NOT EXECUTED in the Reviewer session.
+NOT EXECUTED
 
-`ALLOW_P0S = YES`. `P0_CLOSURE_AUDIT = PASS`.
+This purpose-bound planning authority is exhausted when the Contract is
+completed, and Contract completion does not authorize execution. H-05, H-20,
+the original P0.S-6 product Gates, Desktop + Worker architecture, frozen
+Harness baseline and feature scope remain unchanged. Historical P0.S-6
+attempts, the 39-file candidate, native-loader/retained trace, salvage and
+diagnostic records receive no retroactive authorization, PASS, Formal Evidence
+or candidate acceptance.

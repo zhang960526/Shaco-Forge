@@ -1,6 +1,6 @@
 # Shaco Forge Current Checkpoint
 
-Date: 2026-08-30
+Date: 2026-09-03
 
 ## Completed
 
@@ -21,6 +21,8 @@ Date: 2026-08-30
 - AUDIT-004 Independent P0 Closure Audit: `PASS_WITH_REQUIRED_CORRECTIONS`
 - P0 Closure Corrective F-01 / F-02 / F-03: Executor wording applied
 - AUDIT-004B Independent P0 Closure Corrective Re-Review: PASS
+- P0.S-1 through P0.S-5: PASS / CLOSED with accepted constraints
+- P0.S-6 Authority Alignment: bounded/read-only/contract-only Minimal Execution Contract planning authorized; execution not authorized
 
 ## Current Gate
 
@@ -74,7 +76,25 @@ Date: 2026-08-30
 
 `P0_STATE = CLOSED`
 
-`SHACO_FORGE_V1_0_P0S = NOT_STARTED`
+`SHACO_FORGE_V1_0_P0S = IN_PROGRESS`
+
+`P0S6_STATE = NOT_STARTED`
+
+`P0S6_MINIMAL_EXECUTION_CONTRACT_PLANNING = AUTHORIZED`
+
+`P0S6_PLANNING_SCOPE = BOUNDED_READ_ONLY_CONTRACT_ONLY`
+
+`P0S6_IMPLEMENTATION = NOT_AUTHORIZED`
+
+`P0S6_RUNTIME = NOT_AUTHORIZED`
+
+`P0S6_DIAGNOSTIC = NOT_AUTHORIZED`
+
+`P0S6_FORMAL = NOT_AUTHORIZED`
+
+`P0S6_EXPERIMENT_SOURCE_MODIFICATION = NOT_AUTHORIZED`
+
+`P0S7_ALLOWED = NO`
 
 `P1_FREEZE_ALLOWED = NO` until `SHACO_FORGE_V1_0_P0S = PASS`.
 
@@ -88,11 +108,16 @@ Date: 2026-08-30
 
 ## Next Step
 
-BEGIN P0.S FEASIBILITY SPIKE
+P0.S-6 MINIMAL EXECUTION CONTRACT — READ-ONLY PLANNING
 
-NOT EXECUTED in the Independent Corrective Re-Review session.
+NOT EXECUTED
 
-`ALLOW_P0S = YES`. `P0_CLOSURE_AUDIT = PASS` (AUDIT-004B).
+The planning authority is purpose-bound and exhausted when the Contract is
+completed. Contract completion does not authorize execution; later explicit
+Architecture Owner acceptance is required. H-05, H-20, the P0.S-6 product
+Gates, Desktop + Worker architecture, frozen Harness baseline and feature scope
+remain unchanged. Historical P0.S-6 attempts and candidates receive no
+retroactive authorization, PASS, Formal Evidence or acceptance.
 
 Risk register: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
 

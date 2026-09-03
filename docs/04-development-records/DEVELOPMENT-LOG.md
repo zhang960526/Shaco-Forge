@@ -2,6 +2,29 @@
 
 Status: ACTIVE
 
+## 2026-09-03
+
+- Architecture Owner issued a purpose-bound P0.S-6 Authority Alignment to
+  resolve a governance deadlock. The P0.S-5 closure prohibition had served as
+  a stage-isolation Gate preventing automatic successor work; after the prior
+  diagnostic route was paused, leaving that prohibition active also prevented
+  definition of the bounded safety contract required before any further
+  execution could be considered.
+- Current authority now permits only bounded, read-only, contract-only planning
+  of the P0.S-6 Minimal Execution Contract. `P0S6_STATE = NOT_STARTED`.
+  Implementation, Runtime, Diagnostic, Formal, experiment-source modification,
+  new attempts and P0.S-7 remain `NOT_AUTHORIZED`. The one-time planning
+  authority is exhausted when the Contract is completed, and completion does
+  not authorize execution without later explicit Architecture Owner acceptance.
+- This governance-only corrective does not design the Minimal Execution
+  Contract and does not modify H-05, H-20, the original P0.S-6 product Gates,
+  Desktop + Worker architecture, frozen Harness baseline or feature scope. It
+  grants no retroactive authorization, PASS, Formal Evidence or candidate
+  acceptance to any historical attempt, the 39-file candidate,
+  native-loader/retained trace, salvage attempt or diagnostic record. No
+  product, experiment, Runtime, test, dependency or lockfile file was changed;
+  no Runtime, Diagnostic, Formal, Commit of experiment code or Push occurred.
+
 ## 2026-09-01
 
 - Architecture Owner post-commit read-only verification found the sole stale
