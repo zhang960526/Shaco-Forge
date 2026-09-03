@@ -164,6 +164,12 @@ Last Updated: 2026-09-03
 - `P0S6_NO_RETROACTIVE_PASS = YES`
 - `P0S6_NO_RETROACTIVE_FORMAL_EVIDENCE = YES`
 - `P0S6_NO_RETROACTIVE_CANDIDATE_ACCEPTANCE = YES`
+- `P0S6_HISTORICAL_CANDIDATE_QUARANTINED = YES`
+- `P0S6_QUARANTINE_COPY_VERIFIED = YES`
+- `P0S6_QUARANTINE_FILE_COUNT = 39`
+- `P0S6_QUARANTINE_MANIFEST_SHA256 = 8ae0b903125f44ea656be0dcdeab40a2d35d0916f416822908f34e0b809bba50`
+- `AUTHORITY_ALIGNMENT_COMPLETE = YES`
+- `GOVERNANCE_ENVIRONMENT_CLOSURE = PASS`
 - `P0S4_CLOSURE_COMMIT_PERFORMED = YES`
 - `P0S5_CLOSURE_COMMIT_PERFORMED = YES`
 - `P0S5_PUSH_PERFORMED = NO`
@@ -233,6 +239,18 @@ the Desktop + Worker architecture, the frozen Harness baseline, or current
 feature scope. It grants no retroactive authorization, PASS, Formal Evidence,
 or candidate acceptance to any historical P0.S-6 attempt, 39-file candidate,
 native-loader/retained trace, salvage attempt, or diagnostic record.
+
+The 39-file historical candidate has been preserved outside both repositories
+at `D:\Project\Shaco-Forge-Quarantine\P0S6-Historical-Candidate-20260903`.
+Its pre-move inventory and verified copy are recorded by
+`QUARANTINE-MANIFEST.md` with SHA256
+`8ae0b903125f44ea656be0dcdeab40a2d35d0916f416822908f34e0b809bba50`.
+File count, path set, sizes and SHA256 values all matched before the exact
+inventoried source copies were removed individually from the active worktree.
+No broad delete, ignore rule, exclusion or status suppression was used. The
+quarantine remains `NON_AUTHORIZED / NON_EVIDENCE / NON_PASS / NON_FORMAL /
+NON_PRODUCTION`; it may not be consumed by the new Minimal Execution Contract
+without explicit Architecture Owner authorization for historical comparison.
 
 The P0.S-5 documentation/packaging completion records two historical Commit
 blockers as Gate-specification issues rather than Evidence corruption. The

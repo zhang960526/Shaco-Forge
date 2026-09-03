@@ -24,6 +24,23 @@ Status: ACTIVE
   native-loader/retained trace, salvage attempt or diagnostic record. No
   product, experiment, Runtime, test, dependency or lockfile file was changed;
   no Runtime, Diagnostic, Formal, Commit of experiment code or Push occurred.
+- Worktree Hygiene Corrective froze the exact 39-file untracked candidate
+  inventory at Authority Alignment commit
+  `61307fcbde604e80f055c6775a3e602d6030929a`, then copied each file outside the
+  product and Harness repositories to
+  `D:\Project\Shaco-Forge-Quarantine\P0S6-Historical-Candidate-20260903`.
+  Pre-removal verification returned file count, path set, size and SHA256 match
+  `YES`. The final UTF-8 without BOM `QUARANTINE-MANIFEST.md` SHA256 is
+  `8ae0b903125f44ea656be0dcdeab40a2d35d0916f416822908f34e0b809bba50`.
+- Only after full copy verification, the 39 frozen source paths were removed
+  individually from the active worktree and empty candidate directories were
+  removed non-recursively. No `git clean`, broad recursive delete, ignore,
+  exclude or status-suppression mechanism was used. Both worktrees returned
+  clean and Harness remained at
+  `cd5ef8148158c3a752a658978873241fdf8e2bbc`. The quarantine remains historical
+  material only: `NON_AUTHORIZED / NON_EVIDENCE / NON_PASS / NON_FORMAL /
+  NON_PRODUCTION` and unavailable to the new Contract absent explicit Owner
+  authorization for historical comparison.
 
 ## 2026-09-01
 

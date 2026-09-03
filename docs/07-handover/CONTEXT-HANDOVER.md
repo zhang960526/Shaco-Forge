@@ -27,6 +27,14 @@ V1.0 = Harness Desktop Baseline using Electron Desktop + independent per-user lo
 
 P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. AUDIT-004B = `PASS`. `P0_CLOSURE_AUDIT = PASS`. Risk register and P0.S inputs: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`. P0.S is `IN_PROGRESS`; P0.S-1 through P0.S-5 are PASS / CLOSED with accepted constraints. P0.S-6 is `NOT_STARTED`. The Architecture Owner authorizes only bounded, read-only, contract-only planning of the P0.S-6 Minimal Execution Contract. Implementation, Runtime, Diagnostic, Formal, experiment-source modification, new attempts and P0.S-7 are not authorized. `P0_EXECUTOR_WORK = CLOSED`. `INDEPENDENT_P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. P1 cannot freeze until P0.S passes.
 
+The pre-existing 39-file P0.S-6 historical candidate is copy-verified and
+quarantined outside both repositories at
+`D:\Project\Shaco-Forge-Quarantine\P0S6-Historical-Candidate-20260903`.
+Manifest SHA256 is
+`8ae0b903125f44ea656be0dcdeab40a2d35d0916f416822908f34e0b809bba50`.
+The active Shaco Forge and frozen Harness worktrees are clean. This completes
+the Authority Alignment environment closure without changing P0.S-6 authority.
+
 ## First Files to Read
 
 1. `../00-governance/SHACO-FORGE-DOCUMENT-MAP.md`
@@ -52,3 +60,7 @@ Harness baseline and feature scope remain unchanged. Historical P0.S-6
 attempts, the 39-file candidate, native-loader/retained trace, salvage and
 diagnostic records receive no retroactive authorization, PASS, Formal Evidence
 or candidate acceptance.
+
+The quarantine is historical material only and must not be consumed by the new
+Minimal Execution Contract unless the Architecture Owner explicitly authorizes
+historical comparison.

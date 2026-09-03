@@ -23,6 +23,7 @@ Date: 2026-09-03
 - AUDIT-004B Independent P0 Closure Corrective Re-Review: PASS
 - P0.S-1 through P0.S-5: PASS / CLOSED with accepted constraints
 - P0.S-6 Authority Alignment: bounded/read-only/contract-only Minimal Execution Contract planning authorized; execution not authorized
+- P0.S-6 historical 39-file candidate: copy-verified and quarantined outside both repositories; active worktree restored clean
 
 ## Current Gate
 
@@ -96,6 +97,16 @@ Date: 2026-09-03
 
 `P0S7_ALLOWED = NO`
 
+`P0S6_HISTORICAL_CANDIDATE_QUARANTINED = YES`
+
+`P0S6_QUARANTINE_COPY_VERIFIED = YES`
+
+`P0S6_QUARANTINE_FILE_COUNT = 39`
+
+`AUTHORITY_ALIGNMENT_COMPLETE = YES`
+
+`GOVERNANCE_ENVIRONMENT_CLOSURE = PASS`
+
 `P1_FREEZE_ALLOWED = NO` until `SHACO_FORGE_V1_0_P0S = PASS`.
 
 ## Frozen Baseline
@@ -118,6 +129,11 @@ Architecture Owner acceptance is required. H-05, H-20, the P0.S-6 product
 Gates, Desktop + Worker architecture, frozen Harness baseline and feature scope
 remain unchanged. Historical P0.S-6 attempts and candidates receive no
 retroactive authorization, PASS, Formal Evidence or acceptance.
+
+Historical candidate quarantine:
+`D:\Project\Shaco-Forge-Quarantine\P0S6-Historical-Candidate-20260903`.
+Manifest SHA256:
+`8ae0b903125f44ea656be0dcdeab40a2d35d0916f416822908f34e0b809bba50`.
 
 Risk register: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
 
