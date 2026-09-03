@@ -22,7 +22,7 @@ Date: 2026-09-03
 - P0 Closure Corrective F-01 / F-02 / F-03: Executor wording applied
 - AUDIT-004B Independent P0 Closure Corrective Re-Review: PASS
 - P0.S-1 through P0.S-5: PASS / CLOSED with accepted constraints
-- P0.S-6 Authority Alignment: bounded/read-only/contract-only Minimal Execution Contract planning authorized; execution not authorized
+- P0.S-6 Minimal Execution Contract: `P0S6-MEC-20260903-01` frozen / Owner-approved; bounded execution authority opened
 - P0.S-6 historical 39-file candidate: copy-verified and quarantined outside both repositories; active worktree restored clean
 
 ## Current Gate
@@ -79,21 +79,43 @@ Date: 2026-09-03
 
 `SHACO_FORGE_V1_0_P0S = IN_PROGRESS`
 
-`P0S6_STATE = NOT_STARTED`
+`P0S6_STATE = READY_FOR_EXECUTION`
 
-`P0S6_MINIMAL_EXECUTION_CONTRACT_PLANNING = AUTHORIZED`
+`P0S6_EXECUTION_AUTHORIZATION_FREEZE = PASS`
 
-`P0S6_PLANNING_SCOPE = BOUNDED_READ_ONLY_CONTRACT_ONLY`
+`P0S6_CONTRACT_ID = P0S6-MEC-20260903-01`
 
-`P0S6_IMPLEMENTATION = NOT_AUTHORIZED`
+`P0S6_MINIMAL_CONTRACT = FROZEN_OWNER_APPROVED`
 
-`P0S6_RUNTIME = NOT_AUTHORIZED`
+`P0S6_OWNER_DECISION = APPROVE_FOR_EXECUTION`
+
+`P0S6_IMPLEMENTATION = AUTHORIZED_CONTRACT_BOUND`
+
+`P0S6_EXPERIMENT_SOURCE_MODIFICATION = AUTHORIZED_ALLOWED_DIRECTORY_ONLY`
+
+`P0S6_RUNTIME = AUTHORIZED_SINGLE_BOUNDED_ELECTRON_CLIENT_BOOT_ONLY`
+
+`P0S6_PRIMARY_ATTEMPT = AUTHORIZED_MAX_1`
+
+`P0S6_CORRECTIVE_RETRY = CONDITIONALLY_AUTHORIZED_MAX_1_RETRY_ELIGIBILITY_ONLY`
+
+`P0S6_MAXIMUM_PHYSICAL_ATTEMPTS = 2`
+
+`P0S6_PHYSICAL_ATTEMPTS_USED = 0`
+
+`P0S6_THIRD_ATTEMPT = NOT_AUTHORIZED`
 
 `P0S6_DIAGNOSTIC = NOT_AUTHORIZED`
 
 `P0S6_FORMAL = NOT_AUTHORIZED`
 
-`P0S6_EXPERIMENT_SOURCE_MODIFICATION = NOT_AUTHORIZED`
+`P0S6_HARNESS_CORE_MUTATION = NOT_AUTHORIZED`
+
+`P0S6_COMMIT_EXPERIMENT = NOT_AUTHORIZED`
+
+`P0S6_PUSH = NOT_AUTHORIZED`
+
+`READY_FOR_P0S6_EXECUTION = YES`
 
 `P0S7_ALLOWED = NO`
 
@@ -119,16 +141,18 @@ Date: 2026-09-03
 
 ## Next Step
 
-P0.S-6 MINIMAL EXECUTION CONTRACT — READ-ONLY PLANNING
+P0.S-6 PRIMARY EXECUTION ATTEMPT #1
 
 NOT EXECUTED
 
-The planning authority is purpose-bound and exhausted when the Contract is
-completed. Contract completion does not authorize execution; later explicit
-Architecture Owner acceptance is required. H-05, H-20, the P0.S-6 product
-Gates, Desktop + Worker architecture, frozen Harness baseline and feature scope
-remain unchanged. Historical P0.S-6 attempts and candidates receive no
-retroactive authorization, PASS, Formal Evidence or acceptance.
+Execution must follow `P0S6-MEC-20260903-01`: one fixed Client boot Slice,
+Electron `35.7.5`, one Primary Attempt and at most one eligibility-only
+Corrective Retry, with two physical attempts maximum. H-05, H-20, the P0.S-6
+product Gates, Desktop + Worker architecture, frozen Harness baseline and
+feature scope remain unchanged. Diagnostic, Formal, experiment Commit, Push,
+a third attempt and P0.S-7 remain not authorized. Historical P0.S-6 attempts
+and candidates receive no retroactive authorization, PASS, Formal Evidence or
+acceptance and the quarantine must not be consumed.
 
 Historical candidate quarantine:
 `D:\Project\Shaco-Forge-Quarantine\P0S6-Historical-Candidate-20260903`.

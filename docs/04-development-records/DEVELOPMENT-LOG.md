@@ -4,18 +4,42 @@ Status: ACTIVE
 
 ## 2026-09-03
 
-- Architecture Owner issued a purpose-bound P0.S-6 Authority Alignment to
+- Architecture Owner reviewed and approved the P0.S-6 Minimal Execution
+  Contract. `P0S6-MEC-20260903-01` is persisted as `FROZEN_OWNER_APPROVED`,
+  `OwnerDecision = APPROVE_FOR_EXECUTION`, and
+  `P0S6_STATE = READY_FOR_EXECUTION`. The frozen P0.S-2 runtime identity is
+  Electron `35.7.5`, embedded Node `22.16.0`, Chromium `134.0.6998.205`,
+  Windows x64, with the Spike-local locked Electron executable strategy.
+- The Contract preserves H-05 `Required in-box Client modules can load without
+  stock /plugins` / `P0S_INBOX_CLIENT_MODULES_PASS` and H-20 `Cordis
+  host/client/UI runner omission does not break Core Client boot` /
+  `P0S_CORDIS_OMISSION_PASS`. It freezes one fixed Client boot Slice, exact
+  REQUIRED roster and Support Closure, the minimum boot checkpoint,
+  `STATIC_ARTIFACT_SEMANTIC_TRANSFORMATION = FORBIDDEN`, bounded Evidence, and
+  the complete stop/Core Patch boundaries.
+- Current authority is limited to Contract-bound implementation, source
+  changes under the single allowed future experiment directory, one Primary
+  Attempt, and at most one eligibility-only Corrective Retry. Maximum physical
+  attempts are two. Diagnostic, Formal, Harness Core mutation, experiment
+  Commit, Push, a third attempt, and P0.S-7 remain not authorized. This
+  Contract Freeze performed no experiment, Runtime, or physical attempt;
+  `PHYSICAL_ATTEMPTS_USED = 0`, and quarantine was not accessed or consumed.
+- This Contract Freeze updates documentation and governance only. No product,
+  experiment, P0.S-2, Harness, dependency, or lockfile content was changed.
+- Historical Authority Alignment event, superseded by the Contract Freeze
+  above: Architecture Owner issued a purpose-bound P0.S-6 alignment to
   resolve a governance deadlock. The P0.S-5 closure prohibition had served as
   a stage-isolation Gate preventing automatic successor work; after the prior
   diagnostic route was paused, leaving that prohibition active also prevented
   definition of the bounded safety contract required before any further
   execution could be considered.
-- Current authority now permits only bounded, read-only, contract-only planning
-  of the P0.S-6 Minimal Execution Contract. `P0S6_STATE = NOT_STARTED`.
+- At that historical boundary, authority permitted only bounded, read-only,
+  contract-only planning of the P0.S-6 Minimal Execution Contract and recorded
+  `P0S6_STATE = NOT_STARTED`.
   Implementation, Runtime, Diagnostic, Formal, experiment-source modification,
   new attempts and P0.S-7 remain `NOT_AUTHORIZED`. The one-time planning
-  authority is exhausted when the Contract is completed, and completion does
-  not authorize execution without later explicit Architecture Owner acceptance.
+  authority was exhausted when the Contract was completed, and completion
+  required the later explicit Architecture Owner acceptance now recorded above.
 - This governance-only corrective does not design the Minimal Execution
   Contract and does not modify H-05, H-20, the original P0.S-6 product Gates,
   Desktop + Worker architecture, frozen Harness baseline or feature scope. It

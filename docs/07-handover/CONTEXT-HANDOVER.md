@@ -25,15 +25,16 @@ V1.0 = Harness Desktop Baseline using Electron Desktop + independent per-user lo
 
 ## Current Status
 
-P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. AUDIT-004B = `PASS`. `P0_CLOSURE_AUDIT = PASS`. Risk register and P0.S inputs: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`. P0.S is `IN_PROGRESS`; P0.S-1 through P0.S-5 are PASS / CLOSED with accepted constraints. P0.S-6 is `NOT_STARTED`. The Architecture Owner authorizes only bounded, read-only, contract-only planning of the P0.S-6 Minimal Execution Contract. Implementation, Runtime, Diagnostic, Formal, experiment-source modification, new attempts and P0.S-7 are not authorized. `P0_EXECUTOR_WORK = CLOSED`. `INDEPENDENT_P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. P1 cannot freeze until P0.S passes.
+P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. AUDIT-004B = `PASS`. `P0_CLOSURE_AUDIT = PASS`. Risk register and P0.S inputs: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`. P0.S is `IN_PROGRESS`; P0.S-1 through P0.S-5 are PASS / CLOSED with accepted constraints. P0.S-6 is `READY_FOR_EXECUTION`. The Architecture Owner approved frozen Contract `P0S6-MEC-20260903-01`. Contract-bound implementation, allowed-directory source modification, one bounded Electron Client boot Primary Attempt and at most one retry-eligibility-only Corrective Retry are authorized. Diagnostic, Formal, Harness Core mutation, experiment Commit, Push, a third attempt and P0.S-7 are not authorized. `P0_EXECUTOR_WORK = CLOSED`. `INDEPENDENT_P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. P1 cannot freeze until P0.S passes.
 
 The pre-existing 39-file P0.S-6 historical candidate is copy-verified and
 quarantined outside both repositories at
 `D:\Project\Shaco-Forge-Quarantine\P0S6-Historical-Candidate-20260903`.
 Manifest SHA256 is
 `8ae0b903125f44ea656be0dcdeab40a2d35d0916f416822908f34e0b809bba50`.
-The active Shaco Forge and frozen Harness worktrees are clean. This completes
-the Authority Alignment environment closure without changing P0.S-6 authority.
+The active Shaco Forge and frozen Harness worktrees were clean before this
+Contract Freeze. No experiment or physical attempt was executed, and the
+quarantine was not accessed or consumed.
 
 ## First Files to Read
 
@@ -46,21 +47,22 @@ the Authority Alignment environment closure without changing P0.S-6 authority.
 7. `../05-reviews/architecture/AUDIT-004B-P0-CLOSURE-CORRECTIVE-REVIEW.md`
 8. `../05-reviews/architecture/AUDIT-004-INDEPENDENT-P0-CLOSURE.md`
 9. `../03-v1.0-plan/P0S-FEASIBILITY-SPIKE.md`
+10. `../03-v1.0-plan/P0S-6-MINIMAL-EXECUTION-CONTRACT.md`
 
 ## Immediate Next
 
-P0.S-6 MINIMAL EXECUTION CONTRACT — READ-ONLY PLANNING
+P0.S-6 PRIMARY EXECUTION ATTEMPT #1
 
 NOT EXECUTED
 
-This purpose-bound planning authority is exhausted when the Contract is
-completed, and Contract completion does not authorize execution. H-05, H-20,
-the original P0.S-6 product Gates, Desktop + Worker architecture, frozen
-Harness baseline and feature scope remain unchanged. Historical P0.S-6
-attempts, the 39-file candidate, native-loader/retained trace, salvage and
-diagnostic records receive no retroactive authorization, PASS, Formal Evidence
-or candidate acceptance.
+Execute only under `P0S6-MEC-20260903-01`: one fixed Client boot Slice using
+the exact P0.S-2 Electron `35.7.5` identity, one Primary Attempt, and at most
+one eligibility-only Corrective Retry. Maximum physical attempts are two and
+currently used attempts are zero. H-05, H-20, the original product Gates,
+Desktop + Worker architecture, frozen Harness baseline and feature scope remain
+unchanged. Diagnostic, Formal, experiment Commit, Push, third attempt and
+P0.S-7 are not authorized. Historical attempts and materials receive no
+retroactive status.
 
-The quarantine is historical material only and must not be consumed by the new
-Minimal Execution Contract unless the Architecture Owner explicitly authorizes
-historical comparison.
+The quarantine is historical material only and must not be accessed or
+consumed by `P0S6-MEC-20260903-01`.

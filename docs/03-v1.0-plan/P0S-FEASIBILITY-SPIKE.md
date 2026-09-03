@@ -2,7 +2,7 @@
 
 Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0S = IN_PROGRESS`)
 
-Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-5 are `PASS / CLOSED` with Architecture Owner-accepted constrained dispositions. P0.S remains `IN_PROGRESS`; P0.S-6 remains `NOT_STARTED`. The Architecture Owner authorizes only bounded, read-only, contract-only planning of the P0.S-6 Minimal Execution Contract; P0.S-6 implementation and execution remain separately gated and not authorized.
+Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-5 are `PASS / CLOSED` with Architecture Owner-accepted constrained dispositions. P0.S remains `IN_PROGRESS`; P0.S-6 is `READY_FOR_EXECUTION`. The Architecture Owner approved frozen Contract `P0S6-MEC-20260903-01` for bounded execution. Only its Contract-bound implementation, allowed-directory experiment source, single Primary Attempt, and retry-eligibility-only Corrective Retry are authorized; Diagnostic, Formal, experiment Commit, Push, a third attempt, and P0.S-7 are not authorized.
 
 P0-7 frozen inputs (do not re-open P0; do not redesign this architecture):
 
@@ -307,17 +307,26 @@ Current gate state after Architecture Owner Formal Closure:
 - `P0S5_TECHNICALLY_READY_FOR_CLOSURE = YES`
 - `P0S5_CORE_PATCH_REQUIRED = NO`
 - `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
-- `P0S6_STATE = NOT_STARTED`
-- `P0S6_MINIMAL_EXECUTION_CONTRACT_PLANNING = AUTHORIZED`
-- `P0S6_PLANNING_SCOPE = BOUNDED_READ_ONLY_CONTRACT_ONLY`
-- `P0S6_PLANNING_AUTHORITY_PURPOSE_BOUND = YES`
-- `P0S6_PLANNING_AUTHORITY_EXHAUSTS_ON_CONTRACT_COMPLETION = YES`
-- `P0S6_IMPLEMENTATION = NOT_AUTHORIZED`
-- `P0S6_RUNTIME = NOT_AUTHORIZED`
+- `P0S6_STATE = READY_FOR_EXECUTION`
+- `P0S6_CONTRACT_ID = P0S6-MEC-20260903-01`
+- `P0S6_MINIMAL_CONTRACT = FROZEN_OWNER_APPROVED`
+- `P0S6_OWNER_DECISION = APPROVE_FOR_EXECUTION`
+- `P0S6_MINIMAL_EXECUTION_CONTRACT_PLANNING = COMPLETED`
+- `P0S6_PLANNING_AUTHORITY_EXHAUSTED = YES`
+- `P0S6_IMPLEMENTATION = AUTHORIZED_CONTRACT_BOUND`
+- `P0S6_RUNTIME = AUTHORIZED_SINGLE_BOUNDED_ELECTRON_CLIENT_BOOT_ONLY`
+- `P0S6_PRIMARY_ATTEMPT = AUTHORIZED_MAX_1`
+- `P0S6_CORRECTIVE_RETRY = CONDITIONALLY_AUTHORIZED_MAX_1_RETRY_ELIGIBILITY_ONLY`
+- `P0S6_MAXIMUM_PHYSICAL_ATTEMPTS = 2`
+- `P0S6_PHYSICAL_ATTEMPTS_USED = 0`
+- `P0S6_THIRD_ATTEMPT = NOT_AUTHORIZED`
 - `P0S6_DIAGNOSTIC = NOT_AUTHORIZED`
 - `P0S6_FORMAL = NOT_AUTHORIZED`
-- `P0S6_EXPERIMENT_SOURCE_MODIFICATION = NOT_AUTHORIZED`
-- `READY_FOR_P0S6_EXECUTION = NO`
+- `P0S6_HARNESS_CORE_MUTATION = NOT_AUTHORIZED`
+- `P0S6_EXPERIMENT_SOURCE_MODIFICATION = AUTHORIZED_ALLOWED_DIRECTORY_ONLY`
+- `P0S6_COMMIT_EXPERIMENT = NOT_AUTHORIZED`
+- `P0S6_PUSH = NOT_AUTHORIZED`
+- `READY_FOR_P0S6_EXECUTION = YES`
 - `P0S7_ALLOWED = NO`
 - `P0S5_CLOSURE_COMMIT_PERFORMED = YES`
 - `P0S5_PUSH_PERFORMED = NO`
@@ -338,12 +347,12 @@ P0.S-6. Architecture Owner subsequently issued a separate bounded Closure
 Commit authorization, and commit
 `01ff17129b34a2831d4d45217d44483654b7ac43` completed that action without Push.
 That Commit did not authorize P0.S-6 planning or execution. The later
-Architecture Owner Authority Alignment now authorizes exactly one
-purpose-bound action: bounded, read-only, contract-only planning of the P0.S-6
-Minimal Execution Contract. The authorization is exhausted when that Contract
-is completed; Contract completion does not authorize implementation, Runtime,
-Diagnostic, Formal, experiment-source modification, a new attempt, or P0.S-7.
-P0.S-6 therefore remains `NOT_STARTED` and execution remains separately gated.
+Architecture Owner Authority Alignment authorized bounded, read-only,
+contract-only planning. The Owner has now reviewed and approved the resulting
+`P0S6-MEC-20260903-01` Contract. P0.S-6 is `READY_FOR_EXECUTION`, with exactly
+one fixed Slice, one Primary Attempt, and at most one retry-eligibility-only
+Corrective Retry. Diagnostic, Formal, Harness Core mutation, experiment Commit,
+Push, a third attempt, and P0.S-7 remain separately gated and not authorized.
 
 CF-01 seam correction is binding for this execution. Frozen Harness exposes
 the Connection Client, generation/client identity, real `$events.ready`,
@@ -390,9 +399,11 @@ change is required. Corrective Re-Review returned `PASS`, confirmed exact
 corrective scope and technical Gate integrity, and reported zero remaining
 corrective Findings without Runtime or a new runId. Architecture Owner accepted
 the re-review and closed P0.S-5 as `MET_WITH_CONSTRAINT`. At that historical
-closure boundary, P0.S-6 planning and execution were both disallowed. Current
-authority supersedes only that planning prohibition as stated above; P0.S-6
-remains not started and execution remains separately gated.
+closure boundary, P0.S-6 planning and execution were both disallowed. The later
+Authority Alignment superseded the planning prohibition, and the current Owner
+approval now supersedes the execution prohibition only within
+`P0S6-MEC-20260903-01`. P0.S-6 is `READY_FOR_EXECUTION` under that bounded
+Contract.
 
 Prove:
 
@@ -410,19 +421,18 @@ Prove:
 
 ### Current Governance Authority
 
-- Step state: `P0S6_STATE = NOT_STARTED`.
-- Authorized action: produce the P0.S-6 Minimal Execution Contract through
-  bounded, read-only, contract-only planning.
-- Purpose boundary: this authority is exhausted when that Contract is
-  completed. The Contract does not itself authorize execution and requires
-  later explicit Architecture Owner acceptance before any execution.
-- Not authorized: implementation, Runtime, Diagnostic, Formal,
-  experiment-source modification, new attempts, candidate mutation, experiment
-  code Commit, Push, or P0.S-7.
+- Step state: `P0S6_STATE = READY_FOR_EXECUTION`.
+- Frozen authority: `P0S6-MEC-20260903-01` is `FROZEN_OWNER_APPROVED` with
+  `OwnerDecision = APPROVE_FOR_EXECUTION`.
+- Authorized action: Contract-bound implementation in the one allowed
+  experiment directory and `P0.S-6 PRIMARY EXECUTION ATTEMPT #1`; a single
+  Corrective Retry is conditional on the Contract's narrow eligibility rules.
+- Not authorized: Diagnostic, Formal, Harness Core mutation, experiment code
+  Commit, Push, a third attempt, P0.S-7, or work outside the frozen Contract.
 - Gate preservation: H-05 and H-20, their original product Gate semantics, the
   Desktop + Worker architecture, frozen Harness baseline, and feature scope are
-  unchanged. The future Minimal Execution Contract must remain bounded to the
-  original H-05/H-20 Gates; this Authority Alignment does not design it.
+  unchanged. The full execution boundary is frozen in
+  `docs/03-v1.0-plan/P0S-6-MINIMAL-EXECUTION-CONTRACT.md`.
 - Historical status: no historical attempt, 39-file candidate, native-loader
   or retained trace, salvage attempt, or diagnostic record receives retroactive
   authorization, PASS, Formal Evidence, or candidate acceptance.

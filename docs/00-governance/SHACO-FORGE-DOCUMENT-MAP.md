@@ -52,7 +52,8 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
-| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | IN_PROGRESS; P0.S-1 through P0.S-5 PASS / CLOSED with accepted constraints; P0.S-6 NOT_STARTED; bounded/read-only/contract-only Minimal Execution Contract planning AUTHORIZED; execution NOT_AUTHORIZED |
+| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | IN_PROGRESS; P0.S-1 through P0.S-5 PASS / CLOSED with accepted constraints; P0.S-6 READY_FOR_EXECUTION under frozen Contract |
+| `P0S-6-MINIMAL-EXECUTION-CONTRACT.md` | P0.S-6 bounded execution Contract | FROZEN / OWNER_APPROVED; `P0S6-MEC-20260903-01`; one fixed Client boot Slice; maximum two physical attempts; Diagnostic/Formal/P0.S-7 NOT_AUTHORIZED |
 | `P05-COMPATIBILITY-VERSION.md` | P0.5 Compatibility Contract 候选 | READY-FOR-FREEZE-AFTER-P0S |
 | `P1-SYSTEM-CONTRACT.md` | P1 骨架 | NOT-DETAILED |
 | `P2-HOST-WORKER.md` | P2 骨架 | NOT-DETAILED |
@@ -114,7 +115,7 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | `evidence/P0S-2-ELECTRON-CLIENT-BOOT-EVIDENCE.md` | P0.S-2 closed Electron Client Boot evidence; stage PASS with accepted `PROVEN_WITH_CONSTRAINT` disposition |
 | `evidence/P0S-3-LOCAL-CARRIER-AND-TRUST-EVIDENCE.md` | P0.S-3 closed Local Carrier + Trust evidence; stage PASS with accepted `PROVEN_WITH_CONSTRAINT` disposition; carrier completeness remains pending P0.S-4 |
 | `evidence/P0S-4-CONNECTION-FEATURE-COMPLETENESS-EVIDENCE.md` | P0.S-4 closed Connection Feature Completeness evidence; corrective run and independent re-review PASS; stage closes `MET_WITH_CONSTRAINT` while all Spike implementations remain `NOT_PRODUCTION` |
-| `evidence/P0S-5-DESKTOP-INDEPENDENCE-AND-RECONNECT-EVIDENCE.md` | P0.S-5 closed Desktop Independence & Reconnect evidence; formal Executor, Independent Review, documentation corrective and Corrective Re-Review accepted; stage closes `MET_WITH_CONSTRAINT` while P0.S-6 execution remains separately gated |
+| `evidence/P0S-5-DESKTOP-INDEPENDENCE-AND-RECONNECT-EVIDENCE.md` | P0.S-5 closed Desktop Independence & Reconnect evidence; formal Executor, Independent Review, documentation corrective and Corrective Re-Review accepted; stage closes `MET_WITH_CONSTRAINT`; later P0.S-6 execution authority is governed only by `P0S6-MEC-20260903-01` |
 
 ## 9. Handover
 
