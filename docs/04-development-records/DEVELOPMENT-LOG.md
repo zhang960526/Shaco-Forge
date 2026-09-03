@@ -4,6 +4,25 @@ Status: ACTIVE
 
 ## 2026-09-03
 
+- Pre-Execution Identity Alignment Corrective separates the P0.S-6 Product
+  Baseline (`cada37727af3f99da77f50353924af80f917b688`) from the Contract Freeze
+  (`45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3`) and the Execution Authority
+  Anchor. The Anchor is defined non-recursively as the final clean
+  Pre-Execution governance commit; its SHA is resolved after this one final
+  Corrective commit rather than embedded in itself.
+- Attempt #1 preflight must record `ProductBaselineHead`, `ContractFreezeHead`,
+  `ExecutionAuthorityHead`, `AttemptStartHead`, and `HarnessHead`, and prove
+  `ExecutionAuthorityHead == AttemptStartHead` plus frozen Harness HEAD equality
+  before runner invocation. A mismatch is `PRE_HYPOTHESIS_STOP` before Electron
+  and before attempt consumption. Product Baseline/Anchor difference is normal
+  governance evolution, not drift. No later governance/documentation commit is
+  permitted before Attempt #1 ends.
+- This Corrective changes Git identity semantics only. H-05, H-20, roster,
+  Support Closure, Slice, Electron identity, boot checkpoint, static artifact
+  and semantic-transformation boundaries, retry/evidence/stop rules, historical
+  candidate/Core Patch policy, P0.S-7 authority, and attempt budget are
+  unchanged. No Runtime or experiment was performed;
+  `PHYSICAL_ATTEMPTS_USED = 0`.
 - Architecture Owner reviewed and approved the P0.S-6 Minimal Execution
   Contract. `P0S6-MEC-20260903-01` is persisted as `FROZEN_OWNER_APPROVED`,
   `OwnerDecision = APPROVE_FOR_EXECUTION`, and

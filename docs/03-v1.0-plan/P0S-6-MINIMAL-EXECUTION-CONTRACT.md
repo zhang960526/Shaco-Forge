@@ -8,15 +8,42 @@ Status: FROZEN / OWNER_APPROVED
 - `OwnerDecision = APPROVE_FOR_EXECUTION`
 - `P0S6_STATE = READY_FOR_EXECUTION`
 - `ExecutionAuthority = BOUNDED_CONTRACT_BOUND`
-- `FrozenHeads = Shaco:cada37727af3f99da77f50353924af80f917b688; Harness:cd5ef8148158c3a752a658978873241fdf8e2bbc`
+- `P0S6_PRODUCT_BASELINE_HEAD = cada37727af3f99da77f50353924af80f917b688`
+- `P0S6_CONTRACT_FREEZE_HEAD = 45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3`
+- `EXECUTION_AUTHORITY_ANCHOR_POLICY = LAST_CLEAN_PRE_EXECUTION_GOVERNANCE_COMMIT`
+- `P0S6_EXECUTION_AUTHORITY_ANCHOR = IDENTITY_CORRECTIVE_COMMIT_RESOLVED_POST_COMMIT`
+- `FrozenHeads = ProductBaseline:cada37727af3f99da77f50353924af80f917b688; ContractFreeze:45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3; Harness:cd5ef8148158c3a752a658978873241fdf8e2bbc`
 - Contract freeze date: `2026-09-03`
-- Shaco Forge frozen source HEAD: `cada37727af3f99da77f50353924af80f917b688`
 - Frozen Harness HEAD: `cd5ef8148158c3a752a658978873241fdf8e2bbc`
 - Frozen Harness version: `dsh@0.1.2-alpha.1`
 
 This Contract authorizes only the bounded execution described below. It does
 not execute P0.S-6, classify either Gate, authorize Diagnostic or Formal work,
 or authorize P0.S-7.
+
+### Git Identity Semantics
+
+`P0S6_PRODUCT_BASELINE_HEAD` is the clean active product/experiment-tree
+baseline immediately before the Minimal Contract Freeze. It is not the HEAD
+that Attempt #1 must directly start from.
+
+`P0S6_CONTRACT_FREEZE_HEAD` is the commit that persisted this Contract and the
+Architecture Owner execution approval. The final commit of the one permitted
+Pre-Execution Identity Alignment Corrective automatically becomes
+`P0S6_EXECUTION_AUTHORITY_ANCHOR` under
+`EXECUTION_AUTHORITY_ANCHOR_POLICY`; its SHA is resolved after commit and is
+not recursively embedded in that same commit.
+
+After the Identity Corrective commit, no governance or documentation commit is
+permitted before Primary Attempt #1 ends. Immediately before any top-level
+runner invocation, the Executor must resolve `ExecutionAuthorityHead` to the
+final Identity Corrective commit selected by the policy, then independently
+read `git rev-parse HEAD` as `AttemptStartHead`. They must be equal. A mismatch
+is `PRE_HYPOTHESIS_STOP`: do not invoke the runner, do not start Electron, and
+do not consume a physical attempt.
+
+`P0S6_PRODUCT_BASELINE_HEAD != P0S6_EXECUTION_AUTHORITY_ANCHOR` is normal
+governance evolution and is not HEAD drift.
 
 ## Exact Electron Identity
 
@@ -256,8 +283,15 @@ is Evidence only; opening a listener is forbidden.
 
 Each Attempt may record only bounded Evidence containing:
 
-- AttemptId; source HEAD; Harness HEAD/version/lock SHA; start/end; exit code;
-  worktree before/after; exact commands.
+- AttemptId; `ProductBaselineHead`; `ContractFreezeHead`;
+  `ExecutionAuthorityHead`; `AttemptStartHead`; `HarnessHead`; Harness
+  version/lock SHA; start/end; exit code; worktree before/after; exact commands.
+- `ProductBaselineHead` must equal
+  `cada37727af3f99da77f50353924af80f917b688`;
+  `ContractFreezeHead` must equal
+  `45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3`; and
+  `ExecutionAuthorityHead == AttemptStartHead` must hold before the runner is
+  invoked.
 - experiment source file set and SHA256; roster; Support Closure; platform
   static seed; graph/dependency/artifact hashes.
 - Cordis omission inventory; registration/activation; boot checkpoint;
@@ -299,7 +333,9 @@ STOP immediately when any of the following occurs:
 15. An OPTIONAL/DEFERRED module must become a Gate roster member.
 16. Evidence cannot yield one permitted classification.
 17. A worktree write escapes the allowed path.
-18. Either frozen HEAD drifts.
+18. `AttemptStartHead != ExecutionAuthorityHead`, or Harness HEAD differs from
+    `cd5ef8148158c3a752a658978873241fdf8e2bbc`. Product Baseline differing from
+    Execution Authority Anchor is not drift.
 19. Quarantine is accessed.
 20. Sensitive information is captured.
 21. A final classification is obtained.

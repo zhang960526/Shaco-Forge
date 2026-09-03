@@ -36,6 +36,16 @@ The active Shaco Forge and frozen Harness worktrees were clean before this
 Contract Freeze. No experiment or physical attempt was executed, and the
 quarantine was not accessed or consumed.
 
+P0.S-6 Git identity is three-layered. Product Baseline is
+`cada37727af3f99da77f50353924af80f917b688`; Contract Freeze is
+`45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3`; Execution Authority Anchor is the
+final clean Pre-Execution Identity Corrective commit selected by
+`LAST_CLEAN_PRE_EXECUTION_GOVERNANCE_COMMIT`. Do not create another governance
+or documentation commit before Attempt #1 ends. Preflight must prove
+`ExecutionAuthorityHead == AttemptStartHead` and frozen Harness HEAD equality
+before invoking the runner or consuming an attempt. Product Baseline differing
+from the Anchor is expected and is not drift.
+
 ## First Files to Read
 
 1. `../00-governance/SHACO-FORGE-DOCUMENT-MAP.md`

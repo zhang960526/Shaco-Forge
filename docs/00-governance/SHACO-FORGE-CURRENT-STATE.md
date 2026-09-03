@@ -153,6 +153,13 @@ Last Updated: 2026-09-03
 - `P0S6_CONTRACT_ID = P0S6-MEC-20260903-01`
 - `P0S6_MINIMAL_CONTRACT = FROZEN_OWNER_APPROVED`
 - `P0S6_OWNER_DECISION = APPROVE_FOR_EXECUTION`
+- `P0S6_PRODUCT_BASELINE_HEAD = cada37727af3f99da77f50353924af80f917b688`
+- `P0S6_CONTRACT_FREEZE_HEAD = 45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3`
+- `P0S6_EXECUTION_AUTHORITY_ANCHOR_POLICY = LAST_CLEAN_PRE_EXECUTION_GOVERNANCE_COMMIT`
+- `P0S6_EXECUTION_AUTHORITY_ANCHOR = IDENTITY_CORRECTIVE_COMMIT_RESOLVED_POST_COMMIT`
+- `P0S6_EXECUTION_AUTHORITY_IDENTITY_FROZEN = YES`
+- `P0S6_PRIMARY_ATTEMPT_READY = YES`
+- `P0S6_POST_ANCHOR_GOVERNANCE_COMMIT_BEFORE_ATTEMPT_END = FORBIDDEN`
 - `P0S6_MINIMAL_EXECUTION_CONTRACT_PLANNING = COMPLETED`
 - `P0S6_PLANNING_AUTHORITY_EXHAUSTED = YES`
 - `P0S6_IMPLEMENTATION = AUTHORIZED_CONTRACT_BOUND`
@@ -246,6 +253,16 @@ implementation, the allowed-directory experiment sources, one Primary Attempt
 and one retry-eligibility-only Corrective Retry are authorized. Diagnostic,
 Formal, Harness Core mutation, experiment Commit, Push, a third attempt, and
 P0.S-7 remain not authorized.
+
+The P0.S-6 Product Baseline HEAD and execution start identity are intentionally
+different. `cada37727af3f99da77f50353924af80f917b688` identifies the clean
+product/experiment baseline before Contract Freeze;
+`45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3` identifies the Contract Freeze.
+The final Pre-Execution Identity Corrective commit is selected non-recursively
+as the Execution Authority Anchor. Attempt #1 must begin from that exact clean
+HEAD. Drift means `AttemptStartHead != ExecutionAuthorityHead` or frozen
+Harness HEAD mismatch, never merely Product Baseline/Authority Anchor
+difference.
 
 This Contract Freeze does not modify H-05, H-20, the P0.S-6 product Gates,
 the Desktop + Worker architecture, the frozen Harness baseline, or current

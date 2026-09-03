@@ -89,6 +89,18 @@ Date: 2026-09-03
 
 `P0S6_OWNER_DECISION = APPROVE_FOR_EXECUTION`
 
+`P0S6_PRODUCT_BASELINE_HEAD = cada37727af3f99da77f50353924af80f917b688`
+
+`P0S6_CONTRACT_FREEZE_HEAD = 45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3`
+
+`P0S6_EXECUTION_AUTHORITY_ANCHOR_POLICY = LAST_CLEAN_PRE_EXECUTION_GOVERNANCE_COMMIT`
+
+`P0S6_EXECUTION_AUTHORITY_ANCHOR = IDENTITY_CORRECTIVE_COMMIT_RESOLVED_POST_COMMIT`
+
+`P0S6_EXECUTION_AUTHORITY_IDENTITY_FROZEN = YES`
+
+`P0S6_PRIMARY_ATTEMPT_READY = YES`
+
 `P0S6_IMPLEMENTATION = AUTHORIZED_CONTRACT_BOUND`
 
 `P0S6_EXPERIMENT_SOURCE_MODIFICATION = AUTHORIZED_ALLOWED_DIRECTORY_ONLY`
@@ -144,6 +156,14 @@ Date: 2026-09-03
 P0.S-6 PRIMARY EXECUTION ATTEMPT #1
 
 NOT EXECUTED
+
+Before invoking the runner, resolve `ExecutionAuthorityHead` to the final clean
+Pre-Execution Identity Corrective commit and read `AttemptStartHead` from
+`git rev-parse HEAD`. They must be equal, and Harness HEAD must equal
+`cd5ef8148158c3a752a658978873241fdf8e2bbc`; otherwise stop before Electron and
+before consuming an attempt. Product Baseline `cada37727af3f99da77f50353924af80f917b688`
+is not the Attempt Start requirement. No governance/documentation commit may
+follow the Identity Corrective commit before Attempt #1 ends.
 
 Execution must follow `P0S6-MEC-20260903-01`: one fixed Client boot Slice,
 Electron `35.7.5`, one Primary Attempt and at most one eligibility-only
