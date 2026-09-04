@@ -2,7 +2,7 @@
 
 Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0S = IN_PROGRESS`)
 
-Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-5 are `PASS / CLOSED` with Architecture Owner-accepted constrained dispositions. P0.S remains `IN_PROGRESS`; P0.S-6 is `BLOCKED_PENDING_RECOVERY_CONTRACT`. The Owner-approved `P0S6-MEC-20260903-01` lifecycle is `EXHAUSTED_INCONCLUSIVE` after two `PRE_HYPOTHESIS` attempts, neither of which launched Electron or reached the Runtime Gate. P0.S-6 has neither PASS nor a technical FAIL and is not closed. Only bounded governance-only Recovery Contract planning is authorized; Recovery implementation, dependency preparation, Runtime, Diagnostic, Formal, experiment Commit, Push, another physical attempt, and P0.S-7 are not authorized.
+Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-5 are `PASS / CLOSED` with Architecture Owner-accepted constrained dispositions. P0.S remains `IN_PROGRESS`. The Owner-approved `P0S6-MEC-20260903-01` lifecycle is `EXHAUSTED_INCONCLUSIVE` after two `PRE_HYPOTHESIS` attempts, neither of which launched Electron or reached the Runtime Gate. P0.S-6 has neither PASS nor a technical FAIL and is not closed. `P0S6-DRRC-20260904-01` passed Corrective Re-Review and is frozen / Owner-approved for exactly one Dependency Preparation invocation. Runtime, H-05/H-20 execution, Global Physical Attempt #3, experiment Commit, Push, and P0.S-7 are not authorized.
 
 P0-7 frozen inputs (do not re-open P0; do not redesign this architecture):
 
@@ -308,9 +308,14 @@ Current gate state after Architecture Owner Formal Closure:
 - `P0S5_CORE_PATCH_REQUIRED = NO`
 - `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
 - `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE`
-- `P0S6_STATE = BLOCKED_PENDING_RECOVERY_CONTRACT`
+- `P0S6_STATE = IN_PROGRESS_DEPENDENCY_READINESS_NOT_RUN`
 - `P0S6_CONTRACT_ID = P0S6-MEC-20260903-01`
 - `P0S6_MINIMAL_CONTRACT = FROZEN_OWNER_APPROVED`
+- `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`
+- `P0S6_DRRC_STATE = FROZEN_OWNER_APPROVED`
+- `P0S6_DRRC_INDEPENDENT_REVIEW = PASS`
+- `P0S6_DRRC_OWNER_DECISION = APPROVE_FOR_DEPENDENCY_PREPARATION_ONLY`
+- `P0S6_DRRC_FREEZE_HEAD_POLICY = COMMIT_CONTAINING_OWNER_APPROVED_DRRC_AND_GOVERNANCE_SYNC`
 - `P0S6_MAXIMUM_PHYSICAL_ATTEMPTS = 2`
 - `P0S6_PHYSICAL_ATTEMPTS_USED = 2`
 - `P0S6_PHYSICAL_ATTEMPTS_REMAINING = 0`
@@ -319,11 +324,16 @@ Current gate state after Architecture Owner Formal Closure:
 - `P0S_INBOX_CLIENT_MODULES_PASS = NOT_PROVEN`
 - `P0S_CORDIS_OMISSION_PASS = NOT_PROVEN`
 - `CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`
-- `P0S6_DEPENDENCY_CACHE_READINESS = NOT_READY_PROVEN`
+- `P0S6_MEC01_DEPENDENCY_CACHE_READINESS = HISTORICAL_NOT_READY_PROVEN`
 - `P0S6_TECHNICAL_CLOSURE_READY = NO`
-- `P0S6_RECOVERY_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`
-- `P0S6_RECOVERY_IMPLEMENTATION = NOT_AUTHORIZED`
+- `P0S6_RECOVERY_CONTRACT_PLANNING = COMPLETED`
+- `P0S6_DEPENDENCY_PREPARATION = AUTHORIZED_SINGLE_INVOCATION`
+- `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 0`
+- `P0S6_DEPENDENCY_READINESS = NOT_RUN`
+- `P0S6_READY_FOR_DEPENDENCY_PREPARATION = YES`
+- `P0S6_OFFLINE_REINSTALL_PROOF = SUPERSEDED_BY_FROZEN_IN_PLACE_NODE_MODULES`
 - `P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`
+- `P0S6_GLOBAL_PHYSICAL_ATTEMPT_3 = NOT_AUTHORIZED`
 - `P0S6_DIAGNOSTIC = NOT_AUTHORIZED`
 - `P0S6_FORMAL = NOT_AUTHORIZED`
 - `P0S6_HARNESS_CORE_MUTATION = NOT_AUTHORIZED`
@@ -353,9 +363,11 @@ later Architecture Owner Authority Alignment authorized bounded, read-only,
 contract-only planning, followed by approval of `P0S6-MEC-20260903-01` for a
 maximum of two physical attempts. That pre-execution authority is now
 superseded by the Owner's execution outcome: MEC-01 is
-`EXHAUSTED_INCONCLUSIVE`, P0.S-6 is `BLOCKED_PENDING_RECOVERY_CONTRACT`, and no
-physical attempt remains. Diagnostic, Formal, Harness Core mutation,
-experiment Commit, Push, another attempt, and P0.S-7 remain not authorized.
+`EXHAUSTED_INCONCLUSIVE`, and no physical attempt remains. The later
+`P0S6-DRRC-20260904-01` is frozen / Owner-approved for one Dependency
+Preparation invocation only; Runtime, Diagnostic, Formal, Harness Core
+mutation, experiment Commit, Push, Global Physical Attempt #3, and P0.S-7
+remain not authorized.
 
 CF-01 seam correction is binding for this execution. Frozen Harness exposes
 the Connection Client, generation/client identity, real `$events.ready`,
@@ -424,7 +436,7 @@ Prove:
 ### Current Governance Authority
 
 - MEC-01 lifecycle: `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE`.
-- Step state: `P0S6_STATE = BLOCKED_PENDING_RECOVERY_CONTRACT`; P0.S-6 has no
+- Step state: `P0S6_STATE = IN_PROGRESS_DEPENDENCY_READINESS_NOT_RUN`; P0.S-6 has no
   PASS or technical FAIL, is not closed, and is not ready for technical closure.
 - Attempt budget: `P0S6_PHYSICAL_ATTEMPTS_USED = 2`,
   `P0S6_PHYSICAL_ATTEMPTS_REMAINING = 0`, and
@@ -433,12 +445,19 @@ Prove:
   `P0S_INBOX_CLIENT_MODULES_PASS = NOT_PROVEN`,
   `P0S_CORDIS_OMISSION_PASS = NOT_PROVEN`, and
   `CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`.
-- Dependency state: `P0S6_DEPENDENCY_CACHE_READINESS = NOT_READY_PROVEN`.
-- Planning authority:
-  `P0S6_RECOVERY_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`.
-- Not authorized: Recovery implementation, dependency download/cache
-  preparation, Runtime, Diagnostic, Formal, Harness Core mutation, experiment
-  Commit, Push, another physical attempt, or P0.S-7.
+- DRRC: `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`,
+  `P0S6_DRRC_STATE = FROZEN_OWNER_APPROVED`, and
+  `P0S6_DRRC_INDEPENDENT_REVIEW = PASS`.
+- Planning state: `P0S6_RECOVERY_CONTRACT_PLANNING = COMPLETED`.
+- Dependency authority:
+  `P0S6_DEPENDENCY_PREPARATION = AUTHORIZED_SINGLE_INVOCATION`,
+  `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 0`,
+  `P0S6_DEPENDENCY_READINESS = NOT_RUN`, and
+  `P0S6_READY_FOR_DEPENDENCY_PREPARATION = YES`.
+- Recovery model:
+  `P0S6_OFFLINE_REINSTALL_PROOF = SUPERSEDED_BY_FROZEN_IN_PLACE_NODE_MODULES`.
+- Not authorized: Runtime, Diagnostic, Formal, Harness Core mutation,
+  experiment Commit, Push, Global Physical Attempt #3, or P0.S-7.
 
 ### MEC-01 Attempt Ledger
 
@@ -469,18 +488,23 @@ failed-attempt outputs only. They do not prove Dependency Readiness, are not
 Runtime Evidence, and cannot establish H-05 or H-20. They are not deleted,
 modified, or committed by this documentation action.
 
-### Bounded Recovery Contract Planning Entry
+### Frozen Dependency Readiness Recovery Contract
 
-Draft P0.S-6 Dependency Readiness Recovery Contract under bounded governance-only planning authority.
-Do not prepare dependencies, run Electron, or authorize another physical attempt.
+Execute exactly one P0S6-DRRC-20260904-01 Dependency Preparation invocation. Do not start Electron or authorize Global Physical Attempt #3.
 
-The future Contract's design targets are limited to separating Dependency
-Readiness from a physical Runtime attempt; validating the complete lockfile
-dependency closure rather than chasing an individual missing tarball;
-validating package integrity; proving `npm ci --offline` can complete before
-any new Electron attempt; and rejecting partial cache state as ready. This
-entry selects no command, download plan, attempt budget, or execution strategy.
-Any new physical attempt requires a later, separate Architecture Owner decision.
+The Architecture Owner superseded the prior offline-reinstall proof target with
+one online, lockfile-driven materialization. The complete `node_modules` is
+frozen by original canonical absolute path, original bytes, and canonical
+manifest. A later Runtime must consume that tree in place and must not execute
+`npm ci`; `.npm-cache` is not readiness proof or Runtime input. Package,
+lockfile, Electron ZIP, and complete dependency-tree integrity requirements are
+unchanged. Dependency Readiness PASS grants no Runtime authority and any future
+Runtime requires a separate Owner-approved Recovery Execution Contract.
+
+`P0S6_DRRC_FREEZE_HEAD_POLICY = COMMIT_CONTAINING_OWNER_APPROVED_DRRC_AND_GOVERNANCE_SYNC`.
+The actual Freeze commit SHA is returned after the one governance commit and is
+not recursively embedded. Dependency Preparation must use that actual SHA as
+its governance starting HEAD.
 
 Prefer build-time static inclusion of REQUIRED in-box Client modules.
 

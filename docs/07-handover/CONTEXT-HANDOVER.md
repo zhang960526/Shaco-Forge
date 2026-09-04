@@ -25,7 +25,24 @@ V1.0 = Harness Desktop Baseline using Electron Desktop + independent per-user lo
 
 ## Current Status
 
-P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. AUDIT-004B = `PASS`. `P0_CLOSURE_AUDIT = PASS`. Risk register and P0.S inputs: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`. P0.S is `IN_PROGRESS`; P0.S-1 through P0.S-5 are PASS / CLOSED with accepted constraints. `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE` and `P0S6_STATE = BLOCKED_PENDING_RECOVERY_CONTRACT`. Two `PRE_HYPOTHESIS` invocations used the full MEC-01 budget without launching Electron or reaching Runtime. P0.S-6 has neither PASS nor technical FAIL, is not closed, and H-05/H-20 remain `NOT_PROVEN`; `CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`. Only bounded governance-only Recovery Contract planning is authorized. Recovery implementation, dependency preparation, Runtime, Diagnostic, Formal, Harness Core mutation, experiment Commit, Push, another physical attempt, and P0.S-7 are not authorized. `P0_EXECUTOR_WORK = CLOSED`. `INDEPENDENT_P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. P1 cannot freeze until P0.S passes.
+P0 is CLOSED / PASS. P0-1 through P0-7 are PASS / CLOSED. Frozen Harness baseline is `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-alpha.1`) at `D:\Project\Shaco-Forge-Upstream\deepseek-harness`. AUDIT-004 = `PASS_WITH_REQUIRED_CORRECTIONS`. AUDIT-004B = `PASS`. `P0_CLOSURE_AUDIT = PASS`. Risk register and P0.S inputs: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`. P0.S is `IN_PROGRESS`; P0.S-1 through P0.S-5 are PASS / CLOSED with accepted constraints. `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE`. Two `PRE_HYPOTHESIS` invocations used the full MEC-01 budget without launching Electron or reaching Runtime. P0.S-6 has neither PASS nor technical FAIL, is not closed, and H-05/H-20 remain `NOT_PROVEN`; `CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`. `P0S6-DRRC-20260904-01` passed Corrective Re-Review and is frozen / Owner-approved for one Dependency Preparation invocation only. Runtime, Diagnostic, Formal, Harness Core mutation, experiment Commit, Push, Global Physical Attempt #3, and P0.S-7 are not authorized. `P0_EXECUTOR_WORK = CLOSED`. `INDEPENDENT_P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. P1 cannot freeze until P0.S passes.
+
+Current DRRC authority:
+
+- `P0S6_STATE = IN_PROGRESS_DEPENDENCY_READINESS_NOT_RUN`
+- `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`
+- `P0S6_DRRC_STATE = FROZEN_OWNER_APPROVED`
+- `P0S6_DRRC_INDEPENDENT_REVIEW = PASS`
+- `P0S6_RECOVERY_CONTRACT_PLANNING = COMPLETED`
+- `P0S6_DEPENDENCY_PREPARATION = AUTHORIZED_SINGLE_INVOCATION`
+- `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 0`
+- `P0S6_DEPENDENCY_READINESS = NOT_RUN`
+- `P0S6_READY_FOR_DEPENDENCY_PREPARATION = YES`
+- `P0S6_OFFLINE_REINSTALL_PROOF = SUPERSEDED_BY_FROZEN_IN_PLACE_NODE_MODULES`
+- `P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`
+- `P0S6_GLOBAL_PHYSICAL_ATTEMPT_3 = NOT_AUTHORIZED`
+- `P0S7_ALLOWED = NO`
+- `P0S6_DRRC_FREEZE_HEAD_POLICY = COMMIT_CONTAINING_OWNER_APPROVED_DRRC_AND_GOVERNANCE_SYNC`
 
 The pre-existing 39-file P0.S-6 historical candidate is copy-verified and
 quarantined outside both repositories at
@@ -79,19 +96,22 @@ and remain untouched/uncommitted.
 8. `../05-reviews/architecture/AUDIT-004-INDEPENDENT-P0-CLOSURE.md`
 9. `../03-v1.0-plan/P0S-FEASIBILITY-SPIKE.md`
 10. `../03-v1.0-plan/P0S-6-MINIMAL-EXECUTION-CONTRACT.md`
+11. `../03-v1.0-plan/P0S-6-DEPENDENCY-READINESS-RECOVERY-CONTRACT.md`
 
 ## Immediate Next
 
-Draft P0.S-6 Dependency Readiness Recovery Contract under bounded governance-only planning authority.
-Do not prepare dependencies, run Electron, or authorize another physical attempt.
+Execute exactly one P0S6-DRRC-20260904-01 Dependency Preparation invocation. Do not start Electron or authorize Global Physical Attempt #3.
 
-The future Contract may design only: separation of Dependency Readiness from
-physical Runtime attempts; complete lockfile dependency-closure validation;
-package-integrity validation; proof that `npm ci --offline` completes before
-any new Electron attempt; and rejection of partial cache state as ready. It
-must not select commands, a download plan, an attempt budget, or an execution
-strategy in this action. Any new physical attempt requires a later, separate
-Architecture Owner decision. `P0S6_RECOVERY_IMPLEMENTATION = NOT_AUTHORIZED`,
-`P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`,
-`P0S6_TECHNICAL_CLOSURE_READY = NO`, `P0S6_THIRD_ATTEMPT = NOT_AUTHORIZED`,
-and `P0S7_ALLOWED = NO`.
+The Architecture Owner superseded offline reinstall proof with one online,
+lockfile-driven materialization. Freeze the completed `node_modules` by its
+original canonical absolute path, original bytes, and canonical manifest. Any
+later Runtime must consume it in place and must not run `npm ci`.
+`.npm-cache` is not readiness proof or Runtime input. Package, lockfile,
+Electron ZIP, and full `node_modules` integrity requirements are unchanged.
+Dependency Readiness PASS does not authorize Runtime; a separate Owner-approved
+Recovery Execution Contract remains required.
+
+The actual Freeze commit SHA is returned after the single governance commit
+under `P0S6_DRRC_FREEZE_HEAD_POLICY`; it is not recursively embedded. The next
+Dependency Preparation must use that actual SHA as its governance starting
+HEAD.

@@ -52,8 +52,9 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
-| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | IN_PROGRESS; P0.S-1 through P0.S-5 PASS / CLOSED with accepted constraints; `P0S6-MEC-20260903-01` EXHAUSTED_INCONCLUSIVE; P0.S-6 BLOCKED_PENDING_RECOVERY_CONTRACT; H-05/H-20 NOT_PROVEN; physical attempts used 2, remaining 0; third attempt NOT_AUTHORIZED; only `P0S6_RECOVERY_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`; implementation, dependency preparation, Runtime, and any new attempt NOT_AUTHORIZED; P0.S-7 NOT_AUTHORIZED |
-| `P0S-6-MINIMAL-EXECUTION-CONTRACT.md` | P0.S-6 bounded execution Contract | FROZEN / OWNER_APPROVED; `P0S6-MEC-20260903-01`; one fixed Client boot Slice; maximum two physical attempts; Diagnostic/Formal/P0.S-7 NOT_AUTHORIZED |
+| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | IN_PROGRESS; P0.S-1 through P0.S-5 PASS / CLOSED with accepted constraints; `P0S6-MEC-20260903-01` EXHAUSTED_INCONCLUSIVE; P0.S-6 remains open with H-05/H-20 NOT_PROVEN; `P0S6-DRRC-20260904-01` FROZEN_OWNER_APPROVED for exactly one Dependency Preparation invocation; Runtime, Global Physical Attempt #3, and P0.S-7 NOT_AUTHORIZED |
+| `P0S-6-MINIMAL-EXECUTION-CONTRACT.md` | Historical P0.S-6 bounded Runtime execution Contract | FROZEN / OWNER_APPROVED; `P0S6-MEC-20260903-01`; EXHAUSTED_INCONCLUSIVE after two physical attempts; grants no current execution authority |
+| `P0S-6-DEPENDENCY-READINESS-RECOVERY-CONTRACT.md` | Current P0.S-6 Dependency Readiness Recovery Contract | FROZEN / OWNER_APPROVED; `P0S6-DRRC-20260904-01`; authorizes exactly one Contract-bound Dependency Preparation invocation; invocations used 0; readiness NOT_RUN; H-05/H-20 Runtime, Global Physical Attempt #3, and P0.S-7 NOT_AUTHORIZED |
 | `P05-COMPATIBILITY-VERSION.md` | P0.5 Compatibility Contract 候选 | READY-FOR-FREEZE-AFTER-P0S |
 | `P1-SYSTEM-CONTRACT.md` | P1 骨架 | NOT-DETAILED |
 | `P2-HOST-WORKER.md` | P2 骨架 | NOT-DETAILED |
@@ -64,6 +65,26 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | `P6B-PLUGIN-COMPATIBILITY.md` | P6B 骨架 | NOT-DETAILED |
 | `P7-PACKAGING-SECURITY-UPGRADE.md` | P7 骨架 | NOT-DETAILED |
 | `P8-FINAL-ACCEPTANCE.md` | P8 骨架 | NOT-DETAILED |
+
+Current P0.S-6 Recovery authority:
+
+- `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`
+- `P0S6_DRRC_STATE = FROZEN_OWNER_APPROVED`
+- `P0S6_DRRC_INDEPENDENT_REVIEW = PASS`
+- `P0S6_RECOVERY_CONTRACT_PLANNING = COMPLETED`
+- `P0S6_DEPENDENCY_PREPARATION = AUTHORIZED_SINGLE_INVOCATION`
+- `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 0`
+- `P0S6_DEPENDENCY_READINESS = NOT_RUN`
+- `P0S6_READY_FOR_DEPENDENCY_PREPARATION = YES`
+- `P0S6_OFFLINE_REINSTALL_PROOF = SUPERSEDED_BY_FROZEN_IN_PLACE_NODE_MODULES`
+- `P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`
+- `P0S6_GLOBAL_PHYSICAL_ATTEMPT_3 = NOT_AUTHORIZED`
+- `P0S7_ALLOWED = NO`
+- `P0S6_DRRC_FREEZE_HEAD_POLICY = COMMIT_CONTAINING_OWNER_APPROVED_DRRC_AND_GOVERNANCE_SYNC`
+
+Current authorized next step:
+
+Execute exactly one P0S6-DRRC-20260904-01 Dependency Preparation invocation. Do not start Electron or authorize Global Physical Attempt #3.
 
 ## 6. Development Records
 
@@ -115,7 +136,7 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | `evidence/P0S-2-ELECTRON-CLIENT-BOOT-EVIDENCE.md` | P0.S-2 closed Electron Client Boot evidence; stage PASS with accepted `PROVEN_WITH_CONSTRAINT` disposition |
 | `evidence/P0S-3-LOCAL-CARRIER-AND-TRUST-EVIDENCE.md` | P0.S-3 closed Local Carrier + Trust evidence; stage PASS with accepted `PROVEN_WITH_CONSTRAINT` disposition; carrier completeness remains pending P0.S-4 |
 | `evidence/P0S-4-CONNECTION-FEATURE-COMPLETENESS-EVIDENCE.md` | P0.S-4 closed Connection Feature Completeness evidence; corrective run and independent re-review PASS; stage closes `MET_WITH_CONSTRAINT` while all Spike implementations remain `NOT_PRODUCTION` |
-| `evidence/P0S-5-DESKTOP-INDEPENDENCE-AND-RECONNECT-EVIDENCE.md` | P0.S-5 closed Desktop Independence & Reconnect evidence; formal Executor, Independent Review, documentation corrective and Corrective Re-Review accepted; stage closes `MET_WITH_CONSTRAINT`; later P0.S-6 execution authority is governed only by `P0S6-MEC-20260903-01` |
+| `evidence/P0S-5-DESKTOP-INDEPENDENCE-AND-RECONNECT-EVIDENCE.md` | P0.S-5 closed Desktop Independence & Reconnect evidence; formal Executor, Independent Review, documentation corrective and Corrective Re-Review accepted; stage closes `MET_WITH_CONSTRAINT`; its historical successor gate did not itself authorize P0.S-6; current P0.S-6 Dependency Preparation authority is governed by `P0S6-DRRC-20260904-01` |
 
 ## 9. Handover
 

@@ -24,6 +24,7 @@ Date: 2026-09-04
 - P0.S-1 through P0.S-5: PASS / CLOSED with accepted constraints
 - P0.S-6 Minimal Execution Contract: `P0S6-MEC-20260903-01` frozen / Owner-approved (historical pre-execution authority)
 - P0.S-6 MEC-01 execution lifecycle: `EXHAUSTED_INCONCLUSIVE`; two `PRE_HYPOTHESIS` attempts consumed; Electron launch count zero; Runtime Gate not reached
+- P0.S-6 Dependency Readiness Recovery Contract: `P0S6-DRRC-20260904-01` Corrective Re-Review PASS; frozen / Owner-approved for exactly one Dependency Preparation invocation
 - P0.S-6 historical 39-file candidate: copy-verified and quarantined outside both repositories; active worktree restored clean
 
 ## Current Gate
@@ -82,11 +83,21 @@ Date: 2026-09-04
 
 `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE`
 
-`P0S6_STATE = BLOCKED_PENDING_RECOVERY_CONTRACT`
+`P0S6_STATE = IN_PROGRESS_DEPENDENCY_READINESS_NOT_RUN`
 
 `P0S6_CONTRACT_ID = P0S6-MEC-20260903-01`
 
 `P0S6_MINIMAL_CONTRACT = FROZEN_OWNER_APPROVED`
+
+`P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`
+
+`P0S6_DRRC_STATE = FROZEN_OWNER_APPROVED`
+
+`P0S6_DRRC_INDEPENDENT_REVIEW = PASS`
+
+`P0S6_DRRC_OWNER_DECISION = APPROVE_FOR_DEPENDENCY_PREPARATION_ONLY`
+
+`P0S6_DRRC_FREEZE_HEAD_POLICY = COMMIT_CONTAINING_OWNER_APPROVED_DRRC_AND_GOVERNANCE_SYNC`
 
 `P0S6_MAXIMUM_PHYSICAL_ATTEMPTS = 2`
 
@@ -104,15 +115,25 @@ Date: 2026-09-04
 
 `CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`
 
-`P0S6_DEPENDENCY_CACHE_READINESS = NOT_READY_PROVEN`
+`P0S6_MEC01_DEPENDENCY_CACHE_READINESS = HISTORICAL_NOT_READY_PROVEN`
 
 `P0S6_TECHNICAL_CLOSURE_READY = NO`
 
-`P0S6_RECOVERY_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`
+`P0S6_RECOVERY_CONTRACT_PLANNING = COMPLETED`
 
-`P0S6_RECOVERY_IMPLEMENTATION = NOT_AUTHORIZED`
+`P0S6_DEPENDENCY_PREPARATION = AUTHORIZED_SINGLE_INVOCATION`
+
+`P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 0`
+
+`P0S6_DEPENDENCY_READINESS = NOT_RUN`
+
+`P0S6_READY_FOR_DEPENDENCY_PREPARATION = YES`
+
+`P0S6_OFFLINE_REINSTALL_PROOF = SUPERSEDED_BY_FROZEN_IN_PLACE_NODE_MODULES`
 
 `P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`
+
+`P0S6_GLOBAL_PHYSICAL_ATTEMPT_3 = NOT_AUTHORIZED`
 
 `P0S6_DIAGNOSTIC = NOT_AUTHORIZED`
 
@@ -148,8 +169,7 @@ Date: 2026-09-04
 
 ## Next Step
 
-Draft P0.S-6 Dependency Readiness Recovery Contract under bounded governance-only planning authority.
-Do not prepare dependencies, run Electron, or authorize another physical attempt.
+Execute exactly one P0S6-DRRC-20260904-01 Dependency Preparation invocation. Do not start Electron or authorize Global Physical Attempt #3.
 
 Attempt #1 `999bbd1e-9301-49ad-9021-30da7c879f9e` stopped
 `PRE_HYPOTHESIS` at `RUNNER_PREFLIGHT` on the runner collection-shape defect;
@@ -173,12 +193,19 @@ is `UNRESOLVED`. Partial `node_modules`, `.npm-cache`, and `runtime-data` are
 failed-attempt outputs only, not Dependency Readiness or Runtime Evidence;
 they remain untouched and uncommitted.
 
-The future Recovery Contract may only design separation of Dependency
-Readiness from physical Runtime attempts, complete lockfile dependency-closure
-and package-integrity checks, successful `npm ci --offline` readiness proof
-before any Electron attempt, and rejection of partial cache as ready. No
-command, download plan, attempt budget, or execution strategy is selected.
-Any new physical attempt requires a later, separate Architecture Owner decision.
+The Architecture Owner superseded offline reinstall proof with one online,
+lockfile-driven materialization. The completed `node_modules` is frozen by its
+original canonical absolute path, original bytes, and canonical manifest; a
+later Runtime consumes that tree in place and does not run `npm ci`.
+`.npm-cache` is not readiness proof or Runtime input. Package, lockfile,
+Electron ZIP, and full `node_modules` integrity remain mandatory. Dependency
+Readiness PASS does not authorize Runtime; a separate Owner-approved Recovery
+Execution Contract is still required.
+
+The actual Freeze commit SHA selected by
+`P0S6_DRRC_FREEZE_HEAD_POLICY` is returned after the one governance commit and
+must be the Dependency Preparation governance starting HEAD. It is not
+recursively embedded or backfilled by a second commit.
 
 Risk register: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
 

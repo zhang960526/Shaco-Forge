@@ -2,7 +2,52 @@
 
 Status: ACTIVE
 
-## 2026-09-04 — Current Authoritative P0.S-6 Outcome
+## 2026-09-04 — P0.S-6 DRRC Owner Freeze and Governance Sync
+
+- Initial Independent Review returned `PASS_WITH_REQUIRED_CORRECTIONS` against
+  `P0S6-DRRC-20260904-01`. Corrected Draft SHA-256 was
+  `10e16733bc24e83ea3ecaf44373cfbda9efd6bac6c52e1ca5d681cdc7459047b`.
+- Corrective Re-Review returned `PASS`; F-01 through F-05 and L-01 are closed,
+  new required Findings are zero, and the Contract is ready for Owner approval.
+  Reviewer official-network verification was unavailable because of the Review
+  environment. Two local Electron ZIP files independently corroborated the
+  frozen artifact identity: each was `120958381` bytes with SHA-256
+  `b87b2d6167845ece1d373eb37f5ce49868a07ec90203de44b6bd415d6c673c6d`.
+  These local cache copies are Review corroboration only, not Dependency
+  Readiness proof or authorized preparation input.
+- Architecture Owner decision:
+  `P0S6_DRRC_OWNER_DECISION = APPROVE_FOR_DEPENDENCY_PREPARATION_ONLY`.
+  `P0S6_DRRC_STATE = FROZEN_OWNER_APPROVED` and
+  `P0S6_DRRC_INDEPENDENT_REVIEW = PASS`.
+- Current synchronized fields:
+  `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`;
+  `P0S6_RECOVERY_CONTRACT_PLANNING = COMPLETED`;
+  `P0S6_DEPENDENCY_PREPARATION = AUTHORIZED_SINGLE_INVOCATION`;
+  `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 0`;
+  `P0S6_DEPENDENCY_READINESS = NOT_RUN`;
+  `P0S6_READY_FOR_DEPENDENCY_PREPARATION = YES`;
+  `P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`;
+  `P0S6_GLOBAL_PHYSICAL_ATTEMPT_3 = NOT_AUTHORIZED`; and
+  `P0S7_ALLOWED = NO`.
+- Architecture Owner explicitly superseded offline reinstall proof:
+  `P0S6_OFFLINE_REINSTALL_PROOF = SUPERSEDED_BY_FROZEN_IN_PLACE_NODE_MODULES`.
+  One online lockfile-driven materialization forms the complete dependency tree;
+  the resulting `node_modules` is frozen by original absolute path, bytes, and
+  canonical manifest. Future Runtime consumes it in place without `npm ci`.
+  `.npm-cache` is not readiness proof or Runtime input. Package, lockfile,
+  Electron ZIP, and full dependency-tree integrity remain mandatory.
+- Freeze identity is non-recursive:
+  `P0S6_DRRC_FREEZE_HEAD_POLICY = COMMIT_CONTAINING_OWNER_APPROVED_DRRC_AND_GOVERNANCE_SYNC`.
+  The actual SHA is returned after this one governance commit and becomes the
+  next Dependency Preparation governance starting HEAD; no second backfill
+  commit is permitted.
+- This governance action performs no Dependency Preparation, npm, Electron,
+  Runtime, or physical Attempt. Dependency Readiness PASS still cannot authorize
+  Runtime; a separate Owner-approved Recovery Execution Contract is required.
+- Current authoritative next step:
+  Execute exactly one P0S6-DRRC-20260904-01 Dependency Preparation invocation. Do not start Electron or authorize Global Physical Attempt #3.
+
+## 2026-09-04 — Historical MEC-01 Outcome and DRRC Planning Entry
 
 - Architecture Owner classified the frozen
   `P0S6-MEC-20260903-01` lifecycle as
@@ -61,8 +106,8 @@ Status: ACTIVE
 
 All entries below are historical point-in-time records. Any P0.S-6
 pre-execution readiness, zero-attempt, Primary Attempt, or conditional retry
-statement below is superseded by the 2026-09-04 current authoritative outcome
-above and grants no current execution authority.
+statement below is superseded by the 2026-09-04 DRRC Owner Freeze above and
+grants no current execution authority.
 
 ## 2026-09-03
 
