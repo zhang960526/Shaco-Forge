@@ -5,7 +5,7 @@
   "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/verify-env-paths-integrity.mjs",
   "bytes": 25687,
   "sha256": "0331E13399B579D84846F4E59D1B2718F3DB7EBE1234DAB089B980D44A3B9757",
-  "authorityHead": "116b0ddf30be4513e58817500dba85434b07144b",
+  "authorityHead": "001a1e495617b211e1cd1702d5895a4c31f314ea",
   "invocationId": "P0S6-TVEC-INVOCATION-20260904-01",
   "dynamicRunner": "PROHIBITED",
   "unfrozenScript": "PROHIBITED"
