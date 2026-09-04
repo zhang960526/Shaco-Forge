@@ -2,6 +2,68 @@
 
 Status: ACTIVE
 
+## 2026-09-04 — Current Authoritative P0.S-6 Outcome
+
+- Architecture Owner classified the frozen
+  `P0S6-MEC-20260903-01` lifecycle as
+  `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE` and P0.S-6 as
+  `P0S6_STATE = BLOCKED_PENDING_RECOVERY_CONTRACT`. This is neither P0.S-6
+  PASS nor a technical FAIL; the step remains open and
+  `P0S6_TECHNICAL_CLOSURE_READY = NO`. P0.S-7 remains unauthorized.
+- Attempt #1 `999bbd1e-9301-49ad-9021-30da7c879f9e` was
+  `PRE_HYPOTHESIS` and stopped at `RUNNER_PREFLIGHT` on the runner
+  collection-shape defect. Its only Evidence file is `attempt.json`, SHA-256
+  `bdcbd0579238f07fff28e420b1529cf9cf13fe38652cb6d18dd5d0bc11a77d46`.
+- Attempt #2 `76bc4e8a-fb0c-4e92-a750-b555e6a57e41` was
+  `PRE_HYPOTHESIS` and stopped at `DEPENDENCY_SETUP`: offline cache
+  `ENOTCACHED` for
+  `https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz`. Its
+  `attempt.json` SHA-256 is
+  `c6646264f2cb6e20d59d6dc913d8dc1753557b192a472ccc48c16b09a6107a88`;
+  its `preflight.json` SHA-256 is
+  `bc1dfb1e1f2537e2f1f8eb999b21037af4c662053637ec3d84199388d7fc03e5`.
+- Both invocations launched Electron zero times and stopped before the Runtime
+  Gate. No `runtime.json`, `runtime.log`, or `verification.json` exists for
+  Attempt #2, and no H-05/H-20 Runtime Evidence was produced by either
+  attempt. Accordingly `P0S6_RUNTIME_GATE_REACHED = NO`,
+  `P0S_INBOX_CLIENT_MODULES_PASS = NOT_PROVEN`,
+  `P0S_CORDIS_OMISSION_PASS = NOT_PROVEN`, and
+  `CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`.
+- The actual invocation ledger is authoritative:
+  `P0S6_PHYSICAL_ATTEMPTS_USED = 2`,
+  `P0S6_PHYSICAL_ATTEMPTS_REMAINING = 0`, Attempt #2 was executed, and
+  `P0S6_THIRD_ATTEMPT = NOT_AUTHORIZED`. Attempt #2 raw `attempt.json`
+  preserves fallback values `physicalAttemptsUsed=1`,
+  `attempt2Executed=false`, and `clientModuleCorePatchRequired="NO"`; they
+  remain immutable raw Evidence and do not define governance state.
+- `P0S6_DEPENDENCY_CACHE_READINESS = NOT_READY_PROVEN`. Partial
+  `node_modules`, `.npm-cache`, and `runtime-data` are failed-attempt outputs
+  only. They prove no Dependency Readiness, are not Runtime Evidence, and
+  support no H-05/H-20 inference. This documentation action neither deletes,
+  modifies, nor commits them.
+- Bounded governance-only Recovery Contract planning is authorized; Recovery
+  implementation, dependency download/cache preparation, Runtime, Diagnostic,
+  Formal, experiment Commit, Push, any new physical attempt, and P0.S-7 are
+  not authorized. The future Contract may only design separation of Dependency
+  Readiness from physical Runtime attempts, complete lockfile dependency
+  closure and package-integrity validation, proof that `npm ci --offline`
+  completes before any Electron attempt, and rejection of partial cache as
+  ready. No command, download plan, attempt budget, or execution strategy is
+  selected; any new physical attempt requires a later, separate Owner decision.
+- Current authoritative next step:
+  Draft P0.S-6 Dependency Readiness Recovery Contract under bounded governance-only planning authority.
+  Do not prepare dependencies, run Electron, or authorize another physical attempt.
+- The original `P0S-6-MINIMAL-EXECUTION-CONTRACT.md`, experiment source, raw
+  Evidence, and generated attempt outputs remain unchanged by this
+  documentation-only outcome recording.
+
+## Historical Timeline
+
+All entries below are historical point-in-time records. Any P0.S-6
+pre-execution readiness, zero-attempt, Primary Attempt, or conditional retry
+statement below is superseded by the 2026-09-04 current authoritative outcome
+above and grants no current execution authority.
+
 ## 2026-09-03
 
 - Pre-Execution Identity Alignment Corrective separates the P0.S-6 Product

@@ -52,7 +52,7 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
-| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | IN_PROGRESS; P0.S-1 through P0.S-5 PASS / CLOSED with accepted constraints; P0.S-6 READY_FOR_EXECUTION under frozen Contract |
+| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | IN_PROGRESS; P0.S-1 through P0.S-5 PASS / CLOSED with accepted constraints; `P0S6-MEC-20260903-01` EXHAUSTED_INCONCLUSIVE; P0.S-6 BLOCKED_PENDING_RECOVERY_CONTRACT; H-05/H-20 NOT_PROVEN; physical attempts used 2, remaining 0; third attempt NOT_AUTHORIZED; only `P0S6_RECOVERY_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`; implementation, dependency preparation, Runtime, and any new attempt NOT_AUTHORIZED; P0.S-7 NOT_AUTHORIZED |
 | `P0S-6-MINIMAL-EXECUTION-CONTRACT.md` | P0.S-6 bounded execution Contract | FROZEN / OWNER_APPROVED; `P0S6-MEC-20260903-01`; one fixed Client boot Slice; maximum two physical attempts; Diagnostic/Formal/P0.S-7 NOT_AUTHORIZED |
 | `P05-COMPATIBILITY-VERSION.md` | P0.5 Compatibility Contract 候选 | READY-FOR-FREEZE-AFTER-P0S |
 | `P1-SYSTEM-CONTRACT.md` | P1 骨架 | NOT-DETAILED |

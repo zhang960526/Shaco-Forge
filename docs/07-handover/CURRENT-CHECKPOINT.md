@@ -1,6 +1,6 @@
 # Shaco Forge Current Checkpoint
 
-Date: 2026-09-03
+Date: 2026-09-04
 
 ## Completed
 
@@ -22,7 +22,8 @@ Date: 2026-09-03
 - P0 Closure Corrective F-01 / F-02 / F-03: Executor wording applied
 - AUDIT-004B Independent P0 Closure Corrective Re-Review: PASS
 - P0.S-1 through P0.S-5: PASS / CLOSED with accepted constraints
-- P0.S-6 Minimal Execution Contract: `P0S6-MEC-20260903-01` frozen / Owner-approved; bounded execution authority opened
+- P0.S-6 Minimal Execution Contract: `P0S6-MEC-20260903-01` frozen / Owner-approved (historical pre-execution authority)
+- P0.S-6 MEC-01 execution lifecycle: `EXHAUSTED_INCONCLUSIVE`; two `PRE_HYPOTHESIS` attempts consumed; Electron launch count zero; Runtime Gate not reached
 - P0.S-6 historical 39-file candidate: copy-verified and quarantined outside both repositories; active worktree restored clean
 
 ## Current Gate
@@ -79,43 +80,39 @@ Date: 2026-09-03
 
 `SHACO_FORGE_V1_0_P0S = IN_PROGRESS`
 
-`P0S6_STATE = READY_FOR_EXECUTION`
+`P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE`
 
-`P0S6_EXECUTION_AUTHORIZATION_FREEZE = PASS`
+`P0S6_STATE = BLOCKED_PENDING_RECOVERY_CONTRACT`
 
 `P0S6_CONTRACT_ID = P0S6-MEC-20260903-01`
 
 `P0S6_MINIMAL_CONTRACT = FROZEN_OWNER_APPROVED`
 
-`P0S6_OWNER_DECISION = APPROVE_FOR_EXECUTION`
-
-`P0S6_PRODUCT_BASELINE_HEAD = cada37727af3f99da77f50353924af80f917b688`
-
-`P0S6_CONTRACT_FREEZE_HEAD = 45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3`
-
-`P0S6_EXECUTION_AUTHORITY_ANCHOR_POLICY = LAST_CLEAN_PRE_EXECUTION_GOVERNANCE_COMMIT`
-
-`P0S6_EXECUTION_AUTHORITY_ANCHOR = IDENTITY_CORRECTIVE_COMMIT_RESOLVED_POST_COMMIT`
-
-`P0S6_EXECUTION_AUTHORITY_IDENTITY_FROZEN = YES`
-
-`P0S6_PRIMARY_ATTEMPT_READY = YES`
-
-`P0S6_IMPLEMENTATION = AUTHORIZED_CONTRACT_BOUND`
-
-`P0S6_EXPERIMENT_SOURCE_MODIFICATION = AUTHORIZED_ALLOWED_DIRECTORY_ONLY`
-
-`P0S6_RUNTIME = AUTHORIZED_SINGLE_BOUNDED_ELECTRON_CLIENT_BOOT_ONLY`
-
-`P0S6_PRIMARY_ATTEMPT = AUTHORIZED_MAX_1`
-
-`P0S6_CORRECTIVE_RETRY = CONDITIONALLY_AUTHORIZED_MAX_1_RETRY_ELIGIBILITY_ONLY`
-
 `P0S6_MAXIMUM_PHYSICAL_ATTEMPTS = 2`
 
-`P0S6_PHYSICAL_ATTEMPTS_USED = 0`
+`P0S6_PHYSICAL_ATTEMPTS_USED = 2`
+
+`P0S6_PHYSICAL_ATTEMPTS_REMAINING = 0`
 
 `P0S6_THIRD_ATTEMPT = NOT_AUTHORIZED`
+
+`P0S6_RUNTIME_GATE_REACHED = NO`
+
+`P0S_INBOX_CLIENT_MODULES_PASS = NOT_PROVEN`
+
+`P0S_CORDIS_OMISSION_PASS = NOT_PROVEN`
+
+`CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`
+
+`P0S6_DEPENDENCY_CACHE_READINESS = NOT_READY_PROVEN`
+
+`P0S6_TECHNICAL_CLOSURE_READY = NO`
+
+`P0S6_RECOVERY_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`
+
+`P0S6_RECOVERY_IMPLEMENTATION = NOT_AUTHORIZED`
+
+`P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`
 
 `P0S6_DIAGNOSTIC = NOT_AUTHORIZED`
 
@@ -126,8 +123,6 @@ Date: 2026-09-03
 `P0S6_COMMIT_EXPERIMENT = NOT_AUTHORIZED`
 
 `P0S6_PUSH = NOT_AUTHORIZED`
-
-`READY_FOR_P0S6_EXECUTION = YES`
 
 `P0S7_ALLOWED = NO`
 
@@ -153,31 +148,37 @@ Date: 2026-09-03
 
 ## Next Step
 
-P0.S-6 PRIMARY EXECUTION ATTEMPT #1
+Draft P0.S-6 Dependency Readiness Recovery Contract under bounded governance-only planning authority.
+Do not prepare dependencies, run Electron, or authorize another physical attempt.
 
-NOT EXECUTED
+Attempt #1 `999bbd1e-9301-49ad-9021-30da7c879f9e` stopped
+`PRE_HYPOTHESIS` at `RUNNER_PREFLIGHT` on the runner collection-shape defect;
+its sole `attempt.json` SHA-256 is
+`bdcbd0579238f07fff28e420b1529cf9cf13fe38652cb6d18dd5d0bc11a77d46`.
+Attempt #2 `76bc4e8a-fb0c-4e92-a750-b555e6a57e41` stopped
+`PRE_HYPOTHESIS` at `DEPENDENCY_SETUP` with offline-cache `ENOTCACHED` for
+`https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz`; its
+`attempt.json` SHA-256 is
+`c6646264f2cb6e20d59d6dc913d8dc1753557b192a472ccc48c16b09a6107a88`
+and `preflight.json` SHA-256 is
+`bc1dfb1e1f2537e2f1f8eb999b21037af4c662053637ec3d84199388d7fc03e5`.
+Both attempts launched Electron zero times and produced no H-05/H-20 Runtime
+Evidence.
 
-Before invoking the runner, resolve `ExecutionAuthorityHead` to the final clean
-Pre-Execution Identity Corrective commit and read `AttemptStartHead` from
-`git rev-parse HEAD`. They must be equal, and Harness HEAD must equal
-`cd5ef8148158c3a752a658978873241fdf8e2bbc`; otherwise stop before Electron and
-before consuming an attempt. Product Baseline `cada37727af3f99da77f50353924af80f917b688`
-is not the Attempt Start requirement. No governance/documentation commit may
-follow the Identity Corrective commit before Attempt #1 ends.
+Attempt #2 raw fallback fields `physicalAttemptsUsed=1`,
+`attempt2Executed=false`, and `clientModuleCorePatchRequired="NO"` remain
+immutable but non-authoritative. The actual invocation ledger controls:
+Attempt #2 executed, two attempts were used, zero remain, and Core Patch need
+is `UNRESOLVED`. Partial `node_modules`, `.npm-cache`, and `runtime-data` are
+failed-attempt outputs only, not Dependency Readiness or Runtime Evidence;
+they remain untouched and uncommitted.
 
-Execution must follow `P0S6-MEC-20260903-01`: one fixed Client boot Slice,
-Electron `35.7.5`, one Primary Attempt and at most one eligibility-only
-Corrective Retry, with two physical attempts maximum. H-05, H-20, the P0.S-6
-product Gates, Desktop + Worker architecture, frozen Harness baseline and
-feature scope remain unchanged. Diagnostic, Formal, experiment Commit, Push,
-a third attempt and P0.S-7 remain not authorized. Historical P0.S-6 attempts
-and candidates receive no retroactive authorization, PASS, Formal Evidence or
-acceptance and the quarantine must not be consumed.
-
-Historical candidate quarantine:
-`D:\Project\Shaco-Forge-Quarantine\P0S6-Historical-Candidate-20260903`.
-Manifest SHA256:
-`8ae0b903125f44ea656be0dcdeab40a2d35d0916f416822908f34e0b809bba50`.
+The future Recovery Contract may only design separation of Dependency
+Readiness from physical Runtime attempts, complete lockfile dependency-closure
+and package-integrity checks, successful `npm ci --offline` readiness proof
+before any Electron attempt, and rejection of partial cache as ready. No
+command, download plan, attempt budget, or execution strategy is selected.
+Any new physical attempt requires a later, separate Architecture Owner decision.
 
 Risk register: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
 

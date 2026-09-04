@@ -1,7 +1,7 @@
 # Shaco Forge Current State
 
 Status: ACTIVE
-Last Updated: 2026-09-03
+Last Updated: 2026-09-04
 
 ## Product
 
@@ -12,8 +12,8 @@ Last Updated: 2026-09-03
 ## Current Phase
 
 - Phase: P0.S — Desktop / Connection / Packaging Feasibility Spike
-- Step: P0.S-6 Client Modules / Plugin Frontend — `READY_FOR_EXECUTION`; Minimal Execution Contract frozen and Owner-approved
-- Next Executable Step: P0.S-6 Primary Execution Attempt #1 under `P0S6-MEC-20260903-01`
+- Step: P0.S-6 Client Modules / Plugin Frontend — `BLOCKED_PENDING_RECOVERY_CONTRACT`; `P0S6-MEC-20260903-01` exhausted inconclusively; P0.S-6 is not closed
+- Current Authorized Scope: bounded governance-only Recovery Contract planning only; no dependency preparation, Runtime, or new physical attempt is authorized
 - Production Implementation: NOT_STARTED
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -148,36 +148,30 @@ Last Updated: 2026-09-03
 - `P0S_NO_DUPLICATE_RESUME = YES`
 - `P0S_NO_APPROVAL_REPLAY = YES`
 - `P0S_NO_QUESTION_REPLAY = YES`
-- `P0S6_STATE = READY_FOR_EXECUTION`
-- `P0S6_EXECUTION_AUTHORIZATION_FREEZE = PASS`
+- `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE`
+- `P0S6_STATE = BLOCKED_PENDING_RECOVERY_CONTRACT`
 - `P0S6_CONTRACT_ID = P0S6-MEC-20260903-01`
 - `P0S6_MINIMAL_CONTRACT = FROZEN_OWNER_APPROVED`
-- `P0S6_OWNER_DECISION = APPROVE_FOR_EXECUTION`
-- `P0S6_PRODUCT_BASELINE_HEAD = cada37727af3f99da77f50353924af80f917b688`
-- `P0S6_CONTRACT_FREEZE_HEAD = 45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3`
-- `P0S6_EXECUTION_AUTHORITY_ANCHOR_POLICY = LAST_CLEAN_PRE_EXECUTION_GOVERNANCE_COMMIT`
-- `P0S6_EXECUTION_AUTHORITY_ANCHOR = IDENTITY_CORRECTIVE_COMMIT_RESOLVED_POST_COMMIT`
-- `P0S6_EXECUTION_AUTHORITY_IDENTITY_FROZEN = YES`
-- `P0S6_PRIMARY_ATTEMPT_READY = YES`
-- `P0S6_POST_ANCHOR_GOVERNANCE_COMMIT_BEFORE_ATTEMPT_END = FORBIDDEN`
-- `P0S6_MINIMAL_EXECUTION_CONTRACT_PLANNING = COMPLETED`
-- `P0S6_PLANNING_AUTHORITY_EXHAUSTED = YES`
-- `P0S6_IMPLEMENTATION = AUTHORIZED_CONTRACT_BOUND`
-- `P0S6_RUNTIME = AUTHORIZED_SINGLE_BOUNDED_ELECTRON_CLIENT_BOOT_ONLY`
-- `P0S6_PRIMARY_ATTEMPT = AUTHORIZED_MAX_1`
-- `P0S6_CORRECTIVE_RETRY = CONDITIONALLY_AUTHORIZED_MAX_1_RETRY_ELIGIBILITY_ONLY`
 - `P0S6_MAXIMUM_PHYSICAL_ATTEMPTS = 2`
-- `P0S6_PHYSICAL_ATTEMPTS_USED = 0`
+- `P0S6_PHYSICAL_ATTEMPTS_USED = 2`
+- `P0S6_PHYSICAL_ATTEMPTS_REMAINING = 0`
 - `P0S6_THIRD_ATTEMPT = NOT_AUTHORIZED`
+- `P0S6_RUNTIME_GATE_REACHED = NO`
+- `P0S_INBOX_CLIENT_MODULES_PASS = NOT_PROVEN`
+- `P0S_CORDIS_OMISSION_PASS = NOT_PROVEN`
+- `CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`
+- `P0S6_DEPENDENCY_CACHE_READINESS = NOT_READY_PROVEN`
+- `P0S6_TECHNICAL_CLOSURE_READY = NO`
+- `P0S6_RECOVERY_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`
+- `P0S6_RECOVERY_IMPLEMENTATION = NOT_AUTHORIZED`
+- `P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`
 - `P0S6_EXACT_ELECTRON_IDENTITY_FROZEN = YES`
 - `P0S6_STATIC_ARTIFACT_SEMANTIC_TRANSFORMATION = FORBIDDEN`
 - `P0S6_DIAGNOSTIC = NOT_AUTHORIZED`
 - `P0S6_FORMAL = NOT_AUTHORIZED`
 - `P0S6_HARNESS_CORE_MUTATION = NOT_AUTHORIZED`
-- `P0S6_EXPERIMENT_SOURCE_MODIFICATION = AUTHORIZED_ALLOWED_DIRECTORY_ONLY`
 - `P0S6_COMMIT_EXPERIMENT = NOT_AUTHORIZED`
 - `P0S6_PUSH = NOT_AUTHORIZED`
-- `READY_FOR_P0S6_EXECUTION = YES`
 - `P0S7_ALLOWED = NO`
 - `P0S6_NO_RETROACTIVE_AUTHORIZATION = YES`
 - `P0S6_NO_RETROACTIVE_PASS = YES`
@@ -244,31 +238,31 @@ Re-Review `PASS`, confirmed the corrective scope and technical Gate integrity,
 and reported zero remaining corrective Findings without executing Runtime or
 creating a runId. The Architecture Owner accepted that chain and closed P0.S-5
 as `PASS / CLOSED` with `MET_WITH_CONSTRAINT`. AUDIT-009 is the formal review
-and closure record. The P0.S-5 closure prohibition was a stage-isolation Gate,
-not a permanent ban on P0.S-6 design activity. The Architecture Owner first
-authorized bounded, read-only, contract-only planning, then reviewed and
-approved the resulting `P0S6-MEC-20260903-01` Minimal Execution Contract for
-bounded execution. P0.S-6 is now `READY_FOR_EXECUTION`. Only Contract-bound
-implementation, the allowed-directory experiment sources, one Primary Attempt
-and one retry-eligibility-only Corrective Retry are authorized. Diagnostic,
-Formal, Harness Core mutation, experiment Commit, Push, a third attempt, and
-P0.S-7 remain not authorized.
+and closure record. The later Owner-approved `P0S6-MEC-20260903-01` authorized
+two physical attempts. Its lifecycle is now `EXHAUSTED_INCONCLUSIVE`: P0.S-6
+has neither PASS nor a technical FAIL, is not closed, and is blocked pending a
+separately drafted Dependency Readiness Recovery Contract. P0.S-7 remains
+forbidden.
 
-The P0.S-6 Product Baseline HEAD and execution start identity are intentionally
-different. `cada37727af3f99da77f50353924af80f917b688` identifies the clean
-product/experiment baseline before Contract Freeze;
-`45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3` identifies the Contract Freeze.
-The final Pre-Execution Identity Corrective commit is selected non-recursively
-as the Execution Authority Anchor. Attempt #1 must begin from that exact clean
-HEAD. Drift means `AttemptStartHead != ExecutionAuthorityHead` or frozen
-Harness HEAD mismatch, never merely Product Baseline/Authority Anchor
-difference.
+Both MEC-01 invocations stopped in `PRE_HYPOTHESIS` before Electron and before
+the Runtime Gate. Attempt #1 (`999bbd1e-9301-49ad-9021-30da7c879f9e`) stopped
+at `RUNNER_PREFLIGHT` on the runner collection-shape defect. Attempt #2
+(`76bc4e8a-fb0c-4e92-a750-b555e6a57e41`) stopped at `DEPENDENCY_SETUP` because
+the offline cache was incomplete (`ENOTCACHED` for
+`https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz`). Electron launch
+count was zero for both attempts; neither produced H-05/H-20 Runtime Evidence.
+Therefore both Gates remain `NOT_PROVEN`, and the Client module Core Patch
+requirement remains `UNRESOLVED`.
 
-This Contract Freeze does not modify H-05, H-20, the P0.S-6 product Gates,
-the Desktop + Worker architecture, the frozen Harness baseline, or current
-feature scope. It grants no retroactive authorization, PASS, Formal Evidence,
-or candidate acceptance to any historical P0.S-6 attempt, 39-file candidate,
-native-loader/retained trace, salvage attempt, or diagnostic record.
+Attempt #2 raw `attempt.json` preserves early-stop fallback values
+`physicalAttemptsUsed=1`, `attempt2Executed=false`, and
+`clientModuleCorePatchRequired="NO"`. Those immutable raw fields are not the
+governance state: the actual invocation ledger takes precedence, so two
+physical attempts were used, Attempt #2 was executed, no attempt remains, and
+the Core Patch result is unresolved. The partial `node_modules`, `.npm-cache`,
+and `runtime-data` directories are failed-attempt outputs only. They prove no
+dependency readiness, are not Runtime Evidence, and support no H-05/H-20
+inference; they remain unmodified, undeleted, and uncommitted.
 
 The 39-file historical candidate has been preserved outside both repositories
 at `D:\Project\Shaco-Forge-Quarantine\P0S6-Historical-Candidate-20260903`.
@@ -279,8 +273,8 @@ File count, path set, sizes and SHA256 values all matched before the exact
 inventoried source copies were removed individually from the active worktree.
 No broad delete, ignore rule, exclusion or status suppression was used. The
 quarantine remains `NON_AUTHORIZED / NON_EVIDENCE / NON_PASS / NON_FORMAL /
-NON_PRODUCTION`; it may not be consumed by the new Minimal Execution Contract
-without explicit Architecture Owner authorization for historical comparison.
+NON_PRODUCTION`; MEC-01 did not consume it, and bounded Recovery Contract
+planning does not authorize accessing or consuming it.
 
 The P0.S-5 documentation/packaging completion records two historical Commit
 blockers as Gate-specification issues rather than Evidence corruption. The
@@ -326,7 +320,7 @@ alternate-index path proved raw blob identity before the bounded Closure Commit.
 - P0.S-5 Documentation / Provenance Corrective: `PASS`; F-01 provenance recorded, F-02 merge-ordinal semantics recorded/routed, F-03 summary booleans recorded non-authoritative; runtime and formal Evidence unchanged
 - Independent P0.S-5 Corrective Re-Review (AUDIT-009): `PASS`; corrective claim and exact scope confirmed; zero remaining corrective Findings; no Runtime or new runId
 - Architecture Owner P0.S-5 Decision: Corrective Re-Review accepted; `MET_WITH_CONSTRAINT`; P0.S-5 closed
-- Architecture Owner P0.S-6 Contract Freeze: `P0S6-MEC-20260903-01` is `FROZEN_OWNER_APPROVED`; `P0S6_STATE = READY_FOR_EXECUTION`; one Contract-bound Primary Attempt and one retry-eligibility-only Corrective Retry are bounded-authorized; Diagnostic, Formal, experiment Commit, Push, third attempt and P0.S-7 remain not authorized
+- Architecture Owner P0.S-6 Execution Outcome: `P0S6-MEC-20260903-01` is `EXHAUSTED_INCONCLUSIVE`; two `PRE_HYPOTHESIS` attempts consumed the full budget without reaching Runtime; P0.S-6 is `BLOCKED_PENDING_RECOVERY_CONTRACT`, not closed, and P0.S-7 remains not authorized
 
 ## Current Architecture Baseline
 
@@ -377,7 +371,7 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - P0.S-3: PASS / CLOSED; Local Carrier + Trust feasibility remains `PROVEN_WITH_CONSTRAINT`; constraints accepted
 - P0.S-4: PASS / CLOSED; `MET_WITH_CONSTRAINT`; technical disposition remains `PROVEN_WITH_CONSTRAINT`
 - P0.S-5: PASS / CLOSED; Independent Review `PASS_WITH_REQUIRED_CORRECTIONS`, Documentation Corrective PASS and Corrective Re-Review PASS accepted; `MET_WITH_CONSTRAINT`
-- P0.S-6: READY_FOR_EXECUTION; `P0S6-MEC-20260903-01` frozen / Owner-approved; Contract-bound implementation, allowed-directory source modification and one bounded Electron Client boot Primary Attempt authorized; retry conditional; Diagnostic/Formal/experiment Commit/Push not authorized
+- P0.S-6: `BLOCKED_PENDING_RECOVERY_CONTRACT`; MEC-01 `EXHAUSTED_INCONCLUSIVE`; two attempts used, zero remaining; Runtime Gate not reached; H-05/H-20 `NOT_PROVEN`; technical closure not ready
 - P0.S-7: NOT_STARTED / NOT_AUTHORIZED
 - P0.S-8: NOT_STARTED
 - P0.5 Design: READY, but freeze remains NOT_ALLOWED while P0.S is IN_PROGRESS
@@ -386,21 +380,19 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 
 ## Immediate Next Action
 
-1. Perform only `P0.S-6 PRIMARY EXECUTION ATTEMPT #1` under
-   `P0S6-MEC-20260903-01`. Do not start a Corrective Retry unless Attempt #1
-   meets the frozen retry eligibility. Do not perform Diagnostic, Formal,
-   P0.S-7, experiment Commit, Push, or any third attempt.
-2. Do not pull/switch/update the frozen Harness SHA without an Architecture Decision.
-3. Spike code is NOT production by default.
-4. Risk / Spike input authority: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
-5. Preserve the P0.S-4/P0.S-5 boundary: P0.S-4 proved carrier reconnect
-   settlement safety, but full Desktop lifecycle replay remains P0.S-5.
-6. P0.S-1 Evidence: `docs/06-testing-acceptance/evidence/P0S-1-HOST-PROFILE-FEASIBILITY-EVIDENCE.md`.
-7. P0.S-2 Evidence: `docs/06-testing-acceptance/evidence/P0S-2-ELECTRON-CLIENT-BOOT-EVIDENCE.md`.
-8. P0.S-2 Independent Review: `docs/05-reviews/architecture/AUDIT-006-P0S2-INDEPENDENT-REVIEW.md`.
-9. P0.S-3 Executor Evidence: `docs/06-testing-acceptance/evidence/P0S-3-LOCAL-CARRIER-AND-TRUST-EVIDENCE.md`.
-10. P0.S-3 Independent Review: `docs/05-reviews/architecture/AUDIT-007-P0S3-INDEPENDENT-REVIEW.md`.
-11. P0.S-4 Executor Evidence: `docs/06-testing-acceptance/evidence/P0S-4-CONNECTION-FEATURE-COMPLETENESS-EVIDENCE.md`.
-12. P0.S-4 Independent Review / Corrective Re-Review / Formal Closure: `docs/05-reviews/architecture/AUDIT-008-P0S4-INDEPENDENT-REVIEW.md`.
-13. P0.S-5 Executor Evidence: `docs/06-testing-acceptance/evidence/P0S-5-DESKTOP-INDEPENDENCE-AND-RECONNECT-EVIDENCE.md`.
-14. P0.S-5 Independent Review / Corrective Re-Review / Formal Closure: `docs/05-reviews/architecture/AUDIT-009-P0S5-INDEPENDENT-REVIEW.md`.
+Draft P0.S-6 Dependency Readiness Recovery Contract under bounded governance-only planning authority.
+Do not prepare dependencies, run Electron, or authorize another physical attempt.
+
+That future Contract may define only non-executing design targets at this
+stage: separate Dependency Readiness from any physical Runtime attempt; verify
+the complete lockfile dependency closure rather than chase individual missing
+tarballs; validate package integrity; and require proof that `npm ci --offline`
+can complete before any new Electron attempt. A partial cache is not ready.
+Commands, downloads, attempt budget, and execution strategy are not selected
+here. Any new physical attempt requires a later, separate Architecture Owner
+authorization.
+
+Do not pull/switch/update the frozen Harness SHA without an Architecture
+Decision. Spike code is NOT production by default. Do not perform Recovery
+implementation, dependency preparation, Runtime, Diagnostic, Formal,
+experiment Commit, Push, a third attempt, or P0.S-7.
