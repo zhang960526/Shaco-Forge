@@ -1,0 +1,13 @@
+{
+  "recordType": "EXECUTION_ROOT_IDENTITY_PREPARATION_RECORD",
+  "canonicalPath": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-TECHNICAL-VALIDATION-EXTENSION\\execution\\root",
+  "repositoryRelativePath": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root",
+  "executionRoot": "NOT_CREATED",
+  "existenceState": "NOT_CREATED",
+  "symlinkState": "NOT_APPLICABLE_NOT_CREATED",
+  "junctionState": "NOT_APPLICABLE_NOT_CREATED",
+  "reparseState": "NOT_APPLICABLE_NOT_CREATED",
+  "traversalState": "NO_TRAVERSAL_COMPONENTS_IN_DECLARED_PATH",
+  "identityStatus": "NOT_ASSIGNED",
+  "reason": "Execution Authority has not been created."
+}

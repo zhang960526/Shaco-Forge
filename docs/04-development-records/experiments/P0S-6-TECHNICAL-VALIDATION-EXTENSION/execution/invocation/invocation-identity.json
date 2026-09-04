@@ -1,0 +1,14 @@
+{
+  "recordType": "INVOCATION_IDENTITY_PREPARATION_RECORD",
+  "model": "SINGLE_INVOCATION",
+  "invocationId": "NOT_CREATED",
+  "state": "NOT_CREATED",
+  "consumed": false,
+  "startBoundary": "NOT_CROSSED",
+  "retry": 0,
+  "resume": 0,
+  "reuse": "PROHIBITED",
+  "secondInvocation": 0,
+  "executionAuthority": "NO",
+  "verificationExecuted": "NO"
+}
