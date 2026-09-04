@@ -12,8 +12,8 @@ Last Updated: 2026-09-04
 ## Current Phase
 
 - Phase: P0.S — Desktop / Connection / Packaging Feasibility Spike
-- Step: P0.S-6 Client Modules / Plugin Frontend — `BLOCKED`; `P0S6-DRRC-20260904-01` is `EXHAUSTED_INCONCLUSIVE` after its sole Dependency Preparation failed at `NPM_CI / EINTEGRITY`; P0.S-6 is not PASS, FAIL, or closed
-- Current Authorized Scope: bounded governance-only, Contract-only Lockfile Integrity Corrective Contract planning; dependency preparation retry, lockfile correction, Runtime, H-05/H-20 execution, Global Physical Attempt #3, and P0.S-7 remain unauthorized
+- Step: P0.S-6 Client Modules / Plugin Frontend — `CLOSED`; Final Closure Review is `PASS` after one controlled Verification Invocation completed with final classification `AUTHORITY_BLOCKED`
+- Current Authorized Scope: one bounded P0.S-6 Technical Validation Extension Execution Authority is active under `P0S6-TVEC-EA-ACTIVATION-20260904-01`; execution remains `AUTHORITY_BLOCKED` at Final Preflight until the Runner, Execution Root, Invocation and Frozen Input Manifest identities are established; Dependency Preparation, Runtime, P0.S-7 and any original P0.S-6 retry remain unauthorized
 - Production Implementation: NOT_STARTED
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -149,7 +149,27 @@ Last Updated: 2026-09-04
 - `P0S_NO_APPROVAL_REPLAY = YES`
 - `P0S_NO_QUESTION_REPLAY = YES`
 - `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE`
-- `P0S6_STATE = BLOCKED`
+- `P0S6_STATE = CLOSED`
+- `P0S6_FINAL_CLOSURE_REVIEW = PASS`
+- `P0S6_CLOSED = YES`
+- `P0S6_FINAL_CLASSIFICATION = AUTHORITY_BLOCKED`
+- `P0S6_FINAL_VERIFICATION = COMPLETED`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION = APPROVED`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_CONTRACT_ID = P0S6-TVEC-20260904-01`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_OWNER_APPROVAL_ID = P0S6-TVEC-OA-20260904-01`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_EAC_ID = P0S6-TVEC-EAC-20260904-01`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_EAC_OWNER_APPROVAL_ID = P0S6-TVEC-EAC-OA-20260904-01`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_EAAR_ID = P0S6-TVEC-EAAR-20260904-01`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_EAAR_OWNER_APPROVAL_ID = P0S6-TVEC-EAAR-OA-20260904-01`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_ACTIVATION_DECISION_ID = P0S6-TVEC-EA-ACTIVATION-20260904-01`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_GOVERNANCE_FREEZE_COMMIT = 5132777747dbe26185a4ba3a22a07f70e51413e1`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_EXECUTION_AUTHORITY = YES`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_VERIFICATION_EXECUTED = NO`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_INVOCATION = NOT_CREATED`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_FINAL_PREFLIGHT = AUTHORITY_BLOCKED`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_RUNNER = NOT_CREATED`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_EXECUTION_ROOT = NOT_CREATED`
+- `P0S6_TECHNICAL_VALIDATION_EXTENSION_INPUT_MANIFEST = DRAFT`
 - `P0S6_CONTRACT_ID = P0S6-MEC-20260903-01`
 - `P0S6_MINIMAL_CONTRACT = FROZEN_OWNER_APPROVED`
 - `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`
@@ -182,7 +202,7 @@ Last Updated: 2026-09-04
 - `P0S6_DEPENDENCY_PREPARATION_RETRY = NOT_AUTHORIZED`
 - `P0S6_NEW_DEPENDENCY_PREPARATION = NOT_AUTHORIZED`
 - `P0S6_LOCKFILE_CORRECTIVE_IMPLEMENTATION = NOT_AUTHORIZED`
-- `P0S6_LOCKFILE_INTEGRITY_CORRECTIVE_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`
+- `P0S6_LOCKFILE_INTEGRITY_CORRECTIVE_CONTRACT_PLANNING = COMPLETED`
 - `P0S6_OFFLINE_REINSTALL_PROOF = SUPERSEDED_BY_FROZEN_IN_PLACE_NODE_MODULES`
 - `P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`
 - `P0S6_GLOBAL_PHYSICAL_ATTEMPT_3 = NOT_AUTHORIZED`
@@ -260,10 +280,13 @@ and reported zero remaining corrective Findings without executing Runtime or
 creating a runId. The Architecture Owner accepted that chain and closed P0.S-5
 as `PASS / CLOSED` with `MET_WITH_CONSTRAINT`. AUDIT-009 is the formal review
 and closure record. The later Owner-approved `P0S6-MEC-20260903-01` authorized
-two physical attempts. Its lifecycle is now `EXHAUSTED_INCONCLUSIVE`: P0.S-6
-has neither PASS nor a technical FAIL and is not closed. The later
-`P0S6-DRRC-20260904-01` later consumed its sole Dependency Preparation
-invocation and is now `EXHAUSTED_INCONCLUSIVE`. P0.S-7 remains forbidden.
+two physical attempts. Its lifecycle is `EXHAUSTED_INCONCLUSIVE`; at that
+historical boundary, P0.S-6 had neither PASS nor a technical FAIL and remained
+open. The later `P0S6-DRRC-20260904-01` consumed its sole Dependency Preparation
+invocation and is also historically `EXHAUSTED_INCONCLUSIVE`. P0.S-6 then
+completed one controlled Verification Invocation with final classification
+`AUTHORITY_BLOCKED`. Final Closure Review returned `PASS`, and P0.S-6 is
+`CLOSED`. P0.S-7 remains forbidden.
 
 Both MEC-01 invocations stopped in `PRE_HYPOTHESIS` before Electron and before
 the Runtime Gate. Attempt #1 (`999bbd1e-9301-49ad-9021-30da7c879f9e`) stopped
@@ -356,6 +379,8 @@ alternate-index path proved raw blob identity before the bounded Closure Commit.
 - Independent P0.S-5 Corrective Re-Review (AUDIT-009): `PASS`; corrective claim and exact scope confirmed; zero remaining corrective Findings; no Runtime or new runId
 - Architecture Owner P0.S-5 Decision: Corrective Re-Review accepted; `MET_WITH_CONSTRAINT`; P0.S-5 closed
 - Historical Architecture Owner MEC-01 Outcome: `P0S6-MEC-20260903-01` is `EXHAUSTED_INCONCLUSIVE`; two `PRE_HYPOTHESIS` attempts consumed the full budget without reaching Runtime. At that historical boundary, recovery-contract planning was still pending. The later frozen DRRC supplied one Dependency Preparation authority, which is now also exhausted inconclusively; P0.S-7 remains not authorized.
+- P0.S-6 Final Closure Review: `PASS`; one controlled Verification Invocation completed with final classification `AUTHORITY_BLOCKED`; P0.S-6 closed without changing the historical MEC-01 or DRRC classifications; P0.S-7 remains not authorized
+- P0.S-6 Technical Validation Extension: Architecture Owner activated one bounded Execution Authority under `P0S6-TVEC-EA-ACTIVATION-20260904-01`; Extension governance artifacts are frozen in commit `5132777747dbe26185a4ba3a22a07f70e51413e1`; Final Preflight is `AUTHORITY_BLOCKED` because Runner, Execution Root, Invocation and Frozen Input Manifest identities are not established; Verification remains unexecuted and P0.S-7 remains not authorized
 
 ## Current Architecture Baseline
 
@@ -406,7 +431,7 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - P0.S-3: PASS / CLOSED; Local Carrier + Trust feasibility remains `PROVEN_WITH_CONSTRAINT`; constraints accepted
 - P0.S-4: PASS / CLOSED; `MET_WITH_CONSTRAINT`; technical disposition remains `PROVEN_WITH_CONSTRAINT`
 - P0.S-5: PASS / CLOSED; Independent Review `PASS_WITH_REQUIRED_CORRECTIONS`, Documentation Corrective PASS and Corrective Re-Review PASS accepted; `MET_WITH_CONSTRAINT`
-- P0.S-6: `BLOCKED`; MEC-01 and DRRC are both `EXHAUSTED_INCONCLUSIVE`; the DRRC preparation budget is used 1 of 1 with 0 remaining; Dependency Readiness is `INCONCLUSIVE` at `NPM_CI / EINTEGRITY`; frozen `env-paths@2.2.1` lockfile integrity mismatch is confirmed; Runtime Gate not reached; H-05/H-20 `NOT_PROVEN`; technical closure not ready
+- P0.S-6: `CLOSED`; Final Closure Review `PASS`; one controlled Verification Invocation completed with final classification `AUTHORITY_BLOCKED`; historical MEC-01 and DRRC states remain `EXHAUSTED_INCONCLUSIVE`; the bounded Technical Validation Extension Execution Authority is active but Final Preflight is `AUTHORITY_BLOCKED`; Extension Verification has not executed; Runtime Gate was not reached and H-05/H-20 remain `NOT_PROVEN`; this is a final governance closure, not a technical PASS or FAIL
 - P0.S-7: NOT_STARTED / NOT_AUTHORIZED
 - P0.S-8: NOT_STARTED
 - P0.5 Design: READY, but freeze remains NOT_ALLOWED while P0.S is IN_PROGRESS
@@ -415,11 +440,11 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 
 ## Immediate Next Action
 
-Draft a bounded P0.S-6 Lockfile Integrity Corrective Contract that independently verifies the official env-paths@2.2.1 registry metadata and tarball bytes, derives but does not silently mutate a corrected lockfile, freezes the corrected input identity, and returns for Architecture Owner review.
+Preserve the P0.S-6 final closure state and its historical MEC-01 and DRRC records. Establish and freeze the bounded Technical Validation Extension Runner, Execution Root, Invocation and Input Manifest identities, then rerun Final Preflight. P0.S-7 remains not authorized.
 
-Do not modify the lockfile, execute npm, prepare dependencies, authorize Recovery Runtime, authorize Global Physical Attempt #3, or start P0.S-7.
+Do not cross the Technical Validation Extension Invocation Start Boundary until Final Preflight returns `PASS`. Do not retry the original P0.S-6 Invocation, modify the lockfile, execute npm, prepare dependencies, authorize Runtime, or start P0.S-7.
 
 Do not pull/switch/update the frozen Harness SHA without an Architecture
 Decision. Spike code is NOT production by default. The corrective candidate
-integrity is recorded for future independent verification and is not frozen as
-a canonical replacement.
+integrity remains a historical recorded value and is not frozen as a canonical
+replacement.
