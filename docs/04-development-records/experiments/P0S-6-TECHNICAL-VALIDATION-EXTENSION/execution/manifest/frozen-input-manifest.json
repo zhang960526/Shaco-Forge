@@ -1,0 +1,240 @@
+{
+  "recordType": "FROZEN_INPUT_MANIFEST",
+  "status": "FROZEN",
+  "manifestVersion": "1.0.0",
+  "authorityBranch": "master",
+  "authorityHead": "116b0ddf30be4513e58817500dba85434b07144b",
+  "activationDecisionId": "P0S6-TVEC-EA-ACTIVATION-20260904-01",
+  "executionAuthority": "YES",
+  "verificationExecuted": "NO",
+  "p0s7Allowed": "NO",
+  "runner": {
+    "version": "P0S6-TVEC-RUNNER-1.0.0",
+    "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/verify-env-paths-integrity.mjs",
+    "bytes": 25687,
+    "sha256": "0331E13399B579D84846F4E59D1B2718F3DB7EBE1234DAB089B980D44A3B9757",
+    "identityRecord": {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/runner-identity.json",
+      "bytes": 526,
+      "sha256": "4B39069F2B1758E30435200F833190DB450D0A81F6F873A340C5DA34680F5F1D"
+    }
+  },
+  "executionRoot": {
+    "canonicalPath": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-TECHNICAL-VALIDATION-EXTENSION\\execution\\root",
+    "repositoryRelativePath": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root",
+    "existenceState": "CREATED_EMPTY",
+    "identityRecord": {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/execution-root-identity.json",
+      "bytes": 845,
+      "sha256": "47D210687396E7F38677D07ADA6FCC92A3FF74A9C034FE0B946721CE2AB38B78"
+    }
+  },
+  "invocation": {
+    "invocationId": "P0S6-TVEC-INVOCATION-20260904-01",
+    "state": "NOT_STARTED",
+    "consumed": false,
+    "startBoundary": "NOT_CROSSED",
+    "identityRecord": {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/invocation/invocation-identity.json",
+      "bytes": 389,
+      "sha256": "A37CBA2F68142F61B9C686706E680F509B7FC142DDE1B99AD22A544B146AD21F"
+    }
+  },
+  "budget": {
+    "invocation": 1,
+    "metadataRequest": 1,
+    "tarballRequest": 1,
+    "candidate": 1,
+    "retry": 0,
+    "resume": 0,
+    "reuse": 0,
+    "currentConsumed": 0
+  },
+  "networkBoundary": {
+    "allowedRegistry": "registry.npmjs.org",
+    "metadataRequests": 1,
+    "tarballRequests": 1,
+    "mirror": "PROHIBITED",
+    "proxy": "PROHIBITED",
+    "alternateRegistry": "PROHIBITED",
+    "cache": "PROHIBITED",
+    "localRegistry": "PROHIBITED"
+  },
+  "inputs": [
+    {
+      "role": "GOVERNANCE",
+      "name": "Extension Decision",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-DECISION.md",
+      "bytes": 1883,
+      "sha256": "B170C3E52BC8375F49E97D3B64AB32FED32B8C9AE0EEA14D2AA3E5D43DB08D98"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Extension Contract",
+      "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-CONTRACT.md",
+      "bytes": 10164,
+      "sha256": "A1EC0522CBDC287CC01B123786DC9322790952BA881DEE732238DAFC52C4F0E6"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Extension Owner Approval",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-OWNER-APPROVAL-DECISION.md",
+      "bytes": 2588,
+      "sha256": "A0FBB157D070E2622CFF09DE1A8CA92EE4517F0DD5E87EDB10EDD7C506BF7D47"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "EAC Contract",
+      "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-AUTHORIZATION-CONTRACT.md",
+      "bytes": 10100,
+      "sha256": "D38B82A9C64AD6A370E7A969A6BCFE2E77A970E62009786D86E25945E6745947"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "EAC Owner Approval",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EAC-OWNER-APPROVAL-DECISION.md",
+      "bytes": 2630,
+      "sha256": "C234C03F87701E02BB3FD08580AC24DD173271FE1CDDA5B021416046C821AC85"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "EAAR",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-AUTHORITY-ACTIVATION-RECORD.md",
+      "bytes": 7122,
+      "sha256": "728DCC6A81CC2F6385D8A53E80F59A47205A8172799A0F4CFD2DB215FC478FD6"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "EAAR Owner Approval",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EAAR-OWNER-APPROVAL-DECISION.md",
+      "bytes": 2727,
+      "sha256": "169BF83273AEEBEA16BAEB0F9F8258DD8E08E4A4241CCB0382763BC562178AEE"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Activation Decision",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-AUTHORITY-ACTIVATION-DECISION.md",
+      "bytes": 5028,
+      "sha256": "70CB7592C805A0796B51E7684D50DDEEDF49DAA60A570B1C284B344FCD2FFF9A"
+    },
+    {
+      "role": "GOVERNANCE_CURRENT_STATE",
+      "name": "Current State",
+      "path": "docs/00-governance/SHACO-FORGE-CURRENT-STATE.md",
+      "bytes": 27209,
+      "sha256": "C2A549AE2C9FCFBDB0E9D9E5A0551223937128D982AFF7BF946CC9A407DD7E84"
+    },
+    {
+      "role": "SOURCE_LOCKFILE",
+      "name": "Source lockfile",
+      "path": "docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/package-lock.json",
+      "bytes": 30829,
+      "sha256": "3C7449945B509028C025F2A747B0C9B4F74BE260CC3CDE8CA07E9D5DDDEE33FD"
+    },
+    {
+      "role": "DRRC_LOCKFILE",
+      "name": "DRRC frozen lockfile",
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/package-lock.json",
+      "bytes": 30829,
+      "sha256": "3C7449945B509028C025F2A747B0C9B4F74BE260CC3CDE8CA07E9D5DDDEE33FD"
+    },
+    {
+      "role": "DRRC_EVIDENCE",
+      "name": "DRRC Evidence",
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/classification.json",
+      "bytes": 303,
+      "sha256": "21757CD251E91D674DBB3287E1F21957CE2A135E49732E9D87C49369D69A58A2"
+    },
+    {
+      "role": "DRRC_EVIDENCE",
+      "name": "DRRC Evidence",
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/effective-config.json",
+      "bytes": 4221,
+      "sha256": "199D283E6E78CBF9B23107F744AD48C2233D6FC4CDB14EF8AB8050DB63B50C01"
+    },
+    {
+      "role": "DRRC_EVIDENCE",
+      "name": "DRRC Evidence",
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/invocation-ledger.jsonl",
+      "bytes": 774,
+      "sha256": "09E33D3A859B2F6E4317DE363D954D50D1BE2EFD54DACFDB39827F7B1AEF071A"
+    },
+    {
+      "role": "DRRC_EVIDENCE",
+      "name": "DRRC Evidence",
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/network-sockets.json",
+      "bytes": 427,
+      "sha256": "24BAB97F4996AEFA1EE6E4F7CFD19C28A1EEA9E80A1A3D46918712C9BAF26990"
+    },
+    {
+      "role": "DRRC_EVIDENCE",
+      "name": "DRRC Evidence",
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-ci-result.json",
+      "bytes": 1048,
+      "sha256": "AAB3EB0F6387C1114DC1D5C2A9A62BEB78E1962BC15F0F8E2F7E7908ED052340"
+    },
+    {
+      "role": "DRRC_EVIDENCE",
+      "name": "DRRC Evidence",
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-ci.stderr.log",
+      "bytes": 8751,
+      "sha256": "B0102F2CDCCBBB8F680721AA34C282F433A370CD92CCB08747EE9E325D0F42CA"
+    },
+    {
+      "role": "DRRC_EVIDENCE",
+      "name": "DRRC Evidence",
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-ci.stdout.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "role": "DRRC_EVIDENCE",
+      "name": "DRRC Evidence",
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-logs/2026-09-04T04_09_20_273Z-debug-0.log",
+      "bytes": 12298,
+      "sha256": "904B18150231A5F42F56F8BFA21859C1CAFD4EE838E6F7DE8FF6A661BAD4101B"
+    },
+    {
+      "role": "DRRC_EVIDENCE",
+      "name": "DRRC Evidence",
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/preflight.json",
+      "bytes": 9295,
+      "sha256": "3B839EB09127BFA76588052DBF07643005CF1B0300B615FFD9E9E7AE173BDD83"
+    },
+    {
+      "role": "DRRC_EVIDENCE",
+      "name": "DRRC Evidence",
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/static-gates.json",
+      "bytes": 2039,
+      "sha256": "7B11C2B05A5498F9184946C0D2232CCCB11EA11D06CD06334B444EBCDB381593"
+    },
+    {
+      "role": "RUNNER",
+      "name": "Frozen Runner",
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/verify-env-paths-integrity.mjs",
+      "bytes": 25687,
+      "sha256": "0331E13399B579D84846F4E59D1B2718F3DB7EBE1234DAB089B980D44A3B9757"
+    },
+    {
+      "role": "RUNNER_IDENTITY",
+      "name": "Runner Identity",
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/runner-identity.json",
+      "bytes": 526,
+      "sha256": "4B39069F2B1758E30435200F833190DB450D0A81F6F873A340C5DA34680F5F1D"
+    },
+    {
+      "role": "EXECUTION_ROOT_IDENTITY",
+      "name": "Execution Root Identity",
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/execution-root-identity.json",
+      "bytes": 845,
+      "sha256": "47D210687396E7F38677D07ADA6FCC92A3FF74A9C034FE0B946721CE2AB38B78"
+    },
+    {
+      "role": "INVOCATION_IDENTITY",
+      "name": "Invocation Identity",
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/invocation/invocation-identity.json",
+      "bytes": 389,
+      "sha256": "A37CBA2F68142F61B9C686706E680F509B7FC142DDE1B99AD22A544B146AD21F"
+    }
+  ]
+}

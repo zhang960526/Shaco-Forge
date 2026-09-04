@@ -1,16 +1,19 @@
-# Future Runner Identity Requirements
+# Frozen Technical Validation Extension Runner
 
-`Runner = NOT_CREATED`
+The actual Runner is `verify-env-paths-integrity.mjs`.
 
-Reason: Execution Authority has not been created.
+| Field | Frozen value |
+|---|---|
+| Runner status | `FROZEN` |
+| Version | `P0S6-TVEC-RUNNER-1.0.0` |
+| Path | `docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/verify-env-paths-integrity.mjs` |
+| Bytes | `25687` |
+| SHA-256 | `0331E13399B579D84846F4E59D1B2718F3DB7EBE1234DAB089B980D44A3B9757` |
+| Authority HEAD | `116b0ddf30be4513e58817500dba85434b07144b` |
+| Invocation ID | `P0S6-TVEC-INVOCATION-20260904-01` |
 
-A future Runner may be created only after explicit Execution Authorization. Before use, its identity must be frozen with:
+The machine-readable binding is stored in `runner-identity.json`.
 
-- canonical repository-relative and absolute paths;
-- exact byte length;
-- SHA-256;
-- an explicit binding to the authorized Authority HEAD;
-- an explicit binding to one new Invocation; and
-- proof that its behavior is limited to frozen input verification, official metadata retrieval, official tarball retrieval, integrity verification, candidate derivation, and evidence generation.
+The Runner is static and uses Node.js built-in modules only. Dynamic Runner substitution and unfrozen scripts are prohibited. Its future execution remains subject to Final Preflight `PASS` and the exact frozen Invocation arguments.
 
-The future Runner must enforce zero retry, zero resume, zero reuse, and zero second Invocation. It must not invoke npm, modify `node_modules`, enter Runtime, launch Electron, modify a source lockfile, or authorize P0.S-7.
+The Runner has not been executed. The Invocation Start Boundary remains `NOT_CROSSED`.

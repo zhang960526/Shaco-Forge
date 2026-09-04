@@ -1,14 +1,14 @@
 {
-  "recordType": "INVOCATION_IDENTITY_PREPARATION_RECORD",
+  "recordType": "FROZEN_INVOCATION_IDENTITY",
   "model": "SINGLE_INVOCATION",
-  "invocationId": "NOT_CREATED",
-  "state": "NOT_CREATED",
+  "invocationId": "P0S6-TVEC-INVOCATION-20260904-01",
+  "state": "NOT_STARTED",
   "consumed": false,
   "startBoundary": "NOT_CROSSED",
   "retry": 0,
   "resume": 0,
   "reuse": "PROHIBITED",
   "secondInvocation": 0,
-  "executionAuthority": "NO",
-  "verificationExecuted": "NO"
+  "executionAuthority": "YES",
+  "authorityHead": "116b0ddf30be4513e58817500dba85434b07144b"
 }
