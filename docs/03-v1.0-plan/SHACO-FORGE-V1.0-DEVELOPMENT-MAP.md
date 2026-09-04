@@ -37,7 +37,7 @@ Frozen Harness baseline: `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-
 
 Risk / Spike input freeze: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`.
 
-P0 PASS does not by itself authorize P0.S. AUDIT-004B Independent Corrective Re-Review = `PASS`. `P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. P0.S is in progress; P0.S-1 through P0.S-5 are closed. The historical Owner-approved `P0S6-MEC-20260903-01` exhausted its two physical attempts inconclusively without reaching Runtime. `P0S6-DRRC-20260904-01` subsequently passed Corrective Re-Review and is frozen / Owner-approved for one Dependency Preparation invocation only. P0.S-6 is not PASS, FAIL, or closed; Runtime, Global Physical Attempt #3, and P0.S-7 remain unauthorized.
+P0 PASS does not by itself authorize P0.S. AUDIT-004B Independent Corrective Re-Review = `PASS`. `P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. P0.S is in progress; P0.S-1 through P0.S-5 are closed. The historical Owner-approved `P0S6-MEC-20260903-01` exhausted its two physical attempts inconclusively without reaching Runtime. `P0S6-DRRC-20260904-01` then exhausted its sole Dependency Preparation invocation inconclusively at `NPM_CI / EINTEGRITY`. P0.S-6 is blocked and is not PASS, FAIL, or closed. Only bounded Lockfile Integrity Corrective Contract planning is authorized; dependency preparation retry, lockfile corrective implementation, Runtime, Global Physical Attempt #3, and P0.S-7 remain unauthorized.
 
 ## P0.S
 
@@ -50,7 +50,7 @@ Steps:
 - P0.S-3 Local Carrier + Trust — PASS / CLOSED; Owner-accepted `PROVEN_WITH_CONSTRAINT`
 - P0.S-4 Connection Feature Completeness — PASS / CLOSED; Owner-accepted `MET_WITH_CONSTRAINT`
 - P0.S-5 Desktop Independence & Reconnect — PASS / CLOSED; Owner-accepted `MET_WITH_CONSTRAINT`
-- P0.S-6 Client Module / Plugin Frontend — IN_PROGRESS_DEPENDENCY_READINESS_NOT_RUN; `P0S6-MEC-20260903-01` EXHAUSTED_INCONCLUSIVE; `P0S6-DRRC-20260904-01` FROZEN_OWNER_APPROVED; Dependency Preparation authorized once, used 0; Runtime Gate not reached; H-05/H-20 NOT_PROVEN; technical closure not ready
+- P0.S-6 Client Module / Plugin Frontend — BLOCKED; `P0S6-MEC-20260903-01` and `P0S6-DRRC-20260904-01` EXHAUSTED_INCONCLUSIVE; Dependency Preparation used 1 of 1 with 0 remaining; first failure `NPM_CI / EINTEGRITY`; frozen `env-paths@2.2.1` lockfile integrity mismatch CONFIRMED; Runtime Gate not reached; H-05/H-20 NOT_PROVEN; technical closure not ready
 - P0.S-7 Packaged Runtime Feasibility — NOT_STARTED / NOT_AUTHORIZED
 - P0.S-8 Spike Closure — NOT_STARTED
 
@@ -66,13 +66,36 @@ P0.S-5 Evidence: `docs/06-testing-acceptance/evidence/P0S-5-DESKTOP-INDEPENDENCE
 
 Historical MEC-01 execution outcome: `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE`; `P0S6_PHYSICAL_ATTEMPTS_USED = 2`; `P0S6_PHYSICAL_ATTEMPTS_REMAINING = 0`; `P0S6_RUNTIME_GATE_REACHED = NO`; H-05/H-20 are `NOT_PROVEN`; and `CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`. Attempt #1 (`999bbd1e-9301-49ad-9021-30da7c879f9e`) stopped `PRE_HYPOTHESIS` at `RUNNER_PREFLIGHT` on a collection-shape defect. Attempt #2 (`76bc4e8a-fb0c-4e92-a750-b555e6a57e41`) stopped `PRE_HYPOTHESIS` at `DEPENDENCY_SETUP` with offline-cache `ENOTCACHED` for `env-paths-2.2.1.tgz`. Both launched Electron zero times and produced no Runtime Evidence. The immutable Attempt #2 raw fallback values `physicalAttemptsUsed=1`, `attempt2Executed=false`, and `clientModuleCorePatchRequired="NO"` do not override the actual two-invocation ledger or unresolved Core Patch state. Partial `node_modules`, `.npm-cache`, and `runtime-data` are failed-attempt outputs only, not Dependency Readiness or Runtime Evidence, and remain untouched/uncommitted.
 
-Current DRRC authority: `P0S6_STATE = IN_PROGRESS_DEPENDENCY_READINESS_NOT_RUN`; `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`; `P0S6_DRRC_STATE = FROZEN_OWNER_APPROVED`; `P0S6_DRRC_INDEPENDENT_REVIEW = PASS`; `P0S6_RECOVERY_CONTRACT_PLANNING = COMPLETED`; `P0S6_DEPENDENCY_PREPARATION = AUTHORIZED_SINGLE_INVOCATION`; `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 0`; `P0S6_DEPENDENCY_READINESS = NOT_RUN`; `P0S6_READY_FOR_DEPENDENCY_PREPARATION = YES`; `P0S6_OFFLINE_REINSTALL_PROOF = SUPERSEDED_BY_FROZEN_IN_PLACE_NODE_MODULES`; `P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`; `P0S6_GLOBAL_PHYSICAL_ATTEMPT_3 = NOT_AUTHORIZED`; and `P0S7_ALLOWED = NO`. Freeze identity uses `P0S6_DRRC_FREEZE_HEAD_POLICY = COMMIT_CONTAINING_OWNER_APPROVED_DRRC_AND_GOVERNANCE_SYNC`; the actual commit SHA is returned after commit and is not recursively embedded.
+Current DRRC result and authority:
+
+- `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`
+- `P0S6_DRRC_OWNER_DISPOSITION_ID = P0S6-DRRC-OD-20260904-PS765-01`
+- `P0S6_PREPARATION_ID = aa96b746-eeca-4a65-a846-ecf5c753e6ab`
+- `P0S6_DRRC_STATE = EXHAUSTED_INCONCLUSIVE`
+- `P0S6_DEPENDENCY_PREPARATION = EXHAUSTED`
+- `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 1`
+- `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_REMAINING = 0`
+- `P0S6_DEPENDENCY_READINESS = INCONCLUSIVE`
+- `P0S6_DEPENDENCY_READINESS_FIRST_FAILURE_BOUNDARY = NPM_CI`
+- `P0S6_DEPENDENCY_READINESS_FAILURE_CODE = EINTEGRITY`
+- `P0S6_FROZEN_LOCKFILE_ENV_PATHS_INTEGRITY_MISMATCH = CONFIRMED`
+- `P0S6_ENV_PATHS_CORRECTIVE_INTEGRITY_FROZEN = NO`
+- `P0S6_DEPENDENCY_PREPARATION_RETRY = NOT_AUTHORIZED`
+- `P0S6_NEW_DEPENDENCY_PREPARATION = NOT_AUTHORIZED`
+- `P0S6_LOCKFILE_CORRECTIVE_IMPLEMENTATION = NOT_AUTHORIZED`
+- `P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`
+- `P0S6_GLOBAL_PHYSICAL_ATTEMPT_3 = NOT_AUTHORIZED`
+- `P0S_INBOX_CLIENT_MODULES_PASS = NOT_PROVEN`
+- `P0S_CORDIS_OMISSION_PASS = NOT_PROVEN`
+- `CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`
+- `P0S7_ALLOWED = NO`
+- `P0S6_LOCKFILE_INTEGRITY_CORRECTIVE_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`
 
 Current authoritative next step:
 
-Execute exactly one P0S6-DRRC-20260904-01 Dependency Preparation invocation. Do not start Electron or authorize Global Physical Attempt #3.
+Draft a bounded P0.S-6 Lockfile Integrity Corrective Contract that independently verifies the official env-paths@2.2.1 registry metadata and tarball bytes, derives but does not silently mutate a corrected lockfile, freezes the corrected input identity, and returns for Architecture Owner review.
 
-The authorized preparation uses one online lockfile-driven materialization and freezes the completed `node_modules` by original absolute path, original bytes, and canonical manifest. Future Runtime uses that tree in place without `npm ci`; `.npm-cache` is not readiness proof or Runtime input. Dependency Readiness PASS cannot authorize Runtime, which still requires a separate Owner-approved Recovery Execution Contract.
+Do not modify the lockfile, execute npm, prepare dependencies, authorize Recovery Runtime, authorize Global Physical Attempt #3, or start P0.S-7.
 
 ## P0.5
 

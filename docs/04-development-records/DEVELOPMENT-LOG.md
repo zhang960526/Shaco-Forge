@@ -2,7 +2,94 @@
 
 Status: ACTIVE
 
-## 2026-09-04 — P0.S-6 DRRC Owner Freeze and Governance Sync
+## 2026-09-04 — P0.S-6 DRRC Dependency Preparation Final Outcome
+
+- Contract `P0S6-DRRC-20260904-01`, Frozen Contract SHA-256
+  `5382c001c8e6445507e807633b98f7d44acfc40e409960b8fc6055241d4e47eb`,
+  Owner Disposition `P0S6-DRRC-OD-20260904-PS765-01`, and Preparation ID
+  `aa96b746-eeca-4a65-a846-ecf5c753e6ab` controlled this execution.
+- Execution started from branch `master`, HEAD
+  `86c156f1371af0429eed9de4b82a83198781ec62`, parent
+  `32622f1d6a0bc2231c786726e02aca2fe57fc372`. The only command was
+  `npm ci --ignore-scripts=false --foreground-scripts --no-audit --no-fund --cache .npm-cache --prefer-online`.
+- npm ci exited `1`. The Contract is `EXHAUSTED_INCONCLUSIVE`; Dependency
+  Readiness is `INCONCLUSIVE`; the first failure boundary is `NPM_CI`; the
+  failure code is `EINTEGRITY`. Dependency Preparation invocations used are
+  `1`, remaining are `0`; npm ls invocations, Electron launches, and physical
+  Runtime Attempts consumed by this Contract are all `0`.
+- The failure object was `env-paths@2.2.1` at
+  `https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz`, with `3411`
+  received bytes. Frozen lockfile wanted integrity:
+  `sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgALwKNZ0cf2uqan5GLuS2A==`.
+  Registry got integrity and corrective candidate:
+  `sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==`.
+  The only text difference is `UgALw` versus `UgAlw`.
+- npm automatically requested the tarball twice inside the same authorized npm
+  ci process. This was not a second npm command, a second preparation
+  invocation, or a manual retry. The frozen lockfile integrity mismatch is
+  confirmed; the corrective candidate is not frozen as a canonical replacement.
+- Electron lifecycle, Electron ZIP download, npm ls, canonical manifest, and
+  Runtime were not reached. This result is not a registry connectivity failure,
+  H-05/H-20 FAIL, Runtime Evidence, or an authoritative determination that the
+  official tarball content changed. H-05/H-20 stay `NOT_PROVEN`, and
+  `CLIENT_MODULE_CORE_PATCH_REQUIRED` stays `UNRESOLVED`.
+- Frozen Evidence directory:
+  `docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab`.
+  The ten SHA-256 identities are:
+
+  | Evidence | SHA-256 |
+  |---|---|
+  | `classification.json` | `21757cd251e91d674dbb3287e1f21957ce2a135e49732e9d87c49369d69a58a2` |
+  | `effective-config.json` | `199d283e6e78cbf9b23107f744ad48c2233d6fc4cdb14ef8ab8050db63b50c01` |
+  | `invocation-ledger.jsonl` | `09e33d3a859b2f6e4317de363d954d50d1be2efd54dacfdb39827f7b1aef071a` |
+  | `network-sockets.json` | `24bab97f4996aefa1ee6e4f7cfd19c28a1eea9e80a1a3d46918712c9baf26990` |
+  | `npm-ci-result.json` | `aab3eb0f6387c1114dc1d5c2a9a62beb78e1962bc15f0f8e2f7e7908ed052340` |
+  | `npm-ci.stderr.log` | `b0102f2cdccbbb8f680721aa34c282f433a370cd92ccb08747ee9e325d0f42ca` |
+  | `npm-ci.stdout.log` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+  | `npm-logs/2026-09-04T04_09_20_273Z-debug-0.log` | `904b18150231a5f42f56f8bfa21859c1cafd4ee838e6f7de8ff6a661bad4101b` |
+  | `preflight.json` | `3b839eb09127bfa76588052dbf07643005cf1b0300b615ffd9e9e7ae173bdd83` |
+  | `static-gates.json` | `7b11c2b05a5498f9184946c0d2232cccb11ea11d06cd06334b444ebcdb381593` |
+
+- Partial `node_modules` is `NON_READINESS`. `.npm-cache`, `.electron-cache`,
+  and `temp` are `NON_READINESS / NON_RUNTIME_INPUT / NON_H05_H20_EVIDENCE`.
+  Their frozen task-report measurements are respectively `138` files /
+  `1,315,524` bytes, `0` files / `0` bytes, and `538` files / `1,342,304`
+  bytes. All partial outputs remain preserved, unmodified, unpromoted, and
+  unavailable as a future preparation seed pending a future Contract.
+- Current synchronized fields:
+  `P0S6_DRRC_STATE = EXHAUSTED_INCONCLUSIVE`;
+  `P0S6_DEPENDENCY_PREPARATION = EXHAUSTED`;
+  `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 1`;
+  `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_REMAINING = 0`;
+  `P0S6_DEPENDENCY_READINESS = INCONCLUSIVE`;
+  `P0S6_DEPENDENCY_READINESS_FIRST_FAILURE_BOUNDARY = NPM_CI`;
+  `P0S6_DEPENDENCY_READINESS_FAILURE_CODE = EINTEGRITY`;
+  `P0S6_FROZEN_LOCKFILE_ENV_PATHS_INTEGRITY_MISMATCH = CONFIRMED`;
+  `P0S6_ENV_PATHS_CORRECTIVE_INTEGRITY_FROZEN = NO`;
+  `P0S6_DEPENDENCY_PREPARATION_RETRY = NOT_AUTHORIZED`;
+  `P0S6_NEW_DEPENDENCY_PREPARATION = NOT_AUTHORIZED`;
+  `P0S6_LOCKFILE_CORRECTIVE_IMPLEMENTATION = NOT_AUTHORIZED`;
+  `P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`;
+  `P0S6_GLOBAL_PHYSICAL_ATTEMPT_3 = NOT_AUTHORIZED`;
+  `P0S_INBOX_CLIENT_MODULES_PASS = NOT_PROVEN`;
+  `P0S_CORDIS_OMISSION_PASS = NOT_PROVEN`;
+  `CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`;
+  `P0S7_ALLOWED = NO`; and
+  `P0S6_LOCKFILE_INTEGRITY_CORRECTIVE_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`.
+- Current authoritative next step:
+  Draft a bounded P0.S-6 Lockfile Integrity Corrective Contract that independently verifies the official env-paths@2.2.1 registry metadata and tarball bytes, derives but does not silently mutate a corrected lockfile, freezes the corrected input identity, and returns for Architecture Owner review.
+
+  Do not modify the lockfile, execute npm, prepare dependencies, authorize Recovery Runtime, authorize Global Physical Attempt #3, or start P0.S-7.
+
+## Historical Timeline
+
+All entries below are historical point-in-time records. Any P0.S-6
+pre-execution readiness, unused preparation budget, executable Dependency
+Preparation, Primary Attempt, or conditional retry statement below is
+superseded by the final DRRC outcome above and grants no current execution
+authority.
+
+### 2026-09-04 — P0.S-6 DRRC Owner Freeze and Governance Sync
 
 - Initial Independent Review returned `PASS_WITH_REQUIRED_CORRECTIONS` against
   `P0S6-DRRC-20260904-01`. Corrected Draft SHA-256 was
@@ -47,7 +134,7 @@ Status: ACTIVE
 - Current authoritative next step:
   Execute exactly one P0S6-DRRC-20260904-01 Dependency Preparation invocation. Do not start Electron or authorize Global Physical Attempt #3.
 
-## 2026-09-04 — Historical MEC-01 Outcome and DRRC Planning Entry
+### 2026-09-04 — Historical MEC-01 Outcome and DRRC Planning Entry
 
 - Architecture Owner classified the frozen
   `P0S6-MEC-20260903-01` lifecycle as
@@ -102,14 +189,7 @@ Status: ACTIVE
   Evidence, and generated attempt outputs remain unchanged by this
   documentation-only outcome recording.
 
-## Historical Timeline
-
-All entries below are historical point-in-time records. Any P0.S-6
-pre-execution readiness, zero-attempt, Primary Attempt, or conditional retry
-statement below is superseded by the 2026-09-04 DRRC Owner Freeze above and
-grants no current execution authority.
-
-## 2026-09-03
+### 2026-09-03
 
 - Pre-Execution Identity Alignment Corrective separates the P0.S-6 Product
   Baseline (`cada37727af3f99da77f50353924af80f917b688`) from the Contract Freeze
@@ -192,7 +272,7 @@ grants no current execution authority.
   NON_PRODUCTION` and unavailable to the new Contract absent explicit Owner
   authorization for historical comparison.
 
-## 2026-09-01
+### 2026-09-01
 
 - Architecture Owner post-commit read-only verification found the sole stale
   negative Closure Commit marker in the P0.S Phase Contract. It is aligned with
@@ -438,7 +518,7 @@ grants no current execution authority.
   not set. Evidence:
   `docs/06-testing-acceptance/evidence/P0S-4-CONNECTION-FEATURE-COMPLETENESS-EVIDENCE.md`.
 
-## 2026-08-31
+### 2026-08-31
 
 - External Independent Review AUDIT-007 returned `PASS`, confirmed the P0.S-3
   Executor claim and independently reproduced every core runtime gate with the
@@ -538,7 +618,7 @@ grants no current execution authority.
   `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`. Evidence:
   `docs/06-testing-acceptance/evidence/P0S-2-ELECTRON-CLIENT-BOOT-EVIDENCE.md`.
 
-## 2026-08-30
+### 2026-08-30
 
 - P0.S-1 formal closure completed as a documentation/governance action only.
   The authoritative chronology is:
@@ -674,7 +754,7 @@ grants no current execution authority.
   `SHACO_FORGE_V1_0_P0_5 = PASS`. Entire P0 remains `NOT_PASS`.
 - Next executable technical action: P0-6 Dependency & Stability Matrix.
 
-## 2026-08-29
+### 2026-08-29
 
 - Shaco Forge Git repository initialized on `master`. No GitHub/Gitee remote added. No push.
 - Documentation baseline committed: `chore(docs): bootstrap Shaco Forge documentation baseline`.

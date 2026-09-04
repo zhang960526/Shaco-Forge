@@ -2,7 +2,7 @@
 
 Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0S = IN_PROGRESS`)
 
-Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-5 are `PASS / CLOSED` with Architecture Owner-accepted constrained dispositions. P0.S remains `IN_PROGRESS`. The Owner-approved `P0S6-MEC-20260903-01` lifecycle is `EXHAUSTED_INCONCLUSIVE` after two `PRE_HYPOTHESIS` attempts, neither of which launched Electron or reached the Runtime Gate. P0.S-6 has neither PASS nor a technical FAIL and is not closed. `P0S6-DRRC-20260904-01` passed Corrective Re-Review and is frozen / Owner-approved for exactly one Dependency Preparation invocation. Runtime, H-05/H-20 execution, Global Physical Attempt #3, experiment Commit, Push, and P0.S-7 are not authorized.
+Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-5 are `PASS / CLOSED` with Architecture Owner-accepted constrained dispositions. P0.S remains `IN_PROGRESS`. The Owner-approved `P0S6-MEC-20260903-01` lifecycle is `EXHAUSTED_INCONCLUSIVE` after two `PRE_HYPOTHESIS` attempts, neither of which launched Electron or reached the Runtime Gate. `P0S6-DRRC-20260904-01` is also `EXHAUSTED_INCONCLUSIVE`: its sole Dependency Preparation invocation failed at `NPM_CI / EINTEGRITY`. P0.S-6 has neither PASS nor a technical FAIL and is not closed. Only bounded governance-only Lockfile Integrity Corrective Contract planning is authorized. Dependency Preparation retry, lockfile corrective implementation, Runtime, H-05/H-20 execution, Global Physical Attempt #3, experiment Commit, Push, and P0.S-7 are not authorized.
 
 P0-7 frozen inputs (do not re-open P0; do not redesign this architecture):
 
@@ -308,13 +308,14 @@ Current gate state after Architecture Owner Formal Closure:
 - `P0S5_CORE_PATCH_REQUIRED = NO`
 - `P0S_CORE_PATCH_INVENTORY_COMPLETE = NO`
 - `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE`
-- `P0S6_STATE = IN_PROGRESS_DEPENDENCY_READINESS_NOT_RUN`
+- `P0S6_STATE = BLOCKED`
 - `P0S6_CONTRACT_ID = P0S6-MEC-20260903-01`
 - `P0S6_MINIMAL_CONTRACT = FROZEN_OWNER_APPROVED`
 - `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`
-- `P0S6_DRRC_STATE = FROZEN_OWNER_APPROVED`
+- `P0S6_DRRC_STATE = EXHAUSTED_INCONCLUSIVE`
 - `P0S6_DRRC_INDEPENDENT_REVIEW = PASS`
-- `P0S6_DRRC_OWNER_DECISION = APPROVE_FOR_DEPENDENCY_PREPARATION_ONLY`
+- `P0S6_DRRC_OWNER_DISPOSITION_ID = P0S6-DRRC-OD-20260904-PS765-01`
+- `P0S6_PREPARATION_ID = aa96b746-eeca-4a65-a846-ecf5c753e6ab`
 - `P0S6_DRRC_FREEZE_HEAD_POLICY = COMMIT_CONTAINING_OWNER_APPROVED_DRRC_AND_GOVERNANCE_SYNC`
 - `P0S6_MAXIMUM_PHYSICAL_ATTEMPTS = 2`
 - `P0S6_PHYSICAL_ATTEMPTS_USED = 2`
@@ -327,10 +328,19 @@ Current gate state after Architecture Owner Formal Closure:
 - `P0S6_MEC01_DEPENDENCY_CACHE_READINESS = HISTORICAL_NOT_READY_PROVEN`
 - `P0S6_TECHNICAL_CLOSURE_READY = NO`
 - `P0S6_RECOVERY_CONTRACT_PLANNING = COMPLETED`
-- `P0S6_DEPENDENCY_PREPARATION = AUTHORIZED_SINGLE_INVOCATION`
-- `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 0`
-- `P0S6_DEPENDENCY_READINESS = NOT_RUN`
-- `P0S6_READY_FOR_DEPENDENCY_PREPARATION = YES`
+- `P0S6_DEPENDENCY_PREPARATION = EXHAUSTED`
+- `P0S6_DEPENDENCY_PREPARATION_EXECUTED = YES`
+- `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 1`
+- `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_REMAINING = 0`
+- `P0S6_DEPENDENCY_READINESS = INCONCLUSIVE`
+- `P0S6_DEPENDENCY_READINESS_FIRST_FAILURE_BOUNDARY = NPM_CI`
+- `P0S6_DEPENDENCY_READINESS_FAILURE_CODE = EINTEGRITY`
+- `P0S6_FROZEN_LOCKFILE_ENV_PATHS_INTEGRITY_MISMATCH = CONFIRMED`
+- `P0S6_ENV_PATHS_CORRECTIVE_INTEGRITY_FROZEN = NO`
+- `P0S6_DEPENDENCY_PREPARATION_RETRY = NOT_AUTHORIZED`
+- `P0S6_NEW_DEPENDENCY_PREPARATION = NOT_AUTHORIZED`
+- `P0S6_LOCKFILE_CORRECTIVE_IMPLEMENTATION = NOT_AUTHORIZED`
+- `P0S6_LOCKFILE_INTEGRITY_CORRECTIVE_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`
 - `P0S6_OFFLINE_REINSTALL_PROOF = SUPERSEDED_BY_FROZEN_IN_PLACE_NODE_MODULES`
 - `P0S6_RECOVERY_RUNTIME = NOT_AUTHORIZED`
 - `P0S6_GLOBAL_PHYSICAL_ATTEMPT_3 = NOT_AUTHORIZED`
@@ -436,7 +446,7 @@ Prove:
 ### Current Governance Authority
 
 - MEC-01 lifecycle: `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE`.
-- Step state: `P0S6_STATE = IN_PROGRESS_DEPENDENCY_READINESS_NOT_RUN`; P0.S-6 has no
+- Step state: `P0S6_STATE = BLOCKED`; P0.S-6 has no
   PASS or technical FAIL, is not closed, and is not ready for technical closure.
 - Attempt budget: `P0S6_PHYSICAL_ATTEMPTS_USED = 2`,
   `P0S6_PHYSICAL_ATTEMPTS_REMAINING = 0`, and
@@ -446,18 +456,29 @@ Prove:
   `P0S_CORDIS_OMISSION_PASS = NOT_PROVEN`, and
   `CLIENT_MODULE_CORE_PATCH_REQUIRED = UNRESOLVED`.
 - DRRC: `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`,
-  `P0S6_DRRC_STATE = FROZEN_OWNER_APPROVED`, and
+  `P0S6_DRRC_STATE = EXHAUSTED_INCONCLUSIVE`, and
   `P0S6_DRRC_INDEPENDENT_REVIEW = PASS`.
-- Planning state: `P0S6_RECOVERY_CONTRACT_PLANNING = COMPLETED`.
-- Dependency authority:
-  `P0S6_DEPENDENCY_PREPARATION = AUTHORIZED_SINGLE_INVOCATION`,
-  `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 0`,
-  `P0S6_DEPENDENCY_READINESS = NOT_RUN`, and
-  `P0S6_READY_FOR_DEPENDENCY_PREPARATION = YES`.
+- Disposition and execution identities:
+  `P0S6_DRRC_OWNER_DISPOSITION_ID = P0S6-DRRC-OD-20260904-PS765-01` and
+  `P0S6_PREPARATION_ID = aa96b746-eeca-4a65-a846-ecf5c753e6ab`.
+- Dependency result:
+  `P0S6_DEPENDENCY_PREPARATION = EXHAUSTED`,
+  `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 1`,
+  `P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_REMAINING = 0`,
+  `P0S6_DEPENDENCY_READINESS = INCONCLUSIVE`,
+  `P0S6_DEPENDENCY_READINESS_FIRST_FAILURE_BOUNDARY = NPM_CI`, and
+  `P0S6_DEPENDENCY_READINESS_FAILURE_CODE = EINTEGRITY`.
+- Integrity result:
+  `P0S6_FROZEN_LOCKFILE_ENV_PATHS_INTEGRITY_MISMATCH = CONFIRMED` and
+  `P0S6_ENV_PATHS_CORRECTIVE_INTEGRITY_FROZEN = NO`.
+- Current authority:
+  `P0S6_LOCKFILE_INTEGRITY_CORRECTIVE_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`.
+- Not authorized: Dependency Preparation retry, new Dependency Preparation,
+  lockfile corrective implementation, Runtime, Diagnostic, Formal, Harness
+  Core mutation, experiment Commit, Push, Global Physical Attempt #3, or
+  P0.S-7.
 - Recovery model:
   `P0S6_OFFLINE_REINSTALL_PROOF = SUPERSEDED_BY_FROZEN_IN_PLACE_NODE_MODULES`.
-- Not authorized: Runtime, Diagnostic, Formal, Harness Core mutation,
-  experiment Commit, Push, Global Physical Attempt #3, or P0.S-7.
 
 ### MEC-01 Attempt Ledger
 
@@ -488,23 +509,86 @@ failed-attempt outputs only. They do not prove Dependency Readiness, are not
 Runtime Evidence, and cannot establish H-05 or H-20. They are not deleted,
 modified, or committed by this documentation action.
 
-### Frozen Dependency Readiness Recovery Contract
+### DRRC Dependency Preparation Ledger
 
-Execute exactly one P0S6-DRRC-20260904-01 Dependency Preparation invocation. Do not start Electron or authorize Global Physical Attempt #3.
+- Contract: `P0S6-DRRC-20260904-01`; Frozen Contract SHA-256
+  `5382c001c8e6445507e807633b98f7d44acfc40e409960b8fc6055241d4e47eb`.
+- Owner Disposition: `P0S6-DRRC-OD-20260904-PS765-01`.
+- Preparation ID: `aa96b746-eeca-4a65-a846-ecf5c753e6ab`.
+- Execution identity: branch `master`; HEAD
+  `86c156f1371af0429eed9de4b82a83198781ec62`; parent
+  `32622f1d6a0bc2231c786726e02aca2fe57fc372`.
+- Exact command:
+  `npm ci --ignore-scripts=false --foreground-scripts --no-audit --no-fund --cache .npm-cache --prefer-online`.
+- Ledger: Dependency Preparation invocations used `1`, remaining `0`; npm ci
+  invocations `1`; npm ls invocations `0`; Electron launches `0`; physical
+  Runtime Attempts consumed `0`.
+- Result: npm ci exit code `1`; Dependency Readiness `INCONCLUSIVE`; first
+  failure boundary `NPM_CI`; failure code `EINTEGRITY`.
+- Failed object: `env-paths@2.2.1` from
+  `https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz`; received bytes
+  `3411`.
+- Frozen lockfile wanted integrity:
+  `sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgALwKNZ0cf2uqan5GLuS2A==`.
+- Registry tarball got integrity and corrective candidate:
+  `sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==`.
+- The strings differ only at `UgALw` versus `UgAlw`. npm automatically issued
+  two GETs for this tarball inside the same single authorized npm ci process.
+  This is not a second npm command, a second preparation invocation, or a
+  manual retry.
+- Electron lifecycle, Electron ZIP download, npm ls, canonical manifest, and
+  Runtime were not reached. The result is not a connectivity failure, H-05 or
+  H-20 FAIL, Runtime Evidence, or an authoritative determination that the
+  tarball content changed.
 
-The Architecture Owner superseded the prior offline-reinstall proof target with
-one online, lockfile-driven materialization. The complete `node_modules` is
-frozen by original canonical absolute path, original bytes, and canonical
-manifest. A later Runtime must consume that tree in place and must not execute
-`npm ci`; `.npm-cache` is not readiness proof or Runtime input. Package,
-lockfile, Electron ZIP, and complete dependency-tree integrity requirements are
-unchanged. Dependency Readiness PASS grants no Runtime authority and any future
-Runtime requires a separate Owner-approved Recovery Execution Contract.
+Frozen Evidence directory:
+`docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab`.
 
-`P0S6_DRRC_FREEZE_HEAD_POLICY = COMMIT_CONTAINING_OWNER_APPROVED_DRRC_AND_GOVERNANCE_SYNC`.
-The actual Freeze commit SHA is returned after the one governance commit and is
-not recursively embedded. Dependency Preparation must use that actual SHA as
-its governance starting HEAD.
+| Evidence | SHA-256 |
+|---|---|
+| `classification.json` | `21757cd251e91d674dbb3287e1f21957ce2a135e49732e9d87c49369d69a58a2` |
+| `effective-config.json` | `199d283e6e78cbf9b23107f744ad48c2233d6fc4cdb14ef8ab8050db63b50c01` |
+| `invocation-ledger.jsonl` | `09e33d3a859b2f6e4317de363d954d50d1be2efd54dacfdb39827f7b1aef071a` |
+| `network-sockets.json` | `24bab97f4996aefa1ee6e4f7cfd19c28a1eea9e80a1a3d46918712c9baf26990` |
+| `npm-ci-result.json` | `aab3eb0f6387c1114dc1d5c2a9a62beb78e1962bc15f0f8e2f7e7908ed052340` |
+| `npm-ci.stderr.log` | `b0102f2cdccbbb8f680721aa34c282f433a370cd92ccb08747ee9e325d0f42ca` |
+| `npm-ci.stdout.log` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `npm-logs/2026-09-04T04_09_20_273Z-debug-0.log` | `904b18150231a5f42f56f8bfa21859c1cafd4ee838e6f7de8ff6a661bad4101b` |
+| `preflight.json` | `3b839eb09127bfa76588052dbf07643005cf1b0300b615ffd9e9e7ae173bdd83` |
+| `static-gates.json` | `7b11c2b05a5498f9184946c0d2232cccb11ea11d06cd06334b444ebcdb381593` |
+
+### DRRC Partial Output Disposition
+
+- `node_modules`: `NON_READINESS`.
+- `.npm-cache`: `NON_READINESS / NON_RUNTIME_INPUT / NON_H05_H20_EVIDENCE`;
+  frozen task-report count `138` files and `1,315,524` bytes.
+- `.electron-cache`:
+  `NON_READINESS / NON_RUNTIME_INPUT / NON_H05_H20_EVIDENCE`; frozen task-report
+  count `0` files and `0` bytes.
+- `temp`: `NON_READINESS / NON_RUNTIME_INPUT / NON_H05_H20_EVIDENCE`; frozen
+  task-report count `538` files and `1,342,304` bytes.
+
+All partial output remains preserved as-is. It is not deleted, repaired,
+promoted to Evidence, or available as a later Dependency Preparation seed. A
+future Contract must explicitly decide its disposition.
+
+### Lockfile Integrity Corrective Contract Boundary
+
+The future bounded Contract must independently verify official npm registry
+metadata, including `dist.integrity`, `dist.shasum`, and `dist.tarball`; obtain
+and independently SHA-512 hash the official tarball bytes; derive a corrected
+lockfile without silently mutating the frozen input; freeze the resulting
+lockfile SHA-256; and return to the Architecture Owner before any new
+Dependency Preparation authority can be considered. The npm error text and a
+public third-party lockfile cannot directly authorize a lockfile change.
+
+`P0S6_DEPENDENCY_PREPARATION_RETRY = NOT_AUTHORIZED`.
+`P0S6_NEW_DEPENDENCY_PREPARATION = NOT_AUTHORIZED`.
+`P0S6_LOCKFILE_CORRECTIVE_IMPLEMENTATION = NOT_AUTHORIZED`.
+
+Draft a bounded P0.S-6 Lockfile Integrity Corrective Contract that independently verifies the official env-paths@2.2.1 registry metadata and tarball bytes, derives but does not silently mutate a corrected lockfile, freezes the corrected input identity, and returns for Architecture Owner review.
+
+Do not modify the lockfile, execute npm, prepare dependencies, authorize Recovery Runtime, authorize Global Physical Attempt #3, or start P0.S-7.
 
 Prefer build-time static inclusion of REQUIRED in-box Client modules.
 

@@ -24,7 +24,7 @@ Date: 2026-09-04
 - P0.S-1 through P0.S-5: PASS / CLOSED with accepted constraints
 - P0.S-6 Minimal Execution Contract: `P0S6-MEC-20260903-01` frozen / Owner-approved (historical pre-execution authority)
 - P0.S-6 MEC-01 execution lifecycle: `EXHAUSTED_INCONCLUSIVE`; two `PRE_HYPOTHESIS` attempts consumed; Electron launch count zero; Runtime Gate not reached
-- P0.S-6 Dependency Readiness Recovery Contract: `P0S6-DRRC-20260904-01` Corrective Re-Review PASS; frozen / Owner-approved for exactly one Dependency Preparation invocation
+- P0.S-6 Dependency Readiness Recovery Contract: `P0S6-DRRC-20260904-01` exhausted inconclusively after the sole Dependency Preparation failed at `NPM_CI / EINTEGRITY`; preparation budget used 1 of 1
 - P0.S-6 historical 39-file candidate: copy-verified and quarantined outside both repositories; active worktree restored clean
 
 ## Current Gate
@@ -83,7 +83,7 @@ Date: 2026-09-04
 
 `P0S6_MEC_20260903_01_STATE = EXHAUSTED_INCONCLUSIVE`
 
-`P0S6_STATE = IN_PROGRESS_DEPENDENCY_READINESS_NOT_RUN`
+`P0S6_STATE = BLOCKED`
 
 `P0S6_CONTRACT_ID = P0S6-MEC-20260903-01`
 
@@ -91,11 +91,13 @@ Date: 2026-09-04
 
 `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`
 
-`P0S6_DRRC_STATE = FROZEN_OWNER_APPROVED`
+`P0S6_DRRC_STATE = EXHAUSTED_INCONCLUSIVE`
 
 `P0S6_DRRC_INDEPENDENT_REVIEW = PASS`
 
-`P0S6_DRRC_OWNER_DECISION = APPROVE_FOR_DEPENDENCY_PREPARATION_ONLY`
+`P0S6_DRRC_OWNER_DISPOSITION_ID = P0S6-DRRC-OD-20260904-PS765-01`
+
+`P0S6_PREPARATION_ID = aa96b746-eeca-4a65-a846-ecf5c753e6ab`
 
 `P0S6_DRRC_FREEZE_HEAD_POLICY = COMMIT_CONTAINING_OWNER_APPROVED_DRRC_AND_GOVERNANCE_SYNC`
 
@@ -121,13 +123,31 @@ Date: 2026-09-04
 
 `P0S6_RECOVERY_CONTRACT_PLANNING = COMPLETED`
 
-`P0S6_DEPENDENCY_PREPARATION = AUTHORIZED_SINGLE_INVOCATION`
+`P0S6_DEPENDENCY_PREPARATION = EXHAUSTED`
 
-`P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 0`
+`P0S6_DEPENDENCY_PREPARATION_EXECUTED = YES`
 
-`P0S6_DEPENDENCY_READINESS = NOT_RUN`
+`P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_USED = 1`
 
-`P0S6_READY_FOR_DEPENDENCY_PREPARATION = YES`
+`P0S6_DEPENDENCY_PREPARATION_INVOCATIONS_REMAINING = 0`
+
+`P0S6_DEPENDENCY_READINESS = INCONCLUSIVE`
+
+`P0S6_DEPENDENCY_READINESS_FIRST_FAILURE_BOUNDARY = NPM_CI`
+
+`P0S6_DEPENDENCY_READINESS_FAILURE_CODE = EINTEGRITY`
+
+`P0S6_FROZEN_LOCKFILE_ENV_PATHS_INTEGRITY_MISMATCH = CONFIRMED`
+
+`P0S6_ENV_PATHS_CORRECTIVE_INTEGRITY_FROZEN = NO`
+
+`P0S6_DEPENDENCY_PREPARATION_RETRY = NOT_AUTHORIZED`
+
+`P0S6_NEW_DEPENDENCY_PREPARATION = NOT_AUTHORIZED`
+
+`P0S6_LOCKFILE_CORRECTIVE_IMPLEMENTATION = NOT_AUTHORIZED`
+
+`P0S6_LOCKFILE_INTEGRITY_CORRECTIVE_CONTRACT_PLANNING = AUTHORIZED_BOUNDED_GOVERNANCE_ONLY_CONTRACT_ONLY`
 
 `P0S6_OFFLINE_REINSTALL_PROOF = SUPERSEDED_BY_FROZEN_IN_PLACE_NODE_MODULES`
 
@@ -169,7 +189,20 @@ Date: 2026-09-04
 
 ## Next Step
 
-Execute exactly one P0S6-DRRC-20260904-01 Dependency Preparation invocation. Do not start Electron or authorize Global Physical Attempt #3.
+Draft a bounded P0.S-6 Lockfile Integrity Corrective Contract that independently verifies the official env-paths@2.2.1 registry metadata and tarball bytes, derives but does not silently mutate a corrected lockfile, freezes the corrected input identity, and returns for Architecture Owner review.
+
+Do not modify the lockfile, execute npm, prepare dependencies, authorize Recovery Runtime, authorize Global Physical Attempt #3, or start P0.S-7.
+
+Dependency Preparation `aa96b746-eeca-4a65-a846-ecf5c753e6ab` ran exactly
+one npm ci command from HEAD
+`86c156f1371af0429eed9de4b82a83198781ec62`. It exited `1` with
+`EINTEGRITY` for `env-paths@2.2.1` after `3411` bytes. Frozen wanted integrity:
+`sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgALwKNZ0cf2uqan5GLuS2A==`.
+Registry got/corrective candidate:
+`sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==`.
+npm's two automatic GETs occurred inside that one process and consume no
+additional invocation. npm ls and Electron launch counts are `0`; physical
+Runtime Attempts consumed by DRRC are `0`.
 
 Attempt #1 `999bbd1e-9301-49ad-9021-30da7c879f9e` stopped
 `PRE_HYPOTHESIS` at `RUNNER_PREFLIGHT` on the runner collection-shape defect;
@@ -193,19 +226,9 @@ is `UNRESOLVED`. Partial `node_modules`, `.npm-cache`, and `runtime-data` are
 failed-attempt outputs only, not Dependency Readiness or Runtime Evidence;
 they remain untouched and uncommitted.
 
-The Architecture Owner superseded offline reinstall proof with one online,
-lockfile-driven materialization. The completed `node_modules` is frozen by its
-original canonical absolute path, original bytes, and canonical manifest; a
-later Runtime consumes that tree in place and does not run `npm ci`.
-`.npm-cache` is not readiness proof or Runtime input. Package, lockfile,
-Electron ZIP, and full `node_modules` integrity remain mandatory. Dependency
-Readiness PASS does not authorize Runtime; a separate Owner-approved Recovery
-Execution Contract is still required.
-
-The actual Freeze commit SHA selected by
-`P0S6_DRRC_FREEZE_HEAD_POLICY` is returned after the one governance commit and
-must be the Dependency Preparation governance starting HEAD. It is not
-recursively embedded or backfilled by a second commit.
+The RecoveryRoot partial outputs stay preserved and carry no readiness,
+Runtime-input, H-05/H-20 Evidence, retry, or seed authority. The corrective
+candidate is recorded but not frozen as a canonical replacement.
 
 Risk register: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` (post F-01/F-02/F-03 wording).
 
