@@ -1,0 +1,17 @@
+{
+  "canonicalAbsolutePath": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE",
+  "repositoryRelativePath": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/",
+  "existenceState": "EXISTS",
+  "type": "DIRECTORY",
+  "contentState": "NON_EMPTY_DIRECTORY",
+  "executionArtifactState": "EMPTY",
+  "symlinkState": "NONE_IN_PATH_TRAVERSAL",
+  "junctionState": "NONE_IN_PATH_TRAVERSAL",
+  "reparseState": "NONE_IN_PATH_TRAVERSAL",
+  "traversalState": "CANONICAL_PATH_WITHIN_REPOSITORY",
+  "creationState": "PRE_EXISTING",
+  "evidenceCreationState": "NOT_CREATED",
+  "metadataCreationState": "NOT_CREATED",
+  "tarballCreationState": "NOT_CREATED",
+  "candidateCreationState": "NOT_CREATED"
+}

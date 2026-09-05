@@ -1,0 +1,14 @@
+{
+  "recordType": "FINAL_SUMMARY",
+  "invocationId": "P0S6-TVEC-INVOCATION-20260904-01",
+  "runnerVersion": "P0S6-TVEC-RUNNER-1.0.0",
+  "classification": "PASS",
+  "metadataRequestCount": 1,
+  "tarballRequestCount": 1,
+  "candidateCount": 1,
+  "retryCount": 0,
+  "sourceLockfileModified": false,
+  "dependencyPreparationAuthorized": false,
+  "runtimeAuthorized": false,
+  "p0s7Allowed": false
+}

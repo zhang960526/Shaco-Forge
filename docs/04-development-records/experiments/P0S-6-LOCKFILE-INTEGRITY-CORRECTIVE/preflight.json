@@ -1,0 +1,72 @@
+{
+  "artifactClass": "AUTHORITY_EVIDENCE",
+  "invocationId": "P0S6-FINAL-VERIFICATION-INVOCATION-20260904-01",
+  "observationPhase": "PRE_START_READ_ONLY_PREFLIGHT",
+  "finalizedUtc": "2026-09-04T11:39:01.7466259Z",
+  "expected": {
+    "futureVerificationExecutionAuthority": "YES",
+    "futureVerificationExecuted": "NO",
+    "p0s7Allowed": "NO",
+    "branch": "master",
+    "commit": "070473430fec2c887abdc10085a9fa51193373c4",
+    "trackedState": "CLEAN",
+    "stagedState": "CLEAN",
+    "runner": {
+      "bytes": 4435,
+      "sha256": "2a07f932a2946adc8c99eec682761141cd409333f45f71bff57967f17360ae2f",
+      "version": "P0S6-FINAL-VERIFICATION-RUNNER-0.1.0"
+    },
+    "executorVersion": "v24.18.0",
+    "rootReparse": false
+  },
+  "observed": {
+    "futureVerificationExecutionAuthority": "YES",
+    "futureVerificationExecutedAtPreStart": "NO",
+    "p0s7Allowed": "NO",
+    "branch": "master",
+    "commit": "070473430fec2c887abdc10085a9fa51193373c4",
+    "trackedState": "CLEAN",
+    "stagedState": "CLEAN",
+    "initialUntrackedRoots": [
+      "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/",
+      "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/",
+      "docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/"
+    ],
+    "runner": {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/runner/verify-and-materialize.mjs",
+      "bytes": 4435,
+      "sha256": "2a07f932a2946adc8c99eec682761141cd409333f45f71bff57967f17360ae2f",
+      "version": "P0S6-FINAL-VERIFICATION-RUNNER-0.1.0"
+    },
+    "executor": {
+      "implementation": "Node.js",
+      "version": "v24.18.0",
+      "absolutePath": "D:\\Development\\nodejs\\node.exe",
+      "bytes": 92534088,
+      "sha256": "9a4eb5f1c29c6a2e93852ead46b999e284a6a5ca8bab4d4e241d587d025a52de",
+      "fileVersion": "24.18.0",
+      "productVersion": "24.18.0",
+      "authenticodeStatus": "Valid"
+    },
+    "root": {
+      "absolutePath": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE",
+      "reparse": false
+    },
+    "sourceLockfile": {
+      "path": "docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/package-lock.json",
+      "bytes": 30829,
+      "sha256": "3c7449945b509028c025f2a747b0c9b4f74be260cc3cde8ca07e9d5dddee33fd"
+    },
+    "drrcFrozenCopy": {
+      "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/package-lock.json",
+      "bytes": 30829,
+      "sha256": "3c7449945b509028c025f2a747b0c9b4f74be260cc3cde8ca07e9d5dddee33fd"
+    }
+  },
+  "preStartGateResult": "PASSED_TO_AUTHORIZED_START_BOUNDARY",
+  "invocationBoundary": {
+    "crossed": true,
+    "consumed": true
+  },
+  "frozenRunnerTerminalResult": "AUTHORITY_BLOCKED"
+}

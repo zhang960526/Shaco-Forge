@@ -1,0 +1,11 @@
+{
+  "preparationId": "aa96b746-eeca-4a65-a846-ecf5c753e6ab",
+  "dependencyReadiness": "INCONCLUSIVE",
+  "firstFailureBoundary": "NPM_CI",
+  "partialOutputDisposition": [
+    "NON_READINESS",
+    "NON_RUNTIME_INPUT",
+    "NON_H05_H20_EVIDENCE"
+  ],
+  "readyForRecoveryExecutionContractPlanning": false
+}

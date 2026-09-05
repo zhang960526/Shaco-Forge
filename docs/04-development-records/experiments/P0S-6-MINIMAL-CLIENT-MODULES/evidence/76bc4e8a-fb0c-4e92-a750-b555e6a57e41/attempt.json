@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "notProduction": true,
+  "contractId": "P0S6-MEC-20260903-01",
+  "attemptId": "76bc4e8a-fb0c-4e92-a750-b555e6a57e41",
+  "productBaselineHead": "cada37727af3f99da77f50353924af80f917b688",
+  "contractFreezeHead": "45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3",
+  "executionAuthorityHead": "6fd8bbd3e39ff17c5bc76bc447898dd5b7b72e7c",
+  "attemptStartHead": "6fd8bbd3e39ff17c5bc76bc447898dd5b7b72e7c",
+  "harnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+  "startedAtUtc": "2026-09-03T14:34:54.0010327+00:00",
+  "completedAtUtc": "2026-09-03T14:34:58.0771760+00:00",
+  "durationMs": 4076.0,
+  "exactTopLevelCommand": "pwsh -NoProfile -File .\\run-spike.ps1 -AttemptId 76bc4e8a-fb0c-4e92-a750-b555e6a57e41",
+  "runnerInvocationCount": 1,
+  "primaryAttemptsUsed": 1,
+  "physicalAttemptsUsed": 1,
+  "physicalAttemptsRemaining": 1,
+  "correctiveAttemptExecuted": false,
+  "electronInvocationCount": 0,
+  "electronExitCode": null,
+  "verifierExitCode": null,
+  "runnerExitCode": 1,
+  "hardTimeoutSeconds": 45,
+  "timeoutTriggered": false,
+  "h05": "INCONCLUSIVE",
+  "h20": "INCONCLUSIVE",
+  "aggregateResult": "INCONCLUSIVE",
+  "firstFailureBoundary": "DEPENDENCY_SETUP",
+  "retryEligibilityCandidate": "PRE_HYPOTHESIS",
+  "clientModuleCorePatchRequired": "NO",
+  "corePatchEquivalent": "NO",
+  "staticArtifactSemanticTransformation": false,
+  "adapterStubInventory": null,
+  "worktreeAfter": {
+    "head": "6fd8bbd3e39ff17c5bc76bc447898dd5b7b72e7c",
+    "branch": "master",
+    "status": [
+      "?? docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/"
+    ]
+  },
+  "harnessWorktreeAfter": {
+    "head": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "branch": "",
+    "status": []
+  },
+  "error": {
+    "phase": "DEPENDENCY_SETUP",
+    "type": "System.Management.Automation.RuntimeException",
+    "message": "npm ci 失败：npm warn cleanup       syscall: 'rmdir',\r\nnpm warn cleanup       path: 'D:\\\\Project\\\\Shaco-Forge\\\\docs\\\\04-development-records\\\\experiments\\\\P0S-6-MINIMAL-CLIENT-MODULES\\\\node_modules\\\\@szmarczak'\r\nnpm warn cleanup     }\r\nnpm warn cleanup   ]\r\nnpm warn cleanup ]\r\nnpm error code ENOTCACHED\r\nnpm error request to https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz failed: cache mode is 'only-if-cached' but no cached response is available.\r\nnpm error A complete log of this run can be found in: D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-MINIMAL-CLIENT-MODULES\\.npm-cache\\_logs\\2026-09-03T14_34_56_389Z-debug-0.log\r\n"
+  }
+}

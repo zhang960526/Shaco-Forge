@@ -1,0 +1,26 @@
+{
+  "command": "npm ci --ignore-scripts=false --foreground-scripts --no-audit --no-fund --cache .npm-cache --prefer-online",
+  "startedUtc": "2026-09-04T04:09:20.0022384+00:00",
+  "endedUtc": "2026-09-04T04:09:24.0235847+00:00",
+  "exitCode": 1,
+  "processId": 24112,
+  "removedEnvironmentNames": [
+    "ADSK_CLM_WPAD_PROXY_CHECK",
+    "HTTP_PROXY",
+    "HTTPS_PROXY",
+    "NO_PROXY"
+  ],
+  "homePreserved": true,
+  "stdoutPath": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY\\evidence\\aa96b746-eeca-4a65-a846-ecf5c753e6ab\\npm-ci.stdout.log",
+  "stderrPath": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY\\evidence\\aa96b746-eeca-4a65-a846-ecf5c753e6ab\\npm-ci.stderr.log",
+  "socketObservations": [
+    {
+      "firstObservedUtc": "2026-09-04T04:09:23.9104964+00:00",
+      "processId": 36160,
+      "processName": "node.exe",
+      "remoteAddress": "104.16.10.34",
+      "remotePort": 443
+    }
+  ],
+  "samplerErrors": []
+}

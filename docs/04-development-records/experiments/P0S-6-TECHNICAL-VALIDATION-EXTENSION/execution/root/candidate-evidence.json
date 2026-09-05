@@ -1,0 +1,29 @@
+{
+  "recordType": "CANDIDATE_EVIDENCE",
+  "source": {
+    "path": "docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/package-lock.json",
+    "bytes": 30829,
+    "sha256": "3C7449945B509028C025F2A747B0C9B4F74BE260CC3CDE8CA07E9D5DDDEE33FD",
+    "sha512": "49561302A146D9ACC2EDFA8EA0AA51FAE601663E2DEF36F98D570122648BA144ECD2D5F2DB5D46AAD1A84D5F029FA275C555EAC9ECC32D0C221FCB14C1052FCA"
+  },
+  "candidate": {
+    "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/package-lock.corrected.candidate.json",
+    "bytes": 30829,
+    "sha256": "324021454DB0194EC09934351591192248911CC0A016856AEFF23AF2AC93046B",
+    "sha512": "FC86DB4543662FB10E15978A6AE96264CA5F2F3CAEAA9D4262F9D697C3951B3F3968CD0804D0C58049694B8269D79EB5B9A3EADA6B1540226F3E3A8ECB5F9D29"
+  },
+  "semanticDiff": [
+    "/packages/node_modules~1env-paths/integrity"
+  ],
+  "replacementOffset": 11232,
+  "oldIntegrity": "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgALwKNZ0cf2uqan5GLuS2A==",
+  "newIntegrity": "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==",
+  "byteDiffs": [
+    {
+      "offset": 11305,
+      "sourceByte": 76,
+      "candidateByte": 108
+    }
+  ],
+  "result": "PASS"
+}

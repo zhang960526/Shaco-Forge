@@ -1,0 +1,97 @@
+{
+  "artifactClass": "EVIDENCE_MANIFEST",
+  "invocationId": "P0S6-FINAL-VERIFICATION-INVOCATION-20260904-01",
+  "finalizedUtc": "2026-09-04T11:39:01.8406189Z",
+  "terminalClassification": "AUTHORITY_BLOCKED",
+  "artifacts": [
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/invocation-ledger.jsonl",
+      "bytes": 2301,
+      "sha256": "101f584affaa5f98f254582166afebee492fc3e6b39b13651e6abac5ea239060"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/runner-stdout.raw.txt",
+      "bytes": 18,
+      "sha256": "88548299b237e0b4d32b9b38c90065ea98cdae08cd111caf37232b86ecd94ff1"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/runner-stderr.raw.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/runner-execution-result.json",
+      "bytes": 599,
+      "sha256": "0ab6bbc4cd02907d7570837da43d6c6cc92042fe79af3843b6c23de25d99ba08"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/preflight.json",
+      "bytes": 2831,
+      "sha256": "47035b5c115b84ec27dcb1b19aed6bb6384c93d566f9a9bd559e2a9fdc88deed"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/input-manifest-evidence.json",
+      "bytes": 4742,
+      "sha256": "a2ff5cce17147eb0959de4d7cec460a25ada35f8dc62b38816f450595a34715d"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/network-evidence.json",
+      "bytes": 495,
+      "sha256": "08037aa45c4f520b017f47ce331b7dd2de35774c1b0e40ad840ef312ffafbb1d"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/metadata-raw-evidence.json",
+      "bytes": 458,
+      "sha256": "d0ccd9b33090b871766107643fbd6890006b6b6fbf963a903a41527ea080312d"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/tarball-raw-evidence.json",
+      "bytes": 483,
+      "sha256": "5ceaead24d0b785747754dcba807052148daa7236d88af2c2b53041811f2e4c5"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/candidate-evidence.json",
+      "bytes": 591,
+      "sha256": "30e9ab4c6954c13f64a96995cea19e69a8837abdfcad45a110de3e9cf7d697a3"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/protected-input-postcheck.json",
+      "bytes": 1049,
+      "sha256": "db0051e5e22e9b93879ed72625557b8058ac7aa200fdbaa59acb7f373e0205e2"
+    }
+  ],
+  "plannedPostManifestArtifacts": [
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/classification.json",
+      "creationOrder": "AFTER_EVIDENCE_MANIFEST",
+      "identityReportedBy": "FINAL_SUMMARY_AND_OUT_OF_BAND_REPORT"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/final-summary.json",
+      "creationOrder": "LAST",
+      "identityReportedBy": "OUT_OF_BAND_REPORT"
+    }
+  ],
+  "absentUnreachedArtifacts": [
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/registry-metadata.raw.json",
+      "reason": "NO_METADATA_REQUEST_ISSUED"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/env-paths-2.2.1.tgz",
+      "reason": "NO_TARBALL_REQUEST_ISSUED"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/corrected-package-lock.json",
+      "reason": "CANDIDATE_CREATION_NOT_REACHED"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/byte-diff.json",
+      "reason": "CANDIDATE_CREATION_NOT_REACHED"
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/semantic-diff.json",
+      "reason": "CANDIDATE_CREATION_NOT_REACHED"
+    }
+  ]
+}

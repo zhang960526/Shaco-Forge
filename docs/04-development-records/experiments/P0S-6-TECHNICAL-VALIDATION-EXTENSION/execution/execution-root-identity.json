@@ -2,6 +2,7 @@
   "recordType": "FROZEN_EXECUTION_ROOT_IDENTITY",
   "canonicalPath": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-TECHNICAL-VALIDATION-EXTENSION\\execution\\root",
   "repositoryRelativePath": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root",
+  "repositoryCanonicalPath": "D:\\Project\\Shaco-Forge",
   "repositoryBoundary": "WITHIN_REPOSITORY",
   "executionRoot": "CREATED",
   "existenceState": "CREATED_EMPTY",
@@ -10,9 +11,14 @@
   "junctionState": "NO",
   "reparseState": "NO",
   "traversalState": "NO_TRAVERSAL_COMPONENTS",
+  "pathInspectionScope": "ROOT_AND_ALL_ANCESTOR_COMPONENTS",
   "byteIdentityApplicability": "NOT_APPLICABLE_DIRECTORY",
   "hashIdentityApplicability": "NOT_APPLICABLE_DIRECTORY",
   "identityStatus": "FROZEN",
   "authorityHead": "001a1e495617b211e1cd1702d5895a4c31f314ea",
-  "invocationId": "P0S6-TVEC-INVOCATION-20260904-01"
+  "runnerSha256": "DDC871A3970D064D5D26D0A1B5D668F6518C9EDFB23F37092D58FE72A3FC8A38",
+  "runnerIdentitySha256": "88A40DFEE0758965A3B0C9EA09ADD5239EA99C4F5A119992D4044F8BFDCAE381",
+  "invocationId": "P0S6-TVEC-INVOCATION-20260904-01",
+  "rootIdentityHashDomain": "SHA-256 of UTF-8 JSON of all fields except rootIdentityHash; keys sorted recursively; ensure_ascii=false; separators=(',', ':'); no BOM or trailing newline",
+  "rootIdentityHash": "AEE3932C337A0B8DB55058D1DB3FC71314826FC1B28C2DE3B7473488EDB6BB1E"
 }

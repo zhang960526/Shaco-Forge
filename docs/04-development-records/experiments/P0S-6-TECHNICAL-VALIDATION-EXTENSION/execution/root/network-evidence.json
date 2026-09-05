@@ -1,0 +1,68 @@
+{
+  "recordType": "NETWORK_EVIDENCE",
+  "boundary": "OFFICIAL_NPM_REGISTRY_ONLY",
+  "metadataRequestCount": 1,
+  "tarballRequestCount": 1,
+  "retryCount": 0,
+  "metadata": {
+    "requestedUrl": "https://registry.npmjs.org/env-paths/2.2.1",
+    "requestedAt": "2026-09-05T05:59:18.142Z",
+    "receivedAt": "2026-09-05T05:59:18.993Z",
+    "statusCode": 200,
+    "headers": {
+      "date": "Sat, 05 Sep 2026 05:59:19 GMT",
+      "content-type": "application/json",
+      "content-length": "2511",
+      "connection": "close",
+      "set-cookie": [
+        "__cf_bm=zSnQ6OQwCTqk6n5HKpOnLrAGpjo7MUAbPB7PSv10JfE-1788587959.7545798-1.0.1.1-RSdALDP9uVOWljM1xaEjRWOEcwbXZjGIt3RLuG.AhBKCrAG39X.o.6uhdFu6O5OmxR4resL0DOnmGpyQwpm3quoknCApk8nEhENEBzZVt2wLfoargQAVG0uQEbZTz3dc; HttpOnly; SameSite=None; Secure; Path=/; Domain=npmjs.org; Expires=Sat, 05 Sep 2026 06:29:19 GMT",
+        "_cfuvid=MU6NPYr3qddVkkvONBhvenqQh3E5owAkyJ5w5f9pa2o-1788587959.7545798-1.0.1.1-PUn2OU.MN1A6bORN78EpILibeVZgoKzgz5Fcjnl6Pyk; HttpOnly; SameSite=None; Secure; Path=/; Domain=npmjs.org"
+      ],
+      "cf-ray": "a36301dc7e3ecbab-LAX",
+      "cf-cache-status": "HIT",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "age": "18",
+      "cache-control": "public, max-age=300",
+      "last-modified": "Sat, 05 Sep 2026 05:59:00 GMT",
+      "server": "cloudflare",
+      "vary": "accept-encoding, accept"
+    },
+    "bytes": 2511,
+    "sha256": "B8709E708E37227C664A8EC0A65387AFBBD11466EA2BCD01936AEF731193A106",
+    "remoteAddress": "104.16.2.34",
+    "tlsProtocol": "TLSv1.2",
+    "authorizedTls": true
+  },
+  "tarball": {
+    "requestedUrl": "https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz",
+    "requestedAt": "2026-09-05T05:59:19.007Z",
+    "receivedAt": "2026-09-05T05:59:19.807Z",
+    "statusCode": 200,
+    "headers": {
+      "date": "Sat, 05 Sep 2026 05:59:20 GMT",
+      "content-type": "application/octet-stream",
+      "content-length": "3411",
+      "connection": "close",
+      "set-cookie": [
+        "__cf_bm=Xmp._Epkufjp439ZC5eCkwk30TVb_P9uVKrXEOFaAYE-1788587960.5742905-1.0.1.1-9EhgkF93G44Xl0nKC0GZCGtDCwFjpO9D3eROjD7rx.0o7lLY.Ez5MJY9gL_lLiaS_fB74MqjzsX2BNMor_rHTn9Zy2Gdn0HpgqZrBZXcm.sIsc_Ie4.z7aI52.pVD6t7; HttpOnly; SameSite=None; Secure; Path=/; Domain=npmjs.org; Expires=Sat, 05 Sep 2026 06:29:20 GMT",
+        "_cfuvid=FCaaF0V1P8RT25XY8S6rTjjb7JHV1Kvx1K9gWqqXIvY-1788587960.5742905-1.0.1.1-8oDsA.HrZHxt6ZNs9KP.JnYKBT6.fU1VOg8KzGx.lls; HttpOnly; SameSite=None; Secure; Path=/; Domain=npmjs.org"
+      ],
+      "cf-ray": "a36301e19aa683d9-LAX",
+      "cf-cache-status": "HIT",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "age": "639364",
+      "cache-control": "public, immutable, max-age=31557600",
+      "etag": "\"af40ba89dc74f9edd556304e20c1b512\"",
+      "last-modified": "Mon, 08 Mar 2021 12:31:10 GMT",
+      "server": "cloudflare"
+    },
+    "bytes": 3411,
+    "sha256": "5A0B894F4158809FFC408C6A9274CBCA434472802128F6D80E5755FAD0E6769E",
+    "remoteAddress": "104.16.2.34",
+    "tlsProtocol": "TLSv1.2",
+    "authorizedTls": true
+  },
+  "result": "PASS"
+}

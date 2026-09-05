@@ -1,0 +1,14 @@
+{
+  "artifactClass": "NETWORK_EVIDENCE",
+  "invocationId": "P0S6-FINAL-VERIFICATION-INVOCATION-20260904-01",
+  "finalizedUtc": "2026-09-04T11:39:01.8038660Z",
+  "state": "NOT_REACHED",
+  "reason": "FROZEN_RUNNER_TERMINATED_AUTHORITY_BLOCKED_BEFORE_NETWORK",
+  "allowedMetadataUrl": "https://registry.npmjs.org/env-paths/2.2.1",
+  "metadataLogicalGetUsed": 0,
+  "tarballLogicalGetUsed": 0,
+  "requestCount": 0,
+  "redirectHopCount": 0,
+  "responseCount": 0,
+  "rawNetworkResponseArtifacts": []
+}

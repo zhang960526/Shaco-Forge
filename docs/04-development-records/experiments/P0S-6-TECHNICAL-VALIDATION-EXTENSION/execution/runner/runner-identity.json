@@ -3,9 +3,11 @@
   "status": "FROZEN",
   "version": "P0S6-TVEC-RUNNER-1.0.0",
   "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/verify-env-paths-integrity.mjs",
-  "bytes": 25687,
-  "sha256": "0331E13399B579D84846F4E59D1B2718F3DB7EBE1234DAB089B980D44A3B9757",
+  "bytes": 33726,
+  "sha256": "DDC871A3970D064D5D26D0A1B5D668F6518C9EDFB23F37092D58FE72A3FC8A38",
   "authorityHead": "001a1e495617b211e1cd1702d5895a4c31f314ea",
+  "trustRootFingerprint": "AE69609986B819AF66F3E9D7DE5D10E2BE893CC7CF1E7B3F146DD2B72D7AF30C",
+  "trustRootFingerprintDomain": "DER SubjectPublicKeyInfo SHA-256",
   "invocationId": "P0S6-TVEC-INVOCATION-20260904-01",
   "dynamicRunner": "PROHIBITED",
   "unfrozenScript": "PROHIBITED"

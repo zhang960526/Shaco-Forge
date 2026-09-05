@@ -1,13 +1,28 @@
-import { createHash } from "node:crypto";
+import { execFile } from "node:child_process";
+import { createHash, createPublicKey, verify as verifySignature } from "node:crypto";
 import { appendFile, lstat, open, readFile, readdir, realpath, stat, writeFile } from "node:fs/promises";
 import https from "node:https";
 import path from "node:path";
-import { isDeepStrictEqual } from "node:util";
+import { isDeepStrictEqual, promisify } from "node:util";
 import { fileURLToPath } from "node:url";
 
 export const RUNNER_VERSION = "P0S6-TVEC-RUNNER-1.0.0";
-export const AUTHORITY_HEAD = "116b0ddf30be4513e58817500dba85434b07144b";
+export const AUTHORITY_HEAD = "001a1e495617b211e1cd1702d5895a4c31f314ea";
 export const INVOCATION_ID = "P0S6-TVEC-INVOCATION-20260904-01";
+
+// Keep the legacy field/argument name; its value denotes an immutable anchor,
+// never the required current tip. The exact Anchor is Owner-approved and fixed.
+const AUTHORITY_ANCHOR = AUTHORITY_HEAD;
+const SNAPSHOT_CONTRACT_ID = "P0S6-TVEC-EXECUTION-SNAPSHOT-CORRECTIVE-20260904-01";
+// Approved by P0S6-TVEC-SNAPSHOT-TRUST-ROOT-PUBLIC-KEY-OA-20260905-01.
+// Do not obtain a replacement key from the Binding, Manifest, argv, or environment.
+const SNAPSHOT_OWNER_PUBLIC_KEY_PEM = `-----BEGIN PUBLIC KEY-----
+MCowBQYDK2VwAyEALN26KG2VWx5YM9MXwGTf2wgAdfMKrjPid6481q+goNg=
+-----END PUBLIC KEY-----
+`;
+// Fingerprint domain: SHA-256 of DER SubjectPublicKeyInfo, not PEM text.
+const SNAPSHOT_OWNER_PUBLIC_KEY_DER_SHA256 = "AE69609986B819AF66F3E9D7DE5D10E2BE893CC7CF1E7B3F146DD2B72D7AF30C";
+const execFileAsync = promisify(execFile);
 
 const ACTIVATION_DECISION_ID = "P0S6-TVEC-EA-ACTIVATION-20260904-01";
 const METADATA_URL = "https://registry.npmjs.org/env-paths/2.2.1";
@@ -36,6 +51,8 @@ const INVOCATION_IDENTITY_PATH = path.join(
   "invocation-identity.json",
 );
 const EXECUTION_ROOT_IDENTITY_PATH = path.join(EXECUTION_DIRECTORY, "execution-root-identity.json");
+const RUNNER_IDENTITY_PATH = path.join(RUNNER_DIRECTORY, "runner-identity.json");
+const SNAPSHOT_BINDING_PATH = path.join(EXECUTION_DIRECTORY, "snapshot", "snapshot-binding.json");
 
 class GateError extends Error {
   constructor(classification, gate, message) {
@@ -138,49 +155,150 @@ async function invocationBoundaryWasCrossed() {
   }
 }
 
-async function readAuthorityHead() {
-  const gitMarker = path.join(REPOSITORY_ROOT, ".git");
-  const marker = await lstat(gitMarker);
-  let gitDirectory = gitMarker;
+async function readLocalGit(args) {
+  // Read-only local plumbing: no shell, replacement objects, injected Git config,
+  // optional locks, prompts, or lazy fetching from a promisor remote.
+  const env = Object.fromEntries(
+    Object.entries(process.env).filter(([name]) => !name.toUpperCase().startsWith("GIT_")),
+  );
+  Object.assign(env, { GIT_NO_LAZY_FETCH: "1", GIT_TERMINAL_PROMPT: "0" });
+  const { stdout } = await execFileAsync(
+    "git",
+    ["--no-replace-objects", "--no-optional-locks", "-c", "protocol.allow=never", ...args],
+    { cwd: REPOSITORY_ROOT, env, encoding: "utf8", timeout: 10000, maxBuffer: 1024 * 1024, windowsHide: true },
+  );
+  return stdout.trim();
+}
 
-  if (marker.isFile()) {
-    const text = (await readFile(gitMarker, "utf8")).trim();
-    if (!text.startsWith("gitdir: ")) {
-      throw new GateError("AUTHORITY_BLOCKED", "AUTHORITY_HEAD", "Invalid .git indirection file");
-    }
-    gitDirectory = path.resolve(REPOSITORY_ROOT, text.slice(8));
-  }
-
-  const headText = (await readFile(path.join(gitDirectory, "HEAD"), "utf8")).trim();
-  if (/^[0-9a-f]{40}$/.test(headText)) {
-    return headText;
-  }
-  if (!headText.startsWith("ref: ")) {
-    throw new GateError("AUTHORITY_BLOCKED", "AUTHORITY_HEAD", "Invalid Git HEAD");
-  }
-
-  const refName = headText.slice(5);
-  const looseRef = path.join(gitDirectory, ...refName.split("/"));
+async function validateAuthorityAnchor() {
   try {
-    return (await readFile(looseRef, "utf8")).trim();
+    // Legacy grafts and shallow history cannot establish the required real lineage.
+    const graftPath = await readLocalGit(["rev-parse", "--git-path", "info/grafts"]);
+    try {
+      await lstat(path.resolve(REPOSITORY_ROOT, graftPath));
+      throw new GateError("AUTHORITY_BLOCKED", "AUTHORITY_ANCHOR", "Git grafts are prohibited");
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+    if ((await readLocalGit(["rev-parse", "--is-shallow-repository"])) !== "false") {
+      throw new GateError("AUTHORITY_BLOCKED", "AUTHORITY_ANCHOR", "Complete local history is required");
+    }
+    const currentHead = await readLocalGit(["rev-parse", "--verify", "HEAD^{commit}"]);
+    if (!/^[0-9a-f]{40}$/u.test(currentHead) || !/^[0-9a-f]{40}$/u.test(AUTHORITY_ANCHOR)) {
+      throw new GateError("AUTHORITY_BLOCKED", "AUTHORITY_ANCHOR", "Invalid commit identity");
+    }
+    // Exit 0 means the Anchor is an ancestor (including itself, per Contract §8).
+    // Non-ancestor, missing objects, timeout, and Git failure all block authority.
+    await readLocalGit(["merge-base", "--is-ancestor", AUTHORITY_ANCHOR, currentHead]);
+    return currentHead;
   } catch (error) {
-    if (error.code !== "ENOENT") {
-      throw error;
-    }
+    if (error instanceof GateError) throw error;
+    throw new GateError("AUTHORITY_BLOCKED", "AUTHORITY_ANCHOR", "Local Anchor ancestry could not be established");
   }
+}
 
-  const packedRefs = await readFile(path.join(gitDirectory, "packed-refs"), "utf8");
-  for (const line of packedRefs.split(/\r?\n/u)) {
-    if (line.startsWith("#") || line.startsWith("^") || line.trim() === "") {
-      continue;
-    }
-    const [objectId, packedName] = line.split(" ");
-    if (packedName === refName) {
-      return objectId;
-    }
+function decodeSnapshotBase64(value) {
+  if (typeof value !== "string" || value.length === 0) {
+    throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", "Missing signed Snapshot data");
   }
+  const bytes = Buffer.from(value, "base64");
+  if (bytes.toString("base64") !== value) {
+    throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", "Non-canonical Snapshot base64");
+  }
+  return bytes;
+}
 
-  throw new GateError("AUTHORITY_BLOCKED", "AUTHORITY_HEAD", `Git ref is unavailable: ${refName}`);
+async function readSnapshotFile(filePath) {
+  const info = await lstat(filePath);
+  if (!info.isFile() || info.isSymbolicLink() || (await realpath(filePath)) !== filePath) {
+    throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", "Snapshot path is not a canonical regular file");
+  }
+  return readFile(filePath);
+}
+
+// Signed governance-record entry point. Envelope: { payload, signature }, both
+// canonical base64; Ed25519 signs the exact payload bytes, not reserialized JSON.
+// Payload: { recordType: "EXECUTION_SNAPSHOT_BINDING", status:
+// "OWNER_APPROVED_AND_FROZEN", contractId, authorityAnchor, invocationId, files }.
+// files contains exactly the five roles below, each with path, bytes and sha256.
+// The signed payload's SHA-256 is its immutable content reference. Signing occurs
+// AFTER Runner/Identities/Manifest freeze; no final hash is backfilled into Runner.
+// The approved launcher must independently authenticate this Runner and retain
+// the approved Binding reference; a program cannot authenticate its own verifier.
+async function validateExecutionSnapshot() {
+  try {
+    if (typeof SNAPSHOT_OWNER_PUBLIC_KEY_PEM !== "string" || !SNAPSHOT_OWNER_PUBLIC_KEY_PEM) {
+      throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", "Owner-approved Snapshot public key is not configured");
+    }
+    const key = createPublicKey(SNAPSHOT_OWNER_PUBLIC_KEY_PEM);
+    if (key.asymmetricKeyType !== "ed25519") {
+      throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", "Snapshot key must be Ed25519");
+    }
+    if (sha256(key.export({ format: "der", type: "spki" })) !== SNAPSHOT_OWNER_PUBLIC_KEY_DER_SHA256) {
+      throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", "Snapshot public key fingerprint mismatch");
+    }
+    const envelope = JSON.parse((await readSnapshotFile(SNAPSHOT_BINDING_PATH)).toString("utf8"));
+    const payload = decodeSnapshotBase64(envelope?.payload);
+    const signature = decodeSnapshotBase64(envelope?.signature);
+    if (signature.length !== 64 || !verifySignature(null, payload, key, signature)) {
+      throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", "Snapshot Owner signature mismatch");
+    }
+    const binding = JSON.parse(payload.toString("utf8"));
+    const expectedPaths = {
+      RUNNER: RUNNER_PATH,
+      RUNNER_IDENTITY: RUNNER_IDENTITY_PATH,
+      EXECUTION_ROOT_IDENTITY: EXECUTION_ROOT_IDENTITY_PATH,
+      INVOCATION_IDENTITY: INVOCATION_IDENTITY_PATH,
+      FROZEN_INPUT_MANIFEST: MANIFEST_PATH,
+    };
+    if (
+      binding?.recordType !== "EXECUTION_SNAPSHOT_BINDING" ||
+      binding.status !== "OWNER_APPROVED_AND_FROZEN" ||
+      binding.contractId !== SNAPSHOT_CONTRACT_ID ||
+      binding.authorityAnchor !== AUTHORITY_ANCHOR ||
+      binding.invocationId !== INVOCATION_ID ||
+      !isDeepStrictEqual(Object.keys(binding.files ?? {}).sort(), Object.keys(expectedPaths).sort())
+    ) {
+      throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", "Snapshot authorization or component set mismatch");
+    }
+    const files = {};
+    for (const [role, filePath] of Object.entries(expectedPaths)) {
+      const entry = binding.files[role];
+      const relativePath = path.relative(REPOSITORY_ROOT, filePath).split(path.sep).join("/");
+      if (
+        entry?.path !== relativePath || !Number.isSafeInteger(entry.bytes) || entry.bytes < 0 ||
+        typeof entry.sha256 !== "string" || !/^[0-9A-F]{64}$/u.test(entry.sha256)
+      ) {
+        throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", `Malformed Snapshot component: ${role}`);
+      }
+      const content = await readSnapshotFile(filePath);
+      if (content.length !== entry.bytes || sha256(content) !== entry.sha256) {
+        throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", `Snapshot bytes mismatch: ${role}`);
+      }
+      const value = role === "RUNNER" ? null : JSON.parse(content.toString("utf8"));
+      if (role !== "RUNNER" && (value === null || typeof value !== "object" || Array.isArray(value))) {
+        throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", `Invalid Snapshot JSON object: ${role}`);
+      }
+      files[role] = { ...entry, content, value };
+    }
+    const runnerIdentity = files.RUNNER_IDENTITY.value;
+    if (
+      runnerIdentity.recordType !== "FROZEN_RUNNER_IDENTITY" || runnerIdentity.status !== "FROZEN" ||
+      runnerIdentity.version !== RUNNER_VERSION || runnerIdentity.path !== files.RUNNER.path ||
+      runnerIdentity.bytes !== files.RUNNER.bytes || runnerIdentity.sha256 !== files.RUNNER.sha256
+    ) {
+      throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", "Runner Identity does not describe the signed Runner");
+    }
+    for (const role of ["RUNNER_IDENTITY", "EXECUTION_ROOT_IDENTITY", "INVOCATION_IDENTITY"]) {
+      if (files[role].value.authorityHead !== AUTHORITY_ANCHOR || files[role].value.invocationId !== INVOCATION_ID) {
+        throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", `Snapshot Identity authority mismatch: ${role}`);
+      }
+    }
+    return { reference: `sha256:${sha256(payload)}`, files };
+  } catch (error) {
+    if (error instanceof GateError) throw error;
+    throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", "Snapshot Binding is unavailable or invalid");
+  }
 }
 
 async function verifyFrozenFileIdentity(entry) {
@@ -271,11 +389,11 @@ async function runPreflight() {
   if ((await realpath(RUNNER_PATH)) !== RUNNER_PATH) {
     throw new GateError("AUTHORITY_BLOCKED", "RUNNER_IDENTITY", "Runner path is not canonical");
   }
-  if ((await readAuthorityHead()).toLowerCase() !== AUTHORITY_HEAD) {
-    throw new GateError("AUTHORITY_BLOCKED", "AUTHORITY_HEAD", "Authority HEAD mismatch");
-  }
-
-  const { bytes: manifestBytes, value: manifest } = await readJson(MANIFEST_PATH, "INPUT_MANIFEST");
+  const currentHead = await validateAuthorityAnchor();
+  const snapshot = await validateExecutionSnapshot();
+  // Parse only the exact Manifest bytes authenticated by the external trust root.
+  const manifestBytes = snapshot.files.FROZEN_INPUT_MANIFEST.content;
+  const manifest = snapshot.files.FROZEN_INPUT_MANIFEST.value;
   if (
     manifest.recordType !== "FROZEN_INPUT_MANIFEST" ||
     manifest.status !== "FROZEN" ||
@@ -291,6 +409,15 @@ async function runPreflight() {
     throw new GateError("AUTHORITY_BLOCKED", "INPUT_MANIFEST", "Frozen Input Manifest has no inputs");
   }
 
+  for (const role of ["RUNNER", "RUNNER_IDENTITY", "EXECUTION_ROOT_IDENTITY", "INVOCATION_IDENTITY"]) {
+    const frozen = snapshot.files[role];
+    const matches = manifest.inputs.filter((entry) => entry?.role === role);
+    if (matches.length !== 1 || matches[0].path !== frozen.path ||
+        matches[0].bytes !== frozen.bytes || matches[0].sha256 !== frozen.sha256) {
+      throw new GateError("AUTHORITY_BLOCKED", "EXECUTION_SNAPSHOT", `Manifest does not match Snapshot: ${role}`);
+    }
+  }
+
   const resolvedInputs = [];
   for (const entry of manifest.inputs) {
     resolvedInputs.push(await verifyFrozenFileIdentity(entry));
@@ -301,10 +428,10 @@ async function runPreflight() {
     throw new GateError("AUTHORITY_BLOCKED", "RUNNER_IDENTITY", "Runner is not bound by the Frozen Input Manifest");
   }
 
-  const rootIdentity = (await readJson(EXECUTION_ROOT_IDENTITY_PATH, "EXECUTION_ROOT")).value;
+  const rootIdentity = snapshot.files.EXECUTION_ROOT_IDENTITY.value;
   await verifyExecutionRoot(rootIdentity);
 
-  const invocationIdentity = (await readJson(INVOCATION_IDENTITY_PATH, "INVOCATION_IDENTITY")).value;
+  const invocationIdentity = snapshot.files.INVOCATION_IDENTITY.value;
   await verifyInvocationIdentity(invocationIdentity);
 
   const budget = manifest.budget;
@@ -323,6 +450,8 @@ async function runPreflight() {
   }
 
   return {
+    currentHead,
+    snapshotReference: snapshot.reference,
     manifest,
     manifestBytes,
     manifestSha256: sha256(manifestBytes),

@@ -448,3 +448,53 @@ Do not pull/switch/update the frozen Harness SHA without an Architecture
 Decision. Spike code is NOT production by default. The corrective candidate
 integrity remains a historical recorded value and is not frozen as a canonical
 replacement.
+
+## P0.S-6 Technical Validation Extension Final Closure State (2026-09-05)
+
+This appended final state records the completed Technical Validation Extension
+and its governance closure. Earlier governance conclusions, the original
+`AUTHORITY_BLOCKED` Invocation, and the historical MEC-01 / DRRC outcomes remain
+unchanged. Earlier Extension preparation and blocked-preflight statements above
+describe their historical recording boundaries; the latest Extension status is
+the final state below. No further preparation or Verification run is pending for
+this completed Invocation.
+
+| Field | Final State |
+|---|---|
+| P0.S-6 Result | `VERIFIED_WITH_CANDIDATE` |
+| P0S6_STATE | `CLOSED` |
+| Verification | `PASS` |
+| Verification Completion | `COMPLETED` |
+| Invocation | `P0S6-TVEC-INVOCATION-20260904-01` |
+| Classification | `PASS` |
+| Candidate | `generated_not_applied` |
+| Source Lockfile | `UNCHANGED` |
+| DRRC Lockfile | `UNCHANGED` |
+| Runtime | `NOT_ENTERED` |
+| P0.S-7 | `NOT_ALLOWED` |
+| P0S7_ALLOWED | `NO` |
+| Final Closure Decision | `P0S6-TVEC-FINAL-CLOSURE-20260905-01` |
+
+The single Invocation completed with one metadata request, one tarball request
+and one generated Candidate; retry, resume and reuse counts are zero. Metadata
+integrity equals the computed tarball integrity. Source and DRRC lockfiles retain
+`UgALw`, while metadata, tarball and Candidate contain `UgAlw`. The Candidate was
+generated only and was not applied. Both lockfiles remain byte-identical to their
+recorded source identities. This result does not establish dependency installation
+or Runtime success and does not authorize P0.S-7.
+
+Final authority and evidence:
+
+- [Final Closure Decision](../04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-FINAL-CLOSURE-DECISION.md)
+- [Execution Journey Log](../04-development-records/P0S-6-EXECUTION-JOURNEY-LOG.md)
+- [Lessons Learned](../04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-LESSONS-LEARNED.md)
+- [Controlled Verification Audit](../04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/controlled-verification-audit.json)
+- [Terminal Classification](../04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/classification.json)
+- [Final Summary](../04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/final-summary.json)
+
+P0.S-6 is closed with disposition `VERIFIED_WITH_CANDIDATE`. The remaining boundary
+is `P0S7_ALLOWED = NO`: no Candidate application, lockfile modification, dependency
+preparation, Runtime entry, Invocation retry or P0.S-7 execution is authorized by
+this final synchronization. Frozen execution inputs and prior Evidence retain
+their original bytes and historical identities; this appended governance update
+does not regenerate or retroactively alter them.

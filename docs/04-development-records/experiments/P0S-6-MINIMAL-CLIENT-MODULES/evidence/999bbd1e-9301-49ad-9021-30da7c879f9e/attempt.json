@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "notProduction": true,
+  "contractId": "P0S6-MEC-20260903-01",
+  "attemptId": "999bbd1e-9301-49ad-9021-30da7c879f9e",
+  "productBaselineHead": "cada37727af3f99da77f50353924af80f917b688",
+  "contractFreezeHead": "45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3",
+  "executionAuthorityHead": "6fd8bbd3e39ff17c5bc76bc447898dd5b7b72e7c",
+  "attemptStartHead": null,
+  "harnessHead": null,
+  "startedAtUtc": "2026-09-03T13:52:24.3357510+00:00",
+  "completedAtUtc": "2026-09-03T13:52:25.2620835+00:00",
+  "durationMs": 926.0,
+  "exactTopLevelCommand": "pwsh -NoProfile -File .\\run-spike.ps1 -AttemptId 999bbd1e-9301-49ad-9021-30da7c879f9e",
+  "runnerInvocationCount": 1,
+  "primaryAttemptsUsed": 1,
+  "physicalAttemptsUsed": 1,
+  "physicalAttemptsRemaining": 1,
+  "correctiveAttemptExecuted": false,
+  "electronInvocationCount": 0,
+  "electronExitCode": null,
+  "verifierExitCode": null,
+  "runnerExitCode": 1,
+  "hardTimeoutSeconds": 45,
+  "timeoutTriggered": false,
+  "h05": "INCONCLUSIVE",
+  "h20": "INCONCLUSIVE",
+  "aggregateResult": "INCONCLUSIVE",
+  "firstFailureBoundary": "RUNNER_PREFLIGHT",
+  "retryEligibilityCandidate": "PRE_HYPOTHESIS",
+  "clientModuleCorePatchRequired": "NO",
+  "corePatchEquivalent": "NO",
+  "staticArtifactSemanticTransformation": false,
+  "adapterStubInventory": null,
+  "worktreeAfter": {
+    "head": "6fd8bbd3e39ff17c5bc76bc447898dd5b7b72e7c",
+    "branch": "master",
+    "status": "?? docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/"
+  },
+  "harnessWorktreeAfter": {
+    "head": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "branch": "",
+    "status": null
+  },
+  "error": {
+    "phase": "RUNNER_PREFLIGHT",
+    "type": "System.Management.Automation.PropertyNotFoundException",
+    "message": "The property 'Count' cannot be found on this object. Verify that the property exists."
+  }
+}

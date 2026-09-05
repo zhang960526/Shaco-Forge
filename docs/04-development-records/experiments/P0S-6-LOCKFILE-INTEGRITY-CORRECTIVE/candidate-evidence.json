@@ -1,0 +1,14 @@
+{
+  "artifactClass": "CANDIDATE_EVIDENCE",
+  "invocationId": "P0S6-FINAL-VERIFICATION-INVOCATION-20260904-01",
+  "finalizedUtc": "2026-09-04T11:39:01.8199563Z",
+  "state": "NOT_REACHED",
+  "candidatePath": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/corrected-package-lock.json",
+  "candidateCreationUsed": 0,
+  "candidatePresent": false,
+  "bytes": null,
+  "sha256": null,
+  "sha512": null,
+  "diffState": "NOT_EXECUTED",
+  "diffSummary": "Frozen Runner stopped at AUTHORITY_BLOCKED before metadata, tarball, derivation, or exclusive candidate creation."
+}

@@ -1,0 +1,103 @@
+{
+  "artifactClass": "INPUT_MANIFEST_EVIDENCE",
+  "invocationId": "P0S6-FINAL-VERIFICATION-INVOCATION-20260904-01",
+  "finalizedUtc": "2026-09-04T11:39:01.7905698Z",
+  "manifestIdentity": {
+    "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/manifest/P0S6-FINAL-VERIFICATION-INPUT-MANIFEST.json",
+    "bytes": 3002,
+    "sha256": "b50b447c56e14c512ccb4ab4f3ab3cf6b784c45ca64f72df98803155a404e4b5"
+  },
+  "inputCount": 11,
+  "matchedCount": 11,
+  "result": "PASS",
+  "comparisons": [
+    {
+      "path": "docs/03-v1.0-plan/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE-CONTRACT.md",
+      "expectedBytes": 36491,
+      "observedBytes": 36491,
+      "expectedSha256": "ffdc3ac247e901242c3b87e385a2399ecf5aba05074f299f64754112012f3713",
+      "observedSha256": "ffdc3ac247e901242c3b87e385a2399ecf5aba05074f299f64754112012f3713",
+      "match": true
+    },
+    {
+      "path": "docs/03-v1.0-plan/P0S-6-FUTURE-VERIFICATION-PLANNING-CONTRACT.md",
+      "expectedBytes": 24803,
+      "observedBytes": 24803,
+      "expectedSha256": "d8e12c470d1acaf2589726cef74364b9344252fa9267bdc5a9d785a09d9b991a",
+      "observedSha256": "d8e12c470d1acaf2589726cef74364b9344252fa9267bdc5a9d785a09d9b991a",
+      "match": true
+    },
+    {
+      "path": "docs/03-v1.0-plan/P0S-6-FUTURE-VERIFICATION-EXECUTION-AUTHORIZATION-CONTRACT.md",
+      "expectedBytes": 30768,
+      "observedBytes": 30768,
+      "expectedSha256": "caf08b1285ed7d2ff4a9da389c9482214a6dfc2226bc7b1f54de955c9fd5ee18",
+      "observedSha256": "caf08b1285ed7d2ff4a9da389c9482214a6dfc2226bc7b1f54de955c9fd5ee18",
+      "match": true
+    },
+    {
+      "path": "docs/03-v1.0-plan/P0S-6-FUTURE-VERIFICATION-EXECUTION-AUTHORIZATION-RECORD.md",
+      "expectedBytes": 24954,
+      "observedBytes": 24954,
+      "expectedSha256": "43760b2eb91feb64f47b4a599edd75b9998dfbae21d07d2c9a163767a74a4de5",
+      "observedSha256": "43760b2eb91feb64f47b4a599edd75b9998dfbae21d07d2c9a163767a74a4de5",
+      "match": true
+    },
+    {
+      "path": "docs/04-development-records/P0S-6-VERIFICATION-EXECUTION-ACTIVATION-DECISION.md",
+      "expectedBytes": 4301,
+      "observedBytes": 4301,
+      "expectedSha256": "fb8215f64077a7c7df4c369247bd6a8b283b08c445d8a8cbddf89b99b3339df2",
+      "observedSha256": "fb8215f64077a7c7df4c369247bd6a8b283b08c445d8a8cbddf89b99b3339df2",
+      "match": true
+    },
+    {
+      "path": "docs/04-development-records/P0S-6-VERIFICATION-EXECUTION-ACTIVATION-OWNER-APPROVAL-DECISION.md",
+      "expectedBytes": 4466,
+      "observedBytes": 4466,
+      "expectedSha256": "4fd3ee935b187dc39e1f577a6a9f2d36bf740b7409067a9d4cadfcca7401f560",
+      "observedSha256": "4fd3ee935b187dc39e1f577a6a9f2d36bf740b7409067a9d4cadfcca7401f560",
+      "match": true
+    },
+    {
+      "path": "docs/04-development-records/P0S-6-VERIFICATION-EXECUTION-AUTHORITY-ACTIVATION-RECORD.md",
+      "expectedBytes": 23292,
+      "observedBytes": 23292,
+      "expectedSha256": "ccc8419cbf615d490bb233f607a1b3682c1d0b0013f7c8a6117db84a8ff84257",
+      "observedSha256": "ccc8419cbf615d490bb233f607a1b3682c1d0b0013f7c8a6117db84a8ff84257",
+      "match": true
+    },
+    {
+      "path": "docs/04-development-records/P0S-6-VERIFICATION-EXECUTION-AUTHORITY-ACTIVATION-OWNER-APPROVAL-DECISION.md",
+      "expectedBytes": 5407,
+      "observedBytes": 5407,
+      "expectedSha256": "cbe20146fb0723d43fcc2b45a6bc85f98a049f60c6997aad16f1e71d8814bda6",
+      "observedSha256": "cbe20146fb0723d43fcc2b45a6bc85f98a049f60c6997aad16f1e71d8814bda6",
+      "match": true
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/runner/verify-and-materialize.mjs",
+      "expectedBytes": 4435,
+      "observedBytes": 4435,
+      "expectedSha256": "2a07f932a2946adc8c99eec682761141cd409333f45f71bff57967f17360ae2f",
+      "observedSha256": "2a07f932a2946adc8c99eec682761141cd409333f45f71bff57967f17360ae2f",
+      "match": true
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/invocation/INVOCATION-IDENTITY.json",
+      "expectedBytes": 252,
+      "observedBytes": 252,
+      "expectedSha256": "9582d240cabc1562c073f43a5f0ba4dcae8409227fbeab266bf38b2cba4f3fd9",
+      "observedSha256": "9582d240cabc1562c073f43a5f0ba4dcae8409227fbeab266bf38b2cba4f3fd9",
+      "match": true
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/execution-root/EXECUTION-ROOT-IDENTITY.json",
+      "expectedBytes": 769,
+      "observedBytes": 769,
+      "expectedSha256": "2d0b6f9bf16875b0ed4750a3770a0bad44295813999060f352a1fa7d14b41654",
+      "observedSha256": "2d0b6f9bf16875b0ed4750a3770a0bad44295813999060f352a1fa7d14b41654",
+      "match": true
+    }
+  ]
+}

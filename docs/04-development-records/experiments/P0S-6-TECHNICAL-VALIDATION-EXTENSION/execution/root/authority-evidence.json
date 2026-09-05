@@ -1,0 +1,10 @@
+{
+  "recordType": "AUTHORITY_EVIDENCE",
+  "activationDecisionId": "P0S6-TVEC-EA-ACTIVATION-20260904-01",
+  "authorityHead": "001a1e495617b211e1cd1702d5895a4c31f314ea",
+  "invocationId": "P0S6-TVEC-INVOCATION-20260904-01",
+  "runnerVersion": "P0S6-TVEC-RUNNER-1.0.0",
+  "executionAuthority": "YES",
+  "verificationExecutedBeforeInvocation": "NO",
+  "p0s7Allowed": "NO"
+}

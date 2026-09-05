@@ -1,0 +1,14 @@
+{
+  "schema": "P0S6_DRRC_NETWORK_SOCKET_OBSERVATIONS_V1",
+  "command": "npm ci --ignore-scripts=false --foreground-scripts --no-audit --no-fund --cache .npm-cache --prefer-online",
+  "observations": [
+    {
+      "firstObservedUtc": "2026-09-04T04:09:23.9104964+00:00",
+      "processId": 36160,
+      "processName": "node.exe",
+      "remoteAddress": "104.16.10.34",
+      "remotePort": 443
+    }
+  ],
+  "samplerErrors": []
+}

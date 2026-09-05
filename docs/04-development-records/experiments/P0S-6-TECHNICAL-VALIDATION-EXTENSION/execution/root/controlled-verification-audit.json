@@ -1,0 +1,827 @@
+{
+  "recordType": "CONTROLLED_VERIFICATION_POST_EXECUTION_AUDIT",
+  "invocationId": "P0S6-TVEC-INVOCATION-20260904-01",
+  "recordedAt": "2026-09-05T06:01:11.973Z",
+  "method": "Read-only examination of outputs from the one completed frozen Runner execution; no Runner import, re-execution, request, tarball extraction, or new candidate derivation during audit.",
+  "result": "PASS",
+  "execution": {
+    "nodeExecutable": "D:\\Development\\nodejs\\node.exe",
+    "nodeVersion": "v24.18.0",
+    "runnerPath": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/verify-env-paths-integrity.mjs",
+    "arguments": [
+      "--execute",
+      "--invocation-id",
+      "P0S6-TVEC-INVOCATION-20260904-01",
+      "--authority-head",
+      "001a1e495617b211e1cd1702d5895a4c31f314ea"
+    ],
+    "processExitCode": 0,
+    "toolCapturedOutput": "PASS\nTVEC_RUNNER_EXIT_CODE=0\r\n",
+    "toolChunkId": "8ed5ea",
+    "runnerProcessLaunchCount": 1,
+    "networkMode": "DIRECT_OFFICIAL_NPM_REGISTRY",
+    "proxyEnvironmentRemovedForChildProcess": true,
+    "globalConfigurationChanged": false
+  },
+  "startBoundary": {
+    "crossed": true,
+    "timestamp": "2026-09-05T05:59:18.129Z"
+  },
+  "terminal": {
+    "classification": "PASS",
+    "finalizedAt": "2026-09-05T05:59:19.816Z"
+  },
+  "consumedBudget": {
+    "invocation": 1,
+    "metadataRequest": 1,
+    "tarballRequest": 1,
+    "candidate": 1,
+    "retry": 0,
+    "resume": 0,
+    "reuse": 0
+  },
+  "integrityComparison": {
+    "package": "env-paths@2.2.1",
+    "metadataIntegrity": "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==",
+    "computedTarballIntegrity": "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==",
+    "sourceLockfileIntegrity": "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgALwKNZ0cf2uqan5GLuS2A==",
+    "drrcLockfileIntegrity": "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgALwKNZ0cf2uqan5GLuS2A==",
+    "metadataMatchesTarball": true,
+    "metadataMatchesSourceLockfile": false,
+    "metadataMatchesDrrcLockfile": false,
+    "sourceMatchesDrrc": true,
+    "candidateMatchesMetadataAndTarball": true
+  },
+  "candidate": {
+    "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/package-lock.corrected.candidate.json",
+    "count": 1,
+    "bytes": 30829,
+    "sha256": "324021454DB0194EC09934351591192248911CC0A016856AEFF23AF2AC93046B",
+    "semanticDiff": [
+      "/packages/node_modules~1env-paths/integrity"
+    ],
+    "byteDiffs": [
+      {
+        "offset": 11305,
+        "sourceByte": 76,
+        "candidateByte": 108
+      }
+    ],
+    "applied": false
+  },
+  "preLaunch": {
+    "result": "PASS",
+    "checkedAt": "2026-09-05T05:58:39.596Z",
+    "runnerLaunched": false,
+    "networkRequests": 0,
+    "currentHead": "75d65be075ab56623cabbef581ae981a113fbe3c",
+    "authorityAnchor": "001a1e495617b211e1cd1702d5895a4c31f314ea",
+    "snapshotReference": "sha256:F5AA75F8C210EE8646ABFBCD67482D4E246F38869FD8BF9ECC005B2A58A22F91",
+    "signatureValid": true,
+    "manifestInputCount": 40,
+    "executionRootEmpty": true,
+    "nodeExecutable": "D:\\Development\\nodejs\\node.exe",
+    "nodeVersion": "v24.18.0",
+    "environmentFlags": [],
+    "locks": [
+      {
+        "role": "SOURCE_LOCKFILE",
+        "path": "docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/package-lock.json",
+        "sha256": "3C7449945B509028C025F2A747B0C9B4F74BE260CC3CDE8CA07E9D5DDDEE33FD",
+        "utf8Bom": false,
+        "integrity": "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgALwKNZ0cf2uqan5GLuS2A=="
+      },
+      {
+        "role": "DRRC_LOCKFILE",
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/package-lock.json",
+        "sha256": "3C7449945B509028C025F2A747B0C9B4F74BE260CC3CDE8CA07E9D5DDDEE33FD",
+        "utf8Bom": false,
+        "integrity": "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgALwKNZ0cf2uqan5GLuS2A=="
+      }
+    ],
+    "protectedFiles": [
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/execution-root-identity.json",
+        "bytes": 1420,
+        "sha256": "AC4D73DB00AC69D421FD3C143B4672A80A90445FCB471095845DA0B720029574"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/manifest/frozen-input-manifest.json",
+        "bytes": 15121,
+        "sha256": "3B8774242BFEF5B3074555542AB86D43419F88D1BF4DADE3250902AA0E8FAA9F"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/invocation/invocation-identity.json",
+        "bytes": 389,
+        "sha256": "4E353B8339385F19F0988E54C5B7104E80FE4ECAE8015AF778844AAD1EA519F4"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/verify-env-paths-integrity.mjs",
+        "bytes": 33726,
+        "sha256": "DDC871A3970D064D5D26D0A1B5D668F6518C9EDFB23F37092D58FE72A3FC8A38"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/runner-identity.json",
+        "bytes": 688,
+        "sha256": "88A40DFEE0758965A3B0C9EA09ADD5239EA99C4F5A119992D4044F8BFDCAE381"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-FINAL-CLOSURE-DECISION.md",
+        "bytes": 2239,
+        "sha256": "775594E69D54ABD21B325EC3EC7D6817BCCBF47517C1F5BF4871CC06F4F32C5B"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-POST-CLOSURE-RECONCILIATION-DECISION.md",
+        "bytes": 2822,
+        "sha256": "163B4CFDFFB2EEF4F49F0CD5DD07F567A587DB39B7705492E1F49680EF0080CC"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-DECISION.md",
+        "bytes": 1883,
+        "sha256": "B170C3E52BC8375F49E97D3B64AB32FED32B8C9AE0EEA14D2AA3E5D43DB08D98"
+      },
+      {
+        "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-CONTRACT.md",
+        "bytes": 10164,
+        "sha256": "A1EC0522CBDC287CC01B123786DC9322790952BA881DEE732238DAFC52C4F0E6"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-OWNER-APPROVAL-DECISION.md",
+        "bytes": 2588,
+        "sha256": "A0FBB157D070E2622CFF09DE1A8CA92EE4517F0DD5E87EDB10EDD7C506BF7D47"
+      },
+      {
+        "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-AUTHORIZATION-CONTRACT.md",
+        "bytes": 10100,
+        "sha256": "D38B82A9C64AD6A370E7A969A6BCFE2E77A970E62009786D86E25945E6745947"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EAC-OWNER-APPROVAL-DECISION.md",
+        "bytes": 2630,
+        "sha256": "C234C03F87701E02BB3FD08580AC24DD173271FE1CDDA5B021416046C821AC85"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-AUTHORITY-ACTIVATION-RECORD.md",
+        "bytes": 7122,
+        "sha256": "728DCC6A81CC2F6385D8A53E80F59A47205A8172799A0F4CFD2DB215FC478FD6"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EAAR-OWNER-APPROVAL-DECISION.md",
+        "bytes": 2727,
+        "sha256": "169BF83273AEEBEA16BAEB0F9F8258DD8E08E4A4241CCB0382763BC562178AEE"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-AUTHORITY-ACTIVATION-DECISION.md",
+        "bytes": 5028,
+        "sha256": "70CB7592C805A0796B51E7684D50DDEEDF49DAA60A570B1C284B344FCD2FFF9A"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTION-DECISION.md",
+        "bytes": 7576,
+        "sha256": "5352EA58664379EC91F54A4057F4FAA550623F44BE37AF5AE7E80117AF944096"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTION-OWNER-APPROVAL-DECISION.md",
+        "bytes": 5169,
+        "sha256": "99618B05238EC7E45B2A3030C950F01DA4925CBFCD86DC326A3F4660CA6C7354"
+      },
+      {
+        "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTIVE-CONTRACT.md",
+        "bytes": 10205,
+        "sha256": "A5465DAE34BFEF4D8064FB22C39956C54B467E9AD07DB5FFAA34ED1892ACB617"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTIVE-OWNER-APPROVAL-DECISION.md",
+        "bytes": 6408,
+        "sha256": "3EA8C2DEB4349FE98E5E4DA3DCDE3CB1D7ED7712A9CD050C625348E258E1B3F8"
+      },
+      {
+        "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-BINDING-CONTRACT.md",
+        "bytes": 12883,
+        "sha256": "2624EC554DF4019144D7B82EDE01497F5A3F4515CBBDD8E442FE35D832E2AA2E"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-BINDING-OWNER-APPROVAL-DECISION.md",
+        "bytes": 6332,
+        "sha256": "4BF54313B508D8358E161C4451105F1FF414631C19B902B90546BA7522C33602"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-FINAL-SNAPSHOT-FREEZE-PLAN-DECISION.md",
+        "bytes": 12455,
+        "sha256": "CB082977CF72A7E2757750D24E0D8E6CDFF93B0E8577B9DEFA1C4901D257A0E7"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-FINAL-SNAPSHOT-FREEZE-PLAN-OWNER-APPROVAL-DECISION.md",
+        "bytes": 6449,
+        "sha256": "152BD02A434E2575732BF02357AEAE236793B44FE3BE8EA85E6067B3EABC5243"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-AUTHORITY-ANCHOR-SELECTION-OWNER-APPROVAL-DECISION.md",
+        "bytes": 5903,
+        "sha256": "4BDCED255C199F5D2E6180744CE2CA07F0A6FFE00D6B7E49A8953240ACCEE5D5"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-TRUST-ROOT-SELECTION-DECISION.md",
+        "bytes": 16514,
+        "sha256": "BF7C1395C9D1EE021539F46D9D1A5EEECEB338A60A328CCEB273848409C5303B"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-TRUST-ROOT-OWNER-APPROVAL-DECISION.md",
+        "bytes": 9017,
+        "sha256": "E0C0818D702B594C3C2E854608C27A94C62ACB450E5669124A6F60CC55659560"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-TRUST-ROOT-PUBLIC-KEY-APPROVAL-RECORD.md",
+        "bytes": 8999,
+        "sha256": "B26AFE3023955450F24128CECC640AD95343D69DDD1CAFD3BFD1A5A83AD41412"
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-RUNNER-FINAL-FREEZE-APPROVAL-DECISION.md",
+        "bytes": 7692,
+        "sha256": "6B29476AE58BD22A15D77C0088661073CD77DB95D6698727CF6ED4765CACB33A"
+      },
+      {
+        "path": "docs/00-governance/SHACO-FORGE-CURRENT-STATE.md",
+        "bytes": 27209,
+        "sha256": "C2A549AE2C9FCFBDB0E9D9E5A0551223937128D982AFF7BF946CC9A407DD7E84"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/package-lock.json",
+        "bytes": 30829,
+        "sha256": "3C7449945B509028C025F2A747B0C9B4F74BE260CC3CDE8CA07E9D5DDDEE33FD"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/package-lock.json",
+        "bytes": 30829,
+        "sha256": "3C7449945B509028C025F2A747B0C9B4F74BE260CC3CDE8CA07E9D5DDDEE33FD"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/classification.json",
+        "bytes": 303,
+        "sha256": "21757CD251E91D674DBB3287E1F21957CE2A135E49732E9D87C49369D69A58A2"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/effective-config.json",
+        "bytes": 4221,
+        "sha256": "199D283E6E78CBF9B23107F744AD48C2233D6FC4CDB14EF8AB8050DB63B50C01"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/invocation-ledger.jsonl",
+        "bytes": 774,
+        "sha256": "09E33D3A859B2F6E4317DE363D954D50D1BE2EFD54DACFDB39827F7B1AEF071A"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/network-sockets.json",
+        "bytes": 427,
+        "sha256": "24BAB97F4996AEFA1EE6E4F7CFD19C28A1EEA9E80A1A3D46918712C9BAF26990"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-ci-result.json",
+        "bytes": 1048,
+        "sha256": "AAB3EB0F6387C1114DC1D5C2A9A62BEB78E1962BC15F0F8E2F7E7908ED052340"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-ci.stderr.log",
+        "bytes": 8751,
+        "sha256": "B0102F2CDCCBBB8F680721AA34C282F433A370CD92CCB08747EE9E325D0F42CA"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-ci.stdout.log",
+        "bytes": 0,
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-logs/2026-09-04T04_09_20_273Z-debug-0.log",
+        "bytes": 12298,
+        "sha256": "904B18150231A5F42F56F8BFA21859C1CAFD4EE838E6F7DE8FF6A661BAD4101B"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/preflight.json",
+        "bytes": 9295,
+        "sha256": "3B839EB09127BFA76588052DBF07643005CF1B0300B615FFD9E9E7AE173BDD83"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/static-gates.json",
+        "bytes": 2039,
+        "sha256": "7B11C2B05A5498F9184946C0D2232CCCB11EA11D06CD06334B444EBCDB381593"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.corrected.json",
+        "bytes": 6351,
+        "sha256": "E781C25F663065F1DE6B0E4F53DBFF32E8E27C5053E8EB6725D59E35CA6E07AD"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.corrected.payload.json",
+        "bytes": 2226,
+        "sha256": "F5AA75F8C210EE8646ABFBCD67482D4E246F38869FD8BF9ECC005B2A58A22F91"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.corrected.signature",
+        "bytes": 64,
+        "sha256": "16F5B0ECDD464D2F1D8A4109FCFB616D5F9DD580148BE8E5310D534ABC1B87AB"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.json",
+        "bytes": 6351,
+        "sha256": "E781C25F663065F1DE6B0E4F53DBFF32E8E27C5053E8EB6725D59E35CA6E07AD"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.payload.json",
+        "bytes": 2230,
+        "sha256": "7C01C2A09A66DBA5046AFF6B12865890E547A1C55588068AC66BA428CC8F5151"
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.signature",
+        "bytes": 64,
+        "sha256": "48366C3186685FF9241218BD828F5588FD397B2C15335BA02560EBA12E7E2FF8"
+      }
+    ]
+  },
+  "preLaunchEnvironmentNotes": [
+    "Read-only validation in the sandbox encountered repository ownership rejection before any Runner launch.",
+    "Read-only validation in the owner environment detected inherited proxy variables before any Runner launch.",
+    "Proxy and Node override variables were removed only from the validation and invocation child-process environment; no system or repository configuration was changed."
+  ],
+  "immutability": {
+    "result": "PASS",
+    "protectedFileCount": 47,
+    "files": [
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/execution-root-identity.json",
+        "bytes": 1420,
+        "sha256": "AC4D73DB00AC69D421FD3C143B4672A80A90445FCB471095845DA0B720029574",
+        "afterSha256": "AC4D73DB00AC69D421FD3C143B4672A80A90445FCB471095845DA0B720029574",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/manifest/frozen-input-manifest.json",
+        "bytes": 15121,
+        "sha256": "3B8774242BFEF5B3074555542AB86D43419F88D1BF4DADE3250902AA0E8FAA9F",
+        "afterSha256": "3B8774242BFEF5B3074555542AB86D43419F88D1BF4DADE3250902AA0E8FAA9F",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/invocation/invocation-identity.json",
+        "bytes": 389,
+        "sha256": "4E353B8339385F19F0988E54C5B7104E80FE4ECAE8015AF778844AAD1EA519F4",
+        "afterSha256": "4E353B8339385F19F0988E54C5B7104E80FE4ECAE8015AF778844AAD1EA519F4",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/verify-env-paths-integrity.mjs",
+        "bytes": 33726,
+        "sha256": "DDC871A3970D064D5D26D0A1B5D668F6518C9EDFB23F37092D58FE72A3FC8A38",
+        "afterSha256": "DDC871A3970D064D5D26D0A1B5D668F6518C9EDFB23F37092D58FE72A3FC8A38",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/runner-identity.json",
+        "bytes": 688,
+        "sha256": "88A40DFEE0758965A3B0C9EA09ADD5239EA99C4F5A119992D4044F8BFDCAE381",
+        "afterSha256": "88A40DFEE0758965A3B0C9EA09ADD5239EA99C4F5A119992D4044F8BFDCAE381",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-FINAL-CLOSURE-DECISION.md",
+        "bytes": 2239,
+        "sha256": "775594E69D54ABD21B325EC3EC7D6817BCCBF47517C1F5BF4871CC06F4F32C5B",
+        "afterSha256": "775594E69D54ABD21B325EC3EC7D6817BCCBF47517C1F5BF4871CC06F4F32C5B",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-POST-CLOSURE-RECONCILIATION-DECISION.md",
+        "bytes": 2822,
+        "sha256": "163B4CFDFFB2EEF4F49F0CD5DD07F567A587DB39B7705492E1F49680EF0080CC",
+        "afterSha256": "163B4CFDFFB2EEF4F49F0CD5DD07F567A587DB39B7705492E1F49680EF0080CC",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-DECISION.md",
+        "bytes": 1883,
+        "sha256": "B170C3E52BC8375F49E97D3B64AB32FED32B8C9AE0EEA14D2AA3E5D43DB08D98",
+        "afterSha256": "B170C3E52BC8375F49E97D3B64AB32FED32B8C9AE0EEA14D2AA3E5D43DB08D98",
+        "unchanged": true
+      },
+      {
+        "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-CONTRACT.md",
+        "bytes": 10164,
+        "sha256": "A1EC0522CBDC287CC01B123786DC9322790952BA881DEE732238DAFC52C4F0E6",
+        "afterSha256": "A1EC0522CBDC287CC01B123786DC9322790952BA881DEE732238DAFC52C4F0E6",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-OWNER-APPROVAL-DECISION.md",
+        "bytes": 2588,
+        "sha256": "A0FBB157D070E2622CFF09DE1A8CA92EE4517F0DD5E87EDB10EDD7C506BF7D47",
+        "afterSha256": "A0FBB157D070E2622CFF09DE1A8CA92EE4517F0DD5E87EDB10EDD7C506BF7D47",
+        "unchanged": true
+      },
+      {
+        "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-AUTHORIZATION-CONTRACT.md",
+        "bytes": 10100,
+        "sha256": "D38B82A9C64AD6A370E7A969A6BCFE2E77A970E62009786D86E25945E6745947",
+        "afterSha256": "D38B82A9C64AD6A370E7A969A6BCFE2E77A970E62009786D86E25945E6745947",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EAC-OWNER-APPROVAL-DECISION.md",
+        "bytes": 2630,
+        "sha256": "C234C03F87701E02BB3FD08580AC24DD173271FE1CDDA5B021416046C821AC85",
+        "afterSha256": "C234C03F87701E02BB3FD08580AC24DD173271FE1CDDA5B021416046C821AC85",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-AUTHORITY-ACTIVATION-RECORD.md",
+        "bytes": 7122,
+        "sha256": "728DCC6A81CC2F6385D8A53E80F59A47205A8172799A0F4CFD2DB215FC478FD6",
+        "afterSha256": "728DCC6A81CC2F6385D8A53E80F59A47205A8172799A0F4CFD2DB215FC478FD6",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EAAR-OWNER-APPROVAL-DECISION.md",
+        "bytes": 2727,
+        "sha256": "169BF83273AEEBEA16BAEB0F9F8258DD8E08E4A4241CCB0382763BC562178AEE",
+        "afterSha256": "169BF83273AEEBEA16BAEB0F9F8258DD8E08E4A4241CCB0382763BC562178AEE",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-AUTHORITY-ACTIVATION-DECISION.md",
+        "bytes": 5028,
+        "sha256": "70CB7592C805A0796B51E7684D50DDEEDF49DAA60A570B1C284B344FCD2FFF9A",
+        "afterSha256": "70CB7592C805A0796B51E7684D50DDEEDF49DAA60A570B1C284B344FCD2FFF9A",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTION-DECISION.md",
+        "bytes": 7576,
+        "sha256": "5352EA58664379EC91F54A4057F4FAA550623F44BE37AF5AE7E80117AF944096",
+        "afterSha256": "5352EA58664379EC91F54A4057F4FAA550623F44BE37AF5AE7E80117AF944096",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTION-OWNER-APPROVAL-DECISION.md",
+        "bytes": 5169,
+        "sha256": "99618B05238EC7E45B2A3030C950F01DA4925CBFCD86DC326A3F4660CA6C7354",
+        "afterSha256": "99618B05238EC7E45B2A3030C950F01DA4925CBFCD86DC326A3F4660CA6C7354",
+        "unchanged": true
+      },
+      {
+        "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTIVE-CONTRACT.md",
+        "bytes": 10205,
+        "sha256": "A5465DAE34BFEF4D8064FB22C39956C54B467E9AD07DB5FFAA34ED1892ACB617",
+        "afterSha256": "A5465DAE34BFEF4D8064FB22C39956C54B467E9AD07DB5FFAA34ED1892ACB617",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTIVE-OWNER-APPROVAL-DECISION.md",
+        "bytes": 6408,
+        "sha256": "3EA8C2DEB4349FE98E5E4DA3DCDE3CB1D7ED7712A9CD050C625348E258E1B3F8",
+        "afterSha256": "3EA8C2DEB4349FE98E5E4DA3DCDE3CB1D7ED7712A9CD050C625348E258E1B3F8",
+        "unchanged": true
+      },
+      {
+        "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-BINDING-CONTRACT.md",
+        "bytes": 12883,
+        "sha256": "2624EC554DF4019144D7B82EDE01497F5A3F4515CBBDD8E442FE35D832E2AA2E",
+        "afterSha256": "2624EC554DF4019144D7B82EDE01497F5A3F4515CBBDD8E442FE35D832E2AA2E",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-BINDING-OWNER-APPROVAL-DECISION.md",
+        "bytes": 6332,
+        "sha256": "4BF54313B508D8358E161C4451105F1FF414631C19B902B90546BA7522C33602",
+        "afterSha256": "4BF54313B508D8358E161C4451105F1FF414631C19B902B90546BA7522C33602",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-FINAL-SNAPSHOT-FREEZE-PLAN-DECISION.md",
+        "bytes": 12455,
+        "sha256": "CB082977CF72A7E2757750D24E0D8E6CDFF93B0E8577B9DEFA1C4901D257A0E7",
+        "afterSha256": "CB082977CF72A7E2757750D24E0D8E6CDFF93B0E8577B9DEFA1C4901D257A0E7",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-FINAL-SNAPSHOT-FREEZE-PLAN-OWNER-APPROVAL-DECISION.md",
+        "bytes": 6449,
+        "sha256": "152BD02A434E2575732BF02357AEAE236793B44FE3BE8EA85E6067B3EABC5243",
+        "afterSha256": "152BD02A434E2575732BF02357AEAE236793B44FE3BE8EA85E6067B3EABC5243",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-AUTHORITY-ANCHOR-SELECTION-OWNER-APPROVAL-DECISION.md",
+        "bytes": 5903,
+        "sha256": "4BDCED255C199F5D2E6180744CE2CA07F0A6FFE00D6B7E49A8953240ACCEE5D5",
+        "afterSha256": "4BDCED255C199F5D2E6180744CE2CA07F0A6FFE00D6B7E49A8953240ACCEE5D5",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-TRUST-ROOT-SELECTION-DECISION.md",
+        "bytes": 16514,
+        "sha256": "BF7C1395C9D1EE021539F46D9D1A5EEECEB338A60A328CCEB273848409C5303B",
+        "afterSha256": "BF7C1395C9D1EE021539F46D9D1A5EEECEB338A60A328CCEB273848409C5303B",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-TRUST-ROOT-OWNER-APPROVAL-DECISION.md",
+        "bytes": 9017,
+        "sha256": "E0C0818D702B594C3C2E854608C27A94C62ACB450E5669124A6F60CC55659560",
+        "afterSha256": "E0C0818D702B594C3C2E854608C27A94C62ACB450E5669124A6F60CC55659560",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-TRUST-ROOT-PUBLIC-KEY-APPROVAL-RECORD.md",
+        "bytes": 8999,
+        "sha256": "B26AFE3023955450F24128CECC640AD95343D69DDD1CAFD3BFD1A5A83AD41412",
+        "afterSha256": "B26AFE3023955450F24128CECC640AD95343D69DDD1CAFD3BFD1A5A83AD41412",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-RUNNER-FINAL-FREEZE-APPROVAL-DECISION.md",
+        "bytes": 7692,
+        "sha256": "6B29476AE58BD22A15D77C0088661073CD77DB95D6698727CF6ED4765CACB33A",
+        "afterSha256": "6B29476AE58BD22A15D77C0088661073CD77DB95D6698727CF6ED4765CACB33A",
+        "unchanged": true
+      },
+      {
+        "path": "docs/00-governance/SHACO-FORGE-CURRENT-STATE.md",
+        "bytes": 27209,
+        "sha256": "C2A549AE2C9FCFBDB0E9D9E5A0551223937128D982AFF7BF946CC9A407DD7E84",
+        "afterSha256": "C2A549AE2C9FCFBDB0E9D9E5A0551223937128D982AFF7BF946CC9A407DD7E84",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/package-lock.json",
+        "bytes": 30829,
+        "sha256": "3C7449945B509028C025F2A747B0C9B4F74BE260CC3CDE8CA07E9D5DDDEE33FD",
+        "afterSha256": "3C7449945B509028C025F2A747B0C9B4F74BE260CC3CDE8CA07E9D5DDDEE33FD",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/package-lock.json",
+        "bytes": 30829,
+        "sha256": "3C7449945B509028C025F2A747B0C9B4F74BE260CC3CDE8CA07E9D5DDDEE33FD",
+        "afterSha256": "3C7449945B509028C025F2A747B0C9B4F74BE260CC3CDE8CA07E9D5DDDEE33FD",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/classification.json",
+        "bytes": 303,
+        "sha256": "21757CD251E91D674DBB3287E1F21957CE2A135E49732E9D87C49369D69A58A2",
+        "afterSha256": "21757CD251E91D674DBB3287E1F21957CE2A135E49732E9D87C49369D69A58A2",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/effective-config.json",
+        "bytes": 4221,
+        "sha256": "199D283E6E78CBF9B23107F744AD48C2233D6FC4CDB14EF8AB8050DB63B50C01",
+        "afterSha256": "199D283E6E78CBF9B23107F744AD48C2233D6FC4CDB14EF8AB8050DB63B50C01",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/invocation-ledger.jsonl",
+        "bytes": 774,
+        "sha256": "09E33D3A859B2F6E4317DE363D954D50D1BE2EFD54DACFDB39827F7B1AEF071A",
+        "afterSha256": "09E33D3A859B2F6E4317DE363D954D50D1BE2EFD54DACFDB39827F7B1AEF071A",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/network-sockets.json",
+        "bytes": 427,
+        "sha256": "24BAB97F4996AEFA1EE6E4F7CFD19C28A1EEA9E80A1A3D46918712C9BAF26990",
+        "afterSha256": "24BAB97F4996AEFA1EE6E4F7CFD19C28A1EEA9E80A1A3D46918712C9BAF26990",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-ci-result.json",
+        "bytes": 1048,
+        "sha256": "AAB3EB0F6387C1114DC1D5C2A9A62BEB78E1962BC15F0F8E2F7E7908ED052340",
+        "afterSha256": "AAB3EB0F6387C1114DC1D5C2A9A62BEB78E1962BC15F0F8E2F7E7908ED052340",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-ci.stderr.log",
+        "bytes": 8751,
+        "sha256": "B0102F2CDCCBBB8F680721AA34C282F433A370CD92CCB08747EE9E325D0F42CA",
+        "afterSha256": "B0102F2CDCCBBB8F680721AA34C282F433A370CD92CCB08747EE9E325D0F42CA",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-ci.stdout.log",
+        "bytes": 0,
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "afterSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/npm-logs/2026-09-04T04_09_20_273Z-debug-0.log",
+        "bytes": 12298,
+        "sha256": "904B18150231A5F42F56F8BFA21859C1CAFD4EE838E6F7DE8FF6A661BAD4101B",
+        "afterSha256": "904B18150231A5F42F56F8BFA21859C1CAFD4EE838E6F7DE8FF6A661BAD4101B",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/preflight.json",
+        "bytes": 9295,
+        "sha256": "3B839EB09127BFA76588052DBF07643005CF1B0300B615FFD9E9E7AE173BDD83",
+        "afterSha256": "3B839EB09127BFA76588052DBF07643005CF1B0300B615FFD9E9E7AE173BDD83",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/evidence/aa96b746-eeca-4a65-a846-ecf5c753e6ab/static-gates.json",
+        "bytes": 2039,
+        "sha256": "7B11C2B05A5498F9184946C0D2232CCCB11EA11D06CD06334B444EBCDB381593",
+        "afterSha256": "7B11C2B05A5498F9184946C0D2232CCCB11EA11D06CD06334B444EBCDB381593",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.corrected.json",
+        "bytes": 6351,
+        "sha256": "E781C25F663065F1DE6B0E4F53DBFF32E8E27C5053E8EB6725D59E35CA6E07AD",
+        "afterSha256": "E781C25F663065F1DE6B0E4F53DBFF32E8E27C5053E8EB6725D59E35CA6E07AD",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.corrected.payload.json",
+        "bytes": 2226,
+        "sha256": "F5AA75F8C210EE8646ABFBCD67482D4E246F38869FD8BF9ECC005B2A58A22F91",
+        "afterSha256": "F5AA75F8C210EE8646ABFBCD67482D4E246F38869FD8BF9ECC005B2A58A22F91",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.corrected.signature",
+        "bytes": 64,
+        "sha256": "16F5B0ECDD464D2F1D8A4109FCFB616D5F9DD580148BE8E5310D534ABC1B87AB",
+        "afterSha256": "16F5B0ECDD464D2F1D8A4109FCFB616D5F9DD580148BE8E5310D534ABC1B87AB",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.json",
+        "bytes": 6351,
+        "sha256": "E781C25F663065F1DE6B0E4F53DBFF32E8E27C5053E8EB6725D59E35CA6E07AD",
+        "afterSha256": "E781C25F663065F1DE6B0E4F53DBFF32E8E27C5053E8EB6725D59E35CA6E07AD",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.payload.json",
+        "bytes": 2230,
+        "sha256": "7C01C2A09A66DBA5046AFF6B12865890E547A1C55588068AC66BA428CC8F5151",
+        "afterSha256": "7C01C2A09A66DBA5046AFF6B12865890E547A1C55588068AC66BA428CC8F5151",
+        "unchanged": true
+      },
+      {
+        "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/snapshot/snapshot-binding.signature",
+        "bytes": 64,
+        "sha256": "48366C3186685FF9241218BD828F5588FD397B2C15335BA02560EBA12E7E2FF8",
+        "afterSha256": "48366C3186685FF9241218BD828F5588FD397B2C15335BA02560EBA12E7E2FF8",
+        "unchanged": true
+      }
+    ]
+  },
+  "runnerOutputFiles": [
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/authority-evidence.json",
+      "bytes": 370,
+      "sha256": "CDD36038D6AA0796E7EDF21DA68B8C83E32C743FB08CF7C8C17DB8D1BC45D22B",
+      "encoding": {
+        "utf8": true,
+        "bom": false,
+        "suspectedMojibake": false
+      }
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/candidate-evidence.json",
+      "bytes": 1290,
+      "sha256": "C1D458EBA8A0E44E211D3E224CC6000D4DE175E64B09F7DB53070C6D81486F16",
+      "encoding": {
+        "utf8": true,
+        "bom": false,
+        "suspectedMojibake": false
+      }
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/classification.json",
+      "bytes": 184,
+      "sha256": "BB436391F1013AE9CFB7EC2DCC46516400821AB3FA87E02383230A42F9851082",
+      "encoding": {
+        "utf8": true,
+        "bom": false,
+        "suspectedMojibake": false
+      }
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/env-paths-2.2.1.tgz",
+      "bytes": 3411,
+      "sha256": "5A0B894F4158809FFC408C6A9274CBCA434472802128F6D80E5755FAD0E6769E",
+      "encoding": null
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/final-summary.json",
+      "bytes": 395,
+      "sha256": "47E353AD6DCD0E1D63E68B5D8EC800893C5A7EAE7BD23FA4299D7BCD94D6894F",
+      "encoding": {
+        "utf8": true,
+        "bom": false,
+        "suspectedMojibake": false
+      }
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/input-manifest-evidence.json",
+      "bytes": 320,
+      "sha256": "FDF4E4D057CA49523BFA6891C4A00C85C5631937AA452920456AC39BF8FDC5C3",
+      "encoding": {
+        "utf8": true,
+        "bom": false,
+        "suspectedMojibake": false
+      }
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/invocation-ledger.jsonl",
+      "bytes": 1239,
+      "sha256": "9F62819B023C640FBB0FE547F77DB4CD96B248529851B95E5130EBA681E45D79",
+      "encoding": {
+        "utf8": true,
+        "bom": false,
+        "suspectedMojibake": false
+      }
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/metadata-evidence.json",
+      "bytes": 1827,
+      "sha256": "646A19E57D61E18D0C1F23982EBDC73D48283EA73F96A4DB2A41700D0392EDFD",
+      "encoding": {
+        "utf8": true,
+        "bom": false,
+        "suspectedMojibake": false
+      }
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/network-evidence.json",
+      "bytes": 3129,
+      "sha256": "CC6DBE5D83C26C1D2AFBCC1FE457587B62CD72DF0B0AD91B3EDB3B7B1EF54667",
+      "encoding": {
+        "utf8": true,
+        "bom": false,
+        "suspectedMojibake": false
+      }
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/package-lock.corrected.candidate.json",
+      "bytes": 30829,
+      "sha256": "324021454DB0194EC09934351591192248911CC0A016856AEFF23AF2AC93046B",
+      "encoding": {
+        "utf8": true,
+        "bom": false,
+        "suspectedMojibake": false
+      }
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/registry-metadata.raw.json",
+      "bytes": 2511,
+      "sha256": "B8709E708E37227C664A8EC0A65387AFBBD11466EA2BCD01936AEF731193A106",
+      "encoding": {
+        "utf8": true,
+        "bom": false,
+        "suspectedMojibake": false
+      }
+    },
+    {
+      "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/tarball-evidence.json",
+      "bytes": 1983,
+      "sha256": "83AF206607AAD4C3813437BCEBF7C8B2C1ADD43E152EE4346EDFEC42263DF621",
+      "encoding": {
+        "utf8": true,
+        "bom": false,
+        "suspectedMojibake": false
+      }
+    }
+  ],
+  "encodingCheck": {
+    "utf8": true,
+    "bom": false,
+    "suspectedMojibake": false
+  },
+  "notPerformed": [
+    "mirror",
+    "proxy",
+    "alternate registry",
+    "local cache as input",
+    "source lockfile modification",
+    "DRRC lockfile modification",
+    "Runner modification",
+    "Manifest modification",
+    "Identity modification",
+    "Binding modification",
+    "second Invocation",
+    "retry",
+    "resume",
+    "reuse",
+    "candidate application",
+    "npm install or npm ci",
+    "tarball extraction or package execution",
+    "dependency preparation",
+    "runtime validation",
+    "P0.S-7",
+    "commit",
+    "push"
+  ]
+}

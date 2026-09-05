@@ -1,0 +1,13 @@
+{
+  "artifactClass": "TARBALL_RAW_EVIDENCE",
+  "invocationId": "P0S6-FINAL-VERIFICATION-INVOCATION-20260904-01",
+  "finalizedUtc": "2026-09-04T11:39:01.8145919Z",
+  "state": "NOT_REACHED",
+  "rawArtifactExpectedPath": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/env-paths-2.2.1.tgz",
+  "rawArtifactPresent": false,
+  "bytes": null,
+  "sha256": null,
+  "sha512": null,
+  "sha1": null,
+  "reason": "NO_TARBALL_REQUEST_ISSUED_AFTER_AUTHORITY_BLOCKED"
+}

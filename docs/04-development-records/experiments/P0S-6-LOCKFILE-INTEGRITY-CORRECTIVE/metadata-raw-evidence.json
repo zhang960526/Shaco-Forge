@@ -1,0 +1,11 @@
+{
+  "artifactClass": "METADATA_RAW_EVIDENCE",
+  "invocationId": "P0S6-FINAL-VERIFICATION-INVOCATION-20260904-01",
+  "finalizedUtc": "2026-09-04T11:39:01.8092628Z",
+  "state": "NOT_REACHED",
+  "rawArtifactExpectedPath": "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/registry-metadata.raw.json",
+  "rawArtifactPresent": false,
+  "bytes": null,
+  "sha256": null,
+  "reason": "NO_METADATA_REQUEST_ISSUED_AFTER_AUTHORITY_BLOCKED"
+}

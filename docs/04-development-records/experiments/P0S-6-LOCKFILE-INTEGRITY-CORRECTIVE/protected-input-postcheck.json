@@ -1,0 +1,24 @@
+{
+  "artifactClass": "PROTECTED_INPUT_POSTCHECK",
+  "invocationId": "P0S6-FINAL-VERIFICATION-INVOCATION-20260904-01",
+  "finalizedUtc": "2026-09-04T11:39:01.8258435Z",
+  "sourceLockfile": {
+    "path": "docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/package-lock.json",
+    "expectedBytes": 30829,
+    "observedBytes": 30829,
+    "expectedSha256": "3c7449945b509028c025f2a747b0c9b4f74be260cc3cde8ca07e9d5dddee33fd",
+    "observedSha256": "3c7449945b509028c025f2a747b0c9b4f74be260cc3cde8ca07e9d5dddee33fd",
+    "match": true
+  },
+  "drrcFrozenCopy": {
+    "path": "docs/04-development-records/experiments/P0S-6-DEPENDENCY-READINESS-RECOVERY/package-lock.json",
+    "expectedBytes": 30829,
+    "observedBytes": 30829,
+    "expectedSha256": "3c7449945b509028c025f2a747b0c9b4f74be260cc3cde8ca07e9d5dddee33fd",
+    "observedSha256": "3c7449945b509028c025f2a747b0c9b4f74be260cc3cde8ca07e9d5dddee33fd",
+    "match": true
+  },
+  "relation": "BYTE_IDENTICAL",
+  "sourcePackageLockModified": false,
+  "officialLockfileReplaced": false
+}

@@ -1,0 +1,10 @@
+{
+  "invocationId": "P0S6-FINAL-VERIFICATION-INVOCATION-20260904-01",
+  "cardinality": "ONE",
+  "state": "NOT_STARTED",
+  "consumed": false,
+  "retry": "PROHIBITED",
+  "resume": "PROHIBITED",
+  "reuse": "PROHIBITED",
+  "startBoundary": "NOT_CROSSED"
+}

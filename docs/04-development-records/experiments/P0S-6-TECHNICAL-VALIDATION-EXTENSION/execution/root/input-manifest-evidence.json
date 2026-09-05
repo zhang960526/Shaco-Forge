@@ -1,0 +1,8 @@
+{
+  "recordType": "INPUT_MANIFEST_EVIDENCE",
+  "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/manifest/frozen-input-manifest.json",
+  "bytes": 15121,
+  "sha256": "3B8774242BFEF5B3074555542AB86D43419F88D1BF4DADE3250902AA0E8FAA9F",
+  "inputCount": 40,
+  "result": "PASS"
+}

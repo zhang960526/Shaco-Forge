@@ -1,0 +1,3 @@
+{"sequence":1,"event":"DEPENDENCY_PREPARATION_INVOCATION_BOUNDARY_CROSSED","utc":"2026-09-04T04:09:19.9371564+00:00","preparationId":"aa96b746-eeca-4a65-a846-ecf5c753e6ab","contractId":"P0S6-DRRC-20260904-01","ownerDispositionId":"P0S6-DRRC-OD-20260904-PS765-01","started":1,"used":1,"remaining":0,"physicalRuntimeAttemptsConsumed":0}
+{"sequence":2,"event":"NPM_CI_COMPLETED","utc":"2026-09-04T04:09:24.0235847+00:00","command":"npm ci --ignore-scripts=false --foreground-scripts --no-audit --no-fund --cache .npm-cache --prefer-online","invocationCount":1,"exitCode":1,"used":1,"remaining":0}
+{"sequence":3,"event":"FINAL_CLASSIFICATION","utc":"2026-09-04T04:09:24.0371568+00:00","dependencyReadiness":"INCONCLUSIVE","firstFailureBoundary":"NPM_CI","used":1,"remaining":0}

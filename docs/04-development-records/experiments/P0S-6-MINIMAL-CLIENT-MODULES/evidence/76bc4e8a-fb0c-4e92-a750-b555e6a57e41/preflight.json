@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "contractId": "P0S6-MEC-20260903-01",
+  "attemptId": "76bc4e8a-fb0c-4e92-a750-b555e6a57e41",
+  "productBaselineHead": "cada37727af3f99da77f50353924af80f917b688",
+  "contractFreezeHead": "45a3ccfc46d3fdc9a156b28c8b1f59af7e257af3",
+  "executionAuthorityHead": "6fd8bbd3e39ff17c5bc76bc447898dd5b7b72e7c",
+  "attemptStartHead": "6fd8bbd3e39ff17c5bc76bc447898dd5b7b72e7c",
+  "branch": "master",
+  "harnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+  "harnessVersion": "0.1.2-alpha.1",
+  "harnessLockSha256": "506ad1fc7c40f71ce8c6afe08724fdd55020c1a527d7a7a185c559d39ecfcaf1",
+  "worktreeBefore": {
+    "head": "6fd8bbd3e39ff17c5bc76bc447898dd5b7b72e7c",
+    "branch": "master",
+    "status": [
+      "?? docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/"
+    ]
+  },
+  "harnessWorktreeBefore": {
+    "head": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "branch": "",
+    "status": []
+  },
+  "exactTopLevelCommand": "pwsh -NoProfile -File .\\run-spike.ps1 -AttemptId 76bc4e8a-fb0c-4e92-a750-b555e6a57e41",
+  "internalCommands": [
+    "npm ci --offline --ignore-scripts=false --no-audit --no-fund --cache .npm-cache",
+    "node .\\prepare-static-client.mjs",
+    "electron .\\electron-main.mjs --attempt-id=<AttemptId>",
+    "node .\\verify-evidence.mjs <AttemptId>"
+  ],
+  "sourceFiles": [
+    {
+      "path": "README.md",
+      "sha256": "18fcabb0b573cb01830f09691f8d99f47dc819c0edffdfb1c72c06829a521281"
+    },
+    {
+      "path": "package.json",
+      "sha256": "4486d5bab3bf14ff40626f7c607470cd888ca6c35105112c3f6d3d658ddb5b65"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "3c7449945b509028c025f2a747b0c9b4f74be260cc3cde8ca07e9d5dddee33fd"
+    },
+    {
+      "path": "contract-roster.json",
+      "sha256": "8b1ff84f897c20268f46b927e26c99e94044d3e5ced1912d1fb88d080bdb4f84"
+    },
+    {
+      "path": "run-spike.ps1",
+      "sha256": "043fa391b515c60ad38200c44ee92bbd553ed91becf14bbce3dc9aba417d1004"
+    },
+    {
+      "path": "prepare-static-client.mjs",
+      "sha256": "c0c566006f18920ea9013b5e8adccce5bf75c9e73792dab9e2dc5e563e8e84ac"
+    },
+    {
+      "path": "electron-main.mjs",
+      "sha256": "92bd9d844098982483068fbbe2edb8250fcc34c8055a18196c9360d0c879a778"
+    },
+    {
+      "path": "preload.cjs",
+      "sha256": "fe0d98afe03caabba21ea2ac4a8e8b44dc459fac12f64b0d722efa9e6a0e185b"
+    },
+    {
+      "path": "verify-evidence.mjs",
+      "sha256": "efe4d57046693c94190dc04eac5827c329e7521e822cdebd856b89f2c1bc89a0"
+    },
+    {
+      "path": "src/shell-bootstrap.js",
+      "sha256": "77543383d71a2517c575a134daf926ca686b05a83507c18831a40d47ea509bfd"
+    },
+    {
+      "path": "src/renderer-probe.js",
+      "sha256": "a862d511fb9c5716a3f267520a76f7b822a0a544f4064f174b0c5f986a4d0c35"
+    }
+  ],
+  "preparationMachine": {
+    "powershell": "7.6.4",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "electronPackage": "35.7.5",
+    "electronPackageIntegrity": "sha512-dnL+JvLraKZl7iusXTVTGYs10TKfzUi30uEDTqsmTm0guN9V2tbOjTzyIZbh9n3ygUjgEYyo+igAwMRXIi3IPw==",
+    "localElectronArchiveCount": 2,
+    "localElectronArchiveSha256": "b87b2d6167845ece1d373eb37f5ce49868a07ec90203de44b6bd415d6c673c6d"
+  },
+  "authorizedRuntime": {
+    "electronClientBootCount": 1,
+    "hiddenWindow": true,
+    "hardTimeoutSeconds": 45,
+    "worker": false,
+    "harnessHost": false,
+    "namedPipe": false,
+    "authentication": false,
+    "provider": false,
+    "stockWebServer": false
+  }
+}

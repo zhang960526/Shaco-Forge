@@ -1,0 +1,19 @@
+{
+  "invocationId": "P0S6-FINAL-VERIFICATION-INVOCATION-20260904-01",
+  "invocationCount": 1,
+  "command": {
+    "executable": "D:\\Development\\nodejs\\node.exe",
+    "arguments": [
+      "docs/04-development-records/experiments/P0S-6-LOCKFILE-INTEGRITY-CORRECTIVE/runner/verify-and-materialize.mjs",
+      "--contract-id",
+      "P0S6-LICC-20260904-01"
+    ]
+  },
+  "launchedUtc": "2026-09-04T11:36:37.0709767Z",
+  "endedUtc": "2026-09-04T11:36:37.1540230Z",
+  "exitCode": 2,
+  "stdoutBytes": 18,
+  "stderrBytes": 0,
+  "stdoutExact": "AUTHORITY_BLOCKED\n",
+  "stderrExact": ""
+}

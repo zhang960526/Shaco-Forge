@@ -1,0 +1,7 @@
+{"timestamp":"2026-09-05T05:59:18.129Z","invocationId":"P0S6-TVEC-INVOCATION-20260904-01","event":"INVOCATION_START_BOUNDARY_CROSSED","authorityHead":"001a1e495617b211e1cd1702d5895a4c31f314ea","runnerVersion":"P0S6-TVEC-RUNNER-1.0.0"}
+{"timestamp":"2026-09-05T05:59:18.141Z","invocationId":"P0S6-TVEC-INVOCATION-20260904-01","event":"METADATA_REQUEST_STARTED","request":1,"maximum":1,"url":"https://registry.npmjs.org/env-paths/2.2.1"}
+{"timestamp":"2026-09-05T05:59:18.996Z","invocationId":"P0S6-TVEC-INVOCATION-20260904-01","event":"METADATA_IDENTITY_VERIFIED","result":"PASS"}
+{"timestamp":"2026-09-05T05:59:18.996Z","invocationId":"P0S6-TVEC-INVOCATION-20260904-01","event":"TARBALL_REQUEST_STARTED","request":1,"maximum":1,"url":"https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz"}
+{"timestamp":"2026-09-05T05:59:19.811Z","invocationId":"P0S6-TVEC-INVOCATION-20260904-01","event":"TARBALL_IDENTITY_VERIFIED","result":"PASS"}
+{"timestamp":"2026-09-05T05:59:19.814Z","invocationId":"P0S6-TVEC-INVOCATION-20260904-01","event":"CANDIDATE_DERIVED","result":"PASS","candidateCount":1}
+{"timestamp":"2026-09-05T05:59:19.816Z","invocationId":"P0S6-TVEC-INVOCATION-20260904-01","event":"INVOCATION_FINALIZED","classification":"PASS"}

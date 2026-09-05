@@ -2,8 +2,8 @@
   "recordType": "FROZEN_INPUT_MANIFEST",
   "status": "FROZEN",
   "manifestVersion": "1.0.0",
-  "authorityBranch": "master",
   "authorityHead": "001a1e495617b211e1cd1702d5895a4c31f314ea",
+  "authorityAnchor": "001a1e495617b211e1cd1702d5895a4c31f314ea",
   "activationDecisionId": "P0S6-TVEC-EA-ACTIVATION-20260904-01",
   "executionAuthority": "YES",
   "verificationExecuted": "NO",
@@ -11,12 +11,12 @@
   "runner": {
     "version": "P0S6-TVEC-RUNNER-1.0.0",
     "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/verify-env-paths-integrity.mjs",
-    "bytes": 25687,
-    "sha256": "0331E13399B579D84846F4E59D1B2718F3DB7EBE1234DAB089B980D44A3B9757",
+    "bytes": 33726,
+    "sha256": "DDC871A3970D064D5D26D0A1B5D668F6518C9EDFB23F37092D58FE72A3FC8A38",
     "identityRecord": {
       "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/runner-identity.json",
-      "bytes": 526,
-      "sha256": "4B39069F2B1758E30435200F833190DB450D0A81F6F873A340C5DA34680F5F1D"
+      "bytes": 688,
+      "sha256": "88A40DFEE0758965A3B0C9EA09ADD5239EA99C4F5A119992D4044F8BFDCAE381"
     }
   },
   "executionRoot": {
@@ -25,8 +25,8 @@
     "existenceState": "CREATED_EMPTY",
     "identityRecord": {
       "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/execution-root-identity.json",
-      "bytes": 845,
-      "sha256": "47D210687396E7F38677D07ADA6FCC92A3FF74A9C034FE0B946721CE2AB38B78"
+      "bytes": 1420,
+      "sha256": "AC4D73DB00AC69D421FD3C143B4672A80A90445FCB471095845DA0B720029574"
     }
   },
   "invocation": {
@@ -37,7 +37,7 @@
     "identityRecord": {
       "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/invocation/invocation-identity.json",
       "bytes": 389,
-      "sha256": "A37CBA2F68142F61B9C686706E680F509B7FC142DDE1B99AD22A544B146AD21F"
+      "sha256": "4E353B8339385F19F0988E54C5B7104E80FE4ECAE8015AF778844AAD1EA519F4"
     }
   },
   "budget": {
@@ -61,6 +61,20 @@
     "localRegistry": "PROHIBITED"
   },
   "inputs": [
+    {
+      "role": "GOVERNANCE",
+      "name": "Final Closure Decision",
+      "path": "docs/04-development-records/P0S-6-FINAL-CLOSURE-DECISION.md",
+      "bytes": 2239,
+      "sha256": "775594E69D54ABD21B325EC3EC7D6817BCCBF47517C1F5BF4871CC06F4F32C5B"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Post-Closure Reconciliation Decision",
+      "path": "docs/04-development-records/P0S-6-POST-CLOSURE-RECONCILIATION-DECISION.md",
+      "bytes": 2822,
+      "sha256": "163B4CFDFFB2EEF4F49F0CD5DD07F567A587DB39B7705492E1F49680EF0080CC"
+    },
     {
       "role": "GOVERNANCE",
       "name": "Extension Decision",
@@ -116,6 +130,97 @@
       "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-AUTHORITY-ACTIVATION-DECISION.md",
       "bytes": 5028,
       "sha256": "70CB7592C805A0796B51E7684D50DDEEDF49DAA60A570B1C284B344FCD2FFF9A"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Execution Snapshot Correction Decision",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTION-DECISION.md",
+      "bytes": 7576,
+      "sha256": "5352EA58664379EC91F54A4057F4FAA550623F44BE37AF5AE7E80117AF944096"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Execution Snapshot Correction Owner Approval",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTION-OWNER-APPROVAL-DECISION.md",
+      "bytes": 5169,
+      "sha256": "99618B05238EC7E45B2A3030C950F01DA4925CBFCD86DC326A3F4660CA6C7354"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Execution Snapshot Corrective Contract",
+      "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTIVE-CONTRACT.md",
+      "bytes": 10205,
+      "sha256": "A5465DAE34BFEF4D8064FB22C39956C54B467E9AD07DB5FFAA34ED1892ACB617"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Execution Snapshot Corrective Owner Approval",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-CORRECTIVE-OWNER-APPROVAL-DECISION.md",
+      "bytes": 6408,
+      "sha256": "3EA8C2DEB4349FE98E5E4DA3DCDE3CB1D7ED7712A9CD050C625348E258E1B3F8"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Execution Snapshot Binding Contract",
+      "path": "docs/03-v1.0-plan/P0S-6-TECHNICAL-VALIDATION-EXTENSION-EXECUTION-SNAPSHOT-BINDING-CONTRACT.md",
+      "bytes": 12883,
+      "sha256": "2624EC554DF4019144D7B82EDE01497F5A3F4515CBBDD8E442FE35D832E2AA2E"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Snapshot Binding Owner Approval",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-BINDING-OWNER-APPROVAL-DECISION.md",
+      "bytes": 6332,
+      "sha256": "4BF54313B508D8358E161C4451105F1FF414631C19B902B90546BA7522C33602"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Final Snapshot Freeze Plan Decision",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-FINAL-SNAPSHOT-FREEZE-PLAN-DECISION.md",
+      "bytes": 12455,
+      "sha256": "CB082977CF72A7E2757750D24E0D8E6CDFF93B0E8577B9DEFA1C4901D257A0E7"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Final Snapshot Freeze Plan Owner Approval",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-FINAL-SNAPSHOT-FREEZE-PLAN-OWNER-APPROVAL-DECISION.md",
+      "bytes": 6449,
+      "sha256": "152BD02A434E2575732BF02357AEAE236793B44FE3BE8EA85E6067B3EABC5243"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Authority Anchor Selection Owner Approval",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-AUTHORITY-ANCHOR-SELECTION-OWNER-APPROVAL-DECISION.md",
+      "bytes": 5903,
+      "sha256": "4BDCED255C199F5D2E6180744CE2CA07F0A6FFE00D6B7E49A8953240ACCEE5D5"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Snapshot Trust Root Selection Decision",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-TRUST-ROOT-SELECTION-DECISION.md",
+      "bytes": 16514,
+      "sha256": "BF7C1395C9D1EE021539F46D9D1A5EEECEB338A60A328CCEB273848409C5303B"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Snapshot Trust Root Owner Approval",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-TRUST-ROOT-OWNER-APPROVAL-DECISION.md",
+      "bytes": 9017,
+      "sha256": "E0C0818D702B594C3C2E854608C27A94C62ACB450E5669124A6F60CC55659560"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Snapshot Trust Root Public Key Approval",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-SNAPSHOT-TRUST-ROOT-PUBLIC-KEY-APPROVAL-RECORD.md",
+      "bytes": 8999,
+      "sha256": "B26AFE3023955450F24128CECC640AD95343D69DDD1CAFD3BFD1A5A83AD41412"
+    },
+    {
+      "role": "GOVERNANCE",
+      "name": "Runner Final Freeze Approval",
+      "path": "docs/04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-RUNNER-FINAL-FREEZE-APPROVAL-DECISION.md",
+      "bytes": 7692,
+      "sha256": "6B29476AE58BD22A15D77C0088661073CD77DB95D6698727CF6ED4765CACB33A"
     },
     {
       "role": "GOVERNANCE_CURRENT_STATE",
@@ -212,29 +317,29 @@
       "role": "RUNNER",
       "name": "Frozen Runner",
       "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/verify-env-paths-integrity.mjs",
-      "bytes": 25687,
-      "sha256": "0331E13399B579D84846F4E59D1B2718F3DB7EBE1234DAB089B980D44A3B9757"
+      "bytes": 33726,
+      "sha256": "DDC871A3970D064D5D26D0A1B5D668F6518C9EDFB23F37092D58FE72A3FC8A38"
     },
     {
       "role": "RUNNER_IDENTITY",
       "name": "Runner Identity",
       "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/runner/runner-identity.json",
-      "bytes": 526,
-      "sha256": "4B39069F2B1758E30435200F833190DB450D0A81F6F873A340C5DA34680F5F1D"
+      "bytes": 688,
+      "sha256": "88A40DFEE0758965A3B0C9EA09ADD5239EA99C4F5A119992D4044F8BFDCAE381"
     },
     {
       "role": "EXECUTION_ROOT_IDENTITY",
       "name": "Execution Root Identity",
       "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/execution-root-identity.json",
-      "bytes": 845,
-      "sha256": "47D210687396E7F38677D07ADA6FCC92A3FF74A9C034FE0B946721CE2AB38B78"
+      "bytes": 1420,
+      "sha256": "AC4D73DB00AC69D421FD3C143B4672A80A90445FCB471095845DA0B720029574"
     },
     {
       "role": "INVOCATION_IDENTITY",
       "name": "Invocation Identity",
       "path": "docs/04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/invocation/invocation-identity.json",
       "bytes": 389,
-      "sha256": "A37CBA2F68142F61B9C686706E680F509B7FC142DDE1B99AD22A544B146AD21F"
+      "sha256": "4E353B8339385F19F0988E54C5B7104E80FE4ECAE8015AF778844AAD1EA519F4"
     }
   ]
 }
