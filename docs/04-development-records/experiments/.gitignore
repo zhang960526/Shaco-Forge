@@ -1,0 +1,7 @@
+# P0.S-6 local generated data only; retain evidence, governance and source files.
+/P0S-6-DEPENDENCY-READINESS-RECOVERY/.npm-cache/
+/P0S-6-DEPENDENCY-READINESS-RECOVERY/node_modules/
+/P0S-6-DEPENDENCY-READINESS-RECOVERY/temp/node-compile-cache/
+/P0S-6-MINIMAL-CLIENT-MODULES/.npm-cache/
+/P0S-6-MINIMAL-CLIENT-MODULES/node_modules/
+/P0S-6-MINIMAL-CLIENT-MODULES/runtime-data/

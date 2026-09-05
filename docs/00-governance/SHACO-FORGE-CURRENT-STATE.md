@@ -3,6 +3,12 @@
 Status: ACTIVE
 Last Updated: 2026-09-04
 
+> P0.S-6 status authority (`P0S6-AUDIT-F01`, LOW; hygiene clarification dated
+> 2026-09-05): the [Latest Final State](#p0s-6-technical-validation-extension-final-closure-state-2026-09-05)
+> section is the current authoritative P0.S-6 state. Earlier Extension preparation
+> fields and instructions are historical preparation state, retained for audit
+> history; they do not authorize another preparation, Verification or Invocation.
+
 ## Product
 
 - Project: Shaco Forge
@@ -164,6 +170,13 @@ Last Updated: 2026-09-04
 - `P0S6_TECHNICAL_VALIDATION_EXTENSION_ACTIVATION_DECISION_ID = P0S6-TVEC-EA-ACTIVATION-20260904-01`
 - `P0S6_TECHNICAL_VALIDATION_EXTENSION_GOVERNANCE_FREEZE_COMMIT = 5132777747dbe26185a4ba3a22a07f70e51413e1`
 - `P0S6_TECHNICAL_VALIDATION_EXTENSION_EXECUTION_AUTHORITY = YES`
+
+**Historical preparation state:** the following six Extension fields retain the
+preparation-time values for Verification Executed, Invocation, Final Preflight,
+Runner, Execution Root and Input Manifest. They are not current pending work or
+current final results. Use the [Latest Final State](#p0s-6-technical-validation-extension-final-closure-state-2026-09-05)
+as the current authority; these historical values remain unchanged.
+
 - `P0S6_TECHNICAL_VALIDATION_EXTENSION_VERIFICATION_EXECUTED = NO`
 - `P0S6_TECHNICAL_VALIDATION_EXTENSION_INVOCATION = NOT_CREATED`
 - `P0S6_TECHNICAL_VALIDATION_EXTENSION_FINAL_PREFLIGHT = AUTHORITY_BLOCKED`
@@ -450,6 +463,17 @@ integrity remains a historical recorded value and is not frozen as a canonical
 replacement.
 
 ## P0.S-6 Technical Validation Extension Final Closure State (2026-09-05)
+
+**Latest Final State — current authority for P0.S-6.** This section governs the
+current state when reading earlier historical preparation fields. The final
+freeze commit remains `e6126b945616a6875c00e074819aadabd6468b88`; the hygiene
+clarification does not change its technical result or reopen the closed phase.
+
+```text
+P0S6_STATE = CLOSED
+P0S6_RESULT = VERIFIED_WITH_CANDIDATE
+P0S7_ALLOWED = NO
+```
 
 This appended final state records the completed Technical Validation Extension
 and its governance closure. Earlier governance conclusions, the original
