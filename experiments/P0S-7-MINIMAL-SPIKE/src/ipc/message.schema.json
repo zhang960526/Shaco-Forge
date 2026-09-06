@@ -1,0 +1,302 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SHACO_SPIKE_IPC_V1 bounded message",
+  "description": "NOT_PRODUCTION. Shape and routing schema only. Role, nonce, credential, PID, or schema validity alone never establishes OS peer identity.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol",
+    "type",
+    "source",
+    "target",
+    "session",
+    "correlationId",
+    "sequence",
+    "payload"
+  ],
+  "properties": {
+    "protocol": { "const": "SHACO_SPIKE_IPC_V1" },
+    "type": {
+      "enum": [
+        "HELLO",
+        "CHALLENGE",
+        "PROOF",
+        "SESSION_READY",
+        "WORKER_READY",
+        "REQUEST",
+        "TASK_ACCEPTED",
+        "RELEASE",
+        "RESULT",
+        "ERROR",
+        "REJECT",
+        "STOP",
+        "STOP_ACK"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "componentRef"],
+      "properties": {
+        "role": { "$ref": "#/$defs/role" },
+        "componentRef": { "$ref": "#/$defs/contentRef" }
+      }
+    },
+    "target": { "$ref": "#/$defs/role" },
+    "session": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sessionId", "generation"],
+      "properties": {
+        "sessionId": { "$ref": "#/$defs/label" },
+        "generation": { "type": "integer", "minimum": 1, "maximum": 9007199254740991 }
+      }
+    },
+    "correlationId": { "$ref": "#/$defs/label" },
+    "sequence": { "type": "integer", "minimum": 1, "maximum": 9007199254740991 },
+    "payload": { "type": "object" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "type": { "const": "HELLO" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "source": { "properties": { "role": { "enum": ["DESKTOP_MAIN", "WORKER", "DRIVER"] } } },
+          "target": { "const": "WINDOWS_BROKER" },
+          "payload": { "$ref": "#/$defs/hello" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "CHALLENGE" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "source": { "properties": { "role": { "const": "WINDOWS_BROKER" } } },
+          "target": { "enum": ["DESKTOP_MAIN", "WORKER", "DRIVER"] },
+          "payload": { "$ref": "#/$defs/challenge" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "PROOF" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "source": { "properties": { "role": { "enum": ["DESKTOP_MAIN", "WORKER", "DRIVER"] } } },
+          "target": { "const": "WINDOWS_BROKER" },
+          "payload": { "$ref": "#/$defs/proof" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "SESSION_READY" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "source": { "properties": { "role": { "const": "WINDOWS_BROKER" } } },
+          "target": { "enum": ["DESKTOP_MAIN", "WORKER", "DRIVER"] },
+          "payload": { "$ref": "#/$defs/sessionReady" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "WORKER_READY" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "source": { "properties": { "role": { "const": "WORKER" } } },
+          "target": { "const": "DRIVER" },
+          "payload": { "$ref": "#/$defs/workerReady" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "REQUEST" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "source": { "properties": { "role": { "const": "DESKTOP_MAIN" } } },
+          "target": { "const": "WORKER" },
+          "payload": { "$ref": "#/$defs/request" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "TASK_ACCEPTED" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "source": { "properties": { "role": { "const": "WORKER" } } },
+          "target": { "enum": ["DESKTOP_MAIN", "DRIVER"] },
+          "payload": { "$ref": "#/$defs/taskAccepted" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "RELEASE" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "source": { "properties": { "role": { "const": "DRIVER" } } },
+          "target": { "const": "WORKER" },
+          "payload": { "$ref": "#/$defs/release" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "RESULT" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "source": { "properties": { "role": { "const": "WORKER" } } },
+          "target": { "enum": ["DESKTOP_MAIN", "DRIVER"] },
+          "payload": { "$ref": "#/$defs/result" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "enum": ["ERROR", "REJECT"] } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/error" } } }
+    },
+    {
+      "if": { "properties": { "type": { "const": "STOP" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "source": { "properties": { "role": { "const": "DRIVER" } } },
+          "target": { "const": "WORKER" },
+          "payload": { "$ref": "#/$defs/stop" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "STOP_ACK" } }, "required": ["type"] },
+      "then": {
+        "properties": {
+          "source": { "properties": { "role": { "const": "WORKER" } } },
+          "target": { "const": "DRIVER" },
+          "payload": { "$ref": "#/$defs/stopAck" }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "role": { "enum": ["DESKTOP_MAIN", "WORKER", "DRIVER", "WINDOWS_BROKER"] },
+    "label": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$" },
+    "contentRef": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "hex256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "hello": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "componentRef", "credentialId"],
+      "properties": {
+        "role": { "$ref": "#/$defs/role" },
+        "componentRef": { "$ref": "#/$defs/contentRef" },
+        "credentialId": { "$ref": "#/$defs/label" }
+      }
+    },
+    "challenge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["credentialId", "nonceId", "challenge"],
+      "properties": {
+        "credentialId": { "$ref": "#/$defs/label" },
+        "nonceId": { "$ref": "#/$defs/label" },
+        "challenge": { "$ref": "#/$defs/hex256" }
+      }
+    },
+    "proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["credentialId", "nonceId", "proof"],
+      "properties": {
+        "credentialId": { "$ref": "#/$defs/label" },
+        "nonceId": { "$ref": "#/$defs/label" },
+        "proof": { "$ref": "#/$defs/hex256" }
+      }
+    },
+    "sessionReady": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["peerAttestationRef"],
+      "properties": { "peerAttestationRef": { "$ref": "#/$defs/contentRef" } }
+    },
+    "workerReady": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state"],
+      "properties": { "state": { "const": "READY" } }
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "values", "taskInputRef"],
+      "properties": {
+        "operation": { "const": "SUM3" },
+        "values": {
+          "type": "array",
+          "prefixItems": [{ "const": 2 }, { "const": 3 }, { "const": 5 }],
+          "items": false,
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "taskInputRef": { "$ref": "#/$defs/contentRef" }
+      }
+    },
+    "taskAccepted": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "state", "acceptanceEvidenceRef"],
+      "properties": {
+        "operation": { "const": "SUM3" },
+        "state": { "const": "AWAITING_RELEASE" },
+        "acceptanceEvidenceRef": { "$ref": "#/$defs/contentRef" }
+      }
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "executionIntentRef"],
+      "properties": {
+        "operation": { "const": "SUM3" },
+        "executionIntentRef": { "$ref": "#/$defs/contentRef" }
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "count", "sum"],
+      "properties": {
+        "operation": { "const": "SUM3" },
+        "count": { "const": 3 },
+        "sum": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 }
+      }
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code"],
+      "properties": {
+        "code": {
+          "enum": [
+            "EXECUTION_NOT_AUTHORIZED", "AUTHORITY_BLOCKED", "SCOPE_APPROVAL_BLOCKED",
+            "SNAPSHOT_BINDING_BLOCKED", "INPUT_IDENTITY_BLOCKED", "RUNTIME_DEFINITION_BLOCKED",
+            "ENVIRONMENT_POLICY_BLOCKED", "SINGLE_USE_SLOT_BLOCKED", "EVIDENCE_UNAVAILABLE",
+            "WINDOWS_HELPER_UNAVAILABLE", "OS_PEER_IDENTITY_NOT_VERIFIED", "AUTHENTICATION_BLOCKED",
+            "MESSAGE_REJECTED", "REQUEST_MISMATCH", "DUPLICATE_REQUEST", "DUPLICATE_RELEASE",
+            "DUPLICATE_RESULT", "UNEXPECTED_STATE", "FRAME_LIMIT", "STALE_SESSION",
+            "WRONG_ROUTE", "INTERNAL_REJECTION"
+          ]
+        }
+      }
+    },
+    "stop": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reason"],
+      "properties": { "reason": { "enum": ["COMPLETED", "CONTROLLED_STOP", "FAILURE"] } }
+    },
+    "stopAck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "osExitObserved"],
+      "properties": {
+        "state": { "const": "STOP_REQUESTED" },
+        "osExitObserved": { "const": false }
+      }
+    }
+  },
+  "$comment": "The source encoder/decoder enforces at most 4096 UTF-8 bytes including LF and exact route pairs. Actual peer authentication requires the selected Windows broker/helper plus a session proof; no TCP/HTTP fallback exists."
+}

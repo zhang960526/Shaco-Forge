@@ -1,0 +1,118 @@
+{
+  "schema": "P0S6_DRRC_EFFECTIVE_CONFIG_V1",
+  "recoveryRoot": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY",
+  "homePolicy": "PRESERVE_PARENT_HOME_UNCHANGED",
+  "requiredEnvironment": {
+    "npm_config_cache": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY\\.npm-cache",
+    "electron_config_cache": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY\\.electron-cache",
+    "npm_config_userconfig": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY\\config\\empty-user.npmrc",
+    "npm_config_globalconfig": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY\\config\\empty-global.npmrc",
+    "npm_config_registry": "https://registry.npmjs.org/",
+    "TEMP": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY\\temp",
+    "TMP": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY\\temp",
+    "ELECTRON_INSTALL_PLATFORM": "win32",
+    "ELECTRON_INSTALL_ARCH": "x64"
+  },
+  "contractForbiddenVariables": [
+    {
+      "name": "ELECTRON_MIRROR",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "ELECTRON_NIGHTLY_MIRROR",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "ELECTRON_CUSTOM_DIR",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "ELECTRON_CUSTOM_FILENAME",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "ELECTRON_CUSTOM_VERSION",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "electron_use_remote_checksums",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "force_no_cache",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "ELECTRON_GET_USE_PROXY",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "HTTP_PROXY",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "HTTPS_PROXY",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "ALL_PROXY",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "http_proxy",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "https_proxy",
+      "childState": "ABSENT"
+    },
+    {
+      "name": "all_proxy",
+      "childState": "ABSENT"
+    }
+  ],
+  "additionalNeutrality": {
+    "removedParentVariableNames": [
+      "ADSK_CLM_WPAD_PROXY_CHECK",
+      "CODEX_MCP_NODE_PATH",
+      "HTTP_PROXY",
+      "HTTPS_PROXY",
+      "NO_PROXY"
+    ],
+    "nodePath": "ABSENT",
+    "nodeOptions": "ABSENT",
+    "tlsInjection": "ABSENT",
+    "authTokenVariables": "ABSENT",
+    "registryOverride": "ABSENT_EXCEPT_REQUIRED_OFFICIAL_REGISTRY"
+  },
+  "npmrcInventory": {
+    "scannedPaths": [
+      "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY\\.npmrc",
+      "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\.npmrc",
+      "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\.npmrc",
+      "D:\\Project\\Shaco-Forge\\docs\\.npmrc",
+      "D:\\Project\\Shaco-Forge\\.npmrc",
+      "D:\\Project\\.npmrc",
+      "D:\\.npmrc"
+    ],
+    "found": [],
+    "contractUserNpmrc": {
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY\\config\\empty-user.npmrc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "contractGlobalNpmrc": {
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-6-DEPENDENCY-READINESS-RECOVERY\\config\\empty-global.npmrc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "frozenCommand": "npm ci --ignore-scripts=false --foreground-scripts --no-audit --no-fund --cache .npm-cache --prefer-online",
+  "validationCommand": "npm ls --all --json",
+  "networkQualification": {
+    "status": "PASS",
+    "authorityInput": "OWNER_PROVIDED_PRIOR_READ_ONLY_QUALIFICATION",
+    "retryAuthorized": false,
+    "finalElectronAssetHost": "release-assets.githubusercontent.com"
+  }
+}

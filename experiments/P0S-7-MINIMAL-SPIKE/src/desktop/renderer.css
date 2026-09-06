@@ -1,0 +1,18 @@
+/* NOT_PRODUCTION — local static presentation only. */
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: #182637;
+  background: #f2f5f8;
+}
+body { margin: 0; }
+main { max-width: 38rem; margin: 2.5rem auto; padding: 0 1.5rem; }
+.label { color: #526678; font-size: 0.75rem; letter-spacing: 0.12em; }
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1rem; }
+section { background: white; border: 1px solid #dbe3eb; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+pre, output { display: block; white-space: pre-wrap; }
+button { padding: 0.65rem 1rem; border: 1px solid #b6c6d7; border-radius: 5px; }
+button:disabled { color: #526678; background: #e8eef4; cursor: not-allowed; }
+#status-view { font-size: 0.875rem; color: #526678; }
+

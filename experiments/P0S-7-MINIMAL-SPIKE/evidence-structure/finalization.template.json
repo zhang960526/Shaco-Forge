@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "recordType": "SHACO_SPIKE_FINALIZATION_TEMPLATE",
+  "artifactStatus": "TEMPLATE_ONLY",
+  "executionStatus": "NOT_EXECUTED",
+  "category": null,
+  "identity": {
+    "recordId": null,
+    "caseId": null,
+    "invocationId": null
+  },
+  "source": {
+    "producerRef": null,
+    "collectorRef": null
+  },
+  "timestamp": {
+    "utc": null,
+    "monotonicTick": null,
+    "clockSource": null
+  },
+  "lifecycle": {
+    "stateBefore": null,
+    "stateAfter": null,
+    "boundaryReached": null
+  },
+  "artifactIndex": [],
+  "gaps": [],
+  "resources": [],
+  "reconciliation": {
+    "ledgerRef": null,
+    "observedUsage": null,
+    "processTerminalState": null
+  },
+  "comparison": {
+    "subjectOutcome": null,
+    "validationVerdict": null,
+    "evidenceStatus": null
+  }
+}
+

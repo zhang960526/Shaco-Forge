@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- NOT_PRODUCTION — Phase A static UI; no Runtime has been launched. -->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shaco Forge · Minimal Spike</title>
+  <link rel="stylesheet" href="./renderer.css">
+  <script src="./renderer.js" defer></script>
+</head>
+<body>
+  <main>
+    <p class="label">SHACO FORGE / PHASE A</p>
+    <h1>最小受控任务</h1>
+    <p>静态界面结构 · NOT_PRODUCTION</p>
+    <section aria-labelledby="request-heading">
+      <h2 id="request-heading">请求</h2>
+      <pre id="request-view">SUM3 · [2, 3, 5]</pre>
+      <button id="request-sum3" type="button" disabled>提交一次请求</button>
+    </section>
+    <section aria-labelledby="result-heading">
+      <h2 id="result-heading">结果</h2>
+      <output id="result-view">未执行</output>
+    </section>
+    <p id="status-view" role="status" aria-live="polite">执行未授权。</p>
+  </main>
+</body>
+</html>
+

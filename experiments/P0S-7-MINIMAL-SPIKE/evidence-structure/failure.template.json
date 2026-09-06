@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "recordType": "SHACO_SPIKE_EVIDENCE_TEMPLATE",
+  "artifactStatus": "TEMPLATE_ONLY",
+  "executionStatus": "NOT_EXECUTED",
+  "category": "failure",
+  "identity": {
+    "eventId": null,
+    "caseId": null,
+    "requestId": null,
+    "invocationId": null
+  },
+  "source": {
+    "producerRole": null,
+    "producerRef": null,
+    "collectorRef": null,
+    "sourceSequence": null
+  },
+  "timestamp": {
+    "utc": null,
+    "monotonicTick": null,
+    "clockSource": null
+  },
+  "lifecycle": {
+    "stateBefore": null,
+    "stateAfter": null,
+    "boundaryReached": null
+  },
+  "runtimeIdentity": {
+    "instanceId": null,
+    "generation": null,
+    "pid": null,
+    "processStartTime": null
+  },
+  "comparison": {
+    "expected": null,
+    "observed": null,
+    "subjectOutcome": null,
+    "validationVerdict": null
+  },
+  "references": {
+    "sourceRef": null,
+    "runtimeRef": null,
+    "inputRef": null,
+    "approvalRef": null
+  },
+  "failure": {
+    "code": null,
+    "firstFailureBoundary": null
+  },
+  "recovery": {
+    "parentFailureRef": null,
+    "authorizationRef": null,
+    "disposition": null
+  }
+}
+

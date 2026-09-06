@@ -4,6 +4,12 @@ Status: ACTIVE
 
 Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 
+> Latest P0.S authority (2026-09-06): P0.S-8 V1 Product Architecture Freeze and
+> the P0.S umbrella are `CLOSED`; Independent Final Closure Audit REVIEW-010 is
+> `PASS` and Owner-accepted; V1 implementation is ready but not started.
+> Earlier P0.S-6 / P0.S-7 Runtime and P0.S-8 handoff text remains historical.
+> See the [current closure authority](#current-p0s-8-and-p0s-closure-authority-2026-09-06).
+
 ## 1. Authority Order
 
 当文档之间出现冲突时，默认按以下顺序判断当前事实：
@@ -52,7 +58,8 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
-| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | IN_PROGRESS; P0.S-1 through P0.S-5 PASS / CLOSED with accepted constraints; `P0S6-DRRC-20260904-01` is `EXHAUSTED_INCONCLUSIVE` after its sole Dependency Preparation failed at `NPM_CI / EINTEGRITY`; H-05/H-20 remain NOT_PROVEN; only bounded Lockfile Integrity Corrective Contract planning is authorized |
+| `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | CLOSED / PASS; P0.S-8 result `V1_PRODUCT_ARCHITECTURE_FROZEN`; V1 implementation ready but not started |
+| `SHACO-FORGE-V1-PRODUCT-ARCHITECTURE-PLAN.md` | V1 Product Architecture Plan | `V1_ARCHITECTURE_PLAN_ONLY`; Final Gate external review supplied by Owner is PASS; P0.S-8 freeze not executed |
 | `P0S-6-MINIMAL-EXECUTION-CONTRACT.md` | Historical P0.S-6 bounded Runtime execution Contract | FROZEN / OWNER_APPROVED; `P0S6-MEC-20260903-01`; EXHAUSTED_INCONCLUSIVE after two physical attempts; grants no current execution authority |
 | `P0S-6-DEPENDENCY-READINESS-RECOVERY-CONTRACT.md` | Frozen P0.S-6 Dependency Readiness Recovery Contract | FROZEN / OWNER_APPROVED; `P0S6-DRRC-20260904-01`; execution authority is exhausted after one invocation; final readiness is INCONCLUSIVE at `NPM_CI / EINTEGRITY`; grants no retry, lockfile correction, Runtime, Global Physical Attempt #3, or P0.S-7 authority |
 | `P05-COMPATIBILITY-VERSION.md` | P0.5 Compatibility Contract 候选 | READY-FOR-FREEZE-AFTER-P0S |
@@ -66,7 +73,7 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | `P7-PACKAGING-SECURITY-UPGRADE.md` | P7 骨架 | NOT-DETAILED |
 | `P8-FINAL-ACCEPTANCE.md` | P8 骨架 | NOT-DETAILED |
 
-Current P0.S-6 governance authority:
+Historical P0.S-6 governance authority:
 
 - `P0S6_DRRC_CONTRACT_ID = P0S6-DRRC-20260904-01`
 - `P0S6_DRRC_OWNER_DISPOSITION_ID = P0S6-DRRC-OD-20260904-PS765-01`
@@ -95,17 +102,70 @@ Current P0.S-6 governance authority:
 - `P0S7_ALLOWED = NO`
 - `P0S6_DRRC_FREEZE_HEAD_POLICY = COMMIT_CONTAINING_OWNER_APPROVED_DRRC_AND_GOVERNANCE_SYNC`
 
-Current authorized next step:
+Historical authorized next step at that recording boundary:
 
 Draft a bounded P0.S-6 Lockfile Integrity Corrective Contract that independently verifies the official env-paths@2.2.1 registry metadata and tarball bytes, derives but does not silently mutate a corrected lockfile, freezes the corrected input identity, and returns for Architecture Owner review.
 
 Do not modify the lockfile, execute npm, prepare dependencies, authorize Recovery Runtime, authorize Global Physical Attempt #3, or start P0.S-7.
+
+### Current P0.S-7 Closure Authority (2026-09-06)
+
+| Document | Role | Status |
+|---|---|---|
+| [P0.S-7 Final Closure Decision](../04-development-records/P0S-7-CONTROLLED-AGENT-EXECUTION-ARCHITECTURE-VALIDATION-FINAL-CLOSURE-DECISION.md) | Closes the reassessed Controlled Agent Execution Architecture Validation scope and reconciles historical Runtime status | `FINAL_CLOSURE_DECISION` |
+| [Roadmap Reassessment Decision](../04-development-records/P0S-ROADMAP-REASSESSMENT-DECISION.md) | Repositions P0.S-7 and P0.S-8; defers Enterprise Runtime capabilities | `ROADMAP_REASSESSMENT_ONLY` |
+| [V1 Product Architecture Plan](../03-v1.0-plan/SHACO-FORGE-V1-PRODUCT-ARCHITECTURE-PLAN.md) | Architecture-validation basis and P0.S-8 freeze input | `V1_ARCHITECTURE_PLAN_ONLY` |
+
+```text
+P0S7_STATE = CLOSED
+P0S7_RESULT = CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATED
+P0S7_PRODUCT_RUNTIME_EXECUTION = NOT_EXECUTED
+P0S7_ENTERPRISE_RUNTIME_VALIDATION = DEFERRED_TO_ENTERPRISE
+P0S8_STATE = NOT_STARTED
+P0S8_FREEZE_INPUT_READY = YES
+V1_IMPLEMENTATION_STARTED = NO
+```
+
+The next stage is P0.S-8 V1 Product Architecture Freeze. Freeze Input Ready means
+only that the handoff input passed the external Final Gate; P0.S-8 has not started,
+no Freeze Decision exists, and V1 implementation has not started.
+
+### Current P0.S-8 and P0.S Closure Authority (2026-09-06)
+
+| Document | Role | Status |
+|---|---|---|
+| [P0.S-8 V1 Product Architecture Freeze Decision](../04-development-records/P0S-8-V1-PRODUCT-ARCHITECTURE-FREEZE-DECISION.md) | Freezes the sufficient V1.0–V1.3 product architecture and closes P0.S | `FINAL_ARCHITECTURE_FREEZE_DECISION` |
+| [P0.S-7 Final Closure Decision](../04-development-records/P0S-7-CONTROLLED-AGENT-EXECUTION-ARCHITECTURE-VALIDATION-FINAL-CLOSURE-DECISION.md) | Architecture-validation predecessor | `FINAL_CLOSURE_DECISION` |
+| [Roadmap Reassessment Decision](../04-development-records/P0S-ROADMAP-REASSESSMENT-DECISION.md) | Current scope and Enterprise deferral authority | `ROADMAP_REASSESSMENT_ONLY` |
+
+```text
+P0S8_STATE = CLOSED
+P0S8_RESULT = V1_PRODUCT_ARCHITECTURE_FROZEN
+P0S8_FREEZE_INPUT_READY = YES
+P0S8_FREEZE_EXECUTED = YES
+SHACO_FORGE_V1_0_P0S = PASS
+P0S = CLOSED
+P0S8_FINAL_CLOSURE_AUDIT = PASS
+P0S_FINAL_CLOSURE_OWNER_ACCEPTED = YES
+V1_IMPLEMENTATION_READY = YES
+V1_IMPLEMENTATION_STARTED = NO
+V1_SLICE_1_ALLOWED = YES
+```
+
+P0.5 Compatibility and P1 System Contract remain in the roadmap, but their full
+completion is not a blanket prerequisite for the first V1 vertical Slice. A Slice
+must explicitly gate only the P0.5/P1 contract it actually requires.
+
+P0.S final closure is accepted. The next stage is
+`V1-SLICE-1-SINGLE-AGENT-USER-CLOSURE`; this baseline action does not start it.
 
 ## 6. Development Records
 
 | Document/Folder | Role |
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
+| `P0S-8-V1-PRODUCT-ARCHITECTURE-FREEZE-DECISION.md` | P0.S-8 sufficient Architecture Freeze and P0.S umbrella closure authority |
+| `P0S-7-CONTROLLED-AGENT-EXECUTION-ARCHITECTURE-VALIDATION-FINAL-CLOSURE-DECISION.md` | P0.S-7 reassessed-scope Final Closure Decision; latest P0.S-7 closure authority |
 | `ISSUE-AND-BUG-INDEX.md` | Bug / Incident 索引 |
 | `incidents/` | 单个 Bug / Incident 完整记录 |
 | `experiments/` | Spike / 实验记录 |
@@ -128,6 +188,7 @@ Do not modify the lockfile, execute npm, prepare dependencies, authorize Recover
 | `architecture/AUDIT-007-P0S3-INDEPENDENT-REVIEW.md` | Faithful persisted summary of external P0.S-3 Independent Review (`PASS`; independent Node-driver reproduction with PS7 provenance; Owner accepted constrained disposition and closed P0.S-3) |
 | `architecture/AUDIT-008-P0S4-INDEPENDENT-REVIEW.md` | Faithful persisted summary of external P0.S-4 Review and Corrective Re-Review (`PASS`; 146-check equivalent-driver reproduction; Owner accepted `MET_WITH_CONSTRAINT` and closed P0.S-4) |
 | `architecture/AUDIT-009-P0S5-INDEPENDENT-REVIEW.md` | Faithful persisted summary of external P0.S-5 Review, Documentation Corrective and Corrective Re-Review (`PASS`; Owner accepted `MET_WITH_CONSTRAINT` and closed P0.S-5; P0.S-6 execution separately gated) |
+| `architecture/AUDIT-010-P0S8-FINAL-CLOSURE.md` | Faithful persisted summary of external P0.S-8 Final Closure Audit (`PASS`; Owner accepted; P0.S final closed; V1-SLICE-1 allowed) |
 | `implementation/` | 实现审计 |
 | `corrective/` | Corrective 审计 |
 | `templates/` | Review 模板 |

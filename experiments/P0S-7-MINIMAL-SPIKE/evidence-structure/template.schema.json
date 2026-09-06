@@ -1,0 +1,411 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase A Evidence templates — not runtime evidence",
+  "description": "NOT_PRODUCTION. TEMPLATE_ONLY / NOT_EXECUTED. Fact fields must remain null; no PID, timestamp, result or verdict is invented.",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "recordType",
+        "artifactStatus",
+        "executionStatus",
+        "category",
+        "identity",
+        "source",
+        "timestamp",
+        "lifecycle",
+        "runtimeIdentity",
+        "comparison",
+        "references",
+        "failure",
+        "recovery"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "recordType": {
+          "const": "SHACO_SPIKE_EVIDENCE_TEMPLATE"
+        },
+        "artifactStatus": {
+          "const": "TEMPLATE_ONLY"
+        },
+        "executionStatus": {
+          "const": "NOT_EXECUTED"
+        },
+        "category": {
+          "enum": [
+            "startup",
+            "runtime",
+            "failure",
+            "recovery"
+          ]
+        },
+        "identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "eventId",
+            "caseId",
+            "requestId",
+            "invocationId"
+          ],
+          "properties": {
+            "eventId": {
+              "type": "null"
+            },
+            "caseId": {
+              "type": "null"
+            },
+            "requestId": {
+              "type": "null"
+            },
+            "invocationId": {
+              "type": "null"
+            }
+          }
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "producerRole",
+            "producerRef",
+            "collectorRef",
+            "sourceSequence"
+          ],
+          "properties": {
+            "producerRole": {
+              "type": "null"
+            },
+            "producerRef": {
+              "type": "null"
+            },
+            "collectorRef": {
+              "type": "null"
+            },
+            "sourceSequence": {
+              "type": "null"
+            }
+          }
+        },
+        "timestamp": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "utc",
+            "monotonicTick",
+            "clockSource"
+          ],
+          "properties": {
+            "utc": {
+              "type": "null"
+            },
+            "monotonicTick": {
+              "type": "null"
+            },
+            "clockSource": {
+              "type": "null"
+            }
+          }
+        },
+        "lifecycle": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stateBefore",
+            "stateAfter",
+            "boundaryReached"
+          ],
+          "properties": {
+            "stateBefore": {
+              "type": "null"
+            },
+            "stateAfter": {
+              "type": "null"
+            },
+            "boundaryReached": {
+              "type": "null"
+            }
+          }
+        },
+        "runtimeIdentity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "instanceId",
+            "generation",
+            "pid",
+            "processStartTime"
+          ],
+          "properties": {
+            "instanceId": {
+              "type": "null"
+            },
+            "generation": {
+              "type": "null"
+            },
+            "pid": {
+              "type": "null"
+            },
+            "processStartTime": {
+              "type": "null"
+            }
+          }
+        },
+        "comparison": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "expected",
+            "observed",
+            "subjectOutcome",
+            "validationVerdict"
+          ],
+          "properties": {
+            "expected": {
+              "type": "null"
+            },
+            "observed": {
+              "type": "null"
+            },
+            "subjectOutcome": {
+              "type": "null"
+            },
+            "validationVerdict": {
+              "type": "null"
+            }
+          }
+        },
+        "references": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "sourceRef",
+            "runtimeRef",
+            "inputRef",
+            "approvalRef"
+          ],
+          "properties": {
+            "sourceRef": {
+              "type": "null"
+            },
+            "runtimeRef": {
+              "type": "null"
+            },
+            "inputRef": {
+              "type": "null"
+            },
+            "approvalRef": {
+              "type": "null"
+            }
+          }
+        },
+        "failure": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "code",
+            "firstFailureBoundary"
+          ],
+          "properties": {
+            "code": {
+              "type": "null"
+            },
+            "firstFailureBoundary": {
+              "type": "null"
+            }
+          }
+        },
+        "recovery": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "parentFailureRef",
+            "authorizationRef",
+            "disposition"
+          ],
+          "properties": {
+            "parentFailureRef": {
+              "type": "null"
+            },
+            "authorizationRef": {
+              "type": "null"
+            },
+            "disposition": {
+              "type": "null"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "recordType",
+        "artifactStatus",
+        "executionStatus",
+        "category",
+        "identity",
+        "source",
+        "timestamp",
+        "lifecycle",
+        "artifactIndex",
+        "gaps",
+        "resources",
+        "reconciliation",
+        "comparison"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "recordType": {
+          "const": "SHACO_SPIKE_FINALIZATION_TEMPLATE"
+        },
+        "artifactStatus": {
+          "const": "TEMPLATE_ONLY"
+        },
+        "executionStatus": {
+          "const": "NOT_EXECUTED"
+        },
+        "category": {
+          "type": "null"
+        },
+        "identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "recordId",
+            "caseId",
+            "invocationId"
+          ],
+          "properties": {
+            "recordId": {
+              "type": "null"
+            },
+            "caseId": {
+              "type": "null"
+            },
+            "invocationId": {
+              "type": "null"
+            }
+          }
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "producerRef",
+            "collectorRef"
+          ],
+          "properties": {
+            "producerRef": {
+              "type": "null"
+            },
+            "collectorRef": {
+              "type": "null"
+            }
+          }
+        },
+        "timestamp": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "utc",
+            "monotonicTick",
+            "clockSource"
+          ],
+          "properties": {
+            "utc": {
+              "type": "null"
+            },
+            "monotonicTick": {
+              "type": "null"
+            },
+            "clockSource": {
+              "type": "null"
+            }
+          }
+        },
+        "lifecycle": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stateBefore",
+            "stateAfter",
+            "boundaryReached"
+          ],
+          "properties": {
+            "stateBefore": {
+              "type": "null"
+            },
+            "stateAfter": {
+              "type": "null"
+            },
+            "boundaryReached": {
+              "type": "null"
+            }
+          }
+        },
+        "artifactIndex": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "gaps": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "resources": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "reconciliation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "ledgerRef",
+            "observedUsage",
+            "processTerminalState"
+          ],
+          "properties": {
+            "ledgerRef": {
+              "type": "null"
+            },
+            "observedUsage": {
+              "type": "null"
+            },
+            "processTerminalState": {
+              "type": "null"
+            }
+          }
+        },
+        "comparison": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "subjectOutcome",
+            "validationVerdict",
+            "evidenceStatus"
+          ],
+          "properties": {
+            "subjectOutcome": {
+              "type": "null"
+            },
+            "validationVerdict": {
+              "type": "null"
+            },
+            "evidenceStatus": {
+              "type": "null"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+

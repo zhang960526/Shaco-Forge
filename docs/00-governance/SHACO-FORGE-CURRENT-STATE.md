@@ -1,7 +1,12 @@
 # Shaco Forge Current State
 
 Status: ACTIVE
-Last Updated: 2026-09-04
+Last Updated: 2026-09-06
+
+> P0.S closure authority (2026-09-06): the
+> [P0.S-8 Architecture Freeze and P0.S Closure State](#p0s-8-architecture-freeze-and-p0s-closure-state-2026-09-06)
+> section is the latest authority. Earlier P0.S-7 / P0.S-8 handoff and Runtime-scope
+> fields remain historical and do not override this final closure.
 
 > P0.S-6 status authority (`P0S6-AUDIT-F01`, LOW; hygiene clarification dated
 > 2026-09-05): the [Latest Final State](#p0s-6-technical-validation-extension-final-closure-state-2026-09-05)
@@ -17,9 +22,9 @@ Last Updated: 2026-09-04
 
 ## Current Phase
 
-- Phase: P0.S — Desktop / Connection / Packaging Feasibility Spike
-- Step: P0.S-6 Client Modules / Plugin Frontend — `CLOSED`; Final Closure Review is `PASS` after one controlled Verification Invocation completed with final classification `AUTHORITY_BLOCKED`
-- Current Authorized Scope: one bounded P0.S-6 Technical Validation Extension Execution Authority is active under `P0S6-TVEC-EA-ACTIVATION-20260904-01`; execution remains `AUTHORITY_BLOCKED` at Final Preflight until the Runner, Execution Root, Invocation and Frozen Input Manifest identities are established; Dependency Preparation, Runtime, P0.S-7 and any original P0.S-6 retry remain unauthorized
+- Phase: P0.S — Desktop / Connection / Packaging Feasibility Spike — `CLOSED / PASS`
+- Step: P0.S-8 V1 Product Architecture Freeze — `CLOSED`; architecture is sufficient for V1.0–V1.3 development
+- Current Authorized Scope: P0.S closure synchronization complete; V1 implementation is ready but remains not started
 - Production Implementation: NOT_STARTED
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -37,8 +42,11 @@ Last Updated: 2026-09-04
 - `P0_EXECUTOR_WORK = CLOSED`
 - `INDEPENDENT_P0_CLOSURE_AUDIT = PASS`
 - `P0_CLOSURE_AUDIT = PASS`
-- `SHACO_FORGE_V1_0_P0S = IN_PROGRESS`
-- `P0S = IN_PROGRESS`
+- `SHACO_FORGE_V1_0_P0S = PASS`
+- `P0S = CLOSED`
+- `P0S8_FINAL_CLOSURE_AUDIT = PASS`
+- `P0S_FINAL_CLOSURE_OWNER_ACCEPTED = YES`
+- `V1_SLICE_1_ALLOWED = YES`
 - `SHACO_FORGE_V1_0_P0S_1 = PASS`
 - `P0S1_STATE = CLOSED`
 - `P0S1_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT`
@@ -438,24 +446,27 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - P0-1 through P0-7: PASS / CLOSED
 - Independent P0 Closure Audit: PASS (AUDIT-004B)
 - P0.S Design: READY
-- P0.S execution: IN_PROGRESS (`ALLOW_P0S = YES`)
+- P0.S execution: CLOSED / PASS
 - P0.S-1: PASS / CLOSED; Host Profile feasibility remains `PROVEN_WITH_CONSTRAINT`; Layer C constraint accepted
 - P0.S-2: PASS / CLOSED; Client Boot feasibility remains `PROVEN_WITH_CONSTRAINT`; constraints accepted
 - P0.S-3: PASS / CLOSED; Local Carrier + Trust feasibility remains `PROVEN_WITH_CONSTRAINT`; constraints accepted
 - P0.S-4: PASS / CLOSED; `MET_WITH_CONSTRAINT`; technical disposition remains `PROVEN_WITH_CONSTRAINT`
 - P0.S-5: PASS / CLOSED; Independent Review `PASS_WITH_REQUIRED_CORRECTIONS`, Documentation Corrective PASS and Corrective Re-Review PASS accepted; `MET_WITH_CONSTRAINT`
-- P0.S-6: `CLOSED`; Final Closure Review `PASS`; one controlled Verification Invocation completed with final classification `AUTHORITY_BLOCKED`; historical MEC-01 and DRRC states remain `EXHAUSTED_INCONCLUSIVE`; the bounded Technical Validation Extension Execution Authority is active but Final Preflight is `AUTHORITY_BLOCKED`; Extension Verification has not executed; Runtime Gate was not reached and H-05/H-20 remain `NOT_PROVEN`; this is a final governance closure, not a technical PASS or FAIL
-- P0.S-7: NOT_STARTED / NOT_AUTHORIZED
-- P0.S-8: NOT_STARTED
-- P0.5 Design: READY, but freeze remains NOT_ALLOWED while P0.S is IN_PROGRESS
-- P1 Detailed Freeze: NOT_ALLOWED until P0.S PASS
-- P2+ Implementation: NOT_ALLOWED
+- P0.S-6: `CLOSED`; latest result `VERIFIED_WITH_CANDIDATE`; historical MEC-01 / DRRC outcomes and unproved Runtime gates remain preserved
+- P0.S-7: `CLOSED`; `CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATED`; product Runtime not executed; Enterprise Runtime deferred
+- P0.S-8: `CLOSED`; `V1_PRODUCT_ARCHITECTURE_FROZEN`; Freeze Input Ready and Freeze Executed are `YES`
+- P0.5 Design: retained as Compatibility work; specific contracts become Slice gates only when required
+- P1 Detailed Freeze: retained as System/Cross-cutting Contract work; specific contracts become Slice gates only when required
+- V1 implementation: READY; not started
 
 ## Immediate Next Action
 
-Preserve the P0.S-6 final closure state and its historical MEC-01 and DRRC records. Establish and freeze the bounded Technical Validation Extension Runner, Execution Root, Invocation and Input Manifest identities, then rerun Final Preflight. P0.S-7 remains not authorized.
+Prepare / begin `V1-SLICE-1-SINGLE-AGENT-USER-CLOSURE`. The Architecture Owner
+has accepted the Independent P0.S-8 Final Closure Audit. This action itself does
+not begin V1 implementation; do not treat P0.5/P1 as deleted or complete.
 
-Do not cross the Technical Validation Extension Invocation Start Boundary until Final Preflight returns `PASS`. Do not retry the original P0.S-6 Invocation, modify the lockfile, execute npm, prepare dependencies, authorize Runtime, or start P0.S-7.
+No V1 implementation, product Runtime, database, Project Scan / File Index,
+Agent / Provider call or V1 test was executed by the P0.S-8 freeze.
 
 Do not pull/switch/update the frozen Harness SHA without an Architecture
 Decision. Spike code is NOT production by default. The corrective candidate
@@ -516,9 +527,89 @@ Final authority and evidence:
 - [Terminal Classification](../04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/classification.json)
 - [Final Summary](../04-development-records/experiments/P0S-6-TECHNICAL-VALIDATION-EXTENSION/execution/root/final-summary.json)
 
-P0.S-6 is closed with disposition `VERIFIED_WITH_CANDIDATE`. The remaining boundary
-is `P0S7_ALLOWED = NO`: no Candidate application, lockfile modification, dependency
-preparation, Runtime entry, Invocation retry or P0.S-7 execution is authorized by
-this final synchronization. Frozen execution inputs and prior Evidence retain
-their original bytes and historical identities; this appended governance update
-does not regenerate or retroactively alter them.
+P0.S-6 is closed with disposition `VERIFIED_WITH_CANDIDATE`. At this historical
+closure boundary, `P0S7_ALLOWED = NO`: no Candidate application, lockfile
+modification, dependency preparation, Runtime entry, Invocation retry or P0.S-7
+Runtime execution was authorized by that synchronization. Frozen execution inputs
+and prior Evidence retain their original bytes and historical identities; this
+appended governance update does not regenerate or retroactively alter them.
+
+## Historical P0.S-7 Final Closure and P0.S-8 Pre-freeze Handoff State (2026-09-06)
+
+**Historical P0.S-7 closure / P0.S-8 pre-freeze handoff state.** This section is
+not the current P0.S-8 / P0.S authority; current authority is the later
+[P0.S-8 Architecture Freeze and P0.S Closure State](#p0s-8-architecture-freeze-and-p0s-closure-state-2026-09-06).
+P0.S-7 is closed against its reassessed goal, Controlled Agent Execution Architecture Validation. Authority:
+[P0.S-7 Final Closure Decision](../04-development-records/P0S-7-CONTROLLED-AGENT-EXECUTION-ARCHITECTURE-VALIDATION-FINAL-CLOSURE-DECISION.md).
+
+The closure basis includes `P0S-ROADMAP-REASSESSMENT-20260906-01`,
+`SF-V1-PRODUCT-ARCHITECTURE-PLAN-20260906-01`, and Owner-supplied external
+independent review `SF-V1-ARCH-FINAL-REVIEW-20260906-01`, whose verdict is
+`PASS`, first failure boundary is `NONE`, and Blocking Findings are `NONE`.
+No repository Review Artifact path, SHA-256 or Commit status is claimed for that
+external review.
+
+```text
+P0S7_STATE = CLOSED
+P0S7_RESULT = CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATED
+P0S7_SCOPE = CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATION
+P0S7_PRODUCT_RUNTIME_EXECUTION = NOT_EXECUTED
+P0S7_ENTERPRISE_RUNTIME_VALIDATION = DEFERRED_TO_ENTERPRISE
+P0S7_V1_IMPLEMENTATION = NOT_STARTED
+P0S7_CAN_CLOSE = YES
+
+P0S8_STATE = NOT_STARTED
+P0S8_GOAL = V1_PRODUCT_ARCHITECTURE_FREEZE
+P0S8_FREEZE_INPUT_READY = YES
+P0S8_FREEZE_EXECUTED = NO
+P0S8_IMPLEMENTATION_STARTED = NO
+V1_IMPLEMENTATION_STARTED = NO
+```
+
+Earlier `P0S7_STATE = NOT_STARTED` and `P0S7_ALLOWED = NO` entries remain
+historically correct for the old Enterprise Runtime / controlled Runtime execution
+scope or the then-unactivated phase. Roadmap reassessment changed the currently
+applicable P0.S-7 objective; it did not retroactively authorize or execute Runtime.
+The architecture-validation objective is now closed, while Enterprise Runtime,
+Trust Root, Signature, Cryptographic Binding, Windows Sandbox and Zero Trust
+Runtime remain deferred and unproved.
+
+The next stage is P0.S-8 V1 Product Architecture Freeze. Its input is ready, but
+P0.S-8 has not started and no Freeze Decision has been created. Product Runtime,
+database migration, Project Scan / File Index, Agent / Provider calls, V1 tests and
+V1 implementation remain unexecuted or not started.
+
+## P0.S-8 Architecture Freeze and P0.S Closure State (2026-09-06)
+
+**Latest authoritative P0.S state.** Authority:
+[P0.S-8 V1 Product Architecture Freeze Decision](../04-development-records/P0S-8-V1-PRODUCT-ARCHITECTURE-FREEZE-DECISION.md),
+Decision ID `P0S8-V1-PRODUCT-ARCHITECTURE-FREEZE-20260906-01`.
+
+The freeze fixes only the durable Desktop/Worker dependency direction, Product
+API Command/Query/Event boundary, Worker single-writer rule, Adapter contract,
+product identity relations, Project Context boundary, Storage truth ownership,
+Task lifecycle, five-page route and V1.0–V1.3/Enterprise scope allocation.
+Implementation details remain deferred to the Slice that needs them.
+
+```text
+P0S8_STATE = CLOSED
+P0S8_RESULT = V1_PRODUCT_ARCHITECTURE_FROZEN
+P0S8_GOAL = V1_PRODUCT_ARCHITECTURE_FREEZE
+P0S8_FREEZE_INPUT_READY = YES
+P0S8_FREEZE_EXECUTED = YES
+
+SHACO_FORGE_V1_0_P0S = PASS
+P0S = CLOSED
+P0S8_FINAL_CLOSURE_AUDIT = PASS
+P0S_FINAL_CLOSURE_OWNER_ACCEPTED = YES
+
+V1_IMPLEMENTATION_READY = YES
+V1_IMPLEMENTATION_STARTED = NO
+V1_SLICE_1_ALLOWED = YES
+```
+
+P0.S closure means only that feasibility and architecture exploration are
+sufficient for V1 development. It does not claim product code, V1.0, Database,
+Adapters, Runtime, Production, Project Scan, File Index, V1 tests, Recovery or
+Enterprise are complete. No structural architecture issue was found that blocks
+the first V1 vertical Slice.

@@ -37,11 +37,11 @@ Frozen Harness baseline: `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-
 
 Risk / Spike input freeze: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`.
 
-P0 PASS does not by itself authorize P0.S. AUDIT-004B Independent Corrective Re-Review = `PASS`. `P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. P0.S is in progress; P0.S-1 through P0.S-5 are closed. The historical Owner-approved `P0S6-MEC-20260903-01` exhausted its two physical attempts inconclusively without reaching Runtime. `P0S6-DRRC-20260904-01` then exhausted its sole Dependency Preparation invocation inconclusively at `NPM_CI / EINTEGRITY`. P0.S-6 is blocked and is not PASS, FAIL, or closed. Only bounded Lockfile Integrity Corrective Contract planning is authorized; dependency preparation retry, lockfile corrective implementation, Runtime, Global Physical Attempt #3, and P0.S-7 remain unauthorized.
+P0 PASS did not by itself authorize P0.S. AUDIT-004B Independent Corrective Re-Review = `PASS`. `P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. Historical P0.S-6 records preserve that `P0S6-MEC-20260903-01` exhausted two physical attempts without reaching Runtime and `P0S6-DRRC-20260904-01` exhausted its sole Dependency Preparation invocation at `NPM_CI / EINTEGRITY`; at that recording boundary P0.S-6 was blocked and P0.S-7 was unauthorized. Later authority closes P0.S-6 as `VERIFIED_WITH_CANDIDATE`, closes reassessed P0.S-7 as `CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATED`, and closes P0.S-8/P0.S after the sufficient V1 Product Architecture Freeze. V1 implementation is ready but not started.
 
 ## P0.S
 
-Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0S = IN_PROGRESS`; `ALLOW_P0S = YES`)
+Status: CLOSED / PASS (`SHACO_FORGE_V1_0_P0S = PASS`; `P0S = CLOSED`)
 
 Steps:
 
@@ -50,9 +50,50 @@ Steps:
 - P0.S-3 Local Carrier + Trust — PASS / CLOSED; Owner-accepted `PROVEN_WITH_CONSTRAINT`
 - P0.S-4 Connection Feature Completeness — PASS / CLOSED; Owner-accepted `MET_WITH_CONSTRAINT`
 - P0.S-5 Desktop Independence & Reconnect — PASS / CLOSED; Owner-accepted `MET_WITH_CONSTRAINT`
-- P0.S-6 Client Module / Plugin Frontend — BLOCKED; `P0S6-MEC-20260903-01` and `P0S6-DRRC-20260904-01` EXHAUSTED_INCONCLUSIVE; Dependency Preparation used 1 of 1 with 0 remaining; first failure `NPM_CI / EINTEGRITY`; frozen `env-paths@2.2.1` lockfile integrity mismatch CONFIRMED; Runtime Gate not reached; H-05/H-20 NOT_PROVEN; technical closure not ready
-- P0.S-7 Packaged Runtime Feasibility — NOT_STARTED / NOT_AUTHORIZED
-- P0.S-8 Spike Closure — NOT_STARTED
+- P0.S-6 Client Module / Plugin Frontend — CLOSED; latest result `VERIFIED_WITH_CANDIDATE`; historical Runtime Gate and H-05/H-20 limitations remain preserved
+- P0.S-7 Controlled Agent Execution Architecture Validation — CLOSED; `CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATED`; product Runtime not executed; Enterprise Runtime deferred
+- P0.S-8 V1 Product Architecture Freeze — PASS / CLOSED; `V1_PRODUCT_ARCHITECTURE_FROZEN`; V1 implementation ready but not started
+
+### Historical P0.S-7 / P0.S-8 Goal Reconciliation (2026-09-05)
+
+These two goals are future planning definitions only. `P0S7_ALLOWED = NO`
+remains unchanged; neither development, Runtime creation, tests nor stage
+execution is authorized by this update. Earlier P0.S-1 through P0.S-6 status
+entries and evidence narratives are preserved as historical records. For the
+current P0.S-6 outcome, use the
+[latest Current State](../00-governance/SHACO-FORGE-CURRENT-STATE.md#p0s-6-technical-validation-extension-final-closure-state-2026-09-05)
+and [Final Closure Decision](../04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-FINAL-CLOSURE-DECISION.md).
+
+**P0.S-7 Goal: Packaged Runtime Feasibility & Controlled Execution Validation.**
+Plan to validate Runtime Package Identity (package identity, package integrity
+and version consistency), Controlled Runtime Launch (startup authorization,
+execution boundary and failure handling), and Runtime Evidence (Runtime evidence
+generation, failure evidence and recovery evidence). Retain the fresh-Windows,
+packaged Worker / Harness, native dependency and runtime-strategy feasibility
+requirements. Runtime must not bypass Authority, Snapshot, Trust Root or
+Preflight. Acceptance checks and evidence are planned, not completed.
+
+**P0.S-8 Goal: P0 Baseline Closure & Architecture Freeze.** Plan to freeze Client
+Architecture, Runtime Architecture, Plugin Model, Agent Execution Model, Evidence
+Model, Security Boundary and Development Baseline through evidence-backed review
+and Owner approval. Preserve hypothesis dispositions, constraints, production
+impact, fallbacks and core patch requirements. The baseline is not frozen by this
+roadmap update, and the existing P0.S Hard Gate and P0.5 / P1 gates remain in force.
+
+**P0.S-6 Impact:** the completed Technical Validation Extension is `CLOSED` with
+result `VERIFIED_WITH_CANDIDATE`, Verification / Classification `PASS`, and
+Candidate `generated_not_applied`; Runtime was not entered. Its Authority Anchor,
+Execution Snapshot, Trust Root, Snapshot Binding, Owner Signature, Final Preflight,
+Controlled Invocation and Evidence Finalization model will form the basis of
+subsequent Runtime and Agent Execution. Inherit **Snapshot based execution**,
+**Trust Root**, **Evidence first** and **Fail closed**. Git SHA self-reference is
+not a stable execution identity, Manifest cannot be the sole trust root, Snapshot
+requires Binding, and Agent execution requires Preflight and Evidence. The
+P0.S-6 result does not authorize reuse of its Invocation or application of its
+Candidate. See [Lessons Learned](../04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-LESSONS-LEARNED.md)
+and the detailed [P0.S-7 / P0.S-8 plan](P0S-FEASIBILITY-SPIKE.md#p0s-7--packaged-runtime-feasibility--controlled-execution-validation--not_started--not_authorized).
+
+### Preserved P0.S-1 through P0.S-6 Historical Evidence
 
 P0.S-1 Evidence: `docs/06-testing-acceptance/evidence/P0S-1-HOST-PROFILE-FEASIBILITY-EVIDENCE.md`. AUDIT-005 required documentation corrections; CORRECTIVE-005 applied them; AUDIT-005B passed and authorized Owner closure. The Owner accepted the non-listening Layer C constraint. This closes P0.S-1 only.
 
@@ -97,11 +138,68 @@ Draft a bounded P0.S-6 Lockfile Integrity Corrective Contract that independently
 
 Do not modify the lockfile, execute npm, prepare dependencies, authorize Recovery Runtime, authorize Global Physical Attempt #3, or start P0.S-7.
 
+### Current P0.S-7 Closure and P0.S-8 Handoff (2026-09-06)
+
+The [Roadmap Reassessment Decision](../04-development-records/P0S-ROADMAP-REASSESSMENT-DECISION.md)
+repositioned P0.S-7 as Controlled Agent Execution Architecture Validation and
+P0.S-8 as V1 Product Architecture Freeze. The
+[P0.S-7 Final Closure Decision](../04-development-records/P0S-7-CONTROLLED-AGENT-EXECUTION-ARCHITECTURE-VALIDATION-FINAL-CLOSURE-DECISION.md)
+is the current closure authority.
+
+```text
+P0S7_STATE = CLOSED
+P0S7_RESULT = CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATED
+P0S7_PRODUCT_RUNTIME_EXECUTION = NOT_EXECUTED
+P0S7_ENTERPRISE_RUNTIME_VALIDATION = DEFERRED_TO_ENTERPRISE
+P0S8_STATE = NOT_STARTED
+P0S8_FREEZE_INPUT_READY = YES
+P0S8_FREEZE_EXECUTED = NO
+V1_IMPLEMENTATION_STARTED = NO
+```
+
+The previous `P0S7_STATE = NOT_STARTED` and `P0S7_ALLOWED = NO` values remain
+historically valid for the old Runtime or unactivated scope. The reassessed
+architecture-validation goal is closed without converting static prototype,
+Control Plane, IPC, Candidate or audit work into a product Runtime result.
+
+The next stage is P0.S-8 V1 Product Architecture Freeze. P0.S-8 has not started,
+no Freeze Decision or implementation authorization has been created, and V1
+implementation has not started. `V1-SLICE-1-SINGLE-AGENT-USER-CLOSURE` is a later
+implementation sequencing recommendation only; it is neither frozen nor executed.
+
+### Current P0.S-8 Freeze, Umbrella Closure and Implementation Sequencing (2026-09-06)
+
+Authority: [P0.S-8 V1 Product Architecture Freeze Decision](../04-development-records/P0S-8-V1-PRODUCT-ARCHITECTURE-FREEZE-DECISION.md),
+Decision ID `P0S8-V1-PRODUCT-ARCHITECTURE-FREEZE-20260906-01`.
+
+```text
+P0S8_STATE = CLOSED
+P0S8_RESULT = V1_PRODUCT_ARCHITECTURE_FROZEN
+P0S8_FREEZE_INPUT_READY = YES
+P0S8_FREEZE_EXECUTED = YES
+SHACO_FORGE_V1_0_P0S = PASS
+P0S = CLOSED
+V1_IMPLEMENTATION_READY = YES
+V1_IMPLEMENTATION_STARTED = NO
+```
+
+The phase order at the top of this map remains the long-term delivery route;
+P0.5 Compatibility and P1 System Contract are retained. They are not silently
+deleted or completed, but their entire completion is not a blanket prerequisite
+for the first V1 vertical Slice. A concrete Slice must explicitly gate the P0.5
+or P1 contract it needs.
+
+The recommended first sequence is `V1-SLICE-1-SINGLE-AGENT-USER-CLOSURE`: one
+real DeepSeek Adapter; explicit `NOT_IMPLEMENTED` ChatGPT/Codex/Reviewer stubs;
+Project, Chat, Task and Result pages; and the Desktop-to-Worker-to-Adapter-to-
+Storage-to-UI path. This is sequencing only and has not started. V1.0 Final Scope
+still includes History, Independent Review and four minimally usable Adapters.
+
 ## P0.5
 
-Status: READY_FOR_FREEZE_AFTER_P0S
+Status: READY_FOR_FREEZE_AFTER_P0S; retained and now eligible for need-driven refinement
 
-Current gate: NOT_ALLOWED_TO_FREEZE while P0.S is `IN_PROGRESS`.
+Current gate: P0.S prerequisite is satisfied. Freeze only the Compatibility contract required by the active Slice; do not block the first Slice on completing all P0.5 work.
 
 Steps:
 
@@ -114,11 +212,11 @@ Steps:
 
 ## P1
 
-Status: NOT_DETAILED
+Status: NOT_DETAILED; retained for need-driven System/Cross-cutting Contract refinement
 
 Goal: freeze process, authority, runtime boundary, connection/supervisor, worker identity, data, security, error taxonomy, diagnostics, exit semantics, child ownership and future seams using P0.S evidence.
 
-Current gate: NOT_ALLOWED_TO_FREEZE while P0.S is `IN_PROGRESS`.
+Current gate: P0.S prerequisite is satisfied. Detail and freeze the P1 contract required by the active Slice; do not block the first Slice on completing all P1 work.
 
 ## P2
 

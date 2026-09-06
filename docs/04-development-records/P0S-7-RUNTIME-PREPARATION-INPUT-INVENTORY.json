@@ -1,0 +1,686 @@
+{
+  "recordType": "SHACO_SPIKE_PREPARATION_INPUT_INVENTORY",
+  "artifactStatus": "ANALYSIS_ONLY",
+  "domain": "REFERENCE",
+  "preparationId": "P0S7-RUNTIME-PREPARATION-SLICE-20260905-01",
+  "purpose": "只读准备观察；不是 Runtime Identity、Package Identity、Snapshot、Binding 或运行 Evidence，不可作为冻结输入整体引用。",
+  "executionStatus": "NOT_EXECUTED",
+  "sourceObservedAt": "2026-09-05T13:28:14.9337230Z",
+  "coverage": {
+    "projectRoot": "D:\\Project\\Shaco-Forge",
+    "spikeRoot": "D:\\Project\\Shaco-Forge\\experiments\\P0S-7-MINIMAL-SPIKE",
+    "projectBaselineFiles": 337,
+    "spikePhysicalFiles": 20,
+    "spikeReparsePoints": [],
+    "distributionScope": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist",
+    "distributionFileCount": 73,
+    "distributionBytes": 297927853,
+    "excludedFromBinaryPathScan": [
+      ".git",
+      ".npm-cache",
+      ".ai-bridge"
+    ],
+    "limit": "不是全机盘点或 Actual Dependency Closure；未执行 resolver、加载或验证组件。"
+  },
+  "sourceObservation": {
+    "status": "CONFIRMED",
+    "head": "4545c7ddae517a3e2d7cf2fb94c0cfe19ae2c29f",
+    "headTree": "9065d3c7910319be430ee3d6b9935bed14e354eb",
+    "spikeGitState": "ALL_20_UNTRACKED",
+    "headIsRuntimeIdentity": false,
+    "headIsAuthorityAnchor": false,
+    "files": [
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/evidence-structure/failure.template.json",
+        "Bytes": 1135,
+        "SHA256": "19462357B0A1AFD5FEDEBF99F4BE74AC714F52EF99387161DE70CAF2CC814D05"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/evidence-structure/finalization.template.json",
+        "Bytes": 794,
+        "SHA256": "EAA5C8088AF476E05DB1F2ABF13D9D02532C44A267A813EB8358842122BBAEA8"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/evidence-structure/recovery.template.json",
+        "Bytes": 1136,
+        "SHA256": "E8AF1403D5E759FB09707B1903C241F0DB1368E5FAECCD639E68816C0788CF75"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/evidence-structure/runtime.template.json",
+        "Bytes": 1135,
+        "SHA256": "9BBC7BCBAE405ADE2CFBE4B076B57AB0E7840D39D9B1F6499507280CF4A53F0D"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/evidence-structure/startup.template.json",
+        "Bytes": 1135,
+        "SHA256": "BB7F5A939A85D89DEC75964D94EB3F2B99D80DB4C5BC664A600C203A321F4D42"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/evidence-structure/template.schema.json",
+        "Bytes": 9694,
+        "SHA256": "58C70379D7F84CF07D5E9C15E96DDB0E58AC77257F31F72C513411BC271B76CC"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/control/phase-a-policy.mjs",
+        "Bytes": 1016,
+        "SHA256": "8C0A2AD1BE0A9FD981B0F66F61A490E70E5E4C1FDE2904E733A7EDBCE5E4C892"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/control/README.md",
+        "Bytes": 10363,
+        "SHA256": "444FBA8120D1CA11E7262A4C0F03AAEACCAC0B66FDB6DBFF3157802280A33D14"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/desktop/index.html",
+        "Bytes": 1232,
+        "SHA256": "052EA3B95429634A59780BDF07419C728F8C20E61AD33C0E1AE470F37C2B47FA"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/desktop/main.mjs",
+        "Bytes": 3026,
+        "SHA256": "E19D35BCF755938D9E70656CF018E19E711FE5B206B25193274DB967A6242DE8"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/desktop/preload.cjs",
+        "Bytes": 430,
+        "SHA256": "54E03979E86AC2BA79BE90540A3F5DFFC5CF17228DC6275D98168DE652FB9633"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/desktop/renderer.css",
+        "Bytes": 775,
+        "SHA256": "55340963EC0FAA36122381B129203885FC0BD6B6C945D1E74505CE533542A1C9"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/desktop/renderer.js",
+        "Bytes": 1505,
+        "SHA256": "AA953E300341666311B05176171C9D6C375C25564C166A8F9F9A9166D7D2E9CC"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/evidence/templates.mjs",
+        "Bytes": 1283,
+        "SHA256": "15703CFEA8F5681077E0CED06C6DBD39190424F48FE20AE7287D798A84C3DC6B"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/ipc/message.schema.json",
+        "Bytes": 11447,
+        "SHA256": "5DE3C9DEDCC3C42267C65A02C139951F4230A0FC00C3454520083B86F0965ABF"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/ipc/named-pipe.mjs",
+        "Bytes": 835,
+        "SHA256": "D8A819DE135646DAE6733CCA1BC53A06BE695B889779464050021C15F151E5DA"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/ipc/protocol.mjs",
+        "Bytes": 4937,
+        "SHA256": "4E86014B37B10031D8EFB2613C709E2D20F6426072AA39ACC957A1A866AC5F61"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/stub/sum3.mjs",
+        "Bytes": 1111,
+        "SHA256": "89D1E0841038908ED435D09A9ACE051F28FFDA74C48DF3E4107FB7569B565F61"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/worker/entry.mjs",
+        "Bytes": 1042,
+        "SHA256": "A220340E9C95B3B9451C3DE0D94651789C2E7A7EE5879D211206C400F0F312FF"
+      },
+      {
+        "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/worker/state-machine.mjs",
+        "Bytes": 2900,
+        "SHA256": "83FD15D5CF57B9E4E5DD1B586C3E66F6FF01999B61E88EBC11B6DDCB439979AA"
+      }
+    ],
+    "limitation": "观察到的本地源码字节；未提交文件不在 HEAD tree 中，不冻结整个项目。"
+  },
+  "referenceDocuments": [
+    {
+      "Path": "docs/04-development-records/P0S-7-RUNTIME-EXECUTION-READINESS-PLAN.md",
+      "Bytes": 20937,
+      "SHA256": "E2B7C113AE34D7D614D115307585E415696552E0D4A8985706CD79CE5CAFC8E3"
+    },
+    {
+      "Path": "docs/04-development-records/P0S-7-MINIMAL-SPIKE-RUNTIME-EXECUTION-AUTHORIZATION-REQUEST.md",
+      "Bytes": 15861,
+      "SHA256": "87A66A40BC2FE95A2B6DAFEA16DDDEE79AB7A23EAFBC0855FAE56574199A59EB"
+    },
+    {
+      "Path": "experiments/P0S-7-MINIMAL-SPIKE/src/control/README.md",
+      "Bytes": 10363,
+      "SHA256": "444FBA8120D1CA11E7262A4C0F03AAEACCAC0B66FDB6DBFF3157802280A33D14"
+    },
+    {
+      "Path": "docs/04-development-records/P0S-7-MINIMAL-SPIKE-IMPLEMENTATION-AUTHORIZATION-OWNER-APPROVAL.md",
+      "Bytes": 13001,
+      "SHA256": "82765644A2D40E82C84632EDD842E1395E0E91424267F782FBA4633628021C1D"
+    },
+    {
+      "Path": "docs/04-development-records/P0S-7-1-INPUT-CLOSURE-O02-RUNTIME-DEFINITION-DECISION.md",
+      "Bytes": 22295,
+      "SHA256": "741236DAF541AD7BDC12E66DEC992545657223C6CFCCC1A35D650A71FBFA4581"
+    },
+    {
+      "Path": "docs/04-development-records/P0S-7-1-INPUT-CLOSURE-O05-TRUST-CONTROL-DECISION.md",
+      "Bytes": 27972,
+      "SHA256": "3F7D8ECE92BAF59A8B793B1759AE126CB0ECF3AD18299DC6221E4D5382FB2338"
+    },
+    {
+      "Path": "docs/04-development-records/experiments/P0S-6-MINIMAL-CLIENT-MODULES/package.json",
+      "Bytes": 325,
+      "SHA256": "4486D5BAB3BF14FF40626F7C607470CD888CA6C35105112C3F6D3D658DDB5B65"
+    }
+  ],
+  "electronCandidate": {
+    "status": "CONFIRMED",
+    "confirmedClaim": "历史分发本地存在及本次只读元数据/摘要",
+    "selectedForS7": false,
+    "ownerApproval": "NOT_PROVIDED",
+    "sourceAuthenticity": "UNKNOWN",
+    "embeddedNode": "UNKNOWN",
+    "abi": "UNKNOWN",
+    "actualClosure": "BLOCKED",
+    "observedAt": "2026-09-05T13:31:26.2301922Z",
+    "executable": {
+      "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\electron.exe",
+      "FileVersion": "35.7.5",
+      "ProductVersion": "35.7.5",
+      "PEsignature": "0x00004550",
+      "Machine": "0x8664",
+      "Bytes": 201233408,
+      "SHA256": "588BD82E36AD1ACDAE4615B6336284E420704389864F54EF2D10EA66C1A3CDE0"
+    },
+    "metadata": [
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\package.json",
+        "Bytes": 586,
+        "Content": "{\n  \"main\": \"index.js\",\n  \"types\": \"electron.d.ts\",\n  \"bin\": {\n    \"electron\": \"cli.js\"\n  },\n  \"scripts\": {\n    \"postinstall\": \"node install.js\"\n  },\n  \"dependencies\": {\n    \"@electron/get\": \"^2.0.0\",\n    \"@types/node\": \"^22.7.7\",\n    \"extract-zip\": \"^2.0.1\"\n  },\n  \"engines\": {\n    \"node\": \">= 12.20.55\"\n  },\n  \"name\": \"electron\",\n  \"repository\": \"https://github.com/electron/electron\",\n  \"description\": \"Build cross platform desktop apps with JavaScript, HTML, and CSS\",\n  \"license\": \"MIT\",\n  \"author\": \"Electron Community\",\n  \"keywords\": [\n    \"electron\"\n  ],\n  \"version\": \"35.7.5\"\n}",
+        "SHA256": "2F06141CD4A5B00F35B6DEA2A8499C2FA56233A3E480601C78F06FFC2A4C2750"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\path.txt",
+        "Bytes": 12,
+        "Content": "electron.exe",
+        "SHA256": "DCEDF875E21343ECBF6371FFA7E5420B1BADF3136EBDC98F908B9EF2ACE9FA86"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\version",
+        "Bytes": 6,
+        "Content": "35.7.5",
+        "SHA256": "8970B79EECFA43C3EFD51A8403359A513FB7B621707B964046E3C9E8E0226157"
+      }
+    ],
+    "distribution": [
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\chrome_100_percent.pak",
+        "Bytes": 147743,
+        "SHA256": "6CE0CCF6A0CC4EA8BE11262D168A344BC3EE78A4A6365D755FFB5570BC48D6D5"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\chrome_200_percent.pak",
+        "Bytes": 220631,
+        "SHA256": "68E92CDE2557D68EDDCF8DF21CE4D1EF7A85581FB28CD5AB93DB20812217E073"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\d3dcompiler_47.dll",
+        "Bytes": 4916728,
+        "SHA256": "AF7B99BE1B8770C0E4D18E43B04E81D11BDEB667FA6B07ADE7A88F4C5676BF9A"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\electron.exe",
+        "Bytes": 201233408,
+        "SHA256": "588BD82E36AD1ACDAE4615B6336284E420704389864F54EF2D10EA66C1A3CDE0"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\ffmpeg.dll",
+        "Bytes": 3001344,
+        "SHA256": "99FBD8BD11696E24479D22E29B490C7E96C7D9875AB4392FF12307DDFB5A9503"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\icudtl.dat",
+        "Bytes": 10466624,
+        "SHA256": "A9F6072E858EA29CB66501847856D403C862F23D03CAC2656D1E0FA2865FDC7B"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\libEGL.dll",
+        "Bytes": 493056,
+        "SHA256": "E55FB10FB929B28446583EBC5AFA89FC647BAFC2EEBF3B12E6A0ADF91A7BB202"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\libGLESv2.dll",
+        "Bytes": 8019968,
+        "SHA256": "2289EB00380B7F143D81DF224D5BB412DEC9B5EB6002B5213518E295AE8256B2"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\LICENSE",
+        "Bytes": 1096,
+        "SHA256": "5154E165BD6C2CC0CFBCD8916498C7ABAB0497923BAFCD5CB07673FE8480087D"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\LICENSES.chromium.html",
+        "Bytes": 12278238,
+        "SHA256": "5D67ABA37ACC9E0E0A88546D940ED23F29EA3441AAC7DD06DCC08A1B1C93B0A9"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\af.pak",
+        "Bytes": 549447,
+        "SHA256": "842FA605183EB7CB2764AF9EF34EADE4A6DBF59FFA726B240A799EC4F829CACD"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\am.pak",
+        "Bytes": 889263,
+        "SHA256": "ECBADBF260E62099E6140327F0ACB40D79AC010676D48F4FD557085F6668F43D"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\ar.pak",
+        "Bytes": 976980,
+        "SHA256": "EB80F7D9B8EF4895F4B122616AE97EC63A5123B37AE68D68ECB5F332095EC2AB"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\bg.pak",
+        "Bytes": 1015139,
+        "SHA256": "12B755EE6A50F30B327980E59D086E9F178C6E1BCCD0C2BF387696E2C538A5B7"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\bn.pak",
+        "Bytes": 1307697,
+        "SHA256": "43A0C8BF652288C7A1EFAF19926D25275507FA03E9134CFE5E3A580E8E7CD203"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\ca.pak",
+        "Bytes": 617191,
+        "SHA256": "5A03F4F7BA62998EABF8CCDBD55A49B06398BF5F7AA3EB3F0AE26CFE8A65C31F"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\cs.pak",
+        "Bytes": 637293,
+        "SHA256": "0A11D902FCF7F082EA6D602CBA67D2BEFCC639DE500C5FEF56A7055A0B444A9F"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\da.pak",
+        "Bytes": 575537,
+        "SHA256": "1145DC560E49C746FD7466F064B1DCD1EC25D22B4B38A13261174AAD5505CAF8"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\de.pak",
+        "Bytes": 615933,
+        "SHA256": "3695FB21A7D356C5DBAF7F8393D3E53554E4C19C2979358C0E59411FAC67A5E3"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\el.pak",
+        "Bytes": 1113878,
+        "SHA256": "55A09ED6D1BD58E73161450C828AC59CF86162A9CD18F83B246FB19FFA50E83C"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\en-GB.pak",
+        "Bytes": 499618,
+        "SHA256": "DEDF16F15BAA50B05832C27D1F9D030C60BCEFAC7E4A8CDB30DF20FDA4E39A7D"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\en-US.pak",
+        "Bytes": 504657,
+        "SHA256": "CC7D18D3A6606B645EDE826DE9417C961D6EBB815F7250BAD3A930DA89DCD3A3"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\es-419.pak",
+        "Bytes": 607560,
+        "SHA256": "AB6F9A95D333E5BB14D5420E49C5636703D8FC965212CB748E2522505B6BEC91"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\es.pak",
+        "Bytes": 606695,
+        "SHA256": "590238A02B3CC14B05AAF21D5285035B45FF55575DD533264461E5170583CEAD"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\et.pak",
+        "Bytes": 552707,
+        "SHA256": "605996FF0C8A43F772DC64274AB309C4313CED4E8C936F82BCD797B54CB5C6E6"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\fa.pak",
+        "Bytes": 907250,
+        "SHA256": "8DD8CB4A8FDCD5833F73EF7947649EC24ED0538B3D5F079D82CF441CF955D6B7"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\fi.pak",
+        "Bytes": 563623,
+        "SHA256": "1517FE8463E2BFB502E01667D7F9ED0027369F5B976B1E0A38FEEFE82CAA2C7E"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\fil.pak",
+        "Bytes": 638107,
+        "SHA256": "B87306FED8F471279C134D460581ECC13D17B533C184BE7C1241D6BCF74D32E3"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\fr.pak",
+        "Bytes": 657427,
+        "SHA256": "2AE85AC2B90EBAABE034B979FFB53C50F3DBE2FA9BD7420D370839DA5538CEF7"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\gu.pak",
+        "Bytes": 1293596,
+        "SHA256": "8DA2AEF78A775083F19573A14E0861A96A8990866920B3DD4B1AA4D43552159A"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\he.pak",
+        "Bytes": 796589,
+        "SHA256": "4948FA44871E8ED5A0ED2D553F4DD698548B60618B55619239045181A8EC519E"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\hi.pak",
+        "Bytes": 1365063,
+        "SHA256": "8DDDED9B2DEA1787367869152F2B27F93556EC515F7DA6F361A73AC61FDCB73A"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\hr.pak",
+        "Bytes": 614279,
+        "SHA256": "9A7A1DEA1BD0BF594ACBC356DDAC9FB64D993FA96F5D3CC1F38F9486ABC888BD"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\hu.pak",
+        "Bytes": 660990,
+        "SHA256": "8E00A8562E32713ABF7C99FB9543F65505F8F6D0509AD6B6B7607896F689E2E7"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\id.pak",
+        "Bytes": 544840,
+        "SHA256": "6D46B40DEA9BA42A9CA6DDA6E7FF81A3DBCD86B61FB2D7A5FE946D06BDCE5D30"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\it.pak",
+        "Bytes": 599089,
+        "SHA256": "E5FB1E10E15D55C42CDD937E133A9725739259157B1B3F134333CAD7110E5978"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\ja.pak",
+        "Bytes": 729581,
+        "SHA256": "91461C3B4A426688B16926D3279A44590CAB75D65D797B6FD2567E0EC5CDE60E"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\kn.pak",
+        "Bytes": 1477016,
+        "SHA256": "81A6A8D7F817BB6FBCCFDF8D73F1229CD3BF74AEEC0A64373A853E8BFF744E8E"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\ko.pak",
+        "Bytes": 616867,
+        "SHA256": "67F8B13860DFC28EB3EE150750FAB39C0B41E8638F06920F240F434CE08EC753"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\lt.pak",
+        "Bytes": 665836,
+        "SHA256": "BAE83903640041B5F949398D7AF1975D67070467C4925950C7A838EDD73ED956"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\lv.pak",
+        "Bytes": 663813,
+        "SHA256": "229B518EE95BC1960BE7E72C8AF33633FC8B9A32EE09900AE6D64B771C40D359"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\ml.pak",
+        "Bytes": 1532960,
+        "SHA256": "A973E6CE2C5CBBA8F41E54D9AECEF31BDABB070BF06E470AFCE1C4ED263BE671"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\mr.pak",
+        "Bytes": 1265594,
+        "SHA256": "0EAE188C9A81BD3257A21DC28448B5E9E5C3F4F4DE4DC8E178E7F13CAB06D6F7"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\ms.pak",
+        "Bytes": 572251,
+        "SHA256": "185A275D0FB6263471CA1844C8DF7FE91D2E98B209379B4A7EC18981AE642C53"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\nb.pak",
+        "Bytes": 552703,
+        "SHA256": "BC11695694983516A9806EAEF25E380A5D705C2C8E91324192A0983A50D1291E"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\nl.pak",
+        "Bytes": 573501,
+        "SHA256": "124B702F9F31EB34F307CAE79074812873307F36C9A72F53696567A26EA13BA8"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\pl.pak",
+        "Bytes": 637932,
+        "SHA256": "55D1F22DCB6FDEA4F641984A386B3497CF6D29FDB4C069D1E906EFA4404D9550"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\pt-BR.pak",
+        "Bytes": 598994,
+        "SHA256": "8AB2FCE26C0612520D152147637929C23A979EF059EF37757AC6988A9FDD26E1"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\pt-PT.pak",
+        "Bytes": 603288,
+        "SHA256": "56974D3F5C4C614FED58EAE2B3889898A79B4CD6A13B3468C4F370E2C09470A9"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\ro.pak",
+        "Bytes": 625231,
+        "SHA256": "309118023EACFE9AEB3405F2606A323982E75B1E33887E85BE9235FC2CEEAE5B"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\ru.pak",
+        "Bytes": 1030163,
+        "SHA256": "E042CE451D72FC1E2FA10A66FBC0490A4D9FDBC34CAAD64D06307D787FF5CED0"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\sk.pak",
+        "Bytes": 648263,
+        "SHA256": "AED563CC711B2B65D4734EB6C21ACA2FE5FE4411B47681B31AF8996245ADADF0"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\sl.pak",
+        "Bytes": 620882,
+        "SHA256": "495125AF6D3CDC85BB24EA4A211EA808208D19CE7AF8DBEA44E1E9317E91BD5A"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\sr.pak",
+        "Bytes": 957684,
+        "SHA256": "9D98EEFBF8D84AD054F58A286B4891D51AE8DA99F82047A09886E4B661DB13D0"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\sv.pak",
+        "Bytes": 557025,
+        "SHA256": "E663B723C4DEC60526182C70C943C9CAA4976DE09831DED69D59C9FE4114283E"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\sw.pak",
+        "Bytes": 588112,
+        "SHA256": "C83BB0238CA67B1137DD73E2CCDBFDBC3C2312D8C95AA2636940CC7DFAC13CF0"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\ta.pak",
+        "Bytes": 1520768,
+        "SHA256": "B76188EFF81FFD0A0D9EA7E547EFF7BC05069BAECD650E1C1E11AA707B40E99C"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\te.pak",
+        "Bytes": 1407659,
+        "SHA256": "471E766E6647E4315C45B15F702DFB2A8253CE91044E141034CE37CA9E0EDE68"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\th.pak",
+        "Bytes": 1181978,
+        "SHA256": "010EC4D2CF97D45ED2A1934372FA389E49DC32567A97946162271AF1C3A6E7E2"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\tr.pak",
+        "Bytes": 598957,
+        "SHA256": "801DF6A4A8D52B1EBB99DA0EA788D933804643CCA2BF8BBC46064EB6016E17B6"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\uk.pak",
+        "Bytes": 1034052,
+        "SHA256": "AA204656B9EFBAD5069943054F70FC0A6FC1E9F660B4BC59BCFA90CDE3C3B0FE"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\ur.pak",
+        "Bytes": 901079,
+        "SHA256": "B26FA64BC9D26991D7C2F1D20934E3DBD467D64096053887CDE9CE99D7D0456C"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\vi.pak",
+        "Bytes": 710235,
+        "SHA256": "06B752BFF885C13260ADF91B51D56D3EF5048EA0058F69BB24A1DB3B45BFA969"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\zh-CN.pak",
+        "Bytes": 510334,
+        "SHA256": "82717AA331B1AB869046CD691DDC9589882A34715A2522577313F0864ACD083B"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\locales\\zh-TW.pak",
+        "Bytes": 504514,
+        "SHA256": "61709875E1EDE0ECC2582A282896EF6398B0C2F4FEC07CFABC68C696BA6DD35A"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\resources.pak",
+        "Bytes": 5926839,
+        "SHA256": "4D22A8976B3E6D5BCA66D59CC24F1D2DB6DF2163F12F9624BC07C5846ADFBAB6"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\resources\\default_app.asar",
+        "Bytes": 108907,
+        "SHA256": "025A1F9B329898BF679C17AF62E5535D7969AC3E0479DB2FFE09DDFB07B9DA02"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\snapshot_blob.bin",
+        "Bytes": 331874,
+        "SHA256": "69D9B2ECBC649FED6C41CA18E94F3A36B6770FF7038E9A0D07AE1AB824D9F7FB"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\v8_context_snapshot.bin",
+        "Bytes": 702157,
+        "SHA256": "462919F1B49C9E913042F9E9A738E9510884D5920A426A8A5F1B188E28C4DA91"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\version",
+        "Bytes": 6,
+        "SHA256": "8970B79EECFA43C3EFD51A8403359A513FB7B621707B964046E3C9E8E0226157"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\vk_swiftshader_icd.json",
+        "Bytes": 106,
+        "SHA256": "32D83FF113FEF532A9F97E0D2831F8656628AB1C99E9060F0332B1532839AFD9"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\vk_swiftshader.dll",
+        "Bytes": 5577728,
+        "SHA256": "BDF28EFB95D1618E211AAFAFD2060DF77AD53B98AF8DB685379F88AA852C0E00"
+      },
+      {
+        "Path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\experiments\\P0S-2-ELECTRON-CLIENT-BOOT\\node_modules\\electron\\dist\\vulkan-1.dll",
+        "Bytes": 903680,
+        "SHA256": "2F0AE7C191A962A49ABE65C8C5C056262DE5E2108E1F341B105844034153915F"
+      }
+    ]
+  },
+  "nodeReference": {
+    "status": "CONFIRMED",
+    "confirmedClaim": "既有静态工具文件及元数据，不是 S7 选定 Runtime",
+    "selectedForS7": false,
+    "previousDesignCandidate": "22.19.0 / win32 / x64",
+    "candidateDisposition": "KEEP_REFERENCE_ONLY_DO_NOT_AUTO_REPLACE",
+    "actualAbi": "UNKNOWN",
+    "sourceAuthenticity": "UNKNOWN",
+    "observedAt": "2026-09-05T13:28:43.3853743Z",
+    "Path": "C:\\Users\\18902\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "Bytes": 92825416,
+    "SHA256": "3602F2BB1A10F2CBAB4C36886218A33C1AB3DB87290E73B033C46C77147D0237",
+    "FileVersion": "24.19.0",
+    "ProductVersion": "24.19.0",
+    "PEsignature": "0x00004550",
+    "Machine": "0x8664"
+  },
+  "developmentHost": {
+    "status": "CONFIRMED",
+    "domain": "PREPARATION_OBSERVATION",
+    "selectedAsTargetFixture": false,
+    "observedAt": "2026-09-05T13:28:43.3853743Z",
+    "OSVersion": "Microsoft Windows NT 10.0.26200.0",
+    "OS64Bit": true,
+    "ProcessArchitecture": "AMD64",
+    "registry": {
+      "ProductName": "Windows 10 Pro",
+      "DisplayVersion": "25H2",
+      "Build": "26200",
+      "UBR": 9168,
+      "EditionID": "Professional"
+    },
+    "interpretation": "原样记录 API/注册表结果；ProductName 与 build/display 元数据不用于推定产品名称或目标兼容性。",
+    "aclObservation": [
+      {
+        "path": "D:\\Project\\Shaco-Forge",
+        "AreAccessRulesProtected": false,
+        "ExplicitRuleCount": 4,
+        "InheritedRuleCount": 8
+      },
+      {
+        "path": "D:\\Project\\Shaco-Forge\\experiments\\P0S-7-MINIMAL-SPIKE",
+        "AreAccessRulesProtected": false,
+        "ExplicitRuleCount": 0,
+        "InheritedRuleCount": 12
+      }
+    ],
+    "aclInterpretation": "ACL 元数据只读观察，不是有效权限验证；未检查主体令牌、父路径全部保护或 OS enforcement。"
+  },
+  "templateObservation": [
+    {
+      "Path": "D:\\Project\\Shaco-Forge\\experiments\\P0S-7-MINIMAL-SPIKE\\evidence-structure\\failure.template.json",
+      "ArtifactStatus": "TEMPLATE_ONLY",
+      "ExecutionStatus": "NOT_EXECUTED",
+      "RecordType": "SHACO_SPIKE_EVIDENCE_TEMPLATE"
+    },
+    {
+      "Path": "D:\\Project\\Shaco-Forge\\experiments\\P0S-7-MINIMAL-SPIKE\\evidence-structure\\finalization.template.json",
+      "ArtifactStatus": "TEMPLATE_ONLY",
+      "ExecutionStatus": "NOT_EXECUTED",
+      "RecordType": "SHACO_SPIKE_FINALIZATION_TEMPLATE"
+    },
+    {
+      "Path": "D:\\Project\\Shaco-Forge\\experiments\\P0S-7-MINIMAL-SPIKE\\evidence-structure\\recovery.template.json",
+      "ArtifactStatus": "TEMPLATE_ONLY",
+      "ExecutionStatus": "NOT_EXECUTED",
+      "RecordType": "SHACO_SPIKE_EVIDENCE_TEMPLATE"
+    },
+    {
+      "Path": "D:\\Project\\Shaco-Forge\\experiments\\P0S-7-MINIMAL-SPIKE\\evidence-structure\\runtime.template.json",
+      "ArtifactStatus": "TEMPLATE_ONLY",
+      "ExecutionStatus": "NOT_EXECUTED",
+      "RecordType": "SHACO_SPIKE_EVIDENCE_TEMPLATE"
+    },
+    {
+      "Path": "D:\\Project\\Shaco-Forge\\experiments\\P0S-7-MINIMAL-SPIKE\\evidence-structure\\startup.template.json",
+      "ArtifactStatus": "TEMPLATE_ONLY",
+      "ExecutionStatus": "NOT_EXECUTED",
+      "RecordType": "SHACO_SPIKE_EVIDENCE_TEMPLATE"
+    }
+  ],
+  "unresolved": {
+    "electronSelection": "UNKNOWN",
+    "workerNodeSelection": "UNKNOWN",
+    "abiCompatibility": "UNKNOWN",
+    "helperImplementation": "BLOCKED",
+    "driverImplementation": "BLOCKED",
+    "targetFixture": "UNKNOWN",
+    "targetPermissions": "UNKNOWN",
+    "s7Anchor": "UNKNOWN",
+    "s7TrustRoot": "UNKNOWN",
+    "runtimeOwnerApproval": "NOT_PROVIDED",
+    "snapshot": "NOT_CREATED",
+    "binding": "NOT_CREATED"
+  },
+  "boundary": {
+    "P0S7_STATE": "NOT_STARTED",
+    "P0S7_ALLOWED": "NO",
+    "READY_FOR_EXECUTION": "NO",
+    "invocationBudget": 0,
+    "retry": 0,
+    "resume": 0,
+    "recovery": 0,
+    "candidateApplied": false
+  }
+}
+

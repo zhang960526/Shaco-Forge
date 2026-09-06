@@ -1,0 +1,67 @@
+{
+  "schema": "P0S6_DRRC_STATIC_GATES_V1",
+  "capturedUtc": "2026-09-04T04:08:59.5969386+00:00",
+  "contractId": "P0S6-DRRC-20260904-01",
+  "ownerDispositionId": "P0S6-DRRC-OD-20260904-PS765-01",
+  "preBoundaryCorrection": {
+    "occurred": true,
+    "boundaryCrossed": false,
+    "npmInvocationCount": 0,
+    "issue": "STRICTMODE_OPTIONAL_HASINSTALLSCRIPT_PROPERTY_ACCESS",
+    "scope": "CONTRACT_OWNED_PREFLIGHT_PARSER_ONLY",
+    "frozenSemanticsChanged": false,
+    "corrected": true
+  },
+  "scripts": [
+    {
+      "path": "runner/invoke-preparation.ps1",
+      "bytes": 15777,
+      "sha256": "22f252a28c6cb9fc9f20c37e22a1c9495b7a63140a1ab301dc7615402dce2c75",
+      "utf8WithoutBom": true,
+      "parserErrorCount": 0,
+      "pass": true
+    },
+    {
+      "path": "runner/manifest-generator.ps1",
+      "bytes": 15143,
+      "sha256": "cf3b6571f139c067429692333e9718788048beef185145d6f2cfcdbbafe40dc0",
+      "utf8WithoutBom": true,
+      "parserErrorCount": 0,
+      "pass": true
+    },
+    {
+      "path": "runner/post-validate.ps1",
+      "bytes": 26456,
+      "sha256": "a28e6451ade00330cb8d05882180b39f675f86e1f608b1913b6402b6d4e5b793",
+      "utf8WithoutBom": true,
+      "parserErrorCount": 0,
+      "pass": true
+    },
+    {
+      "path": "runner/preflight.ps1",
+      "bytes": 14893,
+      "sha256": "710b40a9d92ee6f688d44fcf7a845cb22dbcb25094db01a1da5bedac40dc6ed8",
+      "utf8WithoutBom": true,
+      "parserErrorCount": 0,
+      "pass": true
+    }
+  ],
+  "jsonGates": {
+    "packageJson": true,
+    "packageLockJson": true,
+    "preflightJson": true,
+    "effectiveConfigJson": true,
+    "lockfileVersion": 3
+  },
+  "manifestTestVector": {
+    "executedInMemory": true,
+    "byteLength": 230,
+    "aggregateSha256": "a55f7fbd209f6f1ed1f84824de719b3667a776b4d2b898767bb1b3a91b513b70",
+    "expectedByteLength": 230,
+    "expectedAggregateSha256": "a55f7fbd209f6f1ed1f84824de719b3667a776b4d2b898767bb1b3a91b513b70",
+    "csharpCompilationPass": true,
+    "pass": true
+  },
+  "preflightAllPass": true,
+  "allPass": true
+}

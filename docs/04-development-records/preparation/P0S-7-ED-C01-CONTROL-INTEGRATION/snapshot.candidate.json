@@ -1,0 +1,174 @@
+{
+  "recordType": "P0S7_CONTROL_INTEGRATION_SNAPSHOT_CANDIDATE",
+  "recordVersion": 1,
+  "recordId": "P0S7-CONTROL-INTEGRATION-SNAPSHOT-CANDIDATE-20260906-01",
+  "candidateGeneration": "P0S7-ED-C01-CONTROL-INTEGRATION-G02",
+  "artifactStatus": "CANDIDATE_ONLY",
+  "freezeStatus": "NOT_FROZEN",
+  "executionStatus": "NOT_EXECUTED",
+  "scope": "ED-C01 / MINIMAL_CONTROLLED_RUNTIME_SPIKE / NOT_PRODUCTION",
+  "purpose": "Control Plane 与 IPC Integration 的非冻结静态输入选择候选；不是 P0S7_MINIMAL_RUNTIME_EXECUTION_SNAPSHOT payload、Source/Runtime Identity、Frozen Input Manifest、Plan、Binding 或可执行配置。",
+  "predecessor": {
+    "relationship": "SUPERSEDES_FOR_PREPARATION_REVIEW_WITHOUT_MUTATING_OR_PROMOTING_PREDECESSOR",
+    "candidatePath": "docs/04-development-records/preparation/P0S-7-ED-C01/snapshot.candidate.json",
+    "candidateBytes": 8453,
+    "candidateSha256": "4AABDD2AAC3FD2120344D9F589DEA69CFBBD77C017F3E9EBDC3D7D80BFA982D2",
+    "inventoryPath": "docs/04-development-records/preparation/P0S-7-ED-C01/input-inventory.json",
+    "inventoryBytes": 160876,
+    "inventorySha256": "5E279AD89C56239D70AFAB9B1DE4605E2FE61B138DAD127BF3B0C7180ACCDF75",
+    "recordPath": "docs/04-development-records/preparation/P0S-7-ED-C01/candidate-preparation-record.md",
+    "recordBytes": 32750,
+    "recordSha256": "559FCBCA985B2F6C43A0945B6271DAC97E93DE73FD0A25FBEB47DAC63643D204",
+    "predecessorMutation": "NOT_PERFORMED"
+  },
+  "inventoryRef": {
+    "path": "docs/04-development-records/preparation/P0S-7-ED-C01-CONTROL-INTEGRATION/input-inventory.json",
+    "bytes": 27677,
+    "sha256": "109BBFF4EDD6A47C8BC33E07F8967C0C32B55FBD9CD6B0229B8A1A172E15317C",
+    "domain": "REFERENCE",
+    "wholeInventoryFrozenInputUse": "FORBIDDEN"
+  },
+  "sourceSelection": {
+    "status": "READY_FOR_REVIEW_NOT_FROZEN",
+    "inventoryIds": [
+      "CI07", "CI08", "CI09", "CI10", "CI11", "CI12", "CI14", "CI15",
+      "CI16", "CI17", "CI18", "CI19", "CI20", "CI21", "CI22", "CI23",
+      "CI24", "CI25", "CI26", "CI27", "CI29", "CI30", "CI32", "CI33",
+      "CI34", "CI35", "CI36", "CI37"
+    ],
+    "count": 28,
+    "bytes": 137758,
+    "prospectiveDomain": "FROZEN_INPUT",
+    "actualFrozenInputs": 0,
+    "freezeStatus": "NOT_FROZEN",
+    "identityStatus": "SOURCE_IDENTITY_NOT_CREATED"
+  },
+  "referenceSelection": {
+    "phaseReferenceIds": ["CI01", "CI02", "CI03", "CI04", "CI05", "CI06", "CI13", "CI28", "CI31"],
+    "governanceReferenceIds": ["G01", "G02", "G03", "G04", "G05", "G06", "G07"],
+    "externalReferencePolicy": "Electron historical pool and tool Node remain REFERENCE; Node 22.19.0 remains missing with no fallback.",
+    "adoption": "REFERENCE_ONLY_NOT_TRANSITIVE_FROZEN_INPUT"
+  },
+  "sourceImplementation": {
+    "bootstrap": "READY_FOR_REVIEW_SOURCE_ONLY_EXTERNAL_SELECTION_FAIL_CLOSED",
+    "preflight": "READY_FOR_REVIEW_SOURCE_ONLY_FIXED_NINE_GATE_ORDER",
+    "driver": "READY_FOR_REVIEW_SOURCE_ONLY_ED_C01_SINGLE_FLOW",
+    "singleUseLedger": "READY_FOR_REVIEW_SOURCE_ONLY_ATOMIC_APPEND_FLUSH_READBACK",
+    "windowsControlAdapter": "PARTIALLY_RESOLVED_SOURCE_ONLY_HELPER_BINARY_MISSING",
+    "ipc": "PARTIALLY_RESOLVED_SOURCE_ONLY_BROKER_RUNTIME_MISSING",
+    "desktop": "READY_FOR_REVIEW_SOURCE_ONLY_NO_WORKER_LIFECYCLE_AUTHORITY",
+    "worker": "READY_FOR_REVIEW_SOURCE_ONLY_SINGLE_REQUEST_RELEASE_RESULT_STOP",
+    "evidence": "READY_FOR_REVIEW_SOURCE_ONLY_NO_RUNTIME_RECORDS_CREATED",
+    "sum3": "READY_FOR_REVIEW_SOURCE_ONLY_REAL_COMPUTATION_NOT_INVOKED"
+  },
+  "fieldPreparation": [
+    {
+      "futureField": "sourceIdentityRef",
+      "uniqueOwner": "SOURCE_IDENTITY",
+      "domain": "FROZEN_INPUT",
+      "status": "PARTIALLY_RESOLVED_SOURCE_ONLY",
+      "basis": "28 prospective source files and listed static edges are byte inventoried; no Identity/freeze/provenance acceptance exists.",
+      "blockerIds": ["B05"]
+    },
+    {
+      "futureField": "runtimeIdentityRef",
+      "uniqueOwner": "RUNTIME_IDENTITY",
+      "domain": "FROZEN_INPUT",
+      "status": "BLOCKED",
+      "basis": "Electron target/reference exists; Node 22.19.0, selected Driver/helper binary and ABI closure are absent.",
+      "blockerIds": ["B01", "B02", "B03", "B04"]
+    },
+    {
+      "futureField": "runtimeDefinitionRef",
+      "uniqueOwner": "RUNTIME_DEFINITION",
+      "domain": "FROZEN_INPUT",
+      "status": "PARTIALLY_RESOLVED_SOURCE_ONLY",
+      "basis": "Source fixes roles, Carrier, gate/start order, limits and fallback prohibitions; exact runtime argv/profile/roots/environment/roster remain absent.",
+      "blockerIds": ["B06", "B08"]
+    },
+    {
+      "futureField": "inputReference/taskInputRef/controlSchemaRefs",
+      "uniqueOwner": "SELECTED_INPUT_AND_CONTROL_OWNER",
+      "domain": "FROZEN_INPUT",
+      "status": "PARTIALLY_RESOLVED_SOURCE_ONLY",
+      "basis": "SUM3 task/oracle, V1 protocol and Evidence contracts exist as source; exact refs, validator adoption and freeze are absent.",
+      "blockerIds": ["B07"]
+    },
+    {
+      "futureField": "authorityAnchor",
+      "uniqueOwner": "INDEPENDENT_OWNER_AUTHORITY",
+      "domain": "FROZEN_INPUT",
+      "status": "BLOCKED",
+      "basis": "No independent S7 Anchor/public trust selection; Bootstrap forbids selection from HEAD/env/config.",
+      "blockerIds": ["B09"]
+    },
+    {
+      "futureField": "approvalReference",
+      "uniqueOwner": "PRIOR_SCOPE_AUTHORITY_APPROVAL",
+      "domain": "FROZEN_INPUT",
+      "status": "BLOCKED",
+      "basis": "Implementation and preparation approvals do not authorize Runtime Scope or launch.",
+      "blockerIds": ["B10"]
+    },
+    {
+      "futureField": "invocationPlanRef",
+      "uniqueOwner": "BOUNDED_PLAN_OWNER",
+      "domain": "FROZEN_INPUT",
+      "status": "BLOCKED",
+      "basis": "No Plan, Invocation, slot or usable budget was created; ledger source is not a ledger instance.",
+      "blockerIds": ["B10"]
+    },
+    {
+      "futureField": "schema/scope/finalSnapshot",
+      "uniqueOwner": "APPLICABLE_CONTRACT_AND_FUTURE_FREEZE_AUTHORITY",
+      "domain": "FROZEN_INPUT",
+      "status": "BLOCKED",
+      "basis": "This record type is a Candidate only; Final Snapshot creation/freeze is unauthorized.",
+      "blockerIds": ["B11"]
+    }
+  ],
+  "runtimeFactExclusions": [
+    "PID/processStartTime/executable observation/parent-child/token SID",
+    "endpoint/nonce/challenge/credential/session/generation/instance",
+    "launch/READY/TASK_ACCEPTED/release/result/stop/exit timestamps and observations",
+    "actual SUM3 result/Gate decision/verdict/failure/recovery/finalization",
+    "ledger slot consumption/remaining budget/evidence records"
+  ],
+  "blockers": [
+    { "id": "B01", "status": "BLOCKED" },
+    { "id": "B02", "status": "BLOCKED" },
+    { "id": "B03", "status": "PARTIALLY_RESOLVED_SOURCE_ONLY" },
+    { "id": "B04", "status": "PARTIALLY_RESOLVED_SOURCE_ONLY" },
+    { "id": "B05", "status": "PARTIALLY_RESOLVED_SOURCE_ONLY" },
+    { "id": "B06", "status": "PARTIALLY_RESOLVED_SOURCE_ONLY" },
+    { "id": "B07", "status": "PARTIALLY_RESOLVED_SOURCE_ONLY" },
+    { "id": "B08", "status": "BLOCKED" },
+    { "id": "B09", "status": "BLOCKED" },
+    { "id": "B10", "status": "BLOCKED" },
+    { "id": "B11", "status": "BLOCKED" }
+  ],
+  "readiness": {
+    "candidatePreparation": "COMPLETED",
+    "candidateReview": "READY_FOR_REVIEW",
+    "exactInputClosure": "BLOCKED",
+    "snapshotCreation": "BLOCKED",
+    "snapshotCreationReady": "NO",
+    "readyForExecution": "NO"
+  },
+  "boundary": {
+    "actualFrozenInputs": 0,
+    "runtimeFactsCreated": 0,
+    "finalSnapshot": "NOT_CREATED",
+    "binding": "NOT_CREATED",
+    "signature": "NOT_CREATED",
+    "key": "NOT_CREATED",
+    "runtime": "NOT_CREATED",
+    "invocation": "NOT_CREATED",
+    "preflight": "NOT_PERFORMED",
+    "tests": "NOT_PERFORMED",
+    "currentUsableExecutionBudget": 0,
+    "p0s7State": "NOT_STARTED",
+    "p0s7Allowed": "NO"
+  },
+  "promotionRule": "禁止通过改名、复制摘要、修改状态或引用本 Candidate/Inventory 自身来创建 Final Snapshot。未来必须先闭合精确输入并取得独立的创建、冻结、Binding、Signature、Activation 与执行权限。"
+}

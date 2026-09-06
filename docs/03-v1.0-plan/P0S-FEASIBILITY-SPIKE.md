@@ -1,8 +1,13 @@
 # P0.S — Desktop / Connection / Packaging Feasibility Spike
 
-Status: IN_PROGRESS (`SHACO_FORGE_V1_0_P0S = IN_PROGRESS`)
+Status: CLOSED / PASS (`SHACO_FORGE_V1_0_P0S = PASS`; `P0S = CLOSED`)
 
-Execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-5 are `PASS / CLOSED` with Architecture Owner-accepted constrained dispositions. P0.S remains `IN_PROGRESS`. The Owner-approved `P0S6-MEC-20260903-01` lifecycle is `EXHAUSTED_INCONCLUSIVE` after two `PRE_HYPOTHESIS` attempts, neither of which launched Electron or reached the Runtime Gate. `P0S6-DRRC-20260904-01` is also `EXHAUSTED_INCONCLUSIVE`: its sole Dependency Preparation invocation failed at `NPM_CI / EINTEGRITY`. P0.S-6 has neither PASS nor a technical FAIL and is not closed. Only bounded governance-only Lockfile Integrity Corrective Contract planning is authorized. Dependency Preparation retry, lockfile corrective implementation, Runtime, H-05/H-20 execution, Global Physical Attempt #3, experiment Commit, Push, and P0.S-7 are not authorized.
+> Latest P0.S-8 / P0.S authority (2026-09-06): use the
+> [Final P0.S-8 Architecture Freeze and P0.S Closure](#final-p0s-8-architecture-freeze-and-p0s-closure-2026-09-06).
+> The earlier P0.S-7 closure / P0.S-8 handoff section and its
+> `NOT_STARTED / NOT_AUTHORIZED` fields are historical pre-freeze records.
+
+Historical pre-closure summary: execution was authorized by `P0_CLOSURE_AUDIT = PASS` and `ALLOW_P0S = YES` in AUDIT-004B. P0.S-1 through P0.S-5 are `PASS / CLOSED` with Architecture Owner-accepted constrained dispositions. P0.S remains `IN_PROGRESS`. The Owner-approved `P0S6-MEC-20260903-01` lifecycle is `EXHAUSTED_INCONCLUSIVE` after two `PRE_HYPOTHESIS` attempts, neither of which launched Electron or reached the Runtime Gate. `P0S6-DRRC-20260904-01` is also `EXHAUSTED_INCONCLUSIVE`: its sole Dependency Preparation invocation failed at `NPM_CI / EINTEGRITY`. At that recording boundary, P0.S-6 had neither PASS nor a technical FAIL and was not closed. Only bounded governance-only Lockfile Integrity Corrective Contract planning was authorized; Dependency Preparation retry, lockfile corrective implementation, Runtime, H-05/H-20 execution, Global Physical Attempt #3, experiment Commit, Push, and P0.S-7 were not authorized.
 
 P0-7 frozen inputs (do not re-open P0; do not redesign this architecture):
 
@@ -601,9 +606,107 @@ Classify separately:
 
 If not required for core boot/parity, remove/defer from V1.0 release baseline.
 
-## P0.S-7 — Packaged Runtime Feasibility — NOT_STARTED / NOT_AUTHORIZED
+## P0.S-7 — Packaged Runtime Feasibility & Controlled Execution Validation — NOT_STARTED / NOT_AUTHORIZED
 
-Fresh Windows environment:
+Goal: **Packaged Runtime Feasibility & Controlled Execution Validation**.
+
+Planning reconciliation date: `2026-09-05`. All checks and outputs in this
+P0.S-7 section are future acceptance requirements. `P0S7_ALLOWED = NO` remains
+in force. This goal update supplies no startup authorization, Runtime creation,
+development work, test execution or new Invocation budget.
+
+### P0.S-6 Impact
+
+The planning basis is the completed P0.S-6 Technical Validation Extension:
+`STATE = CLOSED`, `RESULT = VERIFIED_WITH_CANDIDATE`, Verification and
+Classification `PASS`, Candidate `generated_not_applied`. Source and DRRC
+lockfiles remain unchanged and Runtime was not entered. See the
+[latest Current State](../00-governance/SHACO-FORGE-CURRENT-STATE.md#p0s-6-technical-validation-extension-final-closure-state-2026-09-05),
+[Final Closure Decision](../04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-FINAL-CLOSURE-DECISION.md)
+and [Lessons Learned](../04-development-records/P0S-6-TECHNICAL-VALIDATION-EXTENSION-LESSONS-LEARNED.md).
+Earlier P0.S-1 through P0.S-6 status text and execution records retain their
+historical meaning and remain unchanged by this planning reconciliation.
+
+P0.S-6's execution governance model will form the basis of subsequent Runtime
+and Agent Execution planning: Authority Anchor, Execution Snapshot, Trust Root,
+Snapshot Binding, Owner Signature, Final Preflight, Controlled Invocation and
+Evidence Finalization must have explicit responsibilities in the future model.
+Their P0.S-6 evidence does not establish that a packaged Runtime has been built
+or validated, and its consumed Invocation cannot be reused for P0.S-7.
+
+The inherited principles are:
+
+- **Snapshot based execution:** validate the approved Authority Anchor relationship
+  and exact Runtime execution Snapshot; use Snapshot Binding to identify approved
+  package and execution bytes. Do not embed a containing Git commit's own SHA or
+  substitute dynamic HEAD for an approved identity.
+- **Trust Root:** authenticate the Owner-approved key, Owner Signature and selected
+  Snapshot Reference independently. Manifest self-consistency cannot serve as the
+  sole trust root; a package's own declarations do not establish authorization.
+- **Evidence first:** define Runtime, failure and recovery evidence requirements
+  before execution; link them to package identity and the bounded Invocation, and
+  finalize the evidence for every reached terminal outcome.
+- **Fail closed:** missing or mismatched Authority, Snapshot, Trust Root or
+  Preflight prevents Runtime launch. Neither a successful package check nor a
+  historical PASS authorizes bypassing these gates.
+
+### Runtime Package Identity
+
+Future validation must cover:
+
+- **Package identity:** identify the exact Runtime package, provenance, component
+  inventory, entrypoint and platform / CPU architecture; bind that identity to the
+  approved Execution Snapshot.
+- **Package integrity:** compare actual package bytes and component hashes against
+  independently approved identities and Snapshot Binding before launch.
+- **Version consistency:** verify agreement between the package's declared version,
+  packaged Node / Worker / Harness versions, the pinned Harness baseline and the
+  applicable compatibility constraints. Any mismatch must produce failure evidence.
+
+Planned output: a package identity / integrity / version comparison record with
+traceable inputs and an explicit result for each check. This record is not yet
+created or classified by this planning update.
+
+### Controlled Runtime Launch
+
+Future validation must cover:
+
+- **Startup authorization:** establish separate Owner-approved P0.S-7 execution
+  authority, scope, budget and startup conditions; require Final Preflight before
+  crossing the authorized Runtime launch boundary.
+- **Execution boundary:** constrain the exact executable and package Snapshot,
+  arguments, environment, filesystem / network access, child-process ownership and
+  lifecycle. Runtime must not bypass Authority, Snapshot, Trust Root or Preflight.
+- **Failure handling:** reject unauthorized or inconsistent startup inputs before
+  launch; record startup, runtime and child-process failures with the reached
+  boundary and terminal result. Retry, restart or recovery requires its own explicit
+  authorized boundary and must not silently reuse a consumed Invocation.
+
+Planned output: a bounded launch decision and lifecycle record showing whether
+launch was permitted, which boundary was reached, and how failure was contained.
+
+### Runtime Evidence
+
+Future validation must cover:
+
+- **Runtime evidence generation:** capture the package / Snapshot / Invocation
+  identities, Preflight result, actual startup and process lifecycle, and the
+  terminal outcome in a traceable finalized evidence set.
+- **Failure evidence:** retain the first failure boundary, failed condition,
+  diagnostics and consumed budget, including evidence for a blocked launch;
+  a failed or unreached operation must not be reported as successful.
+- **Recovery evidence:** for separately authorized recovery scenarios, record the
+  originating failure, recovery authority, before / after identities, recovery
+  actions and outcome. If recovery is not authorized or reached, explicitly record
+  that state instead of inferring success.
+
+Planned output: Runtime, failure and recovery evidence records with integrity
+identities and Evidence Finalization. No such Runtime evidence is generated by
+this roadmap change.
+
+### Existing Packaged Runtime Feasibility Requirements
+
+Future acceptance environment: fresh Windows with:
 
 - no global Node
 - no pnpm
@@ -623,11 +726,42 @@ Hard checks:
 - PowerShell/helper paths
 - CPU arch policy (V1.0 may be x64-only)
 
-Code signing is not a P0.S hard gate.
+Code signing is not a P0.S hard gate. The inherited Owner Signature requirement
+authenticates execution approval and Snapshot identity; it remains mandatory
+regardless of this separate platform code-signing policy.
 
-## P0.S-8 — Closure
+## P0.S-8 — P0 Baseline Closure & Architecture Freeze — NOT_STARTED
 
-Every hypothesis:
+Goal: **P0 Baseline Closure & Architecture Freeze**.
+
+This is a future closure and freeze objective. Its architecture and development
+baseline are not frozen by this plan. P0.S-7 remains `NOT_STARTED / NOT_AUTHORIZED`,
+and this reconciliation does not authorize P0.S-8 execution or bypass the existing
+P0.S Hard Gate, P0.5 compatibility freeze or P1 detailed contract freeze.
+
+### Planned Freeze Scope
+
+| Baseline to freeze | Required definition for future closure |
+|---|---|
+| Client Architecture | Electron Client / Projection / Native Shell responsibilities, Renderer isolation, Client-to-Host contracts and accepted Client constraints |
+| Runtime Architecture | Packaged Node / Worker / Harness strategy, package identity and versions, controlled startup, process ownership, persistence and recovery boundaries |
+| Plugin Model | Required in-box Client modules, supported plugin scope, static inclusion / dynamic loading decisions, omission constraints and unresolved compatibility limits |
+| Agent Execution Model | Authority Anchor, Execution Snapshot, Snapshot Binding, Trust Root, Owner Signature, Final Preflight, Controlled Invocation, budgets and failure / recovery authorization |
+| Evidence Model | Package, Runtime, failure and recovery evidence identities, provenance, lifecycle records, terminal classifications, retention and Evidence Finalization |
+| Security Boundary | Trust-root ownership, authorization enforcement, current-user isolation, filesystem / network / process permissions and fail-closed behavior |
+| Development Baseline | Exact approved architecture and evidence references, version / compatibility assumptions, constraints, core patch inventory, accepted fallbacks and required P0.5 / P1 follow-up contracts |
+
+The future freeze must incorporate the P0.S-6 Impact principles above and the
+actual outcome of separately authorized P0.S-7 work. Snapshot based execution,
+Trust Root, Evidence first and Fail closed apply to both Runtime Architecture
+and Agent Execution Model. Candidate generation alone supplies no installed
+dependency baseline or Runtime PASS; unresolved Client / plugin / Runtime items
+must retain their evidence-backed disposition rather than becoming completed
+through a roadmap edit.
+
+### Planned Closure Evidence and Decision
+
+Every hypothesis must receive an evidence-backed disposition:
 
 - PROVEN
 - PROVEN_WITH_CONSTRAINT
@@ -635,6 +769,13 @@ Every hypothesis:
 - UNRESOLVED
 
 Must record evidence, constraint, production impact, required P1 contract, fallback, and core patch requirement.
+
+Planned outputs are a consolidated hypothesis / constraint / core-patch inventory,
+the seven baseline definitions above, exact supporting evidence references and an
+Architecture Owner closure / freeze decision. Existing P0 and P0.S-1 through
+P0.S-6 historical outcomes remain preserved. New freeze claims require their
+applicable evidence, review and approval; P0.S-8 remains `NOT_STARTED` until
+separately authorized work occurs.
 
 ## Failure Branch
 
@@ -687,3 +828,97 @@ Authority for the frozen names: P0-7 evidence section K. P0.S must not PASS unle
 - `P0S_CORE_PATCH_INVENTORY_COMPLETE` (`CORE_PATCH_REQUIREMENT` stays `POSSIBLE_REQUIRES_P0S` until this inventory; do not assume NONE; per-area YES/NO plus `ADAPTER_OR_STUB_USED`; adapter/stub ≠ Core Patch)
 
 Why renamed/added vs the pre-P0-7 list: P0-6 public/preview boot seams allow an approved loading model, not only a custom scheme; P0-5 made User Question REQUIRED; P0.S-5 Worker-restart and Cordis omission need named falsifiable gates. Source: P0-7 evidence K. These corrections do not change Desktop + Worker dual-core architecture.
+
+## Historical P0.S-7 Closure and P0.S-8 Pre-freeze Handoff (2026-09-06)
+
+This section records the historical P0.S-7 closure and P0.S-8 pre-freeze handoff;
+it is not the current P0.S-8 / P0.S authority. Current authority is the later
+[Final P0.S-8 Architecture Freeze and P0.S Closure](#final-p0s-8-architecture-freeze-and-p0s-closure-2026-09-06).
+All earlier text is retained as historical evidence, planning and Runtime-scope state. The
+[Roadmap Reassessment Decision](../04-development-records/P0S-ROADMAP-REASSESSMENT-DECISION.md)
+changed the current P0.S-7 objective from the old Enterprise Runtime route to
+Controlled Agent Execution Architecture Validation. The
+[Final Closure Decision](../04-development-records/P0S-7-CONTROLLED-AGENT-EXECUTION-ARCHITECTURE-VALIDATION-FINAL-CLOSURE-DECISION.md)
+closes that reassessed objective.
+
+```text
+P0S7_STATE = CLOSED
+P0S7_RESULT = CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATED
+P0S7_SCOPE = CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATION
+P0S7_PRODUCT_RUNTIME_EXECUTION = NOT_EXECUTED
+P0S7_ENTERPRISE_RUNTIME_VALIDATION = DEFERRED_TO_ENTERPRISE
+P0S7_V1_IMPLEMENTATION = NOT_STARTED
+P0S7_CAN_CLOSE = YES
+
+P0S8_STATE = NOT_STARTED
+P0S8_GOAL = V1_PRODUCT_ARCHITECTURE_FREEZE
+P0S8_FREEZE_INPUT_READY = YES
+P0S8_FREEZE_EXECUTED = NO
+P0S8_IMPLEMENTATION_STARTED = NO
+V1_IMPLEMENTATION_STARTED = NO
+```
+
+The closure validates Desktop Renderer / Main / Worker responsibility boundaries,
+Worker single-writer ownership, Product API Command / Query / Event separation,
+Agent Adapter isolation, independent Reviewer AgentRun, product identity relations,
+storage truth ownership, the five-state lifecycle, the five-page UI route and
+vertical-slice feasibility. Static prototypes, Control Plane, IPC, Candidate and
+audits are supporting architecture evidence only; they are not product Runtime
+acceptance.
+
+The historical `P0S7_STATE = NOT_STARTED` and `P0S7_ALLOWED = NO` fields applied
+to the old Runtime execution goal or to an unactivated stage. They remain unchanged
+as historical facts. They do not negate completed static architecture validation,
+and they do not mean Runtime was later authorized or executed.
+
+Enterprise Runtime, Trust Root, Signature, Cryptographic Binding, Windows Sandbox
+and Zero Trust Runtime are deferred to Enterprise. Product code, the real user
+loop, all four Agent Adapters, database creation/migration, Project Scan / File
+Index, Production Runtime and V1 tests remain unimplemented or unexecuted.
+
+At this historical pre-freeze handoff boundary, the next stage was P0.S-8 V1
+Product Architecture Freeze. Its input was ready, but P0.S-8 had not started,
+no freeze had occurred, and V1 implementation had not
+started. `V1-SLICE-1-SINGLE-AGENT-USER-CLOSURE` remains only a later sequencing
+recommendation and is not an implemented Slice.
+
+## Final P0.S-8 Architecture Freeze and P0.S Closure (2026-09-06)
+
+The [P0.S-8 V1 Product Architecture Freeze Decision](../04-development-records/P0S-8-V1-PRODUCT-ARCHITECTURE-FREEZE-DECISION.md),
+Decision ID `P0S8-V1-PRODUCT-ARCHITECTURE-FREEZE-20260906-01`, is the latest
+authority and closes this umbrella against the reassessed Product Architecture
+Freeze goal.
+
+```text
+P0S8_STATE = CLOSED
+P0S8_RESULT = V1_PRODUCT_ARCHITECTURE_FROZEN
+P0S8_GOAL = V1_PRODUCT_ARCHITECTURE_FREEZE
+P0S8_FREEZE_INPUT_READY = YES
+P0S8_FREEZE_EXECUTED = YES
+SHACO_FORGE_V1_0_P0S = PASS
+P0S = CLOSED
+V1_IMPLEMENTATION_READY = YES
+V1_IMPLEMENTATION_STARTED = NO
+```
+
+The Architecture Freeze is intentionally sufficient rather than exhaustive. It
+freezes the ten durable product architecture boundaries and defers implementable
+details, Recovery depth, performance/concurrency policy and Enterprise controls.
+It does not reinterpret any historical Spike as product Runtime evidence.
+
+`V1-SLICE-1-SINGLE-AGENT-USER-CLOSURE` is the recommended first implementation
+sequence after Owner verification: one real DeepSeek Adapter, explicit
+`NOT_IMPLEMENTED` ChatGPT/Codex/Reviewer stubs, Project/Chat/Task/Result pages and
+the `Desktop -> Worker -> DeepSeek Adapter -> Storage -> UI` path. History,
+Independent Review and the remaining full Adapter implementations remain part of
+V1.0 Final Scope but are not required in that first Slice.
+
+P0.5 and P1 remain as Compatibility/System Contract/production refinement work.
+They are neither deleted nor completed; only a contract actually required by a
+future Slice becomes that Slice's explicit Gate. Enterprise Runtime, Trust Root,
+Signature, Binding, Windows Sandbox, Zero Trust Runtime, supply-chain proof,
+enterprise fixtures/policy, tenant isolation and high-assurance execution remain
+outside all V1.0–V1.3 Gates.
+
+No product code, database, Runtime, Project Scan, File Index, Agent/Provider call,
+V1 test or Build was executed, and V1 implementation remains not started.

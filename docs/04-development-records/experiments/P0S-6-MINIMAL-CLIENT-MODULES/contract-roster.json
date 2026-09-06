@@ -1,0 +1,95 @@
+{
+  "contractId": "P0S6-MEC-20260903-01",
+  "slice": "ONE_FIXED_CLIENT_BOOT_SLICE",
+  "requiredRoster": [
+    "dsh-client-modules",
+    "dsh-client-connection",
+    "dsh-api-remotes",
+    "dsh-client-ui-theme",
+    "dsh-client-locale",
+    "dsh-client-ui-layout",
+    "dsh-client-ui-renderer",
+    "dsh-client-ui-session",
+    "dsh-client-ui-sidebar",
+    "dsh-client-ui-settings",
+    "dsh-client-ui-settings-general",
+    "dsh-client-ui-settings-models",
+    "dsh-client-ui-conversation",
+    "dsh-client-ui-approval",
+    "dsh-client-ui-chat",
+    "dsh-client-ui-tool",
+    "dsh-client-ui-workspace",
+    "dsh-client-ui-input-trigger",
+    "dsh-client-ui-commands",
+    "dsh-client-ui-subagent",
+    "dsh-client-ui-model-selection",
+    "dsh-client-ui-permission-presets",
+    "dsh-client-ui-user-questions"
+  ],
+  "requiredPackages": [
+    "@deepseek-ai/dsh-client-modules",
+    "@deepseek-ai/dsh-client-connection",
+    "@deepseek-ai/dsh-api-remotes",
+    "@deepseek-ai/dsh-client-ui-theme",
+    "@deepseek-ai/dsh-client-locale",
+    "@deepseek-ai/dsh-client-ui-layout",
+    "@deepseek-ai/dsh-client-ui-renderer",
+    "@deepseek-ai/dsh-client-ui-session",
+    "@deepseek-ai/dsh-client-ui-sidebar",
+    "@deepseek-ai/dsh-client-ui-settings",
+    "@deepseek-ai/dsh-client-ui-settings-general",
+    "@deepseek-ai/dsh-client-ui-settings-models",
+    "@deepseek-ai/dsh-client-ui-conversation",
+    "@deepseek-ai/dsh-client-ui-approval",
+    "@deepseek-ai/dsh-client-ui-chat",
+    "@deepseek-ai/dsh-client-ui-tool",
+    "@deepseek-ai/dsh-client-ui-workspace",
+    "@deepseek-ai/dsh-client-ui-input-trigger",
+    "@deepseek-ai/dsh-client-ui-commands",
+    "@deepseek-ai/dsh-client-ui-subagent",
+    "@deepseek-ai/dsh-client-ui-model-selection",
+    "@deepseek-ai/dsh-client-ui-permission-presets",
+    "@deepseek-ai/dsh-client-ui-user-questions"
+  ],
+  "supportClosure": [
+    "@deepseek-ai/dsh-typert-registry",
+    "@deepseek-ai/dsh-api-gateway",
+    "@deepseek-ai/dsh-api-session-controller",
+    "@deepseek-ai/dsh-api-workspace-controller"
+  ],
+  "platformStaticSeed": [
+    "react",
+    "react/jsx-runtime",
+    "react-dom",
+    "react-dom/client",
+    "@deepseek-ai/cordis",
+    "@deepseek-ai/dsh-client-store",
+    "@deepseek-ai/dsh-client-ui-slots",
+    "@deepseek-ai/dsh-client-ui-primitives"
+  ],
+  "omissions": [
+    {
+      "id": "@deepseek-ai/dsh-cordis-host-runner",
+      "runtimeActivation": "OMITTED"
+    },
+    {
+      "id": "@deepseek-ai/dsh-cordis-client-runner",
+      "graph": "OMITTED",
+      "registration": "OMITTED",
+      "activation": "OMITTED"
+    },
+    {
+      "id": "@deepseek-ai/dsh-client-ui-cordis",
+      "graph": "OMITTED",
+      "registration": "OMITTED",
+      "activation": "OMITTED"
+    },
+    {
+      "id": "@deepseek-ai/dsh-tool-cordis",
+      "graph": "OMITTED",
+      "registration": "OMITTED",
+      "activation": "OMITTED"
+    }
+  ]
+}
+

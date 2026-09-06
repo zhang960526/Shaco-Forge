@@ -1,0 +1,265 @@
+{
+  "recordType": "P0S7_SNAPSHOT_PREPARATION_CANDIDATE",
+  "recordVersion": 1,
+  "artifactStatus": "CANDIDATE_ONLY",
+  "freezeStatus": "NOT_FROZEN",
+  "executionStatus": "NOT_EXECUTED",
+  "scope": "ED-C01 / MINIMAL_CONTROLLED_RUNTIME_SPIKE / NOT_PRODUCTION",
+  "purpose": "非冻结候选选择与缺口目录；不是任何草稿/最终 Snapshot payload、Identity、Manifest、Binding、Plan 或可执行配置。",
+  "catalogSemantics": "下列 inventoryId 仅定位同目录 input-inventory.json 的说明性条目；不得将该文件整体作为冻结输入，也不得把目录 ID 当成内容身份。",
+  "sourceSelectionCandidates": [
+    {
+      "inventoryId": "S07",
+      "path": "experiments/P0S-7-MINIMAL-SPIKE/src/control/phase-a-policy.mjs",
+      "prospectiveDomain": "FROZEN_INPUT",
+      "status": "CANDIDATE_ONLY",
+      "freezeStatus": "NOT_FROZEN"
+    },
+    {
+      "inventoryId": "S09",
+      "path": "experiments/P0S-7-MINIMAL-SPIKE/src/desktop/index.html",
+      "prospectiveDomain": "FROZEN_INPUT",
+      "status": "CANDIDATE_ONLY",
+      "freezeStatus": "NOT_FROZEN"
+    },
+    {
+      "inventoryId": "S10",
+      "path": "experiments/P0S-7-MINIMAL-SPIKE/src/desktop/main.mjs",
+      "prospectiveDomain": "FROZEN_INPUT",
+      "status": "CANDIDATE_ONLY",
+      "freezeStatus": "NOT_FROZEN"
+    },
+    {
+      "inventoryId": "S11",
+      "path": "experiments/P0S-7-MINIMAL-SPIKE/src/desktop/preload.cjs",
+      "prospectiveDomain": "FROZEN_INPUT",
+      "status": "CANDIDATE_ONLY",
+      "freezeStatus": "NOT_FROZEN"
+    },
+    {
+      "inventoryId": "S12",
+      "path": "experiments/P0S-7-MINIMAL-SPIKE/src/desktop/renderer.css",
+      "prospectiveDomain": "FROZEN_INPUT",
+      "status": "CANDIDATE_ONLY",
+      "freezeStatus": "NOT_FROZEN"
+    },
+    {
+      "inventoryId": "S13",
+      "path": "experiments/P0S-7-MINIMAL-SPIKE/src/desktop/renderer.js",
+      "prospectiveDomain": "FROZEN_INPUT",
+      "status": "CANDIDATE_ONLY",
+      "freezeStatus": "NOT_FROZEN"
+    },
+    {
+      "inventoryId": "S16",
+      "path": "experiments/P0S-7-MINIMAL-SPIKE/src/ipc/named-pipe.mjs",
+      "prospectiveDomain": "FROZEN_INPUT",
+      "status": "CANDIDATE_ONLY",
+      "freezeStatus": "NOT_FROZEN"
+    },
+    {
+      "inventoryId": "S17",
+      "path": "experiments/P0S-7-MINIMAL-SPIKE/src/ipc/protocol.mjs",
+      "prospectiveDomain": "FROZEN_INPUT",
+      "status": "CANDIDATE_ONLY",
+      "freezeStatus": "NOT_FROZEN"
+    },
+    {
+      "inventoryId": "S18",
+      "path": "experiments/P0S-7-MINIMAL-SPIKE/src/stub/sum3.mjs",
+      "prospectiveDomain": "FROZEN_INPUT",
+      "status": "CANDIDATE_ONLY",
+      "freezeStatus": "NOT_FROZEN"
+    },
+    {
+      "inventoryId": "S19",
+      "path": "experiments/P0S-7-MINIMAL-SPIKE/src/worker/entry.mjs",
+      "prospectiveDomain": "FROZEN_INPUT",
+      "status": "CANDIDATE_ONLY",
+      "freezeStatus": "NOT_FROZEN"
+    },
+    {
+      "inventoryId": "S20",
+      "path": "experiments/P0S-7-MINIMAL-SPIKE/src/worker/state-machine.mjs",
+      "prospectiveDomain": "FROZEN_INPUT",
+      "status": "CANDIDATE_ONLY",
+      "freezeStatus": "NOT_FROZEN"
+    }
+  ],
+  "externalInputDisposition": [
+    {
+      "component": "Electron Desktop",
+      "decisionBasis": "G03 RC-01",
+      "chosenTarget": "35.7.5 / win32 / x64",
+      "catalogGroup": "P-ELECTRON",
+      "disposition": "HISTORICAL_REFERENCE_POOL_ONLY",
+      "exactInputAdmission": "BLOCKED"
+    },
+    {
+      "component": "Node Worker",
+      "decisionBasis": "G03 RC-02",
+      "chosenTarget": "22.19.0 / win32 / x64",
+      "exactBytes": "NOT_PROVIDED",
+      "disposition": "BLOCKED_NO_FALLBACK"
+    },
+    {
+      "component": "Driver / collector / Bootstrap",
+      "decisionBasis": "G03 RC-04 / G05",
+      "exactImplementation": "NOT_PROVIDED",
+      "disposition": "BLOCKED"
+    },
+    {
+      "component": "Windows control adapter",
+      "decisionBasis": "G03 RC-05",
+      "requirement": "REQUIRED",
+      "exactImplementationAndAbi": "UNKNOWN",
+      "disposition": "BLOCKED"
+    }
+  ],
+  "fieldPreparation": [
+    {
+      "futureField": "sourceIdentityRef",
+      "uniqueOwner": "SOURCE_IDENTITY",
+      "domain": "FROZEN_INPUT",
+      "freezeStatus": "NOT_FROZEN",
+      "status": "BLOCKED",
+      "availableBasis": "P-SOURCE + 11 个 source candidates；20-file pool 逐项区分",
+      "blockerIds": [
+        "B05"
+      ]
+    },
+    {
+      "futureField": "runtimeIdentityRef",
+      "uniqueOwner": "RUNTIME_IDENTITY",
+      "domain": "FROZEN_INPUT",
+      "freezeStatus": "NOT_FROZEN",
+      "status": "BLOCKED",
+      "availableBasis": "G03 目标选择；P-ELECTRON 原始字节参考；Node/Driver/Helper 实物未齐",
+      "blockerIds": [
+        "B01",
+        "B02",
+        "B03",
+        "B04"
+      ]
+    },
+    {
+      "futureField": "runtimeDefinitionRef",
+      "uniqueOwner": "RUNTIME_DEFINITION",
+      "domain": "FROZEN_INPUT",
+      "freezeStatus": "NOT_FROZEN",
+      "status": "BLOCKED",
+      "availableBasis": "G03/G06 规则是准备依据；精确 argv/profile/roster/根/环境单一所有者未交付",
+      "blockerIds": [
+        "B06",
+        "B08"
+      ]
+    },
+    {
+      "futureField": "inputReference / taskInputRef",
+      "uniqueOwner": "SELECTED_INPUT_AND_TASK_OWNER",
+      "domain": "FROZEN_INPUT",
+      "freezeStatus": "NOT_FROZEN",
+      "status": "BLOCKED",
+      "availableBasis": "SUM3_INPUT / SUM3_EXPECTED 与 G06 §3；schema/control/有限依赖尚需明确",
+      "blockerIds": [
+        "B07"
+      ]
+    },
+    {
+      "futureField": "authorityAnchor",
+      "uniqueOwner": "INDEPENDENT_OWNER_AUTHORITY",
+      "domain": "FROZEN_INPUT",
+      "freezeStatus": "NOT_FROZEN",
+      "status": "BLOCKED",
+      "availableBasis": "独立选择要求 G05 §3；HEAD 非 Anchor",
+      "blockerIds": [
+        "B09"
+      ]
+    },
+    {
+      "futureField": "approvalReference",
+      "uniqueOwner": "PRIOR_SCOPE_AUTHORITY_APPROVAL",
+      "domain": "FROZEN_INPUT",
+      "freezeStatus": "NOT_FROZEN",
+      "status": "BLOCKED",
+      "availableBasis": "仅可指先行 Scope Approval；G01 不是执行 Scope Approval",
+      "blockerIds": [
+        "B10"
+      ]
+    },
+    {
+      "futureField": "invocationPlanRef",
+      "uniqueOwner": "BOUNDED_PLAN_OWNER",
+      "domain": "FROZEN_INPUT",
+      "freezeStatus": "NOT_FROZEN",
+      "status": "BLOCKED",
+      "availableBasis": "只记录缺口，不创建 Plan 或真实运行标签",
+      "blockerIds": [
+        "B10"
+      ]
+    },
+    {
+      "futureField": "schema / scope",
+      "uniqueOwner": "APPLICABLE_CONTRACT",
+      "domain": "FROZEN_INPUT",
+      "freezeStatus": "NOT_FROZEN",
+      "status": "BLOCKED",
+      "availableBasis": "G04/G06 的未来模型语义；本 candidate 使用不同 recordType，非 payload",
+      "blockerIds": [
+        "B11"
+      ]
+    }
+  ],
+  "taskSourceLocation": {
+    "sourceInventoryId": "S18",
+    "inputSymbol": "SUM3_INPUT",
+    "expectedSymbol": "SUM3_EXPECTED",
+    "independentOracleBasis": "G06 §3 Deterministic Request and Oracle",
+    "status": "TEXT_LOCATED_NOT_INVOKED_NOT_FROZEN",
+    "futureTaskIdentity": "NOT_CREATED"
+  },
+  "excludedRuntimeFactCategories": [
+    "PID / processStartTime",
+    "generation / instanceId",
+    "endpoint / nonce / credential",
+    "launch / READY / result / stop timestamps",
+    "actual result / Gate verdict / PASS or FAIL",
+    "budget consumption / slot / remaining quota",
+    "host / SID / ACL observations"
+  ],
+  "blockerIds": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11"
+  ],
+  "readiness": {
+    "candidatePreparation": "COMPLETED",
+    "candidateReview": "READY_WITH_EXPLICIT_GAPS",
+    "snapshotCreation": "BLOCKED",
+    "exactInputClosure": "BLOCKED",
+    "finalSnapshotCreationAuthorized": "NO",
+    "readyForExecution": "NO"
+  },
+  "boundary": {
+    "finalSnapshot": "NOT_CREATED",
+    "binding": "NOT_CREATED",
+    "signature": "NOT_CREATED",
+    "key": "NOT_CREATED_THIS_SLICE",
+    "runtime": "NOT_CREATED",
+    "invocation": "NOT_CREATED",
+    "preflight": "NOT_PERFORMED",
+    "tests": "NOT_PERFORMED",
+    "currentUsableExecutionBudget": 0,
+    "p0s7State": "NOT_STARTED",
+    "p0s7Allowed": "NO"
+  },
+  "promotionRule": "不能通过改名、改状态或拷贝候选摘要形成 final snapshot；必须先闭合实际输入并取得独立适用批准。候选不含自身摘要或下游工件摘要。"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "shaco-forge-p0s6-minimal-client-modules",
+  "version": "0.0.0-not-production",
+  "private": true,
+  "type": "module",
+  "description": "P0.S-6 one-slice static Client module boot spike (NOT_PRODUCTION)",
+  "allowScripts": {
+    "electron@35.7.5": true
+  },
+  "devDependencies": {
+    "electron": "35.7.5"
+  }
+}
+

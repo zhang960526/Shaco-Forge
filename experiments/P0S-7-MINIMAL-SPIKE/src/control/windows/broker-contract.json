@@ -1,0 +1,55 @@
+{
+  "recordType": "SHACO_WINDOWS_CONTROL_BROKER_CONTRACT_V1",
+  "artifactStatus": "SOURCE_ONLY",
+  "executionStatus": "NOT_EXECUTED",
+  "availability": "HELPER_BINARY_NOT_CREATED",
+  "transport": {
+    "kind": "PREOPENED_PROTECTED_CONTROL_CHANNEL",
+    "argv": "FORBIDDEN_FOR_SECRET_OR_ENDPOINT_DELIVERY",
+    "environment": "FORBIDDEN_FOR_SECRET_OR_ENDPOINT_DELIVERY",
+    "maximumControlFrameBytes": 16384,
+    "unknownOperation": "REJECT"
+  },
+  "requiredCapabilities": [
+    "PROCESS_IDENTITY_PID_START_PATH",
+    "PROCESS_PARENT_IDENTITY",
+    "PROCESS_TOKEN_SID",
+    "NAMED_PIPE_CLIENT_PROCESS_ID",
+    "NAMED_PIPE_SERVER_PROCESS_ID",
+    "CURRENT_USER_ONLY_PIPE_ENDPOINT",
+    "JOB_OBJECT_RESOURCE_OWNERSHIP",
+    "BOUNDED_STOP_AND_EXIT_OBSERVATION"
+  ],
+  "operations": [
+    "BOOTSTRAP_EXACT_HELPER_IDENTITY",
+    "INSPECT_CURRENT_PROCESS",
+    "INSPECT_PROCESS",
+    "CREATE_PROTECTED_PIPE",
+    "ATTEST_NAMED_PIPE_PEER",
+    "LAUNCH_IN_OWNED_JOB",
+    "ASSERT_RESOURCE_OWNERSHIP",
+    "OBSERVE_EXIT",
+    "BOUNDED_STOP"
+  ],
+  "processIdentity": {
+    "required": [
+      "pid",
+      "processStartTimeFileTime",
+      "executablePath",
+      "executableRef",
+      "tokenSid",
+      "parent",
+      "generation"
+    ],
+    "pidAloneIsIdentity": false,
+    "roleOrNonceIsOsIdentity": false
+  },
+  "pipeEndpointPolicy": {
+    "carrier": "WINDOWS_NAMED_PIPE_ONLY",
+    "currentUserOnly": true,
+    "maximumInstancesPerRoleEndpoint": 1,
+    "tcpHttpFallback": false,
+    "runtimeCarrierSwitch": false
+  },
+  "boundary": "This contract and the adjacent C# source are not a built, selected, trusted, or available helper. Missing exact executable/ABI/identity must fail closed."
+}
