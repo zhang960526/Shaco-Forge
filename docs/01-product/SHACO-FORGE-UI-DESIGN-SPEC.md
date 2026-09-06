@@ -585,11 +585,11 @@ OWNER_DECISIONS_STILL_REQUIRED = NONE
 
 具体 Hex、px、字体、图标库和动画时长继续属于实现采样后的 `DRAFT_TOKEN` 收敛，不应在没有候选方案与界面验证时升级为 Owner 决策。
 
-## 42. Slice 1A UI Implementation Guidance
+## 42. V1-SLICE-1 UI Implementation Guidance
 
 **Status: `FROZEN_FOR_V1_0` for scope guidance**
 
-Slice 1A 不追求 pixel perfection。必须完成：
+以下完整 UI 目标属于 `V1-SLICE-1`，而不是 `V1-SLICE-1A` 的完成 Gate：
 
 - Shaco Desktop Shell。
 - Primary `CHAT` menu。
@@ -604,7 +604,42 @@ Slice 1A 不追求 pixel perfection。必须完成：
 - Native Workspace Picker 入口。
 - 基本视觉层级、键盘 Focus 与关键 Loading/Error/Empty state。
 
-Slice 1A 暂不要求：
+`V1-SLICE-1` 的最终实现验收检查真实用户闭环：选择有效 Workspace → 创建/选择
+Session → 输入 Prompt → Streaming → Tool/Result → 必要 Approval/Question；同时确认
+Project 在 Mode 切换中保持、无 Project 不出现假 Chat、连接状态真实、Harness-owned
+设置未被复制。若 pinned Harness 的既有 UI 可以满足需求，优先复用；Shaco 适配只解决
+Shell、Native、Carrier、Reconnect 和 truthful projection。
+
+### 42.1 V1-SLICE-1A UI Boundary
+
+`V1-SLICE-1A` 限定为 `PRODUCT BOOTSTRAP + REAL HARNESS CLIENT BOOT`，不追求
+pixel perfection。其 UI 最小要求是：
+
+- Desktop Shell。
+- Chat entry 与 Settings entry。
+- Project / Workspace selector shell。
+- Session sidebar shell。
+- 挂载 real pinned Harness Client。
+- Light initial theme。
+- truthful Worker / Connection state。
+- No Project、disconnected 与 not-yet-connected state。
+- 基本键盘 Focus、Loading 与 Error structure。
+
+若真实 Harness data 尚未连接，允许显示 truthful unavailable / disconnected
+state。不得显示 fake Project、fake Session、fake streaming 或 fake Tool result。
+
+`V1-SLICE-1A` 不要求：
+
+- real Prompt execution。
+- real Streaming completion。
+- real Tool execution。
+- complete Approval flow。
+- configured Provider network call 或 Provider Credential loop。
+- Workspace / Session full lifecycle。
+- full physical Carrier、Reconnect 或 Packaging。
+
+这些能力在 `V1-SLICE-1` 的后续内部实现步骤中闭合。以下高级 Surface 同样不属于
+`V1-SLICE-1A` 要求：
 
 - Trajectory 独立 Surface。
 - Automation UI。
@@ -613,8 +648,6 @@ Slice 1A 暂不要求：
 - Full Appearance Settings。
 - Advanced Diagnostics / Advanced Session Log。
 - 最终动画、最终 Token 或最终像素 Polish。
-
-实现验收时优先检查真实用户闭环：选择有效 Workspace → 创建/选择 Session → 输入 Prompt → Streaming → Tool/Result → 必要 Approval/Question；同时确认 Project 在 Mode 切换中保持、无 Project 不出现假 Chat、连接状态真实、Harness-owned 设置未被复制。若 pinned Harness 的既有 UI 可以满足需求，优先复用；Shaco 适配只解决 Shell、Native、Carrier、Reconnect 和 truthful projection。
 
 ## 43. Explicit Non-Goals
 

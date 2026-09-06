@@ -16,6 +16,12 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 > `HARNESS_REUSE_PRODUCTIZATION`. P0.S remains `CLOSED`; its architecture
 > sufficiency and technical Evidence remain unchanged.
 
+> Accepted V1.0 technical baseline (2026-09-06):
+> [V1.0 Technical Implementation Baseline](../02-architecture/SHACO-FORGE-V1.0-TECHNICAL-IMPLEMENTATION-BASELINE.md)
+> is `ACTIVE / OWNER_ACCEPTED` after `REVIEW-011 / PASS`. It does not start
+> Product implementation or Slice 1A. V1 Product implementation must read it
+> before implementation.
+
 ## 1. Authority Order
 
 当文档之间出现冲突时，默认按以下顺序判断当前事实：
@@ -59,7 +65,9 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 | `SHACO-FORGE-HARNESS-INTEGRATION-BOUNDARY.md` | Harness Host/Client/Connection 边界 | ACTIVE-PRE-P1 |
 | `SHACO-FORGE-DATA-OWNERSHIP.md` | Harness 与 Shaco 数据所有权 | ACTIVE-PRE-P1 |
 | `SHACO-FORGE-SECURITY-MODEL.md` | 当前威胁模型基线 | ACTIVE-PRE-P1 |
+| `SHACO-FORGE-V1.0-TECHNICAL-IMPLEMENTATION-BASELINE.md` | V1.0 production technology/runtime/toolchain implementation baseline | ACTIVE / OWNER_ACCEPTED |
 | `decisions/ADR-*.md` | 已接受架构决策 | ACTIVE |
+| `decisions/ADR-0008-TYPESCRIPT-ELECTRON-NODE-PRODUCTION-BASELINE.md` | Accepted V1.0 primary language/runtime and just-in-time native-helper decision | ACCEPTED |
 
 ## 5. V1.0 Plan
 
@@ -165,9 +173,10 @@ P0.5 Compatibility and P1 System Contract remain in the roadmap, but their full
 completion is not a blanket prerequisite for the first V1 vertical Slice. A Slice
 must explicitly gate only the P0.5/P1 contract it actually requires.
 
-P0.S final closure is accepted. The later Harness-reuse Corrective changes the
-current next action to `V1-SLICE-1-REAL-HARNESS-USER-LOOP`; neither the closure
-baseline nor the Corrective starts it.
+P0.S final closure is accepted. The later Harness-reuse Corrective recorded
+`V1-SLICE-1-REAL-HARNESS-USER-LOOP` as its next action; neither the closure
+baseline nor the Corrective started it. The newer Technical Implementation
+Baseline candidate now gates that Slice behind Independent Review.
 
 ## 6. Development Records
 
@@ -200,6 +209,7 @@ baseline nor the Corrective starts it.
 | `architecture/AUDIT-008-P0S4-INDEPENDENT-REVIEW.md` | Faithful persisted summary of external P0.S-4 Review and Corrective Re-Review (`PASS`; 146-check equivalent-driver reproduction; Owner accepted `MET_WITH_CONSTRAINT` and closed P0.S-4) |
 | `architecture/AUDIT-009-P0S5-INDEPENDENT-REVIEW.md` | Faithful persisted summary of external P0.S-5 Review, Documentation Corrective and Corrective Re-Review (`PASS`; Owner accepted `MET_WITH_CONSTRAINT` and closed P0.S-5; P0.S-6 execution separately gated) |
 | `architecture/AUDIT-010-P0S8-FINAL-CLOSURE.md` | Faithful persisted summary of external P0.S-8 Final Closure Audit (`PASS`; Owner accepted; P0.S final closed; V1-SLICE-1 allowed) |
+| `architecture/AUDIT-011-V1-TECHNICAL-IMPLEMENTATION-BASELINE.md` | Faithful persisted summary of Independent V1.0 Technical Implementation Baseline Review (`PASS`; Owner accepted; F-01/F-02/F-03 closed during acceptance) |
 | `implementation/` | 实现审计 |
 | `corrective/` | Corrective 审计 |
 | `templates/` | Review 模板 |

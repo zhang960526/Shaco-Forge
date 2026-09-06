@@ -2,6 +2,61 @@
 
 Status: ACTIVE
 
+## 2026-09-06 — V1.0 Technical Implementation Baseline Accepted
+
+- Independent REVIEW-011 returned `PASS`; Blocking Findings are `NONE`.
+- F-01/F-02 LOW and F-03 INFO were closed during Architecture Owner Acceptance.
+- Architecture Owner accepted the TypeScript / Electron / independent Node
+  Worker baseline and accepted ADR-0008.
+- Pinned Harness reuse through `dsh --profile` remains required, and the
+  just-in-time-only C#/.NET native-helper boundary is accepted.
+- Physical carrier implementation remains Slice 1B gated; renderer bundler,
+  Control Store driver/schema details, helper existence/runtime, packaging,
+  installer and future modules remain Slice-gated or intentionally unfrozen.
+- Product Implementation remains `NOT_STARTED`; Slice 1A remains `NOT_STARTED`.
+  The next action returns to the UI Navigation Architecture Corrective, which
+  has not yet been executed.
+- No Product Code, Build, Test, Runtime, Harness or P0.S modification was
+  performed. Push was not performed.
+
+## 2026-09-06 — V1.0 Technical Baseline Pre-Review Corrective
+
+- Corrected F-01 Slice 1A scope drift: the full real Harness user loop belongs
+  to `V1-SLICE-1`; internal `V1-SLICE-1A` is bounded to Product Bootstrap +
+  Real Harness Client Boot.
+- Corrected the UI Spec Section 42 scope label and recorded the truthful,
+  no-fake-data Slice 1A UI boundary without reopening the accepted visual
+  baseline.
+- Corrected F-02 renderer framework authority classification: the pinned Harness
+  Client React `18.3.1` composition is an upstream fact, while Shaco's
+  reuse-first/no-new-framework policy remains a Technical Baseline candidate.
+- Corrected F-03 candidate/frozen wording in the Renderer composition and Source
+  Layout sections; the baseline remains a candidate pending Independent Review
+  and Architecture Owner acceptance.
+- Independent Review remains pending. Product implementation and Slice 1A remain
+  not started. No Build, Test, Runtime, Harness modification, commit or push was
+  performed.
+
+## 2026-09-06 — V1.0 Technical Implementation Baseline Candidate Created
+
+- Created `SHACO-FORGE-V1.0-TECHNICAL-IMPLEMENTATION-BASELINE.md` as
+  `DRAFT_CANDIDATE / WAITING_INDEPENDENT_REVIEW`.
+- Proposed TypeScript for Desktop Main, Preload, Renderer and the independent
+  Node Worker; proposed Electron `35.7.5`, Worker Node `22.19.0`, pnpm `11.7.0`
+  and TypeScript `6.0.3` as exact V1.0 baseline candidates.
+- Preserved pinned Harness reuse through `dsh --profile`, the Harness-owned
+  business truth boundary, authenticated local carrier requirement, minimal
+  SQLite Control Store and no-system-Node/no-system-pnpm release outcome.
+- Recorded reuse of the pinned Harness Client React composition without adding a
+  new renderer framework; kept the exact bundler and production physical carrier
+  Slice-gated.
+- Created proposed ADR-0008 for the TypeScript/Electron/Node choice and the
+  just-in-time-only C#/.NET native-helper policy. It is not accepted or frozen.
+- Set `V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PENDING`,
+  `V1_SLICE_1A = NOT_STARTED` and the next action to independent review.
+- No Product Code, Slice execution, Build, Test, Runtime, Harness/UI Spec/P0.S
+  modification, commit or push was performed.
+
 ## 2026-09-06 — V1.0 UI Design Baseline Accepted
 
 - Created `SHACO-FORGE-UI-DESIGN-SPEC.md` as the UI Single Source of Truth;

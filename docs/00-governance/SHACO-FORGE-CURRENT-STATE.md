@@ -30,7 +30,7 @@ Last Updated: 2026-09-06
 
 - Phase: P0.S — Desktop / Connection / Packaging Feasibility Spike — `CLOSED / PASS`
 - Step: P0.S-8 V1 Product Architecture Freeze — `CLOSED`; architecture is sufficient for V1.0–V1.3 development
-- Current Authorized Scope: P0.S closure synchronization complete; V1 implementation is ready but remains not started
+- Current Authorized Scope: V1.0 Technical Implementation Baseline and ADR-0008 accepted; UI Navigation Architecture Corrective discussion is next; V1 implementation remains not started
 - Production Implementation: NOT_STARTED
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -59,7 +59,13 @@ Last Updated: 2026-09-06
 - `V1_0_SCOPE_CORRECTIVE = APPLIED`
 - `V1_IMPLEMENTATION_READY = YES`
 - `V1_IMPLEMENTATION_STARTED = NO`
-- `V1_CURRENT_NEXT_ACTION = V1-SLICE-1-REAL-HARNESS-USER-LOOP`
+- `V1_CURRENT_NEXT_ACTION = UI_NAVIGATION_ARCHITECTURE_CORRECTIVE_BEFORE_SLICE_1A`
+- `V1_TECHNICAL_IMPLEMENTATION_BASELINE = ACCEPTED`
+- `V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PASS`
+- `V1_TECHNICAL_IMPLEMENTATION_BASELINE_OWNER_ACCEPTED = YES`
+- `V1_TECHNICAL_BASELINE_REVIEW_OWNER_ACCEPTED = YES`
+- `V1_SLICE_1A = NOT_STARTED`
+- `UI_NAVIGATION_ARCHITECTURE_CORRECTIVE = NOT_STARTED`
 - `UI_SPEC_STATUS = ACTIVE`
 - `UI_SPEC_OWNER_REVIEW = PASS`
 - `UI_DESIGN_BASELINE_READY = YES`
@@ -477,12 +483,16 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - P0.5 Design: retained as Compatibility work; specific contracts become Slice gates only when required
 - P1 Detailed Freeze: retained as System/Cross-cutting Contract work; specific contracts become Slice gates only when required
 - V1 implementation: READY; not started
+- V1.0 Technical Implementation Baseline: `ACCEPTED`; Independent REVIEW-011 `PASS`; Architecture Owner accepted
+- V1 Slice 1A: `NOT_STARTED`
 
 ## Immediate Next Action
 
-Prepare `V1-SLICE-1-REAL-HARNESS-USER-LOOP`. The Architecture Owner has accepted
-the V1.0 Harness-reuse implementation-scope Corrective. This action itself does
-not begin V1 implementation; do not treat P0.5/P1 as deleted or complete.
+Continue UI information-architecture discussion through the bounded UI Navigation
+Architecture Corrective before Slice 1A. This corrective has not yet been
+executed and does not change the implementation route: `V1-SLICE-1` remains the
+next formal Product Implementation Slice. Do not begin Slice 1A until separately
+authorized; do not treat P0.5/P1 as deleted or complete.
 
 No V1 implementation, product Runtime, database, Project Scan / File Index,
 Agent / Provider call or V1 test was executed by the P0.S-8 freeze.
@@ -648,7 +658,13 @@ V1_0_PROVIDER_MODEL_OWNERSHIP = HARNESS
 V1_0_SCOPE_CORRECTIVE = APPLIED
 V1_IMPLEMENTATION_READY = YES
 V1_IMPLEMENTATION_STARTED = NO
-V1_CURRENT_NEXT_ACTION = V1-SLICE-1-REAL-HARNESS-USER-LOOP
+V1_CURRENT_NEXT_ACTION = UI_NAVIGATION_ARCHITECTURE_CORRECTIVE_BEFORE_SLICE_1A
+V1_TECHNICAL_IMPLEMENTATION_BASELINE = ACCEPTED
+V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PASS
+V1_TECHNICAL_IMPLEMENTATION_BASELINE_OWNER_ACCEPTED = YES
+V1_TECHNICAL_BASELINE_REVIEW_OWNER_ACCEPTED = YES
+V1_SLICE_1A = NOT_STARTED
+UI_NAVIGATION_ARCHITECTURE_CORRECTIVE = NOT_STARTED
 
 PROVIDER_MODEL_ROUTING = HARNESS_OWNED
 SHACO_PROVIDER_FRAMEWORK_V1_0 = NOT_REQUIRED
