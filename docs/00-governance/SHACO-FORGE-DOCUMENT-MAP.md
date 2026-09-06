@@ -46,6 +46,9 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 | `SHACO-FORGE-PRODUCT-VISION.md` | 长期产品方向 | DRAFT-FROZEN-BASELINE |
 | `SHACO-FORGE-VERSION-ROADMAP.md` | 1.0/1.1/1.2/1.3 路线 | DRAFT-FROZEN-BASELINE |
 | `SHACO-FORGE-V1.0-MASTER-GOAL.md` | V1.0 完成定义 | ACTIVE |
+| `SHACO-FORGE-UI-DESIGN-SPEC.md` | Shaco Forge UI Single Source of Truth / V1.0 UI baseline and V1.1–V1.3 extension direction | ACTIVE |
+
+UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` when relevant.
 
 ## 4. Architecture
 

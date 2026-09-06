@@ -2,6 +2,20 @@
 
 Status: ACTIVE
 
+## 2026-09-06 — V1.0 UI Design Baseline Accepted
+
+- Created `SHACO-FORGE-UI-DESIGN-SPEC.md` as the UI Single Source of Truth;
+  Architecture Owner review is `PASS`.
+- Accepted the V1.0 project-first, one-shell and Chat + Settings UI baseline,
+  including the Harness-reuse UI ownership boundary.
+- Retained future Automation / Multi-Agent extension seams without creating V1.0
+  placeholder surfaces.
+- Set `V1_0_INITIAL_PRIMARY_THEME = LIGHT` while retaining
+  `DESIGN_SYSTEM_LIGHT_DARK_CAPABLE = YES` and all unresolved visual values as
+  `DRAFT_TOKEN`.
+- `UI_DIRECTION_READY_FOR_SLICE_1A = YES`; Product Implementation remains
+  `NOT_STARTED`. No Product Build, Test or Runtime was performed.
+
 ## 2026-09-06 — V1.0 Harness-Reuse Implementation Scope Corrective Applied
 
 - Created the final Architecture Owner Decision
