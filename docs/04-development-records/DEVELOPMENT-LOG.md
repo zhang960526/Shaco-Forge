@@ -2,6 +2,31 @@
 
 Status: ACTIVE
 
+## 2026-09-06 — V1.0 Harness-Reuse Implementation Scope Corrective Applied
+
+- Created the final Architecture Owner Decision
+  `V1-0-HARNESS-REUSE-SCOPE-CORRECTIVE-20260906-01` and applied
+  `V1_0_IMPLEMENTATION_SCOPE = HARNESS_REUSE_PRODUCTIZATION`.
+- Corrected only the expanded V1.0 Implementation Scope Allocation in the V1
+  Product Architecture Plan and P0.S-8-derived implementation sequence. P0.S-8
+  retains its foundational architecture value; `P0S = CLOSED` and
+  `P0S_FINAL_CLOSURE_OWNER_ACCEPTED = YES` remain unchanged.
+- Confirmed Harness ownership of Provider/model/API endpoint/relay configuration,
+  credentials, Workspace, Session/history/transcript, Agent Runtime, tools and
+  permission/approval runtime. Shaco V1.0 does not build a Provider framework or
+  a second Provider credential/settings truth.
+- Removed from the current V1.0 implementation requirement: four Provider
+  Adapters, independent Reviewer pipeline, Shaco Task state machine and
+  Conversation/Task/AgentRun/Result database, five custom product pages, and
+  Project Scan/File Index or ContextSelection truth where Harness already
+  supplies the V1.0 capability.
+- Preserved future Automation/Multi-Agent seams through multiple Harness Session
+  references and adopted the four-Slice route beginning with
+  `V1-SLICE-1-REAL-HARNESS-USER-LOOP`.
+- V1 implementation remains ready but not started. No product code, Build, Test,
+  Runtime, database, Provider call, P0.S technical Evidence or protected product
+  baseline document was changed by this corrective.
+
 ## 2026-09-06 — P0.S Final Closure Audit Accepted
 
 - Persisted `AUDIT-010-P0S8-FINAL-CLOSURE.md` as the faithful summary of the

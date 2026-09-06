@@ -10,6 +10,12 @@ Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 > Earlier P0.S-6 / P0.S-7 Runtime and P0.S-8 handoff text remains historical.
 > See the [current closure authority](#current-p0s-8-and-p0s-closure-authority-2026-09-06).
 
+> Latest V1.0 implementation-scope authority (2026-09-06): the
+> [V1.0 Harness Reuse Implementation Scope Corrective Decision](../04-development-records/V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md)
+> corrects only V1.0 Implementation Scope Allocation to
+> `HARNESS_REUSE_PRODUCTIZATION`. P0.S remains `CLOSED`; its architecture
+> sufficiency and technical Evidence remain unchanged.
+
 ## 1. Authority Order
 
 当文档之间出现冲突时，默认按以下顺序判断当前事实：
@@ -156,14 +162,16 @@ P0.5 Compatibility and P1 System Contract remain in the roadmap, but their full
 completion is not a blanket prerequisite for the first V1 vertical Slice. A Slice
 must explicitly gate only the P0.5/P1 contract it actually requires.
 
-P0.S final closure is accepted. The next stage is
-`V1-SLICE-1-SINGLE-AGENT-USER-CLOSURE`; this baseline action does not start it.
+P0.S final closure is accepted. The later Harness-reuse Corrective changes the
+current next action to `V1-SLICE-1-REAL-HARNESS-USER-LOOP`; neither the closure
+baseline nor the Corrective starts it.
 
 ## 6. Development Records
 
 | Document/Folder | Role |
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
+| `V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md` | Current V1.0 Harness-reuse implementation-scope allocation authority; P0.S remains closed |
 | `P0S-8-V1-PRODUCT-ARCHITECTURE-FREEZE-DECISION.md` | P0.S-8 sufficient Architecture Freeze and P0.S umbrella closure authority |
 | `P0S-7-CONTROLLED-AGENT-EXECUTION-ARCHITECTURE-VALIDATION-FINAL-CLOSURE-DECISION.md` | P0.S-7 reassessed-scope Final Closure Decision; latest P0.S-7 closure authority |
 | `ISSUE-AND-BUG-INDEX.md` | Bug / Incident 索引 |

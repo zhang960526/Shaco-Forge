@@ -2,6 +2,11 @@
 
 Status: ACTIVE
 
+> Current V1.0 implementation-scope authority (2026-09-06):
+> [V1.0 Harness Reuse Implementation Scope Corrective Decision](../04-development-records/V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md).
+> P0.S remains `CLOSED`; V1 implementation is ready but not started. The current
+> next action is `V1-SLICE-1-REAL-HARNESS-USER-LOOP`.
+
 ## Phase Order
 
 ```text
@@ -189,11 +194,49 @@ deleted or completed, but their entire completion is not a blanket prerequisite
 for the first V1 vertical Slice. A concrete Slice must explicitly gate the P0.5
 or P1 contract it needs.
 
-The recommended first sequence is `V1-SLICE-1-SINGLE-AGENT-USER-CLOSURE`: one
-real DeepSeek Adapter; explicit `NOT_IMPLEMENTED` ChatGPT/Codex/Reviewer stubs;
-Project, Chat, Task and Result pages; and the Desktop-to-Worker-to-Adapter-to-
-Storage-to-UI path. This is sequencing only and has not started. V1.0 Final Scope
-still includes History, Independent Review and four minimally usable Adapters.
+The earlier recommended sequence `V1-SLICE-1-SINGLE-AGENT-USER-CLOSURE` and its
+four-Adapter/five-page/Task/Reviewer allocation are superseded for V1.0
+implementation by the Harness-reuse Corrective. They remain historical records
+of the expanded allocation and do not reopen or invalidate the P0.S-8
+foundational architecture freeze.
+
+### Current V1.0 Harness-Reuse Slice Route (2026-09-06)
+
+Authority:
+[V1.0 Harness Reuse Implementation Scope Corrective Decision](../04-development-records/V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md),
+Decision ID `V1-0-HARNESS-REUSE-SCOPE-CORRECTIVE-20260906-01`.
+
+```text
+V1_0_SCOPE_RECONCILIATION = COMPLETED
+V1_0_IMPLEMENTATION_SCOPE = HARNESS_REUSE_PRODUCTIZATION
+V1_0_PROVIDER_MODEL_OWNERSHIP = HARNESS
+V1_0_SCOPE_CORRECTIVE = APPLIED
+V1_IMPLEMENTATION_READY = YES
+V1_IMPLEMENTATION_STARTED = NO
+V1_CURRENT_NEXT_ACTION = V1-SLICE-1-REAL-HARNESS-USER-LOOP
+```
+
+The current Slice route is:
+
+1. `V1-SLICE-1 — REAL HARNESS USER LOOP`: Desktop -> Worker -> Harness Host ->
+   Harness Client -> configured Harness Provider/model -> Workspace -> Session ->
+   Prompt -> Streaming -> Tool/Result. The primary default validation is the
+   DeepSeek official route, without hard-coding Provider routing in Shaco.
+2. `V1-SLICE-2 — LIFECYCLE / NATIVE / RECONNECT`: Worker lifecycle and discovery,
+   native bridges/picker, Desktop independence, reconnect and truthful projection.
+3. `V1-SLICE-3 — PACKAGING / COMPATIBILITY / RELEASE`: bundled Node/Harness,
+   controlled `DSH_HOME`, authenticated carrier, compatibility/fail-closed,
+   installer and minimal upgrade/backup/rollback.
+4. `V1-SLICE-4 — FRESH WINDOWS FINAL ACCEPTANCE`: fresh supported Windows final
+   acceptance without new feature development.
+
+Harness owns Provider/model/API endpoint/relay configuration, credentials,
+Workspace, Session, conversation runtime, tools and permission/approval runtime.
+V1.0 does not require a Shaco Provider framework, a second credentials/settings
+truth, independent Reviewer pipeline, Shaco Task state machine/database, five
+custom pages or future empty tables. Multi-model support reuses Harness;
+Multi-Agent orchestration is a future Shaco domain that can reference multiple
+Harness Sessions.
 
 ## P0.5
 

@@ -11,6 +11,15 @@
 | Planning Basis | `P0S-ROADMAP-REASSESSMENT-20260906-01` |
 | Execution Authority | `NONE` |
 
+> **Current V1.0 implementation-scope authority (2026-09-06):**
+> [V1.0 Harness Reuse Implementation Scope Corrective Decision](../04-development-records/V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md),
+> Decision ID `V1-0-HARNESS-REUSE-SCOPE-CORRECTIVE-20260906-01`, supersedes
+> only this plan's expanded V1.0 Implementation Scope Allocation. Sections that
+> assign four Provider Adapters, an independent Reviewer pipeline, a Shaco Task
+> state machine/database, five custom pages, Project Scan/File Index or
+> ContextSelection truth to V1.0 are retained as historical architecture-planning
+> input and are not current V1.0 implementation requirements. P0.S remains closed.
+
 ## 0. Plan Position
 
 本计划把 Shaco Forge V1 重新组织为一个可交付的 AI 辅助软件开发工作台。首要目标是让用户从选择项目开始，完成创建任务、Agent 分析、Agent 执行、Reviewer 检查和查看结果的端到端流程。
@@ -557,3 +566,38 @@ Enterprise Architecture Design = NOT_EXECUTED
 Commit / Push = NOT_EXECUTED
 ```
 
+## 15. Current V1.0 Implementation Scope Allocation Corrective
+
+Authority:
+[V1.0 Harness Reuse Implementation Scope Corrective Decision](../04-development-records/V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md),
+Decision ID `V1-0-HARNESS-REUSE-SCOPE-CORRECTIVE-20260906-01`.
+
+The architecture remains sufficient, but its V1.0 implementation allocation is
+corrected to `HARNESS_REUSE_PRODUCTIZATION`. Harness remains authoritative for
+Workspace, Session, history/transcript, settings, credentials, Provider/model,
+API endpoint/relay configuration, Agent Runtime, tools and permission/approval
+runtime. Shaco builds only the Desktop / Supervisor / Carrier / packaging layer
+and a minimal Control Store; it does not rebuild those Harness capabilities.
+
+```text
+PROVIDER_MODEL_ROUTING = HARNESS_OWNED
+SHACO_PROVIDER_FRAMEWORK_V1_0 = NOT_REQUIRED
+MULTI_MODEL_SUPPORT = REUSE_HARNESS
+MULTI_AGENT_ORCHESTRATION = FUTURE_SHACO_DOMAIN
+```
+
+V1.0 retains only future seams: Harness Session IDs are execution/session
+references rather than permanent Task/Automation/Workflow identities; one Worker
+may host multiple Harness Sessions; the foundation contains no DeepSeek-specific
+business fields; the Control Store supports schema version/migration without
+future empty tables; and the carrier supports request/session/generation/
+correlation identities without introducing another Agent RPC.
+
+The active four-Slice route is:
+
+1. `V1-SLICE-1-REAL-HARNESS-USER-LOOP`.
+2. `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT`.
+3. `V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE`.
+4. `V1-SLICE-4-FRESH-WINDOWS-FINAL-ACCEPTANCE`.
+
+This synchronization does not start implementation or execute Runtime/tests.

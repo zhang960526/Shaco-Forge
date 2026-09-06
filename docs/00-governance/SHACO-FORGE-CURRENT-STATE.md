@@ -3,6 +3,12 @@
 Status: ACTIVE
 Last Updated: 2026-09-06
 
+> Latest V1.0 implementation-scope authority (2026-09-06):
+> [V1.0 Harness Reuse Implementation Scope Corrective](#v10-harness-reuse-implementation-scope-corrective-2026-09-06)
+> applies the Owner-accepted scope reconciliation. It changes only V1.0
+> Implementation Scope Allocation; P0.S remains closed and its technical
+> Evidence and architecture sufficiency remain unchanged.
+
 > P0.S closure authority (2026-09-06): the
 > [P0.S-8 Architecture Freeze and P0.S Closure State](#p0s-8-architecture-freeze-and-p0s-closure-state-2026-09-06)
 > section is the latest authority. Earlier P0.S-7 / P0.S-8 handoff and Runtime-scope
@@ -47,6 +53,13 @@ Last Updated: 2026-09-06
 - `P0S8_FINAL_CLOSURE_AUDIT = PASS`
 - `P0S_FINAL_CLOSURE_OWNER_ACCEPTED = YES`
 - `V1_SLICE_1_ALLOWED = YES`
+- `V1_0_SCOPE_RECONCILIATION = COMPLETED`
+- `V1_0_IMPLEMENTATION_SCOPE = HARNESS_REUSE_PRODUCTIZATION`
+- `V1_0_PROVIDER_MODEL_OWNERSHIP = HARNESS`
+- `V1_0_SCOPE_CORRECTIVE = APPLIED`
+- `V1_IMPLEMENTATION_READY = YES`
+- `V1_IMPLEMENTATION_STARTED = NO`
+- `V1_CURRENT_NEXT_ACTION = V1-SLICE-1-REAL-HARNESS-USER-LOOP`
 - `SHACO_FORGE_V1_0_P0S_1 = PASS`
 - `P0S1_STATE = CLOSED`
 - `P0S1_EXECUTOR_VERDICT = PROVEN_WITH_CONSTRAINT`
@@ -461,8 +474,8 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 
 ## Immediate Next Action
 
-Prepare / begin `V1-SLICE-1-SINGLE-AGENT-USER-CLOSURE`. The Architecture Owner
-has accepted the Independent P0.S-8 Final Closure Audit. This action itself does
+Prepare `V1-SLICE-1-REAL-HARNESS-USER-LOOP`. The Architecture Owner has accepted
+the V1.0 Harness-reuse implementation-scope Corrective. This action itself does
 not begin V1 implementation; do not treat P0.5/P1 as deleted or complete.
 
 No V1 implementation, product Runtime, database, Project Scan / File Index,
@@ -613,3 +626,49 @@ sufficient for V1 development. It does not claim product code, V1.0, Database,
 Adapters, Runtime, Production, Project Scan, File Index, V1 tests, Recovery or
 Enterprise are complete. No structural architecture issue was found that blocks
 the first V1 vertical Slice.
+
+## V1.0 Harness Reuse Implementation Scope Corrective (2026-09-06)
+
+**Latest authoritative V1.0 implementation-scope state.** Authority:
+[V1.0 Harness Reuse Implementation Scope Corrective Decision](../04-development-records/V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md),
+Decision ID `V1-0-HARNESS-REUSE-SCOPE-CORRECTIVE-20260906-01`.
+
+```text
+P0S = CLOSED
+P0S_FINAL_CLOSURE_OWNER_ACCEPTED = YES
+V1_0_SCOPE_RECONCILIATION = COMPLETED
+V1_0_IMPLEMENTATION_SCOPE = HARNESS_REUSE_PRODUCTIZATION
+V1_0_PROVIDER_MODEL_OWNERSHIP = HARNESS
+V1_0_SCOPE_CORRECTIVE = APPLIED
+V1_IMPLEMENTATION_READY = YES
+V1_IMPLEMENTATION_STARTED = NO
+V1_CURRENT_NEXT_ACTION = V1-SLICE-1-REAL-HARNESS-USER-LOOP
+
+PROVIDER_MODEL_ROUTING = HARNESS_OWNED
+SHACO_PROVIDER_FRAMEWORK_V1_0 = NOT_REQUIRED
+MULTI_MODEL_SUPPORT = REUSE_HARNESS
+MULTI_AGENT_ORCHESTRATION = FUTURE_SHACO_DOMAIN
+```
+
+Harness remains the sole truth for Workspace, Session/history/transcript,
+conversation runtime, settings, credentials, Provider/model and API
+endpoint/relay configuration, profiles, persistence, Agent Runtime, tools and
+permission/approval runtime. V1.0 builds only the Desktop / Supervisor / Carrier /
+packaging productization layer and minimal Shaco Control Store.
+
+The expanded V1.0 allocation for four Provider Adapters, independent Reviewer,
+Shaco Task state machine/database, five custom product pages, Project Scan/File
+Index and Shaco ContextSelection truth is superseded for implementation only.
+The P0.S-8 foundational architecture remains accepted. No P0.S phase is
+reopened; no P0.S technical Evidence is changed.
+
+Future Automation/Multi-Agent orchestration can coordinate multiple Harness
+Sessions and store only their execution/session references. Harness Session ID
+must not be permanently equated with Task, AutomationRun or Workflow identity.
+The Worker/Host remains capable of multiple Sessions, and no future empty tables
+are created in V1.0.
+
+The adopted route is `V1-SLICE-1 — REAL HARNESS USER LOOP`, `V1-SLICE-2 —
+LIFECYCLE / NATIVE / RECONNECT`, `V1-SLICE-3 — PACKAGING / COMPATIBILITY /
+RELEASE`, then `V1-SLICE-4 — FRESH WINDOWS FINAL ACCEPTANCE`. This corrective
+does not start Slice 1 and performs no Build, Test or Runtime.
