@@ -6,5 +6,5 @@
     "tsBuildInfoFile": "dist-tests/desktop-test.tsbuildinfo",
     "types": ["node"]
   },
-  "include": ["tests/**/*.ts", "src/renderer/theme/theme.ts"]
+  "include": ["tests/**/*.ts", "src/renderer/theme/theme.ts", "src/renderer/transport.ts"]
 }

@@ -16,6 +16,7 @@ const themeController = new RootThemeController(document.documentElement, {
 })
 window.addEventListener('pagehide', () => themeController.dispose(), { once: true })
 
+
 function requiredElement<T extends Element>(selector: string): T {
   const element = document.querySelector<T>(selector)
   if (element === null) throw new Error(`Shaco Shell required node is missing: ${selector}`)
@@ -30,8 +31,10 @@ function projectBootstrap(state: BootstrapProjection): void {
   status.textContent = state.message
   status.dataset.phase = state.phase
   if (state.phase === 'host-ready') {
-    truthfulState.innerHTML = '<strong>Harness Host 已就绪</strong><span>Client 已挂载；Physical Carrier 将在 Slice 1B 连接。当前没有真实项目或会话。</span>'
-  } else if (state.phase === 'worker-failed' || state.phase === 'host-exited') {
+    truthfulState.innerHTML = '<strong>Harness Host 已就绪</strong><span>正在完成 Physical Carrier mutual authentication。</span>'
+  } else if (state.phase === 'carrier-ready') {
+    truthfulState.innerHTML = '<strong>Authenticated Physical Carrier 已连接</strong><span>Harness Client 正通过本地受保护载体连接 Host。</span>'
+  } else if (state.phase === 'worker-failed' || state.phase === 'host-exited' || state.phase === 'carrier-failed') {
     truthfulState.innerHTML = `<strong>Harness 未连接</strong><span>${state.message}</span>`
   }
 }
@@ -55,6 +58,12 @@ try {
 
 const afterRender = (): Promise<void> => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve())))
 await afterRender()
+const transportDeadline = Date.now() + 10_000
+while (Date.now() < transportDeadline
+  && (window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.eventsReady === 0
+    || window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.fetchEndpoints.length === 0)) {
+  await new Promise(resolve => setTimeout(resolve, 100))
+}
 const shellText = document.body.textContent ?? ''
 const rootText = mountRoot.textContent ?? ''
 const renderedClientIdentity = mountRoot.children.length > 0
@@ -112,7 +121,7 @@ const evidence = {
     bootPagePresent: mountRoot.querySelector('[data-dsh-boot]') !== null,
     renderedTextSample: rootText.trim().slice(0, 500),
     fixtureOrMockPresent: false,
-    connectionState: 'HOST_READY_OR_STARTING__PHYSICAL_CARRIER_NOT_CONNECTED',
+    connectionState: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.eventsReady > 0 ? 'AUTHENTICATED_CARRIER_EVENTS_READY' : 'CARRIER_NOT_READY',
     failure: runFailure,
   },
   loading: {
@@ -124,6 +133,10 @@ const evidence = {
     rendererRequireType: typeof (globalThis as { require?: unknown }).require,
     rendererProcessType: typeof (globalThis as { process?: unknown }).process,
     exposedBridgeKeys: Object.keys(window.shacoForge).sort(),
+    pipeAccess: false,
+    pipeNamePresent: false,
+    reusableSecretPresent: false,
+    directWorkerTransport: false,
   },
   theme: {
     architecture: 'SEMANTIC_DESIGN_TOKENS',
@@ -145,6 +158,17 @@ const evidence = {
     noPermanentInspector: document.querySelector('[data-inspector]') === null,
     truthfulConnectionState: truthfulState.textContent?.includes('Physical Carrier') === true
       || truthfulState.textContent?.includes('正在启动') === true,
+  },
+  transport: {
+    ownsHost: true,
+    fetchUsed: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.fetchEndpoints.length > 0,
+    fetchEndpoints: [...new Set(window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.fetchEndpoints)],
+    openStreamUsed: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.streamEndpoints.length > 0,
+    streamEndpoints: [...new Set(window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.streamEndpoints)],
+    realEventsStream: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.streamEndpoints.includes('$events'),
+    realEventsReady: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.eventsReady > 0,
+    abortCancels: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.abortCancels,
+    iteratorCancels: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.iteratorCancels,
   },
   fatalEvents,
 }

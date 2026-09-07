@@ -1,7 +1,8 @@
 import { resolve } from 'node:path'
-import { assertToolchain, root, runNode } from './tool-runner.mjs'
+import { assertToolchain, root, runNode, runTool } from './tool-runner.mjs'
 
 assertToolchain()
+runTool('.NET 10 Native Carrier build', 'dotnet', ['build', 'apps/native-carrier/ShacoForge.NativeCarrier.csproj', '--configuration', 'Release', '--no-restore'])
 runNode('contracts build', 'node_modules/typescript/bin/tsc', ['-p', 'packages/contracts/tsconfig.json'])
 runNode('worker build', 'node_modules/typescript/bin/tsc', ['-p', 'apps/worker/tsconfig.json'])
 const harnessRoot = process.env.SHACO_FORGE_HARNESS_ROOT

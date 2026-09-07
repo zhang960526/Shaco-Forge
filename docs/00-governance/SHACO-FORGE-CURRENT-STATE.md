@@ -3,6 +3,18 @@
 Status: ACTIVE
 Last Updated: 2026-09-07
 
+> Latest V1-SLICE-1B authority (2026-09-07): the
+> [Owner Closure Decision](../04-development-records/V1-SLICE-1B-OWNER-CLOSURE-DECISION.md)
+> accepts Independent [REVIEW-014](../05-reviews/architecture/AUDIT-014-V1-SLICE-1B-INDEPENDENT-IMPLEMENTATION-REVIEW.md)
+> (`PASS`, `BLOCKING_FINDINGS = NONE`) and freezes the reviewed Slice 1B
+> baseline. Independent Runtime reproduction was partially environment-blocked;
+> the Executor's Durable Evidence remains the complete Runtime authority.
+> REVIEW-012 F-05 remains `OPEN_KNOWN_CONSTRAINT`, V1-SLICE-1B NF-6 remains
+> `OPEN_NON_BLOCKING`, and NF-R1 is `INFO / REVIEW_ENVIRONMENT_CONSTRAINT`.
+> Slice 1B is `CLOSED / FROZEN`; Slice 1 remains `IN_PROGRESS`. The next action
+> is Architecture Owner preparation of the 1C Real User-Loop Completion
+> Contract; no detailed 1C design is frozen and 1C has not started.
+
 > Latest V1-SLICE-1A authority (2026-09-07): Independent
 > [REVIEW-012](../05-reviews/architecture/AUDIT-012-V1-SLICE-1A-INDEPENDENT-REVIEW.md)
 > is `PASS`, with no blocking or major Findings. Independent Delta Re-Review
@@ -16,6 +28,24 @@ Last Updated: 2026-09-07
 > known-constraint, future-hardening, historical-context or expected-boundary
 > dispositions and were not changed. `V1-SLICE-1` remains `IN_PROGRESS`, and
 > Slice 1B is `NOT_STARTED`.
+
+> V1-SLICE-1B implementation handoff checkpoint (superseded for current status
+> by the Owner Closure authority above; 2026-09-07):
+> [V1-SLICE-1B Implementation Record](../04-development-records/V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-IMPLEMENTATION-RECORD.md)
+> records `PASS` for the authenticated physical Carrier and real pinned Client
+> ↔ Host communication implementation. The Architecture Owner pre-review
+> `$events` readiness corrective is also `PASS`: the former literal readiness
+> flag was replaced by a bounded real public Gateway route probe with complete
+> cleanup evidence and Worker revalidation. The later C-1/C-2 implementation
+> corrective also passed: queued stream items (including undefined) precede
+> normal end/error, terminal draining grants no new credit, and Pipe accept
+> follows Worker lifetime independently of the 5-second auth/frame deadlines.
+> Earlier smokes had not covered these boundaries. Full regression is PASS
+> (67 unit cases and actual Native Helper delayed-connect/lifetime tests).
+> At that implementation handoff checkpoint the state was
+> `IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`, with Review `NOT_STARTED`, Owner
+> Closure `NOT_PERFORMED`, and baseline `NOT_FROZEN`. The closure authority
+> above now supersedes that checkpoint without rewriting its execution history.
 
 > Latest V1-SLICE-1A corrective authority (2026-09-07): the post-execution
 > Theme Foundation Owner Requirement Corrective is `PASS`. Shaco-owned Desktop
@@ -60,8 +90,8 @@ Last Updated: 2026-09-07
 ## Current Phase
 
 - Phase: V1 Implementation — `IN_PROGRESS`
-- Step: Between V1-SLICE-1A and V1-SLICE-1B — `NONE_BETWEEN_1A_AND_1B`
-- Current Authorized Scope: V1-SLICE-1A is closed and frozen; prepare the separately gated Slice 1B without starting it in this closure
+- Step: Between V1-SLICE-1B and V1-SLICE-1C — `NONE_BETWEEN_1B_AND_1C`
+- Current Authorized Scope: Prepare the V1-SLICE-1C Real User-Loop Completion Contract; do not start 1C implementation or freeze a detailed design split
 - Production Implementation: IN_PROGRESS
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -91,8 +121,8 @@ Last Updated: 2026-09-07
 - `V1_IMPLEMENTATION_READY = YES`
 - `V1_IMPLEMENTATION_STARTED = YES`
 - `V1_CURRENT_SLICE = V1-SLICE-1-REAL-HARNESS-USER-LOOP`
-- `V1_CURRENT_STEP = NONE_BETWEEN_1A_AND_1B`
-- `V1_CURRENT_NEXT_ACTION = PREPARE_V1_SLICE_1B_AUTHENTICATED_PHYSICAL_CARRIER`
+- `V1_CURRENT_STEP = NONE_BETWEEN_1B_AND_1C`
+- `V1_CURRENT_NEXT_ACTION = PREPARE_V1_SLICE_1C_REAL_USER_LOOP_COMPLETION`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE = ACCEPTED`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PASS`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_OWNER_ACCEPTED = YES`
@@ -111,6 +141,12 @@ Last Updated: 2026-09-07
 - `V1_SLICE_1A_BASELINE = FROZEN`
 - `V1_SLICE_1A_FORMATTING_CORRECTIVE = PASS`
 - `V1_SLICE_1A_THEME_FOUNDATION_CORRECTIVE = PASS`
+- `V1_SLICE_1B = CLOSED`
+- `V1_SLICE_1B_IMPLEMENTATION_RESULT = PASS`
+- `V1_SLICE_1B_INDEPENDENT_REVIEW = PASS`
+- `V1_SLICE_1B_REVIEW_BLOCKING_FINDINGS = NONE`
+- `V1_SLICE_1B_OWNER_CLOSURE = ACCEPTED`
+- `V1_SLICE_1B_BASELINE = FROZEN`
 - `UI_LONG_TERM_SHELL_OWNER_DECISION = ACCEPTED`
 - `UI_LONG_TERM_SHELL_VISUAL_REFERENCE = ACCEPTED`
 - `UI_LONG_TERM_SHELL_DOCUMENTATION_SYNC_OWNER_REVIEW = PASS`
@@ -481,6 +517,9 @@ alternate-index path proved raw blob identity before the bounded Closure Commit.
 - First Architecture Owner V1-SLICE-1A Closure attempt: stopped before Commit with `REVIEW_RANGE_INVALIDATED` at the full-baseline whitespace gate
 - Independent Whitespace Delta Re-Review (REVIEW-013): `PASS`; scope limited to the eight-file EOF correction; Product semantic change `NO`; Reviewer modified no file
 - Final Architecture Owner V1-SLICE-1A Closure: `ACCEPTED`; internal Step 1A closed and baseline frozen; V1-SLICE-1 remains `IN_PROGRESS` and Slice 1B remains `NOT_STARTED`
+- V1-SLICE-1B Implementation: `PASS`; authenticated physical Carrier and real pinned Client ↔ Host communication are implemented; Independent Review `NOT_STARTED`; Owner Closure `NOT_PERFORMED`; baseline `NOT_FROZEN`
+- Independent V1-SLICE-1B Review (REVIEW-014): `PASS`; Security, Transport, Lifecycle and Evidence verdicts `PASS`; Blocking Findings `NONE`; independent Runtime reproduction partially environment-blocked; corrected Reviewer provenance and Finding taxonomy formally persisted
+- Architecture Owner V1-SLICE-1B Closure: `ACCEPTED`; internal Step 1B closed and baseline frozen; REVIEW-012 F-05 remains `OPEN_KNOWN_CONSTRAINT`; 1B NF-6 remains `OPEN_NON_BLOCKING`; V1-SLICE-1 remains `IN_PROGRESS`
 - Historical Architecture Owner MEC-01 Outcome: `P0S6-MEC-20260903-01` is `EXHAUSTED_INCONCLUSIVE`; two `PRE_HYPOTHESIS` attempts consumed the full budget without reaching Runtime. At that historical boundary, recovery-contract planning was still pending. The later frozen DRRC supplied one Dependency Preparation authority, which is now also exhausted inconclusively; P0.S-7 remains not authorized.
 - P0.S-6 Final Closure Review: `PASS`; one controlled Verification Invocation completed with final classification `AUTHORITY_BLOCKED`; P0.S-6 closed without changing the historical MEC-01 or DRRC classifications; P0.S-7 remains not authorized
 - P0.S-6 Technical Validation Extension: Architecture Owner activated one bounded Execution Authority under `P0S6-TVEC-EA-ACTIVATION-20260904-01`; Extension governance artifacts are frozen in commit `5132777747dbe26185a4ba3a22a07f70e51413e1`; Final Preflight is `AUTHORITY_BLOCKED` because Runner, Execution Root, Invocation and Frozen Input Manifest identities are not established; Verification remains unexecuted and P0.S-7 remains not authorized
@@ -542,18 +581,15 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - V1 implementation: `IN_PROGRESS`
 - V1.0 Technical Implementation Baseline: `ACCEPTED`; Independent REVIEW-011 `PASS`; Architecture Owner accepted
 - V1 Slice 1A: `PASS / CLOSED / FROZEN`; REVIEW-012 `PASS`; whitespace corrective `PASS`; REVIEW-013 Delta Re-Review `PASS`; Owner Closure `ACCEPTED`
-- V1 Slice 1: `IN_PROGRESS`; Slice 1B `NOT_STARTED`
+- V1 Slice 1: `IN_PROGRESS`; Slice 1B `PASS / CLOSED / FROZEN`; REVIEW-014 `PASS`; Owner Closure `ACCEPTED`
 
 ## Immediate Next Action
 
-Prepare `V1-SLICE-1B — AUTHENTICATED PHYSICAL CARRIER + REAL CLIENT ↔ HOST
-COMMUNICATION` under a separate authority. Do not begin 1B from this Closure.
-Physical Carrier, full Workspace/Session lifecycle, prompt/stream/tool/result,
-approval/question, reconnect, full Worker lifecycle/discovery, packaging,
-installer, production bundled Node/Harness, controlled production `DSH_HOME`,
-full Shell/Harness theme unification and the complete Settings Surface remain
-unproven. F-01 through F-10 in REVIEW-012 remain carry-forward Findings, not
-closed defects.
+Prepare the V1-SLICE-1C Real User-Loop Completion Contract. Existing authority
+defines only 1C's real user-loop completion purpose; this Closure does not
+freeze a detailed Workspace/Session/Prompt implementation split. Do not begin
+1C implementation. REVIEW-012 F-05 and V1-SLICE-1B NF-6 remain open under
+their recorded non-blocking dispositions.
 
 Do not pull/switch/update the frozen Harness SHA without an Architecture
 Decision. Spike code is NOT production by default. The corrective candidate

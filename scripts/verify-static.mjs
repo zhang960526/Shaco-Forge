@@ -3,7 +3,7 @@ import { readFile, readdir } from 'node:fs/promises'
 import { extname, join } from 'node:path'
 import { paths } from './runtime-paths.mjs'
 
-const extensions = new Set(['.ts', '.cts', '.mjs', '.js', '.json', '.html', '.css', '.yaml', '.yml'])
+const extensions = new Set(['.ts', '.cts', '.mjs', '.js', '.json', '.html', '.css', '.yaml', '.yml', '.cs', '.csproj'])
 const ignored = new Set(['node_modules', 'dist', '.generated-client', '.git'])
 const files = []
 async function walk(root) {

@@ -17,6 +17,16 @@ const api = Object.freeze({
       return () => ipcRenderer.removeListener('bootstrap:state', wrapped)
     },
   }),
+  transport: Object.freeze({
+    fetch: (request: { url: string; method: string; contentType: string; body: string }): Promise<{ status: number; contentType: string; body: string }> =>
+      ipcRenderer.invoke('transport:fetch', request),
+    openStream: (endpoint: string, payload: Record<string, unknown>): Promise<string> =>
+      ipcRenderer.invoke('transport:open-stream', { endpoint, payload }),
+    pullStream: (streamId: string): Promise<{ done: boolean; value?: unknown; error?: string }> =>
+      ipcRenderer.invoke('transport:pull-stream', streamId),
+    cancelStream: (streamId: string, reason: string): Promise<void> =>
+      ipcRenderer.invoke('transport:cancel-stream', streamId, reason),
+  }),
   reportRuntimeEvidence: (evidence: Record<string, unknown>): void => {
     ipcRenderer.send('runtime:evidence', evidence)
   },

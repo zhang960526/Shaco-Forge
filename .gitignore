@@ -5,3 +5,6 @@ coverage/
 .generated-client/
 *.tsbuildinfo
 docs/04-development-records/evidence/V1-SLICE-1A/runtime/
+docs/04-development-records/evidence/V1-SLICE-1B/runtime/
+apps/native-carrier/bin/
+apps/native-carrier/obj/

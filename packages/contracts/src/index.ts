@@ -4,6 +4,8 @@ export type BootstrapPhase =
   | 'worker-starting'
   | 'host-starting'
   | 'host-ready'
+  | 'carrier-ready'
+  | 'carrier-failed'
   | 'host-exited'
   | 'worker-failed'
   | 'worker-stopped'
@@ -54,3 +56,5 @@ export function parseBootstrapEvent(input: string): BootstrapEvent | undefined {
   if (!Array.isArray(candidate.workerArgv) || candidate.workerArgv.some(item => typeof item !== 'string')) return undefined
   return candidate as BootstrapEvent
 }
+
+export * from './carrier.js'

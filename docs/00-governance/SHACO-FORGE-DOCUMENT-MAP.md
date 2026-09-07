@@ -4,6 +4,14 @@ Status: ACTIVE
 
 Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 
+> Latest V1 implementation authority (2026-09-07): V1-SLICE-1B Independent
+> [REVIEW-014](../05-reviews/architecture/AUDIT-014-V1-SLICE-1B-INDEPENDENT-IMPLEMENTATION-REVIEW.md)
+> is `PASS` with no Blocking Findings, and the
+> [Owner Closure Decision](../04-development-records/V1-SLICE-1B-OWNER-CLOSURE-DECISION.md)
+> is `ACCEPTED`. Slice 1B is `CLOSED / FROZEN`; Slice 1 remains `IN_PROGRESS`;
+> next is preparation of the 1C Real User-Loop Completion Contract. No detailed
+> 1C design is frozen and 1C has not started.
+
 > Latest P0.S authority (2026-09-06): P0.S-8 V1 Product Architecture Freeze and
 > the P0.S umbrella are `CLOSED`; Independent Final Closure Audit REVIEW-010 is
 > `PASS` and Owner-accepted; V1 implementation is ready but not started.
@@ -74,6 +82,7 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 | Document | Role | Status |
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
+| `V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-CONTRACT.md` | Slice 1B authenticated physical carrier and real Client ↔ Host implementation Contract | CLOSED / BASELINE FROZEN |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
 | `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | CLOSED / PASS; P0.S-8 result `V1_PRODUCT_ARCHITECTURE_FROZEN`; V1 implementation ready but not started |
 | `SHACO-FORGE-V1-PRODUCT-ARCHITECTURE-PLAN.md` | V1 Product Architecture Plan | `V1_ARCHITECTURE_PLAN_ONLY`; Final Gate external review supplied by Owner is PASS; P0.S-8 freeze not executed |
@@ -184,6 +193,8 @@ Baseline candidate now gates that Slice behind Independent Review.
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
 | `V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md` | Current V1.0 Harness-reuse implementation-scope allocation authority; P0.S remains closed |
+| `V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-IMPLEMENTATION-RECORD.md` | Slice 1B implementation, lifecycle corrective and historical Executor test ledger; closed baseline Runtime authority |
+| `V1-SLICE-1B-OWNER-CLOSURE-DECISION.md` | Architecture Owner acceptance and baseline freeze for internal Step 1B; Slice 1 remains in progress |
 | `P0S-8-V1-PRODUCT-ARCHITECTURE-FREEZE-DECISION.md` | P0.S-8 sufficient Architecture Freeze and P0.S umbrella closure authority |
 | `P0S-7-CONTROLLED-AGENT-EXECUTION-ARCHITECTURE-VALIDATION-FINAL-CLOSURE-DECISION.md` | P0.S-7 reassessed-scope Final Closure Decision; latest P0.S-7 closure authority |
 | `ISSUE-AND-BUG-INDEX.md` | Bug / Incident 索引 |
@@ -210,6 +221,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 | `architecture/AUDIT-009-P0S5-INDEPENDENT-REVIEW.md` | Faithful persisted summary of external P0.S-5 Review, Documentation Corrective and Corrective Re-Review (`PASS`; Owner accepted `MET_WITH_CONSTRAINT` and closed P0.S-5; P0.S-6 execution separately gated) |
 | `architecture/AUDIT-010-P0S8-FINAL-CLOSURE.md` | Faithful persisted summary of external P0.S-8 Final Closure Audit (`PASS`; Owner accepted; P0.S final closed; V1-SLICE-1 allowed) |
 | `architecture/AUDIT-011-V1-TECHNICAL-IMPLEMENTATION-BASELINE.md` | Faithful persisted summary of Independent V1.0 Technical Implementation Baseline Review (`PASS`; Owner accepted; F-01/F-02/F-03 closed during acceptance) |
+| `architecture/AUDIT-014-V1-SLICE-1B-INDEPENDENT-IMPLEMENTATION-REVIEW.md` | Corrected formal persistence of the Slice 1B Independent Review (`PASS`; no Blocking Findings; Reviewer provenance and F-05/NF-6 taxonomy corrected; Owner accepted) |
 | `implementation/` | 实现审计 |
 | `corrective/` | Corrective 审计 |
 | `templates/` | Review 模板 |
@@ -221,6 +233,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 | `V1.0-TEST-MATRIX.md` | 测试矩阵骨架 |
 | `V1.0-ACCEPTANCE-MATRIX.md` | 最终验收矩阵骨架 |
 | `evidence/` | 阶段证据 |
+| `evidence/V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-EVIDENCE.md` | Slice 1B redacted Native Carrier, real Client transport and failure-truthfulness Runtime authority; PASS / closed baseline frozen |
 | `evidence/P0-1-HARNESS-BASELINE-MANIFEST.md` | P0-1 frozen Harness identity (HARNESS_BASELINE_MANIFEST) |
 | `evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md` | P0-2 Web + standard composition (HARNESS_WEB_COMPOSITION_MAP) |
 | `evidence/P0-2-WEB-DUMP-DEFAULT-CONFIG.yml` | P0-2 dump-config diagnostic (not a stable API) |

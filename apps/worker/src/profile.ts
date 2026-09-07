@@ -7,6 +7,9 @@ export async function materializeHarnessProfile(
   dshHome: string,
   profileName: string,
   readinessModulePath: string,
+  connectionCompatibilityPath: string,
+  carrierGatewayPath: string,
+  eventsRoutePreflightPath: string,
   harnessScopePath: string,
   overlayNodeModules: string,
 ): Promise<string> {
@@ -16,7 +19,7 @@ export async function materializeHarnessProfile(
   await symlink(harnessScopePath, join(profilePath, 'node_modules', '@deepseek-ai'), 'junction')
 
   const profilePackage = {
-    name: '@shaco-forge/harness-profile-v1-slice-1a',
+    name: '@shaco-forge/harness-profile-v1-slice-1b',
     version: '1.0.0-dev.1',
     private: true,
     dependencies: {
@@ -36,6 +39,9 @@ export async function materializeHarnessProfile(
     type: 'module',
     exports: {
       './readiness': './readiness.js',
+      './connection-compatibility': './connection-compatibility.mjs',
+      './carrier-gateway': './carrier-gateway.mjs',
+      './events-route-preflight': './events-route-preflight.mjs',
     },
     dsh: {
       bundle: {
@@ -45,6 +51,34 @@ export async function materializeHarnessProfile(
   }
   const patch = [
     '- insert:',
+    '    - id: shaco-forge-connection-compatibility',
+    "      name: '@shaco-forge/harness-bootstrap/connection-compatibility'",
+    '',
+    '    - id: workspace',
+    "      name: '@deepseek-ai/dsh-workspace'",
+    '',
+    '    - id: session-reference',
+    "      name: '@deepseek-ai/dsh-session-reference'",
+    '',
+    '    - id: file-reference-local',
+    "      name: '@deepseek-ai/dsh-file-reference-local'",
+    '',
+    '    - id: session-controller',
+    "      name: '@deepseek-ai/dsh-api-session-controller'",
+    '      config:',
+    '        nativeOpen: false',
+    '',
+    '    - id: settings-controller',
+    "      name: '@deepseek-ai/dsh-api-settings-controller'",
+    '      config:',
+    '        nativeOpen: false',
+    '',
+    '    - id: workspace-controller',
+    "      name: '@deepseek-ai/dsh-api-workspace-controller'",
+    '',
+    '    - id: api-remotes',
+    "      name: '@deepseek-ai/dsh-api-remotes'",
+    '',
     '    - id: agent-presets',
     "      name: '@deepseek-ai/dsh-agent-presets'",
     '      config:',
@@ -56,6 +90,9 @@ export async function materializeHarnessProfile(
     '    - id: shaco-forge-host-readiness',
     "      name: '@shaco-forge/harness-bootstrap/readiness'",
     '',
+    '    - id: shaco-forge-carrier-gateway',
+    "      name: '@shaco-forge/harness-bootstrap/carrier-gateway'",
+    '',
   ].join('\n')
 
   await writeFile(join(profilePath, 'package.json'), `${JSON.stringify(profilePackage, null, 2)}\n`, utf8)
@@ -64,6 +101,9 @@ export async function materializeHarnessProfile(
   await writeFile(join(bundlePath, 'cordis.patch.yml'), patch, utf8)
   await mkdir(dirname(join(bundlePath, 'readiness.js')), { recursive: true })
   await copyFile(readinessModulePath, join(bundlePath, 'readiness.js'))
+  await copyFile(connectionCompatibilityPath, join(bundlePath, 'connection-compatibility.mjs'))
+  await copyFile(carrierGatewayPath, join(bundlePath, 'carrier-gateway.mjs'))
+  await copyFile(eventsRoutePreflightPath, join(bundlePath, 'events-route-preflight.mjs'))
   await mkdir(join(overlayNodeModules, '@shaco-forge'), { recursive: true })
   await symlink(bundlePath, join(overlayNodeModules, '@shaco-forge', 'harness-bootstrap'), 'junction')
   return profilePath

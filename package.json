@@ -10,9 +10,11 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "typecheck": "node scripts/typecheck.mjs",
-    "test": "node scripts/build.mjs && node --test packages/contracts/dist/index.test.js apps/worker/dist/config.test.js apps/desktop/dist/main/security.test.js apps/desktop/dist-tests/tests/theme.test.js apps/desktop/dist/main/worker-supervisor.test.js",
+    "test": "node scripts/build.mjs && node --test packages/contracts/dist/index.test.js packages/contracts/dist/carrier.test.js apps/worker/dist/config.test.js apps/worker/dist/host-readiness-marker.test.js apps/worker/dist/host-carrier-preflight.test.js apps/worker/host-profile/events-route-preflight.test.mjs apps/desktop/dist/main/security.test.js apps/desktop/dist-tests/tests/theme.test.js apps/desktop/dist-tests/tests/transport.test.js apps/desktop/dist/main/window-lifecycle.test.js apps/desktop/dist/main/worker-supervisor.test.js apps/desktop/dist/main/carrier-client.test.js",
     "smoke:worker": "node scripts/smoke-worker.mjs",
     "smoke:electron": "node scripts/smoke-electron.mjs",
+    "smoke:failure": "node scripts/smoke-electron.mjs --inject-carrier-failure",
+    "smoke:carrier": "node scripts/smoke-carrier.mjs",
     "verify:static": "node scripts/verify-static.mjs",
     "verify:theme": "node scripts/verify-theme.mjs"
   },
