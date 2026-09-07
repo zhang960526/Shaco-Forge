@@ -11,7 +11,7 @@
 | UI Design Baseline Ready | `YES` |
 | UI Direction Ready for Slice 1A | `YES` |
 | Initial Primary Theme | `LIGHT` |
-| Last Updated | `2026-09-07` |
+| Last Updated | `2026-09-08` |
 
 > 本文是 Shaco Forge 正式 UI 决策的唯一真相来源。聊天中讨论但未写入本文的内容，不构成冻结决定。若本文与更高优先级的产品、架构或治理 Authority 冲突，以 [Document Map](../00-governance/SHACO-FORGE-DOCUMENT-MAP.md) 定义的 Authority Order 为准，并必须在本文中完成显式同步，禁止依靠聊天记忆静默覆盖。
 
@@ -45,6 +45,13 @@ UI_AUTOMATION_ITEM = FUTURE_SHACO_DOMAIN
 UI_AGENT_COLLABORATION_ITEM = FUTURE_SHACO_DOMAIN
 SHARED_WORK_ITEM_RUNTIME_DOMAIN = NOT_CREATED
 SHARED_WORK_ITEM_RUNTIME_DOMAIN_CREATED = NO
+V1_SLICE_1C_UI_ALLOCATION = EMBEDDED_APPWEBENTRY_PRIMARY_LOOP
+V1_SLICE_1C_SHACO_SHELL = PASSIVE_TRUTHFUL_WRAPPER
+V1_SLICE_1C_EXTERNAL_APPWEBENTRY_CONTROL = PUBLIC_SEAM_NOT_FOUND
+V1_SLICE_1C_PROJECT_SESSION_NAVIGATION = DELEGATED_TO_APPWEBENTRY
+V1_SLICE_1C_NATIVE_PICKER = NOT_REQUIRED_FOR_EMBEDDED_LOOP
+FINAL_V1_SLICE_1_SIDEBAR_PROJECT_SESSION_PROJECTION = STILL_REQUIRED
+FINAL_V1_SLICE_1_NATIVE_PICKER_REQUIREMENT = STILL_OPEN
 VISIBLE_FIXED_FUNCTIONS = NEW_CHAT_ONLY
 VISIBLE_PROJECT_RECORD_TYPES = CHAT_ONLY
 VISIBLE_GLOBAL_ENTRY = SETTINGS
@@ -833,6 +840,39 @@ state。不得显示 fake Project、fake Session、fake Chat Item、fake RPC suc
 - Full Appearance Settings。
 - Advanced Diagnostics / Advanced Session Log。
 - 最终动画、最终 Token 或最终像素 Polish。
+
+### 42.2 V1-SLICE-1C Scope Allocation Sync
+
+**Status: `FROZEN_FOR_V1_SLICE_1C_ALLOCATION`**
+
+```text
+V1_SLICE_1C_UI_ALLOCATION = EMBEDDED_APPWEBENTRY_PRIMARY_LOOP
+V1_SLICE_1C_SHACO_SHELL = PASSIVE_TRUTHFUL_WRAPPER
+V1_SLICE_1C_EXTERNAL_APPWEBENTRY_CONTROL = PUBLIC_SEAM_NOT_FOUND
+V1_SLICE_1C_PROJECT_SESSION_NAVIGATION = DELEGATED_TO_APPWEBENTRY
+V1_SLICE_1C_NATIVE_PICKER = NOT_REQUIRED_FOR_EMBEDDED_LOOP
+FINAL_V1_SLICE_1_SIDEBAR_PROJECT_SESSION_PROJECTION = STILL_REQUIRED
+FINAL_V1_SLICE_1_NATIVE_PICKER_REQUIREMENT = STILL_OPEN
+LONG_TERM_UI_BASELINE_REPLACED = NO
+```
+
+这是 V1-SLICE-1C 的 Scope Allocation Sync，不是 UI Baseline 推翻。1C 的真实
+Workspace → Session → Prompt → Streaming → Tool/Result 主闭环由 mounted
+`AppWebEntry` 承担；Project/Session navigation 同样委托给 AppWebEntry。Frozen
+Harness 没有提供外部 Shell 读取或命令式控制 mounted AppWebEntry 当前 Workspace、
+Session、Settings route 或内部 navigation 的 production public seam，因此 1C 的
+Shaco Shell 只能是 `PASSIVE_TRUTHFUL_WRAPPER`，不得使用 private `ctx` 制造控制能力。
+
+1C Outer Shell 必须保持 truthful：不得显示与真实 Harness 状态冲突的假 No Project
+或 No Session；未 wiring 的 New Chat、Project Directory 与 Settings control 必须为
+disabled、delegated 或其他真实状态；Worker、Connection 与 Carrier 状态仍必须来自
+真实 Product projection。
+
+Harness directory picker 已有 native/browse abstraction，且
+`workspace/create({path})` 提供公开 path seam，因此额外 Shaco Native Picker 不是
+embedded 1C loop 的前置条件。这不永久删除最终 V1-SLICE-1 的 Sidebar Project/
+Session projection、Native Picker 或 Settings integration 要求。它们仍为 open，
+只延后至后续尚未冻结命名的 bounded Slice-1 integration gate。
 
 ## 43. Explicit Non-Goals
 

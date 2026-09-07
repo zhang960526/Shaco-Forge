@@ -1,7 +1,17 @@
 # Shaco Forge Current State
 
 Status: ACTIVE
-Last Updated: 2026-09-07
+Last Updated: 2026-09-08
+
+> Latest V1-SLICE-1C authority (2026-09-08): the
+> [Implementation Authorization Owner Decision](../04-development-records/V1-SLICE-1C-IMPLEMENTATION-AUTHORIZATION-OWNER-DECISION.md)
+> accepts read-only Targeted Delta Review
+> [AUDIT-016](../05-reviews/architecture/AUDIT-016-V1-SLICE-1C-CONTRACT-TARGETED-DELTA-REVIEW.md)
+> (`PASS`, `BLOCKING_FINDINGS = NONE`), freezes the reviewed 1C Architecture
+> baseline, and grants bounded implementation authority. 1C is
+> `AUTHORIZED_FOR_IMPLEMENTATION`; implementation remains `NOT_STARTED`, and
+> Slice 1 remains `IN_PROGRESS`. REVIEW-012 F-05 and V1-SLICE-1B NF-6 remain
+> open under their prior dispositions.
 
 > Latest V1-SLICE-1B authority (2026-09-07): the
 > [Owner Closure Decision](../04-development-records/V1-SLICE-1B-OWNER-CLOSURE-DECISION.md)
@@ -90,8 +100,8 @@ Last Updated: 2026-09-07
 ## Current Phase
 
 - Phase: V1 Implementation — `IN_PROGRESS`
-- Step: Between V1-SLICE-1B and V1-SLICE-1C — `NONE_BETWEEN_1B_AND_1C`
-- Current Authorized Scope: Prepare the V1-SLICE-1C Real User-Loop Completion Contract; do not start 1C implementation or freeze a detailed design split
+- Step: V1-SLICE-1C authorized for implementation — `V1_SLICE_1C_AUTHORIZED_FOR_IMPLEMENTATION`
+- Current Authorized Scope: Implement only the frozen V1-SLICE-1C Embedded Real Harness User Loop Contract
 - Production Implementation: IN_PROGRESS
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -121,8 +131,8 @@ Last Updated: 2026-09-07
 - `V1_IMPLEMENTATION_READY = YES`
 - `V1_IMPLEMENTATION_STARTED = YES`
 - `V1_CURRENT_SLICE = V1-SLICE-1-REAL-HARNESS-USER-LOOP`
-- `V1_CURRENT_STEP = NONE_BETWEEN_1B_AND_1C`
-- `V1_CURRENT_NEXT_ACTION = PREPARE_V1_SLICE_1C_REAL_USER_LOOP_COMPLETION`
+- `V1_CURRENT_STEP = V1_SLICE_1C_AUTHORIZED_FOR_IMPLEMENTATION`
+- `V1_CURRENT_NEXT_ACTION = IMPLEMENT_V1_SLICE_1C_EMBEDDED_REAL_HARNESS_USER_LOOP`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE = ACCEPTED`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PASS`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_OWNER_ACCEPTED = YES`
@@ -147,6 +157,13 @@ Last Updated: 2026-09-07
 - `V1_SLICE_1B_REVIEW_BLOCKING_FINDINGS = NONE`
 - `V1_SLICE_1B_OWNER_CLOSURE = ACCEPTED`
 - `V1_SLICE_1B_BASELINE = FROZEN`
+- `V1_SLICE_1C = AUTHORIZED_FOR_IMPLEMENTATION`
+- `V1_SLICE_1C_ARCHITECTURE_CHALLENGE = PASS`
+- `V1_SLICE_1C_TARGETED_DELTA_REVIEW = PASS`
+- `V1_SLICE_1C_BLOCKING_FINDINGS = NONE`
+- `V1_SLICE_1C_ARCHITECTURE_BASELINE = FROZEN`
+- `V1_SLICE_1C_IMPLEMENTATION = NOT_STARTED`
+- `V1_SLICE_1C_OWNER_IMPLEMENTATION_AUTHORITY = YES`
 - `UI_LONG_TERM_SHELL_OWNER_DECISION = ACCEPTED`
 - `UI_LONG_TERM_SHELL_VISUAL_REFERENCE = ACCEPTED`
 - `UI_LONG_TERM_SHELL_DOCUMENTATION_SYNC_OWNER_REVIEW = PASS`
@@ -581,15 +598,17 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - V1 implementation: `IN_PROGRESS`
 - V1.0 Technical Implementation Baseline: `ACCEPTED`; Independent REVIEW-011 `PASS`; Architecture Owner accepted
 - V1 Slice 1A: `PASS / CLOSED / FROZEN`; REVIEW-012 `PASS`; whitespace corrective `PASS`; REVIEW-013 Delta Re-Review `PASS`; Owner Closure `ACCEPTED`
-- V1 Slice 1: `IN_PROGRESS`; Slice 1B `PASS / CLOSED / FROZEN`; REVIEW-014 `PASS`; Owner Closure `ACCEPTED`
+- V1 Slice 1: `IN_PROGRESS`; Slice 1B `PASS / CLOSED / FROZEN`; Slice 1C `AUTHORIZED_FOR_IMPLEMENTATION`; AUDIT-015 and AUDIT-016 `PASS`; Architecture baseline `FROZEN`; implementation `NOT_STARTED`
 
 ## Immediate Next Action
 
-Prepare the V1-SLICE-1C Real User-Loop Completion Contract. Existing authority
-defines only 1C's real user-loop completion purpose; this Closure does not
-freeze a detailed Workspace/Session/Prompt implementation split. Do not begin
-1C implementation. REVIEW-012 F-05 and V1-SLICE-1B NF-6 remain open under
-their recorded non-blocking dispositions.
+Implement the frozen
+[V1-SLICE-1C Embedded Real Harness User-Loop Contract](../03-v1.0-plan/V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-CONTRACT.md)
+within the exact scope authorized by the
+[Owner Decision](../04-development-records/V1-SLICE-1C-IMPLEMENTATION-AUTHORIZATION-OWNER-DECISION.md).
+Do not expand its attempt budget, evidence context, Provider ownership, Carrier
+frame cap or passive truthful wrapper allocation. REVIEW-012 F-05 and
+V1-SLICE-1B NF-6 remain open under their recorded dispositions.
 
 Do not pull/switch/update the frozen Harness SHA without an Architecture
 Decision. Spike code is NOT production by default. The corrective candidate
