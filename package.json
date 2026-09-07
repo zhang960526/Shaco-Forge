@@ -1,0 +1,25 @@
+{
+  "name": "shaco-forge",
+  "version": "1.0.0-dev.1",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.7.0",
+  "engines": {
+    "node": "22.19.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "test": "node scripts/build.mjs && node --test packages/contracts/dist/index.test.js apps/worker/dist/config.test.js apps/desktop/dist/main/security.test.js apps/desktop/dist-tests/tests/theme.test.js apps/desktop/dist/main/worker-supervisor.test.js",
+    "smoke:worker": "node scripts/smoke-worker.mjs",
+    "smoke:electron": "node scripts/smoke-electron.mjs",
+    "verify:static": "node scripts/verify-static.mjs",
+    "verify:theme": "node scripts/verify-theme.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.0",
+    "electron": "35.7.5",
+    "typescript": "6.0.3",
+    "vite": "6.4.3"
+  }
+}

@@ -2,6 +2,134 @@
 
 Status: ACTIVE
 
+## 2026-09-07 — V1-SLICE-1A Final Closure After Delta Re-Review
+
+- Original V1-SLICE-1A implementation and Theme Foundation Corrective remain
+  `PASS`.
+- REVIEW-012 remains `PASS` for the original implementation plus Theme
+  Corrective. Its F-01 through F-10 dispositions remain retained and open where
+  specified.
+- The first Owner Closure attempt remains historically recorded as
+  `REVIEW_RANGE_INVALIDATED` by the final static whitespace gate.
+- The bounded whitespace corrective is `PASS`; Independent Delta Re-Review
+  REVIEW-013 is `PASS` for only that eight-file EOF delta.
+- `PRODUCT_SEMANTIC_CHANGE = NO`; the Delta Reviewer modified no file.
+- Architecture Owner final Closure is `ACCEPTED`; internal Step 1A is `CLOSED`
+  and its final reviewed baseline is `FROZEN`.
+- `V1-SLICE-1` remains `IN_PROGRESS`; Slice 1B remains `NOT_STARTED`; the next
+  action is preparation for Slice 1B under separate authority.
+- The Closure Commit is performed only after the staged full-range static gate.
+  Push: `NO`.
+
+## 2026-09-07 — V1-SLICE-1A Final Static Gate Whitespace Corrective
+
+- REVIEW-012 remains `PASS_FOR_PRE_CORRECTIVE_RANGE`; its blocking and major
+  Findings remain `NONE`, and the Review document was not modified.
+- The first Owner Closure stopped before Commit with
+  `V1_SLICE_1A_CLOSURE_RESULT = REVIEW_RANGE_INVALIDATED` because the complete
+  baseline `git diff HEAD --check` exposed whitespace errors.
+- Exactly eight reviewed Product files required EOF-only correction. Their only
+  byte changes remove terminal blank-line LF bytes while preserving one normal
+  EOF newline, LF line endings and every non-terminal byte.
+- The Implementation Record's reported line 3 and 4 Markdown trailing spaces
+  were removed, and its governance wording was reconciled with the failed first
+  Closure attempt.
+- `PRODUCT_SEMANTIC_CHANGE = NO`; no functional Product, architecture,
+  Runtime, test or configuration change was made. F-01 through F-10 were not
+  changed or fixed.
+- Corrected Product bytes are `NOT_YET_INDEPENDENTLY_REVIEWED`; the only next
+  action is an Independent Delta Review of this whitespace corrective.
+- `V1_SLICE_1A = IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`; Slice 1B remains
+  `NOT_STARTED`. Commit: `NO`; Push: `NO`; Staging: `NO`.
+
+## 2026-09-07 — V1-SLICE-1A Independent Review and First Owner Closure Attempt
+
+- Original V1-SLICE-1A implementation: `PASS`.
+- Theme Foundation Owner Requirement Corrective: `PASS`.
+- Independent REVIEW-012: `PASS`; first failure boundary `NONE`; blocking and
+  major Findings `NONE`.
+- All four `MINOR` and six `INFO` Findings, F-01 through F-10, remain retained
+  with their non-blocking dispositions and carry-forward routes. They were not
+  marked resolved merely because the Review passed.
+- Architecture Owner accepted the Review verdict, but the first Closure attempt
+  later stopped before Commit at the full-baseline whitespace gate.
+- `V1-SLICE-1` remains open and `IN_PROGRESS`; the next internal Step is 1B,
+  which remains `NOT_STARTED`.
+- Next action: prepare V1-SLICE-1B Authenticated Physical Carrier + Real Client
+  ↔ Host Communication under separate authority. No 1B implementation was
+  performed.
+- Product Code was not modified during Review persistence and Owner Closure.
+  The Independent Reviewer made no repository modification, and the Frozen
+  Harness was not modified.
+- The intended Closure Commit was not performed because the Final Static Gate
+  did not pass. Push: `NO`.
+
+## 2026-09-07 — V1-SLICE-1A Theme Foundation Owner Requirement Corrective
+
+- The requirement arrived after the original 1A Product implementation. The
+  bounded corrective adds only the Shaco-owned Desktop Theme Foundation and
+  revalidates the affected Desktop build/runtime; it does not reimplement 1A.
+- Added shared semantic design tokens, complete Light/Dark mappings, and one
+  root-level `light | dark | system` controller with a
+  `prefers-color-scheme` change seam. Initial application theme remains Light;
+  no visible Appearance setting or component-local dark-mode state was added.
+- Migrated Shaco-owned Shell styling to semantic tokens. Concrete theme colors
+  are limited to the token/mapping layer; frozen prepared Harness assets are
+  outside this scan and remain untouched.
+- Final exact-Node typecheck, build, 9/9 unit tests, theme static verification,
+  Electron Runtime theme switch smoke, existing real Harness Client/Reduced
+  View regression checks, general static scan, frozen Harness cleanliness and
+  `git diff --check` passed. The first corrective typecheck and first final unit
+  command failed on test compilation/output placement; both were corrected by
+  isolating Renderer theme tests in `dist-tests`, without changing runtime
+  boundaries.
+- `V1_SLICE_1A_THEME_FOUNDATION_CORRECTIVE = PASS`.
+- `V1_SLICE_1A = IMPLEMENTED_WAITING_INDEPENDENT_REVIEW` and
+  `V1_CURRENT_NEXT_ACTION = INDEPENDENT_REVIEW_V1_SLICE_1A` remain unchanged.
+- Slice 1B, Independent Review, commit, staging and push were not executed.
+
+## 2026-09-07 — V1-SLICE-1A Implemented, Waiting Independent Review
+
+- Implemented the first formal Product Source under `apps/desktop`,
+  `apps/worker` and the non-empty shared `packages/contracts` package.
+- Exact Node `22.19.0` launched a separate Worker, which launched the frozen
+  `@deepseek-ai/dsh@0.1.2-alpha.1` Host through the official
+  `dsh --profile shaco-forge-electron-smoke` seam. Final Electron evidence used
+  Main PID `30448`, Worker PID `20900` and Host PID `8080`; real readiness
+  resolved the shipped `standard` preset and reported four presets.
+- Mounted the real public `@deepseek-ai/dsh-client-web@0.1.2-alpha.1`
+  `AppWebEntry` composition with React/ReactDOM `18.3.1`; `entry.run()` resolved,
+  one runtime root child rendered, and no fixture/mock/fake RPC was used.
+- Electron `35.7.5` loaded `shaco-forge://client/` with the accepted secure
+  BrowserWindow settings. Reduced View gates passed, observed Product TCP
+  listeners were zero, and Worker/Host cleanup passed.
+- Typecheck, production build, seven unit tests, Worker smoke, Electron smoke,
+  static boundary/encoding scan and `git diff --check` passed. Failed intermediate
+  attempts and their bounded corrections are retained in
+  `V1-SLICE-1A-PRODUCT-BOOTSTRAP-IMPLEMENTATION-RECORD.md`.
+- `V1_SLICE_1A = IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`.
+- `V1_CURRENT_NEXT_ACTION = INDEPENDENT_REVIEW_V1_SLICE_1A`.
+- Slice 1B, Independent Review, commit, staging and push were not executed.
+
+## 2026-09-07 — V1-SLICE-1A Product Implementation Started
+
+- All bounded read-only preflight gates passed before the first Product Code
+  change: Shaco Forge is on `master` at
+  `714dfecb6fa771987c7faa787a02b650d4b68b8f` with a clean worktree; the frozen
+  Harness is clean at `cd5ef8148158c3a752a658978873241fdf8e2bbc` and tag
+  `dsh-v0.1.2-alpha.1`; the UI Spec and visual-reference identities match the
+  Slice authority exactly.
+- Prepared a task-local, official Node.js `22.19.0 / win32 / x64` runtime and a
+  task-local Corepack-managed `pnpm 11.7.0`; neither replaces or modifies the
+  user's global Node or pnpm installation.
+- `V1_IMPLEMENTATION_STARTED = YES`.
+- `V1_CURRENT_SLICE = V1-SLICE-1-REAL-HARNESS-USER-LOOP`.
+- `V1_CURRENT_STEP = V1-SLICE-1A-PRODUCT-BOOTSTRAP-REAL-HARNESS-CLIENT-BOOT`.
+- `V1_SLICE_1A = IN_PROGRESS`.
+- Scope remains bounded to Product bootstrap, independent Worker/Harness Host
+  boot, real pinned Harness Client mount and the V1.0 Reduced View. Slice 1B,
+  Independent Review, commit, staging and push are not authorized in this run.
+
 ## 2026-09-07 — Long-Term Shell Final Owner Closure
 
 - Architecture Owner final review is `PASS`; the Long-Term Shell Documentation

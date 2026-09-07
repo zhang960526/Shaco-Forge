@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist-tests",
+    "rootDir": ".",
+    "tsBuildInfoFile": "dist-tests/desktop-test.tsbuildinfo",
+    "types": ["node"]
+  },
+  "include": ["tests/**/*.ts", "src/renderer/theme/theme.ts"]
+}

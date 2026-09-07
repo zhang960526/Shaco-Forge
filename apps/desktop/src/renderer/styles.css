@@ -1,0 +1,68 @@
+:root {
+  color: var(--text-primary);
+  background: var(--surface-app);
+  font-family: "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; background: var(--surface-app); }
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 276px minmax(0, 1fr);
+  min-height: 100vh;
+  color: var(--text-primary);
+  background: var(--surface-app);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px 16px 16px;
+  border-right: 1px solid var(--border-default);
+  background: var(--surface-sidebar);
+}
+
+.brand { display: flex; gap: 12px; align-items: center; padding: 0 8px 28px; }
+.brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; color: var(--text-on-accent); background: var(--accent-primary); font-weight: 700; }
+.brand strong, .brand small { display: block; }
+.brand small { margin-top: 2px; color: var(--text-muted); font-size: 12px; }
+.sidebar-section { padding: 0 4px 20px; }
+.sidebar-section + .sidebar-section { padding-top: 18px; border-top: 1px solid var(--border-subtle); }
+.sidebar-section h2 { margin: 0 8px 9px; color: var(--text-muted); font-size: 11px; font-weight: 600; letter-spacing: .08em; }
+.nav-action, .settings-entry { width: 100%; border: 0; border-radius: 7px; padding: 9px 10px; font: inherit; text-align: left; color: var(--text-primary); background: var(--surface-transparent); }
+.nav-action:not(:disabled):hover, .settings-entry:hover { background: var(--hover-background); }
+.nav-action[aria-current="page"], .settings-entry[aria-current="page"], .sidebar-row[aria-selected="true"] { background: var(--selection-background); }
+.nav-action:disabled { color: var(--text-secondary); opacity: 1; cursor: not-allowed; }
+.nav-action:focus-visible, .settings-entry:focus-visible { outline: 2px solid var(--border-focus); outline-offset: 2px; box-shadow: 0 0 0 3px var(--focus-ring); }
+.project-directory { flex: 1; }
+.empty-directory { margin: 6px 8px; color: var(--text-secondary); font-size: 13px; }
+.project-directory p { margin: 8px; color: var(--text-muted); font-size: 12px; line-height: 1.55; }
+.settings-entry { margin-top: auto; border-top: 1px solid var(--border-subtle); border-radius: 0; padding-top: 16px; }
+
+.workspace { min-width: 0; padding: 24px 32px 28px; background: var(--surface-primary); }
+.centered-content { width: 100%; max-width: 1100px; margin-inline: auto; }
+.workspace-header { display: flex; align-items: center; justify-content: space-between; min-height: 54px; padding-bottom: 18px; border-bottom: 1px solid var(--border-subtle); }
+.workspace-header h1 { margin: 2px 0 0; font-size: 18px; font-weight: 600; }
+.eyebrow { margin: 0; color: var(--text-muted); font-size: 10px; letter-spacing: .12em; }
+.connection-status { max-width: 48%; color: var(--status-neutral); font-size: 12px; text-align: right; }
+.connection-status[data-phase="host-ready"] { color: var(--status-success); }
+.connection-status[data-phase="worker-failed"], .connection-status[data-phase="host-exited"] { color: var(--status-error); }
+.connection-status[data-phase="host-starting"] { color: var(--status-warning); }
+.client-stage { padding-top: 22px; }
+.truthful-state { display: flex; justify-content: space-between; gap: 18px; margin-bottom: 14px; padding: 12px 14px; border: 1px solid var(--border-default); border-radius: 8px; background: var(--surface-secondary); font-size: 12px; }
+.truthful-state span { color: var(--text-secondary); text-align: right; }
+#harness-client-root { min-height: calc(100vh - 150px); overflow: hidden; border-radius: 8px; background: var(--surface-elevated); }
+
+@media (max-width: 780px) {
+  .app-shell { grid-template-columns: 220px minmax(0, 1fr); }
+  .workspace { padding-inline: 18px; }
+  .truthful-state { flex-direction: column; }
+  .truthful-state span { text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; }
+}

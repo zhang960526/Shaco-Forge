@@ -1,0 +1,14 @@
+{
+  "name": "@shaco-forge/worker",
+  "version": "1.0.0-dev.1",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@shaco-forge/contracts": "workspace:*"
+  }
+}

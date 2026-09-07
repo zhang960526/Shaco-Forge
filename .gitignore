@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dist-tests/
+coverage/
+.generated-client/
+*.tsbuildinfo
+docs/04-development-records/evidence/V1-SLICE-1A/runtime/

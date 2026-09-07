@@ -1,0 +1,27 @@
+@property --surface-app { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --surface-sidebar { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --surface-primary { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --surface-secondary { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --surface-elevated { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --surface-transparent { syntax: "<color>"; inherits: true; initial-value: transparent; }
+
+@property --text-primary { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --text-secondary { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --text-muted { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --text-on-accent { syntax: "<color>"; inherits: true; initial-value: transparent; }
+
+@property --border-default { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --border-subtle { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --border-focus { syntax: "<color>"; inherits: true; initial-value: transparent; }
+
+@property --hover-background { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --selection-background { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --focus-ring { syntax: "<color>"; inherits: true; initial-value: transparent; }
+
+@property --status-success { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --status-warning { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --status-error { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --status-neutral { syntax: "<color>"; inherits: true; initial-value: transparent; }
+
+@property --accent-primary { syntax: "<color>"; inherits: true; initial-value: transparent; }
+@property --accent-hover { syntax: "<color>"; inherits: true; initial-value: transparent; }
