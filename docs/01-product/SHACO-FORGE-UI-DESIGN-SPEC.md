@@ -11,7 +11,7 @@
 | UI Design Baseline Ready | `YES` |
 | UI Direction Ready for Slice 1A | `YES` |
 | Initial Primary Theme | `LIGHT` |
-| Last Updated | `2026-09-06` |
+| Last Updated | `2026-09-07` |
 
 > 本文是 Shaco Forge 正式 UI 决策的唯一真相来源。聊天中讨论但未写入本文的内容，不构成冻结决定。若本文与更高优先级的产品、架构或治理 Authority 冲突，以 [Document Map](../00-governance/SHACO-FORGE-DOCUMENT-MAP.md) 定义的 Authority Order 为准，并必须在本文中完成显式同步，禁止依靠聊天记忆静默覆盖。
 
@@ -23,6 +23,37 @@ UI_SINGLE_SOURCE_OF_TRUTH = docs/01-product/SHACO-FORGE-UI-DESIGN-SPEC.md
 UI_SPEC_OWNER_REVIEW = PASS
 UI_DESIGN_BASELINE_READY = YES
 UI_DIRECTION_READY_FOR_SLICE_1A = YES
+UI_LONG_TERM_SHELL_OWNER_ACCEPTED = YES
+UI_LONG_TERM_SHELL_OWNER_DECISION = ACCEPTED
+UI_LONG_TERM_SHELL_VISUAL_REFERENCE = ACCEPTED
+FURTHER_VISUAL_ADJUSTMENT = NOT_REQUIRED
+UI_LONG_TERM_SHELL_DOCUMENTATION_SYNC_OWNER_REVIEW = PASS
+UI_LONG_TERM_SHELL_OWNER_CLOSURE = ACCEPTED
+UI_NAVIGATION_ARCHITECTURE_CORRECTIVE = CLOSED
+UI_LONG_TERM_SHELL_BASELINE = FROZEN_FOR_IMPLEMENTATION
+UI_LONG_TERM_SHELL_ARCHITECTURE = FIXED_FUNCTION_LAUNCHERS_PLUS_PROJECT_DIRECTORY
+UI_SIDEBAR_STRUCTURE = FIXED_FUNCTION_AREA + PROJECT_DIRECTORY + GLOBAL_SETTINGS
+FIXED_FUNCTION_AREA_ROLE = START_OR_ENTER_CAPABILITY
+PROJECT_DIRECTORY_ROLE = BROWSE_AND_REOPEN_EXISTING_PROJECT_WORK
+UI_PROJECT_DIRECTORY_MODEL = PROJECT_GROUPED_TYPED_WORK_RECORDS
+KNOWLEDGE_BASE_SCOPE = NOT_FROZEN
+OLD_CURRENT_NAVIGATION = PROJECT_FIRST_TYPED_WORK_ITEMS_AS_COMPLETE_SHELL
+OLD_CURRENT_NAVIGATION_STATUS = SUPERSEDED_BY_FIXED_FUNCTION_LAUNCHERS_PLUS_PROJECT_DIRECTORY
+PROJECT_GROUPED_TYPED_WORK_ITEMS = RETAINED_AS_PROJECT_DIRECTORY_MODEL
+UI_CHAT_ITEM_TRUTH = HARNESS_SESSION
+UI_AUTOMATION_ITEM = FUTURE_SHACO_DOMAIN
+UI_AGENT_COLLABORATION_ITEM = FUTURE_SHACO_DOMAIN
+SHARED_WORK_ITEM_RUNTIME_DOMAIN = NOT_CREATED
+SHARED_WORK_ITEM_RUNTIME_DOMAIN_CREATED = NO
+VISIBLE_FIXED_FUNCTIONS = NEW_CHAT_ONLY
+VISIBLE_PROJECT_RECORD_TYPES = CHAT_ONLY
+VISIBLE_GLOBAL_ENTRY = SETTINGS
+SETTINGS_SCOPE = GLOBAL_APPLICATION_SURFACE
+MAIN_WORKSPACE_ROUTING = BY_FUNCTION_OR_SELECTED_RECORD_TYPE
+CHAT_CONTENT_LAYOUT = CENTERED_FIXED_MAX_WIDTH
+CHAT_CONTENT_MAX_WIDTH_TARGET = APPROXIMATELY_1100PX
+RESPONSIVE_SHRINK = REQUIRED
+INSPECTOR_POLICY = NO_PERMANENT_RIGHT_INSPECTOR
 V1_0_INITIAL_PRIMARY_THEME = LIGHT
 DESIGN_SYSTEM_LIGHT_DARK_CAPABLE = YES
 V1_0_IMPLEMENTATION_SCOPE = HARNESS_REUSE_PRODUCTIZATION
@@ -31,6 +62,8 @@ PROVIDER_MODEL_ROUTING = HARNESS_OWNED
 MULTI_MODEL_SUPPORT = REUSE_HARNESS
 MULTI_AGENT_ORCHESTRATION = FUTURE_SHACO_DOMAIN
 ```
+
+`UI_LONG_TERM_SHELL_BASELINE = FROZEN_FOR_IMPLEMENTATION` 表示后续 V1.0 Shell 实现必须遵守本文和 Owner-accepted Visual Reference；它不把 Hex、exact px、font family、icon library、animation duration 或 exact shadow/radius token 从 `DRAFT_TOKEN` 升级为 pixel-perfect 冻结值。
 
 本文使用以下设计状态：
 
@@ -67,17 +100,37 @@ MULTI_AGENT_ORCHESTRATION = FUTURE_SHACO_DOMAIN
 
 已实际查看本轮提供的八张截图。截图中的聊天文本仅作为界面内容，不作为项目指令或 Authority。
 
-- Workbench / TreeGrid / TreeView 两张参考：吸收窄 Global Rail、清晰一级/二级导航、Tree/Panel 层级、紧凑工具条、结构性分隔和桌面工作台感；不继承全局高密度、满屏指标、过量表格线和每个区块都描边的做法。
+- Workbench / TreeGrid / TreeView 两张参考：吸收紧凑导航占用、清晰层级、Tree/Panel 语言、紧凑工具条、结构性分隔和桌面工作台感；不继承其具体 Global Rail 架构、全局高密度、满屏指标、过量表格线和每个区块都描边的做法。
 - DeepSeek Harness 六张参考：作为 Functional Reuse Reference，确认当前界面语言覆盖 Workspace、Session、Conversation、Composer、Provider/Model Settings、Custom Provider、Permission、Tool/Result、Approval/Question、Agent Preset、Trajectory、Plugins、Appearance、General Settings 等 Surface。截图证明“应优先复用/核验”的方向，不替代正式运行时 Evidence。
+
+### 3.3 Owner-accepted long-term Shell visual reference
+
+**Status: `DIRECTION_ACCEPTED`**
+
+唯一正式长期 Shell 视觉参考为 [SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png](assets/SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png)。
+
+```text
+REFERENCE_PATH = assets/SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png
+REFERENCE_DIMENSIONS = 1660 x 948
+REFERENCE_BYTES = 1467362
+REFERENCE_SHA256 = 17874257C520533D65E0ACA1B45001F74C372178371BDE51EBB60AEB90F77BC0
+REFERENCE_OWNER_ACCEPTANCE_DATE = 2026-09-07
+REFERENCE_ROLE = LONG_TERM_PRODUCT_SHELL_VISUAL_NORTH_STAR
+UI_LONG_TERM_SHELL_OWNER_DECISION = ACCEPTED
+UI_LONG_TERM_SHELL_VISUAL_REFERENCE = ACCEPTED
+FURTHER_VISUAL_ADJUSTMENT = NOT_REQUIRED
+```
+
+该图是长期产品 Shell 的结构、视觉语言、主要比例和信息层级的权威参考，不是 pixel-perfect executable contract，也不是 `V1.0 release screenshot`。它不表示图中的全部未来功能已经在 V1.0 实现；实现时必须同时遵守本文的 V1.0 Reduced Release View。该参考保持 Owner 已接受的 Light、Low Saturation、Modern Developer Workbench、Flat First、Structural Border、临时抬升 Surface 才使用 Soft Shadow、Small / Medium Radius、Outline Type Icons、右侧用户内容、左侧 Assistant 内容、顶部右侧低噪音 Worker 状态、左下 Settings 与无常驻右侧 Inspector 的视觉语言，不再要求替代视觉稿或进一步重绘。
 
 ## 4. Product UI Principles
 
 1. **Harness truth first.** Harness 已拥有的业务能力优先复用 Harness UI 或交互语义；Shaco 不建立第二套数据真相。
-2. **One desktop workbench.** 一个主窗口承载所有 Product Mode；Mode 是同一 Shell 内的主导航，不是独立应用。
-3. **Project context before mode.** Project / Workspace 是全局工作上下文，Chat 与未来模式共享它。
+2. **One desktop workbench.** 一个主窗口使用固定功能区、Project Directory 与 Global Settings；当前功能或 selected record type 在同一 Shell 内路由到对应 Main Workspace。
+3. **Launch capability, browse records.** 固定功能区用于开始或进入能力；Project Directory 用于浏览和重新打开 Project 下已经存在的 typed work records，二者职责不重复。
 4. **Content before chrome.** Chat 以对话和输入为中心，降低装饰、指标和常驻工具噪音。
 5. **Progressive disclosure.** 高级详情通过 Drawer、Inspector、Popover 或 Detail View 按需出现。
-6. **Density follows task.** Chat 低/中密度；Automation、Review 中/高密度；Diagnostics 高密度。
+6. **Density follows selected item type.** Chat 低/中密度；Automation、Agent Collaboration 中/高密度；Diagnostics 高密度。
 7. **Structural borders, flat first.** 边框和阴影服务于结构、临时抬升与交互反馈，不做装饰性卡片堆叠。
 8. **Truthful state.** 连接、Worker、Loading 和 Error 必须反映真实状态，不能用乐观 UI 假装成功。
 9. **Accessible interaction.** 所有关键操作支持键盘 Focus；关键状态不只依赖颜色。
@@ -90,76 +143,158 @@ MULTI_AGENT_ORCHESTRATION = FUTURE_SHACO_DOMAIN
 ```text
 V1_0_PROJECT_CONTEXT_REQUIRED = YES
 V1_0_GENERAL_CHAT = NOT_SUPPORTED
-PROJECT_CONTEXT = GLOBAL_WITHIN_WORKSPACE
-MODE_SWITCH_PRESERVES_PROJECT = YES
-PROJECT_RESELECTION_ON_MODE_SWITCH = NO
 PROJECT_RUNTIME_TRUTH = HARNESS_WORKSPACE
 SECOND_PROJECT_TRUTH = FORBIDDEN
+WORK_ITEM_PROJECT_CONTEXT = IMPLICIT_FROM_PARENT_PROJECT
+PROJECT_SWITCHING = SIDEBAR_PROJECT_NAVIGATION
+PROJECT_SELECTOR_AT_MODE_SIDEBAR_TOP = SUPERSEDED
 ```
 
-“Project”是产品 UI 对用户的概念名称；V1.0 底层优先映射并复用 Harness Workspace。用户选择 `Todo List` 后，Chat 以及未来的 Automation、Multi-Agent / Review 都默认在 `Todo List` 中工作。切换 Mode 不清空、不复制、也不重新请求 Project。
+“Project”是产品 UI 对用户的概念名称；V1.0 底层映射并复用 Harness Workspace。Project 是 Sidebar 中的一级组织节点，Work Item 是其子节点。选中 `Project A > Chat X` 时，Current Project 隐式为 `Project A`；未来选中 `Project B > Automation Y` 时，Current Project 隐式为 `Project B`。不再在 Mode-specific Sidebar 顶部重复 Project Selector。
 
-Project 变化是显式的全局上下文切换。切换前若存在未提交输入、运行中的阻塞性交互或可能丢失的本地 UI 状态，界面必须先给出明确处理路径；不得静默丢弃。是否需要阻塞确认取决于真实丢失风险，不得把每次切换都做成 Modal。
+Project switching 通过 Sidebar Project Tree 自然完成。切换前若存在未提交输入、运行中的阻塞性交互或可能丢失的本地 UI 状态，界面必须先给出明确处理路径；不得静默丢弃。是否需要阻塞确认取决于真实丢失风险，不得把每次切换都做成 Modal。
 
 ## 6. Application Shell
 
-**Status: `FROZEN_FOR_V1_0`**
+**Status: `DIRECTION_ACCEPTED` for long-term Shell; `FROZEN_FOR_V1_0` for reduced exposure**
 
 ```text
 ONE_DESKTOP_SHELL = YES
+UI_LONG_TERM_SHELL_ARCHITECTURE = FIXED_FUNCTION_LAUNCHERS_PLUS_PROJECT_DIRECTORY
+UI_SIDEBAR_STRUCTURE = FIXED_FUNCTION_AREA + PROJECT_DIRECTORY + GLOBAL_SETTINGS
+MAIN_WORKSPACE_ROUTING = BY_FUNCTION_OR_SELECTED_RECORD_TYPE
 
 MAIN WINDOW
-├─ Primary Navigation / Global Rail
-├─ Mode-specific Context Sidebar
-└─ Main Content Workspace
+├─ Sidebar
+│  ├─ Fixed Function Area
+│  ├─ Project Directory + Typed Work Records
+│  └─ Global Settings
+└─ Function- or Record-specific Main Workspace
    └─ Optional on-demand Detail / Inspector
 ```
 
-- Global Rail：窄、稳定、低噪音，放 Product Mode 入口；不承载长期展开的 Project 列表。
-- Context Sidebar：内容随 Mode 变化；Chat 中承载 Project Selector、Session 创建和 Session 列表。
-- Main Content：当前 Mode 的首要工作面；Chat 中是 Conversation + Composer。
+- Fixed Function Area：长期完整 Shell 固定提供 `+ 新对话`、`自动化`、`Agent 协作`、`知识库`，用于开始或进入一种能力，不是已有历史记录列表。
+- Project Directory：以 Project 为一级节点，展示和重新打开已有 typed work records；长期可混排 Chat、Automation 与 Agent Collaboration。
+- Main Workspace：由当前功能或 selected record type 路由；Chat 打开 Harness Conversation Surface，未来 Automation、Agent Collaboration 与 Knowledge Base 使用各自布局，不要求共享同一种 Main Workspace layout。
+- Settings：全局应用 Surface，固定在 Sidebar 底部或其他低干扰全局位置，不是 Project child Work Item。
 - Optional Inspector：不是常驻第四列；只在当前任务需要详情时出现，可关闭并把空间归还主工作区。
-- Primary Navigation 和 Shell 几何关系固定；Mode 内部允许不同密度与布局结构。
 
-窄窗口时优先保住 Main Content；Context Sidebar 可折叠或以覆盖层展开，Global Rail 仍保持 Mode 可发现性。响应策略不得把 Project Context 隐藏成不可访问状态。
+窄窗口时优先保住 Main Workspace；Sidebar 可折叠或以覆盖层展开。响应策略不得把 Fixed Function Area、Project Context 或 Global Settings 隐藏成不可访问状态。V1.0 沿用同一区域结构和视觉语言，但只暴露已经实现的入口。
 
 ## 7. Navigation Hierarchy
 
-### 7.1 V1.0 primary navigation
+### 7.1 Current long-term Shell architecture
+
+**Status: `DIRECTION_ACCEPTED`**
+
+```text
+UI_LONG_TERM_SHELL_ARCHITECTURE = FIXED_FUNCTION_LAUNCHERS_PLUS_PROJECT_DIRECTORY
+UI_SIDEBAR_STRUCTURE = FIXED_FUNCTION_AREA + PROJECT_DIRECTORY + GLOBAL_SETTINGS
+FIXED_FUNCTION_AREA_ROLE = START_OR_ENTER_CAPABILITY
+PROJECT_DIRECTORY_ROLE = BROWSE_AND_REOPEN_EXISTING_PROJECT_WORK
+SETTINGS_SCOPE = GLOBAL_APPLICATION_SURFACE
+MAIN_WORKSPACE_ROUTING = BY_FUNCTION_OR_SELECTED_RECORD_TYPE
+```
+
+固定功能区回答“我要开始或进入什么能力”；Project Directory 回答“这个 Project 下已经存在什么工作记录”。二者不是重复导航：点击 `+ 新对话` 是在当前 Project 下开始创建新 Chat，点击已有 Chat Item 是重新打开对应 Harness Session；点击 `自动化` 或 `Agent 协作` 是进入未来相应能力的创建/总览 Surface，点击 Project 下的相应 typed record 则打开具体记录或 Run。未来 create flow 的精确细节由对应版本决定。
+
+长期 Sidebar 的当前结构为：
+
+```text
+Shaco Forge
+AI 开发工作空间
+
+功能
++ 新对话
+自动化
+Agent 协作
+知识库
+
+----------------
+
+项目目录
+Shaco-Forge
+  Chat — UI Design Discussion
+  Chat — Harness Integration
+  Agent Collaboration — Architecture Review
+  Automation — V1 Build
+Todo List
+  Chat — Login Issue
+Car Spa
+  Chat — Product Planning
+  Chat — UI Review
+  Chat — Bug Investigation
+
+----------------
+
+设置
+```
+
+功能路由为：`CHAT` → Harness Conversation / Chat Surface；`AUTOMATION` → future Automation Workspace；`AGENT COLLABORATION` → future Multi-Agent Collaboration Workspace；`KNOWLEDGE BASE` → future Knowledge / Memory Workspace；Project Record → 按真实 record type 路由。`KNOWLEDGE_BASE_SCOPE = NOT_FROZEN`，本轮不冻结它最终是 Project-scoped、global 或 mixed。
+
+### 7.2 Superseded and retained navigation record
+
+```text
+OLD_CURRENT_NAVIGATION = PROJECT_FIRST_TYPED_WORK_ITEMS_AS_COMPLETE_SHELL
+OLD_CURRENT_NAVIGATION_STATUS = SUPERSEDED_BY_FIXED_FUNCTION_LAUNCHERS_PLUS_PROJECT_DIRECTORY
+PROJECT_GROUPED_TYPED_WORK_ITEMS = RETAINED_AS_PROJECT_DIRECTORY_MODEL
+PRE_CORRECTIVE_NAVIGATION = MODE_FIRST_GLOBAL_RAIL
+PRE_CORRECTIVE_NAVIGATION_STATUS = SUPERSEDED
+PROJECT_SELECTOR_AT_MODE_SIDEBAR_TOP = SUPERSEDED_BY_SIDEBAR_PROJECT_NAVIGATION
+MODE_SWITCH_PRESERVES_PROJECT = SUPERSEDED_BY_IMPLICIT_PARENT_PROJECT_CONTEXT
+```
+
+这是变更记录，不是并行可用的 current architecture。上一轮 Corrective 的“纯 Project Tree 是整个 Shell”判断已被 Owner 最终决定取代；其有效部分——Project grouping 与 Project 下的 typed work records——完整保留为 Project Directory 模型。更早的 Mode-first Global Rail、Mode-specific Sidebar 顶部 Project Selector，以及按 Mode 切换后保持 Project 的交互模型也继续保持 superseded。本文只存在一个 current Long-Term Shell Architecture，即 `FIXED_FUNCTION_LAUNCHERS_PLUS_PROJECT_DIRECTORY`。
+
+### 7.3 Typed Work Item semantics
+
+`TYPED_WORK_ITEM` 只是 Sidebar 统一分类术语，不是新的 V1.0 Runtime Domain。
+
+```text
+TYPED_WORK_ITEM != NEW_V1_0_RUNTIME_DOMAIN
+SHARED_WORK_ITEM_RUNTIME_DOMAIN = NOT_CREATED
+SHARED_WORK_ITEM_RUNTIME_DOMAIN_CREATED = NO
+CHAT_ITEM_TRUTH = HARNESS_SESSION
+AUTOMATION_ITEM_TRUTH = FUTURE_SHACO_DOMAIN
+AGENT_COLLABORATION_ITEM_TRUTH = FUTURE_SHACO_DOMAIN
+```
+
+禁止因此创建 WorkItem database、table、state machine、persistence truth 或第二套 Harness Session truth。类型由真实底层记录决定，不得通过 fake item 或 fixture 填充导航。
+
+未来同一 Project 下允许 Chat、Automation 与 Agent Collaboration 混排，通过类型图标识别，并分别路由到 type-specific Main Workspace；不得强制拆成三个全局页面。
+
+### 7.4 V1.0 Reduced Release View
 
 **Status: `FROZEN_FOR_V1_0`**
 
-V1.0 实际可见一级入口仅为：
-
-1. `CHAT`
-2. `SETTINGS`
-
-`AUTOMATION`、`MULTI-AGENT / REVIEW`、`MEMORY / EVIDENCE` 仅在对应功能真实完成后增加。V1.0 禁止显示 Disabled、Coming Soon 或“敬请期待”入口，也禁止为未来页面建立空 Surface。
-
-### 7.2 Mode-specific navigation
-
-**Status: `DIRECTION_ACCEPTED`**
-
-二级导航只在当前 Mode 需要时出现。Chat 使用 Session Sidebar；Settings 使用设置分类；未来 Automation 可使用 Definitions / Runs / Task Tree / Schedules，Review 可使用 Agent / Task / Finding 层级。二级导航不得反向成为另一套全局 Shell。
-
-## 8. Project Selector
-
-**Status: `DIRECTION_ACCEPTED`**
-
-Project Selector 位于 Mode-specific Context Sidebar 顶部，视觉上先于该 Mode 的局部列表，例如：
-
 ```text
-Todo List                         ▾
-──────────────────────────────────
-+ New Session
-Sessions
-  Session A
-  Session B
+VISIBLE_FIXED_FUNCTIONS = NEW_CHAT_ONLY
+VISIBLE_PROJECT_RECORD_TYPES = CHAT_ONLY
+VISIBLE_GLOBAL_ENTRY = SETTINGS
+HIDDEN_FUTURE_FUNCTIONS = AUTOMATION + AGENT_COLLABORATION + KNOWLEDGE_BASE
 ```
 
-Dropdown 至少表达：当前 Project、Recent Projects、可选 Project，以及 `Open Project…`。`Open Project…` 使用 Native Workspace Picker；选择结果回到 Harness Workspace 真相。Project 列表不长期铺满 Global Rail。
+长期 Shell 展示完整产品演进方向，不代表 V1.0 已完成全部能力。V1.0 使用相同的 Sidebar 区域结构和视觉语言，但 Fixed Function Area 只显示 `+ 新对话`，Project Directory 只显示真实 Chat records，Global Entry 显示 Settings。Automation、Agent Collaboration 与 Knowledge Base 在真实实现完成前必须完全隐藏；禁止 `Coming Soon`、Disabled future entry、fake future record 或 placeholder Surface。
 
-Project Selector 的选中态必须明显强于 Hover；长路径作为次级信息按需展示，常态优先显示可识别名称。失效目录不能显示为已成功进入；应标记不可用并提供重新定位或移除 Recent 记录的路径。
+## 8. Project Directory Navigation
+
+**Status: `FROZEN_FOR_V1_0`**
+
+Project Directory 的职责是浏览和重新打开已有 Project 工作。Project Row 显示项目名、expand/collapse、Selected 状态与可选的 project-level create `+` shortcut，并映射 Harness Workspace。Context menu 可未来增加。示例：
+
+```text
+▾ Shaco-Forge                                      +
+   [chat icon] UI Design Discussion
+   [chat icon] Harness Integration
+```
+
+```text
+PROJECT_OVERVIEW = NOT_FROZEN
+```
+
+点击 Project 名称本身是否打开独立 Project Overview / Dashboard 为 `NOT_FROZEN`。V1.0 不为 Project Node 创建空 Dashboard；Project Row 当前主要承担 select、expand、collapse、create 与未来 context action。
+
+Project 与 Item 的 Selected 状态必须明显强于 Hover。长路径作为次级信息按需展示，常态优先显示可识别名称。`Open Project…` 使用 Native Workspace Picker，并把结果交给 Harness Workspace truth。失效目录不能显示为已成功进入；应标记不可用并提供重新定位或移除 Recent 记录的路径。Project-level `+` 只是上下文快捷入口，不取代 Fixed Function Area：V1.0 它若存在也只能创建真实 Chat。
 
 ## 9. No Project State
 
@@ -171,7 +306,7 @@ Project Selector 的选中态必须明显强于 Hover；长路径作为次级信
 - `Open Project…`
 - `Global Settings`
 
-允许恢复上次有效 Workspace；恢复前必须验证目录仍有效。失效目录不得被未经确认地自动进入。无 Project 时 `CHAT` 的语义是引导选择上下文，而不是创建 General Chat；`AUTOMATION` 和 `MULTI-AGENT / REVIEW` 在其未来版本中同样受此约束。
+允许恢复上次有效 Workspace；恢复前必须验证目录仍有效。失效目录不得被未经确认地自动进入。无 Project 时不得创建任何 typed Work Item，也不得显示可发送的空 Chat。
 
 空状态不用大型插画、营销 Hero 或示例 Dashboard。主要动作是 `Open Project…`，Recent Project 为次级选择，Global Settings 为低强调入口。
 
@@ -182,37 +317,63 @@ Project Selector 的选中态必须明显强于 Hover；长路径作为次级信
 ### 10.1 Layout
 
 ```text
-┌ Global Rail ┬ Context Sidebar ┬──────────────── Main Workspace ────────────────┐
-│ Chat        │ Project ▾       │ Quiet header: session + minimal true state     │
-│ Settings    │ + New Session   ├────────────────────────────────────────────────┤
-│             │ Search/filter*  │                                                │
-│             │ Sessions        │ Conversation / streaming / tool-result basics │
-│             │  Selected       │                                                │
-│             │  Recent         ├────────────────────────────────────────────────┤
-│             │                 │ Composer: text first; model + permission quiet │
-└─────────────┴─────────────────┴────────────────────────────────────────────────┘
-                                                        * only if useful at scale
+┌──────── V1.0 Reduced Sidebar ───────┬────────── Chat Main Workspace ────────────┐
+│ Shaco Forge                         │       Centered Header / true state          │
+│ 功能                               │                                            │
+│ + 新对话                           │       Centered Conversation                  │
+│ ─────────────────────────────────  │       + Tool / Process Content              │
+│ 项目目录                           │       max-width: approximately 1100px        │
+│ ▾ Shaco-Forge                    +  │                                            │
+│   [chat] UI Design                  │       Centered Composer                     │
+│   [chat] Harness Integration        │       max-width: approximately 1100px        │
+│ ▾ Todo List                      +  │                                            │
+│   [chat] Login Issue                │                                            │
+│                                    │                                            │
+│ 设置                               │                                            │
+└────────────────────────────────────┴────────────────────────────────────────────┘
 ```
 
-### 10.2 Context Sidebar
+### 10.2 V1.0 Sidebar
 
-必须支持 Current Project / Workspace Selector、Session create、Session list 和 Session select。Session 行优先展示可识别标题与必要的轻量元数据；默认不展示 token、PID、Port、Carrier ID 或内部 ID。Session 选中态清晰，Hover 不得与 Selected 混淆。
+Sidebar 保持 Fixed Function Area、Project Directory 与 Global Settings 的长期区域结构。V1.0 Fixed Function Area 只显示 `+ 新对话`；Project Directory 必须支持 Search、真实 Workspace / Project grouping、Project expand/collapse、可选 Project-level `New Chat` shortcut、真实 Harness Session list/select；底部显示 Global Settings。每个 Chat Item 的真实映射是 Harness Session：
 
-### 10.3 Main Workspace
+```text
+CHAT_ITEM_TYPE = CHAT
+CHAT_ITEM_TRUTH = HARNESS_SESSION
+```
 
-必须支持 Conversation、Streaming、Tool / Result 基本呈现，以及 Harness 要求时的 Approval / Question。内容列保持可读宽度，但不把整个工作区强制做成居中消费级聊天窄列；长代码、Tool Result 和结构化内容可在内容区内获得更宽呈现或按需展开。
+Chat Item 使用 conversation/message 语义的 Outline 图标，并优先展示可识别标题与必要轻量元数据；默认不展示 token、PID、Port、Carrier ID 或内部 ID。禁止 fake Project、fake Session、fake Chat Item 和 fixture Item。
+
+### 10.3 Create and scale model
+
+Fixed Function Area 的 `+ 新对话` 是长期 Shell 与 V1.0 的正式 Chat create / entry launcher；已有 selected Project 时在其中创建，无 Project 时必须先选择或打开 Project，不能绕过 Project Context。Project Row 的 `+` 可以作为 context-aware shortcut：V1.0 只显示 `New Chat`。V1.1 Automation 与 V1.2 Agent Collaboration 真实完成后，对应 fixed launcher 与 Project typed records 才同时出现。禁止 Coming Soon、Disabled future type 或 placeholder。
+
+当 Item 增多时允许轻量 Search、`All / Chat / Automation / Agents` 类型 Filter，以及 `Today / Yesterday / Earlier` 时间分组。V1.0 只有 Chat Item 时，不显示没有实际价值的类型 Filter。具体控制样式不做 pixel freeze。
+
+### 10.4 Chat Main Workspace
+
+选中 Chat Item 后，Main Workspace 打开 Harness Conversation Surface，包含 Conversation、Composer、Tool Result、Approval、Question、Model 与 Permission。必须支持 Conversation、Streaming、Tool / Result 基本呈现，以及 Harness 要求时的 Approval / Question。
+
+```text
+CHAT_CONTENT_LAYOUT = CENTERED_FIXED_MAX_WIDTH
+CHAT_CONTENT_MAX_WIDTH_TARGET = APPROXIMATELY_1100PX
+RESPONSIVE_SHRINK = REQUIRED
+CHAT_CENTER_AXIS = HEADER + CONVERSATION + TOOL_PROCESS_CONTENT + COMPOSER
+```
+
+Header、Conversation、Tool / Process Content 与 Composer 保持同一中心轴；宽屏时左右自然留白，窄屏时在可用 Main Area 内响应式收缩。Chat 内容与 Composer 不得横向铺满全部 Main Area。长代码、Tool Result 和结构化内容应在该内容系统内使用换行、横向滚动或按需展开，而不是永久破坏中心轴。
 
 Tool Result 默认摘要化，明确区分进行中、成功、失败和需要用户介入；详情可原位展开或进入按需 Inspector。Approval / Question 是任务阻塞性交互，必须在上下文中可发现，且不能被普通 Toast 替代。
 
-### 10.4 Composer
+### 10.5 Composer
 
 Composer 宽、安静、输入优先。必须包括 Text Input、Model Selector 与最小 Permission state / entry。Model 与 Permission 存在但不争夺主视觉；低频动作进入折叠菜单、Hover affordance 或次级入口。发送、停止等当前主动作在同一时刻保持唯一明确 Primary 层级。
 
-### 10.5 Shaco-specific state
+### 10.6 Shaco-specific state
 
 显示 Worker / Connection 的最小真实状态，例如 `Worker · Connected`、`Worker · Starting`、`Connection lost`。默认不显示 PID、Port、Carrier ID、Version SHA 或详细 Runtime metrics；高级诊断按需进入详情 Surface。
 
-### 10.6 Harness reuse rule
+### 10.7 Harness reuse rule
 
 Conversation、Session、Provider、Model、Credential、Tool、Permission、Approval 与 Question 优先直接复用 Harness Client UI 或 Harness interaction semantics。Shaco adaptation 只允许解决 Desktop Shell、连接、Native Picker、重连与真实状态投影问题，不借 UI 重构建立第二套业务状态。
 
@@ -220,7 +381,7 @@ Conversation、Session、Provider、Model、Credential、Tool、Permission、App
 
 **Status: `FROZEN_FOR_V1_0`**
 
-V1.0 Settings 首要暴露 `Provider / Model`。当 pinned Harness 支持时，必须允许访问：Provider、Custom Provider、API Endpoint、Relay / 中转站、Credential、Model discovery 和 Model selection。
+Settings 的 `SETTINGS_SCOPE = GLOBAL_APPLICATION_SURFACE`，固定为 Sidebar 底部或其他低干扰全局位置，不属于 Project，也不得显示成 Project child Work Item。V1.0 Settings 首要暴露 `Provider / Model`；当 pinned Harness 支持时，必须允许访问 Provider、Custom Provider、API Endpoint、Relay / 中转站、Credential、Model discovery 和 Model selection。
 
 ```text
 Provider / Model / Endpoint / Relay / Credential truth = HARNESS_OWNED
@@ -230,7 +391,7 @@ Shaco Endpoint Manager = FORBIDDEN_FOR_V1_0
 Shaco Relay Manager = FORBIDDEN_FOR_V1_0
 ```
 
-Settings 可以采用页面或 Mode 内分类 Sidebar，不要求连续 Modal。敏感凭据只显示存在性、脱敏标识和编辑动作；不得在列表、错误或诊断中回显 Secret。保存结果必须来自 Harness 的真实确认；失败时保留可修正输入并给出可操作错误。
+Settings 可以采用独立 Global Application page 或其内部分类 Sidebar，不要求连续 Modal。敏感凭据只显示存在性、脱敏标识和编辑动作；不得在列表、错误或诊断中回显 Secret。保存结果必须来自 Harness 的真实确认；失败时保留可修正输入并给出可操作错误。
 
 ## 12. Harness Reuse Matrix
 
@@ -238,8 +399,8 @@ Settings 可以采用页面或 Mode 内分类 Sidebar，不要求连续 Modal。
 
 | Feature | Harness Has It | V1.0 Exposed | Reuse Strategy | Shaco Adaptation | Future Status |
 |---|---|---|---|---|---|
-| Workspace | Yes | Yes | Reuse Harness truth and semantics | Native picker; global Project label/context | Core V1.0 |
-| Session | Yes | Yes | Reuse create/list/select/resume/history | Desktop sidebar projection and reconnect | Core V1.0 |
+| Workspace | Yes | Yes | Reuse Harness truth and semantics | Native picker; Project node grouping | Core V1.0 |
+| Session | Yes | Yes | Reuse create/list/select/resume/history | Project child Chat Item projection and reconnect | Core V1.0 |
 | Conversation | Yes | Yes | Reuse Harness Client/runtime | Shell composition and truthful repull | Core V1.0 |
 | Streaming | Yes | Yes | Reuse Harness stream/events | Carrier transport, reconnect and state mapping | Core V1.0 |
 | Composer | Yes | Yes | Reuse UI/interaction semantics | Fit Shaco visual hierarchy; keep input primary | Core V1.0 |
@@ -274,37 +435,41 @@ V1_0_UI_REQUIRED = NO
 
 以下 Surface 不要求在 V1.0 完整暴露：Trajectory / Execution Trace、Agent Preset Management、Plugins、Full Appearance Settings、Advanced General Settings、Advanced Session Log、Advanced Diagnostics。延期的是 Shaco V1.0 UI Surface，不是删除 Harness Runtime capability。
 
-## 14. Future Automation
+## 14. Future Automation Item
 
 **Status: `FUTURE_DIRECTION_ONLY`**
 
-V1.1 可在同一 Shell 增加一级 `AUTOMATION`。进入后继续使用当前全局 Project，不重新选择。二级栏候选为 Automation Definitions、Runs、Task Tree、Schedules / Triggers；主工作区候选为 Run Detail、Task Tree、Progress、Artifacts、Result。
+V1.1 Automation capability 真实完成后，Fixed Function Area 出现 Automation launcher，Project Directory 可在同一 Project 下增加 `AUTOMATION` typed Work Item，Main Workspace 增加 Automation Surface。Automation Item 映射 Shaco-owned AutomationDefinition、AutomationRun、Task、Step、Attempt，并可引用一个或多个 Harness Sessions。选中后 Main Workspace 路由到 Automation Workspace，候选内容为 Goal、Run、Task Tree、Progress、Artifacts、Result，信息密度为 Medium / High。
 
-Automation 可采用 Workbench / TreeGrid / TreeView 的中高密度结构，但本轮只冻结 Shell Extension Seam，不设计完整最终页面，不创建占位入口、空数据表或预制未来状态。Automation 真相未来归 Shaco domain；它引用 Harness Session，不复制 Harness Session truth。
+Automation 可采用 Workbench / TreeGrid / TreeView 语言，但本轮只冻结同一 Sidebar 内的 typed-item extension seam 与 type-specific workspace routing，不设计完整最终页面。V1.0 禁止显示 Automation Item、创建选项、占位入口、空数据表或预制未来状态。
 
-## 15. Future Multi-Agent / Review
+## 15. Future Agent Collaboration Item
 
 **Status: `FUTURE_DIRECTION_ONLY`**
 
-V1.2 可在同一 Shell 增加一级 `MULTI-AGENT / REVIEW`，继续共享当前 Project Context。未来可展示 Planner、Executor、Reviewer、Corrective、Agent Tree、Task Tree、Review Findings 和 Execution State。
+V1.2 capability 真实完成后，Fixed Function Area 出现 Agent Collaboration launcher，Project Directory 可在同一 Project 下增加 `AGENT_COLLABORATION` typed Work Item，Main Workspace 增加 Agent Collaboration Surface。它可以引用多个 Harness Sessions，并可展示 Planner、Executor、Reviewer、Corrective、Re-review、Council、Synthesizer、Critic、Findings 与 Outputs。选中后 Main Workspace 路由到 Agent Collaboration Workspace，信息密度为 Medium / High。
 
-这些内容不得塞入普通 Chat，也不得建立独立 Desktop Shell。多个 Agent 可以关联多个 Harness Sessions；Provider / Model 仍归 Harness，谁运行、何时运行、依赖、结果流、重试与 Review 才是未来 Shaco 编排域。
+这些内容不得塞入普通 Chat，也不得建立独立 Desktop Shell。Provider / Model 仍归 Harness，谁运行、何时运行、依赖、结果流、重试与 Review 才是未来 Shaco 编排域。V1.0 禁止显示 Agent Collaboration Item、创建选项或占位入口。
 
 ## 16. Future Memory / Evidence
 
 **Status: `FUTURE_DIRECTION_ONLY`**
 
-V1.3 候选包括 Memory、Evidence、Experience。它们最终成为独立 Mode、Project Detail 还是 Inspector 尚未冻结；等真实信息架构和使用频率出现后决定。V1.0 不预建入口、表、空页面或永久导航槽位。
+V1.3 候选包括 Memory、Evidence、Experience；Knowledge Base / Memory capability 只有在真实实现完成后才显示 fixed entry。`KNOWLEDGE_BASE_SCOPE = NOT_FROZEN`：它最终是 Project-scoped、global 或 mixed，以及精确版本与 Scope，继续由 Version Roadmap / 后续 Owner 决定。Memory、Evidence、Experience 是否成为 Project Detail、Inspector、attachment 或 typed record 尚未冻结。Plugins 是 Settings / Extensions candidate；Diagnostics 是 Inspector / Detail candidate。V1.0 不预建入口、表、空页面或永久导航槽位。
 
 ## 17. Optional Inspector
 
 **Status: `DIRECTION_ACCEPTED`**
 
-Inspector 不是全局永远可见的第四列。每个 Mode 可按需选择 Right Detail Drawer、Inspector 或 Side Panel：
+```text
+INSPECTOR_POLICY = NO_PERMANENT_RIGHT_INSPECTOR
+```
 
-- Chat：默认关闭；用于 Tool Detail、Session info、Trajectory。
-- Automation：用于 Task Detail、Artifact、Run State。
-- Review：用于 Finding、Agent State、Execution Trace。
+Inspector 不是全局永远可见的第三栏。每种 selected item type 可按需选择 Right Detail Drawer、Inspector 或 Side Panel：
+
+- Chat：默认关闭；用于 Session、Tools、Files、Context、Trajectory later。
+- Automation：用于 Task、Artifact、Run Detail。
+- Agent Collaboration：用于 Agent、Finding、Trace。
 
 打开 Inspector 时要维持当前选择与空间关系；关闭后主工作区恢复空间。普通内容不得为了“可能有详情”永久缩窄。
 
@@ -317,7 +482,7 @@ Inspector 不是全局永远可见的第四列。每个 Mode 可按需选择 Rig
 | Chat | Workbench reference 的约 60%–70% | 留白服务阅读；侧栏/工具条紧凑；默认隐藏高级指标。 |
 | Settings | Low / Medium | 分类清楚，一次只呈现相关配置；敏感状态低噪音。 |
 | Automation | 参考的约 80%–100% | Tree、Grid、Run Detail 可并置，但仍按任务渐进披露。 |
-| Multi-Agent / Review | Medium / High | Agent/Task/Findings 层级清楚，避免塞回 Chat。 |
+| Agent Collaboration | Medium / High | Agent/Task/Findings 层级清楚，避免塞回 Chat。 |
 | Diagnostics | High | 可以表格化与指标化，但仅在用户主动进入时出现。 |
 
 紧凑不等于拥挤，现代不等于巨大留白。主阅读区优先舒适行长与段落节奏；Sidebar、Toolbar 和结构化列表允许更紧凑。
@@ -356,7 +521,7 @@ MAIN_SHELL_SHADOW_POLICY = FLAT_FIRST
 SHADOW_AS_DEFAULT_SEPARATOR = NO
 ```
 
-Sidebar、Main Workspace、Primary Navigation 大部分情况下不使用明显阴影。Soft Shadow 只允许用于 Dropdown、Popover、Context Menu、Tooltip、Modal、Floating Inspector、Drag / floating state 和其他临时抬升 Surface。
+Sidebar 与 Main Workspace 大部分情况下不使用明显阴影。Soft Shadow 只允许用于 Dropdown、Popover、Context Menu、Tooltip、Modal、Floating Inspector、Drag / floating state 和其他临时抬升 Surface。
 
 阴影必须 Soft、Diffuse、Low contrast；禁止厚重黑色投影、Glossy/Card-dashboard 效果、大量 Card Shadow、厚重 Material-style shadow 和高饱和发光。Dark Mode 中阴影作用更弱，主要依赖 surface contrast、border 和 overlay 表达层级。
 
@@ -384,7 +549,7 @@ Monospace 用于代码、命令、标识符和需要对齐的技术数据，不�
 
 **Status: `DRAFT_TOKEN`**
 
-采用 Outline / simple geometric、低噪音且一级导航容易区分的统一视觉语言。最终 Icon Library 未冻结。禁止无语义地混用 Filled cartoon、3D、Emoji 与 Outline；图标不能成为关键状态的唯一表达。
+采用 Outline / simple geometric、低噪音且类型容易区分的统一视觉语言。Chat 使用 conversation/message 语义；Automation 使用 automation/flow/lightning 语义；Agent Collaboration 使用 nodes/agents/collaboration 语义。最终 Icon Library、Stroke 与 Exact Size 未冻结。禁止把 Emoji 作为生产类型图标，也禁止无语义地混用 Filled cartoon、3D 与 Outline；图标不能成为关键状态的唯一表达。
 
 ## 26. Interaction States
 
@@ -484,25 +649,31 @@ Slice 1A 和 V1.0 第一轮视觉实现与验收以 Light Theme 为主基线。�
 
 1. `V1_0_PROJECT_CONTEXT_REQUIRED = YES`。
 2. `V1_0_GENERAL_CHAT = NOT_SUPPORTED`。
-3. `PROJECT_CONTEXT = GLOBAL_WITHIN_WORKSPACE`。
-4. `MODE_SWITCH_PRESERVES_PROJECT = YES`。
-5. `PROJECT_RESELECTION_ON_MODE_SWITCH = NO`。
-6. V1.0 的 Project UI 映射 Harness Workspace；不得建立第二套 Project truth。
-7. `ONE_DESKTOP_SHELL = YES`；Chat、Settings 与未来 Mode 共用主窗口和 Shell。
-8. V1.0 Primary Navigation 只显示 `CHAT`、`SETTINGS`；不显示未来功能占位或 Disabled 入口。
-9. No Project 时不显示假 Chat；只允许 Recent Projects、Open Project 与 Global Settings，并验证恢复目录有效性。
-10. Chat Context Sidebar 必须支持 Project Selector、Session create/list/select。
-11. Chat Main Workspace 必须支持 Conversation、Streaming、Tool / Result basic rendering，以及 Harness 要求时的 Approval / Question。
-12. Composer 必须支持 Text Input、Model Selector、最小 Permission state / entry。
-13. 必须显示最小且真实的 Worker / Connection 状态，并提供 Native Workspace Picker。
-14. V1.0 Settings 优先暴露 Harness-owned Provider / Model；Harness 支持时包含 Custom Provider、API Endpoint、Relay、Credential、Model discovery/selection。
-15. Provider、Model、Endpoint、Relay、Credential、Workspace、Session、Conversation、Tool、Permission、Approval/Question 的业务真相归 Harness；禁止复制第二套 Shaco truth。
-16. V1.0 禁止创建 Provider Registry、Model Registry、Shaco Endpoint Manager、Shaco Relay Manager 或第二套 Credential Settings truth。
-17. Harness Runtime capabilities 在 UI 延期时仍必须保留；不得因 Shaco 不暴露 Surface 而删除。
-18. V1.0 必须覆盖统一交互状态：Default、Hover、Pressed、Selected、Focused、Disabled、Loading、Error、Warning、Success；Selected 强于 Hover，Focus 键盘可见，关键状态不只用颜色。
-19. No Session、Loading、Worker Starting、Harness Failed、Connection Lost、Streaming interrupted 与 Invalid Project 必须提供真实、可操作状态，不得伪造成功。
-20. 设计系统必须 `LIGHT_DARK_CAPABLE = YES`，即使 V1.0 Full Appearance Settings 延期。
-21. `V1_0_INITIAL_PRIMARY_THEME = LIGHT`；Slice 1A 和 V1.0 第一轮视觉实现与验收以 Light Theme 为主基线，但禁止组件永久 Light-only 硬编码。
+3. `UI_LONG_TERM_SHELL_ARCHITECTURE = FIXED_FUNCTION_LAUNCHERS_PLUS_PROJECT_DIRECTORY`；这是唯一 current Long-Term Shell Architecture。
+4. `FIXED_FUNCTION_AREA_ROLE = START_OR_ENTER_CAPABILITY`，`PROJECT_DIRECTORY_ROLE = BROWSE_AND_REOPEN_EXISTING_PROJECT_WORK`；二者职责不重复。
+5. `OLD_CURRENT_NAVIGATION = PROJECT_FIRST_TYPED_WORK_ITEMS_AS_COMPLETE_SHELL` 已 superseded；`PROJECT_GROUPED_TYPED_WORK_ITEMS = RETAINED_AS_PROJECT_DIRECTORY_MODEL`。
+6. V1.0 的 Project Node 映射 Harness Workspace；不得建立第二套 Project truth。
+7. `WORK_ITEM_PROJECT_CONTEXT = IMPLICIT_FROM_PARENT_PROJECT`；不重复显示 Mode-specific 顶部 Project Selector。
+8. `ONE_DESKTOP_SHELL = YES`；功能 Surface、typed record workspace 与 Global Settings 共用主窗口和 Shell。
+9. V1.0 `VISIBLE_FIXED_FUNCTIONS = NEW_CHAT_ONLY`、`VISIBLE_PROJECT_RECORD_TYPES = CHAT_ONLY`、`VISIBLE_GLOBAL_ENTRY = SETTINGS`；Automation、Agent Collaboration 与 Knowledge Base 必须隐藏。
+10. `CHAT_ITEM_TRUTH = HARNESS_SESSION`；禁止 fake Project、Session、Chat Item 或 future record。
+11. `SHARED_WORK_ITEM_RUNTIME_DOMAIN = NOT_CREATED`；Typed Work Item 不创建共享数据库、状态机或持久化真相。
+12. `MAIN_WORKSPACE_ROUTING = BY_FUNCTION_OR_SELECTED_RECORD_TYPE`；Chat 打开 Harness Conversation Surface，未来功能和类型使用各自布局。
+13. `SETTINGS_SCOPE = GLOBAL_APPLICATION_SURFACE`；Settings 不属于任何 Project，也不是 Work Item。
+14. Fixed Function Area 的 `+ 新对话` 是正式 Chat create / entry launcher；Project-level `+` 若存在只是 contextual shortcut，V1.0 也只能创建 Chat。
+15. No Project 时不显示假 Chat；只允许 Recent Projects、Open Project 与 Global Settings，并验证恢复目录有效性。
+16. Chat Main Workspace 必须支持 Conversation、Streaming、Tool / Result basic rendering，以及 Harness 要求时的 Approval / Question。
+17. `CHAT_CONTENT_LAYOUT = CENTERED_FIXED_MAX_WIDTH`，目标约 1100px，Header、Conversation、Tool / Process Content 与 Composer 共用中心轴并响应式收缩。
+18. Composer 必须支持 Text Input、Model Selector、最小 Permission state / entry；Chat 内容和 Composer 不横向铺满全部 Main Area。
+19. 必须显示最小且真实的 Worker / Connection 状态，并提供 Native Workspace Picker。
+20. V1.0 Settings 优先暴露 Harness-owned Provider / Model；Harness 支持时包含 Custom Provider、API Endpoint、Relay、Credential、Model discovery/selection。
+21. Provider、Model、Endpoint、Relay、Credential、Workspace、Session、Conversation、Tool、Permission、Approval/Question 的业务真相归 Harness；禁止复制第二套 Shaco truth。
+22. V1.0 禁止创建 Provider Registry、Model Registry、Shaco Endpoint Manager、Shaco Relay Manager 或第二套 Credential Settings truth。
+23. Harness Runtime capabilities 在 UI 延期时仍必须保留；不得因 Shaco 不暴露 Surface 而删除。
+24. V1.0 必须覆盖统一交互状态：Default、Hover、Pressed、Selected、Focused、Disabled、Loading、Error、Warning、Success；Selected 强于 Hover，Focus 键盘可见，关键状态不只用颜色。
+25. No Session、Loading、Worker Starting、Harness Failed、Connection Lost、Streaming interrupted 与 Invalid Project 必须提供真实、可操作状态，不得伪造成功。
+26. 设计系统必须 `LIGHT_DARK_CAPABLE = YES`，即使 V1.0 Full Appearance Settings 延期。
+27. `V1_0_INITIAL_PRIMARY_THEME = LIGHT`；Slice 1A 和 V1.0 第一轮视觉实现与验收以 Light Theme 为主基线，但禁止组件永久 Light-only 硬编码。
 
 ## 37. Direction Accepted
 
@@ -510,26 +681,29 @@ Slice 1A 和 V1.0 第一轮视觉实现与验收以 Light Theme 为主基线。�
 
 以下为完整已接受方向清单：
 
-1. Project Selector 位于左侧 Mode-specific Context Sidebar 顶部，不把 Project 列表长期放在 Global Rail。
-2. Mode-specific Secondary Navigation 按需出现；Primary Navigation 与主 Shell 固定。
-3. Optional Inspector 按 Mode/任务出现，不作为全局常驻第四列。
-4. 整体视觉为 Modern Developer Workbench：Professional、Restrained、Modern、Calm、Low Saturation、Clear Hierarchy、Desktop-native feeling。
-5. Chat 以安静、可读、舒适、内容优先为目标；不做 operations-dashboard。
-6. Chat 信息密度约为 Workbench 参考的 60%–70%；Automation 可为 80%–100%；Diagnostics 可高密度。
-7. Surface 使用 `SURFACE_0`–`SURFACE_3` 的语义层级，通过明度、间距、边界和文字层级组织结构。
-8. `BORDER_IS_STRUCTURAL_NOT_DECORATIVE`；降低边框数量，避免嵌套描边卡片和普通 Chat 满屏 Grid。
-9. `FLAT_FIRST`；阴影不作为默认布局分隔，只用于临时抬升 Surface，且 Soft、Diffuse、Low contrast。
-10. 使用 Small / Medium Radius，保持 Developer Tool feeling，避免大圆角 SaaS Dashboard。
-11. 主要阅读区留白优先；Sidebar/Toolbar 可紧凑；不以巨大留白牺牲效率。
-12. Typography 清晰、中性、开发工具友好，限制层级数量，区分正文与 Monospace/Code。
-13. Worker/Connection/Execution 状态默认低噪音；高级诊断按需展开，高饱和色只用于重要状态。
-14. Button 使用 Primary、Secondary、Ghost/Toolbar、Danger 分层；单视图避免多个竞争 Primary。
-15. Composer 宽、安静、输入优先；Model/Permission 存在但低强调，Secondary actions 按需披露。
-16. Tree/Table 用于天然结构化信息，主要服务未来 Automation/Review/Diagnostics，不把普通 Chat Grid 化。
-17. Modal 仅用于阻塞任务；普通设置优先 Page/Side Panel/Popover；禁止多层 Modal。
-18. Scrollbar 可见但低视觉重量，Hover/active 更明显。
-19. Animation 服务反馈、空间关系和状态转换；支持 Reduced Motion，禁止大幅、冗长或炫技动画。
-20. Empty State 简洁、可操作，不使用大型插画或营销 Hero。
+1. Project Row 显示名称、expand/collapse、Selected、project-level `+`，并可在未来增加 context menu。
+2. Project Overview / Dashboard 为 `NOT_FROZEN`；不为 Project Node 创建空 Dashboard。
+3. Fixed Function Area 的 `+ 新对话` 是长期 Shell 与 V1.0 的结构性入口；不得绕过 selected Project Context。Project Row `+` 可作为 contextual shortcut。
+4. Item 增多后允许轻量 Search、type filter 和时间分组；V1.0 只有 Chat 时不显示无价值的 type filter。
+5. Typed Item 使用 Outline / simple geometric 类型图标，且不只依赖颜色；最终库、Stroke、Size 仍为 `DRAFT_TOKEN`。
+6. `INSPECTOR_POLICY = NO_PERMANENT_RIGHT_INSPECTOR`；Optional Inspector 按 selected record type / 任务出现，不作为全局常驻第三栏。
+7. Owner-accepted PNG 是长期 Shell 的 Visual North Star；整体视觉为 Modern Developer Workbench：Professional、Restrained、Modern、Calm、Low Saturation、Clear Hierarchy、Desktop-native feeling，不再进行视觉重设计。
+8. Chat 以安静、可读、舒适、内容优先为目标；使用约 1100px 的 centered fixed max-width，Header、Conversation、Tool / Process Content 与 Composer 共用中心轴，不做 operations-dashboard。
+9. Chat 信息密度约为 Workbench 参考的 60%–70%；Automation 可为 80%–100%；Diagnostics 可高密度。
+10. Surface 使用 `SURFACE_0`–`SURFACE_3` 的语义层级，通过明度、间距、边界和文字层级组织结构。
+11. `BORDER_IS_STRUCTURAL_NOT_DECORATIVE`；降低边框数量，避免嵌套描边卡片和普通 Chat 满屏 Grid。
+12. `FLAT_FIRST`；阴影不作为默认布局分隔，只用于临时抬升 Surface，且 Soft、Diffuse、Low contrast。
+13. 使用 Small / Medium Radius，保持 Developer Tool feeling，避免大圆角 SaaS Dashboard。
+14. 主要阅读区留白优先；Sidebar/Toolbar 可紧凑；不以巨大留白牺牲效率。
+15. Typography 清晰、中性、开发工具友好，限制层级数量，区分正文与 Monospace/Code。
+16. Worker/Connection/Execution 状态默认低噪音；高级诊断按需展开，高饱和色只用于重要状态。
+17. Button 使用 Primary、Secondary、Ghost/Toolbar、Danger 分层；单视图避免多个竞争 Primary。
+18. Composer 宽、安静、输入优先；Model/Permission 存在但低强调，Secondary actions 按需披露。
+19. Tree/Table 用于天然结构化信息，主要服务未来 Automation/Agent Collaboration/Diagnostics，不把普通 Chat Grid 化。
+20. Modal 仅用于阻塞任务；普通设置优先 Page/Side Panel/Popover；禁止多层 Modal。
+21. Scrollbar 可见但低视觉重量，Hover/active 更明显。
+22. Animation 服务反馈、空间关系和状态转换；支持 Reduced Motion，禁止大幅、冗长或炫技动画。
+23. Empty State 简洁、可操作，不使用大型插画或营销 Hero。
 
 ## 38. Future Direction Only
 
@@ -537,10 +711,11 @@ Slice 1A 和 V1.0 第一轮视觉实现与验收以 Light Theme 为主基线。�
 
 以下为完整未来方向清单；均不授权 V1.0 创建对应产品 Surface、数据表或第二套 Harness truth：
 
-1. Trajectory / Execution Trace 未来优先进入 Conversation 的按需 Right Detail / Inspector，或 Automation / Multi-Agent Run Detail；不创建复制的数据真相。
-2. V1.1 可在同一 Desktop Shell 增加 `AUTOMATION` 一级 Mode，继续使用全局 Project Context；二级结构候选为 Definitions、Runs、Task Tree、Schedules / Triggers，主工作区候选为 Run Detail、Progress、Artifacts 与 Result。本轮只保留 Shell Extension Seam，不冻结最终页面。
-3. V1.2 可在同一 Desktop Shell 增加 `MULTI-AGENT / REVIEW` 一级 Mode，继续使用全局 Project Context；未来可展示 Planner、Executor、Reviewer、Corrective、Agent Tree、Task Tree、Review Findings 与 Execution State，并引用一个或多个 Harness Sessions。
-4. V1.3 候选为 Memory、Evidence、Experience；它们成为独立 Mode、Project Detail 或 Inspector 尚未冻结，等真实需求和信息架构出现后决定。
+1. Trajectory / Execution Trace 未来优先进入 Chat 的按需 Right Detail / Inspector，或 Automation / Agent Collaboration Run Detail；不创建复制的数据真相。
+2. V1.1 Automation 真实完成后增加 fixed function launcher、Project Directory typed records 与 type-specific Automation Workspace；不重做 Shell。
+3. V1.2 Agent Collaboration 真实完成后增加 fixed function launcher、Project Directory typed records 与 type-specific workspace；不重做 Shell，并引用一个或多个 Harness Sessions。
+4. Knowledge Base 仅在能力真实完成后显示；`KNOWLEDGE_BASE_SCOPE = NOT_FROZEN`。V1.3 的 Memory、Evidence、Experience 仍是 Project Detail / Inspector / attachment 候选，是否成为 Typed Work Item 尚未冻结。
+5. Plugins 是 Settings / Extensions candidate；Diagnostics 是 Inspector / Detail candidate，均不因本次 Corrective 自动成为 Typed Work Item。
 
 ## 39. Draft Tokens
 
@@ -553,7 +728,7 @@ Slice 1A 和 V1.0 第一轮视觉实现与验收以 Light Theme 为主基线。�
 3. Border 宽度/明度的最终 Token 数值。
 4. Shadow blur、spread、offset、opacity 与层级数值。
 5. Control、Input/Button、Popover/Modal 的最终 Radius 数值。
-6. Spacing scale、Sidebar 宽度、Rail 宽度、行高、内容最大宽度和 Breakpoint 的最终数值。
+6. Spacing scale、Sidebar 宽度、行高、内容最大宽度和 Breakpoint 的最终数值。
 7. Font family、字号、字重、行高与 Monospace family。
 8. 最终 Icon Library、Stroke 与尺寸体系。
 9. Animation duration、easing 与位移数值。
@@ -573,7 +748,7 @@ Slice 1A 和 V1.0 第一轮视觉实现与验收以 Light Theme 为主基线。�
 6. Advanced Session Log。
 7. Advanced Diagnostics。
 8. Automation UI 与 Automation domain（V1.1 future）。
-9. Multi-Agent / Review UI 与 orchestration domain（V1.2 future）。
+9. Agent Collaboration UI 与 orchestration domain（V1.2 future）。
 10. Memory / Evidence / Experience 的最终信息架构（V1.3 candidate）。
 11. 最终动画与 pixel polish。
 
@@ -592,11 +767,13 @@ OWNER_DECISIONS_STILL_REQUIRED = NONE
 以下完整 UI 目标属于 `V1-SLICE-1`，而不是 `V1-SLICE-1A` 的完成 Gate：
 
 - Shaco Desktop Shell。
-- Primary `CHAT` menu。
-- `SETTINGS` menu。
-- Project Selector（映射 Harness Workspace）。
-- Session Sidebar（create/list/select）。
-- Main Harness Client / Conversation surface。
+- 同一 Fixed Function Area + Project Directory + Global Settings Sidebar 区域结构。
+- Fixed Function Area 中只显示 `+ 新对话`。
+- 真实 Harness Workspace / Project grouping。
+- 真实 Harness Sessions 作为 Chat Items 的 list/select/create。
+- Project Directory 与 Global Settings entry。
+- 由 selected Chat Item 路由的 Harness Client / Conversation Surface。
+- 约 1100px centered Chat content 与 Composer。
 - Conversation streaming 与 Tool / Result basic rendering。
 - Harness 要求时的 Approval / Question 基础交互。
 - Composer 的 Text Input、Model Selector、最小 Permission state / entry。
@@ -606,27 +783,29 @@ OWNER_DECISIONS_STILL_REQUIRED = NONE
 
 `V1-SLICE-1` 的最终实现验收检查真实用户闭环：选择有效 Workspace → 创建/选择
 Session → 输入 Prompt → Streaming → Tool/Result → 必要 Approval/Question；同时确认
-Project 在 Mode 切换中保持、无 Project 不出现假 Chat、连接状态真实、Harness-owned
+selected Chat Item 的 Project Context 来自父 Project、无 Project 不出现假 Chat、连接状态真实、Harness-owned
 设置未被复制。若 pinned Harness 的既有 UI 可以满足需求，优先复用；Shaco 适配只解决
 Shell、Native、Carrier、Reconnect 和 truthful projection。
 
 ### 42.1 V1-SLICE-1A UI Boundary
 
-`V1-SLICE-1A` 限定为 `PRODUCT BOOTSTRAP + REAL HARNESS CLIENT BOOT`，不追求
+`V1-SLICE-1A` 限定为 `PRODUCT_BOOTSTRAP + REAL_HARNESS_CLIENT_BOOT`，不追求
 pixel perfection。其 UI 最小要求是：
 
-- Desktop Shell。
-- Chat entry 与 Settings entry。
-- Project / Workspace selector shell。
-- Session sidebar shell。
-- 挂载 real pinned Harness Client。
+- 同一 Fixed Function Area + Project Directory + Global Settings Sidebar skeleton。
+- Fixed Function Area 中只显示 `+ 新对话`。
+- real Workspace / Project grouping。
+- connection available 时，将 real Harness Session list 投影为 Chat Items。
+- Chat Item type icon。
+- Project Directory 与 Global Settings entry。
+- real pinned Harness Client mount 与 Chat Main Workspace。
+- centered approximately 1100px Chat content / Composer layout，并在窄窗口响应式收缩。
 - Light initial theme。
-- truthful Worker / Connection state。
-- No Project、disconnected 与 not-yet-connected state。
+- truthful Worker / Connection、No Project、disconnected 与 not-yet-connected state。
 - 基本键盘 Focus、Loading 与 Error structure。
 
 若真实 Harness data 尚未连接，允许显示 truthful unavailable / disconnected
-state。不得显示 fake Project、fake Session、fake streaming 或 fake Tool result。
+state。不得显示 fake Project、fake Session、fake Chat Item、fake RPC success、fake streaming 或 fake Tool result。
 
 `V1-SLICE-1A` 不要求：
 
@@ -637,6 +816,12 @@ state。不得显示 fake Project、fake Session、fake streaming 或 fake Tool 
 - configured Provider network call 或 Provider Credential loop。
 - Workspace / Session full lifecycle。
 - full physical Carrier、Reconnect 或 Packaging。
+- Automation Item。
+- Agent Collaboration Item。
+- Knowledge Base entry。
+- 任何未来功能 placeholder。
+- 只有 Chat 时的 type filter。
+- shared WorkItem Runtime / domain。
 
 这些能力在 `V1-SLICE-1` 的后续内部实现步骤中闭合。以下高级 Surface 同样不属于
 `V1-SLICE-1A` 要求：
@@ -654,7 +839,10 @@ state。不得显示 fake Project、fake Session、fake streaming 或 fake Tool 
 - 不为 Shaco V1.0 重写 Harness 已有 UI/业务能力。
 - 不创建无项目 General Chat。
 - 不创建三个独立 Desktop Shell。
-- 不把 Project 做成占满 Global Rail 的长期一级列表。
+- 不把 Fixed Function Area 当作历史记录列表，也不把 Project Directory 当作 capability launcher。
+- 不在 Mode-specific Sidebar 顶部重复 Project Selector。
+- 不把 Typed Work Item 变成新的 V1.0 Runtime Domain 或持久化 truth。
+- 不创建 fake Project、fake Session、fake Chat Item 或 fake RPC success。
 - 不在 V1.0 展示未来功能占位、Disabled 菜单或空页面。
 - 不把 Chat 做成 TreeGrid、监控台或指标 Dashboard。
 - 不复制 Provider/Model/Endpoint/Relay/Credential/Workspace/Session/Conversation truth。

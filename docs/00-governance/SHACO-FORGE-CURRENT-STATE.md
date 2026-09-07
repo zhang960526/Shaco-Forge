@@ -1,7 +1,14 @@
 # Shaco Forge Current State
 
 Status: ACTIVE
-Last Updated: 2026-09-06
+Last Updated: 2026-09-07
+
+> Latest UI authority (2026-09-07): the
+> [Long-Term Shell Visual and Navigation Owner Decision](#long-term-shell-visual-and-navigation-owner-decision-2026-09-07)
+> accepts the supplied visual reference and replaces the pure Project-first
+> complete-Shell interpretation with fixed function launchers plus Project
+> Directory. Owner closure is accepted; V1.0 remains a reduced view and
+> implementation remains not started.
 
 > Latest V1.0 implementation-scope authority (2026-09-06):
 > [V1.0 Harness Reuse Implementation Scope Corrective](#v10-harness-reuse-implementation-scope-corrective-2026-09-06)
@@ -30,7 +37,7 @@ Last Updated: 2026-09-06
 
 - Phase: P0.S — Desktop / Connection / Packaging Feasibility Spike — `CLOSED / PASS`
 - Step: P0.S-8 V1 Product Architecture Freeze — `CLOSED`; architecture is sufficient for V1.0–V1.3 development
-- Current Authorized Scope: V1.0 Technical Implementation Baseline and ADR-0008 accepted; UI Navigation Architecture Corrective discussion is next; V1 implementation remains not started
+- Current Authorized Scope: Long-Term Shell Owner Closure is accepted; next authorized action is V1-SLICE-1A Product Bootstrap + Real Harness Client Boot, which has not started
 - Production Implementation: NOT_STARTED
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -59,13 +66,20 @@ Last Updated: 2026-09-06
 - `V1_0_SCOPE_CORRECTIVE = APPLIED`
 - `V1_IMPLEMENTATION_READY = YES`
 - `V1_IMPLEMENTATION_STARTED = NO`
-- `V1_CURRENT_NEXT_ACTION = UI_NAVIGATION_ARCHITECTURE_CORRECTIVE_BEFORE_SLICE_1A`
+- `V1_CURRENT_NEXT_ACTION = V1-SLICE-1A-PRODUCT-BOOTSTRAP-REAL-HARNESS-CLIENT-BOOT`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE = ACCEPTED`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PASS`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_OWNER_ACCEPTED = YES`
 - `V1_TECHNICAL_BASELINE_REVIEW_OWNER_ACCEPTED = YES`
 - `V1_SLICE_1A = NOT_STARTED`
-- `UI_NAVIGATION_ARCHITECTURE_CORRECTIVE = NOT_STARTED`
+- `UI_LONG_TERM_SHELL_OWNER_DECISION = ACCEPTED`
+- `UI_LONG_TERM_SHELL_VISUAL_REFERENCE = ACCEPTED`
+- `UI_LONG_TERM_SHELL_DOCUMENTATION_SYNC_OWNER_REVIEW = PASS`
+- `UI_LONG_TERM_SHELL_OWNER_CLOSURE = ACCEPTED`
+- `UI_LONG_TERM_SHELL_BASELINE = FROZEN_FOR_IMPLEMENTATION`
+- `UI_LONG_TERM_SHELL_ARCHITECTURE = FIXED_FUNCTION_LAUNCHERS_PLUS_PROJECT_DIRECTORY`
+- `UI_PROJECT_DIRECTORY_MODEL = PROJECT_GROUPED_TYPED_WORK_RECORDS`
+- `UI_NAVIGATION_ARCHITECTURE_CORRECTIVE = CLOSED`
 - `UI_SPEC_STATUS = ACTIVE`
 - `UI_SPEC_OWNER_REVIEW = PASS`
 - `UI_DESIGN_BASELINE_READY = YES`
@@ -658,13 +672,16 @@ V1_0_PROVIDER_MODEL_OWNERSHIP = HARNESS
 V1_0_SCOPE_CORRECTIVE = APPLIED
 V1_IMPLEMENTATION_READY = YES
 V1_IMPLEMENTATION_STARTED = NO
-V1_CURRENT_NEXT_ACTION = UI_NAVIGATION_ARCHITECTURE_CORRECTIVE_BEFORE_SLICE_1A
+V1_CURRENT_NEXT_ACTION = OWNER_REVIEW_UI_NAVIGATION_ARCHITECTURE_CORRECTIVE
 V1_TECHNICAL_IMPLEMENTATION_BASELINE = ACCEPTED
 V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PASS
 V1_TECHNICAL_IMPLEMENTATION_BASELINE_OWNER_ACCEPTED = YES
 V1_TECHNICAL_BASELINE_REVIEW_OWNER_ACCEPTED = YES
 V1_SLICE_1A = NOT_STARTED
-UI_NAVIGATION_ARCHITECTURE_CORRECTIVE = NOT_STARTED
+UI_NAVIGATION_ARCHITECTURE = PROJECT_FIRST_TYPED_WORK_ITEMS
+UI_NAVIGATION_ARCHITECTURE_CORRECTIVE = READY_FOR_OWNER_REVIEW
+UI_GLOBAL_MODE_RAIL = SUPERSEDED
+UI_DIRECTION_READY_FOR_SLICE_1A = YES
 
 PROVIDER_MODEL_ROUTING = HARNESS_OWNED
 SHACO_PROVIDER_FRAMEWORK_V1_0 = NOT_REQUIRED
@@ -694,3 +711,35 @@ The adopted route is `V1-SLICE-1 — REAL HARNESS USER LOOP`, `V1-SLICE-2 —
 LIFECYCLE / NATIVE / RECONNECT`, `V1-SLICE-3 — PACKAGING / COMPATIBILITY /
 RELEASE`, then `V1-SLICE-4 — FRESH WINDOWS FINAL ACCEPTANCE`. This corrective
 does not start Slice 1 and performs no Build, Test or Runtime.
+
+## Long-Term Shell Visual and Navigation Owner Decision (2026-09-07)
+
+**Latest authoritative UI Shell state.** The Architecture Owner accepted the
+supplied [Long-Term Shell visual reference](../01-product/assets/SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png)
+without further visual adjustment. It is the long-term product Shell Visual
+North Star, not a V1.0 release screenshot.
+
+```text
+UI_LONG_TERM_SHELL_OWNER_DECISION = ACCEPTED
+UI_LONG_TERM_SHELL_VISUAL_REFERENCE = ACCEPTED
+UI_LONG_TERM_SHELL_DOCUMENTATION_SYNC_OWNER_REVIEW = PASS
+UI_LONG_TERM_SHELL_OWNER_CLOSURE = ACCEPTED
+UI_LONG_TERM_SHELL_BASELINE = FROZEN_FOR_IMPLEMENTATION
+UI_LONG_TERM_SHELL_ARCHITECTURE = FIXED_FUNCTION_LAUNCHERS_PLUS_PROJECT_DIRECTORY
+UI_PROJECT_DIRECTORY_MODEL = PROJECT_GROUPED_TYPED_WORK_RECORDS
+UI_NAVIGATION_ARCHITECTURE_CORRECTIVE = CLOSED
+UI_DIRECTION_READY_FOR_SLICE_1A = YES
+V1_IMPLEMENTATION_STARTED = NO
+V1_SLICE_1A = NOT_STARTED
+V1_CURRENT_NEXT_ACTION = V1-SLICE-1A-PRODUCT-BOOTSTRAP-REAL-HARNESS-CLIENT-BOOT
+```
+
+The fixed function area starts or enters a capability; the Project Directory
+browses and reopens existing typed Project records. The prior pure Project-first
+complete-Shell interpretation is superseded, while Project-grouped typed work
+records remain the Project Directory model. V1.0 exposes only New Chat, real
+Harness Session-backed Chat records and global Settings; Automation, Agent
+Collaboration and Knowledge Base remain hidden until implemented. Product code
+and Slice 1A remain not started. The next formal product implementation remains
+`V1-SLICE-1 — REAL HARNESS USER LOOP`; Slice 1A is only its first bounded
+internal Step. This Owner Closure does not start Slice 1A.

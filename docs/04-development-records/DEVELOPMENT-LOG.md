@@ -2,6 +2,67 @@
 
 Status: ACTIVE
 
+## 2026-09-07 — Long-Term Shell Final Owner Closure
+
+- Architecture Owner final review is `PASS`; the Long-Term Shell Documentation
+  Sync and Owner Closure are `ACCEPTED`.
+- The Visual Reference exact identity is accepted and unchanged: `1660 x 948`,
+  `1467362` bytes, SHA-256
+  `17874257C520533D65E0ACA1B45001F74C372178371BDE51EBB60AEB90F77BC0`.
+- The frozen implementation baseline remains
+  `FIXED_FUNCTION_LAUNCHERS_PLUS_PROJECT_DIRECTORY`, with Project-grouped typed
+  records retained as the Project Directory model.
+- V1.0 Reduced View remains `NEW_CHAT_ONLY + CHAT_ONLY + SETTINGS`; Chat content
+  remains centered at approximately 1100px, and no permanent Inspector is used.
+- Further visual adjustment is not required. The UI Navigation Architecture
+  Corrective is `CLOSED`, and UI direction is ready for Slice 1A.
+- Product implementation is `NOT_STARTED`; Slice 1A is `NOT_STARTED`. The next
+  action is `V1-SLICE-1A-PRODUCT-BOOTSTRAP-REAL-HARNESS-CLIENT-BOOT`, the first
+  bounded internal Step of `V1-SLICE-1 — REAL HARNESS USER LOOP`.
+- No Build, Test, Runtime or Push was performed.
+
+## 2026-09-07 — Long-Term Shell Visual and Navigation Owner Decision
+
+- Architecture Owner accepted the supplied PNG without further visual
+  adjustment. The image remains byte-for-byte unchanged at
+  `docs/01-product/assets/SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png`:
+  `1660 x 948`, `1467362` bytes, SHA-256
+  `17874257C520533D65E0ACA1B45001F74C372178371BDE51EBB60AEB90F77BC0`.
+- The long-term Shell architecture is
+  `FIXED_FUNCTION_LAUNCHERS_PLUS_PROJECT_DIRECTORY`: the fixed function area
+  starts or enters capabilities, while the Project Directory browses and
+  reopens existing Project work.
+- Project-grouped typed records are retained. Chat Item continues to map Harness
+  Session truth; no shared WorkItem runtime, database, table, state machine or
+  second Session truth was created.
+- Settings remains a global application Surface outside every Project. Main
+  Workspace routes by function or selected record type.
+- Chat content and Composer use a centered, responsive, approximately 1100px
+  maximum-width layout. The accepted Light, low-saturation, flat-first visual
+  language and no-permanent-Inspector policy remain unchanged.
+- The image is the long-term product Shell Visual North Star, not the V1.0
+  release feature set. V1.0 Reduced View shows only New Chat, real Chat records
+  and Settings; unimplemented Automation, Agent Collaboration and Knowledge Base
+  remain hidden without placeholders.
+- Product Implementation is `NOT_STARTED`; Slice 1A is `NOT_STARTED`. No Build,
+  Test or Runtime was performed.
+
+## 2026-09-06 — UI Project-First Typed Work Item Navigation Corrective
+
+- Architecture Owner replaced the mode-first global navigation direction with
+  project-first navigation; Project is the primary visible grouping.
+- Chat, Automation and Agent Collaboration are typed child records. V1.0 exposes
+  only Chat; Automation appears only after V1.1 implementation exists, and Agent
+  Collaboration appears only after V1.2 implementation exists.
+- Chat Item maps Harness Session truth. No shared WorkItem runtime, database,
+  state machine or persistence truth was introduced.
+- Main Workspace routes by selected item type, while Settings remains a global
+  application Surface outside every Project.
+- The accepted Light, Light/Dark-capable, low-saturation, flat-first visual
+  language remains unchanged.
+- The corrective is ready for Architecture Owner review. Product implementation
+  and Slice 1A remain `NOT_STARTED`; no Build, Test or Runtime was performed.
+
 ## 2026-09-06 — V1.0 Technical Implementation Baseline Accepted
 
 - Independent REVIEW-011 returned `PASS`; Blocking Findings are `NONE`.
