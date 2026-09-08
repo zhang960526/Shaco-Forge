@@ -5,6 +5,7 @@ import {
   CARRIER_PROTOCOL_VERSION,
   CLIENT_AUTH_DOMAIN,
   JsonFrameDecoder,
+  MAX_JSON_FRAME,
   SERVER_AUTH_DOMAIN,
   STREAM_INITIAL_CREDITS,
   STREAM_QUEUE_CAPACITY,
@@ -30,6 +31,35 @@ interface StreamState {
   pull?: { resolve(value: StreamPullResult): void; reject(error: Error): void }
   terminal?: StreamPullResult
   cancelled: boolean
+  credits: number
+  inflightPulls: number
+}
+
+// Length-only observation of the actual received wire bytes. No payload copy,
+// framing policy or decoder behavior is introduced here.
+export class FrameSizeObservation {
+  #prefix = Buffer.alloc(4)
+  #prefixBytes = 0
+  #remaining = 0
+  maxObservedJsonFrameBytes = 0
+  oversizeFrames = 0
+  observe(chunk: Uint8Array): void {
+    let offset = 0
+    while (offset < chunk.length) {
+      if (this.#remaining > 0) {
+        const consumed = Math.min(this.#remaining, chunk.length - offset)
+        this.#remaining -= consumed; offset += consumed
+      } else {
+        while (this.#prefixBytes < 4 && offset < chunk.length) this.#prefix[this.#prefixBytes++] = chunk[offset++]!
+        if (this.#prefixBytes < 4) return
+        const length = this.#prefix.readUInt32LE(0)
+        this.#prefixBytes = 0
+        this.#remaining = length
+        this.maxObservedJsonFrameBytes = Math.max(this.maxObservedJsonFrameBytes, length)
+        if (length > MAX_JSON_FRAME) this.oversizeFrames++
+      }
+    }
+  }
 }
 
 export class PullStreamBuffer {
@@ -96,6 +126,8 @@ export class CarrierClient {
   #unary = new Map<string, UnaryState>()
   #streams = new Map<string, { state: StreamState; buffer: PullStreamBuffer }>()
   #writeChain = Promise.resolve()
+  #frameObservation = new FrameSizeObservation()
+  #completedStreams: string[] = []
   readonly metrics = {
     mainAuthenticatedCarrier: false,
     serverAuthenticatedToMain: false,
@@ -111,6 +143,13 @@ export class CarrierClient {
     pendingUnary: 0,
     finalActiveStreams: 0,
     finalPendingUnary: 0,
+    maxObservedJsonFrameBytes: 0,
+    oversizeFrames: 0,
+    maxActiveStreams: 0,
+    maxQueueDepth: 0,
+    creditViolations: 0,
+    duplicateStreamTerminals: 0,
+    itemsAfterTerminal: 0,
   }
 
   constructor(readonly bootstrap: CarrierBootstrap) {}
@@ -131,6 +170,9 @@ export class CarrierClient {
       }
       socket.on('data', chunk => {
         try {
+          this.#frameObservation.observe(chunk)
+          this.metrics.maxObservedJsonFrameBytes = Math.max(this.metrics.maxObservedJsonFrameBytes, this.#frameObservation.maxObservedJsonFrameBytes)
+          this.metrics.oversizeFrames = this.#frameObservation.oversizeFrames
           for (const value of this.#decoder.push(chunk)) {
             if (!isRecord(value) || typeof value.type !== 'string') throw new Error('Carrier envelope is invalid')
             if (stage === 'challenge') {
@@ -222,10 +264,11 @@ export class CarrierClient {
     this.#requireAuthenticated()
     const streamId = randomUUID()
     this.#streams.set(streamId, {
-      state: { queue: [], cancelled: false },
+      state: { queue: [], cancelled: false, credits: STREAM_INITIAL_CREDITS, inflightPulls: 0 },
       buffer: new PullStreamBuffer(),
     })
     this.metrics.activeStreams = this.#streams.size
+    this.metrics.maxActiveStreams = Math.max(this.metrics.maxActiveStreams, this.#streams.size)
     this.metrics.streamOpens += 1
     await this.#writeRaw({ type: 'stream-open', streamId, endpoint, payload, initialCredits: STREAM_INITIAL_CREDITS }, true)
     return streamId
@@ -235,12 +278,19 @@ export class CarrierClient {
     const stream = this.#streams.get(streamId)
     if (stream === undefined) return { done: true, error: 'Unknown stream' }
     this.metrics.streamPulls += 1
-    this.metrics.maxRendererInflightPullPerStream = Math.max(this.metrics.maxRendererInflightPullPerStream, 1)
-    const result = await stream.buffer.pull()
+    stream.state.inflightPulls++
+    this.metrics.maxRendererInflightPullPerStream = Math.max(this.metrics.maxRendererInflightPullPerStream, stream.state.inflightPulls)
+    let result: StreamPullResult
+    try { result = await stream.buffer.pull() } finally { stream.state.inflightPulls-- }
     if (!result.done) {
-      if (!stream.buffer.terminalObserved) await this.#writeRaw({ type: 'stream-credit', streamId, credit: 1 }, true)
+      if (!stream.buffer.terminalObserved) {
+        stream.state.credits++
+        await this.#writeRaw({ type: 'stream-credit', streamId, credit: 1 }, true)
+      }
     } else {
       this.#streams.delete(streamId)
+      this.#completedStreams.push(streamId)
+      if (this.#completedStreams.length > 64) this.#completedStreams.shift()
       this.metrics.activeStreams = this.#streams.size
     }
     return result
@@ -283,6 +333,7 @@ export class CarrierClient {
     const socket = this.#socket
     if (socket === undefined || socket.destroyed) return Promise.reject(new Error('Carrier socket is unavailable'))
     const frame = encodeJsonFrame(value)
+    this.metrics.maxObservedJsonFrameBytes = Math.max(this.metrics.maxObservedJsonFrameBytes, frame.byteLength - 4)
     this.#writeChain = this.#writeChain.then(() => new Promise<void>((resolveWrite, rejectWrite) => {
       socket.write(frame, error => error ? rejectWrite(error) : resolveWrite())
     }))
@@ -302,14 +353,23 @@ export class CarrierClient {
     }
     if (typeof value.streamId !== 'string') throw new Error('Carrier stream envelope lacks streamId')
     const stream = this.#streams.get(value.streamId)
-    if (stream === undefined) return
+    if (stream === undefined) {
+      if (this.#completedStreams.includes(value.streamId) && ['stream-end', 'stream-error'].includes(String(value.type))) this.metrics.duplicateStreamTerminals++
+      return
+    }
     if (value.type === 'stream-item') {
+      if (stream.buffer.terminalObserved) this.metrics.itemsAfterTerminal++
+      stream.state.credits--
+      if (stream.state.credits < 0) this.metrics.creditViolations++
       const consumedImmediately = stream.buffer.push(value.value)
+      this.metrics.maxQueueDepth = Math.max(this.metrics.maxQueueDepth, stream.buffer.queue.length)
       if (isRecord(value.value) && value.value.type === 'ready') this.metrics.eventsReadyObserved += 1
       if (!consumedImmediately && stream.buffer.queue.length > STREAM_INITIAL_CREDITS) throw new Error('Stream credit invariant violated')
     } else if (value.type === 'stream-end') {
+      if (stream.buffer.terminalObserved) this.metrics.duplicateStreamTerminals++
       stream.buffer.finish({ done: true })
     } else if (value.type === 'stream-error') {
+      if (stream.buffer.terminalObserved) this.metrics.duplicateStreamTerminals++
       const message = isRecord(value.error) && typeof value.error.message === 'string' ? value.error.message : 'Host stream failed'
       stream.buffer.finish({ done: true, error: message })
     } else {

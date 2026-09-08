@@ -6,5 +6,6 @@ coverage/
 *.tsbuildinfo
 docs/04-development-records/evidence/V1-SLICE-1A/runtime/
 docs/04-development-records/evidence/V1-SLICE-1B/runtime/
+docs/04-development-records/evidence/V1-SLICE-1C/runtime/
 apps/native-carrier/bin/
 apps/native-carrier/obj/

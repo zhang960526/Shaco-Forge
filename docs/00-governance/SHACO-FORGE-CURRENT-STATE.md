@@ -1,9 +1,85 @@
 # Shaco Forge Current State
 
+> Latest authority (2026-09-08): Independent [AUDIT-017](../05-reviews/architecture/AUDIT-017-V1-SLICE-1C-INDEPENDENT-IMPLEMENTATION-REVIEW.md) returned `PASS` with `BLOCKING_FINDINGS = NONE`. The Architecture Owner [accepted Closure](../04-development-records/V1-SLICE-1C-OWNER-CLOSURE-DECISION.md) and froze the reviewed V1-SLICE-1C implementation baseline. Attempt #2 remains the final authorized Provider attempt; budget is 2/2 consumed and Attempt #3 is prohibited. Slice 1 remains `IN_PROGRESS`.
+
+```text
+V1_SLICE_1C = CLOSED
+V1_SLICE_1C_IMPLEMENTATION_RESULT = PASS
+V1_SLICE_1C_INDEPENDENT_REVIEW = PASS
+V1_SLICE_1C_REVIEW_BLOCKING_FINDINGS = NONE
+V1_SLICE_1C_OWNER_CLOSURE = ACCEPTED
+V1_SLICE_1C_BASELINE = FROZEN
+V1_SLICE_1C_TOOL_PROOF_ATTEMPTS_USED = 2
+V1_SLICE_1C_TOOL_PROOF_ATTEMPTS_REMAINING = 0
+V1_SLICE_1C_ATTEMPT_3 = PROHIBITED
+V1_SLICE_1 = IN_PROGRESS
+V1_CURRENT_STEP = NONE_AFTER_V1_SLICE_1C
+V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_REMAINING_V1_SLICE_1_GATES
+```
+
 Status: ACTIVE
 Last Updated: 2026-09-08
 
-> Latest V1-SLICE-1C authority (2026-09-08): the
+> Historical 1C Host-settings authority: the Owner approved
+> `STANDARD_PRESET_HOST_SETTINGS_SCOPE_CONFIRMATION`, authorizing exactly
+> `@deepseek-ai/dsh-tool-subagent/model-selection-settings` before agent-presets.
+> The previous Host settings scope blocker is resolved. The public built export
+> passed preflight and its single profile entry is applied with no configuration
+> overrides. Multi-Agent remains outside scope. Real Workspace, Session and
+> Composer Prompt acceptance succeeded. Attempt #1's live semantic capture
+> failed because the observer omitted the public follow request wrapper.
+> Postmortem evidence shows a completed read Tool and matching final marker;
+> it contradicts the initial Provider-timeout classification but cannot replace
+> the missing live/Rendered-UI proof. The observer is corrected and a new
+> non-Provider UI run verifies its actual Session/follow binding. Budget is 1/2.
+> Implementation remains NOT_PROVEN, with HUMAN_REQUIRED_INTERACTION for
+> revalidation scope: the original retry rule does not allow Attempt #2 to
+> cover an implementation failure.
+> No frozen Architecture, Independent Review or closure state is changed.
+
+```text
+V1_SLICE_1C_STANDARD_PRESET_HOST_SETTINGS_SCOPE_CONFIRMATION = APPROVED
+V1_SLICE_1C_IMPLEMENTATION_RESULT = NOT_PROVEN
+V1_SLICE_1C_IMPLEMENTATION_BLOCKER = EVIDENCE_CAPTURE_REVALIDATION_SCOPE_CONFIRMATION_PENDING
+```
+
+> Prior 1C execution authority: the Owner approved
+> `PICKER_COMPOSITION_SCOPE_CONFIRMATION`, explicitly authorizing the existing
+> public Client browse picker and Host browse backend. The previous scope
+> blocker is resolved. The two-module corrective and non-Provider gates passed.
+> Real browse listing and controlled Workspace creation succeeded, then Session
+> creation failed with `agent-preset-invalid`: the standard preset requires
+> `@deepseek-ai/dsh-tool-subagent/model-selection-settings` in the Host scope.
+> That additional public module is outside the explicit two-module approval and
+> has not been composed. Provider budget is still 0/2; implementation remains
+> NOT_PROVEN, with HUMAN_REQUIRED_INTERACTION for a further scope decision. No frozen
+> Architecture, Independent Review or closure state is changed.
+
+```text
+V1_SLICE_1C_PICKER_COMPOSITION_SCOPE_CONFIRMATION = APPROVED
+V1_SLICE_1C_IMPLEMENTATION_RESULT = NOT_PROVEN
+V1_SLICE_1C_IMPLEMENTATION_BLOCKER = HARNESS_SESSION_CREATION_BLOCKED
+```
+
+> Prior V1-SLICE-1C execution checkpoint (2026-09-08): passive wrapper and bounded
+> same-context observation changes exist as uncommitted implementation work.
+> The real UI gate reached Harness Provider settings and then failed to open a
+> Workspace picker. No controlled Prompt/Provider/Tool attempt occurred.
+> [Implementation Record](../04-development-records/V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-IMPLEMENTATION-RECORD.md)
+> and [Evidence](../06-testing-acceptance/evidence/V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-EVIDENCE.md)
+> preserve the failure. Narrow confirmation is pending because execution
+> instruction section 34 limits Worker changes to observation/cleanup, while
+> the missing shipped picker backend requires a Host profile composition row.
+> No frozen Architecture, Independent Review or closure state is changed.
+> The authorization's NOT_STARTED fields below describe its initial boundary.
+
+```text
+V1_SLICE_1C_IMPLEMENTATION_RESULT = NOT_PROVEN
+V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDING
+```
+
+> Historical / Superseded Execution Checkpoint — V1-SLICE-1C implementation
+> authorization (2026-09-08): the
 > [Implementation Authorization Owner Decision](../04-development-records/V1-SLICE-1C-IMPLEMENTATION-AUTHORIZATION-OWNER-DECISION.md)
 > accepts read-only Targeted Delta Review
 > [AUDIT-016](../05-reviews/architecture/AUDIT-016-V1-SLICE-1C-CONTRACT-TARGETED-DELTA-REVIEW.md)
@@ -100,8 +176,8 @@ Last Updated: 2026-09-08
 ## Current Phase
 
 - Phase: V1 Implementation — `IN_PROGRESS`
-- Step: V1-SLICE-1C authorized for implementation — `V1_SLICE_1C_AUTHORIZED_FOR_IMPLEMENTATION`
-- Current Authorized Scope: Implement only the frozen V1-SLICE-1C Embedded Real Harness User Loop Contract
+- Step: none after V1-SLICE-1C — `NONE_AFTER_V1_SLICE_1C`
+- Current Authorized Scope: no next internal Slice 1 step is authorized by this Closure
 - Production Implementation: IN_PROGRESS
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -131,8 +207,8 @@ Last Updated: 2026-09-08
 - `V1_IMPLEMENTATION_READY = YES`
 - `V1_IMPLEMENTATION_STARTED = YES`
 - `V1_CURRENT_SLICE = V1-SLICE-1-REAL-HARNESS-USER-LOOP`
-- `V1_CURRENT_STEP = V1_SLICE_1C_AUTHORIZED_FOR_IMPLEMENTATION`
-- `V1_CURRENT_NEXT_ACTION = IMPLEMENT_V1_SLICE_1C_EMBEDDED_REAL_HARNESS_USER_LOOP`
+- `V1_CURRENT_STEP = NONE_AFTER_V1_SLICE_1C`
+- `V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_REMAINING_V1_SLICE_1_GATES`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE = ACCEPTED`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PASS`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_OWNER_ACCEPTED = YES`
@@ -157,12 +233,19 @@ Last Updated: 2026-09-08
 - `V1_SLICE_1B_REVIEW_BLOCKING_FINDINGS = NONE`
 - `V1_SLICE_1B_OWNER_CLOSURE = ACCEPTED`
 - `V1_SLICE_1B_BASELINE = FROZEN`
-- `V1_SLICE_1C = AUTHORIZED_FOR_IMPLEMENTATION`
+- `V1_SLICE_1C = CLOSED`
 - `V1_SLICE_1C_ARCHITECTURE_CHALLENGE = PASS`
 - `V1_SLICE_1C_TARGETED_DELTA_REVIEW = PASS`
 - `V1_SLICE_1C_BLOCKING_FINDINGS = NONE`
 - `V1_SLICE_1C_ARCHITECTURE_BASELINE = FROZEN`
-- `V1_SLICE_1C_IMPLEMENTATION = NOT_STARTED`
+- `V1_SLICE_1C_IMPLEMENTATION_RESULT = PASS`
+- `V1_SLICE_1C_INDEPENDENT_REVIEW = PASS`
+- `V1_SLICE_1C_REVIEW_BLOCKING_FINDINGS = NONE`
+- `V1_SLICE_1C_OWNER_CLOSURE = ACCEPTED`
+- `V1_SLICE_1C_BASELINE = FROZEN`
+- `V1_SLICE_1C_TOOL_PROOF_ATTEMPTS_USED = 2`
+- `V1_SLICE_1C_TOOL_PROOF_ATTEMPTS_REMAINING = 0`
+- `V1_SLICE_1C_ATTEMPT_3 = PROHIBITED`
 - `V1_SLICE_1C_OWNER_IMPLEMENTATION_AUTHORITY = YES`
 - `UI_LONG_TERM_SHELL_OWNER_DECISION = ACCEPTED`
 - `UI_LONG_TERM_SHELL_VISUAL_REFERENCE = ACCEPTED`
@@ -598,17 +681,14 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - V1 implementation: `IN_PROGRESS`
 - V1.0 Technical Implementation Baseline: `ACCEPTED`; Independent REVIEW-011 `PASS`; Architecture Owner accepted
 - V1 Slice 1A: `PASS / CLOSED / FROZEN`; REVIEW-012 `PASS`; whitespace corrective `PASS`; REVIEW-013 Delta Re-Review `PASS`; Owner Closure `ACCEPTED`
-- V1 Slice 1: `IN_PROGRESS`; Slice 1B `PASS / CLOSED / FROZEN`; Slice 1C `AUTHORIZED_FOR_IMPLEMENTATION`; AUDIT-015 and AUDIT-016 `PASS`; Architecture baseline `FROZEN`; implementation `NOT_STARTED`
+- V1 Slice 1: `IN_PROGRESS`; Slice 1A, 1B and 1C are `PASS / CLOSED / FROZEN`; AUDIT-017 `PASS`; 1C Owner Closure `ACCEPTED`; Provider attempts 2/2 consumed and Attempt #3 prohibited
 
 ## Immediate Next Action
 
-Implement the frozen
-[V1-SLICE-1C Embedded Real Harness User-Loop Contract](../03-v1.0-plan/V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-CONTRACT.md)
-within the exact scope authorized by the
-[Owner Decision](../04-development-records/V1-SLICE-1C-IMPLEMENTATION-AUTHORIZATION-OWNER-DECISION.md).
-Do not expand its attempt budget, evidence context, Provider ownership, Carrier
-frame cap or passive truthful wrapper allocation. REVIEW-012 F-05 and
-V1-SLICE-1B NF-6 remain open under their recorded dispositions.
+Architecture Owner assesses the remaining V1-SLICE-1 gates. No next internal
+step is started or authorized by this Closure. REVIEW-012 F-05 remains
+`OPEN_KNOWN_CONSTRAINT`; V1-SLICE-1B NF-6 and V1-SLICE-1C NF-1/NF-3/NF-4
+remain `OPEN_NON_BLOCKING` under their recorded routes.
 
 Do not pull/switch/update the frozen Harness SHA without an Architecture
 Decision. Spike code is NOT production by default. The corrective candidate

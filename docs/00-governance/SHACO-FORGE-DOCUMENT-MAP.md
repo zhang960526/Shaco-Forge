@@ -1,10 +1,32 @@
 # Shaco Forge Document Map
 
+> Current summary (2026-09-08): Independent [AUDIT-017](../05-reviews/architecture/AUDIT-017-V1-SLICE-1C-INDEPENDENT-IMPLEMENTATION-REVIEW.md) is `PASS` with no Blocking Findings. The [V1-SLICE-1C Owner Closure Decision](../04-development-records/V1-SLICE-1C-OWNER-CLOSURE-DECISION.md) is `OWNER_ACCEPTED_AND_FROZEN`. Slice 1A, 1B and 1C are `CLOSED / FROZEN`; V1-SLICE-1 remains `IN_PROGRESS`. Next is Architecture Owner assessment of remaining V1-SLICE-1 gates.
+
+```text
+V1_SLICE_1A = CLOSED / FROZEN
+V1_SLICE_1B = CLOSED / FROZEN
+V1_SLICE_1C = CLOSED / FROZEN
+V1_SLICE_1 = IN_PROGRESS
+V1_CURRENT_STEP = NONE_AFTER_V1_SLICE_1C
+V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_REMAINING_V1_SLICE_1_GATES
+```
+
 Status: ACTIVE
 
 Purpose: 所有 Agent / Reviewer / Developer 的第一入口。
 
-> Latest V1 implementation authority (2026-09-08): the V1-SLICE-1C
+> Historical / Superseded Execution Checkpoint — V1-SLICE-1C execution
+> (2026-09-08): uncommitted implementation
+> work is recorded in the
+> [Implementation Record](../04-development-records/V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-IMPLEMENTATION-RECORD.md)
+> and [Durable Evidence](../06-testing-acceptance/evidence/V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-EVIDENCE.md).
+> Implementation result is `NOT_PROVEN`; the real UI gate is blocked at missing
+> picker composition, pending narrow scope confirmation for the Host profile.
+> No Provider Tool attempt, Independent Review, baseline freeze or closure is
+> claimed. The following Owner authorization text retains its initial status.
+
+> Historical / Superseded Execution Checkpoint — V1-SLICE-1C implementation
+> authorization (2026-09-08): the
 > [Implementation Authorization Owner Decision](../04-development-records/V1-SLICE-1C-IMPLEMENTATION-AUTHORIZATION-OWNER-DECISION.md)
 > accepts Targeted Delta Review
 > [AUDIT-016](../05-reviews/architecture/AUDIT-016-V1-SLICE-1C-CONTRACT-TARGETED-DELTA-REVIEW.md)
@@ -94,7 +116,7 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
 | `V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-CONTRACT.md` | Slice 1B authenticated physical carrier and real Client ↔ Host implementation Contract | CLOSED / BASELINE FROZEN |
-| `V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-CONTRACT.md` | Slice 1C embedded real AppWebEntry/Harness user-loop Architecture Contract | OWNER_AUTHORIZED / ARCHITECTURE_BASELINE_FROZEN / IMPLEMENTATION_NOT_STARTED |
+| `V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-CONTRACT.md` | Slice 1C embedded real AppWebEntry/Harness user-loop Architecture Contract | CLOSED / BASELINE FROZEN |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
 | `P0S-FEASIBILITY-SPIKE.md` | P0.S Spike Contract | CLOSED / PASS; P0.S-8 result `V1_PRODUCT_ARCHITECTURE_FROZEN`; V1 implementation ready but not started |
 | `SHACO-FORGE-V1-PRODUCT-ARCHITECTURE-PLAN.md` | V1 Product Architecture Plan | `V1_ARCHITECTURE_PLAN_ONLY`; Final Gate external review supplied by Owner is PASS; P0.S-8 freeze not executed |
@@ -206,7 +228,10 @@ Baseline candidate now gates that Slice behind Independent Review.
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
 | `V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md` | Current V1.0 Harness-reuse implementation-scope allocation authority; P0.S remains closed |
 | `V1-SLICE-1C-FROZEN-HARNESS-USER-LOOP-SOURCE-CONFIRMATION.md` | Read-only confirmation of Frozen Harness Workspace/Session/Prompt/stream/tool/interaction/provider/public-seam facts; not an implementation result |
-| `V1-SLICE-1C-IMPLEMENTATION-AUTHORIZATION-OWNER-DECISION.md` | Architecture Owner authorization and exact byte-bound freeze of the reviewed Slice 1C Architecture baseline; implementation remains not started |
+| `V1-SLICE-1C-EVIDENCE-CAPTURE-REVALIDATION-OWNER-DECISION.md` | Owner-approved bounded one-time corrective Attempt #2; original history immutable; total cap two, no third attempt |
+| `V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-IMPLEMENTATION-RECORD.md` | Complete Slice 1C implementation, failures, final live Attempt #2 PASS and regression ledger |
+| `V1-SLICE-1C-OWNER-CLOSURE-DECISION.md` | Architecture Owner acceptance, finding dispositions and frozen Slice 1C implementation baseline |
+| `V1-SLICE-1C-IMPLEMENTATION-AUTHORIZATION-OWNER-DECISION.md` | Historical pre-execution authority and exact byte-bound Architecture freeze; implementation was not started at that checkpoint |
 | `V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-IMPLEMENTATION-RECORD.md` | Slice 1B implementation, lifecycle corrective and historical Executor test ledger; closed baseline Runtime authority |
 | `V1-SLICE-1B-OWNER-CLOSURE-DECISION.md` | Architecture Owner acceptance and baseline freeze for internal Step 1B; Slice 1 remains in progress |
 | `P0S-8-V1-PRODUCT-ARCHITECTURE-FREEZE-DECISION.md` | P0.S-8 sufficient Architecture Freeze and P0.S umbrella closure authority |
@@ -238,6 +263,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 | `architecture/AUDIT-014-V1-SLICE-1B-INDEPENDENT-IMPLEMENTATION-REVIEW.md` | Corrected formal persistence of the Slice 1B Independent Review (`PASS`; no Blocking Findings; Reviewer provenance and F-05/NF-6 taxonomy corrected; Owner accepted) |
 | `architecture/AUDIT-015-V1-SLICE-1C-ARCHITECTURE-CHALLENGE.md` | Faithful persistence of the Slice 1C Independent Architecture Challenge (`PASS`; no Blocking Findings; C-1 through C-7 are non-blocking Contract-content corrections) |
 | `architecture/AUDIT-016-V1-SLICE-1C-CONTRACT-TARGETED-DELTA-REVIEW.md` | Faithful persistence of the read-only Slice 1C Targeted Delta Review (`PASS`; C-1 through C-7 Contract-content requirements closed; ready for Owner implementation authorization) |
+| `architecture/AUDIT-017-V1-SLICE-1C-INDEPENDENT-IMPLEMENTATION-REVIEW.md` | Formal persistence of the Slice 1C Independent Implementation Review (`PASS`; no Blocking Findings; Owner accepted and froze 1C) |
 | `implementation/` | 实现审计 |
 | `corrective/` | Corrective 审计 |
 | `templates/` | Review 模板 |
@@ -250,6 +276,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 | `V1.0-ACCEPTANCE-MATRIX.md` | 最终验收矩阵骨架 |
 | `evidence/` | 阶段证据 |
 | `evidence/V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-EVIDENCE.md` | Slice 1B redacted Native Carrier, real Client transport and failure-truthfulness Runtime authority; PASS / closed baseline frozen |
+| `evidence/V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-EVIDENCE.md` | Slice 1C durable redacted same-context real AppWebEntry user-loop evidence; final Attempt #2 PASS / closed baseline frozen |
 | `evidence/P0-1-HARNESS-BASELINE-MANIFEST.md` | P0-1 frozen Harness identity (HARNESS_BASELINE_MANIFEST) |
 | `evidence/P0-2-WEB-AND-STANDARD-COMPOSITION-MAP.md` | P0-2 Web + standard composition (HARNESS_WEB_COMPOSITION_MAP) |
 | `evidence/P0-2-WEB-DUMP-DEFAULT-CONFIG.yml` | P0-2 dump-config diagnostic (not a stable API) |

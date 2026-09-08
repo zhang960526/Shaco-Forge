@@ -26,7 +26,9 @@ interface Window {
     abortCancels: number
     iteratorCancels: number
     eventsReady: number
-    lastStreamPayloads: Record<string, Record<string, unknown>>
+    userLoop: ReturnType<typeof import('./user-loop-evidence.js').createUserLoopObserver>
+    activeStreams: number
+    maxActiveStreams: number
   }
   __SHACO_RENDERER_TRANSPORT_IMPL__: {
     ownsHost: true

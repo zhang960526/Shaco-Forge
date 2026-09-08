@@ -21,5 +21,9 @@ Status: ACTIVE
 | REVIEW-011 | Independent V1.0 Technical Implementation Baseline Review | PASS | Accepted; F-01/F-02/F-03 nonblocking documentation findings closed during Owner Acceptance; Technical Baseline and ADR-0008 accepted | `architecture/AUDIT-011-V1-TECHNICAL-IMPLEMENTATION-BASELINE.md` |
 | REVIEW-012 | V1-SLICE-1A Independent Review | PASS | Accepted; no blocking/major findings; F-01 through F-10 retained with non-blocking dispositions; internal Step 1A closed and frozen; V1-SLICE-1 remains open | `architecture/AUDIT-012-V1-SLICE-1A-INDEPENDENT-REVIEW.md` |
 | REVIEW-013 | V1-SLICE-1A Whitespace Corrective Independent Delta Re-Review | PASS | Scope limited to the EOF whitespace corrective; parent REVIEW-012; 8/8 corrected Product identities and reconstruction proofs matched; no Product semantic change; Owner final closure allowed | `architecture/AUDIT-013-V1-SLICE-1A-WHITESPACE-DELTA-REVIEW.md` |
+| REVIEW-014 | V1-SLICE-1B Independent Implementation Review | PASS | Owner closed/froze 1B | `architecture/AUDIT-014-V1-SLICE-1B-INDEPENDENT-IMPLEMENTATION-REVIEW.md` |
+| REVIEW-015 | V1-SLICE-1C Architecture Challenge | PASS | Owner persisted Contract candidate | `architecture/AUDIT-015-V1-SLICE-1C-ARCHITECTURE-CHALLENGE.md` |
+| REVIEW-016 | V1-SLICE-1C Contract Targeted Delta Review | PASS | Owner authorized implementation | `architecture/AUDIT-016-V1-SLICE-1C-CONTRACT-TARGETED-DELTA-REVIEW.md` |
+| REVIEW-017 | V1-SLICE-1C Independent Implementation Review | PASS | Owner accepted and froze 1C | `architecture/AUDIT-017-V1-SLICE-1C-INDEPENDENT-IMPLEMENTATION-REVIEW.md` |
 
 Future implementation reviews must be stored separately from Phase Contracts.

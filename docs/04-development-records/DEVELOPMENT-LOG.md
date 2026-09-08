@@ -2,6 +2,100 @@
 
 Status: ACTIVE
 
+## 2026-09-08 - V1-SLICE-1C Independent Review and Owner Closure
+
+- Final live Attempt #2, run `6c938e42-ce2d-4b23-8800-ee29ed377348`, remains
+  `PASS`; no Provider or user loop was re-executed during Review/Closure.
+- Independent REVIEW-017 is `PASS`; Blocking Findings are `NONE`; the Reviewer
+  independently passed the 120/120 non-Provider regression roster.
+- NF-1, NF-3 and NF-4 remain open and non-blocking on their recorded future
+  routes. NF-2 is closed by this Owner Closure governance reconciliation.
+- Architecture Owner Closure is `ACCEPTED`; V1-SLICE-1C is `CLOSED` and its
+  reviewed implementation baseline is `FROZEN`.
+- Tool Proof attempts are exhausted at 2/2; remaining attempts are zero and
+  Attempt #3 is prohibited. Attempt #1's immutable failed history is retained.
+- The 26 immutable reviewed implementation/evidence files match their
+  pre-Closure bytes and SHA-256. Frozen Harness remains unchanged and clean.
+- V1-SLICE-1 remains `IN_PROGRESS`. Next action is Architecture Owner
+  assessment of the remaining V1-SLICE-1 gates; no next step is started here.
+
+## 2026-09-08 - V1-SLICE-1C Implementation PASS, Awaiting Independent Review
+
+Owner-authorized final Attempt #2 (6c938e42-ce2d-4b23-8800-ee29ed377348) passed the real
+AppWebEntry Workspace -> Session -> Composer -> Provider -> streaming -> read
+Tool/result -> rendered final marker loop. The live observer counted 78 chunks,
+one completed turn and two steps, with no errors, loss or pending hashes.
+Workspace stayed unchanged, max frame was 256153/262144, and cleanup completed.
+All 13 preflight and 12 post-runtime checks passed; full units 120/120.
+
+The durable budget is 2/2 consumed, the authority is consumed, and Attempt #3 is
+prohibited. Attempt #1 remains NOT_PROVEN with its exact original ledger row
+and artifact hashes unchanged. The approved decision is 10466 bytes with its
+recorded SHA-256 unchanged. No new dependency, frozen document change, staging,
+commit, push, Independent Review or Owner Closure occurred. Current State is
+IMPLEMENTED_WAITING_INDEPENDENT_REVIEW; Slice 1 remains IN_PROGRESS.
+
+## 2026-09-08 - Owner-Authorized Final Evidence Revalidation
+
+The Owner approved the remaining Attempt #2 for one fresh live end-to-end
+validation. The fixed decision and inherited worktree/artifact byte baselines
+are persisted. The first attempt's row and original artifacts remain unchanged.
+A separate narrow policy route and durable one-use reservation now protect the
+two-attempt ceiling; no third attempt, general retry relaxation or budget reset
+is allowed. Initial policy tests passed 28/28; full preflight is in progress.
+No second Prompt has been submitted at this checkpoint.
+
+## 2026-09-08 - Standard Preset Settings and Live-Evidence Corrective
+
+Owner approved the single public Host module
+`@deepseek-ai/dsh-tool-subagent/model-selection-settings`. It is composed once
+before agent-presets with defaults unchanged; Frozen Harness and the standard
+preset remain untouched. Real Workspace, Session and Composer Prompt acceptance
+succeeded. The first controlled Provider attempt completed read/marker behavior
+according to a bounded postmortem, but a named-request observation bug lost
+the live semantic proof. The initial Provider-timeout classification was
+corrected to Product evidence-capture failure while preserving original artifacts.
+
+The observer and DOM input corrections are implemented. Full units passed
+112/112; required regressions and a real zero-Prompt Session/follow binding
+check passed. Budget remains 1/2 with unchanged bytes during that last check.
+Attempt #2 is not automatically authorized to cover the evidence failure;
+implementation remains NOT_PROVEN pending revalidation scope. No staging,
+commit, push, Independent Review or closure was performed. Details and exact
+commands are in the existing 1C Implementation Record and Durable Evidence.
+
+## 2026-09-08 — Owner-Approved 1C Browse Picker Corrective
+
+- Owner approved the two existing public browse picker modules; the old scope
+  blocker is resolved without any Frozen Architecture change.
+- Client graph is exactly 28; generated Host profile includes browse only.
+  Non-Provider gates passed; the latest complete unit roster has 104 tests.
+- Real UI browsing and controlled Workspace creation succeeded. Session creation
+  then failed with `agent-preset-invalid`, identifying the absent public Host
+  `dsh-tool-subagent/model-selection-settings` seam required by the standard preset.
+- That extra Host composition remains unapplied pending scope authority.
+  Result: NOT_PROVEN / HUMAN_REQUIRED_INTERACTION; Provider budget remains 0/2.
+- Prior failed runtimes remain in the Implementation Record and Durable Evidence
+  linked below. No staging, commit, push, Independent Review or closure occurred.
+
+## 2026-09-08 — V1-SLICE-1C Implementation Execution Checkpoint
+
+- Began from the exact authorized Product/Frozen Harness commits and clean
+  worktrees; all initial governance fields matched.
+- Added passive truthful wrapper, the shared tested transport bootstrap,
+  bounded same-context evidence, Carrier metrics and real DOM runtime gate.
+- Non-Provider build/tests and 1B runtime regression passed at the recorded
+  checkpoints. The controlled user-loop run failed at missing picker
+  composition, before any Prompt or Tool Proof attempt.
+- Implementation remains `NOT_PROVEN`. Execution instruction section 34's
+  Worker scope restriction requires confirmation before adding the existing
+  public Harness picker backend to the Host profile.
+- [Implementation Record](V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-IMPLEMENTATION-RECORD.md)
+  and [Evidence](../06-testing-acceptance/evidence/V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-EVIDENCE.md)
+  contain commands, failures, corrective work and unproved gates.
+- Frozen Architecture/Harness unchanged. Staging, Commit, Push, Independent
+  Review and Owner Closure: NO. Slice 1 remains IN_PROGRESS.
+
 ## 2026-09-07 — V1-SLICE-1A Final Closure After Delta Re-Review
 
 - Original V1-SLICE-1A implementation and Theme Foundation Corrective remain

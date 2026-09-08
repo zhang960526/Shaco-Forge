@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto'
-import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, realpath, rm, writeFile } from 'node:fs/promises'
 import { createRequire } from 'node:module'
 import { dirname, join, relative } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
@@ -26,6 +26,7 @@ const REQUIRED = [
   '@deepseek-ai/dsh-client-ui-chat',
   '@deepseek-ai/dsh-client-ui-tool',
   '@deepseek-ai/dsh-client-ui-workspace',
+  '@deepseek-ai/dsh-client-ui-directory-picker-browse',
   '@deepseek-ai/dsh-client-ui-input-trigger',
   '@deepseek-ai/dsh-client-ui-commands',
   '@deepseek-ai/dsh-client-ui-subagent',
@@ -49,6 +50,16 @@ const PLATFORM = [
   '@deepseek-ai/dsh-client-ui-slots',
   '@deepseek-ai/dsh-client-ui-primitives',
 ]
+
+function assertPinnedClientGraph(ordered) {
+  const expected = [...REQUIRED, ...SUPPORT]
+  if (expected.length !== 28 || new Set(expected).size !== 28
+    || ordered.length !== 28 || new Set(ordered.map(row => row.id)).size !== 28
+    || ordered.some(row => !expected.includes(row.id))
+    || ordered[0]?.id !== '@deepseek-ai/dsh-client-modules') {
+    throw new Error('Pinned Harness Client graph ordering failed closed')
+  }
+}
 
 const scriptDir = dirname(fileURLToPath(import.meta.url))
 const desktopRoot = dirname(scriptDir)
@@ -101,9 +112,7 @@ const clientModulesEntry = resolvePublicExport(packageIndex, '@deepseek-ai/dsh-c
 if (clientModulesEntry === undefined) throw new Error('Pinned Client Modules public export is missing')
 const modules = await import(pathToFileURL(clientModulesEntry).href)
 const ordered = modules.orderByModuleGraph(rows)
-if (ordered.length !== 27 || ordered[0]?.id !== '@deepseek-ai/dsh-client-modules') {
-  throw new Error('Pinned Harness Client graph ordering failed closed')
-}
+assertPinnedClientGraph(ordered)
 
 const bootstrap = ordered.slice(0, 1)
 const application = ordered.slice(1)
@@ -131,45 +140,19 @@ if (facade?.kind !== 'script' || graphGlobal?.kind !== 'global') {
   throw new Error('Pinned Harness public boot injections are incomplete')
 }
 await writeFile(join(staticRoot, 'boot-facade.js'), `${facade.text}\nwindow.${graphGlobal.name} = ${JSON.stringify(graphGlobal.value)};\n`, 'utf8')
-await writeFile(join(staticRoot, 'shell-bootstrap.js'), [
-  "Object.defineProperty(globalThis, '__zod_globalConfig', { value: Object.freeze({ jitless: true }) });",
-  "const __shacoEvidence = { fetchEndpoints: [], streamEndpoints: [], abortCancels: 0, iteratorCancels: 0, eventsReady: 0, lastStreamPayloads: Object.create(null) };",
-  "Object.defineProperty(globalThis, '__SHACO_FORGE_TRANSPORT_EVIDENCE__', { value: __shacoEvidence });",
-  "async function __shacoFetch(input, init = {}) {",
-  "  const url = typeof input === 'string' ? input : input instanceof URL ? input.href : input.url;",
-  "  const headers = new Headers(init.headers ?? (input instanceof Request ? input.headers : undefined));",
-  "  const body = init.body ?? (input instanceof Request ? await input.text() : undefined);",
-  "  if (typeof body !== 'string') throw new TypeError('Shaco transport accepts JSON string bodies only');",
-  "  const endpoint = new URL(url).pathname.replace(/^\\/api\\//, '');",
-  "  __shacoEvidence.fetchEndpoints.push(endpoint);",
-  "  const response = await globalThis.shacoForge.transport.fetch({ url, method: init.method ?? (input instanceof Request ? input.method : 'GET'), contentType: headers.get('content-type') ?? '', body });",
-  "  return new Response(response.body, { status: response.status, headers: { 'content-type': response.contentType } });",
-  "}",
-  "function __shacoOpenStream(endpoint, payload, signal) {",
-  "  __shacoEvidence.streamEndpoints.push(endpoint);",
-  "  __shacoEvidence.lastStreamPayloads[endpoint] = payload;",
-  "  return { async *[Symbol.asyncIterator]() {",
-  "    const streamId = await globalThis.shacoForge.transport.openStream(endpoint, payload);",
-  "    let terminal = false;",
-  "    const abort = () => { __shacoEvidence.abortCancels += 1; void globalThis.shacoForge.transport.cancelStream(streamId, 'abort-signal'); };",
-  "    if (signal?.aborted) abort(); else signal?.addEventListener('abort', abort, { once: true });",
-  "    try {",
-  "      for (;;) {",
-  "        const item = await globalThis.shacoForge.transport.pullStream(streamId);",
-  "        if (item.error !== undefined) throw new Error(item.error);",
-  "        if (item.done) { terminal = true; return; }",
-  "        if (endpoint === '$events' && item.value?.type === 'ready') __shacoEvidence.eventsReady += 1;",
-  "        yield item.value;",
-  "      }",
-  "    } finally {",
-  "      signal?.removeEventListener('abort', abort);",
-  "      if (!terminal) { __shacoEvidence.iteratorCancels += 1; await globalThis.shacoForge.transport.cancelStream(streamId, 'iterator-return'); }",
-  "    }",
-  "  } };",
-  "}",
-  "Object.defineProperty(globalThis, '__DSH_TRANSPORT__', { value: Object.freeze({ ownsHost: true, fetch: __shacoFetch, openStream: __shacoOpenStream }) });",
-  '',
-].join('\n'), 'utf8')
+// Bundle the same adapter used by unit tests before the frozen Client evaluates.
+const { build } = await import(pathToFileURL(await realpath(require.resolve('vite'))).href)
+await build({
+  configFile: false,
+  publicDir: false,
+  build: {
+    lib: { entry: join(desktopRoot, 'src/renderer/shell-bootstrap.ts'), name: 'ShacoBootstrap', formats: ['iife'], fileName: () => 'shell-bootstrap.js' },
+    outDir: staticRoot,
+    emptyOutDir: false,
+    target: 'es2022',
+    minify: false,
+  },
+})
 
 const manifest = {
   schemaVersion: 1,

@@ -21,8 +21,9 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 const rendererRoot = resolve(currentDir, '..', 'renderer')
 const preloadPath = resolve(currentDir, '..', 'preload', 'preload.cjs')
 const evidencePath = process.env.SHACO_FORGE_EVIDENCE_PATH
-const screenshotPath = process.env.SHACO_FORGE_SCREENSHOT_PATH
+const screenshotPath = process.env.SHACO_FORGE_SCREENSHOT_PATH || undefined
 const injectCarrierFailure = process.env.SHACO_FORGE_EVIDENCE_INJECT_CARRIER_FAILURE === '1'
+const userLoopRequested = process.env.SHACO_FORGE_USER_LOOP === '1'
 const execFileAsync = promisify(execFile)
 
 interface Projection {
@@ -41,6 +42,7 @@ let carrier: CarrierClient | undefined
 let carrierBootstrap: CarrierBootstrap | undefined
 let mainWindow: BrowserWindow | undefined
 let finalizing = false
+let userLoopEvidence: Record<string, unknown> | undefined
 
 function mime(path: string): string {
   return ({ '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml' } as Record<string, string>)[extname(path)] ?? 'application/octet-stream'
@@ -134,6 +136,7 @@ async function productListeners(pids: number[]): Promise<Array<{ localAddress: s
 
 async function maybeFinalizeEvidence(): Promise<void> {
   if (evidencePath === undefined || rendererEvidence === undefined || supervisor === undefined || finalizing) return
+  if (userLoopRequested && userLoopEvidence === undefined) return
   const carrierFailureObserved = supervisor.events.some(event => event.phase === 'carrier-failed')
   const terminal = injectCarrierFailure
     ? carrierFailureObserved
@@ -194,7 +197,8 @@ async function maybeFinalizeEvidence(): Promise<void> {
     && cleanup.exited
     && (!injectCarrierFailure || carrierFailureObserved)
   const evidence = {
-    result: result ? 'PASS' : 'FAIL',
+    result: userLoopRequested ? (result && userLoopEvidence?.result === 'PASS' ? 'PASS' : 'NOT_PROVEN') : (result ? 'PASS' : 'FAIL'),
+    nonProviderResult: result ? 'PASS' : 'FAIL',
     capturedAt: new Date().toISOString(),
     desktop: {
       electronVersion: process.versions.electron,
@@ -223,6 +227,7 @@ async function maybeFinalizeEvidence(): Promise<void> {
       shacoRecovery: false,
     },
     renderer: rendererEvidence,
+    userLoop: userLoopEvidence,
     harnessClientManifest: clientManifest,
     tcpListenersOwnedByObservedProductProcesses: listeners,
     cleanup,
@@ -278,6 +283,12 @@ async function createMainWindow(): Promise<void> {
 }
 
 ipcMain.handle('bootstrap:get-state', () => projection)
+// Main-process smoke driver completion; never exposed as a Renderer capability.
+ipcMain.once('user-loop:complete', (_event, evidence: unknown) => {
+  if (!userLoopRequested || !isRecord(evidence)) return
+  userLoopEvidence = evidence
+  void maybeFinalizeEvidence()
+})
 ipcMain.on('runtime:evidence', (_event, evidence: unknown) => {
   if (!isRecord(evidence)) return
   rendererEvidence = evidence

@@ -21,16 +21,16 @@
         </header>
         <section class="sidebar-section" aria-labelledby="functions-heading">
           <h2 id="functions-heading">功能</h2>
-          <button class="nav-action" data-testid="new-chat" type="button" disabled title="连接与项目尚未就绪">
+          <button class="nav-action" data-testid="new-chat" type="button" disabled title="请在内嵌 Harness 中新建会话">
             <span aria-hidden="true">＋</span> 新对话
           </button>
         </section>
         <section class="sidebar-section project-directory" aria-labelledby="projects-heading">
           <h2 id="projects-heading">项目目录</h2>
-          <div class="empty-directory" data-testid="project-directory">No Project</div>
-          <p>连接建立后仅显示真实 Harness Workspace 与 Session。</p>
+          <div class="empty-directory" data-testid="project-directory">项目与会话由内嵌 Harness 管理</div>
+          <p>请使用右侧 Harness 的工作区与会话导航。</p>
         </section>
-        <button class="settings-entry" data-testid="settings" type="button">设置</button>
+        <button class="settings-entry" data-testid="settings" type="button" disabled title="请使用内嵌 Harness 的设置">设置 · 在 Harness 中管理</button>
       </aside>
       <main class="workspace">
         <header class="workspace-header centered-content">
@@ -43,7 +43,7 @@
         <section class="client-stage centered-content" aria-label="Harness Client">
           <div class="truthful-state" data-testid="truthful-state">
             <strong>正在启动 Harness</strong>
-            <span>当前没有已连接的项目或会话。</span>
+            <span>工作区、会话和设置由内嵌 Harness 呈现。</span>
           </div>
           <div id="harness-client-root" data-harness-client-mount></div>
         </section>
