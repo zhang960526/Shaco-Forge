@@ -2,6 +2,29 @@
 
 Status: ACTIVE
 
+## 2026-09-08 - V1-SLICE-2 Architecture Contract Persistence
+
+- Persisted Owner-accepted candidate Contract
+  `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-20260908-01` and Carrier Lifecycle
+  Amendment `V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT-20260908-01`.
+- Persisted AUDIT-019, the Independent Corrective V2 Re-Review: `PASS`; B1-B4
+  are `CLOSED`; `BLOCKING_FINDINGS = NONE`; architecture risk is `MEDIUM`.
+- The Amendment changes credential/lifecycle semantics to per-attachment
+  credentials and healthy-authority detach while preserving all frozen Carrier
+  wire/HMAC bytes and security boundaries.
+- NF-S2-1 through NF-S2-6 are mandatory Contract obligations; NF-S2-7 is
+  satisfied by repository authority persistence. They are not reported as all
+  findings closed.
+- Candidate implementation sequencing is exactly three steps: Worker Authority
+  and Trusted Discovery; Connection Recovery and Cold Projection; Outer Shell /
+  Native / Interaction Integration. The Amendment is a Step 1 Contract
+  prerequisite.
+- No Product Source, Frozen Harness, Slice 1B historical Contract or UI Design
+  Spec was modified. No Runtime, Provider or implementation gate was run.
+- `V1_SLICE_2_IMPLEMENTATION = NOT_STARTED` and
+  `V1_SLICE_2_IMPLEMENTATION_AUTHORIZATION = NO`.
+- Next: `INDEPENDENT_V1_SLICE_2_CONTRACT_TARGETED_DELTA_REVIEW`.
+
 ## 2026-09-08 - V1-SLICE-1 Owner Closure
 
 - Scope Reconciliation was committed at `f7db3be55ff4d7ad219d773a01edda8a72b0ffda`.

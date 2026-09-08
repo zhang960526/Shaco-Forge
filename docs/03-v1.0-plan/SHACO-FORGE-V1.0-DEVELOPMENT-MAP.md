@@ -2,12 +2,14 @@
 
 Status: ACTIVE
 
-> Current V1.0 implementation-route authority: the
-> [V1.0 Harness Reuse Implementation Scope Corrective Decision](../04-development-records/V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md)
-> and the Owner-accepted [V1-SLICE-1 Scope Reconciliation Decision](../04-development-records/V1-SLICE-1-SCOPE-RECONCILIATION-DECISION.md),
-> [AUDIT-018](../05-reviews/architecture/AUDIT-018-V1-SLICE-1-INDEPENDENT-CLOSURE-AUDIT.md),
-> and [V1-SLICE-1 Owner Closure Decision](../04-development-records/V1-SLICE-1-OWNER-CLOSURE-DECISION.md).
-> Slice 1A/1B/1C and Slice 1 are `PASS / CLOSED / FROZEN`; Slice 2 has not started.
+> Current V1.0 route authority adds the Owner-accepted candidate
+> [V1-SLICE-2 Architecture Contract](V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md),
+> [Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md),
+> Independent Corrective V2 Re-Review [AUDIT-019](../05-reviews/architecture/AUDIT-019-V1-SLICE-2-CORRECTIVE-V2-ARCHITECTURE-REREVIEW.md)
+> and [Owner Decision](../04-development-records/V1-SLICE-2-ARCHITECTURE-OWNER-DECISION.md).
+> Slice 1A/1B/1C and Slice 1 remain `PASS / CLOSED / FROZEN`. Slice 2
+> architecture is persisted for targeted delta review; Product implementation
+> remains `NOT_STARTED` and is not authorized.
 
 ## Current Implementation Route
 
@@ -19,12 +21,19 @@ V1_SLICE_1_SCOPE_RECONCILIATION = COMPLETED
 V1_SLICE_1_INDEPENDENT_CLOSURE_AUDIT = PASS
 V1_SLICE_1_OWNER_CLOSURE = ACCEPTED
 V1_SLICE_1_ADDITIONAL_IMPLEMENTATION = NONE
+V1_SLICE_2_ARCHITECTURE = CONTRACT_PERSISTED_WAITING_TARGETED_DELTA_REVIEW
+V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = PERSISTED_WAITING_TARGETED_DELTA_REVIEW
+V1_SLICE_2_ARCHITECTURE_REREVIEW = PASS
+V1_SLICE_2_ARCHITECTURE_BLOCKING_FINDINGS = NONE
+V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
+V1_SLICE_2_IMPLEMENTATION_AUTHORIZATION = NO
 V1_SLICE_2 = LIFECYCLE / NATIVE / RECONNECT / NOT_STARTED
 V1_SLICE_3 = PACKAGING / COMPATIBILITY / RELEASE / NOT_STARTED
 V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
 P0_5_P1_P2_TO_P8 = NEED_DRIVEN_CONTRACT_CAPABILITY_ACCEPTANCE_TAXONOMY
 P0_5_P1_P2_TO_P8 = NOT_A_SECOND_SEQUENTIAL_IMPLEMENTATION_ROUTE
-V1_CURRENT_NEXT_ACTION = PREPARE_V1_SLICE_2_LIFECYCLE_NATIVE_RECONNECT
+V1_CURRENT_STEP = V1_SLICE_2_ARCHITECTURE_CONTRACT_PERSISTED_WAITING_TARGETED_DELTA_REVIEW
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_V1_SLICE_2_CONTRACT_TARGETED_DELTA_REVIEW
 ```
 
 The four Slice route is the current implementation route. P0.5/P1/P2-P8 retain
@@ -33,6 +42,17 @@ by the active Slice. They do not authorize sequential reimplementation of
 Worker bootstrap, Harness Host bootstrap, Desktop foundation, authenticated
 Carrier, real Client-to-Host communication or the real Harness user loop
 already completed and frozen by 1A/1B/1C.
+
+The Slice 2 candidate implementation route is exactly three steps:
+
+1. Worker Authority and Trusted Discovery.
+2. Connection Recovery and Cold Projection.
+3. Outer Shell / Native / Interaction Integration.
+
+The Carrier Lifecycle Amendment is a Step 1 Contract prerequisite. The only
+next action is independent targeted delta review of the persisted Contract and
+Amendment against Corrective V2 and AUDIT-019. Do not create a Step 1 prompt or
+start implementation at this state.
 
 ## Phase Order
 

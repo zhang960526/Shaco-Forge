@@ -1,6 +1,13 @@
 # Shaco Forge Document Map
 
-> Current summary (2026-09-08): [AUDIT-018](../05-reviews/architecture/AUDIT-018-V1-SLICE-1-INDEPENDENT-CLOSURE-AUDIT.md) is `PASS`, and the [V1-SLICE-1 Owner Closure Decision](../04-development-records/V1-SLICE-1-OWNER-CLOSURE-DECISION.md) accepts and freezes the completed real Harness user-loop Slice. Slice 1A, 1B and 1C are `CLOSED / FROZEN`; Slice 1 is `PASS / CLOSED / FROZEN`; Slice 2 is `NOT_STARTED`. Next is `PREPARE_V1_SLICE_2_LIFECYCLE_NATIVE_RECONNECT`.
+> Current summary (2026-09-08): the Owner-accepted V1-SLICE-2
+> [Architecture Contract](../03-v1.0-plan/V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md)
+> and [Carrier Lifecycle Amendment](../03-v1.0-plan/V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md)
+> are persisted and await independent targeted delta review. [AUDIT-019](../05-reviews/architecture/AUDIT-019-V1-SLICE-2-CORRECTIVE-V2-ARCHITECTURE-REREVIEW.md)
+> is `PASS`, all architecture Blocking Findings are closed, and the
+> [Owner Decision](../04-development-records/V1-SLICE-2-ARCHITECTURE-OWNER-DECISION.md)
+> grants persistence only. Slice 2 implementation remains `NOT_STARTED` and is
+> not authorized.
 
 ```text
 V1_SLICE_1A = CLOSED / FROZEN
@@ -10,9 +17,15 @@ V1_SLICE_1_SCOPE_RECONCILIATION = COMPLETED
 V1_SLICE_1_INDEPENDENT_CLOSURE_AUDIT = PASS
 V1_SLICE_1_OWNER_CLOSURE = ACCEPTED
 V1_SLICE_1 = PASS / CLOSED / FROZEN
+V1_SLICE_2_ARCHITECTURE = CONTRACT_PERSISTED_WAITING_TARGETED_DELTA_REVIEW
+V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = PERSISTED_WAITING_TARGETED_DELTA_REVIEW
+V1_SLICE_2_ARCHITECTURE_REREVIEW = PASS
+V1_SLICE_2_ARCHITECTURE_BLOCKING_FINDINGS = NONE
+V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
+V1_SLICE_2_IMPLEMENTATION_AUTHORIZATION = NO
 V1_SLICE_2 = NOT_STARTED
-V1_CURRENT_STEP = NONE_BETWEEN_V1_SLICE_1_AND_V1_SLICE_2
-V1_CURRENT_NEXT_ACTION = PREPARE_V1_SLICE_2_LIFECYCLE_NATIVE_RECONNECT
+V1_CURRENT_STEP = V1_SLICE_2_ARCHITECTURE_CONTRACT_PERSISTED_WAITING_TARGETED_DELTA_REVIEW
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_V1_SLICE_2_CONTRACT_TARGETED_DELTA_REVIEW
 ```
 
 Status: ACTIVE
@@ -119,6 +132,8 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 | Document | Role | Status |
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | Current four-Slice Harness-reuse implementation route plus need-driven P0.5/P1/P2-P8 taxonomy | ACTIVE |
+| `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md` | Owner-accepted candidate Architecture Contract for Worker authority, trusted discovery, reconnect, cold projection, outer shell and Native integration | PERSISTED / WAITING TARGETED DELTA REVIEW |
+| `V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md` | Local Slice 1B lifecycle/credential amendment preserving frozen wire/HMAC semantics | PERSISTED / WAITING TARGETED DELTA REVIEW |
 | `V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-CONTRACT.md` | Slice 1B authenticated physical carrier and real Client ↔ Host implementation Contract | CLOSED / BASELINE FROZEN |
 | `V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-CONTRACT.md` | Slice 1C embedded real AppWebEntry/Harness user-loop Architecture Contract | CLOSED / BASELINE FROZEN |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
@@ -233,6 +248,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 | `V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md` | Current V1.0 Harness-reuse implementation-scope allocation authority; P0.S remains closed |
 | `V1-SLICE-1-SCOPE-RECONCILIATION-DECISION.md` | Owner-accepted post-1C scope allocation, four-Slice route reconciliation and Slice-1 Independent Closure Audit handoff |
 | `V1-SLICE-1-OWNER-CLOSURE-DECISION.md` | Architecture Owner acceptance and frozen baseline for the complete real Harness user-loop Slice; Slice 2 remains not started |
+| `V1-SLICE-2-ARCHITECTURE-OWNER-DECISION.md` | Owner acceptance of Corrective V2 and AUDIT-019 for Contract persistence only; targeted delta review is next; implementation not authorized |
 | `V1-SLICE-1C-FROZEN-HARNESS-USER-LOOP-SOURCE-CONFIRMATION.md` | Read-only confirmation of Frozen Harness Workspace/Session/Prompt/stream/tool/interaction/provider/public-seam facts; not an implementation result |
 | `V1-SLICE-1C-EVIDENCE-CAPTURE-REVALIDATION-OWNER-DECISION.md` | Owner-approved bounded one-time corrective Attempt #2; original history immutable; total cap two, no third attempt |
 | `V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-IMPLEMENTATION-RECORD.md` | Complete Slice 1C implementation, failures, final live Attempt #2 PASS and regression ledger |
@@ -271,6 +287,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 | `architecture/AUDIT-016-V1-SLICE-1C-CONTRACT-TARGETED-DELTA-REVIEW.md` | Faithful persistence of the read-only Slice 1C Targeted Delta Review (`PASS`; C-1 through C-7 Contract-content requirements closed; ready for Owner implementation authorization) |
 | `architecture/AUDIT-017-V1-SLICE-1C-INDEPENDENT-IMPLEMENTATION-REVIEW.md` | Formal persistence of the Slice 1C Independent Implementation Review (`PASS`; no Blocking Findings; Owner accepted and froze 1C) |
 | `architecture/AUDIT-018-V1-SLICE-1-INDEPENDENT-CLOSURE-AUDIT.md` | Formal persistence of the Slice 1 Independent Closure Audit (`PASS`; no Blocking Findings; Owner accepted and froze Slice 1) |
+| `architecture/AUDIT-019-V1-SLICE-2-CORRECTIVE-V2-ARCHITECTURE-REREVIEW.md` | Persistence of the external Independent Corrective V2 Re-Review (`PASS`; B1-B4 closed; seven non-blocking Contract obligations retained) |
 | `implementation/` | 实现审计 |
 | `corrective/` | Corrective 审计 |
 | `templates/` | Review 模板 |

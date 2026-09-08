@@ -26,5 +26,6 @@ Status: ACTIVE
 | REVIEW-016 | V1-SLICE-1C Contract Targeted Delta Review | PASS | Owner authorized implementation | `architecture/AUDIT-016-V1-SLICE-1C-CONTRACT-TARGETED-DELTA-REVIEW.md` |
 | REVIEW-017 | V1-SLICE-1C Independent Implementation Review | PASS | Owner accepted and froze 1C | `architecture/AUDIT-017-V1-SLICE-1C-INDEPENDENT-IMPLEMENTATION-REVIEW.md` |
 | REVIEW-018 | V1-SLICE-1 Independent Closure Audit | PASS | Owner accepted / Slice 1 closed and frozen | `architecture/AUDIT-018-V1-SLICE-1-INDEPENDENT-CLOSURE-AUDIT.md` |
+| REVIEW-019 | V1-SLICE-2 Corrective V2 Architecture Re-Review | PASS | Owner accepted for Contract persistence; B1-B4 closed; NF-S2-1 through NF-S2-7 retained as Contract obligations; targeted delta review required; implementation not authorized | `architecture/AUDIT-019-V1-SLICE-2-CORRECTIVE-V2-ARCHITECTURE-REREVIEW.md` |
 
 Future implementation reviews must be stored separately from Phase Contracts.
