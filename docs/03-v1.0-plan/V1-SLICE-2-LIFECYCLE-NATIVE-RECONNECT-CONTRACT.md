@@ -4,24 +4,27 @@
 |---|---|
 | Contract ID | `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-20260908-01` |
 | Document Type | `V1_SLICE_ARCHITECTURE_CONTRACT` |
-| Status | `OWNER_ACCEPTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW` |
+| Status | `FROZEN_FOR_IMPLEMENTATION` |
 | Product baseline | `74d62cc6ae3dd7e690f0acffc6a0aa0eb741319c` |
 | Frozen Harness baseline | `cd5ef8148158c3a752a658978873241fdf8e2bbc` |
 | Carrier amendment | [V1-SLICE-2 Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md) |
 | Independent input | [AUDIT-019](../05-reviews/architecture/AUDIT-019-V1-SLICE-2-CORRECTIVE-V2-ARCHITECTURE-REREVIEW.md) |
 | Owner decision | [V1-SLICE-2 Architecture Owner Decision](../04-development-records/V1-SLICE-2-ARCHITECTURE-OWNER-DECISION.md) |
+| Targeted delta re-review | [AUDIT-020](../05-reviews/architecture/AUDIT-020-V1-SLICE-2-CONTRACT-TARGETED-DELTA-REREVIEW.md) |
+| Freeze authority | [V1-SLICE-2 Contract Freeze and Step 1 Authorization Decision](../04-development-records/V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md) |
 
 ```text
-V1_SLICE_2_ARCHITECTURE = CONTRACT_PERSISTED_WAITING_TARGETED_DELTA_REVIEW
+V1_SLICE_2_ARCHITECTURE_CONTRACT = FROZEN
+V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
-V1_SLICE_2_IMPLEMENTATION_AUTHORIZATION = NO
-NEXT_ACTION = INDEPENDENT_V1_SLICE_2_CONTRACT_TARGETED_DELTA_REVIEW
+NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
 ```
 
 This document persists the Architecture Owner-accepted Corrective V2 design. It
-is a candidate Contract awaiting an independent targeted delta review. It does
-not start Product implementation, authorize a Provider run, or convert a planned
-gate into completed Evidence.
+is frozen for implementation after AUDIT-020 and the Owner Freeze / Step 1
+Authorization Decision. It does not itself start Product implementation,
+authorize a Provider run, or convert a planned gate into completed Evidence.
 
 ## 1. Goal and ownership
 
@@ -444,15 +447,17 @@ or observed:
 - A Control Store must copy Harness truth.
 - Slice 3 Packaging becomes a large Slice 2 prerequisite.
 
-## 17. Targeted delta review boundary
+## 17. Contract freeze authority
 
-The single next action compares this Contract and its Amendment against
-Corrective V2 and AUDIT-019, checking for scope drift, security drift, UI
-reduction, finding omission and wire-contract mutation. It neither creates an
-implementation prompt nor begins Step 1.
+AUDIT-020 completed the targeted delta re-review with `PASS`, closed F-01 and
+found no new Blocking drift. The Architecture Owner subsequently froze this
+Contract and its Carrier Amendment and authorized only Step 1. This freeze does
+not start Product implementation or authorize Step 2, Step 3 or Provider work.
 
 ```text
+V1_SLICE_2_ARCHITECTURE_CONTRACT = FROZEN
+V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
-V1_SLICE_2_IMPLEMENTATION_AUTHORIZATION = NO
-NEXT_ACTION = INDEPENDENT_V1_SLICE_2_CONTRACT_TARGETED_DELTA_REVIEW
+NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
 ```

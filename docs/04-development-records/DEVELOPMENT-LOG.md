@@ -2,6 +2,20 @@
 
 Status: ACTIVE
 
+## 2026-09-08 - V1-SLICE-2 Contract Freeze and Step 1 Authorization
+
+- Initial targeted delta review: `FAIL`; F-01 was `HIGH / BLOCKING` because
+  client auth generation ownership was incorrectly persisted to Native Helper.
+- Corrective commit: `ab70700d08f1c32ac4ecf0d77193621cdf359b36`
+  (`docs(v1): correct slice 2 client auth ownership`).
+- Targeted delta re-review: `PASS`; F-01 `CLOSED`; no new drift and no Blocking
+  Findings.
+- The Architecture Contract and Carrier Lifecycle Amendment are frozen; Step 1
+  is authorized as `AUTHORIZED_NOT_STARTED`.
+- Product implementation remains `NOT_STARTED`; Step 2/3 and Provider are not
+  authorized.
+- Next: `EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL`.
+
 ## 2026-09-08 - V1-SLICE-2 Architecture Contract Persistence
 
 - Persisted Owner-accepted candidate Contract

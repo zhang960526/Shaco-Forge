@@ -4,21 +4,27 @@
 |---|---|
 | Amendment ID | `V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT-20260908-01` |
 | Document Type | `CARRIER_LIFECYCLE_CONTRACT_AMENDMENT` |
-| Status | `OWNER_ACCEPTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW` |
+| Status | `FROZEN_FOR_STEP1_IMPLEMENTATION` |
 | Parent Contract | [V1-SLICE-2 Lifecycle / Native / Reconnect](V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md) |
 | Amended Contract | [V1-SLICE-1B Authenticated Physical Carrier](V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-CONTRACT.md) |
+| Targeted Delta Re-Review | [AUDIT-020](../05-reviews/architecture/AUDIT-020-V1-SLICE-2-CONTRACT-TARGETED-DELTA-REREVIEW.md) |
+| Freeze Authority | [V1-SLICE-2 Contract Freeze and Step 1 Authorization Decision](../04-development-records/V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md) |
 
 ```text
 CARRIER_CONTRACT_AMENDMENT_REQUIRED = YES
 CREDENTIAL_SEMANTIC_AMENDMENT = YES
 WIRE_HMAC_CHANGED = NO
 CARRIER_WIRE_SECURITY_AMENDMENT_REQUIRED = NO
+TARGETED_DELTA_REREVIEW = PASS
+F_01 = CLOSED
+BLOCKING_FINDINGS = NONE
 ```
 
 This document locally supersedes only the Slice 1B lifecycle and credential
 semantics explicitly identified below. It does not rewrite the historical 1B
-Contract, change its wire bytes, or grant Slice 2 implementation authority. It
-is a Step 1 Contract prerequisite awaiting independent targeted delta review.
+Contract or change its wire bytes. It is frozen as a Step 1 Contract
+prerequisite; the separate Owner Decision authorizes Step 1 but does not start
+Product implementation.
 
 ## 1. Preserved Slice 1B security and wire semantics
 
@@ -264,7 +270,10 @@ CARRIER_CONTRACT_AMENDMENT_REQUIRED = YES
 CREDENTIAL_SEMANTIC_AMENDMENT = YES
 WIRE_HMAC_CHANGED = NO
 CARRIER_WIRE_SECURITY_AMENDMENT_REQUIRED = NO
+TARGETED_DELTA_REREVIEW = PASS
+F_01 = CLOSED
+BLOCKING_FINDINGS = NONE
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
-V1_SLICE_2_IMPLEMENTATION_AUTHORIZATION = NO
-NEXT_ACTION = INDEPENDENT_V1_SLICE_2_CONTRACT_TARGETED_DELTA_REVIEW
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
+NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
 ```
