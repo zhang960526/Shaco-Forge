@@ -25,5 +25,6 @@ Status: ACTIVE
 | REVIEW-015 | V1-SLICE-1C Architecture Challenge | PASS | Owner persisted Contract candidate | `architecture/AUDIT-015-V1-SLICE-1C-ARCHITECTURE-CHALLENGE.md` |
 | REVIEW-016 | V1-SLICE-1C Contract Targeted Delta Review | PASS | Owner authorized implementation | `architecture/AUDIT-016-V1-SLICE-1C-CONTRACT-TARGETED-DELTA-REVIEW.md` |
 | REVIEW-017 | V1-SLICE-1C Independent Implementation Review | PASS | Owner accepted and froze 1C | `architecture/AUDIT-017-V1-SLICE-1C-INDEPENDENT-IMPLEMENTATION-REVIEW.md` |
+| REVIEW-018 | V1-SLICE-1 Independent Closure Audit | PASS | Owner accepted / Slice 1 closed and frozen | `architecture/AUDIT-018-V1-SLICE-1-INDEPENDENT-CLOSURE-AUDIT.md` |
 
 Future implementation reviews must be stored separately from Phase Contracts.

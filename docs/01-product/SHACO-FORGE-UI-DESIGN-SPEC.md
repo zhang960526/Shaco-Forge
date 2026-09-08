@@ -782,11 +782,16 @@ OWNER_DECISIONS_STILL_REQUIRED = NONE
 
 具体 Hex、px、字体、图标库和动画时长继续属于实现采样后的 `DRAFT_TOKEN` 收敛，不应在没有候选方案与界面验证时升级为 Owner 决策。
 
-## 42. V1-SLICE-1 UI Implementation Guidance
+## 42. Final V1.0 UI Target and Historical V1-SLICE-1 Guidance
 
 **Status: `FROZEN_FOR_V1_0` for scope guidance**
 
-以下完整 UI 目标属于 `V1-SLICE-1`，而不是 `V1-SLICE-1A` 的完成 Gate：
+以下完整 UI 目标是 Final V1.0 UI target，并保留最初的 historical
+`V1-SLICE-1` allocation guidance；它不是当前 Slice-1 Closure Gate。
+Post-1C execution allocation 以 §42.3 为 current authority：Slice-1 Closure
+只要求已经完成的 `REAL_HARNESS_USER_LOOP`。其余 Outer Sidebar / New Chat /
+Settings / Native Picker / Approval-Question-Cancel projection 属于 Slice 2，
+且 Final V1.0 UI scope 不减少。
 
 - Shaco Desktop Shell。
 - 同一 Fixed Function Area + Project Directory + Global Settings Sidebar 区域结构。
@@ -803,11 +808,10 @@ OWNER_DECISIONS_STILL_REQUIRED = NONE
 - Native Workspace Picker 入口。
 - 基本视觉层级、键盘 Focus 与关键 Loading/Error/Empty state。
 
-`V1-SLICE-1` 的最终实现验收检查真实用户闭环：选择有效 Workspace → 创建/选择
-Session → 输入 Prompt → Streaming → Tool/Result → 必要 Approval/Question；同时确认
-selected Chat Item 的 Project Context 来自父 Project、无 Project 不出现假 Chat、连接状态真实、Harness-owned
-设置未被复制。若 pinned Harness 的既有 UI 可以满足需求，优先复用；Shaco 适配只解决
-Shell、Native、Carrier、Reconnect 和 truthful projection。
+Historical Slice-1 allocation guidance 曾以完整 UI 目标描述真实用户闭环；当前
+Slice-1 Closure Gate 以 §42.3 的 completed `REAL_HARNESS_USER_LOOP` 为准。Pinned
+Harness 的既有 UI 能满足需求时继续优先复用；其余 Shell、Native、Reconnect 和
+truthful projection integration 按当前 allocation 在 Slice 2 闭合。
 
 ### 42.1 V1-SLICE-1A UI Boundary
 
@@ -845,7 +849,8 @@ state。不得显示 fake Project、fake Session、fake Chat Item、fake RPC suc
 - 只有 Chat 时的 type filter。
 - shared WorkItem Runtime / domain。
 
-这些能力在 `V1-SLICE-1` 的后续内部实现步骤中闭合。以下高级 Surface 同样不属于
+其中已经属于 real Harness loop 的能力由 1B/1C 关闭；其余 outer shell / native /
+projection integration 按 §42.3 由 `V1-SLICE-2` 关闭。以下高级 Surface 同样不属于
 `V1-SLICE-1A` 要求：
 
 - Trajectory 独立 Surface。

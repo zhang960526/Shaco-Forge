@@ -1,6 +1,6 @@
 # Shaco Forge Current State
 
-> Latest authority (2026-09-08): the Architecture Owner [V1-SLICE-1 Scope Reconciliation Decision](../04-development-records/V1-SLICE-1-SCOPE-RECONCILIATION-DECISION.md) accepts the read-only Final Gate Assessment, records the completed real Harness user-loop core Goal as `PASS`, and reconciles all remaining V1.0 scope to Slice 2, Slice 3, Slice 4 or carry-forward. No additional Slice-1 implementation step, 1D or 1E is required. Slice 1 remains `IN_PROGRESS` pending Independent Closure Audit; Slice 2 has not started.
+> Latest authority (2026-09-08): Independent Closure Audit [AUDIT-018](../05-reviews/architecture/AUDIT-018-V1-SLICE-1-INDEPENDENT-CLOSURE-AUDIT.md) is `PASS` with no Blocking Findings, and the Architecture Owner [V1-SLICE-1 Owner Closure Decision](../04-development-records/V1-SLICE-1-OWNER-CLOSURE-DECISION.md) accepts and freezes the completed real Harness user-loop Slice. The prior [Scope Reconciliation Decision](../04-development-records/V1-SLICE-1-SCOPE-RECONCILIATION-DECISION.md) remains the allocation authority. Slice 1 is `CLOSED / FROZEN`; Slice 2 has not started.
 
 ```text
 V1_SLICE_1A = CLOSED / FROZEN
@@ -9,13 +9,18 @@ V1_SLICE_1C = CLOSED / FROZEN
 V1_SLICE_1_CORE_GOAL = REAL_HARNESS_USER_LOOP
 V1_SLICE_1_CORE_GOAL_RESULT = PASS
 V1_SLICE_1_SCOPE_RECONCILIATION = COMPLETED
-V1_SLICE_1_CLOSURE_CANDIDATE = PASS_READY_FOR_INDEPENDENT_CLOSURE_AUDIT
+V1_SLICE_1_INDEPENDENT_CLOSURE_AUDIT = PASS
+V1_SLICE_1_CLOSURE_BLOCKING_FINDINGS = NONE
+V1_SLICE_1_OWNER_CLOSURE = ACCEPTED
+V1_SLICE_1_BASELINE = FROZEN
 V1_SLICE_1_ADDITIONAL_IMPLEMENTATION_STEP = NONE
 V1_SLICE_1D = DO_NOT_CREATE
 V1_SLICE_1E = DO_NOT_CREATE
-V1_SLICE_1 = IN_PROGRESS
-V1_CURRENT_STEP = V1_SLICE_1_SCOPE_RECONCILED_WAITING_INDEPENDENT_CLOSURE_AUDIT
-V1_CURRENT_NEXT_ACTION = INDEPENDENT_V1_SLICE_1_CLOSURE_AUDIT
+V1_SLICE_1 = CLOSED
+V1_SLICE_1_RESULT = PASS
+V1_SLICE_2 = NOT_STARTED
+V1_CURRENT_STEP = NONE_BETWEEN_V1_SLICE_1_AND_V1_SLICE_2
+V1_CURRENT_NEXT_ACTION = PREPARE_V1_SLICE_2_LIFECYCLE_NATIVE_RECONNECT
 ```
 
 Status: ACTIVE
@@ -176,9 +181,9 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 
 ## Current Phase
 
-- Phase: V1 Implementation — `IN_PROGRESS`
-- Step: none after V1-SLICE-1C — `NONE_AFTER_V1_SLICE_1C`
-- Current Authorized Scope: no next internal Slice 1 step is authorized by this Closure
+- Phase: V1 Implementation
+- Step: none between V1-SLICE-1 and V1-SLICE-2 — `NONE_BETWEEN_V1_SLICE_1_AND_V1_SLICE_2`
+- Current Authorized Scope: prepare V1-SLICE-2 architecture re-entry / technical design; Slice 2 is not started
 - Production Implementation: IN_PROGRESS
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -207,22 +212,27 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 - `V1_0_SCOPE_CORRECTIVE = APPLIED`
 - `V1_IMPLEMENTATION_READY = YES`
 - `V1_IMPLEMENTATION_STARTED = YES`
-- `V1_CURRENT_SLICE = V1-SLICE-1-REAL-HARNESS-USER-LOOP`
-- `V1_CURRENT_STEP = V1_SLICE_1_SCOPE_RECONCILED_WAITING_INDEPENDENT_CLOSURE_AUDIT`
-- `V1_CURRENT_NEXT_ACTION = INDEPENDENT_V1_SLICE_1_CLOSURE_AUDIT`
+- `V1_CURRENT_SLICE = NONE_BETWEEN_V1_SLICE_1_AND_V1_SLICE_2`
+- `V1_CURRENT_STEP = NONE_BETWEEN_V1_SLICE_1_AND_V1_SLICE_2`
+- `V1_CURRENT_NEXT_ACTION = PREPARE_V1_SLICE_2_LIFECYCLE_NATIVE_RECONNECT`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE = ACCEPTED`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PASS`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_OWNER_ACCEPTED = YES`
 - `V1_TECHNICAL_BASELINE_REVIEW_OWNER_ACCEPTED = YES`
-- `V1_SLICE_1 = IN_PROGRESS`
+- `V1_SLICE_1 = CLOSED`
+- `V1_SLICE_1_RESULT = PASS`
 - `V1_SLICE_1_CORE_GOAL = REAL_HARNESS_USER_LOOP`
 - `V1_SLICE_1_CORE_GOAL_RESULT = PASS`
 - `V1_SLICE_1_SCOPE_RECONCILIATION = COMPLETED`
-- `V1_SLICE_1_CLOSURE_CANDIDATE = PASS_READY_FOR_INDEPENDENT_CLOSURE_AUDIT`
+- `V1_SLICE_1_INDEPENDENT_CLOSURE_AUDIT = PASS`
+- `V1_SLICE_1_CLOSURE_BLOCKING_FINDINGS = NONE`
+- `V1_SLICE_1_OWNER_CLOSURE = ACCEPTED`
+- `V1_SLICE_1_BASELINE = FROZEN`
 - `V1_SLICE_1_ADDITIONAL_IMPLEMENTATION_STEP = NONE`
 - `V1_SLICE_1D = DO_NOT_CREATE`
 - `V1_SLICE_1E = DO_NOT_CREATE`
-- `V1_SLICE_1A = CLOSED`
+- `V1_SLICE_2 = NOT_STARTED`
+- `V1_SLICE_1A = CLOSED / FROZEN`
 - `V1_SLICE_1A_IMPLEMENTATION_RESULT = PASS`
 - `V1_SLICE_1A_INDEPENDENT_REVIEW = PASS`
 - `V1_SLICE_1A_DELTA_REVIEW = PASS`
@@ -235,13 +245,13 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 - `V1_SLICE_1A_BASELINE = FROZEN`
 - `V1_SLICE_1A_FORMATTING_CORRECTIVE = PASS`
 - `V1_SLICE_1A_THEME_FOUNDATION_CORRECTIVE = PASS`
-- `V1_SLICE_1B = CLOSED`
+- `V1_SLICE_1B = CLOSED / FROZEN`
 - `V1_SLICE_1B_IMPLEMENTATION_RESULT = PASS`
 - `V1_SLICE_1B_INDEPENDENT_REVIEW = PASS`
 - `V1_SLICE_1B_REVIEW_BLOCKING_FINDINGS = NONE`
 - `V1_SLICE_1B_OWNER_CLOSURE = ACCEPTED`
 - `V1_SLICE_1B_BASELINE = FROZEN`
-- `V1_SLICE_1C = CLOSED`
+- `V1_SLICE_1C = CLOSED / FROZEN`
 - `V1_SLICE_1C_ARCHITECTURE_CHALLENGE = PASS`
 - `V1_SLICE_1C_TARGETED_DELTA_REVIEW = PASS`
 - `V1_SLICE_1C_BLOCKING_FINDINGS = NONE`
@@ -689,14 +699,14 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - V1 implementation: `IN_PROGRESS`
 - V1.0 Technical Implementation Baseline: `ACCEPTED`; Independent REVIEW-011 `PASS`; Architecture Owner accepted
 - V1 Slice 1A: `PASS / CLOSED / FROZEN`; REVIEW-012 `PASS`; whitespace corrective `PASS`; REVIEW-013 Delta Re-Review `PASS`; Owner Closure `ACCEPTED`
-- V1 Slice 1: `IN_PROGRESS`; Slice 1A, 1B and 1C are `PASS / CLOSED / FROZEN`; AUDIT-017 `PASS`; 1C Owner Closure `ACCEPTED`; Provider attempts 2/2 consumed and Attempt #3 prohibited
+- V1 Slice 1: `PASS / CLOSED / FROZEN`; Slice 1A, 1B and 1C are `PASS / CLOSED / FROZEN`; AUDIT-018 `PASS`; Slice 1 Owner Closure `ACCEPTED`; no 1D/1E; Slice 2 `NOT_STARTED`
 
 ## Immediate Next Action
 
-Architecture Owner assesses the remaining V1-SLICE-1 gates. No next internal
-step is started or authorized by this Closure. REVIEW-012 F-05 remains
-`OPEN_KNOWN_CONSTRAINT`; V1-SLICE-1B NF-6 and V1-SLICE-1C NF-1/NF-3/NF-4
-remain `OPEN_NON_BLOCKING` under their recorded routes.
+Prepare V1-SLICE-2 architecture re-entry / technical design for Lifecycle /
+Native / Reconnect. This Closure does not start or design Slice 2. REVIEW-012
+F-05 and AUDIT-017 NF-1/NF-3 remain routed to Slice 3; V1-SLICE-1B NF-6
+remains routed to Slice 2; AUDIT-017 NF-4 remains carry-forward only.
 
 Do not pull/switch/update the frozen Harness SHA without an Architecture
 Decision. Spike code is NOT production by default. The corrective candidate
