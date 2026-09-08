@@ -148,18 +148,35 @@ Same SID is only `PRECONDITION_ONLY`, not complete authentication. The secret is
 delivered only over that validated lifecycle control connection and is bound to
 the verified peer PID/process-start tuple.
 
-Every attachment receives a new 32-byte CSPRNG secret, new `credentialEpoch`,
-new challenge, new server nonce, new client nonce and new per-connection
-`clientInstanceId`. Old secret/epoch values are never reusable. A pending
-credential has a short bounded lifetime and is consumed and zeroized on any auth
-success, auth failure, timeout or control disconnect.
+Authentication-field generation ownership is explicit:
+
+```text
+ATTACHMENT_SECRET_GENERATION_OWNER = NATIVE_HELPER
+CREDENTIAL_EPOCH_GENERATION_OWNER = NATIVE_HELPER
+CHALLENGE_ID_GENERATION_OWNER = SERVER_HELPER
+SERVER_NONCE_GENERATION_OWNER = SERVER_HELPER
+CLIENT_NONCE_GENERATION_OWNER = CLIENT_MAIN
+CLIENT_INSTANCE_ID_GENERATION_OWNER = CLIENT_MAIN
+```
+
+After trusted Desktop attestation, Native Helper generates and issues the fresh
+per-attachment 32-byte CSPRNG secret and unique `credentialEpoch`. For each
+Carrier authentication attempt, server / Native Helper generates the fresh
+`challengeId` and one-use `serverNonce`. For each Carrier connection, Electron
+Main / `CarrierClient` generates the fresh `clientNonce` for that authentication
+connection and the fresh per-connection `clientInstanceId`. All values remain
+fresh and non-reusable within their stated scopes. Old secret/epoch values are
+never reusable. A pending credential has a short bounded lifetime and is
+consumed and zeroized on any auth success, auth failure, timeout or control
+disconnect.
 
 The credential and secret must not pass through Renderer, argv or ordinary
 environment variables, and must not enter Settings, SQLite, logs, persistent
 files or ordinary Evidence.
 
-Detailed wire-preservation and locally superseded lifecycle semantics are
-normative in the [Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md).
+Detailed generation ownership, wire preservation and locally superseded
+lifecycle semantics are normatively governed by the
+[Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md).
 
 ## 6. Sequential attachment
 

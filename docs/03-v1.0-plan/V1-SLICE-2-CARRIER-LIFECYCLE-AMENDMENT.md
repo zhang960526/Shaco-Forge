@@ -63,18 +63,33 @@ credentialEpoch = PER_ATTACHMENT
 clientInstanceId = PER_CONNECTION
 ```
 
-For every new attachment, the Native Helper generates:
+Generation ownership is normative and preserves the Slice 1B role split:
 
-- a new 32-byte CSPRNG secret;
-- a new `credentialEpoch`;
-- a new challenge;
-- a new server nonce;
-- a new client nonce; and
-- a new `clientInstanceId`.
+```text
+ATTACHMENT_SECRET_GENERATION_OWNER = NATIVE_HELPER
+CREDENTIAL_EPOCH_GENERATION_OWNER = NATIVE_HELPER
+CHALLENGE_ID_GENERATION_OWNER = SERVER_HELPER
+SERVER_NONCE_GENERATION_OWNER = SERVER_HELPER
+CLIENT_NONCE_GENERATION_OWNER = CLIENT_MAIN
+CLIENT_INSTANCE_ID_GENERATION_OWNER = CLIENT_MAIN
+```
+
+For each new attachment, after trusted Desktop attestation, the Native Helper
+generates and issues a new 32-byte CSPRNG attachment secret and a new unique
+`credentialEpoch`.
+
+For each Carrier authentication attempt, the server / Native Helper generates a
+new `challengeId` and a new one-use `serverNonce`.
+
+For each Carrier connection, Electron Main / `CarrierClient` generates a fresh
+`clientNonce` for that authentication connection and a fresh per-connection
+`clientInstanceId`.
 
 An old secret or epoch is immediately revoked at detach/failure and is never
-reusable. `workerInstanceId` remains the only Worker authority identity; no
-Worker generation or Carrier connection identity is created.
+reusable. Every challenge ID, server nonce, client nonce and client instance ID
+is fresh for its stated attempt or connection scope and is not reusable.
+`workerInstanceId` remains the only Worker authority identity; no Worker
+generation or Carrier connection identity is created.
 
 ### 2.2 Authenticated close
 
