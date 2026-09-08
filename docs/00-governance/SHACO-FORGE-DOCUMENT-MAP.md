@@ -1,14 +1,16 @@
 # Shaco Forge Document Map
 
-> Current summary (2026-09-08): Independent [AUDIT-017](../05-reviews/architecture/AUDIT-017-V1-SLICE-1C-INDEPENDENT-IMPLEMENTATION-REVIEW.md) is `PASS` with no Blocking Findings. The [V1-SLICE-1C Owner Closure Decision](../04-development-records/V1-SLICE-1C-OWNER-CLOSURE-DECISION.md) is `OWNER_ACCEPTED_AND_FROZEN`. Slice 1A, 1B and 1C are `CLOSED / FROZEN`; V1-SLICE-1 remains `IN_PROGRESS`. Next is Architecture Owner assessment of remaining V1-SLICE-1 gates.
+> Current summary (2026-09-08): the [V1-SLICE-1 Scope Reconciliation Decision](../04-development-records/V1-SLICE-1-SCOPE-RECONCILIATION-DECISION.md) records Slice 1's real Harness user-loop core Goal as `PASS`. Slice 1A, 1B and 1C are `CLOSED / FROZEN`. V1-SLICE-1 is a `PASS_READY_FOR_INDEPENDENT_CLOSURE_AUDIT` candidate but remains `IN_PROGRESS`; Slice 2 has not started. Next is the Independent V1-SLICE-1 Closure Audit.
 
 ```text
 V1_SLICE_1A = CLOSED / FROZEN
 V1_SLICE_1B = CLOSED / FROZEN
 V1_SLICE_1C = CLOSED / FROZEN
+V1_SLICE_1_SCOPE_RECONCILIATION = COMPLETED
+V1_SLICE_1_CLOSURE_CANDIDATE = PASS_READY_FOR_INDEPENDENT_CLOSURE_AUDIT
 V1_SLICE_1 = IN_PROGRESS
-V1_CURRENT_STEP = NONE_AFTER_V1_SLICE_1C
-V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_REMAINING_V1_SLICE_1_GATES
+V1_CURRENT_STEP = V1_SLICE_1_SCOPE_RECONCILED_WAITING_INDEPENDENT_CLOSURE_AUDIT
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_V1_SLICE_1_CLOSURE_AUDIT
 ```
 
 Status: ACTIVE
@@ -114,7 +116,7 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 
 | Document | Role | Status |
 |---|---|---|
-| `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | P0→P8 全路线 | ACTIVE |
+| `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | Current four-Slice Harness-reuse implementation route plus need-driven P0.5/P1/P2-P8 taxonomy | ACTIVE |
 | `V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-CONTRACT.md` | Slice 1B authenticated physical carrier and real Client ↔ Host implementation Contract | CLOSED / BASELINE FROZEN |
 | `V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-CONTRACT.md` | Slice 1C embedded real AppWebEntry/Harness user-loop Architecture Contract | CLOSED / BASELINE FROZEN |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
@@ -227,6 +229,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
 | `V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md` | Current V1.0 Harness-reuse implementation-scope allocation authority; P0.S remains closed |
+| `V1-SLICE-1-SCOPE-RECONCILIATION-DECISION.md` | Owner-accepted post-1C scope allocation, four-Slice route reconciliation and Slice-1 Independent Closure Audit handoff |
 | `V1-SLICE-1C-FROZEN-HARNESS-USER-LOOP-SOURCE-CONFIRMATION.md` | Read-only confirmation of Frozen Harness Workspace/Session/Prompt/stream/tool/interaction/provider/public-seam facts; not an implementation result |
 | `V1-SLICE-1C-EVIDENCE-CAPTURE-REVALIDATION-OWNER-DECISION.md` | Owner-approved bounded one-time corrective Attempt #2; original history immutable; total cap two, no third attempt |
 | `V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-IMPLEMENTATION-RECORD.md` | Complete Slice 1C implementation, failures, final live Attempt #2 PASS and regression ledger |

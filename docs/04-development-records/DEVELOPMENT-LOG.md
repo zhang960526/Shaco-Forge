@@ -2,6 +2,21 @@
 
 Status: ACTIVE
 
+## 2026-09-08 - V1-SLICE-1 Scope Reconciliation Persistence
+
+- V1-SLICE-1A, 1B and 1C remain `CLOSED / FROZEN`; the accepted Final Gate
+  Assessment is `PASS_READY_FOR_CLOSURE` for the real Harness user-loop Goal.
+- Architecture Owner Scope Reconciliation is accepted. No additional Slice-1
+  implementation step, 1D or 1E is created.
+- Remaining UI/lifecycle/native/reconnect requirements route to Slice 2;
+  packaging/release findings route to Slice 3; fresh supported Windows final
+  acceptance routes to Slice 4. NF-4 frame headroom remains carry-forward only.
+- P2/P3/P4 use `NEED_DRIVEN_REUSE`; complete P0.5/P1 is not required before
+  Slice-1 closure. Existing frozen Product implementation must not be repeated.
+- This persistence changes no Product Source and does not reduce final V1.0
+  scope. Slice 1 remains `IN_PROGRESS`; Slice 2 is not started.
+- Next action: `INDEPENDENT_V1_SLICE_1_CLOSURE_AUDIT`.
+
 ## 2026-09-08 - V1-SLICE-1C Independent Review and Owner Closure
 
 - Final live Attempt #2, run `6c938e42-ce2d-4b23-8800-ee29ed377348`, remains

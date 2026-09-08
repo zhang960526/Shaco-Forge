@@ -2,10 +2,34 @@
 
 Status: ACTIVE
 
-> Current V1.0 implementation-scope authority (2026-09-06):
-> [V1.0 Harness Reuse Implementation Scope Corrective Decision](../04-development-records/V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md).
-> P0.S remains `CLOSED`; V1 implementation is ready but not started. The current
-> next action is `V1-SLICE-1-REAL-HARNESS-USER-LOOP`.
+> Current V1.0 implementation-route authority: the
+> [V1.0 Harness Reuse Implementation Scope Corrective Decision](../04-development-records/V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md)
+> and the Owner-accepted [V1-SLICE-1 Scope Reconciliation Decision](../04-development-records/V1-SLICE-1-SCOPE-RECONCILIATION-DECISION.md).
+> V1 implementation is in progress. Slice 1A/1B/1C are `CLOSED / FROZEN`;
+> Slice 1's core Goal is `PASS` with no additional implementation step and is
+> waiting for Independent Closure Audit. Slice 2 has not started.
+
+## Current Implementation Route
+
+```text
+CURRENT_IMPLEMENTATION_ROUTE = FOUR_SLICE_HARNESS_REUSE_ROUTE
+V1_SLICE_1 = PASS_READY_FOR_INDEPENDENT_CLOSURE_AUDIT / IN_PROGRESS
+V1_SLICE_1A_1B_1C = CLOSED / FROZEN
+V1_SLICE_1_ADDITIONAL_IMPLEMENTATION = NONE
+V1_SLICE_2 = LIFECYCLE / NATIVE / RECONNECT / NOT_STARTED
+V1_SLICE_3 = PACKAGING / COMPATIBILITY / RELEASE / NOT_STARTED
+V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
+P0_5_P1_P2_TO_P8 = CONTRACT_CAPABILITY_ACCEPTANCE_TAXONOMY
+P0_5_P1_P2_TO_P8 = NOT_A_SECOND_SEQUENTIAL_IMPLEMENTATION_ROUTE
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_V1_SLICE_1_CLOSURE_AUDIT
+```
+
+The four Slice route is the current implementation route. P0.5/P1/P2-P8 retain
+their contract, capability and acceptance meaning and are consumed need-first
+by the active Slice. They do not authorize sequential reimplementation of
+Worker bootstrap, Harness Host bootstrap, Desktop foundation, authenticated
+Carrier, real Client-to-Host communication or the real Harness user loop
+already completed and frozen by 1A/1B/1C.
 
 ## Phase Order
 
@@ -212,8 +236,14 @@ V1_0_IMPLEMENTATION_SCOPE = HARNESS_REUSE_PRODUCTIZATION
 V1_0_PROVIDER_MODEL_OWNERSHIP = HARNESS
 V1_0_SCOPE_CORRECTIVE = APPLIED
 V1_IMPLEMENTATION_READY = YES
-V1_IMPLEMENTATION_STARTED = NO
-V1_CURRENT_NEXT_ACTION = V1-SLICE-1-REAL-HARNESS-USER-LOOP
+V1_IMPLEMENTATION_STARTED = YES
+V1_SLICE_1A = CLOSED / FROZEN
+V1_SLICE_1B = CLOSED / FROZEN
+V1_SLICE_1C = CLOSED / FROZEN
+V1_SLICE_1_CORE_GOAL_RESULT = PASS
+V1_SLICE_1_CLOSURE_CANDIDATE = PASS_READY_FOR_INDEPENDENT_CLOSURE_AUDIT
+V1_SLICE_1_ADDITIONAL_IMPLEMENTATION = NONE
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_V1_SLICE_1_CLOSURE_AUDIT
 ```
 
 The current Slice route is:
@@ -237,6 +267,19 @@ truth, independent Reviewer pipeline, Shaco Task state machine/database, five
 custom pages or future empty tables. Multi-model support reuses Harness;
 Multi-Agent orchestration is a future Shaco domain that can reference multiple
 Harness Sessions.
+
+### Need-driven Taxonomy Crosswalk
+
+| Taxonomy | Remaining work route |
+|---|---|
+| P2 Host Worker | Lifecycle/restart to Slice 2; packaged launch to Slice 3; do not repeat frozen 1A bootstrap |
+| P3 Carrier/Supervision | Discovery/reconnect to Slice 2; compatibility to Slice 3; do not repeat frozen 1B Carrier |
+| P4 Desktop Client | Native Picker and outer truthful projection/integration to Slice 2; do not repeat frozen 1A/1C chain |
+| P5 Required parity | Close only remaining REQUIRED behavior in the active Slice gate; cite frozen 1A/1B/1C Evidence |
+| P6A Durability/Recovery | Primarily Slice 2 |
+| P6B Plugin compatibility | Optional/need-driven V1.0 compatibility only |
+| P7 Packaging/Security/Upgrade | Slice 3 |
+| P8 Final acceptance | Slice 4; no new feature development |
 
 ## P0.5
 
