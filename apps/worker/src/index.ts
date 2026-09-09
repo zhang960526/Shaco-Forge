@@ -1,5 +1,5 @@
 import { spawn, type ChildProcess } from 'node:child_process'
-import { createReadStream, createWriteStream } from 'node:fs'
+import { randomUUID } from 'node:crypto'
 import { access } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
 import type { Readable, Writable } from 'node:stream'
@@ -33,7 +33,7 @@ let host: ChildProcess | undefined
 let helper: ChildProcess | undefined
 let stopping = false
 let carrierReady = false
-let privateControl: Writable | undefined
+const workerInstanceId = randomUUID()
 
 function emit(phase: BootstrapPhase, extra: Partial<BootstrapEvent> = {}): void {
   const event: BootstrapEvent = {
@@ -64,7 +64,9 @@ function asWritable(value: unknown, name: string): Writable {
 }
 
 function writeFrame(stream: Writable, value: unknown): Promise<void> {
-  const frame = encodeJsonFrame(value)
+  const frame = isRecord(value) && value.type === 'attachment-frame'
+    ? Buffer.concat([encodeJsonFrame({ type: 'attachment-frame', clientInstanceId: value.clientInstanceId }), encodeJsonFrame(value.frame)])
+    : encodeJsonFrame(value)
   return new Promise((resolveWrite, rejectWrite) => {
     stream.write(frame, error => error ? rejectWrite(error) : resolveWrite())
   })
@@ -122,9 +124,6 @@ async function reportCarrierFailure(reason: string): Promise<void> {
   if (stopping) return
   carrierReady = false
   emit('carrier-failed', { hostPid: host?.pid, error: reason })
-  if (privateControl !== undefined) {
-    try { await writeFrame(privateControl, { type: 'carrier-failed', reason }) } catch { }
-  }
   await stop(1)
 }
 
@@ -159,18 +158,6 @@ async function main(): Promise<void> {
   if (process.version !== EXPECTED_WORKER_NODE_VERSION) {
     throw new Error(`Worker requires ${EXPECTED_WORKER_NODE_VERSION}; received ${process.version}`)
   }
-  privateControl = createWriteStream('', { fd: 4, autoClose: false })
-  const credentialInput = createReadStream('', { fd: 3, autoClose: true })
-  const helperBootstrap = await readOneFrame(credentialInput, 5_000)
-  credentialInput.destroy()
-  if (helperBootstrap.type !== 'helper-bootstrap'
-    || typeof helperBootstrap.secret !== 'string'
-    || !/^[a-f0-9]{64}$/.test(helperBootstrap.secret)
-    || typeof helperBootstrap.workerInstanceId !== 'string'
-    || typeof helperBootstrap.credentialEpoch !== 'string') {
-    throw new Error('Worker bootstrap credential envelope is invalid')
-  }
-
   const config = readWorkerConfig(process.env)
   await access(config.nativeHelperPath)
   const runtime = await materializeFrozenHarnessRuntime(config.harnessRoot, config.dshHome)
@@ -208,10 +195,11 @@ async function main(): Promise<void> {
   const helperStderr = asReadable(helper.stderr, 'Helper stderr')
   helperStderr.setEncoding('utf8')
   helperStderr.on('data', (chunk: string) => process.stderr.write(`[native-carrier] ${chunk}`))
-  await writeFrame(helperSecret, helperBootstrap)
+  const helperInitialized = readOneFrame(helperControl, 10_000)
+  await writeFrame(helperSecret, { type: 'authority-bootstrap', workerInstanceId, workerPid: process.pid, dshHome: config.dshHome,
+    workerRuntime: { nodeVersion: process.version, executable: process.execPath, argv: process.argv.slice(1), parentPid: process.ppid } })
   helperSecret.end()
-  helperBootstrap.secret = ''
-  const helperMetadataPromise = readOneFrame(helperControl, 10_000)
+  if ((await helperInitialized).type !== 'helper-initialized') throw new Error('Helper authority initialization failed')
 
   const hostLaunchArgv = [runtime.cliPath, '--profile', config.profileName]
   host = spawn(process.execPath, hostLaunchArgv, {
@@ -224,6 +212,9 @@ async function main(): Promise<void> {
   const hostOutput = asReadable(host.stdio[4], 'Host bridge output')
   const hostStdout = asReadable(host.stdout, 'Host stdout')
   const hostStderr = asReadable(host.stderr, 'Host stderr')
+  const hostContained = readOneFrame(helperControl, 10_000)
+  await writeFrame(helperInput, { type: 'authority-host', hostPid: host.pid })
+  if ((await hostContained).type !== 'host-contained') throw new Error('Host Job containment failed')
   emit('host-starting', {
     hostPid: host.pid,
     hostLaunchArgv: [process.execPath, ...hostLaunchArgv],
@@ -279,19 +270,39 @@ async function main(): Promise<void> {
     preflightReject = rejectPreflight
   })
   let hostPreflightSeen = false
+  let currentClient: string | undefined
+  let lastHostHeartbeat = Date.now()
   let helperWrite = Promise.resolve()
+  let incomingHostClient: string | undefined
   const hostDecoder = new JsonFrameDecoder()
   hostOutput.on('data', (chunk: Buffer) => {
     try {
-      for (const value of hostDecoder.push(chunk)) {
+      for (const raw of hostDecoder.push(chunk)) {
+        let value = raw
+        if (incomingHostClient !== undefined) {
+          value = { type: 'attachment-frame', clientInstanceId: incomingHostClient, frame: raw }
+          incomingHostClient = undefined
+        } else if (isRecord(raw) && raw.type === 'attachment-frame' && typeof raw.clientInstanceId === 'string') {
+          incomingHostClient = raw.clientInstanceId
+          continue
+        }
+        if (isRecord(value) && value.type === 'authority-heartbeat') { lastHostHeartbeat = Date.now(); continue }
+        if (isRecord(value) && value.type === 'attachment-reset') {
+          helperWrite = helperWrite.then(() => writeFrame(helperInput, { type: 'attachment-reset' }))
+          continue
+        }
         if (!hostPreflightSeen) {
           const preflight = validateHostCarrierPreflight(value)
           hostPreflightSeen = true
           preflightResolve(preflight)
           continue
         }
-        validateHostFrame(value)
-        helperWrite = helperWrite.then(() => writeFrame(helperInput, value))
+        if (!isRecord(value) || value.type !== 'attachment-frame' || typeof value.clientInstanceId !== 'string') throw new Error('Host attachment envelope invalid')
+        validateHostFrame(value.frame)
+        const client = value.clientInstanceId
+        helperWrite = helperWrite.then(async () => {
+          if (client === currentClient) await writeFrame(helperInput, value)
+        })
       }
     } catch (error) {
       preflightReject(error instanceof Error ? error : new Error(String(error)))
@@ -300,11 +311,30 @@ async function main(): Promise<void> {
   })
 
   let hostWrite = Promise.resolve()
+  let incomingHelperClient: string | undefined
   const helperDecoder = new JsonFrameDecoder()
   helperOutput.on('data', (chunk: Buffer) => {
     try {
-      for (const value of helperDecoder.push(chunk)) {
-        validateMainFrame(value)
+      for (const raw of helperDecoder.push(chunk)) {
+        let value = raw
+        if (incomingHelperClient !== undefined) {
+          value = { type: 'attachment-frame', clientInstanceId: incomingHelperClient, frame: raw }
+          incomingHelperClient = undefined
+        } else if (isRecord(raw) && raw.type === 'attachment-frame' && typeof raw.clientInstanceId === 'string') {
+          incomingHelperClient = raw.clientInstanceId
+          continue
+        }
+        if (!isRecord(value)) throw new Error('Helper lifecycle envelope invalid')
+        if (value.type === 'stop-authority') { void stop(0); continue }
+        if (value.type === 'attachment-start' && typeof value.clientInstanceId === 'string') {
+          currentClient = value.clientInstanceId
+        } else if (value.type === 'attachment-end') {
+          if (value.clientInstanceId !== currentClient) continue
+          currentClient = undefined
+        } else if (value.type === 'attachment-frame') {
+          if (value.clientInstanceId !== currentClient || currentClient === undefined) continue
+          validateMainFrame(value.frame)
+        } else throw new Error('Helper attachment envelope invalid')
         hostWrite = hostWrite.then(() => writeFrame(hostInput, value))
       }
     } catch {
@@ -323,22 +353,16 @@ async function main(): Promise<void> {
     }
   })
 
-  const values = await Promise.all([helperMetadataPromise, hostPreflightPromise, hostReadyPromise])
-  const helperMetadata = values[0]
-  const hostPreflight = values[1]
-  if (helperMetadata.type !== 'helper-ready'
-    || typeof helperMetadata.pipeEndpoint !== 'string'
-    || typeof helperMetadata.endpointId !== 'string'
-    || helperMetadata.postCreateInspection !== true
-    || helperMetadata.aclProtected !== true
-    || helperMetadata.currentUserAllowRule !== true
-    || helperMetadata.unintendedBroadAllowRule !== false
-    || helperMetadata.firstPipeInstance !== true
-    || helperMetadata.randomEntropyBits !== 128) {
-    throw new Error('Native Helper security preflight failed')
-  }
+  const [hostPreflight] = await Promise.all([hostPreflightPromise, hostReadyPromise])
+  const helperReady = readOneFrame(helperControl, 10_000)
+  await writeFrame(helperInput, { type: 'authority-ready', hostPreflight })
+  if ((await helperReady).type !== 'authority-ready') throw new Error('Native authority readiness failed')
+  setInterval(() => {
+    if (Date.now() - lastHostHeartbeat > 2_500) { void reportCarrierFailure('WORKER_AUTHORITY_FAILURE: Host heartbeat lost'); return }
+    helperWrite = helperWrite.then(() => writeFrame(helperInput, { type: 'authority-heartbeat' }))
+    helperWrite.catch(() => void reportCarrierFailure('WORKER_AUTHORITY_FAILURE: Helper channel lost'))
+  }, 500)
   carrierReady = true
-  await writeFrame(privateControl, { type: 'carrier-ready', helper: helperMetadata, host: hostPreflight })
   emit('carrier-ready', { hostPid: host.pid })
 }
 

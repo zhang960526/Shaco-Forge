@@ -1,0 +1,18 @@
+{
+  "runId": "STEP1-20260909-G15-CORRECTIVE-01",
+  "result": "PASS",
+  "scope": "G15 corrective evidence root. Source files changed in this corrective are worker-supervisor.ts (stop serialization + explicit delivery) and smoke-slice2-step1.mjs (runId + PowerShell ExecutionPolicy Bypass).",
+  "checks": [
+    { "check": "exactPrivateCarrierEndpoints", "result": "PASS", "value": 0 },
+    { "check": "rawCredentialValues", "result": "PASS", "value": 0 },
+    { "check": "secretOrProofInEvidence", "result": "PASS", "value": false },
+    { "check": "evidenceJsonParsed", "result": "PASS", "value": true },
+    { "check": "nonceOrProofInEvidence", "result": "PASS", "value": false }
+  ],
+  "policy": {
+    "credentialEpoch": "Only permitted non-secret UUID identities or SHA-256 hashes; no credential bytes.",
+    "pipeEndpoint": "Redacted as pipeEndpointRedacted/pipeEndpointHashPrefix only.",
+    "secret": "Never written to Evidence; zeroed on consume."
+  },
+  "priorEvidencePreservedByteIdentical": true
+}

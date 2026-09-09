@@ -1,0 +1,23 @@
+{
+  "gate": "G15",
+  "result": "PASS",
+  "scenario": "smoke:electron full Electron lifecycle teardown followed by controlled explicit bounded stop",
+  "capturedAt": "2026-09-09T14:16:14.286Z",
+  "topology": { "mainPid": 59992, "workerPid": 56624, "hostPid": 20904, "nativeHelperPid": 58612, "independentProcesses": true },
+  "cleanup": { "workerPid": 56624, "exited": true, "delivery": "STOP_DELIVERED" },
+  "stopDeliveryChain": [
+    { "step": "Desktop normal teardown", "result": "carrier.close() and supervisor.detach() executed; normal quit did not kill Worker" },
+    { "step": "controlled stop request", "result": "lifecycleRequest('stop-authority', workerInstanceId) returned response.type === 'stopping'", "delivery": "STOP_DELIVERED" },
+    { "step": "Helper received stop-authority", "result": "Helper LifecycleConnections action == 'stop-authority' acknowledged with stopping before return" },
+    { "step": "Worker received stop-authority", "result": "Worker helperOutput handler value.type === 'stop-authority' triggered bounded stop(0)" },
+    { "step": "Worker bounded shutdown", "result": "Worker killed Host+Helper with SIGTERM, then SIGKILL fallback, emitted worker-stopped, exited 0" },
+    { "step": "Job release", "result": "Worker exit closed the Worker-owned kill-on-close Job; Host and Helper both terminated" },
+    { "step": "Host exit", "result": "hostPid 20904 no longer alive" },
+    { "step": "Helper exit", "result": "nativeHelperPid 58612 no longer alive" },
+    { "step": "mutex release", "result": "Helper AuthorityMutex released on process exit" },
+    { "step": "no orphan", "result": "cleanup.exited === true; no Worker/Host/Helper left alive" }
+  ],
+  "stopApiResult": { "exited": true, "delivery": "STOP_DELIVERED" },
+  "noFinallyKillPatch": "G15 PASS occurred before any harness safety kill; the stop() implementation does not use process.kill. Harness cleanup performed only after the PASS was observed.",
+  "noRendererExposure": "The controlled stop remains a Main-only internal path (WorkerSupervisor.stop); it is not reachable from preload or Renderer."
+}

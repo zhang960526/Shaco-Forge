@@ -30,5 +30,6 @@ Status: ACTIVE
 | REVIEW-020 | V1-SLICE-2 Contract Targeted Delta Re-Review | PASS | F-01 CLOSED; Owner Contract Freeze / Step1 Authorized | `architecture/AUDIT-020-V1-SLICE-2-CONTRACT-TARGETED-DELTA-REREVIEW.md` |
 | REVIEW-021 | V1-SLICE-2 Step1 Minimal Trusted Discovery Corrective Review | PASS | Corrective persisted as candidate; targeted delta review required before Step1 re-freeze | `architecture/AUDIT-021-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-REVIEW.md` |
 | REVIEW-022 | V1-SLICE-2 Step1 Minimal Trusted Discovery Persisted Delta Review | PASS | Corrective bytes accepted; Contract/Amendment re-frozen; Step1 implementation re-authorized | `architecture/AUDIT-022-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-PERSISTED-DELTA-REVIEW.md` |
+| REVIEW-023 | V1-SLICE-2 Step1 Independent Implementation Review | PASS | Step1 implementation accepted; baseline frozen; Step1 closed; Step2 remains separately gated | `architecture/AUDIT-023-V1-SLICE-2-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md` |
 
 Future implementation reviews must be stored separately from Phase Contracts.

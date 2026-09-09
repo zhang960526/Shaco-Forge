@@ -5,13 +5,14 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import electron from 'electron'
 import { paths } from './runtime-paths.mjs'
+import { evidence as writeStep1Evidence } from './smoke-slice2-step1.mjs'
 
 const workerNode = process.env.SHACO_FORGE_WORKER_NODE
 if (!workerNode) throw new Error('SHACO_FORGE_WORKER_NODE is required')
 const harnessRoot = process.env.SHACO_FORGE_HARNESS_ROOT
 if (!harnessRoot) throw new Error('SHACO_FORGE_HARNESS_ROOT is required')
 const dshHome = await mkdtemp(join(tmpdir(), 'shaco-forge-v1-1b-electron-'))
-const evidenceRoot = join(paths.root, 'docs/04-development-records/evidence/V1-SLICE-1B/runtime')
+const evidenceRoot = join(paths.root, 'node_modules/.step1-electron-regression')
 await mkdir(evidenceRoot, { recursive: true })
 const injectCarrierFailure = process.argv.includes('--inject-carrier-failure')
   || process.env.SHACO_FORGE_SMOKE_INJECT_CARRIER_FAILURE === '1'
@@ -30,6 +31,7 @@ const child = spawn(electron, [`--user-data-dir=${join(dshHome, 'electron-profil
     SHACO_FORGE_EVIDENCE_PATH: evidencePath,
     SHACO_FORGE_SCREENSHOT_PATH: screenshotPath,
     SHACO_FORGE_EVIDENCE_INJECT_CARRIER_FAILURE: injectCarrierFailure ? '1' : '0',
+    SHACO_FORGE_USER_LOOP: '0',
   },
   stdio: ['ignore', 'pipe', 'pipe'],
   windowsHide: true,
@@ -43,6 +45,7 @@ child.stderr.on('data', chunk => { stderr += chunk })
 const exitCode = await new Promise(resolve => child.once('exit', code => resolve(code)))
 assert.equal(exitCode, 0, `Electron failed. stdout=${stdout} stderr=${stderr}`)
 const evidence = JSON.parse(await readFile(evidencePath, 'utf8'))
+await writeStep1Evidence('electron-regression.json', evidence)
 assert.equal(evidence.result, 'PASS', JSON.stringify(evidence, null, 2))
 assert.equal(evidence.desktop.electronVersion, '35.7.5')
 assert.equal(evidence.renderer.harnessClient.package, '@deepseek-ai/dsh-client-web@0.1.2-alpha.1')

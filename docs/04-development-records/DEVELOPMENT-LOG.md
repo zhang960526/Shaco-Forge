@@ -2,6 +2,67 @@
 
 Status: ACTIVE
 
+## 2026-09-09 - V1-SLICE-2 Step 1 Owner Closure and Baseline Freeze
+
+- The Step 1 long-running implementation initially stopped as
+  `STOPPED_BLOCKED` at
+  `G15_BOUNDED_STOP_NOT_DELIVERED_DURING_ELECTRON_TEARDOWN`; its initial Major
+  Corrective budget was 4/4 exhausted.
+- A separate Architecture Owner-authorized G15 corrective proved
+  `BUSY_SWALLOWED_ON_SINGLE_LIFECYCLE_PIPE` as root cause and returned `PASS`.
+  G10, G15, G20 and G21 closed; G01-G22 are all confirmed `PASS`.
+- Canonical non-Provider runtime and the complete regression roster are `PASS`;
+  Provider runs remain 0.
+- Independent `REVIEW-023` is `PASS`; Blocking Findings are `NONE` and
+  regression security risk is `LOW`.
+- NF-R1 and NF-R2 are accepted as information; NF-R3 is a carry-forward
+  non-blocking diagnostic; NF-R4 is deferred code hygiene; NF-R5 is accepted
+  bounded fail-safe behavior. All retain Reviewer severity `INFO`.
+- The Owner accepts Step 1 and freezes the exact reviewed implementation,
+  tests, scripts, Implementation Record and both Evidence groups. Step 1 is
+  `PASS / CLOSED / FROZEN`; its implementation authorization is consumed and
+  additional Step 1 implementation is `NONE`.
+- Step 2 and Step 3 remain `NOT_AUTHORIZED`; Provider remains `NO`.
+- Next: `ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP2_ENTRY`.
+
+## 2026-09-09 - V1-SLICE-2 Step 1 G15 Corrective (Owner-authorized)
+
+- The long-running Step 1 implementation attempt previously stopped as
+  `STOPPED_BLOCKED` at `G15_BOUNDED_STOP_NOT_DELIVERED_DURING_ELECTRON_TEARDOWN`.
+- The Architecture Owner authorized a separate, narrow G15 corrective budget
+  (not a reset of the prior 4/4 Major corrective history).
+- Root cause proven (not assumed): `WorkerSupervisor.stop()` fired one
+  `stop-authority` request inside an empty `catch { }`. The single lifecycle
+  pipe is shared by the 1-second health/discovery probe started by
+  `carrierReady()`. When a health discover occupied the pipe at stop time,
+  `openLifecycle` observed `lifecycleBusy` and threw `BUSY`; the empty catch
+  swallowed it and the 8-second PID poll returned `exited=false`.
+- A deterministic reproduction captured the actual swallowed exception
+  (`Error: BUSY`), `stopDelivered=false`, and Worker/Host/Helper still alive.
+- Fix (1 source corrective cycle, 1 design approach): `stop()` now performs a
+  single bounded wait for the in-flight health discovery, sends the unique
+  controlled stop once, observes the explicit `stopping` acknowledgement, and
+  reports `StopResult.delivery` (`STOP_DELIVERED` / `STOP_REJECTED` /
+  `STOP_PIPE_BUSY` / `STOP_DELIVERY_FAILED` /
+  `STOP_DELIVERED_BUT_AUTHORITY_DID_NOT_EXIT`) with a single bounded retry only
+  for transient pipe-recycling BUSY. No blind retry, no second pipe, no
+  Broker/Service, no `process.kill` in the stop path.
+- G15 closed: real Electron teardown returns `cleanup.exited=true` with
+  `delivery=STOP_DELIVERED`; Worker/Host/Helper exit, Job/mutex release, no orphan.
+- Remaining gates closed: G10 (full sequential attachment reset), G20 (old
+  Client generation five pending callbacks rejected), G21 (dedicated competing
+  authority candidate never ready; zero overlap).
+- Canonical runtime `pnpm run smoke:slice2-step1` is non-Provider (providerRuns 0)
+  and exited 0 / PASS across carrier-negatives, authority-failures,
+  ambiguous-authority, authority-overlap and desktop-survival.
+- Regressions PASS: typecheck, build, pnpm test (120/120), verify:static,
+  smoke:carrier, smoke:worker, smoke:electron, smoke:slice2-step1.
+- The prior STEP1-20260909-IMPLEMENTATION-01 evidence (9 JSON) remains
+  byte-identical; new corrective evidence root is
+  `STEP1-20260909-G15-CORRECTIVE-01`.
+- State: `V1_SLICE_2_STEP1 = IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`.
+- Next: `INDEPENDENT_REVIEW_V1_SLICE_2_STEP1`.
+
 ## 2026-09-09 - V1-SLICE-2 Step 1 Minimal Trusted Discovery Re-Freeze
 
 - Persisted delta review `REVIEW-022` is `PASS` against commit `94297539`;

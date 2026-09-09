@@ -1,0 +1,792 @@
+{
+  "attempts": [
+    {
+      "result": "FAIL",
+      "failure": "Product Desktop exited before CARRIER_READY",
+      "snapshots": [],
+      "survival": []
+    },
+    {
+      "result": "FAIL",
+      "failure": "Product Desktop exited before CARRIER_READY",
+      "snapshots": [],
+      "survival": [],
+      "diagnostics": [
+        {
+          "pid": 59832,
+          "code": 2147483651,
+          "signal": null,
+          "stderr": "[59832:0909/165906.331:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515\r\n[59832:0909/165906.375:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515\r\n[59832:0909/165906.415:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515\r\n[59832:0909/165906.456:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515\r\n[59832:0909/165906.496:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515\r\n[59832:0909/165906.538:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515\r\n[59832:0909/165906.578:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515\r\n[59832:0909/165906.618:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515\r\n[59832:0909/165906.657:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515\r\n[59832:0909/165906.658:FATAL:gpu_data_manager_impl_private.cc(420)] GPU process isn't usable. Goodbye.\r\n"
+        }
+      ]
+    },
+    {
+      "result": "FAIL",
+      "failure": "Desktop graceful exit: deadline exceeded",
+      "snapshots": [
+        {
+          "mainPid": 56668,
+          "phase": "carrier-ready",
+          "authority": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "d3202251-6a49-4ebb-9a38-8bec717bcb62",
+            "worker": {
+              "pid": 58912,
+              "startTime": "134334179859772666"
+            },
+            "host": {
+              "pid": 4720,
+              "startTime": "134334179962349225"
+            },
+            "helper": {
+              "pid": 35596,
+              "startTime": "134334179960959249"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 58912,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 35596,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 0,
+            "rejectedOldFrames": 0,
+            "detaches": 0
+          },
+          "clientInstanceId": "51cae0fa-b730-4e98-b51b-fd804faaafae",
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 0,
+            "unaryRequests": 0,
+            "streamOpens": 0,
+            "streamPulls": 0,
+            "streamCancels": 0,
+            "eventsReadyObserved": 0,
+            "maxRendererInflightPullPerStream": 0,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 0,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rendererSecurity": {
+            "nodeIntegration": false,
+            "contextIsolation": true,
+            "sandbox": true,
+            "webSecurity": true,
+            "allowRunningInsecureContent": false
+          },
+          "credentialEpochHash": "58bc6ee64c7ad5cda6851379e52c16b9a8599783d14e3939230d02a4823a0d87",
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "lifecycleAvailable": false,
+            "nodeIntegration": false
+          }
+        }
+      ],
+      "survival": [],
+      "diagnostics": [
+        {
+          "pid": 56668,
+          "code": null,
+          "signal": "SIGKILL",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "result": "FAIL",
+      "failure": "Desktop graceful exit: deadline exceeded",
+      "snapshots": [
+        {
+          "mainPid": 41812,
+          "phase": "carrier-ready",
+          "authority": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "95d7e033-90da-4091-81cf-615bcb93d0f8",
+            "worker": {
+              "pid": 42568,
+              "startTime": "134334181256094883"
+            },
+            "host": {
+              "pid": 56640,
+              "startTime": "134334181355685206"
+            },
+            "helper": {
+              "pid": 58604,
+              "startTime": "134334181354524581"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 42568,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 58604,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 0,
+            "rejectedOldFrames": 0,
+            "detaches": 0
+          },
+          "clientInstanceId": "8faac332-9c12-4a58-88c9-eb6e0e154dc4",
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 0,
+            "unaryRequests": 0,
+            "streamOpens": 0,
+            "streamPulls": 0,
+            "streamCancels": 0,
+            "eventsReadyObserved": 0,
+            "maxRendererInflightPullPerStream": 0,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 0,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rendererSecurity": {
+            "nodeIntegration": false,
+            "contextIsolation": true,
+            "sandbox": true,
+            "webSecurity": true,
+            "allowRunningInsecureContent": false
+          },
+          "credentialEpochHash": "afb37797386662163ddfbfe622f8a06cebe29a29bf6b8a415ef5a53f96fac8f5",
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "lifecycleAvailable": false,
+            "nodeIntegration": false
+          }
+        }
+      ],
+      "survival": [],
+      "diagnostics": [
+        {
+          "pid": 41812,
+          "code": null,
+          "signal": "SIGKILL",
+          "controlEvents": [],
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "result": "PASS",
+      "snapshots": [
+        {
+          "mainPid": 55132,
+          "phase": "carrier-ready",
+          "authority": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "3801b34b-b272-495b-8a4c-889ce95aec57",
+            "worker": {
+              "pid": 49684,
+              "startTime": "134334182127268484"
+            },
+            "host": {
+              "pid": 28488,
+              "startTime": "134334182227774677"
+            },
+            "helper": {
+              "pid": 59136,
+              "startTime": "134334182226558161"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 49684,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 59136,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 0,
+            "rejectedOldFrames": 0,
+            "detaches": 0
+          },
+          "clientInstanceId": "de29a46e-79be-4642-9cce-1e8c216a26d4",
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 0,
+            "unaryRequests": 0,
+            "streamOpens": 0,
+            "streamPulls": 0,
+            "streamCancels": 0,
+            "eventsReadyObserved": 0,
+            "maxRendererInflightPullPerStream": 0,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 0,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rendererSecurity": {
+            "nodeIntegration": false,
+            "contextIsolation": true,
+            "sandbox": true,
+            "webSecurity": true,
+            "allowRunningInsecureContent": false
+          },
+          "credentialEpochHash": "c44b241ca1b3784f93db910c6cbde8c49d71dffa26214a018a655cdcd24d3bb0",
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "lifecycleAvailable": false,
+            "nodeIntegration": false
+          }
+        },
+        {
+          "mainPid": 8296,
+          "phase": "carrier-ready",
+          "authority": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "3801b34b-b272-495b-8a4c-889ce95aec57",
+            "worker": {
+              "pid": 49684,
+              "startTime": "134334182127268484"
+            },
+            "host": {
+              "pid": 28488,
+              "startTime": "134334182227774677"
+            },
+            "helper": {
+              "pid": 59136,
+              "startTime": "134334182226558161"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 49684,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 59136,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 11,
+            "rejectedOldFrames": 0,
+            "detaches": 1
+          },
+          "clientInstanceId": "28258025-fd67-47b5-a0e4-9eb018d3349d",
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 0,
+            "unaryRequests": 0,
+            "streamOpens": 0,
+            "streamPulls": 0,
+            "streamCancels": 0,
+            "eventsReadyObserved": 0,
+            "maxRendererInflightPullPerStream": 0,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 0,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rendererSecurity": {
+            "nodeIntegration": false,
+            "contextIsolation": true,
+            "sandbox": true,
+            "webSecurity": true,
+            "allowRunningInsecureContent": false
+          },
+          "credentialEpochHash": "88c6bb217f892592010df45439cd5873a7bae74fb40293ff3c2f8abd476693d2",
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "lifecycleAvailable": false,
+            "nodeIntegration": false
+          }
+        },
+        {
+          "mainPid": 59156,
+          "phase": "carrier-ready",
+          "authority": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "3801b34b-b272-495b-8a4c-889ce95aec57",
+            "worker": {
+              "pid": 49684,
+              "startTime": "134334182127268484"
+            },
+            "host": {
+              "pid": 28488,
+              "startTime": "134334182227774677"
+            },
+            "helper": {
+              "pid": 59136,
+              "startTime": "134334182226558161"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 49684,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 59136,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 11,
+            "rejectedOldFrames": 0,
+            "detaches": 2
+          },
+          "clientInstanceId": "56c450ba-1fdd-44b9-9b5e-f304088f7bf8",
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 0,
+            "unaryRequests": 0,
+            "streamOpens": 0,
+            "streamPulls": 0,
+            "streamCancels": 0,
+            "eventsReadyObserved": 0,
+            "maxRendererInflightPullPerStream": 0,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 0,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rendererSecurity": {
+            "nodeIntegration": false,
+            "contextIsolation": true,
+            "sandbox": true,
+            "webSecurity": true,
+            "allowRunningInsecureContent": false
+          },
+          "credentialEpochHash": "b97cc9b4ef23689b873a0be940b2b2a90e1f7a9d4cfa7469f36d22584a4a2732",
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "lifecycleAvailable": false,
+            "nodeIntegration": false
+          }
+        }
+      ],
+      "survival": [
+        {
+          "mode": "graceful",
+          "mainPid": 55132,
+          "mainExit": 0,
+          "before": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "3801b34b-b272-495b-8a4c-889ce95aec57",
+            "worker": {
+              "pid": 49684,
+              "startTime": "134334182127268484"
+            },
+            "host": {
+              "pid": 28488,
+              "startTime": "134334182227774677"
+            },
+            "helper": {
+              "pid": 59136,
+              "startTime": "134334182226558161"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 49684,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 59136,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 0,
+            "rejectedOldFrames": 0,
+            "detaches": 0
+          },
+          "after": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "3801b34b-b272-495b-8a4c-889ce95aec57",
+            "worker": {
+              "pid": 49684,
+              "startTime": "134334182127268484"
+            },
+            "host": {
+              "pid": 28488,
+              "startTime": "134334182227774677"
+            },
+            "helper": {
+              "pid": 59136,
+              "startTime": "134334182226558161"
+            },
+            "healthy": true,
+            "state": "DETACHED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 49684,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 59136,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 11,
+            "rejectedOldFrames": 0,
+            "detaches": 1
+          },
+          "result": "PASS"
+        },
+        {
+          "mode": "crash",
+          "mainPid": 8296,
+          "mainSignal": "SIGKILL",
+          "before": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "3801b34b-b272-495b-8a4c-889ce95aec57",
+            "worker": {
+              "pid": 49684,
+              "startTime": "134334182127268484"
+            },
+            "host": {
+              "pid": 28488,
+              "startTime": "134334182227774677"
+            },
+            "helper": {
+              "pid": 59136,
+              "startTime": "134334182226558161"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 49684,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 59136,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 11,
+            "rejectedOldFrames": 0,
+            "detaches": 1
+          },
+          "after": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "3801b34b-b272-495b-8a4c-889ce95aec57",
+            "worker": {
+              "pid": 49684,
+              "startTime": "134334182127268484"
+            },
+            "host": {
+              "pid": 28488,
+              "startTime": "134334182227774677"
+            },
+            "helper": {
+              "pid": 59136,
+              "startTime": "134334182226558161"
+            },
+            "healthy": true,
+            "state": "DETACHED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 49684,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 59136,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 11,
+            "rejectedOldFrames": 0,
+            "detaches": 2
+          },
+          "result": "PASS"
+        }
+      ],
+      "diagnostics": [
+        {
+          "pid": 55132,
+          "code": 0,
+          "signal": null,
+          "controlEvents": [
+            "window-close",
+            "before-quit",
+            "will-quit"
+          ],
+          "stderr": "Error occurred in handler for 'transport:pull-stream': Error: Carrier closed by Desktop\n    at CarrierClient.close (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:305:20)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:354:14)\n    at App.emit (node:events:530:35)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:351:13)\n    at App.emit (node:events:530:35)\nError occurred in handler for 'transport:pull-stream': Error: Carrier closed by Desktop\n    at CarrierClient.close (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:305:20)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:354:14)\n    at App.emit (node:events:530:35)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:351:13)\n    at App.emit (node:events:530:35)\nError occurred in handler for 'transport:pull-stream': Error: Carrier closed by Desktop\n    at CarrierClient.close (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:305:20)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:354:14)\n    at App.emit (node:events:530:35)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:351:13)\n    at App.emit (node:events:530:35)\n"
+        },
+        {
+          "pid": 8296,
+          "code": null,
+          "signal": "SIGKILL",
+          "controlEvents": [],
+          "stderr": ""
+        },
+        {
+          "pid": 59156,
+          "code": 0,
+          "signal": null,
+          "controlEvents": [
+            "window-close",
+            "before-quit",
+            "will-quit"
+          ],
+          "stderr": "Error occurred in handler for 'transport:pull-stream': Error: Carrier closed by Desktop\n    at CarrierClient.close (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:305:20)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:354:14)\n    at App.emit (node:events:530:35)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:351:13)\n    at App.emit (node:events:530:35)\nError occurred in handler for 'transport:pull-stream': Error: Carrier closed by Desktop\n    at CarrierClient.close (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:305:20)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:354:14)\n    at App.emit (node:events:530:35)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:351:13)\n    at App.emit (node:events:530:35)\nError occurred in handler for 'transport:pull-stream': Error: Carrier closed by Desktop\n    at CarrierClient.close (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:305:20)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:354:14)\n    at App.emit (node:events:530:35)\n    at App.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:351:13)\n    at App.emit (node:events:530:35)\n"
+        }
+      ]
+    }
+  ]
+}

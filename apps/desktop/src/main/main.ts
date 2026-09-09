@@ -44,6 +44,16 @@ let mainWindow: BrowserWindow | undefined
 let finalizing = false
 let userLoopEvidence: Record<string, unknown> | undefined
 
+// Main-only observation for the bounded non-Provider lifecycle runtime driver.
+// This export is never imported by preload or published to Renderer.
+export function observeStep1Lifecycle(): Record<string, unknown> {
+  return {
+    mainPid: process.pid, phase: projection.phase, authority: carrierBootstrap?.authority,
+    credentialEpoch: carrierBootstrap?.credentialEpoch, clientInstanceId: carrier?.clientInstanceId,
+    metrics: carrier?.metrics, rendererSecurity: rendererSecurityPreferences,
+  }
+}
+
 function mime(path: string): string {
   return ({ '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml' } as Record<string, string>)[extname(path)] ?? 'application/octet-stream'
 }
@@ -311,6 +321,7 @@ app.whenReady().then(async () => {
     carrierBootstrap = await supervisor.start()
     carrier = new CarrierClient(carrierBootstrap)
     await carrier.connect()
+    supervisor.carrierReady()
     publishProjection({ ...projection, phase: 'carrier-ready', message: 'Authenticated Physical Carrier Ready', helperPid: carrierBootstrap.helperPid })
     await createMainWindow()
     if (evidencePath !== undefined) {
@@ -350,5 +361,5 @@ app.on('window-all-closed', () => {
 
 app.on('before-quit', () => {
   carrier?.close()
-  if (!finalizing) void supervisor?.stop()
+  supervisor?.detach()
 })

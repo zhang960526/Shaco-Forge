@@ -24,6 +24,7 @@ interface UnaryState {
   resolve(value: unknown): void
   reject(error: Error): void
   timeout: NodeJS.Timeout
+  cleanup(): void
 }
 
 interface StreamState {
@@ -128,6 +129,7 @@ export class CarrierClient {
   #writeChain = Promise.resolve()
   #frameObservation = new FrameSizeObservation()
   #completedStreams: string[] = []
+  clientInstanceId: string | undefined
   readonly metrics = {
     mainAuthenticatedCarrier: false,
     serverAuthenticatedToMain: false,
@@ -187,6 +189,7 @@ export class CarrierClient {
               }
               const clientNonce = randomBytes(32).toString('hex')
               const clientInstanceId = randomUUID()
+              this.clientInstanceId = clientInstanceId
               fields = {
                 protocolVersion: CARRIER_PROTOCOL_VERSION,
                 workerInstanceId: this.bootstrap.workerInstanceId,
@@ -215,6 +218,7 @@ export class CarrierClient {
               this.#authenticated = true
               this.metrics.mainAuthenticatedCarrier = true
               this.metrics.serverAuthenticatedToMain = true
+              this.bootstrap.secret.fill(0)
               clearTimeout(timeout)
               resolveAuth()
               continue
@@ -227,7 +231,10 @@ export class CarrierClient {
       })
       socket.once('error', error => reject(error))
       socket.once('close', () => {
-        if (!this.#failed) this.#fail(new Error('Carrier connection closed'))
+        if (!this.#failed) {
+          if (stage !== 'authenticated') reject(new Error('Carrier connection closed before authentication'))
+          else this.#fail(new Error('Carrier connection closed'))
+        }
       })
     })
   }
@@ -239,17 +246,21 @@ export class CarrierClient {
     return await new Promise<unknown>((resolveRequest, rejectRequest) => {
       const timeout = setTimeout(() => {
         this.#unary.delete(requestId)
+        cleanup()
         rejectRequest(new Error('Carrier unary request timed out'))
       }, 30_000)
-      const state: UnaryState = { resolve: resolveRequest, reject: rejectRequest, timeout }
-    this.#unary.set(requestId, state)
+      const cleanup = (): void => signal?.removeEventListener('abort', abort)
+      const state: UnaryState = { resolve: resolveRequest, reject: rejectRequest, timeout, cleanup }
+      this.#unary.set(requestId, state)
       this.metrics.pendingUnary = this.#unary.size
       const abort = (): void => {
         if (!this.#unary.delete(requestId)) return
         clearTimeout(timeout)
+        cleanup()
         rejectRequest(signal?.reason instanceof Error ? signal.reason : new Error('Unary request aborted'))
       }
       signal?.addEventListener('abort', abort, { once: true })
+      if (signal?.aborted) { abort(); return }
       this.#writeRaw({ type: 'unary-request', requestId, endpoint, envelope }, true).catch(error => {
         signal?.removeEventListener('abort', abort)
         this.#unary.delete(requestId)
@@ -282,6 +293,7 @@ export class CarrierClient {
     this.metrics.maxRendererInflightPullPerStream = Math.max(this.metrics.maxRendererInflightPullPerStream, stream.state.inflightPulls)
     let result: StreamPullResult
     try { result = await stream.buffer.pull() } finally { stream.state.inflightPulls-- }
+    this.#requireAuthenticated()
     if (!result.done) {
       if (!stream.buffer.terminalObserved) {
         stream.state.credits++
@@ -335,12 +347,14 @@ export class CarrierClient {
     const frame = encodeJsonFrame(value)
     this.metrics.maxObservedJsonFrameBytes = Math.max(this.metrics.maxObservedJsonFrameBytes, frame.byteLength - 4)
     this.#writeChain = this.#writeChain.then(() => new Promise<void>((resolveWrite, rejectWrite) => {
+      if (this.#failed !== undefined || socket.destroyed) { rejectWrite(this.#failed ?? new Error('Carrier generation ended')); return }
       socket.write(frame, error => error ? rejectWrite(error) : resolveWrite())
     }))
     return this.#writeChain
   }
 
   #dispatch(value: Record<string, unknown>): void {
+    if (this.#failed !== undefined) return
     if (!this.#authenticated) throw new Error('Business frame received before mutual authentication')
     if (value.type === 'unary-response' && typeof value.requestId === 'string') {
       const state = this.#unary.get(value.requestId)
@@ -348,6 +362,7 @@ export class CarrierClient {
       this.#unary.delete(value.requestId)
       this.metrics.pendingUnary = this.#unary.size
       clearTimeout(state.timeout)
+      state.cleanup()
       state.resolve(value.envelope)
       return
     }
@@ -381,8 +396,12 @@ export class CarrierClient {
     if (this.#failed !== undefined) return
     this.#failed = error
     this.#authenticated = false
+    this.#decoder = new JsonFrameDecoder()
+    this.#completedStreams.length = 0
+    this.bootstrap.secret.fill(0)
     for (const state of this.#unary.values()) {
       clearTimeout(state.timeout)
+      state.cleanup()
       state.reject(error)
     }
     this.#unary.clear()

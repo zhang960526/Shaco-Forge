@@ -1,12 +1,14 @@
-import { spawn, type ChildProcess } from 'node:child_process'
-import { randomBytes, randomUUID } from 'node:crypto'
+import { spawn } from 'node:child_process'
 import { access } from 'node:fs/promises'
 import { isAbsolute, resolve } from 'node:path'
-import type { Readable, Writable } from 'node:stream'
-import { encodeJsonFrame, isRecord, JsonFrameDecoder, parseBootstrapEvent, type BootstrapEvent } from '@shaco-forge/contracts'
+import type { Socket } from 'node:net'
+import { isRecord, type BootstrapEvent } from '@shaco-forge/contracts'
+import { lifecycleRequest, type AuthorityStatus } from './lifecycle-client.js'
 
 export const WORKER_STARTUP_TIMEOUT_MS = 90_000
-
+export type StopDelivery = 'STOP_DELIVERED' | 'STOP_REJECTED' | 'STOP_PIPE_BUSY' | 'STOP_DELIVERY_FAILED' | 'STOP_DELIVERED_BUT_AUTHORITY_DID_NOT_EXIT'
+export interface StopResult { workerPid?: number; exited: boolean; delivery: StopDelivery; reason?: string }
+function delay(ms: number): Promise<void> { return new Promise(resolveDelay => setTimeout(resolveDelay, ms)) }
 export interface SupervisorConfig {
   workerNodePath: string
   workerEntryPath: string
@@ -15,7 +17,6 @@ export interface SupervisorConfig {
   dshHome: string
   profileName: string
 }
-
 export interface CarrierBootstrap {
   pipeEndpoint: string
   endpointId: string
@@ -26,15 +27,15 @@ export interface CarrierBootstrap {
   secret: Buffer
   security: Record<string, unknown>
   hostPreflight: Record<string, unknown>
+  lifecycle?: Socket
+  authority?: AuthorityStatus
 }
-
 function requiredPath(env: NodeJS.ProcessEnv, key: string): string {
   const value = env[key]
   if (value === undefined || value.trim() === '') throw new Error(`${key} is required for development bootstrap`)
   if (!isAbsolute(value)) throw new Error(`${key} must be an absolute input path`)
   return resolve(value)
 }
-
 export function readSupervisorConfig(env: NodeJS.ProcessEnv): SupervisorConfig {
   return {
     workerNodePath: requiredPath(env, 'SHACO_FORGE_WORKER_NODE'),
@@ -45,206 +46,162 @@ export function readSupervisorConfig(env: NodeJS.ProcessEnv): SupervisorConfig {
     profileName: env.SHACO_FORGE_HARNESS_PROFILE_NAME?.trim() || 'shaco-forge-v1-slice-1b',
   }
 }
-
 export function mapWorkerTerminal(exitCode: number | null, signal: NodeJS.Signals | null): string {
   return `Worker exited before or after Carrier readiness (${exitCode ?? signal ?? 'unknown'})`
 }
-
 export class WorkerTerminationState {
   #deliberateStop = false
-
-  beginDeliberateStop(): void {
-    this.#deliberateStop = true
-  }
-
+  beginDeliberateStop(): void { this.#deliberateStop = true }
   unexpectedFailure(exitCode: number | null, signal: NodeJS.Signals | null): string | undefined {
     return this.#deliberateStop ? undefined : mapWorkerTerminal(exitCode, signal)
   }
 }
 
-function asReadable(value: unknown, name: string): Readable {
-  if (value === null || typeof value !== 'object' || !('on' in value)) throw new Error(`${name} readable pipe is unavailable`)
-  return value as Readable
-}
-
-function asWritable(value: unknown, name: string): Writable {
-  if (value === null || typeof value !== 'object' || !('write' in value)) throw new Error(`${name} writable pipe is unavailable`)
-  return value as Writable
-}
-
+// Desktop owns an attachment only. Detached startup has no inherited Main pipe.
 export class WorkerSupervisor {
   readonly events: BootstrapEvent[] = []
-  #child: ChildProcess | undefined
+  workerLaunchAttempts = 0
   #listeners = new Set<(event: BootstrapEvent) => void>()
   #failureListeners = new Set<(reason: string) => void>()
-  #carrierBootstrap: CarrierBootstrap | undefined
-  #termination = new WorkerTerminationState()
-
+  #bootstrap: CarrierBootstrap | undefined
+  #status: AuthorityStatus | undefined
+  #healthTimer: NodeJS.Timeout | undefined
+  #healthInFlight: Promise<unknown> | undefined
   constructor(readonly config: SupervisorConfig, readonly startupTimeoutMs = WORKER_STARTUP_TIMEOUT_MS) {}
-
-  onEvent(listener: (event: BootstrapEvent) => void): () => void {
-    this.#listeners.add(listener)
-    return () => this.#listeners.delete(listener)
+  onEvent(listener: (event: BootstrapEvent) => void): () => void { this.#listeners.add(listener); return () => this.#listeners.delete(listener) }
+  onCarrierFailure(listener: (reason: string) => void): () => void { this.#failureListeners.add(listener); return () => this.#failureListeners.delete(listener) }
+  #publish(phase: BootstrapEvent['phase'], error?: string): void {
+    if (this.#status === undefined) return
+    const event: BootstrapEvent = {
+      protocolVersion: 1, phase, timestamp: new Date().toISOString(), workerPid: this.#status.worker.pid,
+      hostPid: this.#status.host.pid, parentPid: this.#status.workerRuntime.parentPid, workerNodeVersion: this.#status.workerRuntime.nodeVersion,
+      workerExecutable: this.#status.workerRuntime.executable, workerArgv: this.#status.workerRuntime.argv, error,
+    }
+    this.events.push(event)
+    for (const listener of this.#listeners) listener(event)
   }
-
-  onCarrierFailure(listener: (reason: string) => void): () => void {
-    this.#failureListeners.add(listener)
-    return () => this.#failureListeners.delete(listener)
+  async discover(): Promise<AuthorityStatus> {
+    return (await lifecycleRequest(this.config.nativeHelperPath, 'discover')).status!
   }
-
-  #publishFailure(reason: string): void {
-    for (const listener of this.#failureListeners) listener(reason)
-  }
-
   async start(): Promise<CarrierBootstrap> {
-    if (this.#child !== undefined) throw new Error('Worker is already started')
-    await Promise.all([
-      access(this.config.workerNodePath),
-      access(this.config.workerEntryPath),
-      access(this.config.nativeHelperPath),
-      access(this.config.harnessRoot),
-    ])
-    const secret = randomBytes(32)
-    const workerInstanceId = randomUUID()
-    const credentialEpoch = randomUUID()
-    const child = spawn(this.config.workerNodePath, [this.config.workerEntryPath], {
-      env: {
-        ...process.env,
-        SHACO_FORGE_DSH_HOME: this.config.dshHome,
-        SHACO_FORGE_HARNESS_ROOT: this.config.harnessRoot,
-        SHACO_FORGE_HARNESS_PROFILE_NAME: this.config.profileName,
-        SHACO_FORGE_NATIVE_HELPER: this.config.nativeHelperPath,
-      },
-      stdio: ['ignore', 'pipe', 'pipe', 'pipe', 'pipe'],
-      windowsHide: true,
-    })
-    this.#child = child
-    const credentialPipe = asWritable(child.stdio[3], 'Worker credential')
-    const privateControl = asReadable(child.stdio[4], 'Worker private control')
-    credentialPipe.end(encodeJsonFrame({
-      type: 'helper-bootstrap',
-      secret: secret.toString('hex'),
-      workerInstanceId,
-      credentialEpoch,
-    }))
-
-    let buffer = ''
-    const stdout = asReadable(child.stdout, 'Worker stdout')
-    stdout.setEncoding('utf8')
-    stdout.on('data', (chunk: string) => {
-      buffer += chunk
-      const lines = buffer.split(/\r?\n/)
-      buffer = lines.pop() ?? ''
-      for (const line of lines) {
-        const event = parseBootstrapEvent(line)
-        if (event === undefined) continue
-        this.events.push(event)
-        for (const listener of this.#listeners) listener(event)
+    if (this.#bootstrap !== undefined) throw new Error('Desktop attachment already exists')
+    await Promise.all([this.config.workerNodePath, this.config.workerEntryPath, this.config.nativeHelperPath, this.config.harnessRoot].map(path => access(path)))
+    try { this.#status = await this.discover() }
+    catch (error) {
+      if (!(error instanceof Error) || error.message !== 'WORKER_NOT_FOUND') throw error
+      this.workerLaunchAttempts++
+      const child = spawn(this.config.workerNodePath, [this.config.workerEntryPath], {
+        detached: true, windowsHide: true, stdio: 'ignore',
+        env: {
+          ...process.env, SHACO_FORGE_DSH_HOME: this.config.dshHome, SHACO_FORGE_HARNESS_ROOT: this.config.harnessRoot,
+          SHACO_FORGE_HARNESS_PROFILE_NAME: this.config.profileName, SHACO_FORGE_NATIVE_HELPER: this.config.nativeHelperPath,
+        },
+      })
+      let startupError = false
+      child.once('error', () => { startupError = true })
+      child.unref()
+      const deadline = Date.now() + this.startupTimeoutMs
+      while (Date.now() < deadline) {
+        if (startupError || child.exitCode !== null || child.signalCode !== null) throw new Error('WORKER_AUTHORITY_FAILURE: startup exited')
+        await new Promise(resolveDelay => setTimeout(resolveDelay, 150))
+        try { this.#status = await this.discover(); break }
+        catch (discoveryError) {
+          if (!(discoveryError instanceof Error) || !['WORKER_NOT_FOUND', 'AUTHORITY_AMBIGUOUS_FAIL_CLOSED', 'BUSY'].includes(discoveryError.message)) throw discoveryError
+        }
       }
-    })
-    const stderr = asReadable(child.stderr, 'Worker stderr')
-    stderr.setEncoding('utf8')
-    stderr.on('data', (chunk: string) => process.stderr.write(`[worker] ${chunk}`))
-
-    return await new Promise<CarrierBootstrap>((resolveReady, rejectReady) => {
-      let settled = false
-      const timeout = setTimeout(() => {
-        if (settled) return
-        settled = true
-        child.kill('SIGTERM')
-        rejectReady(new Error(`Worker startup timed out after ${this.startupTimeoutMs} ms`))
-      }, this.startupTimeoutMs)
-      const decoder = new JsonFrameDecoder()
-      privateControl.on('data', (chunk: Buffer) => {
-        try {
-          for (const value of decoder.push(chunk)) {
-            if (!isRecord(value) || typeof value.type !== 'string') throw new Error('Worker private control envelope is invalid')
-            if (value.type === 'carrier-failed') {
-              const reason = typeof value.reason === 'string' ? value.reason : 'Carrier failed'
-              this.#publishFailure(reason)
-              if (!settled) {
-                settled = true
-                clearTimeout(timeout)
-                rejectReady(new Error(reason))
-              }
-              continue
-            }
-            if (value.type !== 'carrier-ready'
-              || !isRecord(value.helper)
-              || !isRecord(value.host)
-              || typeof value.helper.pipeEndpoint !== 'string'
-              || typeof value.helper.endpointId !== 'string'
-              || typeof value.helper.pipeEndpointHashPrefix !== 'string'
-              || typeof value.helper.helperPid !== 'number') throw new Error('Carrier ready metadata is invalid')
-            if (settled) throw new Error('Duplicate Carrier ready metadata')
-            const ready: CarrierBootstrap = {
-              pipeEndpoint: value.helper.pipeEndpoint,
-              endpointId: value.helper.endpointId,
-              pipeEndpointHashPrefix: value.helper.pipeEndpointHashPrefix,
-              helperPid: value.helper.helperPid,
-              workerInstanceId,
-              credentialEpoch,
-              secret,
-              security: value.helper,
-              hostPreflight: value.host,
-            }
-            this.#carrierBootstrap = ready
-            settled = true
-            clearTimeout(timeout)
-            resolveReady(ready)
-          }
-        } catch (error) {
-          if (!settled) {
-            settled = true
-            clearTimeout(timeout)
-            rejectReady(error)
-          } else {
-            this.#publishFailure('Worker private control validation failed')
-          }
-        }
-      })
-      child.once('exit', (exitCode, signal) => {
-        const reason = this.#termination.unexpectedFailure(exitCode, signal)
-        if (reason !== undefined) this.#publishFailure(reason)
-        if (!settled) {
-          settled = true
-          clearTimeout(timeout)
-          rejectReady(new Error(reason ?? 'Worker stopped deliberately before Carrier readiness'))
-        }
-      })
-      child.once('error', error => {
-        const reason = `Worker process failed to start: ${error.message}`
-        this.#publishFailure(reason)
-        if (!settled) {
-          settled = true
-          clearTimeout(timeout)
-          rejectReady(new Error(reason))
-        }
-      })
-    })
+      if (this.#status === undefined) throw new Error(`Worker startup timed out after ${this.startupTimeoutMs} ms; authority replacement forbidden`)
+    }
+    const { response, socket, status } = await lifecycleRequest(this.config.nativeHelperPath, 'attach')
+    if (response.type !== 'credential-issued' || !isRecord(response.status)
+      || typeof response.pipeEndpoint !== 'string' || !response.pipeEndpoint.startsWith('\\\\.\\pipe\\shaco-forge-v1-')
+      || typeof response.endpointId !== 'string' || typeof response.credentialEpoch !== 'string'
+      || typeof response.secret !== 'string' || !/^[a-f0-9]{64}$/.test(response.secret)) {
+      socket.destroy(); throw new Error('Credential issuance response invalid')
+    }
+    this.#status = status!
+    this.#bootstrap = {
+      pipeEndpoint: response.pipeEndpoint, endpointId: response.endpointId, pipeEndpointHashPrefix: response.endpointId.slice(0, 16),
+      helperPid: status!.helper.pid, workerInstanceId: status!.workerInstanceId, credentialEpoch: response.credentialEpoch,
+      secret: Buffer.from(response.secret, 'hex'), lifecycle: socket, authority: status,
+      security: { aclProtected: true, inheritanceDisabled: true, currentUserAllowRule: true, unintendedBroadAllowRule: false, firstPipeInstance: true, randomEntropyBits: 128, postCreateInspection: true },
+      hostPreflight: status!.hostPreflight,
+    }
+    response.secret = ''
+    this.#publish('host-ready')
+    return this.#bootstrap
   }
-
-  async stop(): Promise<{ workerPid?: number; exited: boolean }> {
-    this.#termination.beginDeliberateStop()
-    const child = this.#child
-    if (child === undefined) return { exited: true }
-    this.#carrierBootstrap?.secret.fill(0)
-    this.#carrierBootstrap = undefined
-    const workerPid = child.pid
-    if (child.exitCode === null && child.signalCode === null) {
-      child.kill('SIGTERM')
-      await Promise.race([
-        new Promise<void>(resolveExit => child.once('exit', () => resolveExit())),
-        new Promise<void>(resolveTimeout => setTimeout(resolveTimeout, 7_000)),
-      ])
+  carrierReady(): void {
+    this.#publish('carrier-ready')
+    let checking = false
+    this.#healthTimer = setInterval(() => {
+      if (checking) return
+      checking = true
+      const probe = this.discover().then(status => {
+        if (status.workerInstanceId !== this.#status?.workerInstanceId) throw new Error('WORKER_AUTHORITY_FAILURE')
+      }).catch((error: unknown) => {
+        if (error instanceof Error && error.message === 'BUSY') return
+        this.detach()
+        const reason = 'WORKER_AUTHORITY_FAILURE'
+        this.#publish('carrier-failed', reason)
+        for (const listener of this.#failureListeners) listener(reason)
+      }).finally(() => { checking = false })
+      this.#healthInFlight = probe
+      void probe.finally(() => { if (this.#healthInFlight === probe) this.#healthInFlight = undefined })
+    }, 1_000)
+    this.#healthTimer.unref()
+  }
+  detach(): void {
+    clearInterval(this.#healthTimer)
+    this.#bootstrap?.secret.fill(0)
+    this.#bootstrap?.lifecycle?.destroy()
+    this.#bootstrap = undefined
+  }
+  // Bounded internal controlled shutdown; never exposed through preload/Renderer.
+  // The controlled stop is serialized against the in-flight health discovery so the
+  // single lifecycle pipe cannot reject stop-authority as BUSY. Delivery is reported
+  // explicitly instead of being swallowed.
+  async stop(): Promise<StopResult> {
+    const status = this.#status
+    this.detach()
+    if (status === undefined) return { exited: true, delivery: 'STOP_DELIVERED' }
+    // Wait for the single in-flight health/discovery request to release the lifecycle
+    // pipe before sending the unique controlled stop. Bounded; no blind retry loop.
+    const inFlight = this.#healthInFlight
+    if (inFlight !== undefined) await Promise.race([inFlight.then(() => undefined, () => undefined), delay(2_000)])
+    let delivery: StopDelivery
+    let reason: string | undefined
+    try {
+      const { response } = await lifecycleRequest(this.config.nativeHelperPath, 'stop-authority', status.workerInstanceId)
+      if (response.type === 'stopping') delivery = 'STOP_DELIVERED'
+      else if (response.type === 'rejected') { delivery = 'STOP_REJECTED'; reason = typeof response.reason === 'string' ? response.reason : undefined }
+      else { delivery = 'STOP_DELIVERY_FAILED'; reason = `unexpected response ${response.type}` }
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error)
+      if (message === 'BUSY') {
+        // Transient pipe recycling: one bounded synchronization, then a single retry.
+        delivery = 'STOP_PIPE_BUSY'
+        await delay(250)
+        try {
+          const { response } = await lifecycleRequest(this.config.nativeHelperPath, 'stop-authority', status.workerInstanceId)
+          if (response.type === 'stopping') delivery = 'STOP_DELIVERED'
+          else { delivery = 'STOP_DELIVERY_FAILED'; reason = `retry ${response.type}` }
+        } catch (retryError) {
+          delivery = 'STOP_DELIVERY_FAILED'
+          reason = retryError instanceof Error ? retryError.message : String(retryError)
+        }
+      } else {
+        delivery = 'STOP_DELIVERY_FAILED'
+        reason = message
+      }
     }
-    if (child.exitCode === null && child.signalCode === null) {
-      child.kill('SIGKILL')
-      await Promise.race([
-        new Promise<void>(resolveExit => child.once('exit', () => resolveExit())),
-        new Promise<void>(resolveTimeout => setTimeout(resolveTimeout, 3_000)),
-      ])
+    const deadline = Date.now() + 8_000
+    while (Date.now() < deadline) {
+      if ([status.worker.pid, status.host.pid, status.helper.pid].every(pid => {
+        try { process.kill(pid, 0); return false } catch { return true }
+      })) return { workerPid: status.worker.pid, exited: true, delivery, reason }
+      await new Promise(resolveDelay => setTimeout(resolveDelay, 100))
     }
-    return { workerPid, exited: child.exitCode !== null || child.signalCode !== null }
+    if (delivery === 'STOP_DELIVERED') { delivery = 'STOP_DELIVERED_BUT_AUTHORITY_DID_NOT_EXIT' }
+    return { workerPid: status.worker.pid, exited: false, delivery, reason }
   }
 }

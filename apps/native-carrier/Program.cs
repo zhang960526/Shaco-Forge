@@ -10,7 +10,7 @@ using Microsoft.Win32.SafeHandles;
 
 namespace ShacoForge.NativeCarrier;
 
-internal static class Program
+internal static partial class Program
 {
     private const int MaxJsonFrame = 262_144;
     private const int BootstrapTimeoutMs = 5_000;
@@ -28,110 +28,27 @@ internal static class Program
     [DllImport("ucrtbase.dll", CallingConvention = CallingConvention.Cdecl)]
     private static extern nint _get_osfhandle(int fileDescriptor);
 
-    public static async Task<int> Main()
+    public static async Task<int> Main(string[] args)
     {
-        Bootstrap? bootstrap = null;
-        try
+        if (args.Length > 0)
         {
-            using FileStream secretChannel = OpenExtraStream(3, FileAccess.Read);
-            using JsonDocument bootstrapDocument = await ReadFrameAsync(secretChannel, BootstrapTimeoutMs);
-            bootstrap = ParseBootstrap(bootstrapDocument.RootElement);
-            secretChannel.Close();
-
-            SecurityIdentifier currentSid = WindowsIdentity.GetCurrent().User
-                ?? throw new InvalidOperationException("Current Windows identity has no user SID.");
-            string pipeName = $"shaco-forge-v1-{Convert.ToHexString(RandomNumberGenerator.GetBytes(16)).ToLowerInvariant()}";
-            string fullEndpoint = $@"\\.\pipe\{pipeName}";
-            string endpointId = Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(fullEndpoint))).ToLowerInvariant();
-            PipeSecurity requestedSecurity = BuildPipeSecurity(currentSid);
-
-            using NamedPipeServerStream server = NamedPipeServerStreamAcl.Create(
-                pipeName,
-                PipeDirection.InOut,
-                1,
-                PipeTransmissionMode.Byte,
-                PipeOptions.Asynchronous | PipeOptions.FirstPipeInstance | PipeOptions.WriteThrough,
-                65_536,
-                65_536,
-                requestedSecurity,
-                HandleInheritability.None,
-                (PipeAccessRights)0);
-
-            AclEvidence acl = InspectAcl(server, currentSid);
-            if (!acl.Verified)
+            try
             {
-                throw new UnauthorizedAccessException("Named Pipe post-create ACL verification failed.");
-            }
-
-            using (FileStream controlChannel = OpenExtraStream(4, FileAccess.Write))
-            {
-                await WriteFrameAsync(controlChannel, new
+                object result;
+                if (args[0] == "--platform" && args.Length == 2)
+                    result = WindowsAuthority.Platform(uint.Parse(args[1], System.Globalization.CultureInfo.InvariantCulture));
+                else if (args[0] == "--inspect-pipe" && args.Length == 1)
                 {
-                    type = "helper-ready",
-                    helperPid = Environment.ProcessId,
-                    pipeEndpoint = fullEndpoint,
-                    endpointId,
-                    pipeEndpointHashPrefix = HashPrefix(fullEndpoint),
-                    currentUserSidHashPrefix = HashPrefix(currentSid.Value),
-                    aclOwnerSidHashPrefix = acl.OwnerHashPrefix,
-                    aclProtected = acl.Protected,
-                    inheritanceDisabled = acl.Protected,
-                    currentUserAllowRule = acl.CurrentUserAllowRule,
-                    unintendedBroadAllowRule = acl.UnintendedBroadAllowRule,
-                    firstPipeInstance = true,
-                    randomEntropyBits = 128,
-                    postCreateInspection = acl.Verified,
-                });
+                    using SafePipeHandle pipe = new(_get_osfhandle(3), ownsHandle: false);
+                    result = WindowsAuthority.InspectPipe(pipe);
+                }
+                else throw new InvalidDataException("NATIVE_OPERATION_NOT_ALLOWED");
+                Console.Out.WriteLine(JsonSerializer.Serialize(result, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase }));
+                return 0;
             }
-
-            using Stream relayInput = Console.OpenStandardInput();
-            using Stream relayOutput = Console.OpenStandardOutput();
-            using CancellationTokenSource relayLifetime = new();
-            // Worker owns this inherited pipe. EOF also ends an unconnected Helper
-            // when Windows terminates Worker without running its signal handlers.
-            // Run the synchronous inherited-handle read off the accept thread.
-            Task<JsonDocument> firstWorkerFrame = Task.Run(() => ReadRelayFrameAsync(relayInput, relayLifetime.Token));
-            Task accept = server.WaitForConnectionAsync(relayLifetime.Token);
-            if (await Task.WhenAny(accept, firstWorkerFrame) == firstWorkerFrame)
-            {
-                using JsonDocument prematureFrame = await firstWorkerFrame;
-                throw new InvalidDataException("Worker sent business data before Pipe connection.");
-            }
-            await accept;
-            Task authentication = AuthenticateAsync(server, bootstrap, endpointId);
-            if (await Task.WhenAny(authentication, firstWorkerFrame) == firstWorkerFrame)
-            {
-                using JsonDocument prematureFrame = await firstWorkerFrame;
-                throw new InvalidDataException("Worker sent business data before mutual authentication.");
-            }
-            await authentication;
-
-            Task clientToWorker = RelayFramesAsync(server, relayOutput, relayLifetime.Token);
-            Task workerToClient = RelayFramesAsync(relayInput, server, relayLifetime.Token, firstWorkerFrame);
-            Task completedRelay = await Task.WhenAny(clientToWorker, workerToClient);
-            relayLifetime.Cancel();
-            if (completedRelay.IsFaulted) await completedRelay;
-            Task relayShutdown = Task.WhenAll(clientToWorker, workerToClient);
-            if (await Task.WhenAny(relayShutdown, Task.Delay(1_000)) == relayShutdown)
-            {
-                try { await relayShutdown; } catch (OperationCanceledException) { }
-            }
-            return 0;
+            catch (Exception error) { Console.Error.WriteLine(error.GetType().Name); return 1; }
         }
-        catch (OperationCanceledException)
-        {
-            Console.Error.WriteLine("SHACO_FORGE_NATIVE_CARRIER_FAILED timeout");
-            return 2;
-        }
-        catch (Exception error)
-        {
-            Console.Error.WriteLine($"SHACO_FORGE_NATIVE_CARRIER_FAILED {error.GetType().Name}: {Redact(error.Message)}");
-            return 1;
-        }
-        finally
-        {
-            if (bootstrap is not null) CryptographicOperations.ZeroMemory(bootstrap.Secret);
-        }
+        return await RunAuthorityAsync();
     }
 
     private static FileStream OpenExtraStream(int descriptor, FileAccess access)
@@ -198,9 +115,10 @@ internal static class Program
         return new AclEvidence(verified, effective.AreAccessRulesProtected, currentAllow, broadAllow, HashPrefix(owner.Value));
     }
 
-    private static async Task AuthenticateAsync(Stream stream, Bootstrap bootstrap, string endpointId)
+    private static async Task AuthenticateAsync(Stream stream, Bootstrap bootstrap, string endpointId, Action<string> bindClient, CancellationToken outer)
     {
-        using CancellationTokenSource handshake = new(AuthHandshakeTimeoutMs);
+        using CancellationTokenSource handshake = CancellationTokenSource.CreateLinkedTokenSource(outer);
+        handshake.CancelAfter(AuthHandshakeTimeoutMs);
         string challengeId = Convert.ToHexString(RandomNumberGenerator.GetBytes(16)).ToLowerInvariant();
         string serverNonce = Convert.ToHexString(RandomNumberGenerator.GetBytes(32)).ToLowerInvariant();
         await WriteFrameAsync(stream, new
@@ -233,6 +151,7 @@ internal static class Program
             throw new UnauthorizedAccessException("Client proof is invalid.");
 
         string serverProof = Convert.ToHexString(Hmac(bootstrap.Secret, ServerDomain, fields)).ToLowerInvariant();
+        bindClient(clientInstanceId);
         await WriteFrameAsync(stream, new { type = "server-auth", serverProof }, handshake.Token);
     }
 
@@ -313,7 +232,7 @@ internal static class Program
 
     private static async Task WriteFrameAsync(Stream stream, object value, CancellationToken cancellationToken = default)
     {
-        byte[] payload = JsonSerializer.SerializeToUtf8Bytes(value);
+        byte[] payload = JsonSerializer.SerializeToUtf8Bytes(value, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
         await WriteRawFrameAsync(stream, payload, cancellationToken);
     }
 

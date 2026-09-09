@@ -43,16 +43,23 @@ export function apply(ctx) {
   const sharedFetch = ctx.connection.createSharedFetchHandler('/api')
   const streams = new Map()
   let writeChain = Promise.resolve()
+  let currentClient
+  let incomingClient
+  const unary = new Set()
 
   function send(value) {
-    const frame = encode(value)
+    const frame = value.type === 'attachment-frame'
+      ? Buffer.concat([encode({ type: 'attachment-frame', clientInstanceId: value.clientInstanceId }), encode(value.frame)])
+      : encode(value)
     writeChain = writeChain.then(() => new Promise((resolve, reject) => {
       output.write(frame, error => error ? reject(error) : resolve())
     }))
     return writeChain
   }
 
-  async function handleUnary(frame) {
+  async function handleUnary(frame, client) {
+    const operation = { client }
+    unary.add(operation)
     try {
       const response = await sharedFetch.fetch(new Request(`http://dsh.internal/api/${frame.endpoint}`, {
         method: 'POST',
@@ -60,16 +67,16 @@ export function apply(ctx) {
         body: JSON.stringify(frame.envelope),
       }))
       const envelope = await response.json()
-      await send({ type: 'unary-response', requestId: frame.requestId, envelope })
+      if (currentClient === client) await send({ type: 'attachment-frame', clientInstanceId: client, frame: { type: 'unary-response', requestId: frame.requestId, envelope } })
     } catch (error) {
-      await send({
+      if (currentClient === client) await send({ type: 'attachment-frame', clientInstanceId: client, frame: {
         type: 'unary-response', requestId: frame.requestId,
         envelope: {
           type: 'server-response', rpcId: frame.envelope.rpcId,
           result: { ok: false, error: { code: 'transport', message: String(error?.message ?? error), details: {} } },
         },
-      })
-    }
+      } })
+    } finally { unary.delete(operation) }
   }
 
   function grantCredit(state, count) {
@@ -88,8 +95,10 @@ export function apply(ctx) {
     return true
   }
 
-  async function handleStreamOpen(frame) {
-    const state = { controller: new AbortController(), credits: 0, wake: undefined, iterator: undefined }
+  async function handleStreamOpen(frame, client) {
+    const state = { controller: new AbortController(), credits: 0, wake: undefined, iterator: undefined, client }
+    const sendCurrent = value => currentClient === client && !state.controller.signal.aborted
+      ? send({ type: 'attachment-frame', clientInstanceId: client, frame: value }) : Promise.resolve()
     streams.set(frame.streamId, state)
     grantCredit(state, frame.initialCredits)
     try {
@@ -100,19 +109,19 @@ export function apply(ctx) {
         if (!await takeCredit(state)) return
         const item = await iterator.next()
         if (item.done) {
-          await send({ type: 'stream-end', streamId: frame.streamId })
+          await sendCurrent({ type: 'stream-end', streamId: frame.streamId })
           return
         }
-        await send({ type: 'stream-item', streamId: frame.streamId, value: item.value })
+        await sendCurrent({ type: 'stream-item', streamId: frame.streamId, value: item.value })
       }
     } catch (error) {
       if (state.controller.signal.aborted) {
-        await send({ type: 'stream-end', streamId: frame.streamId, cancelled: true })
+        await sendCurrent({ type: 'stream-end', streamId: frame.streamId, cancelled: true })
       } else {
-        await send({ type: 'stream-error', streamId: frame.streamId, error: ctx.typertGateway.wireStream.failure(error) })
+        await sendCurrent({ type: 'stream-error', streamId: frame.streamId, error: ctx.typertGateway.wireStream.failure(error) })
       }
     } finally {
-      streams.delete(frame.streamId)
+      if (streams.get(frame.streamId) === state) streams.delete(frame.streamId)
     }
   }
 
@@ -124,9 +133,42 @@ export function apply(ctx) {
     try { await state.iterator?.return?.() } catch { }
   }
 
-  const decode = createDecoder(frame => {
-    if (frame?.type === 'unary-request') void handleUnary(frame)
-    else if (frame?.type === 'stream-open' && typeof frame.streamId === 'string') void handleStreamOpen(frame)
+  async function endAttachment() {
+    currentClient = undefined
+    const pending = [...streams.values()].map(async state => {
+      state.controller.abort(); state.credits = 0; state.wake?.()
+      try { await state.iterator?.return?.() } catch {}
+    })
+    streams.clear()
+    unary.clear()
+    await Promise.all(pending)
+    await send({ type: 'attachment-reset' })
+  }
+
+  const decode = createDecoder(value => {
+    let message = value
+    if (incomingClient !== undefined) {
+      message = { type: 'attachment-frame', clientInstanceId: incomingClient, frame: value }
+      incomingClient = undefined
+    } else if (value?.type === 'attachment-frame' && typeof value.clientInstanceId === 'string') {
+      incomingClient = value.clientInstanceId
+      return
+    }
+    if (message?.type === 'attachment-start' && typeof message.clientInstanceId === 'string') {
+      if (currentClient !== undefined) throw new Error('Attachment overlap')
+      currentClient = message.clientInstanceId
+      return
+    }
+    if (message?.type === 'attachment-end') {
+      if (message.clientInstanceId !== currentClient) return
+      void endAttachment()
+      return
+    }
+    if (message?.type !== 'attachment-frame') throw new Error('Host attachment envelope invalid')
+    if (currentClient === undefined || message.clientInstanceId !== currentClient) return
+    const frame = message.frame
+    if (frame?.type === 'unary-request') void handleUnary(frame, currentClient)
+    else if (frame?.type === 'stream-open' && typeof frame.streamId === 'string') void handleStreamOpen(frame, currentClient)
     else if (frame?.type === 'stream-credit') {
       const state = streams.get(frame.streamId)
       if (state !== undefined) grantCredit(state, frame.credit)
@@ -145,8 +187,11 @@ export function apply(ctx) {
   input.on('end', () => {
     for (const state of streams.values()) state.controller.abort(new Error('Carrier bridge closed'))
     streams.clear()
+    process.exit(1)
   })
+  const heartbeat = setInterval(() => void send({ type: 'authority-heartbeat' }), 500)
   ctx.effect(() => () => {
+    clearInterval(heartbeat)
     input.destroy()
     output.end()
     for (const state of streams.values()) state.controller.abort(new Error('Host stopping'))

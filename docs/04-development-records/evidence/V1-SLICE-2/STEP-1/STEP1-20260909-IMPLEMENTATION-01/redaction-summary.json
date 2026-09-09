@@ -1,0 +1,189 @@
+{
+  "runId": "STEP1-20260909-IMPLEMENTATION-01",
+  "result": "PASS",
+  "scanned": [
+    {
+      "path": "apps/desktop/src/main/carrier-client.ts",
+      "bytes": 16544,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "apps/desktop/src/main/lifecycle-client.ts",
+      "bytes": 6606,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "apps/desktop/src/main/main.ts",
+      "bytes": 16293,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "apps/desktop/src/main/worker-supervisor.test.ts",
+      "bytes": 3756,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "apps/desktop/src/main/worker-supervisor.ts",
+      "bytes": 8609,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step1-authority-negative.ps1",
+      "bytes": 2121,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step1-lifecycle-main.mjs",
+      "bytes": 1511,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "apps/native-carrier/LifecycleAuthority.cs",
+      "bytes": 17356,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "apps/native-carrier/Program.cs",
+      "bytes": 13487,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "apps/native-carrier/WindowsAuthority.cs",
+      "bytes": 12259,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "apps/worker/host-profile/carrier-gateway.mjs",
+      "bytes": 8679,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "apps/worker/src/index.ts",
+      "bytes": 16370,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "package.json",
+      "bytes": 1626,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "scripts/smoke-carrier.mjs",
+      "bytes": 1946,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "scripts/smoke-electron.mjs",
+      "bytes": 6307,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "scripts/smoke-slice2-step1.mjs",
+      "bytes": 66211,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "scripts/smoke-worker.mjs",
+      "bytes": 2595,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/attachment-sequence.json",
+      "bytes": 29867,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/authority-identity.json",
+      "bytes": 8461,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/electron-regression.json",
+      "bytes": 20607,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/gate-results.json",
+      "bytes": 4449,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/process-lifecycle.json",
+      "bytes": 42542,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/run-manifest.json",
+      "bytes": 34775,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/security-negative-results.json",
+      "bytes": 28255,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/test-summary.json",
+      "bytes": 6296,
+      "strictUtf8": true,
+      "bom": false,
+      "suspiciousText": false
+    }
+  ],
+  "exactPrivateCarrierEndpoints": 0,
+  "rawCredentialValues": 0,
+  "credentialEpochPolicy": "Only permitted non-secret UUID identities or SHA-256 hashes; no credential bytes.",
+  "rendererPreloadByteIdentical": true,
+  "nonceOrProofInEvidence": false,
+  "ordinaryEnvironmentCredential": false,
+  "evidenceJsonParsed": true,
+  "ownFileAndImplementationRecord": "Validated independently after writing to avoid circular self-hashes."
+}

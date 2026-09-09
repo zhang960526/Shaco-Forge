@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { resolve } from 'node:path'
 import test from 'node:test'
 import { mapWorkerTerminal, readSupervisorConfig, WorkerSupervisor, WorkerTerminationState, type SupervisorConfig } from './worker-supervisor.js'
+import { validateAuthority } from './lifecycle-client.js'
 
 function fixtureConfig(profileName: string): SupervisorConfig {
   return {
@@ -55,25 +56,27 @@ test('unexpected Worker child exit still publishes Carrier Failure', () => {
   assert.match(termination.unexpectedFailure(23, null) ?? '', /23/)
 })
 
-test('Worker startup timeout fails closed and cleans the child', async () => {
+test('Unavailable native discovery fails closed before starting a Worker', async () => {
   const supervisor = new WorkerSupervisor(fixtureConfig('test-timeout'), 80)
-  await assert.rejects(supervisor.start(), /startup timed out after 80 ms/)
+  await assert.rejects(supervisor.start(), /Native lifecycle inspection rejected/)
   assert.equal((await supervisor.stop()).exited, true)
 })
 
-test('deliberate Supervisor.stop does not notify Carrier Failure listeners', async () => {
+test('Desktop detach does not notify authority failure or require an owned child', async () => {
   const supervisor = new WorkerSupervisor(fixtureConfig('test-deliberate'), 1_000)
   const failures: string[] = []
   supervisor.onCarrierFailure(reason => failures.push(reason))
-  await supervisor.start()
+  supervisor.detach()
   assert.equal((await supervisor.stop()).exited, true)
   assert.deepEqual(failures, [])
 })
 
-test('unexpected live Worker exit notifies Carrier Failure listeners', async () => {
-  const supervisor = new WorkerSupervisor(fixtureConfig('test-unexpected'), 1_000)
-  const failure = new Promise<string>(resolveFailure => supervisor.onCarrierFailure(resolveFailure))
-  await supervisor.start()
-  assert.match(await failure, /23/)
-  assert.equal((await supervisor.stop()).exited, true)
+test('Discovery rejects a reused PID, unhealthy authority and incompatible version', () => {
+  const peer = { pid: 42, startTime: '100' }
+  const status = { type: 'authority-status', protocolVersion: '1', workerInstanceId: 'authority', healthy: true,
+    helper: peer, worker: { pid: 41, startTime: '90' }, host: { pid: 43, startTime: '110' }, hostPreflight: {} }
+  assert.equal(validateAuthority(status, peer).workerInstanceId, 'authority')
+  assert.throws(() => validateAuthority(status, { ...peer, startTime: '101' }), /IDENTITY_OR_HEALTH/)
+  assert.throws(() => validateAuthority({ ...status, healthy: false }, peer), /IDENTITY_OR_HEALTH/)
+  assert.throws(() => validateAuthority({ ...status, protocolVersion: '2' }, peer), /IDENTITY_OR_HEALTH/)
 })

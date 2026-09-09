@@ -1,0 +1,894 @@
+{
+  "foundationAttempts": [
+    {
+      "attempt": 1,
+      "result": "FAIL",
+      "failure": "Lifecycle response timed out",
+      "workerPid": 36004,
+      "events": [
+        {
+          "protocolVersion": 1,
+          "phase": "worker-starting",
+          "timestamp": "2026-09-09T08:35:57.217Z",
+          "workerPid": 36004,
+          "parentPid": 31192,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-MLyJ4A",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-MLyJ4A\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "profileName": "shaco-forge-v1-slice-1b"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-starting",
+          "timestamp": "2026-09-09T08:35:57.390Z",
+          "workerPid": 36004,
+          "parentPid": 31192,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 60100,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-MLyJ4A\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-MLyJ4A\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-MLyJ4A",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-MLyJ4A\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-ready",
+          "timestamp": "2026-09-09T08:35:59.898Z",
+          "workerPid": 36004,
+          "parentPid": 31192,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 60100,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-MLyJ4A\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-MLyJ4A\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-MLyJ4A",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-MLyJ4A\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "readiness": {
+            "gatewayPresetCount": 4,
+            "standardPresetPresent": true
+          }
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "carrier-ready",
+          "timestamp": "2026-09-09T08:35:59.911Z",
+          "workerPid": 36004,
+          "parentPid": 31192,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 60100
+        }
+      ],
+      "stderr": "",
+      "attachments": [],
+      "cleanup": {
+        "workerExited": true,
+        "childExit": null,
+        "childSignal": "SIGKILL"
+      }
+    },
+    {
+      "attempt": 2,
+      "result": "FAIL",
+      "failure": "attachment-0-discovery: Lifecycle response timed out",
+      "workerPid": 58464,
+      "events": [
+        {
+          "protocolVersion": 1,
+          "phase": "worker-starting",
+          "timestamp": "2026-09-09T08:36:59.985Z",
+          "workerPid": 58464,
+          "parentPid": 30348,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-WPpe3o",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-WPpe3o\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "profileName": "shaco-forge-v1-slice-1b"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-starting",
+          "timestamp": "2026-09-09T08:37:00.173Z",
+          "workerPid": 58464,
+          "parentPid": 30348,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 14512,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-WPpe3o\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-WPpe3o\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-WPpe3o",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-WPpe3o\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-ready",
+          "timestamp": "2026-09-09T08:37:02.041Z",
+          "workerPid": 58464,
+          "parentPid": 30348,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 14512,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-WPpe3o\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-WPpe3o\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-WPpe3o",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-WPpe3o\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "readiness": {
+            "gatewayPresetCount": 4,
+            "standardPresetPresent": true
+          }
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "carrier-ready",
+          "timestamp": "2026-09-09T08:37:02.057Z",
+          "workerPid": 58464,
+          "parentPid": 30348,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 14512
+        }
+      ],
+      "stderr": "[native-carrier] LIFECYCLE_DIAGNOSTIC accepted\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC peer-inspected\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC request-read\r\n",
+      "attachments": [],
+      "cleanup": {
+        "workerExited": true,
+        "childExit": null,
+        "childSignal": "SIGKILL"
+      }
+    },
+    {
+      "attempt": 3,
+      "result": "FAIL",
+      "failure": "attachment-0-discovery: Lifecycle response timed out",
+      "workerPid": 41852,
+      "events": [
+        {
+          "protocolVersion": 1,
+          "phase": "worker-starting",
+          "timestamp": "2026-09-09T08:38:39.008Z",
+          "workerPid": 41852,
+          "parentPid": 56844,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-BDFh2e",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-BDFh2e\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "profileName": "shaco-forge-v1-slice-1b"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-starting",
+          "timestamp": "2026-09-09T08:38:39.184Z",
+          "workerPid": 41852,
+          "parentPid": 56844,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 50364,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-BDFh2e\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-BDFh2e\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-BDFh2e",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-BDFh2e\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-ready",
+          "timestamp": "2026-09-09T08:38:41.103Z",
+          "workerPid": 41852,
+          "parentPid": 56844,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 50364,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-BDFh2e\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-BDFh2e\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-BDFh2e",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-BDFh2e\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "readiness": {
+            "gatewayPresetCount": 4,
+            "standardPresetPresent": true
+          }
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "carrier-ready",
+          "timestamp": "2026-09-09T08:38:41.117Z",
+          "workerPid": 41852,
+          "parentPid": 56844,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 50364
+        }
+      ],
+      "stderr": "[native-carrier] LIFECYCLE_DIAGNOSTIC accepted\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC peer-inspected\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC request-read\r\n",
+      "attachments": [],
+      "cleanup": {
+        "workerExited": true,
+        "childExit": null,
+        "childSignal": "SIGKILL"
+      }
+    },
+    {
+      "attempt": 4,
+      "result": "FAIL",
+      "failure": "attachment-0-discovery: Lifecycle response timed out",
+      "workerPid": 57856,
+      "events": [
+        {
+          "protocolVersion": 1,
+          "phase": "worker-starting",
+          "timestamp": "2026-09-09T08:39:15.760Z",
+          "workerPid": 57856,
+          "parentPid": 49356,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-nqzDPM",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-nqzDPM\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "profileName": "shaco-forge-v1-slice-1b"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-starting",
+          "timestamp": "2026-09-09T08:39:15.941Z",
+          "workerPid": 57856,
+          "parentPid": 49356,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 37292,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-nqzDPM\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-nqzDPM\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-nqzDPM",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-nqzDPM\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-ready",
+          "timestamp": "2026-09-09T08:39:17.872Z",
+          "workerPid": 57856,
+          "parentPid": 49356,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 37292,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-nqzDPM\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-nqzDPM\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-nqzDPM",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-nqzDPM\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "readiness": {
+            "gatewayPresetCount": 4,
+            "standardPresetPresent": true
+          }
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "carrier-ready",
+          "timestamp": "2026-09-09T08:39:17.887Z",
+          "workerPid": 57856,
+          "parentPid": 49356,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 37292
+        }
+      ],
+      "stderr": "[native-carrier] LIFECYCLE_DIAGNOSTIC accepted\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC peer-inspected\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC request-read\r\n",
+      "attachments": [],
+      "cleanup": {
+        "workerExited": true,
+        "childExit": null,
+        "childSignal": "SIGKILL"
+      }
+    },
+    {
+      "attempt": 5,
+      "result": "FAIL",
+      "failure": "attachment-0-discovery: Lifecycle response timed out",
+      "workerPid": 57956,
+      "events": [
+        {
+          "protocolVersion": 1,
+          "phase": "worker-starting",
+          "timestamp": "2026-09-09T08:40:12.557Z",
+          "workerPid": 57956,
+          "parentPid": 55508,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-kqYd1e",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-kqYd1e\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "profileName": "shaco-forge-v1-slice-1b"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-starting",
+          "timestamp": "2026-09-09T08:40:12.734Z",
+          "workerPid": 57956,
+          "parentPid": 55508,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 30456,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-kqYd1e\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-kqYd1e\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-kqYd1e",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-kqYd1e\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-ready",
+          "timestamp": "2026-09-09T08:40:14.790Z",
+          "workerPid": 57956,
+          "parentPid": 55508,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 30456,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-kqYd1e\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-kqYd1e\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-kqYd1e",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-kqYd1e\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "readiness": {
+            "gatewayPresetCount": 4,
+            "standardPresetPresent": true
+          }
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "carrier-ready",
+          "timestamp": "2026-09-09T08:40:14.806Z",
+          "workerPid": 57956,
+          "parentPid": 55508,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 30456
+        }
+      ],
+      "stderr": "[native-carrier] LIFECYCLE_DIAGNOSTIC accepted\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC peer-inspected\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC request-read\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC validated\r\nLIFECYCLE_DIAGNOSTIC status-created\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC reply-start\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC reply-written\r\n",
+      "attachments": [],
+      "cleanup": {
+        "workerExited": true,
+        "childExit": null,
+        "childSignal": "SIGKILL"
+      }
+    },
+    {
+      "attempt": 6,
+      "result": "PASS",
+      "workerPid": 57840,
+      "events": [
+        {
+          "protocolVersion": 1,
+          "phase": "worker-starting",
+          "timestamp": "2026-09-09T08:41:24.754Z",
+          "workerPid": 57840,
+          "parentPid": 37820,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-Gibx0h",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-Gibx0h\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "profileName": "shaco-forge-v1-slice-1b"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-starting",
+          "timestamp": "2026-09-09T08:41:24.931Z",
+          "workerPid": 57840,
+          "parentPid": 37820,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 30636,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-Gibx0h\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-Gibx0h\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-Gibx0h",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-Gibx0h\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-ready",
+          "timestamp": "2026-09-09T08:41:26.942Z",
+          "workerPid": 57840,
+          "parentPid": 37820,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 30636,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-Gibx0h\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-Gibx0h\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-Gibx0h",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-foundation-Gibx0h\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "readiness": {
+            "gatewayPresetCount": 4,
+            "standardPresetPresent": true
+          }
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "carrier-ready",
+          "timestamp": "2026-09-09T08:41:26.957Z",
+          "workerPid": 57840,
+          "parentPid": 37820,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 30636
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-exited",
+          "timestamp": "2026-09-09T08:41:28.703Z",
+          "workerPid": 57840,
+          "parentPid": 37820,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 30636,
+          "exitCode": null,
+          "signal": "SIGTERM"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "worker-stopped",
+          "timestamp": "2026-09-09T08:41:28.703Z",
+          "workerPid": 57840,
+          "parentPid": 37820,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 30636,
+          "exitCode": 0
+        }
+      ],
+      "stderr": "[native-carrier] LIFECYCLE_DIAGNOSTIC accepted\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC peer-inspected\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC request-read\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC validated\r\nLIFECYCLE_DIAGNOSTIC status-created\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC reply-start\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC reply-written\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC accepted\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC peer-inspected\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC request-read\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC validated\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC accepted\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC peer-inspected\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC request-read\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC validated\r\nLIFECYCLE_DIAGNOSTIC status-created\r\nLIFECYCLE_DIAGNOSTIC reply-start\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC reply-written\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC accepted\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC peer-inspected\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC request-read\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC validated\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC accepted\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC peer-inspected\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC request-read\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC validated\r\nLIFECYCLE_DIAGNOSTIC reply-start\r\n[native-carrier] LIFECYCLE_DIAGNOSTIC reply-written\r\n",
+      "attachments": [
+        {
+          "workerInstanceId": "40a9cabc-164c-4cfc-a6dc-c1129a3b868d",
+          "credentialEpoch": "8ca7d65b-4e6c-4e26-b108-731850089d13",
+          "clientInstanceId": "9625b262-f79a-4d12-8c2e-1a31337db143",
+          "worker": {
+            "pid": 57840,
+            "startTime": "134334168753466092"
+          },
+          "host": {
+            "pid": 30636,
+            "startTime": "134334168848911417"
+          },
+          "helper": {
+            "pid": 39744,
+            "startTime": "134334168847721192"
+          },
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 1,
+            "unaryRequests": 1,
+            "streamOpens": 0,
+            "streamPulls": 0,
+            "streamCancels": 0,
+            "eventsReadyObserved": 0,
+            "maxRendererInflightPullPerStream": 0,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 1032,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 0,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          }
+        },
+        {
+          "workerInstanceId": "40a9cabc-164c-4cfc-a6dc-c1129a3b868d",
+          "credentialEpoch": "92e380b9-af6f-427b-940c-6f4065c8e10c",
+          "clientInstanceId": "f99c95ae-7e99-4981-8953-ac118921c237",
+          "worker": {
+            "pid": 57840,
+            "startTime": "134334168753466092"
+          },
+          "host": {
+            "pid": 30636,
+            "startTime": "134334168848911417"
+          },
+          "helper": {
+            "pid": 39744,
+            "startTime": "134334168847721192"
+          },
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 1,
+            "unaryRequests": 1,
+            "streamOpens": 0,
+            "streamPulls": 0,
+            "streamCancels": 0,
+            "eventsReadyObserved": 0,
+            "maxRendererInflightPullPerStream": 0,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 1032,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 0,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          }
+        }
+      ],
+      "cleanup": {
+        "workerExited": true,
+        "childExit": 0,
+        "childSignal": null
+      }
+    }
+  ],
+  "deferredGpuFailureCleanup": {
+    "parentMainPid": 58028,
+    "authority": {
+      "type": "authority-status",
+      "protocolVersion": "1",
+      "workerInstanceId": "4392b4bc-87ff-4f56-907f-2bbabe045eeb",
+      "worker": {
+        "pid": 53812,
+        "startTime": "134334179064416838"
+      },
+      "host": {
+        "pid": 35676,
+        "startTime": "134334179168844348"
+      },
+      "helper": {
+        "pid": 36036,
+        "startTime": "134334179167649182"
+      },
+      "healthy": true,
+      "state": "DETACHED",
+      "hostPreflight": {
+        "type": "host-carrier-preflight",
+        "profilePluginLoaded": true,
+        "fetchHandlerReady": true,
+        "wireStreamReady": true,
+        "eventsRouteReady": true,
+        "eventsRouteProbe": {
+          "endpoint": "$events",
+          "opened": true,
+          "readyObserved": true,
+          "readyShapeValid": true,
+          "cancelled": true,
+          "iteratorClosed": true,
+          "activeStreamsAfterCleanup": 0,
+          "eventSubscriptionRetained": false,
+          "clientRuntimeMetricCounted": false,
+          "businessOperationsPerformed": 0
+        },
+        "stockWebStarted": false
+      },
+      "job": {
+        "ownerPid": 53812,
+        "hostContained": true,
+        "helperContained": true,
+        "helperSetupHandleClosed": true,
+        "killOnClose": true
+      },
+      "mutex": {
+        "ownerPid": 36036,
+        "soleSteadyStateHolder": "HELPER"
+      },
+      "dispatchCount": 0,
+      "rejectedOldFrames": 0,
+      "detaches": 0
+    },
+    "remainingPids": [],
+    "reason": "Initial sandbox GPU crash occurred before driver obtained authority snapshot"
+  },
+  "electronRegressionCleanup": {
+    "before": {
+      "type": "authority-status",
+      "protocolVersion": "1",
+      "workerInstanceId": "13c53c68-5bb5-4fdb-944b-e83152efaeb0",
+      "dshHome": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-1b-electron-hCW7bh",
+      "workerRuntime": {
+        "nodeVersion": "v22.19.0",
+        "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+        "argv": [
+          "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+        ],
+        "parentPid": 53260
+      },
+      "worker": {
+        "pid": 49652,
+        "startTime": "134334194589245328"
+      },
+      "host": {
+        "pid": 11764,
+        "startTime": "134334194740209139"
+      },
+      "helper": {
+        "pid": 9832,
+        "startTime": "134334194738852029"
+      },
+      "healthy": true,
+      "state": "DETACHED",
+      "hostPreflight": {
+        "type": "host-carrier-preflight",
+        "profilePluginLoaded": true,
+        "fetchHandlerReady": true,
+        "wireStreamReady": true,
+        "eventsRouteReady": true,
+        "eventsRouteProbe": {
+          "endpoint": "$events",
+          "opened": true,
+          "readyObserved": true,
+          "readyShapeValid": true,
+          "cancelled": true,
+          "iteratorClosed": true,
+          "activeStreamsAfterCleanup": 0,
+          "eventSubscriptionRetained": false,
+          "clientRuntimeMetricCounted": false,
+          "businessOperationsPerformed": 0
+        },
+        "stockWebStarted": false
+      },
+      "job": {
+        "ownerPid": 49652,
+        "hostContained": true,
+        "helperContained": true,
+        "helperSetupHandleClosed": true,
+        "killOnClose": true
+      },
+      "mutex": {
+        "ownerPid": 9832,
+        "soleSteadyStateHolder": "HELPER"
+      },
+      "dispatchCount": 11,
+      "rejectedOldFrames": 0,
+      "detaches": 1
+    },
+    "stopResponse": {
+      "type": "stopping"
+    },
+    "remainingPids": [],
+    "classification": "CONTROLLED_POST_FAILURE_CLEANUP_NOT_G15_PASS"
+  }
+}

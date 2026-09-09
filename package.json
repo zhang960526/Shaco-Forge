@@ -15,6 +15,7 @@
     "smoke:electron": "node scripts/smoke-electron.mjs",
     "smoke:failure": "node scripts/smoke-electron.mjs --inject-carrier-failure",
     "smoke:carrier": "node scripts/smoke-carrier.mjs",
+    "smoke:slice2-step1": "node scripts/smoke-slice2-step1.mjs --runtime",
     "smoke:user-loop": "node scripts/smoke-user-loop.mjs",
     "verify:static": "node scripts/verify-static.mjs",
     "verify:theme": "node scripts/verify-theme.mjs"

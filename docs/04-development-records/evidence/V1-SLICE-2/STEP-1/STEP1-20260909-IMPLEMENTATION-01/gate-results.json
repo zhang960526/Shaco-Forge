@@ -1,0 +1,127 @@
+{
+  "runId": "STEP1-20260909-IMPLEMENTATION-01",
+  "result": "STOPPED_BLOCKED",
+  "implementationProven": false,
+  "firstUnresolvedBoundary": "G15_BOUNDED_STOP_NOT_DELIVERED_DURING_ELECTRON_TEARDOWN",
+  "earlierIncompleteGates": [
+    "G10",
+    "G20",
+    "G21"
+  ],
+  "gates": [
+    {
+      "id": "G01",
+      "result": "PASS",
+      "evidence": "Observed one ready per-user authority; complete concurrent-start overlap gate remains separately unexecuted (G21)."
+    },
+    {
+      "id": "G02",
+      "result": "PASS",
+      "evidence": "Actual Product Electron window close; Worker/Host/Helper PID and start identity survive."
+    },
+    {
+      "id": "G03",
+      "result": "PASS",
+      "evidence": "Actual Product Electron Main hard crash; Worker/Host/Helper survive."
+    },
+    {
+      "id": "G04",
+      "result": "PASS",
+      "evidence": "Three fresh Main PIDs attach to the same workerInstanceId."
+    },
+    {
+      "id": "G05",
+      "result": "PASS",
+      "evidence": "Three distinct epoch hashes; consumed/expired/replayed credentials rejected."
+    },
+    {
+      "id": "G06",
+      "result": "PASS",
+      "evidence": "BUSY at CREDENTIAL_ISSUED, AUTHENTICATING and ATTACHED."
+    },
+    {
+      "id": "G07",
+      "result": "PASS",
+      "evidence": "Wrong/stale/expired/consumed/replayed capability inputs rejected with zero dispatch delta."
+    },
+    {
+      "id": "G08",
+      "result": "PASS",
+      "evidence": "Lifecycle claimed PID and start mismatches rejected against actual handle peer."
+    },
+    {
+      "id": "G09",
+      "result": "PASS",
+      "evidence": "Separate actual Carrier peer process rejected before challenge; dispatch delta zero."
+    },
+    {
+      "id": "G10",
+      "result": "NOT_EXECUTED",
+      "evidence": "Partial proof: framing/auth/real $events sequential reset passed. Exhaustive pending callback/buffer settlement probe added later was not executed."
+    },
+    {
+      "id": "G11",
+      "result": "PASS",
+      "evidence": "Helper hard death classified WORKER_AUTHORITY_FAILURE; all epoch processes ended."
+    },
+    {
+      "id": "G12",
+      "result": "PASS",
+      "evidence": "Host hard death classified WORKER_AUTHORITY_FAILURE; all epoch processes ended."
+    },
+    {
+      "id": "G13",
+      "result": "PASS",
+      "evidence": "Worker hard death closed Worker-owned Job and killed Host+Helper; no orphan."
+    },
+    {
+      "id": "G14",
+      "result": "PASS",
+      "evidence": "Held/hung/retained-abandoned mutex fixtures fail closed; Product discovery launched zero Workers."
+    },
+    {
+      "id": "G15",
+      "result": "FAIL",
+      "evidence": "Isolated stop passed, but required full Electron regression returned cleanup.exited=false with healthy DETACHED authority still alive. Controlled post-failure cleanup is not gate PASS."
+    },
+    {
+      "id": "G16",
+      "result": "PASS",
+      "evidence": "ACCESS_CONTROL_PROOF: inspected real pipe owner/protected single-SID ACL; deterministic non-admin different-SID evaluation denies access. No second-user login claimed."
+    },
+    {
+      "id": "G17",
+      "result": "PASS",
+      "evidence": "Actual Electron Renderer has no require/process/lifecycle access; unchanged preload allowlist."
+    },
+    {
+      "id": "G18",
+      "result": "PASS",
+      "evidence": "Lifecycle protocol version 2 rejected before credential issuance."
+    },
+    {
+      "id": "G19",
+      "result": "PASS",
+      "evidence": "Source/Evidence hygiene checked; no raw secret/proof/exact private Carrier endpoint in Evidence; epochs represented as permitted identities/hashes."
+    },
+    {
+      "id": "G20",
+      "result": "NOT_EXECUTED",
+      "evidence": "Basic old Client reuse/stream rejection passed. Added five-pending-callback and queued-frame test was not run before stop."
+    },
+    {
+      "id": "G21",
+      "result": "NOT_EXECUTED",
+      "evidence": "No observed overlap and held/hung paths launch zero Workers; dedicated competing-candidate runtime was added but not executed."
+    },
+    {
+      "id": "G22",
+      "result": "PASS",
+      "evidence": "Step1 conditional scope: ambiguous old authority never launches replacement; abandoned-acquisition candidate starts no Host and never becomes ready. No Step2 replacement/adoption recovery implemented."
+    }
+  ],
+  "majorCorrectiveCyclesUsed": 4,
+  "majorCorrectiveCyclesAllowed": 4,
+  "finalElectronRegression": "FAIL",
+  "independentReview": "NOT_PERFORMED"
+}

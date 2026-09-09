@@ -1,0 +1,993 @@
+{
+  "runId": "STEP1-20260909-IMPLEMENTATION-01",
+  "startedAt": "2026-09-09T08:23:27.099Z",
+  "result": "STOPPED_BLOCKED",
+  "baseline": {
+    "branch": "master",
+    "productHead": "f4cf53efcef8bf83c2a5361f5128e5eeae99a2cd",
+    "worktree": "CLEAN",
+    "staged": "NONE",
+    "untracked": "NONE",
+    "harnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "harnessState": "CLEAN"
+  },
+  "node": "v22.19.0",
+  "pnpm": "11.7.0",
+  "providerRuns": 0,
+  "commit": false,
+  "push": false,
+  "historicalPre": [
+    {
+      "path": "apps/desktop/test-fixtures/step1-non-product-peer.cjs",
+      "bytes": 567,
+      "sha256": "ae8eaaffca1ebadc19f7d975a5751abc464c3eef2905a761da3aabca64002295",
+      "bom": false
+    },
+    {
+      "path": "docs/02-architecture/SHACO-FORGE-SECURITY-MODEL.md",
+      "bytes": 2924,
+      "sha256": "cfaa0dfa14c57d32f2c8b34547df82b49ead5b46bbea2844cab0cc6b3ef5bfd3",
+      "bom": false
+    },
+    {
+      "path": "docs/03-v1.0-plan/V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-CONTRACT.md",
+      "bytes": 12776,
+      "sha256": "8a9e2c0af4ae3e5c44de8bdbfd2ce43e173ee59a612507f88e990e7dd74f8c14",
+      "bom": false
+    },
+    {
+      "path": "docs/03-v1.0-plan/V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md",
+      "bytes": 12573,
+      "sha256": "68db86b526f3e046ac5168f154823817337dab37eea74c8f128f923a81df3c3f",
+      "bom": false
+    },
+    {
+      "path": "docs/03-v1.0-plan/V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md",
+      "bytes": 21972,
+      "sha256": "ad1d0ac21cab8c5e0794b02152bc1dc2cf27a090c50ec9338b47b7b9f9600cbb",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-0-MAINLINE-AND-STEP1-SCOPE-RECONCILIATION-DECISION.md",
+      "bytes": 8975,
+      "sha256": "72c04fdd18e712a80b71335290bc1365f8d6e53a7325c39f4f798565477ef1fc",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-ARCHITECTURE-OWNER-DECISION.md",
+      "bytes": 4059,
+      "sha256": "7461e44cfb9eb85f8fe48a0898ac00e3abb55c1bd010598d75762cec806f7361",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md",
+      "bytes": 4876,
+      "sha256": "a3995a64763a22f301dab536dfeabc4e118d069d52180bcc2fdfafb414f000e9",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-CONTROL-SERVER-ATTESTATION-SOURCE-CONFIRMATION.md",
+      "bytes": 3848,
+      "sha256": "40d6969cc1a175a5e2f68a237ea8c40a5725af8fedcc80083aa427f114c16c14",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-DESKTOP-ATTESTATION-BLOCKED-RECORD.md",
+      "bytes": 13346,
+      "sha256": "316aced5037634bb5acf41d9780f8f9db8185543fc2839eed970462102f1fd11",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md",
+      "bytes": 8134,
+      "sha256": "4bcc39c92498845eed3dc4e632b9e278341333cd12ea731829da5c41228e3202",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md",
+      "bytes": 4748,
+      "sha256": "1561985fd51e3175ebce0e33c41812d7b62f166c96b37fa3f0f6c460835ba469",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/identity-probe-attempt-1.json",
+      "bytes": 439,
+      "sha256": "5387fd5ccccbc709b59610dbccd1b29e10c0061e6d1ad385d4fe2d4b0dad16b9",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/identity-probe-attempt-2.json",
+      "bytes": 982,
+      "sha256": "e25af8ee54167fd9060df923ca886070b55d97e446060f049ae681a8556cf4a9",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/process-lifecycle.json",
+      "bytes": 726,
+      "sha256": "7e0d843601060481caa36bb1463131b4c1d9759aae9c77eabe5a0b833309a2cb",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/redaction-summary.json",
+      "bytes": 3031,
+      "sha256": "2c247d6b213e62771fd155b39e6e4610b5bc4425df978fe2b4291d819668c7ff",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/run-manifest.json",
+      "bytes": 2296,
+      "sha256": "056eb1baa850b4f6c42f487e146ef7a565e8596f14e68a8acbdd5afca80acdf5",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/scenario-results.json",
+      "bytes": 4889,
+      "sha256": "2bd7b3ffc65be2ec54399ac1df6c591141294a47ed7e72351bdba5b6453de17d",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/security-negative-results.json",
+      "bytes": 1558,
+      "sha256": "d6e997c7c5fac9169f474d12ba18a2f20d6d8ea201aab5eddee9fbce95e934a9",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/test-summary.json",
+      "bytes": 2775,
+      "sha256": "720f27277e85f35f4cfe6bd2c878c0cd22de52f5bf1c802cf2c3f75664e3deea",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/redaction-summary.json",
+      "bytes": 497,
+      "sha256": "9ccb64c87b05159098b1e843e277c0f92f17ea31b0c9702cf6a8bf5c129fa6ad",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/run-manifest.json",
+      "bytes": 763,
+      "sha256": "56f30936f867f03113a8ec610a116f5e3e503e12cabdc45a785bb5a01758281a",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/server-attestation-result.json",
+      "bytes": 1588,
+      "sha256": "b17eeb0753fe10f3a95ea13350715468a23390fed045396859bf24669ae19cbf",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/test-summary.json",
+      "bytes": 802,
+      "sha256": "51540ac82311b62d5076a51ea9ff2c33279798d78baee50118049a992dca662e",
+      "bom": false
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-020-V1-SLICE-2-CONTRACT-TARGETED-DELTA-REREVIEW.md",
+      "bytes": 3380,
+      "sha256": "2d8aa2ddc48f2493ea2e9fe07f9f2b08cbc015d5d2defa454c0de898c1b75294",
+      "bom": false
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-021-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-REVIEW.md",
+      "bytes": 5707,
+      "sha256": "bc6a8eb711c6b4967092223ab6e98759cfd12f9b65c0e87312d8a45b752ce201",
+      "bom": false
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-022-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-PERSISTED-DELTA-REVIEW.md",
+      "bytes": 3844,
+      "sha256": "95c4b76b7f33352a68a48b619712bf327e08d70fb00dcc367ad3edc927f19e14",
+      "bom": false
+    },
+    {
+      "path": "scripts/step1-identity-probe.ps1",
+      "bytes": 8332,
+      "sha256": "32306f6944b107dc016cff6aad5ff8677e7d8459dcdb136f61cf473ae1eb37d1",
+      "bom": false
+    },
+    {
+      "path": "scripts/step1-server-attestation-probe.ps1",
+      "bytes": 26014,
+      "sha256": "7c3344827cd82833924ec14108c918aa8cb378f45d20355dddc66e9dca71be39",
+      "bom": false
+    }
+  ],
+  "sourceEncodingPre": [
+    {
+      "path": "apps/desktop/index.html",
+      "bytes": 2703,
+      "sha256": "5471a71581e3acc0fee5b59255d2f78f34a4dd218ffec2c14c5fa6b17a530480",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/package.json",
+      "bytes": 469,
+      "sha256": "42e3fac4ad96d0e48a366bf59ab309c4a8db126f96b367a9a2cc13431343b95a",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/scripts/frozen-harness-packages.mjs",
+      "bytes": 2895,
+      "sha256": "1928c33d5a6cf07512ee836f8cf13385e3f28b7f0cba78bd5a549885579f9284",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/scripts/prepare-harness-client.mjs",
+      "bytes": 8361,
+      "sha256": "7e29374a710fdf0fe1bef0f9aef264432366d73517b264f8ec693897828abe61",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/carrier-client.test.ts",
+      "bytes": 9847,
+      "sha256": "ff40510d7b9a72f325507e772808f32d80343e7bdc50492376095b3f6c3f3bd9",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/carrier-client.ts",
+      "bytes": 15707,
+      "sha256": "0100d9ffc024ae5d4e67f14fa279ce1538b023c4298eec41ba040f923b4ba787",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/frame-observation.test.ts",
+      "bytes": 1162,
+      "sha256": "393b30af30486f71cee48ef1e82a042b1bd5969f0ef5051716266cbf400fd12b",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/main.ts",
+      "bytes": 15778,
+      "sha256": "7d9247c7b491fc8073058edd64de0743722a539f8e76048b22bb6cc3b2a2a8ae",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/security.test.ts",
+      "bytes": 483,
+      "sha256": "1f4163436926e3de67baa2dda15139dfceefc866992f29912675ed2c8d9d80de",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/security.ts",
+      "bytes": 689,
+      "sha256": "6bf43e273e9a75c49d74be1c0828f09505f941e16cb0288ecc30463598d8ec6c",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/window-lifecycle.test.ts",
+      "bytes": 1556,
+      "sha256": "830dc7190cd9fc578513d58eb5ecbc5000eac6b143161b1cf154c04a96e46178",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/window-lifecycle.ts",
+      "bytes": 757,
+      "sha256": "f6d1eecc199ba33ba2209f4035123fe4cf8951d897684ebce6744759f01757e2",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/worker-supervisor.test.ts",
+      "bytes": 3317,
+      "sha256": "3d6bc714f0fc792ec5a5263212303e7be320a59a4a339c3a13249e783d7bfb2e",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/worker-supervisor.ts",
+      "bytes": 9588,
+      "sha256": "1e3786716ee6f89744edfa114a440377c4201958ef5a377824d3bff13647fa07",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/preload/preload.cts",
+      "bytes": 1555,
+      "sha256": "d94ca8c4fa1e3cd69078515e2feb70fa9aaf89b5a098a3f8fc5ad742750953b5",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/global.d.ts",
+      "bytes": 1554,
+      "sha256": "d0fc37842369b2ee481bb14da016e85d65037389db62dca16f96541b66aaf826",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/main.ts",
+      "bytes": 8800,
+      "sha256": "6c1336e545dfde0f55af5d4fe0a7ede2ef694d9fa4a8cdf3b659c67510c60027",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/node-module-stub.ts",
+      "bytes": 157,
+      "sha256": "db7d34fe138bbc53bd94cee1c95c32b28164101087b8718058be6b6c6f4687e0",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/shell-bootstrap.ts",
+      "bytes": 464,
+      "sha256": "a986a3399cba1df949ff52e43a2758aa25cd80ced629ec91239a45ddb0829d1a",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/styles.css",
+      "bytes": 4066,
+      "sha256": "2316b527dca881496ed6e1aa2f9467e98a648dd3ed27a142d16d070c674c122e",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/theme/theme.ts",
+      "bytes": 1333,
+      "sha256": "11aa6798137e0e2bea3c04ead0fb30dd76c69cb21ab4c99ea47a259130ae360c",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/theme/themes.css",
+      "bytes": 1441,
+      "sha256": "0383c9946cf61dbdcde6bfddf3aa53c28bb315826580dd73953f5a9c810a741b",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/theme/tokens.css",
+      "bytes": 2073,
+      "sha256": "b15506249bc3542a5d4208c50e29dcca340418ed4fd7c5328f842d1a13dac309",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/transport.ts",
+      "bytes": 4299,
+      "sha256": "0e36a3785c0bfd411030e9481226dce944f3050b4216b91fcf2c530799bd6a6f",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/user-loop-evidence.ts",
+      "bytes": 15345,
+      "sha256": "f3d19e653c2971ffb5a130de14d15774dc83529d175747b53932f50d3c4c44fd",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step1-non-product-peer.cjs",
+      "bytes": 567,
+      "sha256": "ae8eaaffca1ebadc19f7d975a5751abc464c3eef2905a761da3aabca64002295",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/test-fixtures/supervisor-native-wait-worker.mjs",
+      "bytes": 1203,
+      "sha256": "f47e167daca7a5be7046c03e746ef14139e023c15f9de4f5598f6b7e4f1d39e5",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/test-fixtures/supervisor-worker.mjs",
+      "bytes": 873,
+      "sha256": "55f4668236b1bca5e9cb631967b46490f798f3ac2386ba57c5b5e9f4cc7fe547",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/tests/theme.test.ts",
+      "bytes": 1764,
+      "sha256": "f0278e2afada2dc077b4cf8b8848aa95f4772334003fcb4679abd88c9f5e9525",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/tests/transport.test.ts",
+      "bytes": 1913,
+      "sha256": "651f278331fafb88c9018edbf59583ce21e75fb66ec53051d67b000e76552e6a",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/tests/user-loop-evidence.test.ts",
+      "bytes": 15885,
+      "sha256": "6b3eabea256f956ce7264604013c171ddfa54b8297964bb4a814088ada02c4bc",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/tsconfig.node.json",
+      "bytes": 311,
+      "sha256": "2f8667a2e9c65d532f192cc30b680d885f1f1ad22a15d255ed045c3d8fb636fe",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/tsconfig.renderer.json",
+      "bytes": 316,
+      "sha256": "c94935cb42adaee8e1cb85a607eef6b3ca80bbf3663f9388f78b0ca70aa43aa0",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/tsconfig.test.json",
+      "bytes": 334,
+      "sha256": "b3dba2b152dc14ee9dcd0d044f7d1bb4f750eb977f15a1d64306685ba4061b67",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/vite.config.ts",
+      "bytes": 1754,
+      "sha256": "eafb74965312538cde71e4e68be50e09ee9f15d9cc2f94ea21e008af29c5a6f0",
+      "bom": false
+    },
+    {
+      "path": "apps/native-carrier/Program.cs",
+      "bytes": 17427,
+      "sha256": "4614521a9a1583dbdabc03957fb61c1cf9d87485e54667fd60ff9ba21220745b",
+      "bom": false
+    },
+    {
+      "path": "apps/native-carrier/ShacoForge.NativeCarrier.csproj",
+      "bytes": 478,
+      "sha256": "0dc1acd2408df4d259d37e4c5d6c17a666a3d5a9fee4910ca15f37f998bae684",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/host-profile/carrier-gateway.mjs",
+      "bytes": 6365,
+      "sha256": "5d77eb83ecf5e55d893e832e71e1423ea2ef054d6197a1efcb7c970c6baf7f33",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/host-profile/connection-compatibility.mjs",
+      "bytes": 728,
+      "sha256": "1d765b237400cc81261f76988f88caf6f9920d1a5fc4d09a3151491028796748",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/host-profile/events-route-preflight.mjs",
+      "bytes": 4412,
+      "sha256": "0c696585b96b979a1302ae0fda46d9a6b9428ffb30bebaa55494b302ad8bf3a0",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/host-profile/events-route-preflight.test.mjs",
+      "bytes": 4403,
+      "sha256": "13d950ebeaaec0d620aeef82a19071b8bf496af1a8e67c4ad2ec69d60bde0dce",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/package.json",
+      "bytes": 305,
+      "sha256": "773ebfdafb4e3630f697e26448ade7e821f569847ceb48813a21501e1e45fec4",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/src/config.test.ts",
+      "bytes": 1060,
+      "sha256": "5cce94e53a5341b0780f5224ad659bd6e3284ec378d606b0fd0bef509970a486",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/src/config.ts",
+      "bytes": 1342,
+      "sha256": "1faa40981a6855b0f846e31fedded78a0e7451d1be25ab221d7089d4decbf44e",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/src/harness-readiness.ts",
+      "bytes": 1087,
+      "sha256": "2bc37adef53796d7665fe91043bc872d424851f0206d4d5b9ef60110c3e1f28d",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/src/harness-runtime.ts",
+      "bytes": 7182,
+      "sha256": "a9b1562763cfa2c05d6fc27026299313ab8ee0f4048b0319929a59a7805da2a5",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/src/host-carrier-preflight.test.ts",
+      "bytes": 2350,
+      "sha256": "de7ca0b5ce1b8ca0c228e6a029b7f9e8ebc7b1aec93e1ac92c17a77d7ab02519",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/src/host-carrier-preflight.ts",
+      "bytes": 1645,
+      "sha256": "1e2912d9b7148d69683aa81a9ceb331dec56abf046b9b3a4021493ed336800f6",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/src/host-readiness-marker.test.ts",
+      "bytes": 844,
+      "sha256": "cb9ad9d1e6ad1168bc7c41a3b721170fa081a7b253eab5f42745a1da97203edc",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/src/host-readiness-marker.ts",
+      "bytes": 865,
+      "sha256": "f25c0859488a7ed936dced333bc6e0cb6298d3f6f5e4577af5b1c2a2ac737487",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/src/index.ts",
+      "bytes": 14215,
+      "sha256": "97d6d2511da29a458976bc2c42b3c94fb353a0237c72fb357f147f477d91c9f2",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/src/profile.ts",
+      "bytes": 4298,
+      "sha256": "55c107bc75f475dc11c06f99c1a2447ae318f8f9be0e5fa7580da6883c2686c4",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/tsconfig.json",
+      "bytes": 276,
+      "sha256": "c120dcf9982d59a1a348e982bf5666b4f86b1d3e21a2f49f93bc73b7dc06579e",
+      "bom": false
+    },
+    {
+      "path": "docs/00-governance/SHACO-FORGE-CURRENT-STATE.md",
+      "bytes": 56631,
+      "sha256": "99f7a5c6784540f5af3512ce3e9e5a10c99b3185c359127280684cc2c454a39d",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/DEVELOPMENT-LOG.md",
+      "bytes": 86043,
+      "sha256": "0ceba975b74ebcd80e02ab14569b37849e63c681294e9ecd9023b7d601aefce6",
+      "bom": false
+    },
+    {
+      "path": "package.json",
+      "bytes": 1551,
+      "sha256": "af32c93057518603b36c1b0b4e2b5547aac0e3788195dd5237b37d42d71333f0",
+      "bom": false
+    },
+    {
+      "path": "packages/contracts/package.json",
+      "bytes": 377,
+      "sha256": "ee68757f05123740a286a5aaf5892e7b347932919447b29dbd0058ae67fa99fc",
+      "bom": false
+    },
+    {
+      "path": "packages/contracts/src/carrier.test.ts",
+      "bytes": 4703,
+      "sha256": "06bf8a848acb3047ff5d652be35a510b8f6383a90a30af5b158021dc50d18c34",
+      "bom": false
+    },
+    {
+      "path": "packages/contracts/src/carrier.ts",
+      "bytes": 6770,
+      "sha256": "1c61df395e9cf4f54795958ffbe3419f49872366216f36a77b82d0772cb4a1ac",
+      "bom": false
+    },
+    {
+      "path": "packages/contracts/src/index.test.ts",
+      "bytes": 818,
+      "sha256": "5aa50a38e45f3404763754ae08b191b02f1618b8c1813af610ffded24c9d26d1",
+      "bom": false
+    },
+    {
+      "path": "packages/contracts/src/index.ts",
+      "bytes": 1838,
+      "sha256": "60581367cb36c2c6cfda7d93cd2259ba9480d9eaf4ce8b313eb85bdf11da8dac",
+      "bom": false
+    },
+    {
+      "path": "packages/contracts/tsconfig.json",
+      "bytes": 221,
+      "sha256": "337c4a8b967d337cc7227448678b4fc9a30d43c08e6227e208d71b4d44a9011f",
+      "bom": false
+    },
+    {
+      "path": "scripts/build.mjs",
+      "bytes": 1497,
+      "sha256": "6422985b7d63babcb17e557593a77f6fefd18f34ab0ddfdba6419dd4bb44a024",
+      "bom": false
+    },
+    {
+      "path": "scripts/electron-user-loop.mjs",
+      "bytes": 20212,
+      "sha256": "0320d56ad14946632cf6a5bc63d8b4f7a04bf28161bb1dc7dfda47faf0f0c275",
+      "bom": false
+    },
+    {
+      "path": "scripts/runtime-paths.mjs",
+      "bytes": 387,
+      "sha256": "ce6ff6e813bc51d96add74624d1eb75f3ae923003b89c09f98dccfb87695096a",
+      "bom": false
+    },
+    {
+      "path": "scripts/smoke-carrier.mjs",
+      "bytes": 13591,
+      "sha256": "c447d5c873657ac74daa174e4b0743316c97a6fdf7d467e03a5b46f6a57f2c80",
+      "bom": false
+    },
+    {
+      "path": "scripts/smoke-electron.mjs",
+      "bytes": 6155,
+      "sha256": "59206ab8e0490bce90eec3bfcfbb157287324a9c331ee711bc9343491891897a",
+      "bom": false
+    },
+    {
+      "path": "scripts/smoke-user-loop.mjs",
+      "bytes": 10992,
+      "sha256": "f0504c6f9f9c3142d488804a694e27e2e42fe110c0e09745bf3124376f55799c",
+      "bom": false
+    },
+    {
+      "path": "scripts/smoke-worker.mjs",
+      "bytes": 5453,
+      "sha256": "ab4f10c006b86473be53e72283a204e75cae3ff144da40e2dd11b313751aa817",
+      "bom": false
+    },
+    {
+      "path": "scripts/step1-identity-probe.ps1",
+      "bytes": 8332,
+      "sha256": "32306f6944b107dc016cff6aad5ff8677e7d8459dcdb136f61cf473ae1eb37d1",
+      "bom": false
+    },
+    {
+      "path": "scripts/step1-server-attestation-probe.ps1",
+      "bytes": 26014,
+      "sha256": "7c3344827cd82833924ec14108c918aa8cb378f45d20355dddc66e9dca71be39",
+      "bom": false
+    },
+    {
+      "path": "scripts/tool-runner.mjs",
+      "bytes": 1067,
+      "sha256": "1b0727c4d2e38fdd100cd8930210cae3032b38d4222ffd66689611bfd8997063",
+      "bom": false
+    },
+    {
+      "path": "scripts/typecheck.mjs",
+      "bytes": 902,
+      "sha256": "af3f552138b2006719a5c56ca1d38a35804f1fdbc96393c0a486e81670513d69",
+      "bom": false
+    },
+    {
+      "path": "scripts/user-loop-policy.mjs",
+      "bytes": 8898,
+      "sha256": "a64fe56159d34b5fa3fb3f6e93d10eb15ff35ef09d0d7db3304ff7e6f6c47501",
+      "bom": false
+    },
+    {
+      "path": "scripts/user-loop-policy.test.mjs",
+      "bytes": 25004,
+      "sha256": "3950336e49bf40b19d085979ff85d96bd0314b4d94719c892b0eb2ea8a0defd7",
+      "bom": false
+    },
+    {
+      "path": "scripts/user-loop-revalidation-preflight.mjs",
+      "bytes": 4531,
+      "sha256": "3bad895dc5ed2a17fcc12a9b4ffe45f43d3336f73180496d578d3dd2729c9993",
+      "bom": false
+    },
+    {
+      "path": "scripts/user-loop-revalidation.mjs",
+      "bytes": 14155,
+      "sha256": "605022f4baf5b2bf8b617b0d5b301db1c23502f14438439aa72826651635cc58",
+      "bom": false
+    },
+    {
+      "path": "scripts/verify-static.mjs",
+      "bytes": 1994,
+      "sha256": "ad516ec8c894eefce40a29d9b104aa6805f82e52bed356cfb53f832c9896e149",
+      "bom": false
+    },
+    {
+      "path": "scripts/verify-theme.mjs",
+      "bytes": 2839,
+      "sha256": "feafa6811224d6d537f769a30dcfb54f6e18c72180ca870ea40513ab71a8f63a",
+      "bom": false
+    },
+    {
+      "path": "scripts/verify-user-loop-hygiene.mjs",
+      "bytes": 3439,
+      "sha256": "5c79256a4d7b4015022a215cd1009ba1d7fdad73baf1fd5c72a7e9212e55ea06",
+      "bom": false
+    }
+  ],
+  "implementationResult": "IMPLEMENTATION_NOT_PROVEN",
+  "stoppedAt": "2026-09-09T09:35:47.302Z",
+  "firstUnresolvedBoundary": "G15_BOUNDED_STOP_NOT_DELIVERED_DURING_ELECTRON_TEARDOWN",
+  "nextAction": "ARCHITECTURE_OWNER_ASSESS_STEP1_IMPLEMENTATION_BLOCKER",
+  "historicalPost": [
+    {
+      "path": "apps/desktop/test-fixtures/step1-non-product-peer.cjs",
+      "bytes": 567,
+      "sha256": "ae8eaaffca1ebadc19f7d975a5751abc464c3eef2905a761da3aabca64002295",
+      "bom": false
+    },
+    {
+      "path": "docs/02-architecture/SHACO-FORGE-SECURITY-MODEL.md",
+      "bytes": 2924,
+      "sha256": "cfaa0dfa14c57d32f2c8b34547df82b49ead5b46bbea2844cab0cc6b3ef5bfd3",
+      "bom": false
+    },
+    {
+      "path": "docs/03-v1.0-plan/V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-CONTRACT.md",
+      "bytes": 12776,
+      "sha256": "8a9e2c0af4ae3e5c44de8bdbfd2ce43e173ee59a612507f88e990e7dd74f8c14",
+      "bom": false
+    },
+    {
+      "path": "docs/03-v1.0-plan/V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md",
+      "bytes": 12573,
+      "sha256": "68db86b526f3e046ac5168f154823817337dab37eea74c8f128f923a81df3c3f",
+      "bom": false
+    },
+    {
+      "path": "docs/03-v1.0-plan/V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md",
+      "bytes": 21972,
+      "sha256": "ad1d0ac21cab8c5e0794b02152bc1dc2cf27a090c50ec9338b47b7b9f9600cbb",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-0-MAINLINE-AND-STEP1-SCOPE-RECONCILIATION-DECISION.md",
+      "bytes": 8975,
+      "sha256": "72c04fdd18e712a80b71335290bc1365f8d6e53a7325c39f4f798565477ef1fc",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-ARCHITECTURE-OWNER-DECISION.md",
+      "bytes": 4059,
+      "sha256": "7461e44cfb9eb85f8fe48a0898ac00e3abb55c1bd010598d75762cec806f7361",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md",
+      "bytes": 4876,
+      "sha256": "a3995a64763a22f301dab536dfeabc4e118d069d52180bcc2fdfafb414f000e9",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-CONTROL-SERVER-ATTESTATION-SOURCE-CONFIRMATION.md",
+      "bytes": 3848,
+      "sha256": "40d6969cc1a175a5e2f68a237ea8c40a5725af8fedcc80083aa427f114c16c14",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-DESKTOP-ATTESTATION-BLOCKED-RECORD.md",
+      "bytes": 13346,
+      "sha256": "316aced5037634bb5acf41d9780f8f9db8185543fc2839eed970462102f1fd11",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md",
+      "bytes": 8134,
+      "sha256": "4bcc39c92498845eed3dc4e632b9e278341333cd12ea731829da5c41228e3202",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md",
+      "bytes": 4748,
+      "sha256": "1561985fd51e3175ebce0e33c41812d7b62f166c96b37fa3f0f6c460835ba469",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/identity-probe-attempt-1.json",
+      "bytes": 439,
+      "sha256": "5387fd5ccccbc709b59610dbccd1b29e10c0061e6d1ad385d4fe2d4b0dad16b9",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/identity-probe-attempt-2.json",
+      "bytes": 982,
+      "sha256": "e25af8ee54167fd9060df923ca886070b55d97e446060f049ae681a8556cf4a9",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/process-lifecycle.json",
+      "bytes": 726,
+      "sha256": "7e0d843601060481caa36bb1463131b4c1d9759aae9c77eabe5a0b833309a2cb",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/redaction-summary.json",
+      "bytes": 3031,
+      "sha256": "2c247d6b213e62771fd155b39e6e4610b5bc4425df978fe2b4291d819668c7ff",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/run-manifest.json",
+      "bytes": 2296,
+      "sha256": "056eb1baa850b4f6c42f487e146ef7a565e8596f14e68a8acbdd5afca80acdf5",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/scenario-results.json",
+      "bytes": 4889,
+      "sha256": "2bd7b3ffc65be2ec54399ac1df6c591141294a47ed7e72351bdba5b6453de17d",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/security-negative-results.json",
+      "bytes": 1558,
+      "sha256": "d6e997c7c5fac9169f474d12ba18a2f20d6d8ea201aab5eddee9fbce95e934a9",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/test-summary.json",
+      "bytes": 2775,
+      "sha256": "720f27277e85f35f4cfe6bd2c878c0cd22de52f5bf1c802cf2c3f75664e3deea",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/redaction-summary.json",
+      "bytes": 497,
+      "sha256": "9ccb64c87b05159098b1e843e277c0f92f17ea31b0c9702cf6a8bf5c129fa6ad",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/run-manifest.json",
+      "bytes": 763,
+      "sha256": "56f30936f867f03113a8ec610a116f5e3e503e12cabdc45a785bb5a01758281a",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/server-attestation-result.json",
+      "bytes": 1588,
+      "sha256": "b17eeb0753fe10f3a95ea13350715468a23390fed045396859bf24669ae19cbf",
+      "bom": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/test-summary.json",
+      "bytes": 802,
+      "sha256": "51540ac82311b62d5076a51ea9ff2c33279798d78baee50118049a992dca662e",
+      "bom": false
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-020-V1-SLICE-2-CONTRACT-TARGETED-DELTA-REREVIEW.md",
+      "bytes": 3380,
+      "sha256": "2d8aa2ddc48f2493ea2e9fe07f9f2b08cbc015d5d2defa454c0de898c1b75294",
+      "bom": false
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-021-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-REVIEW.md",
+      "bytes": 5707,
+      "sha256": "bc6a8eb711c6b4967092223ab6e98759cfd12f9b65c0e87312d8a45b752ce201",
+      "bom": false
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-022-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-PERSISTED-DELTA-REVIEW.md",
+      "bytes": 3844,
+      "sha256": "95c4b76b7f33352a68a48b619712bf327e08d70fb00dcc367ad3edc927f19e14",
+      "bom": false
+    },
+    {
+      "path": "scripts/step1-identity-probe.ps1",
+      "bytes": 8332,
+      "sha256": "32306f6944b107dc016cff6aad5ff8677e7d8459dcdb136f61cf473ae1eb37d1",
+      "bom": false
+    },
+    {
+      "path": "scripts/step1-server-attestation-probe.ps1",
+      "bytes": 26014,
+      "sha256": "7c3344827cd82833924ec14108c918aa8cb378f45d20355dddc66e9dca71be39",
+      "bom": false
+    }
+  ],
+  "historicalByteIdentical": true,
+  "sourceFinal": [
+    {
+      "path": "apps/desktop/src/main/carrier-client.ts",
+      "bytes": 16544,
+      "sha256": "e3d4c3686a9225098bb3820b44bf777ef7d59b5df767f651955611e98027f1b2",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/lifecycle-client.ts",
+      "bytes": 6606,
+      "sha256": "d780f11a0a554875d68804d550d5b23f7d9eac2a26d8da80073141bc11ec1f88",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/main.ts",
+      "bytes": 16293,
+      "sha256": "e4389abd6f16834f9c7e088d0555f778bcd397eb3843c354426bf7cc96f1b6dc",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/worker-supervisor.test.ts",
+      "bytes": 3756,
+      "sha256": "1d1f9b32507761518f418e5201295a8b72ec4d5bdd0ebadf4dfee2054ac35a22",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/src/main/worker-supervisor.ts",
+      "bytes": 8609,
+      "sha256": "fb489d3871697f2d1a54353c4df053311e353feba313927ba7191e8ce13603a8",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step1-authority-negative.ps1",
+      "bytes": 2121,
+      "sha256": "d049073f20c0bef41649556ce3b91f7ac753a4f4baae32ccda0b71dae349a61a",
+      "bom": false
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step1-lifecycle-main.mjs",
+      "bytes": 1511,
+      "sha256": "a607d46ed8df4063acb9259ab5f2f9ce3f988d89138f56650c4da892922143c0",
+      "bom": false
+    },
+    {
+      "path": "apps/native-carrier/LifecycleAuthority.cs",
+      "bytes": 17356,
+      "sha256": "f775cb6e31e84a33b4cb05a6ae8e6ca371ed5bc1154a3c2199a48ab4ccf577d1",
+      "bom": false
+    },
+    {
+      "path": "apps/native-carrier/Program.cs",
+      "bytes": 13487,
+      "sha256": "336719a63dc932600904f0d5da3029cb6d7b260c12b8a9d1b5b30941d5da01c7",
+      "bom": false
+    },
+    {
+      "path": "apps/native-carrier/WindowsAuthority.cs",
+      "bytes": 12259,
+      "sha256": "330b4ee0e99daf359f7db32aac269c173d71e3f7e77821b8040b0a5a33b97b64",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/host-profile/carrier-gateway.mjs",
+      "bytes": 8679,
+      "sha256": "9594ded08ec7dd6042dd6fce9c2f974b14d09fa45206a482f6aef769e16ffbb3",
+      "bom": false
+    },
+    {
+      "path": "apps/worker/src/index.ts",
+      "bytes": 16370,
+      "sha256": "a83e09fac149dd26d4dd2f7d660d944810c9132cbef57638642c7af49acd9112",
+      "bom": false
+    },
+    {
+      "path": "package.json",
+      "bytes": 1626,
+      "sha256": "145164ddb2dcf7e020db74ed0f35f618304fc6853986a06d50c6a471428ab472",
+      "bom": false
+    },
+    {
+      "path": "scripts/smoke-carrier.mjs",
+      "bytes": 1946,
+      "sha256": "c7eaabd412fb4be96aefaf70b3c5e3c044cc87b871b751a34edf32ea839b682c",
+      "bom": false
+    },
+    {
+      "path": "scripts/smoke-electron.mjs",
+      "bytes": 6307,
+      "sha256": "7423b0c04df066695d24979abd9a5a2e7a0b16446d81fc40911fd9487369cc03",
+      "bom": false
+    },
+    {
+      "path": "scripts/smoke-slice2-step1.mjs",
+      "bytes": 66211,
+      "sha256": "46b109512c6d17ec9c8808e34a4d858e77538903f29f49e838d8e21cf3c0dd26",
+      "bom": false
+    },
+    {
+      "path": "scripts/smoke-worker.mjs",
+      "bytes": 2595,
+      "sha256": "e39099bf048d8e984adf1d938704359f4c9f89b751014b73f9c4e3480462a8ac",
+      "bom": false
+    }
+  ],
+  "frozenHarnessFinal": {
+    "head": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "clean": true
+  },
+  "productHeadFinal": "f4cf53efcef8bf83c2a5361f5128e5eeae99a2cd",
+  "executionContexts": [
+    {
+      "context": "Node/native gates",
+      "user": "CodexSandboxOffline",
+      "sidSha256": "36ee388d10bf50fd6de33b82ef72f4d0a33001ad73a52427573467f5e6b4840a"
+    },
+    {
+      "context": "Electron gates",
+      "user": "18902",
+      "sidSha256": "62946077d6ae48faf3c8d7a59b5c34e6daea602719f0ff3a8a5512f83c0bf873"
+    }
+  ],
+  "toolchain": {
+    "node": "v22.19.0",
+    "nodePath": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+    "pnpm": "11.7.0",
+    "pnpmEntry": "D:\\Development\\pnpm\\node_modules\\pnpm\\bin\\pnpm.cjs",
+    "dotnet": "10.0.302",
+    "electron": "35.7.5"
+  },
+  "remainingObservedProcesses": [],
+  "finalProcessInspection": "CIM inspection under normal Windows user found no Product Worker, Native Helper or Step1 Electron fixture process after controlled cleanup.",
+  "successfulGovernanceSynchronization": false,
+  "currentStateModified": false,
+  "developmentLogModified": false,
+  "staged": "NONE"
+}

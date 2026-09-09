@@ -3,15 +3,15 @@
 Status: ACTIVE
 
 > Current V1.0 route authority is the
-> [V1-SLICE-2 Step 1 Minimal Trusted Discovery Re-Freeze and Re-Authorization Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md).
+> [V1-SLICE-2 Step 1 Owner Closure and Freeze Decision](../04-development-records/V1-SLICE-2-STEP1-OWNER-CLOSURE-AND-FREEZE-DECISION.md),
+> which accepts Independent [REVIEW-023](../05-reviews/architecture/AUDIT-023-V1-SLICE-2-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md).
 > Slice 1A/1B/1C and Slice 1 remain `PASS / CLOSED / FROZEN`. The
 > [V1-SLICE-2 Architecture Contract](V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md)
 > and [Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md)
-> passed persisted delta [AUDIT-022](../05-reviews/architecture/AUDIT-022-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-PERSISTED-DELTA-REVIEW.md)
-> and are re-frozen. Step 1 is re-authorized but remains not started; Step 2/3
+> remain frozen. Step 1 implementation, Independent Review and Owner Closure are
+> `PASS`, `PASS` and `ACCEPTED`; Step 1 is `PASS / CLOSED / FROZEN`. Step 2/3
 > and Provider remain unauthorized. The implementation mainline remains
-> `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`. AUDIT-022 NF-1 is closed by the
-> canonical nomenclature normalization below.
+> `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`.
 
 ## Current Implementation Route
 
@@ -33,20 +33,26 @@ V1_SLICE_2_CONTRACT_BLOCKING_FINDINGS = NONE
 V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_CORRECTIVE_REVIEW = PASS
 V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW = PASS
 V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_BLOCKING_FINDINGS = NONE
-V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
-V1_SLICE_2_STEP1 = REAUTHORIZED_NOT_STARTED
-V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PREVIOUS_ATTEMPT_STOPPED_BLOCKED
-V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
+V1_SLICE_2_STEP1_INDEPENDENT_IMPLEMENTATION_REVIEW = PASS
+V1_SLICE_2_STEP1_IMPLEMENTATION_REVIEW_BLOCKING_FINDINGS = NONE
+V1_SLICE_2_STEP1_OWNER_CLOSURE = ACCEPTED
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = CONSUMED
+V1_SLICE_2_STEP1_ADDITIONAL_IMPLEMENTATION = NONE
+V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP1_RESULT = PASS
+V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
+V1_SLICE_2_STEP1_BASELINE = FROZEN
+V1_SLICE_2_IMPLEMENTATION = IN_PROGRESS
 V1_SLICE_2_STEP2 = NOT_AUTHORIZED
 V1_SLICE_2_STEP3 = NOT_AUTHORIZED
 PROVIDER_GATE_AUTHORIZATION = NO
-V1_SLICE_2 = NOT_STARTED
+V1_SLICE_2 = IN_PROGRESS
 V1_SLICE_3 = PACKAGING / COMPATIBILITY / RELEASE / NOT_STARTED
 V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
 P0_5_P1_P2_TO_P8 = NEED_DRIVEN_CONTRACT_CAPABILITY_ACCEPTANCE_TAXONOMY
 P0_5_P1_P2_TO_P8 = NOT_A_SECOND_SEQUENTIAL_IMPLEMENTATION_ROUTE
-V1_CURRENT_STEP = V1_SLICE_2_STEP1_REAUTHORIZED_NOT_STARTED
-V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
+V1_CURRENT_STEP = V1_SLICE_2_STEP1_CLOSED_PENDING_STEP2_ENTRY_DECISION
+V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP2_ENTRY
 ```
 
 The four Slice route is the current implementation route. P0.5/P1/P2-P8 retain
@@ -62,15 +68,16 @@ The Slice 2 implementation route remains exactly three steps:
 2. Connection Recovery and Cold Projection.
 3. Outer Shell / Native / Interaction Integration.
 
-The Carrier Lifecycle Amendment remains a required Step 1 Contract prerequisite
-and is re-frozen. The minimal trusted-discovery Corrective Review and persisted
-delta review are `PASS`; Blocking Findings are `NONE`; overdesign remains
-closed. The generic Electron identity probe remains a historical diagnostic
-scenario, not a frozen V1 runtime gate. Broker, asymmetric authority protocol,
-Product Launch Grant and Windows Service are not V1 requirements. Step 1 is
-re-authorized but not started. The next action is
-`EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL`; this state does not
-claim that Step 1 Product implementation or any later Slice 2 step has started.
+The Carrier Lifecycle Amendment remains a frozen Step 1 Contract prerequisite.
+The minimal trusted-discovery Corrective Review, persisted delta review and
+Independent Implementation Review are `PASS`; Blocking Findings are `NONE`;
+overdesign remains closed. The generic Electron identity probe remains a
+historical diagnostic scenario, not a frozen V1 runtime gate. Broker,
+asymmetric authority protocol, Product Launch Grant and Windows Service are not
+V1 requirements. Step 1 implementation is `PASS`, Owner Closure is `ACCEPTED`,
+and Step 1 is `PASS / CLOSED / FROZEN`. The next action is
+`ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP2_ENTRY`; this state does not authorize
+Step 2, Step 3 or Provider work.
 
 ## Phase Order
 

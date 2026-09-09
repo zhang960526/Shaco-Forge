@@ -1,0 +1,30 @@
+{
+  "gate": "G15",
+  "boundary": "G15_BOUNDED_STOP_NOT_DELIVERED_DURING_ELECTRON_TEARDOWN",
+  "rootCauseProven": true,
+  "rootCause": {
+    "classification": "BUSY_SWALLOWED_ON_SINGLE_LIFECYCLE_PIPE",
+    "summary": "WorkerSupervisor.stop() issued a single lifecycleRequest('stop-authority') with an empty catch block. The single lifecycle pipe is shared by the 1-second health/discovery probe started by carrierReady(). When the health discover occupied the lifecycle pipe at stop time, openLifecycle -> inspectLocalPlatform observed lifecycleBusy=true and threw BUSY. The empty catch swallowed it, the stop-authority request never reached the Helper/Worker, and the 8-second PID poll returned exited=false with Worker/Host/Helper still alive.",
+    "timeline": [
+      "carrierReady() starts setInterval health discover every 1000ms; each discover holds the single lifecycle pipe from createConnection until socket.destroy (including two native child-process inspections).",
+      "Electron teardown: maybeFinalizeEvidence() calls carrier.close() then supervisor.stop().",
+      "stop() calls detach() (clears the interval) but an already-in-flight discover continues to hold the pipe.",
+      "stop() calls lifecycleRequest('stop-authority') -> openLifecycle -> inspectLocalPlatform (native --platform) -> WaitNamedPipeW returns busy -> lifecycleBusy=true -> throw BUSY.",
+      "BUSY is swallowed by the empty catch {}; the stop-authority frame is never written.",
+      "stop() polls process exit for 8 seconds; Worker/Host/Helper remain alive -> exited=false."
+    ],
+    "codeLocations": {
+      "emptyCatchBefore": "apps/desktop/src/main/worker-supervisor.ts stop(): try { await lifecycleRequest(...,'stop-authority',...) } catch { }",
+      "healthProbe": "apps/desktop/src/main/worker-supervisor.ts carrierReady(): setInterval(() => this.discover(), 1000)",
+      "busySource": "apps/desktop/src/main/lifecycle-client.ts openLifecycle(): if (platform.lifecycleBusy) throw new Error('BUSY')",
+      "busyDetection": "apps/native-carrier/WindowsAuthority.cs Platform(): lifecycleBusy = pipeError is 121 or 231"
+    },
+    "actualException": { "name": "Error", "message": "BUSY" },
+    "deterministicReproduction": {
+      "method": "Start real Worker authority, attach Carrier, hold a lifecycle connection via openLifecycle (the identical mechanism the health discover uses), then call stop().",
+      "observed": { "exited": false, "stopRequestError": { "name": "Error", "message": "BUSY" }, "stopDelivered": false, "workerAlive": true, "hostAlive": true, "helperAlive": true }
+    },
+    "correlatedPreviousEvidence": "STEP1-20260909-IMPLEMENTATION-01/electron-regression.json recorded cleanup.exited=false with a healthy DETACHED authority still alive; a later isolated direct stop succeeded, confirming a transient occupancy rather than a broken stop protocol."
+  },
+  "notAssumed": "The BUSY root cause was established by deterministic reproduction capturing the actual swallowed exception (BUSY), not by source inspection alone. The hypothesis that an in-flight health discover occupies the pipe is consistent with the code (the health discover is the only concurrent lifecycle client) and with the observed real teardown failure."
+}

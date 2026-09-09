@@ -1,0 +1,290 @@
+{
+  "results": [
+    {
+      "scenario": "helper",
+      "result": "PASS",
+      "before": {
+        "type": "authority-status",
+        "protocolVersion": "1",
+        "workerInstanceId": "b5140fa6-e18a-4b05-97db-f01fb9557bdb",
+        "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-CAMggK",
+        "worker": {
+          "pid": 28624,
+          "startTime": "134334186929467866"
+        },
+        "host": {
+          "pid": 38568,
+          "startTime": "134334187013073122"
+        },
+        "helper": {
+          "pid": 44896,
+          "startTime": "134334187011886957"
+        },
+        "healthy": true,
+        "state": "CREDENTIAL_ISSUED",
+        "hostPreflight": {
+          "type": "host-carrier-preflight",
+          "profilePluginLoaded": true,
+          "fetchHandlerReady": true,
+          "wireStreamReady": true,
+          "eventsRouteReady": true,
+          "eventsRouteProbe": {
+            "endpoint": "$events",
+            "opened": true,
+            "readyObserved": true,
+            "readyShapeValid": true,
+            "cancelled": true,
+            "iteratorClosed": true,
+            "activeStreamsAfterCleanup": 0,
+            "eventSubscriptionRetained": false,
+            "clientRuntimeMetricCounted": false,
+            "businessOperationsPerformed": 0
+          },
+          "stockWebStarted": false
+        },
+        "job": {
+          "ownerPid": 28624,
+          "hostContained": true,
+          "helperContained": true,
+          "helperSetupHandleClosed": true,
+          "killOnClose": true
+        },
+        "mutex": {
+          "ownerPid": 44896,
+          "soleSteadyStateHolder": "HELPER"
+        },
+        "dispatchCount": 0,
+        "rejectedOldFrames": 0,
+        "detaches": 0
+      },
+      "failure": "WORKER_AUTHORITY_FAILURE",
+      "after": {
+        "workerAlive": false,
+        "hostAlive": false,
+        "helperAlive": false
+      }
+    },
+    {
+      "scenario": "host",
+      "result": "PASS",
+      "before": {
+        "type": "authority-status",
+        "protocolVersion": "1",
+        "workerInstanceId": "487d5e97-7919-4331-95d4-8930edcb10ce",
+        "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-OZkWkj",
+        "worker": {
+          "pid": 31860,
+          "startTime": "134334187051930236"
+        },
+        "host": {
+          "pid": 58344,
+          "startTime": "134334187134000082"
+        },
+        "helper": {
+          "pid": 46760,
+          "startTime": "134334187132771847"
+        },
+        "healthy": true,
+        "state": "CREDENTIAL_ISSUED",
+        "hostPreflight": {
+          "type": "host-carrier-preflight",
+          "profilePluginLoaded": true,
+          "fetchHandlerReady": true,
+          "wireStreamReady": true,
+          "eventsRouteReady": true,
+          "eventsRouteProbe": {
+            "endpoint": "$events",
+            "opened": true,
+            "readyObserved": true,
+            "readyShapeValid": true,
+            "cancelled": true,
+            "iteratorClosed": true,
+            "activeStreamsAfterCleanup": 0,
+            "eventSubscriptionRetained": false,
+            "clientRuntimeMetricCounted": false,
+            "businessOperationsPerformed": 0
+          },
+          "stockWebStarted": false
+        },
+        "job": {
+          "ownerPid": 31860,
+          "hostContained": true,
+          "helperContained": true,
+          "helperSetupHandleClosed": true,
+          "killOnClose": true
+        },
+        "mutex": {
+          "ownerPid": 46760,
+          "soleSteadyStateHolder": "HELPER"
+        },
+        "dispatchCount": 0,
+        "rejectedOldFrames": 0,
+        "detaches": 0
+      },
+      "failure": "WORKER_AUTHORITY_FAILURE",
+      "after": {
+        "workerAlive": false,
+        "hostAlive": false,
+        "helperAlive": false
+      }
+    },
+    {
+      "scenario": "worker",
+      "result": "PASS",
+      "before": {
+        "type": "authority-status",
+        "protocolVersion": "1",
+        "workerInstanceId": "711d7d53-edb0-4861-8202-d59e57b7edc3",
+        "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-mSBKKw",
+        "worker": {
+          "pid": 58084,
+          "startTime": "134334187172182150"
+        },
+        "host": {
+          "pid": 29248,
+          "startTime": "134334187302448084"
+        },
+        "helper": {
+          "pid": 55212,
+          "startTime": "134334187301248100"
+        },
+        "healthy": true,
+        "state": "CREDENTIAL_ISSUED",
+        "hostPreflight": {
+          "type": "host-carrier-preflight",
+          "profilePluginLoaded": true,
+          "fetchHandlerReady": true,
+          "wireStreamReady": true,
+          "eventsRouteReady": true,
+          "eventsRouteProbe": {
+            "endpoint": "$events",
+            "opened": true,
+            "readyObserved": true,
+            "readyShapeValid": true,
+            "cancelled": true,
+            "iteratorClosed": true,
+            "activeStreamsAfterCleanup": 0,
+            "eventSubscriptionRetained": false,
+            "clientRuntimeMetricCounted": false,
+            "businessOperationsPerformed": 0
+          },
+          "stockWebStarted": false
+        },
+        "job": {
+          "ownerPid": 58084,
+          "hostContained": true,
+          "helperContained": true,
+          "helperSetupHandleClosed": true,
+          "killOnClose": true
+        },
+        "mutex": {
+          "ownerPid": 55212,
+          "soleSteadyStateHolder": "HELPER"
+        },
+        "dispatchCount": 0,
+        "rejectedOldFrames": 0,
+        "detaches": 0
+      },
+      "failure": "WORKER_AUTHORITY_FAILURE",
+      "after": {
+        "workerAlive": false,
+        "hostAlive": false,
+        "helperAlive": false
+      },
+      "jobProof": "Worker hard death closed its final Job handle; Host and Helper both terminated"
+    },
+    {
+      "scenario": "explicit-stop",
+      "result": "PASS",
+      "before": {
+        "type": "authority-status",
+        "protocolVersion": "1",
+        "workerInstanceId": "b6f850cb-4e7f-45b8-9e8e-453eabb0ef62",
+        "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-p8JHIw",
+        "worker": {
+          "pid": 16052,
+          "startTime": "134334187342806463"
+        },
+        "host": {
+          "pid": 27340,
+          "startTime": "134334187451495785"
+        },
+        "helper": {
+          "pid": 33532,
+          "startTime": "134334187450290784"
+        },
+        "healthy": true,
+        "state": "CREDENTIAL_ISSUED",
+        "hostPreflight": {
+          "type": "host-carrier-preflight",
+          "profilePluginLoaded": true,
+          "fetchHandlerReady": true,
+          "wireStreamReady": true,
+          "eventsRouteReady": true,
+          "eventsRouteProbe": {
+            "endpoint": "$events",
+            "opened": true,
+            "readyObserved": true,
+            "readyShapeValid": true,
+            "cancelled": true,
+            "iteratorClosed": true,
+            "activeStreamsAfterCleanup": 0,
+            "eventSubscriptionRetained": false,
+            "clientRuntimeMetricCounted": false,
+            "businessOperationsPerformed": 0
+          },
+          "stockWebStarted": false
+        },
+        "job": {
+          "ownerPid": 16052,
+          "hostContained": true,
+          "helperContained": true,
+          "helperSetupHandleClosed": true,
+          "killOnClose": true
+        },
+        "mutex": {
+          "ownerPid": 33532,
+          "soleSteadyStateHolder": "HELPER"
+        },
+        "dispatchCount": 0,
+        "rejectedOldFrames": 0,
+        "detaches": 0
+      },
+      "after": {
+        "workerAlive": false,
+        "hostAlive": false,
+        "helperAlive": false
+      }
+    }
+  ],
+  "ambiguousAuthorityAttempts": [
+    [
+      {
+        "scenario": "held",
+        "result": "PASS",
+        "fixturePid": 52284,
+        "workerLaunchAttempts": 0,
+        "secondAuthorityCreated": false
+      },
+      {
+        "scenario": "hung",
+        "result": "PASS",
+        "fixturePid": 42160,
+        "workerLaunchAttempts": 0,
+        "secondAuthorityCreated": false
+      },
+      {
+        "scenario": "abandoned",
+        "result": "PASS",
+        "holderPid": 57872,
+        "retainedHandlePid": 48760,
+        "rejectedWorkerPid": 41772,
+        "workerExit": 1,
+        "authorityReady": false,
+        "hostStarted": false,
+        "productDiscoveryLaunchAttempts": 0,
+        "helperDetectedAbandonment": true
+      }
+    ]
+  ]
+}

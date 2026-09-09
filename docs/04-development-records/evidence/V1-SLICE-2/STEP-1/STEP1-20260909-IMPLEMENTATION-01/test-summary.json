@@ -1,0 +1,238 @@
+{
+  "commands": [
+    {
+      "command": "pnpm run build",
+      "node": "v22.19.0",
+      "pnpm": "11.7.0",
+      "startedAt": "2026-09-09T08:45:47.965Z",
+      "endedAt": "2026-09-09T08:45:48.853Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run build",
+      "node": "v22.19.0",
+      "pnpm": "11.7.0",
+      "startedAt": "2026-09-09T08:46:31.945Z",
+      "endedAt": "2026-09-09T08:46:32.831Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run build",
+      "node": "v22.19.0",
+      "pnpm": "11.7.0",
+      "startedAt": "2026-09-09T08:47:58.369Z",
+      "endedAt": "2026-09-09T08:48:20.513Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run typecheck",
+      "node": "v22.19.0",
+      "pnpm": "11.7.0",
+      "startedAt": "2026-09-09T08:58:08.375Z",
+      "endedAt": "2026-09-09T08:58:12.630Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm test",
+      "node": "v22.19.0",
+      "pnpm": "11.7.0",
+      "startedAt": "2026-09-09T09:18:05.097Z",
+      "endedAt": "2026-09-09T09:18:24.935Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:carrier",
+      "node": "v22.19.0",
+      "pnpm": "11.7.0",
+      "startedAt": "2026-09-09T09:19:38.950Z",
+      "endedAt": "2026-09-09T09:20:33.267Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:worker",
+      "node": "v22.19.0",
+      "pnpm": "11.7.0",
+      "startedAt": "2026-09-09T09:21:43.420Z",
+      "endedAt": "2026-09-09T09:21:58.928Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "node": "v22.19.0",
+      "pnpm": "11.7.0",
+      "startedAt": "2026-09-09T09:24:17.913Z",
+      "endedAt": "2026-09-09T09:24:49.613Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run verify:static",
+      "node": "v22.19.0",
+      "pnpm": "11.7.0",
+      "startedAt": "2026-09-09T09:29:23.137Z",
+      "endedAt": "2026-09-09T09:29:23.693Z",
+      "exitCode": 0,
+      "result": "PASS"
+    }
+  ],
+  "finalValidation": {
+    "nodeSyntax": [
+      {
+        "path": "apps/desktop/test-fixtures/step1-lifecycle-main.mjs",
+        "exitCode": 0,
+        "result": "PASS"
+      },
+      {
+        "path": "apps/worker/host-profile/carrier-gateway.mjs",
+        "exitCode": 0,
+        "result": "PASS"
+      },
+      {
+        "path": "scripts/smoke-carrier.mjs",
+        "exitCode": 0,
+        "result": "PASS"
+      },
+      {
+        "path": "scripts/smoke-electron.mjs",
+        "exitCode": 0,
+        "result": "PASS"
+      },
+      {
+        "path": "scripts/smoke-slice2-step1.mjs",
+        "exitCode": 0,
+        "result": "PASS"
+      },
+      {
+        "path": "scripts/smoke-worker.mjs",
+        "exitCode": 0,
+        "result": "PASS"
+      }
+    ],
+    "unitTests": {
+      "total": 120,
+      "passed": 120,
+      "failed": 0,
+      "skipped": 0
+    },
+    "powershellAst": {
+      "path": "apps/desktop/test-fixtures/step1-authority-negative.ps1",
+      "result": "PASS",
+      "exitCode": 0
+    },
+    "gitDiffCheck": {
+      "result": "PASS",
+      "exitCode": 0
+    },
+    "frozenHarness": {
+      "head": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "clean": true
+    }
+  },
+  "supplementalCommandLedger": [
+    {
+      "command": "dotnet build apps/native-carrier/ShacoForge.NativeCarrier.csproj --configuration Release --no-restore",
+      "result": "FINAL_PASS",
+      "finalExitCode": 0,
+      "retainedFailures": [
+        {
+          "exitCode": 1,
+          "diagnostic": "CS0165 unassigned start variable"
+        },
+        {
+          "exitCode": 1,
+          "diagnostic": "CA2022 unread ReadAsync result"
+        },
+        {
+          "exitCode": 1,
+          "diagnostic": "MSB3027/MSB3021 executable held by earlier GPU-failure test authority; ten MSBuild-internal copy retries, one build invocation"
+        }
+      ]
+    },
+    {
+      "command": "pnpm run build (first direct invocation before normalized runner)",
+      "exitCode": 1,
+      "result": "FAIL",
+      "reason": "CMD could not resolve node with 22068-character inherited PATH"
+    },
+    {
+      "command": "Pinned Node node_modules/typescript/bin/tsc -p apps/worker/tsconfig.json",
+      "exitCode": 0,
+      "result": "PASS",
+      "repeatedDuringImplementation": true
+    },
+    {
+      "command": "Pinned Node node_modules/typescript/bin/tsc -p apps/desktop/tsconfig.node.json",
+      "exitCode": 0,
+      "result": "PASS",
+      "repeatedDuringImplementation": true
+    },
+    {
+      "command": "Pinned Node scripts/smoke-slice2-step1.mjs --foundation",
+      "exitCodes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "evidence": "process-lifecycle.json"
+    },
+    {
+      "command": "Pinned Node scripts/smoke-slice2-step1.mjs --carrier-negatives",
+      "exitCodes": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "evidence": "security-negative-results.json",
+      "note": "The later extended fifth evidence attempt ran through pnpm smoke:carrier."
+    },
+    {
+      "command": "Pinned Node scripts/smoke-slice2-step1.mjs --desktop-survival",
+      "exitCodes": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "evidence": "attachment-sequence.json"
+    },
+    {
+      "command": "Pinned Node scripts/smoke-slice2-step1.mjs --authority-failures",
+      "exitCode": 0,
+      "result": "PASS",
+      "evidence": "authority-identity.json"
+    },
+    {
+      "command": "Pinned Node scripts/smoke-slice2-step1.mjs --ambiguous-authority",
+      "exitCode": 0,
+      "result": "PASS",
+      "evidence": "authority-identity.json"
+    },
+    {
+      "command": "Pinned Node scripts/smoke-slice2-step1.mjs --authority-overlap",
+      "result": "NOT_EXECUTED",
+      "reason": "Stopped at corrective budget boundary"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step1",
+      "result": "NOT_EXECUTED",
+      "reason": "Consolidated final runtime entry was added but not run before the blocker"
+    },
+    {
+      "command": "pnpm run smoke:user-loop; Provider/Prompt/Tool execution",
+      "result": "NOT_EXECUTED",
+      "prohibited": true
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "runId": "STEP1-20260909-G15-CORRECTIVE-01",
+  "result": "PASS",
+  "commands": [
+    { "command": "pnpm run typecheck", "node": "v22.19.0", "pnpm": "11.7.0", "exitCode": 0, "result": "PASS" },
+    { "command": "pnpm run build", "node": "v22.19.0", "pnpm": "11.7.0", "exitCode": 0, "result": "PASS" },
+    { "command": "pnpm test", "node": "v22.19.0", "pnpm": "11.7.0", "exitCode": 0, "result": "PASS", "unitTests": { "total": 120, "passed": 120, "failed": 0, "skipped": 0 } },
+    { "command": "pnpm run verify:static", "node": "v22.19.0", "pnpm": "11.7.0", "exitCode": 0, "result": "PASS", "scannedFiles": 99 },
+    { "command": "pnpm run smoke:carrier", "node": "v22.19.0", "pnpm": "11.7.0", "exitCode": 0, "result": "PASS" },
+    { "command": "pnpm run smoke:worker", "node": "v22.19.0", "pnpm": "11.7.0", "exitCode": 0, "result": "PASS" },
+    { "command": "pnpm run smoke:electron", "node": "v22.19.0", "pnpm": "11.7.0", "exitCode": 0, "result": "PASS", "cleanup": { "exited": true, "delivery": "STOP_DELIVERED" } },
+    { "command": "pnpm run smoke:slice2-step1", "node": "v22.19.0", "pnpm": "11.7.0", "exitCode": 0, "result": "PASS", "subsuites": ["carrier-negatives", "authority-failures", "ambiguous-authority", "authority-overlap", "desktop-survival"] }
+  ],
+  "canonicalRuntime": {
+    "command": "pnpm run smoke:slice2-step1",
+    "entry": "scripts/smoke-slice2-step1.mjs --runtime",
+    "exitCode": 0,
+    "result": "PASS",
+    "nonProvider": true,
+    "providerRuns": 0
+  }
+}

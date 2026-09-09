@@ -1,0 +1,51 @@
+{
+  "runId": "STEP1-20260909-G15-CORRECTIVE-01",
+  "parentRunId": "STEP1-20260909-IMPLEMENTATION-01",
+  "result": "PASS",
+  "implementationResult": "IMPLEMENTED_WAITING_INDEPENDENT_REVIEW",
+  "startedAt": "2026-09-09T13:52:36.166Z",
+  "capturedAt": "2026-09-09T22:08:55.456Z",
+  "baseline": {
+    "branch": "master",
+    "productHead": "f4cf53efcef8bf83c2a5361f5128e5eeae99a2cd",
+    "productHeadFinal": "f4cf53efcef8bf83c2a5361f5128e5eeae99a2cd",
+    "harnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "harnessStateFinal": "CLEAN"
+  },
+  "toolchain": {
+    "node": "v22.19.0",
+    "pnpm": "11.7.0",
+    "dotnet": "10.0.302",
+    "electron": "35.7.5",
+    "powershell": "7.6.5"
+  },
+  "correctiveBudget": {
+    "g15DebugObservationAttemptsUsed": 1,
+    "g15DebugObservationAttemptsAllowed": 2,
+    "g15SourceCorrectiveCyclesUsed": 1,
+    "g15SourceCorrectiveCyclesAllowed": 2,
+    "g15DistinctDesignApproachesUsed": 1,
+    "g15DistinctDesignApproachesAllowed": 1,
+    "minorCorrectionsUsed": 1,
+    "minorCorrectionsAllowed": 3,
+    "remainingGateSourceCorrectiveCyclesUsed": 0,
+    "remainingGateSourceCorrectiveCyclesAllowed": 2
+  },
+  "providerRuns": 0,
+  "commit": false,
+  "push": false,
+  "staged": "NONE",
+  "nextAction": "INDEPENDENT_REVIEW_V1_SLICE_2_STEP1",
+  "priorEvidencePreserved": [
+    { "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/attachment-sequence.json", "bytes": 29867, "sha256": "127648c48794c33812a068c93df12c86183bedd3f43723fe00e7418c793688be" },
+    { "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/authority-identity.json", "bytes": 8461, "sha256": "a8e294365dacddc199117b6725318a3cc33c8559be90af4d441ef54ddbdf48d7" },
+    { "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/electron-regression.json", "bytes": 20607, "sha256": "42c208eb44146a08266097baf88e8945ccfcc11d5cfefefda5da129ae8a5aba9" },
+    { "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/gate-results.json", "bytes": 4449, "sha256": "290863742c1ae754a0ad00565d9df7a45605c0f04d83bc73a0e3a5b5cc5a951c" },
+    { "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/process-lifecycle.json", "bytes": 42542, "sha256": "be707adcfe6f8d1a4b26255759f06cc92f057eb02d3b297f9236344aa4fc958d" },
+    { "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/redaction-summary.json", "bytes": 5210, "sha256": "6335495ebbaeb8b82fb0d261a0542c967db9fc61a11a53d1e6242c2250544403" },
+    { "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/run-manifest.json", "bytes": 34775, "sha256": "795e09f5a8ed0b612f53398ce508edaf45b58172bb910e7cfe0115174a357165" },
+    { "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/security-negative-results.json", "bytes": 28255, "sha256": "e1e0e6932c0bcb26611227295f6bf49fde7585da49747553c264080af55b1933" },
+    { "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/test-summary.json", "bytes": 6296, "sha256": "0ff47bc8b36099058c09b09db3acfd46d87c12d6f7be1d1738f690af857d2db9" }
+  ],
+  "priorEvidenceByteIdentical": true
+}

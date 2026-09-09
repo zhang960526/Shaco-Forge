@@ -1,0 +1,26 @@
+{
+  "runId": "STEP1-20260909-G15-CORRECTIVE-01",
+  "gates": [
+    {
+      "id": "G10",
+      "result": "PASS",
+      "scenario": "SEQUENTIAL_REAL_EVENTS_RESET",
+      "basis": "Full sequential attachment reset exercised a fresh CarrierClient (new decoder/auth/relay/credit/callback/buffer state) after the prior Client was closed and the authority returned to DETACHED. Fresh clientInstanceId differs, a new real $events stream reached ready, and prior consumed/expired/replayed/oversize/malformed capabilities all produced zero dispatch delta. Old attachment state did not cross generations.",
+      "evidence": "scripts/smoke-slice2-step1.mjs --runtime runCarrierNegatives; scenario SEQUENTIAL_REAL_EVENTS_RESET PASS"
+    },
+    {
+      "id": "G20",
+      "result": "PASS",
+      "scenario": "BUSY_ATTACHED_AND_OLD_CLIENT_FENCE",
+      "basis": "After detach, the old Client generation's five pending pull/unary callbacks were all rejected, queued old frames produced zero dispatch delta, and the closed Client object could not issue further requests (rejected) or stream pulls (done with error).",
+      "evidence": "rejectedPendingCallbacks: 5, queuedOldFrameDispatchDelta: 0; old Client request/pull rejected after detach"
+    },
+    {
+      "id": "G21",
+      "result": "PASS",
+      "scenario": "authority-overlap",
+      "basis": "A dedicated competing authority candidate was launched against a live authority. The candidate exited non-zero before host-starting/carrier-ready; maximum ready authorities was 1; the original workerInstanceId and worker/host/helper identity were preserved; no old child adoption.",
+      "evidence": "scripts/smoke-slice2-step1.mjs --runtime runAuthorityOverlap PASS; rejectedCandidate exit non-zero, one ready authority"
+    }
+  ]
+}
