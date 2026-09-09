@@ -13,6 +13,9 @@ Status: ACTIVE
 > `AUTHORIZED_NOT_STARTED`; Step 3 and Provider remain unauthorized. The
 > implementation mainline remains
 > `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`.
+> The frozen
+> [V1 Cumulative Regression Closure Gate](../00-governance/SHACO-FORGE-V1-CUMULATIVE-REGRESSION-CLOSURE-GATE.md)
+> governs every subsequent V1 Step and Slice Closure, beginning with Step 2.
 
 ## Current Implementation Route
 
@@ -43,6 +46,9 @@ V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
 V1_SLICE_2_STEP1_RESULT = PASS
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
 V1_SLICE_2_STEP1_BASELINE = FROZEN
+V1_CUMULATIVE_CLOSURE_REGRESSION_GATE = FROZEN
+CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
+STEP2_CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
 V1_SLICE_2_STEP2_ENTRY = APPROVED
 V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = YES
 V1_SLICE_2_IMPLEMENTATION = IN_PROGRESS
@@ -80,7 +86,10 @@ asymmetric authority protocol, Product Launch Grant and Windows Service are not
 V1 requirements. Step 1 implementation is `PASS`, Owner Closure is `ACCEPTED`,
 and Step 1 is `PASS / CLOSED / FROZEN`. Step 2 entry is `APPROVED` and bounded
 Connection Recovery and Cold Projection implementation is authorized but not
-started. The next action is
+started. A Step 2 dedicated-gate `PASS` is not Step 2 Closure. Closure also
+requires cumulative Step 1 + Step 2 non-Provider E2E `PASS`, full build,
+typecheck, unit and static regression `PASS`, frozen baseline identity
+validation, and every other applicable Closure Gate. The next action is
 `EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`; Step 3 and Provider
 work remain unauthorized.
 

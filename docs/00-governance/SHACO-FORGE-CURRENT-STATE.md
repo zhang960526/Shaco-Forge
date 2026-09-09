@@ -9,6 +9,14 @@
 > is `NOT_AUTHORIZED` and Provider authorization remains `NO`. Next is
 > `EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`.
 
+> Current V1 test and Closure policy (2026-09-09): the
+> [V1 Cumulative Regression Closure Gate](SHACO-FORGE-V1-CUMULATIVE-REGRESSION-CLOSURE-GATE.md)
+> is `FROZEN`. Beginning with Step 2, dedicated gates alone cannot close a Step
+> or Slice. Closure requires cumulative non-Provider E2E, full regression,
+> frozen baseline identity validation, and every other applicable Closure Gate.
+> This policy does not reopen Step 1 or change Step 2, Step 3, or Provider
+> authorization.
+
 > Prior re-authorization authority (2026-09-09): the
 > [V1-SLICE-2 Step 1 Minimal Trusted Discovery Re-Freeze and Re-Authorization Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md)
 > accepts persisted delta [AUDIT-022](../05-reviews/architecture/AUDIT-022-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-PERSISTED-DELTA-REVIEW.md)
@@ -52,6 +60,9 @@ V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
 V1_SLICE_2_STEP1_RESULT = PASS
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
 V1_SLICE_2_STEP1_BASELINE = FROZEN
+V1_CUMULATIVE_CLOSURE_REGRESSION_GATE = FROZEN
+CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
+STEP2_CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
 V1_SLICE_2_STEP2_ENTRY = APPROVED
 V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = YES
 V1_SLICE_2_IMPLEMENTATION = IN_PROGRESS

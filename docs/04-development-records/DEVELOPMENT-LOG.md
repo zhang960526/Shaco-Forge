@@ -2,6 +2,23 @@
 
 Status: ACTIVE
 
+## 2026-09-09 - V1 Cumulative Regression Closure Gate Governance Persistence
+
+- The user / Architecture Owner requires a cumulative chained regression
+  Closure Gate beginning with V1-SLICE-2 Step 2.
+- Step 1 remains `PASS / CLOSED / FROZEN` and is not reopened; all reproducible
+  Step 1 capability must participate in later cumulative E2E regression.
+- Step 2 Closure must chain reproducible Step 1 + Step 2 capability and also
+  pass full regression and every other applicable Closure Gate; dedicated Step
+  2 gates alone are insufficient.
+- Each subsequent Step and Slice extends the cumulative chain; Slice 3 runs it
+  against packaged runtime and Slice 4 runs complete acceptance on fresh
+  Windows.
+- Provider is not rerun for every Step and still requires separate Architecture
+  Owner authorization; current Provider authorization remains `NO`.
+- Step 2 remains `AUTHORIZED_NOT_STARTED`; Step 3 remains `NOT_AUTHORIZED`.
+- Next: `EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`.
+
 ## 2026-09-09 - V1-SLICE-2 Step 2 Entry and Implementation Authorization
 
 - Step 1 is `PASS / CLOSED / FROZEN` at commit `1e7c1641bad533817052535cd7ab8a306a969184`.

@@ -7,6 +7,11 @@
 > `NOT_AUTHORIZED`; Provider authorization is `NO`. Next is
 > `EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`.
 
+> Current V1 test and Closure authority: the
+> [V1 Cumulative Regression Closure Gate](SHACO-FORGE-V1-CUMULATIVE-REGRESSION-CLOSURE-GATE.md)
+> is the frozen cumulative regression policy for every subsequent V1 Step and
+> Slice, beginning with Step 2. It does not alter the Step 2 Entry Decision.
+
 > Prior re-authorization summary (2026-09-09): the
 > [V1-SLICE-2 Step 1 Minimal Trusted Discovery Re-Freeze and Re-Authorization Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md)
 > accepts persisted delta [AUDIT-022](../05-reviews/architecture/AUDIT-022-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-PERSISTED-DELTA-REVIEW.md)
@@ -41,6 +46,9 @@ V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
 V1_SLICE_2_STEP1_RESULT = PASS
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
 V1_SLICE_2_STEP1_BASELINE = FROZEN
+V1_CUMULATIVE_CLOSURE_REGRESSION_GATE = FROZEN
+CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
+STEP2_CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
 V1_SLICE_2_STEP2_ENTRY = APPROVED
 V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = YES
 V1_SLICE_2_IMPLEMENTATION = IN_PROGRESS
@@ -128,6 +136,7 @@ V1_CURRENT_NEXT_ACTION = IMPLEMENT_V1_SLICE_1C_EMBEDDED_REAL_HARNESS_USER_LOOP
 | `SHACO-FORGE-DOCUMENT-MAP.md` | 文档导航与权威顺序 | ACTIVE | 每次新 Agent 接手 |
 | `SHACO-FORGE-DOCUMENT-RULES.md` | 文档创建/更新/关闭规则 | ACTIVE | 修改任何权威文档前 |
 | `SHACO-FORGE-CURRENT-STATE.md` | 当前唯一运行状态摘要 | ACTIVE | 每次执行前 |
+| `SHACO-FORGE-V1-CUMULATIVE-REGRESSION-CLOSURE-GATE.md` | 后续 V1 Step / Slice Closure 的测试与累计回归 Authority | FROZEN | 每次 V1 Step / Slice Closure 前 |
 
 ## 3. Product
 
