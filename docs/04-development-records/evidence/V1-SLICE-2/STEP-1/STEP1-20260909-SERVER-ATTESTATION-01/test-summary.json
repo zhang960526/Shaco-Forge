@@ -1,0 +1,27 @@
+{
+  "runId": "STEP1-20260909-SERVER-ATTESTATION-01",
+  "result": "PASS",
+  "assertions": {
+    "SERVER_PROCESS_ID_QUERY_AVAILABLE": "YES",
+    "CLIENT_CONNECTION": "ESTABLISHED",
+    "SERVER_PID_MATCH": "PASS",
+    "SERVER_EXECUTABLE_PATH_MATCH": "PASS",
+    "SERVER_PROCESS_START_MATCH": "PASS",
+    "CURRENT_USER_PROTECTED_PIPE": "YES",
+    "SERVER_IDENTITY_MISMATCH_REJECTED": "YES",
+    "PROCESS_CLEANUP": "PASS"
+  },
+  "astValidation": "PASS_BEFORE_EXECUTION",
+  "inlineCSharpCompilation": "PASS",
+  "cleanupResult": "PASS",
+  "remainingProbeProcessPids": [],
+  "attemptHistory": [
+    {
+      "attempt": 1,
+      "approach": "CURRENT_USER_SDDL_NATIVE_NAMED_PIPE_CHILD_SERVER",
+      "result": "PASS",
+      "failureBoundary": null,
+      "win32ErrorCode": 0
+    }
+  ]
+}

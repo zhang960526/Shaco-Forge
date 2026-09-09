@@ -2,6 +2,47 @@
 
 Status: ACTIVE
 
+## 2026-09-09 - V1.0 Mainline and Step 1 Scope Reconciliation
+
+- The authorized V1-SLICE-2 Step 1 long-running goal started and stopped as
+  `STOPPED_BLOCKED`; the first unresolved boundary is
+  `STEP1_DESKTOP_ATTESTATION_IMPLEMENTATION_BLOCKED`.
+- Source inspection found that the development Product launcher uses a generic
+  Electron image whose path/version/hash does not prove Shaco Product
+  application identity.
+- A bounded `NOT_PRODUCTION` identity probe demonstrated that same-user
+  non-Product code can use the same `electron.exe`. This is diagnostic
+  prerequisite proof, not the Step 1 S6 gate or a Product runtime PASS.
+- Production source modification: `NONE`. The Step 1 Blocked Record, diagnostic
+  fixture/probe and first Evidence set preserve the attempted work and blocker.
+- Mutual lifecycle server-attestation was discussed as a possible design input.
+  The bounded control-server Source Confirmation subsequently executed
+  `GetNamedPipeServerProcessId`: `SERVER_PID_MATCH`,
+  `SERVER_PROCESS_START_MATCH`, `SERVER_EXECUTABLE_PATH_MATCH` and
+  `SERVER_IDENTITY_MISMATCH_REJECTED` are `PASS`.
+- That Source Confirmation proves the availability/composition of the Windows
+  primitive only. It is not Product identity, Step 1 Product implementation or
+  Step 1 runtime PASS.
+- Later Owner-supplied security analysis identified that
+  `GENUINE_BINARY_IDENTITY != CURRENT_AUTHORITY_MEMBERSHIP`: a genuine Helper
+  direct-launch does not automatically prove membership in the current legal
+  Worker authority.
+- Design discussion temporarily expanded to a long-lived Broker, asymmetric
+  authority proof and Windows Service / OS-principal isolation. Windows Service
+  and Admin authority do not enter V1.0. These discussions are
+  `OWNER_SUPPLIED_INLINE_DESIGN_INPUT` / `EXTERNAL_READ_ONLY_DESIGN_INPUT`, not
+  fabricated repository-backed Review artifacts.
+- Architecture Owner reconciliation returns the mainline to
+  `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`. Broker and authority-protocol
+  proposals remain `CANDIDATE`, not Implementation Authority.
+- V1.1 Automation, V1.2 multi-agent/review and V1.3 memory/learning retain only
+  extension seams. No future domain, empty table, runtime, registry or generic
+  framework is prebuilt in V1.0.
+- Step 1 remains unimplemented and open as
+  `BLOCKED_PENDING_MINIMAL_TRUSTED_DISCOVERY_SCOPE_CORRECTIVE`; Slice 2 remains
+  `NOT_STARTED`; Step 2/3 and Provider remain unauthorized.
+- Next: `DESIGN_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_CONTRACT_CORRECTIVE`.
+
 ## 2026-09-08 - V1-SLICE-2 Contract Freeze and Step 1 Authorization
 
 - Initial targeted delta review: `FAIL`; F-01 was `HIGH / BLOCKING` because

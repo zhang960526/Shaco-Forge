@@ -1,0 +1,24 @@
+{
+  "runId": "STEP1-20260909-IDENTITY-01",
+  "probeProcesses": [
+    {
+      "pid": 30552,
+      "role": "NON_PRODUCT_ELECTRON_RUN_AS_NODE_FIXTURE",
+      "createdUtc": "2026-09-08T16:17:16.5379248Z",
+      "exitCode": 0,
+      "remaining": false
+    }
+  ],
+  "testDesktopMainPids": [],
+  "testWorkerPids": [],
+  "testHostPids": [],
+  "testHelperPids": [],
+  "remainingTrackedPids": [],
+  "cleanup": "PASS",
+  "cleanupObservation": "Child exited naturally with code 0; a later Get-Process lookup found PID 30552 absent",
+  "authoritySurvival": "NOT_TESTED",
+  "maxConcurrentProductAuthoritiesCreatedByRun": 0,
+  "authorityOverlapGate": "NOT_EXECUTED",
+  "orphanGate": "NOT_EXECUTED",
+  "unrelatedProcessesTerminated": false
+}

@@ -2,19 +2,21 @@
 
 Status: ACTIVE
 
-> Current V1.0 route authority freezes the
-> [V1-SLICE-2 Architecture Contract](V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md),
-> [Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md),
-> records Targeted Delta Re-Review [AUDIT-020](../05-reviews/architecture/AUDIT-020-V1-SLICE-2-CONTRACT-TARGETED-DELTA-REREVIEW.md)
-> as `PASS`, and accepts the [Owner Freeze / Step 1 Authorization Decision](../04-development-records/V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md).
-> Slice 1A/1B/1C and Slice 1 remain `PASS / CLOSED / FROZEN`. Step 1 is
-> `AUTHORIZED_NOT_STARTED`; Step 2/3 and Provider are not authorized. Slice 2
-> Product implementation remains `NOT_STARTED`.
+> Current V1.0 route authority is the
+> [V1.0 Mainline and Step 1 Scope Reconciliation Decision](../04-development-records/V1-0-MAINLINE-AND-STEP1-SCOPE-RECONCILIATION-DECISION.md).
+> Slice 1A/1B/1C and Slice 1 remain `PASS / CLOSED / FROZEN`. The
+> [V1-SLICE-2 Architecture Contract](V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md)
+> and [Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md)
+> remain frozen. Step 1 stopped blocked at the trusted discovery/attestation
+> scope boundary; Step 2/3 and Provider remain unauthorized. The implementation
+> mainline is `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`.
 
 ## Current Implementation Route
 
 ```text
 CURRENT_IMPLEMENTATION_ROUTE = FOUR_SLICE_HARNESS_REUSE_ROUTE
+V1_0_MAINLINE = MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION
+V1_1_TO_V1_3 = PRESERVE_SEAMS_ONLY
 V1_SLICE_1 = PASS / CLOSED / FROZEN
 V1_SLICE_1A_1B_1C = CLOSED / FROZEN
 V1_SLICE_1_SCOPE_RECONCILIATION = COMPLETED
@@ -27,7 +29,8 @@ V1_SLICE_2_ARCHITECTURE_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_BLOCKING_FINDINGS = NONE
 V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
-V1_SLICE_2_STEP1 = AUTHORIZED_NOT_STARTED
+V1_SLICE_2_STEP1 = BLOCKED_PENDING_MINIMAL_TRUSTED_DISCOVERY_SCOPE_CORRECTIVE
+V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = STOPPED_BLOCKED
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
 V1_SLICE_2_STEP2 = NOT_AUTHORIZED
 V1_SLICE_2_STEP3 = NOT_AUTHORIZED
@@ -37,8 +40,8 @@ V1_SLICE_3 = PACKAGING / COMPATIBILITY / RELEASE / NOT_STARTED
 V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
 P0_5_P1_P2_TO_P8 = NEED_DRIVEN_CONTRACT_CAPABILITY_ACCEPTANCE_TAXONOMY
 P0_5_P1_P2_TO_P8 = NOT_A_SECOND_SEQUENTIAL_IMPLEMENTATION_ROUTE
-V1_CURRENT_STEP = V1_SLICE_2_STEP1_AUTHORIZED_NOT_STARTED
-V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
+V1_CURRENT_STEP = V1_SLICE_2_STEP1_SCOPE_RECONCILIATION
+V1_CURRENT_NEXT_ACTION = DESIGN_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_CONTRACT_CORRECTIVE
 ```
 
 The four Slice route is the current implementation route. P0.5/P1/P2-P8 retain
@@ -48,16 +51,20 @@ Worker bootstrap, Harness Host bootstrap, Desktop foundation, authenticated
 Carrier, real Client-to-Host communication or the real Harness user loop
 already completed and frozen by 1A/1B/1C.
 
-The Slice 2 candidate implementation route is exactly three steps:
+The Slice 2 implementation route remains exactly three steps:
 
 1. Worker Authority and Trusted Discovery.
 2. Connection Recovery and Cold Projection.
 3. Outer Shell / Native / Interaction Integration.
 
-The Carrier Lifecycle Amendment is a frozen Step 1 Contract prerequisite.
-AUDIT-020 passed and the Owner authorized only Step 1. The next action is
-`EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL`; this state does not
-claim that Step 1 or any other Slice 2 implementation has started.
+The Carrier Lifecycle Amendment remains a frozen Step 1 Contract prerequisite.
+Step 1 subsequently stopped blocked because trusted discovery/Product
+attestation needs minimum-V1 scope reconciliation. The generic Electron identity
+probe and control-server Source Confirmation are diagnostic prerequisites, not
+Product implementation PASS. Broker, asymmetric authority protocol and Windows
+Service are not current Implementation Authority. The next action is
+`DESIGN_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_CONTRACT_CORRECTIVE`; this state does
+not claim that Step 1 or any other Slice 2 implementation has started.
 
 ## Phase Order
 

@@ -1,0 +1,79 @@
+{
+  "runId": "STEP1-20260909-IDENTITY-01",
+  "validation": [
+    {
+      "command": ".\\scripts\\step1-identity-probe.ps1 -EvidencePath <run-root>\\identity-probe-attempt-1.json",
+      "attempt": 1,
+      "exitCode": 1,
+      "result": "FAIL",
+      "rootCause": "PowerShell 7/.NET does not expose the legacy eight-argument NamedPipeServerStream ACL constructor",
+      "processesStarted": 0
+    },
+    {
+      "command": ".\\scripts\\step1-identity-probe.ps1 -Attempt 2 -EvidencePath <run-root>\\identity-probe-attempt-2.json",
+      "attempt": 2,
+      "exitCode": 0,
+      "result": "IDENTITY_GAP_REPRODUCED",
+      "corrective": "Use existing BCL NamedPipeServerStreamAcl.Create and PipesAclExtensions.GetAccessControl"
+    },
+    {
+      "command": "Node v22.19.0 --check apps/desktop/test-fixtures/step1-non-product-peer.cjs",
+      "attempt": 1,
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "PowerShell AST ParseFile scripts/step1-identity-probe.ps1; require no parse errors",
+      "attempt": 1,
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "Node v22.19.0 scripts/verify-static.mjs",
+      "attempt": 1,
+      "exitCode": 0,
+      "result": "PASS",
+      "scannedFiles": 93,
+      "limitation": "Existing static script excludes .cjs/.ps1; those files receive separate syntax and strict UTF-8/hygiene checks"
+    },
+    {
+      "command": "git diff --check",
+      "attempt": 1,
+      "exitCode": 0,
+      "result": "PASS",
+      "limitation": "Tracked diff only; new files are separately checked"
+    }
+  ],
+  "correctiveCycles": {
+    "minorHarness": 1,
+    "majorImplementation": 0
+  },
+  "runtimeConfirmationReruns": 0,
+  "productionApproachesImplemented": 0,
+  "requiredGatesNotExecuted": [
+    "dotnet build apps/native-carrier/ShacoForge.NativeCarrier.csproj -c Release --no-restore",
+    "pnpm run typecheck",
+    "pnpm test",
+    "Step1 unit/integration suite",
+    "Step1 S1-S14 Windows runtime harness",
+    "pnpm run smoke:worker",
+    "pnpm run smoke:carrier",
+    "pnpm run smoke:electron",
+    "pnpm run smoke:failure"
+  ],
+  "notExecutedReason": "Explicit attestation stop condition reached before production implementation; no full-regression PASS claimed",
+  "forbiddenCommandsExecuted": [],
+  "firstProbeSourceHash": "NOT_CAPTURED_BEFORE_CORRECTIVE",
+  "finalProbeSource": [
+    {
+      "path": "D:\\Project\\Shaco-Forge\\apps\\desktop\\test-fixtures\\step1-non-product-peer.cjs",
+      "bytes": 567,
+      "sha256": "ae8eaaffca1ebadc19f7d975a5751abc464c3eef2905a761da3aabca64002295"
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\scripts\\step1-identity-probe.ps1",
+      "bytes": 8332,
+      "sha256": "32306f6944b107dc016cff6aad5ff8677e7d8459dcdb136f61cf473ae1eb37d1"
+    }
+  ]
+}

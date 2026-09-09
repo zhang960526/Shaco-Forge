@@ -1,0 +1,45 @@
+{
+  "runId": "STEP1-20260909-SERVER-ATTESTATION-01",
+  "sourceConfirmationResult": "PASS",
+  "firstFailureBoundary": null,
+  "win32ErrorCode": 0,
+  "attemptCount": 1,
+  "clientConnection": "ESTABLISHED",
+  "getNamedPipeServerProcessId": "YES",
+  "actualServerPid": 55008,
+  "observedServerPid": 55008,
+  "actualServerIdentity": {
+    "Pid": 55008,
+    "CanonicalPath": "C:\\Users\\18902\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "CreationTimeFileTimeUtc": 134333950536800077
+  },
+  "observedServerIdentity": {
+    "Pid": 55008,
+    "CanonicalPath": "C:\\Users\\18902\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "CreationTimeFileTimeUtc": 134333950536800077
+  },
+  "pipeSecurity": {
+    "OwnerSid": "S-1-5-21-390745333-3527206759-1879520106-1004",
+    "OwnerSidMatch": true,
+    "DaclProtected": true,
+    "CurrentUserOnly": true,
+    "ExplicitAceCount": 1,
+    "HasInheritedAce": false,
+    "HasBroadPrincipal": false
+  },
+  "positiveIdentityAccepted": true,
+  "serverIdentityMismatchRejected": true,
+  "serverExitCode": 0,
+  "cleanupResult": "PASS",
+  "remainingProbeProcessPids": [],
+  "assertions": {
+    "SERVER_PROCESS_ID_QUERY_AVAILABLE": "YES",
+    "CLIENT_CONNECTION": "ESTABLISHED",
+    "SERVER_PID_MATCH": "PASS",
+    "SERVER_EXECUTABLE_PATH_MATCH": "PASS",
+    "SERVER_PROCESS_START_MATCH": "PASS",
+    "CURRENT_USER_PROTECTED_PIPE": "YES",
+    "SERVER_IDENTITY_MISMATCH_REJECTED": "YES",
+    "PROCESS_CLEANUP": "PASS"
+  }
+}

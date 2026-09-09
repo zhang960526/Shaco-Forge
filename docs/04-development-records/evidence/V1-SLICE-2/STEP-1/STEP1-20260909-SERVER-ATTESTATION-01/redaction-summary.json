@@ -1,0 +1,14 @@
+{
+  "runId": "STEP1-20260909-SERVER-ATTESTATION-01",
+  "result": "PASS",
+  "attachmentSecretGenerated": false,
+  "launchGrantRawBytesGenerated": false,
+  "carrierSecretGenerated": false,
+  "hmacProofGenerated": false,
+  "providerCredentialsAccessed": false,
+  "diagnosticPipeNameRecorded": false,
+  "notes": [
+    "Evidence contains process identity, runtime, ACL assertion, and bounded diagnostic results only.",
+    "The random diagnostic pipe name is intentionally omitted."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "runId": "STEP1-20260909-IDENTITY-01",
+  "firstUnresolvedBoundary": "STEP1_DESKTOP_ATTESTATION_IMPLEMENTATION_BLOCKED",
+  "finding": "The current Product launcher uses the same generic Electron image that executes an unrelated Node fixture; OS PID/start/path and image bytes do not bind the running application to Shaco Product Main.",
+  "baselineVulnerabilityClaim": false,
+  "productionAttestationImplemented": false,
+  "probeFacts": {
+    "currentUserDaclProtected": true,
+    "pipePeerPidMatchesTrackedChild": true,
+    "creationTimeMatchesTrackedChild": true,
+    "sameImageAsProductLauncher": true,
+    "imageProductName": "Electron",
+    "nonProductFixtureMessageObserved": true
+  },
+  "limitations": [
+    "Probe proves inadequacy of a path/runtime-file identity policy, not impossibility of every future attestation design",
+    "No actual lifecycle credential-issuance channel exists or was exercised",
+    "The fixture is distinguishable by arguments/environment; this probe does not test or establish a trusted application binding based on those values",
+    "No Shaco-specific packaged executable, approved application-integrity binding or corresponding verifier was found in the inspected Product source and current launch scripts"
+  ],
+  "sameUserNonProductRejection": "NOT_PROVEN",
+  "peerMismatch": "NOT_EXECUTED",
+  "staleCredential": "NOT_EXECUTED",
+  "busySecondDesktop": "NOT_EXECUTED",
+  "attachmentCredentialsGenerated": 0,
+  "carrierConnections": 0,
+  "providerRuns": 0,
+  "secretRedacted": true,
+  "pipeEndpointRedacted": true
+}

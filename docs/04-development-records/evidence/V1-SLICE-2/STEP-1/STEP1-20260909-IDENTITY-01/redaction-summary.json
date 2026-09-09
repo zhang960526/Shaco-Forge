@@ -1,0 +1,66 @@
+{
+  "runId": "STEP1-20260909-IDENTITY-01",
+  "result": "PASS",
+  "checkedFiles": [
+    {
+      "path": "D:\\Project\\Shaco-Forge\\apps\\desktop\\test-fixtures\\step1-non-product-peer.cjs",
+      "bytes": 567,
+      "sha256": "ae8eaaffca1ebadc19f7d975a5751abc464c3eef2905a761da3aabca64002295"
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\scripts\\step1-identity-probe.ps1",
+      "bytes": 8332,
+      "sha256": "32306f6944b107dc016cff6aad5ff8677e7d8459dcdb136f61cf473ae1eb37d1"
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-1\\STEP1-20260909-IDENTITY-01\\identity-probe-attempt-1.json",
+      "bytes": 439,
+      "sha256": "5387fd5ccccbc709b59610dbccd1b29e10c0061e6d1ad385d4fe2d4b0dad16b9"
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-1\\STEP1-20260909-IDENTITY-01\\identity-probe-attempt-2.json",
+      "bytes": 982,
+      "sha256": "e25af8ee54167fd9060df923ca886070b55d97e446060f049ae681a8556cf4a9"
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-1\\STEP1-20260909-IDENTITY-01\\process-lifecycle.json",
+      "bytes": 726,
+      "sha256": "7e0d843601060481caa36bb1463131b4c1d9759aae9c77eabe5a0b833309a2cb"
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-1\\STEP1-20260909-IDENTITY-01\\run-manifest.json",
+      "bytes": 2296,
+      "sha256": "056eb1baa850b4f6c42f487e146ef7a565e8596f14e68a8acbdd5afca80acdf5"
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-1\\STEP1-20260909-IDENTITY-01\\scenario-results.json",
+      "bytes": 4889,
+      "sha256": "2bd7b3ffc65be2ec54399ac1df6c591141294a47ed7e72351bdba5b6453de17d"
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-1\\STEP1-20260909-IDENTITY-01\\security-negative-results.json",
+      "bytes": 1558,
+      "sha256": "d6e997c7c5fac9169f474d12ba18a2f20d6d8ea201aab5eddee9fbce95e934a9"
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-1\\STEP1-20260909-IDENTITY-01\\test-summary.json",
+      "bytes": 2775,
+      "sha256": "720f27277e85f35f4cfe6bd2c878c0cd22de52f5bf1c802cf2c3f75664e3deea"
+    }
+  ],
+  "encoding": "UTF-8 without BOM",
+  "strictUtf8Decode": true,
+  "mojibakeMarkersAbsent": true,
+  "trailingWhitespaceAbsent": true,
+  "rawCarrierEndpointAbsent": true,
+  "attachmentSecretsGenerated": 0,
+  "hmacProofsGenerated": 0,
+  "challengeOrAuthNoncesGenerated": 0,
+  "providerCredentialsUsed": 0,
+  "productLogsCreated": 0,
+  "rawExceptionMessagesRecorded": false,
+  "secretRedacted": true,
+  "pipeEndpointRedacted": true,
+  "allowedHashes": "SHA-256 of source/evidence/runtime image only; no attachment-secret hash",
+  "scope": "New probe source and evidence; final blocked record is checked separately after generation"
+}

@@ -1,0 +1,14 @@
+{
+  "probe": "STEP1_DEV_PRODUCT_IDENTITY_PREREQUISITE",
+  "attempt": 1,
+  "timestampUtc": "2026-09-08T16:16:31.1057141Z",
+  "result": "PROBE_FAILED",
+  "step1Gate": "NOT_EXECUTED",
+  "productCodeStarted": false,
+  "workerHostHelperStarted": false,
+  "providerRun": false,
+  "secretRedacted": true,
+  "pipeEndpointRedacted": true,
+  "failureType": "System.Management.Automation.MethodException",
+  "remainingTrackedPids": []
+}

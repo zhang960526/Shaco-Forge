@@ -1,0 +1,161 @@
+{
+  "runId": "STEP1-20260909-IDENTITY-01",
+  "step1Result": "STOPPED_BLOCKED",
+  "scenarios": [
+    {
+      "id": "S1",
+      "name": "Initial Authority",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S2",
+      "name": "Graceful Desktop Exit",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S3",
+      "name": "Desktop Hard Crash",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S4",
+      "name": "Same Worker Reattach",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S5",
+      "name": "Second Desktop BUSY",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S6",
+      "name": "Same-user Non-Product Peer",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S7",
+      "name": "Peer Reservation Mismatch",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S8",
+      "name": "Stale Credential",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S9",
+      "name": "Sequential Attach Reset",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S10",
+      "name": "Helper Crash",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S11",
+      "name": "Host Crash",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S12",
+      "name": "Worker Hard Crash",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S13",
+      "name": "Stale / Hung Authority",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    },
+    {
+      "id": "S14",
+      "name": "Explicit Bounded Stop",
+      "result": "NOT_EXECUTED",
+      "attemptCount": 0,
+      "reason": "Blocked before Product implementation at independently verifiable Desktop Product identity",
+      "workerPid": null,
+      "hostPid": null,
+      "helperPid": null,
+      "workerInstanceId": null
+    }
+  ],
+  "prerequisiteProbeIsNotS6": true
+}

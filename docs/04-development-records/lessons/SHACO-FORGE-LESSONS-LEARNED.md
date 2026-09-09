@@ -25,3 +25,27 @@ Reconnect must rebuild projection from Worker/Harness authority; Desktop must no
 ## L-006 — Optional Product Features Must Not Become Architecture Gates
 
 Example: binary carrier is a hard architecture gate; Session Export ZIP can remain optional.
+
+## L-007 — Source Declaration Is Not Execution Evidence
+
+The presence of a Win32 API declaration in source does not replace bounded execution confirmation of the intended call and identity checks.
+
+## L-008 — Generic Runtime Identity Is Not Product Application Identity
+
+A generic `electron.exe` path, version or hash can identify the runtime image without proving that the running application is Shaco Forge.
+
+## L-009 — Genuine Binary Identity Is Not Authority Membership
+
+Even a genuine Helper binary does not automatically prove that the process belongs to the current legal Worker authority.
+
+## L-010 — Security Threat Model Drives Architecture Cost
+
+Treating same-user process takeover as a V1 threat can require whole-product OS isolation; it must not be presented as a local Step 1 implementation detail.
+
+## L-011 — Future Extension Seam Is Not Future Feature Prebuild
+
+V1.1, V1.2 and V1.3 keep only explicit compatibility seams. Do not prebuild their domains, empty tables, runtimes or generic frameworks in V1.0.
+
+## L-012 — Harness Reuse Mainline First
+
+Every proposed Product subsystem must first prove that it is required for `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`.

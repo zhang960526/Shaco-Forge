@@ -1,0 +1,28 @@
+{
+  "runId": "STEP1-20260909-SERVER-ATTESTATION-01",
+  "documentType": "DIAGNOSTIC_SOURCE_CONFIRMATION_EVIDENCE",
+  "result": "PASS",
+  "product": {
+    "branch": "master",
+    "head": "20864fbd3c545eacc3baefd68faf71330a3d2d53",
+    "trackedSourceDelta": "NONE",
+    "stagedDelta": "NONE"
+  },
+  "frozenHarness": {
+    "head": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "state": "CLEAN",
+    "modified": false
+  },
+  "runtime": {
+    "powershell": "7.6.5",
+    "dotnet": "10.0.11",
+    "operatingSystem": "Microsoft Windows NT 10.0.26200.0"
+  },
+  "attemptCount": 1,
+  "maximumAttempts": 2,
+  "distinctApproaches": 1,
+  "productRuntimeStarted": false,
+  "networkUsed": false,
+  "commitPerformed": false,
+  "pushPerformed": false
+}

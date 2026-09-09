@@ -1,12 +1,12 @@
 # Shaco Forge Current State
 
-> Latest authority (2026-09-08): [AUDIT-020](../05-reviews/architecture/AUDIT-020-V1-SLICE-2-CONTRACT-TARGETED-DELTA-REREVIEW.md)
-> passes the final targeted delta re-review and closes F-01 with no new Blocking
-> drift. The [Owner Freeze / Step 1 Authorization Decision](../04-development-records/V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md)
-> freezes the [V1-SLICE-2 Architecture Contract](../03-v1.0-plan/V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md)
-> and [Carrier Lifecycle Amendment](../03-v1.0-plan/V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md),
-> and authorizes only Step 1. Product implementation remains `NOT_STARTED`;
-> Step 2, Step 3 and Provider remain not authorized.
+> Latest authority (2026-09-09): the
+> [V1.0 Mainline and Step 1 Scope Reconciliation Decision](../04-development-records/V1-0-MAINLINE-AND-STEP1-SCOPE-RECONCILIATION-DECISION.md)
+> preserves the truthful Step 1 blocker/probe/Evidence history and returns the
+> implementation mainline to `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`. The
+> V1-SLICE-2 Architecture Contract and Carrier Lifecycle Amendment remain
+> frozen. Step 1 remains authorized but blocked pending the minimum-V1 trusted
+> discovery scope corrective; Step 2, Step 3 and Provider remain unauthorized.
 
 ```text
 V1_SLICE_1A = CLOSED / FROZEN
@@ -30,18 +30,21 @@ V1_SLICE_2_ARCHITECTURE_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_BLOCKING_FINDINGS = NONE
 V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
-V1_SLICE_2_STEP1 = AUTHORIZED_NOT_STARTED
+V1_SLICE_2_STEP1 = BLOCKED_PENDING_MINIMAL_TRUSTED_DISCOVERY_SCOPE_CORRECTIVE
+V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = STOPPED_BLOCKED
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
 V1_SLICE_2_STEP2 = NOT_AUTHORIZED
 V1_SLICE_2_STEP3 = NOT_AUTHORIZED
 PROVIDER_GATE_AUTHORIZATION = NO
 V1_SLICE_2 = NOT_STARTED
-V1_CURRENT_STEP = V1_SLICE_2_STEP1_AUTHORIZED_NOT_STARTED
-V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
+V1_0_MAINLINE = MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION
+V1_1_TO_V1_3 = PRESERVE_SEAMS_ONLY
+V1_CURRENT_STEP = V1_SLICE_2_STEP1_SCOPE_RECONCILIATION
+V1_CURRENT_NEXT_ACTION = DESIGN_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_CONTRACT_CORRECTIVE
 ```
 
 Status: ACTIVE
-Last Updated: 2026-09-08
+Last Updated: 2026-09-09
 
 > Historical 1C Host-settings authority: the Owner approved
 > `STANDARD_PRESET_HOST_SETTINGS_SCOPE_CONFIRMATION`, authorizing exactly
@@ -199,8 +202,8 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 ## Current Phase
 
 - Phase: V1 Implementation
-- Step: V1-SLICE-2 Step 1 authorized, not started — `V1_SLICE_2_STEP1_AUTHORIZED_NOT_STARTED`
-- Current Authorized Scope: `STEP_1_WORKER_AUTHORITY_AND_TRUSTED_DISCOVERY`; Slice 2 Product implementation has not started
+- Step: V1-SLICE-2 Step 1 scope reconciliation — `V1_SLICE_2_STEP1_SCOPE_RECONCILIATION`
+- Current Authorized Scope: Step 1 remains authorized but is `BLOCKED_PENDING_MINIMAL_TRUSTED_DISCOVERY_SCOPE_CORRECTIVE`; no Product implementation may resume from the diagnostic/source-confirmation history alone
 - Production Implementation: IN_PROGRESS
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -226,12 +229,14 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 - `V1_0_SCOPE_RECONCILIATION = COMPLETED`
 - `V1_0_IMPLEMENTATION_SCOPE = HARNESS_REUSE_PRODUCTIZATION`
 - `V1_0_PROVIDER_MODEL_OWNERSHIP = HARNESS`
+- `V1_0_MAINLINE = MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`
+- `V1_1_TO_V1_3 = PRESERVE_SEAMS_ONLY`
 - `V1_0_SCOPE_CORRECTIVE = APPLIED`
 - `V1_IMPLEMENTATION_READY = YES`
 - `V1_IMPLEMENTATION_STARTED = YES`
 - `V1_CURRENT_SLICE = V1_SLICE_2`
-- `V1_CURRENT_STEP = V1_SLICE_2_STEP1_AUTHORIZED_NOT_STARTED`
-- `V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL`
+- `V1_CURRENT_STEP = V1_SLICE_2_STEP1_SCOPE_RECONCILIATION`
+- `V1_CURRENT_NEXT_ACTION = DESIGN_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_CONTRACT_CORRECTIVE`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE = ACCEPTED`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PASS`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_OWNER_ACCEPTED = YES`
@@ -254,7 +259,8 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 - `V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS`
 - `V1_SLICE_2_CONTRACT_BLOCKING_FINDINGS = NONE`
 - `V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES`
-- `V1_SLICE_2_STEP1 = AUTHORIZED_NOT_STARTED`
+- `V1_SLICE_2_STEP1 = BLOCKED_PENDING_MINIMAL_TRUSTED_DISCOVERY_SCOPE_CORRECTIVE`
+- `V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = STOPPED_BLOCKED`
 - `V1_SLICE_2_IMPLEMENTATION = NOT_STARTED`
 - `V1_SLICE_2_STEP2 = NOT_AUTHORIZED`
 - `V1_SLICE_2_STEP3 = NOT_AUTHORIZED`
@@ -728,13 +734,15 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - V1.0 Technical Implementation Baseline: `ACCEPTED`; Independent REVIEW-011 `PASS`; Architecture Owner accepted
 - V1 Slice 1A: `PASS / CLOSED / FROZEN`; REVIEW-012 `PASS`; whitespace corrective `PASS`; REVIEW-013 Delta Re-Review `PASS`; Owner Closure `ACCEPTED`
 - V1 Slice 1: `PASS / CLOSED / FROZEN`; Slice 1A, 1B and 1C are `PASS / CLOSED / FROZEN`; AUDIT-018 `PASS`; Slice 1 Owner Closure `ACCEPTED`; no 1D/1E
-- V1 Slice 2: Architecture Contract and Carrier Amendment `FROZEN`; Architecture Re-Review and Targeted Delta Re-Review `PASS`; Step 1 `AUTHORIZED_NOT_STARTED`; Step 2/3 and Provider `NOT_AUTHORIZED`; Slice 2 implementation `NOT_STARTED`
+- V1 Slice 2: Architecture Contract and Carrier Amendment `FROZEN`; Architecture Re-Review and Targeted Delta Re-Review `PASS`; Step 1 `BLOCKED_PENDING_MINIMAL_TRUSTED_DISCOVERY_SCOPE_CORRECTIVE` after `STOPPED_BLOCKED`; Step 2/3 and Provider `NOT_AUTHORIZED`; Slice 2 implementation `NOT_STARTED`
 
 ## Immediate Next Action
 
-Execute `V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL` within the sole
-authorized scope `STEP_1_WORKER_AUTHORITY_AND_TRUSTED_DISCOVERY`. Step 2, Step
-3, Provider Runtime and all explicit non-scope remain unauthorized.
+Design `DESIGN_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_CONTRACT_CORRECTIVE`. Reconcile
+the smallest trusted discovery/attestation boundary required for
+`MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION` and return for explicit Architecture
+Owner authority. Do not continue Broker design, modify the frozen Contract or
+Amendment, start Step 1 Product code, authorize Step 2/3, or run Provider work.
 
 Do not pull/switch/update the frozen Harness SHA without an Architecture
 Decision. Spike code is NOT production by default. The corrective candidate

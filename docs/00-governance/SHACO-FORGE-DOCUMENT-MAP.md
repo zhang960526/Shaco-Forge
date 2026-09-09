@@ -1,12 +1,12 @@
 # Shaco Forge Document Map
 
-> Current summary (2026-09-08): the V1-SLICE-2
-> [Architecture Contract](../03-v1.0-plan/V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md)
-> and [Carrier Lifecycle Amendment](../03-v1.0-plan/V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md)
-> are `FROZEN`. [AUDIT-020](../05-reviews/architecture/AUDIT-020-V1-SLICE-2-CONTRACT-TARGETED-DELTA-REREVIEW.md)
-> is `PASS`, F-01 is closed, and the [Owner Freeze / Step 1 Authorization Decision](../04-development-records/V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md)
-> authorizes Step 1 as `AUTHORIZED_NOT_STARTED`. Step 2/3 and Provider remain
-> unauthorized; Slice 2 Product implementation remains `NOT_STARTED`.
+> Current summary (2026-09-09): the
+> [V1.0 Mainline and Step 1 Scope Reconciliation Decision](../04-development-records/V1-0-MAINLINE-AND-STEP1-SCOPE-RECONCILIATION-DECISION.md)
+> preserves the Step 1 blocker/probe/Evidence history and freezes
+> `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION` as the V1.0 mainline. The V1-SLICE-2
+> Architecture Contract and Carrier Lifecycle Amendment remain frozen. Step 1 is
+> blocked pending the minimum trusted-discovery scope corrective; Step 2/3 and
+> Provider remain unauthorized.
 
 ```text
 V1_SLICE_1A = CLOSED / FROZEN
@@ -22,14 +22,17 @@ V1_SLICE_2_ARCHITECTURE_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_BLOCKING_FINDINGS = NONE
 V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
-V1_SLICE_2_STEP1 = AUTHORIZED_NOT_STARTED
+V1_SLICE_2_STEP1 = BLOCKED_PENDING_MINIMAL_TRUSTED_DISCOVERY_SCOPE_CORRECTIVE
+V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = STOPPED_BLOCKED
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
 V1_SLICE_2_STEP2 = NOT_AUTHORIZED
 V1_SLICE_2_STEP3 = NOT_AUTHORIZED
 PROVIDER_GATE_AUTHORIZATION = NO
 V1_SLICE_2 = NOT_STARTED
-V1_CURRENT_STEP = V1_SLICE_2_STEP1_AUTHORIZED_NOT_STARTED
-V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
+V1_0_MAINLINE = MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION
+V1_1_TO_V1_3 = PRESERVE_SEAMS_ONLY
+V1_CURRENT_STEP = V1_SLICE_2_STEP1_SCOPE_RECONCILIATION
+V1_CURRENT_NEXT_ACTION = DESIGN_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_CONTRACT_CORRECTIVE
 ```
 
 Status: ACTIVE
@@ -249,7 +252,10 @@ Baseline candidate now gates that Slice behind Independent Review.
 | Document/Folder | Role |
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
+| `V1-0-MAINLINE-AND-STEP1-SCOPE-RECONCILIATION-DECISION.md` | Current Architecture Owner authority preserving Step 1 history, freezing the minimum V1.0 Harness Desktop productization mainline and limiting V1.1-V1.3 to extension seams |
 | `V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md` | Current V1.0 Harness-reuse implementation-scope allocation authority; P0.S remains closed |
+| `V1-SLICE-2-STEP1-DESKTOP-ATTESTATION-BLOCKED-RECORD.md` | Step 1 `STOPPED_BLOCKED` history and generic Electron Product-identity gap; diagnostic prerequisite, not runtime PASS |
+| `V1-SLICE-2-STEP1-CONTROL-SERVER-ATTESTATION-SOURCE-CONFIRMATION.md` | Bounded `GetNamedPipeServerProcessId` execution confirmation; source primitive PASS, not Product implementation PASS |
 | `V1-SLICE-1-SCOPE-RECONCILIATION-DECISION.md` | Owner-accepted post-1C scope allocation, four-Slice route reconciliation and Slice-1 Independent Closure Audit handoff |
 | `V1-SLICE-1-OWNER-CLOSURE-DECISION.md` | Architecture Owner acceptance and frozen baseline for the complete real Harness user-loop Slice; Slice 2 remains not started |
 | `V1-SLICE-2-ARCHITECTURE-OWNER-DECISION.md` | Owner acceptance of Corrective V2 and AUDIT-019 for Contract persistence only; targeted delta review is next; implementation not authorized |
