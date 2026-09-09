@@ -3,13 +3,14 @@
 Status: ACTIVE
 
 > Current V1.0 route authority is the
-> [V1.0 Mainline and Step 1 Scope Reconciliation Decision](../04-development-records/V1-0-MAINLINE-AND-STEP1-SCOPE-RECONCILIATION-DECISION.md).
+> [V1-SLICE-2 Step 1 Minimal Trusted Discovery Corrective Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md).
 > Slice 1A/1B/1C and Slice 1 remain `PASS / CLOSED / FROZEN`. The
 > [V1-SLICE-2 Architecture Contract](V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md)
 > and [Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md)
-> remain frozen. Step 1 stopped blocked at the trusted discovery/attestation
-> scope boundary; Step 2/3 and Provider remain unauthorized. The implementation
-> mainline is `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`.
+> are corrected candidates awaiting targeted persisted-delta review. Step 1 is
+> corrective-persisted with its earlier implementation authority suspended;
+> Step 2/3 and Provider remain unauthorized. The implementation mainline remains
+> `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`.
 
 ## Current Implementation Route
 
@@ -23,14 +24,19 @@ V1_SLICE_1_SCOPE_RECONCILIATION = COMPLETED
 V1_SLICE_1_INDEPENDENT_CLOSURE_AUDIT = PASS
 V1_SLICE_1_OWNER_CLOSURE = ACCEPTED
 V1_SLICE_1_ADDITIONAL_IMPLEMENTATION = NONE
-V1_SLICE_2_ARCHITECTURE = FROZEN
-V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = FROZEN
+V1_SLICE_2_ARCHITECTURE = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW
+V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW
 V1_SLICE_2_ARCHITECTURE_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_BLOCKING_FINDINGS = NONE
-V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
-V1_SLICE_2_STEP1 = BLOCKED_PENDING_MINIMAL_TRUSTED_DISCOVERY_SCOPE_CORRECTIVE
+V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_DESIGN = PASS
+V1_SLICE_2_INDEPENDENT_CORRECTIVE_REVIEW = PASS
+V1_SLICE_2_OVERDESIGN = CLOSED
+V1_SLICE_2_CORRECTIVE = PERSISTED_WAITING_TARGETED_DELTA_REVIEW
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = SUSPENDED_PENDING_CORRECTIVE_REFREEZE
+V1_SLICE_2_STEP1 = CORRECTIVE_PERSISTED_WAITING_TARGETED_DELTA_REVIEW
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = STOPPED_BLOCKED
+V1_SLICE_2_STEP1_PRODUCT_IMPLEMENTATION = NOT_STARTED
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
 V1_SLICE_2_STEP2 = NOT_AUTHORIZED
 V1_SLICE_2_STEP3 = NOT_AUTHORIZED
@@ -40,8 +46,8 @@ V1_SLICE_3 = PACKAGING / COMPATIBILITY / RELEASE / NOT_STARTED
 V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
 P0_5_P1_P2_TO_P8 = NEED_DRIVEN_CONTRACT_CAPABILITY_ACCEPTANCE_TAXONOMY
 P0_5_P1_P2_TO_P8 = NOT_A_SECOND_SEQUENTIAL_IMPLEMENTATION_ROUTE
-V1_CURRENT_STEP = V1_SLICE_2_STEP1_SCOPE_RECONCILIATION
-V1_CURRENT_NEXT_ACTION = DESIGN_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_CONTRACT_CORRECTIVE
+V1_CURRENT_STEP = V1_SLICE_2_STEP1_MINIMAL_TRUSTED_DISCOVERY_CORRECTIVE_PERSISTED
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW
 ```
 
 The four Slice route is the current implementation route. P0.5/P1/P2-P8 retain
@@ -57,14 +63,15 @@ The Slice 2 implementation route remains exactly three steps:
 2. Connection Recovery and Cold Projection.
 3. Outer Shell / Native / Interaction Integration.
 
-The Carrier Lifecycle Amendment remains a frozen Step 1 Contract prerequisite.
-Step 1 subsequently stopped blocked because trusted discovery/Product
-attestation needs minimum-V1 scope reconciliation. The generic Electron identity
-probe and control-server Source Confirmation are diagnostic prerequisites, not
-Product implementation PASS. Broker, asymmetric authority protocol and Windows
-Service are not current Implementation Authority. The next action is
-`DESIGN_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_CONTRACT_CORRECTIVE`; this state does
-not claim that Step 1 or any other Slice 2 implementation has started.
+The Carrier Lifecycle Amendment remains a required Step 1 Contract prerequisite
+and is now an Owner-corrected candidate. The minimal trusted-discovery design and
+Independent Corrective Review are `PASS`; overdesign is `CLOSED`. The generic
+Electron identity probe remains a historical diagnostic scenario, not a frozen
+V1 runtime gate. Broker, asymmetric authority protocol, Product Launch Grant and
+Windows Service are not V1 requirements. The next action is
+`INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW`; this
+state does not claim that Step 1 Product implementation or any later Slice 2
+step has started.
 
 ## Phase Order
 

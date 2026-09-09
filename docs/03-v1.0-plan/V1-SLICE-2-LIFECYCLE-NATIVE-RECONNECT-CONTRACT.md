@@ -4,7 +4,7 @@
 |---|---|
 | Contract ID | `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-20260908-01` |
 | Document Type | `V1_SLICE_ARCHITECTURE_CONTRACT` |
-| Status | `FROZEN_FOR_IMPLEMENTATION` |
+| Status | `OWNER_CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW` |
 | Product baseline | `74d62cc6ae3dd7e690f0acffc6a0aa0eb741319c` |
 | Frozen Harness baseline | `cd5ef8148158c3a752a658978873241fdf8e2bbc` |
 | Carrier amendment | [V1-SLICE-2 Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md) |
@@ -12,19 +12,22 @@
 | Owner decision | [V1-SLICE-2 Architecture Owner Decision](../04-development-records/V1-SLICE-2-ARCHITECTURE-OWNER-DECISION.md) |
 | Targeted delta re-review | [AUDIT-020](../05-reviews/architecture/AUDIT-020-V1-SLICE-2-CONTRACT-TARGETED-DELTA-REREVIEW.md) |
 | Freeze authority | [V1-SLICE-2 Contract Freeze and Step 1 Authorization Decision](../04-development-records/V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md) |
+| Corrective Authority | [V1-SLICE-2 Step 1 Minimal Trusted Discovery Corrective Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md) |
+| Independent Corrective Review | [AUDIT-021](../05-reviews/architecture/AUDIT-021-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-REVIEW.md) |
 
 ```text
-V1_SLICE_2_ARCHITECTURE_CONTRACT = FROZEN
-V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS
-V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
+V1_SLICE_2_ARCHITECTURE_CONTRACT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = SUSPENDED_PENDING_CORRECTIVE_REFREEZE
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
-NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
+NEXT_ACTION = INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW
 ```
 
-This document persists the Architecture Owner-accepted Corrective V2 design. It
-is frozen for implementation after AUDIT-020 and the Owner Freeze / Step 1
-Authorization Decision. It does not itself start Product implementation,
-authorize a Provider run, or convert a planned gate into completed Evidence.
+This document now persists the Architecture Owner-accepted Minimal V1 Trusted
+Discovery Corrective after the earlier AUDIT-020 freeze. It is a corrected
+candidate awaiting targeted persisted-delta review; the earlier Step 1
+implementation authorization is suspended pending corrective re-freeze. It
+does not itself start Product implementation, authorize a Provider run, or
+convert a planned gate into completed Evidence.
 
 ## 1. Goal and ownership
 
@@ -45,6 +48,20 @@ Harness remains the sole owner of Provider, Model, Credential, Workspace,
 Session, Conversation, Tool, Permission, Approval and Question truth. Shaco may
 hold only the explicitly bounded ephemeral projections described here.
 
+The normative V1 local trust boundary is:
+
+```text
+V1_LOCAL_TRUST_PRINCIPAL = CURRENT_WINDOWS_USER_SID
+SAME_USER_HOST_COMPROMISE = OUT_OF_SCOPE
+AUTHENTICATED_CARRIER = USER_BOUNDARY + FRESH_CAPABILITY_POSSESSION
+PRODUCT_BINARY_IDENTITY_REQUIRED_FOR_V1_LOCAL_AUTHORIZATION = NO
+```
+
+`CURRENT_WINDOWS_USER_SID` is the V1 local OS security principal. V1 does not
+claim to distinguish hostile processes inside the same SID. Resistance to that
+host-compromise class would require a Whole-V1 OS-principal isolation
+reassessment, not a local Step 1 addition.
+
 ## 2. Scope
 
 ### 2.1 In scope
@@ -53,7 +70,8 @@ hold only the explicitly bounded ephemeral projections described here.
 
 - One per-user detached Worker authority, identified by `workerInstanceId`.
 - Helper-held authority mutex and Worker-owned Job containment.
-- A protected discovery/control pipe with Desktop peer attestation.
+- A protected discovery/control pipe with lifecycle peer instance binding,
+  compatibility and fresh capability issuance.
 - Worker health, bounded stop, sequential Desktop attachment and fail-closed
   prevention of split brain.
 
@@ -107,10 +125,11 @@ authorized by this Contract.
 WORKER_AUTHORITY_IDENTITY = workerInstanceId
 WorkerGeneration = DO_NOT_CREATE
 CarrierConnectionId = DO_NOT_CREATE
-DesktopInstanceId = DISCOVERY_ATTESTATION_ONLY
+DesktopInstanceId = FRESHNESS_CORRELATION_ONLY
 WORKER_LIFETIME = per-user detached authority epoch
 NATIVE_HELPER_LIFETIME = Worker-lifetime
-CARRIER_ENDPOINT = one random endpoint per workerInstanceId
+LIFECYCLE_DISCOVERY_PIPE = DETERMINISTIC_PER_USER
+CARRIER_ENDPOINT = RANDOM_PER_WORKER_INSTANCE
 MAX_ACTIVE_DESKTOP_ATTACHMENTS = 1
 JOB_OWNER = WORKER
 JOB_CONTAINS = Host + Helper
@@ -137,19 +156,36 @@ unhealthy Helper, Host or authority ends in `WORKER_AUTHORITY_FAILURE`.
 
 ## 5. Trusted discovery and credential issuance
 
-The Native Helper is the credential-generation authority. Before issuing any
-credential it must validate all of the following on the lifecycle control
-connection:
+The Native Helper is the credential-generation authority. Before reserving or
+issuing any credential it must validate all of the following on the lifecycle
+control connection:
 
-- protected current-user DACL;
-- peer PID and process creation time;
-- canonical executable path and Product identity;
-- `DesktopInstanceId`; and
-- a fresh nonce.
+1. protected current-user-only DACL and owner;
+2. actual lifecycle peer PID;
+3. actual process creation/start time;
+4. protocol/version compatibility;
+5. `DesktopInstanceId` freshness/correlation;
+6. a fresh nonce;
+7. healthy current Worker, Helper, Host and authority state; and
+8. attachment state that permits a reservation.
 
-Same SID is only `PRECONDITION_ONLY`, not complete authentication. The secret is
-delivered only over that validated lifecycle control connection and is bound to
-the verified peer PID/process-start tuple.
+Current-user SID is the V1 local trust principal. Actual PID plus process-start
+time provides process-instance binding and PID-reuse protection.
+`DesktopInstanceId` and nonce provide freshness/correlation only, while
+protocol/version fields provide compatibility. Peer-reported values are not an
+independent identity trust root. The fresh secret is delivered only over that
+validated lifecycle control connection, and its reservation is bound to the
+actual peer PID/process-start tuple.
+
+Canonical executable path and Product metadata, if retained, are limited to
+compatibility, diagnostics, release-integrity and defense-in-depth. They are not
+a V1 credential-issuance security hard gate and do not establish Product binary
+authentication.
+
+```text
+AUTHENTICATED_CARRIER = USER_BOUNDARY + FRESH_CAPABILITY_POSSESSION
+PRODUCT_BINARY_ATTESTATION = NO
+```
 
 Authentication-field generation ownership is explicit:
 
@@ -204,6 +240,16 @@ the pipe is disconnected; attachment auth state, `JsonFrameDecoder` and relay
 state are completely reset. Old secrets/epochs are immediately revoked. No
 stale frame may cross an attachment boundary, and callbacks from an old Client
 generation are rejected.
+
+The Step 1 connection boundary is explicit:
+
+```text
+STEP1_CONNECTION_END_STATE = CARRIER_READY
+```
+
+Step 1 does not require Product `CONNECTED`, Workspace cold projection, Session
+cold recovery, the full reconnect UI state machine or Worker replacement
+recovery. Those remain Step 2 obligations.
 
 ## 7. Reconnect state machine
 
@@ -408,12 +454,19 @@ this persistence.
 
 ### Step 1
 
-- Worker single instance; Desktop close/crash with Worker survival; same Worker
-  reattach.
-- Stale/hung authority; `BUSY` second attachment; peer identity mismatch; stale
-  credential; sequential disconnect/reconnect.
-- Helper crash, Host crash and Worker hard crash; no orphan Host; zero authority
-  overlap.
+- One Worker authority; Desktop graceful exit and Desktop crash with Worker,
+  Host and Helper survival; same-Worker reattach with a fresh `credentialEpoch`.
+- `BUSY` second attachment; stale, expired and replayed credential rejection;
+  lifecycle/Carrier PID plus process-start mismatch rejection; sequential reset.
+- Helper crash containment; Host crash containment; Worker hard crash with no
+  orphan; stale/hung authority fail closed; explicit bounded stop.
+- Cross-user lifecycle access rejection; Renderer zero direct lifecycle/Carrier
+  access; protocol/version incompatibility fail closed; endpoint/secret hygiene.
+- Stale generation/callback rejection; zero authority overlap and no old-child
+  adoption where applicable.
+
+Same-SID hostile-binary negatives, `OpenProcess` theft negatives and Broker
+negatives are not V1 gates.
 
 ### Step 2
 
@@ -447,17 +500,19 @@ or observed:
 - A Control Store must copy Harness truth.
 - Slice 3 Packaging becomes a large Slice 2 prerequisite.
 
-## 17. Contract freeze authority
+## 17. Corrective authority and review state
 
-AUDIT-020 completed the targeted delta re-review with `PASS`, closed F-01 and
-found no new Blocking drift. The Architecture Owner subsequently froze this
-Contract and its Carrier Amendment and authorized only Step 1. This freeze does
-not start Product implementation or authorize Step 2, Step 3 or Provider work.
+AUDIT-020 and the earlier Owner freeze remain historical authority for the
+pre-corrective bytes. The later Minimal Trusted Discovery Corrective Decision
+explicitly corrects the V1 local trust principal and credential issuance gate.
+AUDIT-021 records the supplied independent corrective review as `PASS` with no
+Blocking Findings. This corrected candidate requires a targeted persisted-delta
+review before re-freeze; no Product implementation, Step 2, Step 3 or Provider
+work is authorized by this persistence.
 
 ```text
-V1_SLICE_2_ARCHITECTURE_CONTRACT = FROZEN
-V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS
-V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
+V1_SLICE_2_ARCHITECTURE_CONTRACT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = SUSPENDED_PENDING_CORRECTIVE_REFREEZE
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
-NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
+NEXT_ACTION = INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW
 ```

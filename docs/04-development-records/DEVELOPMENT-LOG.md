@@ -2,6 +2,29 @@
 
 Status: ACTIVE
 
+## 2026-09-09 - V1-SLICE-2 Step 1 Minimal Trusted Discovery Corrective Persistence
+
+- Minimal V1 trusted-discovery design is complete; Independent Corrective
+  Review `REVIEW-021` is `PASS` with `BLOCKING_FINDINGS = NONE`.
+- The historical security-promise audit found no prior frozen promise to reject
+  same-SID hostile processes. `CURRENT_WINDOWS_USER_SID` is now the V1 local
+  trust principal; same-user host compromise is outside V1 scope.
+- The Owner Corrective removes Product binary identity as a credential-issuance
+  security hard gate. Canonical path/Product metadata may remain only for
+  compatibility, diagnostics, release-integrity or defense in depth.
+- Authenticated Carrier wording is now exactly
+  `USER_BOUNDARY + FRESH_CAPABILITY_POSSESSION`; it does not claim Product binary
+  attestation or same-SID process differentiation.
+- A long-lived Broker, asymmetric Worker-authority protocol and Product Launch
+  Grant do not enter V1; Windows Service remains out of scope and overdesign is
+  closed.
+- Review obligations V-1 through V-5 are persisted across the Main Contract,
+  Carrier Amendment, Security Model, Owner Decision and governance summaries.
+- Product implementation remains `NOT_STARTED`. The old Step 1 authorization is
+  `SUSPENDED_PENDING_CORRECTIVE_REFREEZE`; Step 2/3 and Provider remain
+  unauthorized.
+- Next: `INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW`.
+
 ## 2026-09-09 - V1.0 Mainline and Step 1 Scope Reconciliation
 
 - The authorized V1-SLICE-2 Step 1 long-running goal started and stopped as

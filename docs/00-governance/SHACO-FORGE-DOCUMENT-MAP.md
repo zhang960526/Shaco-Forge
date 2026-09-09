@@ -1,12 +1,12 @@
 # Shaco Forge Document Map
 
 > Current summary (2026-09-09): the
-> [V1.0 Mainline and Step 1 Scope Reconciliation Decision](../04-development-records/V1-0-MAINLINE-AND-STEP1-SCOPE-RECONCILIATION-DECISION.md)
-> preserves the Step 1 blocker/probe/Evidence history and freezes
-> `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION` as the V1.0 mainline. The V1-SLICE-2
-> Architecture Contract and Carrier Lifecycle Amendment remain frozen. Step 1 is
-> blocked pending the minimum trusted-discovery scope corrective; Step 2/3 and
-> Provider remain unauthorized.
+> [V1-SLICE-2 Step 1 Minimal Trusted Discovery Corrective Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md)
+> preserves `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION` as the mainline and accepts
+> the minimal V1 trust model after Independent [AUDIT-021](../05-reviews/architecture/AUDIT-021-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-REVIEW.md)
+> returned `PASS`. The Contract and Amendment are corrected candidates awaiting
+> targeted persisted-delta review. Step 1 is corrective-persisted with its prior
+> implementation authority suspended; Step 2/3 and Provider remain unauthorized.
 
 ```text
 V1_SLICE_1A = CLOSED / FROZEN
@@ -16,13 +16,14 @@ V1_SLICE_1_SCOPE_RECONCILIATION = COMPLETED
 V1_SLICE_1_INDEPENDENT_CLOSURE_AUDIT = PASS
 V1_SLICE_1_OWNER_CLOSURE = ACCEPTED
 V1_SLICE_1 = PASS / CLOSED / FROZEN
-V1_SLICE_2_ARCHITECTURE_CONTRACT = FROZEN
-V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = FROZEN
+V1_SLICE_2_ARCHITECTURE_CONTRACT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW
+V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW
 V1_SLICE_2_ARCHITECTURE_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_BLOCKING_FINDINGS = NONE
-V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
-V1_SLICE_2_STEP1 = BLOCKED_PENDING_MINIMAL_TRUSTED_DISCOVERY_SCOPE_CORRECTIVE
+V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_CORRECTIVE_REVIEW = PASS
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = SUSPENDED_PENDING_CORRECTIVE_REFREEZE
+V1_SLICE_2_STEP1 = CORRECTIVE_PERSISTED_WAITING_TARGETED_DELTA_REVIEW
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = STOPPED_BLOCKED
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
 V1_SLICE_2_STEP2 = NOT_AUTHORIZED
@@ -31,8 +32,8 @@ PROVIDER_GATE_AUTHORIZATION = NO
 V1_SLICE_2 = NOT_STARTED
 V1_0_MAINLINE = MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION
 V1_1_TO_V1_3 = PRESERVE_SEAMS_ONLY
-V1_CURRENT_STEP = V1_SLICE_2_STEP1_SCOPE_RECONCILIATION
-V1_CURRENT_NEXT_ACTION = DESIGN_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_CONTRACT_CORRECTIVE
+V1_CURRENT_STEP = V1_SLICE_2_STEP1_MINIMAL_TRUSTED_DISCOVERY_CORRECTIVE_PERSISTED
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW
 ```
 
 Status: ACTIVE
@@ -139,8 +140,8 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 | Document | Role | Status |
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | Current four-Slice Harness-reuse implementation route plus need-driven P0.5/P1/P2-P8 taxonomy | ACTIVE |
-| `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md` | Frozen Architecture Contract for Worker authority, trusted discovery, reconnect, cold projection, outer shell and Native integration | FROZEN |
-| `V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md` | Frozen local Slice 1B lifecycle/credential amendment preserving frozen wire/HMAC semantics | FROZEN |
+| `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md` | Owner-corrected Architecture Contract for Worker authority, minimal trusted discovery, reconnect, cold projection, outer shell and Native integration | CORRECTED CANDIDATE / TARGETED DELTA REVIEW REQUIRED |
+| `V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md` | Owner-corrected local Slice 1B lifecycle/credential amendment preserving frozen wire/HMAC semantics | CORRECTED CANDIDATE / TARGETED DELTA REVIEW REQUIRED |
 | `V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-CONTRACT.md` | Slice 1B authenticated physical carrier and real Client ↔ Host implementation Contract | CLOSED / BASELINE FROZEN |
 | `V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-CONTRACT.md` | Slice 1C embedded real AppWebEntry/Harness user-loop Architecture Contract | CLOSED / BASELINE FROZEN |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
@@ -252,6 +253,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 | Document/Folder | Role |
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
+| `V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md` | Current Architecture Owner security/scope corrective accepting the current-user SID trust principal and minimal Step 1 trusted-discovery model; targeted persisted-delta review required |
 | `V1-0-MAINLINE-AND-STEP1-SCOPE-RECONCILIATION-DECISION.md` | Current Architecture Owner authority preserving Step 1 history, freezing the minimum V1.0 Harness Desktop productization mainline and limiting V1.1-V1.3 to extension seams |
 | `V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md` | Current V1.0 Harness-reuse implementation-scope allocation authority; P0.S remains closed |
 | `V1-SLICE-2-STEP1-DESKTOP-ATTESTATION-BLOCKED-RECORD.md` | Step 1 `STOPPED_BLOCKED` history and generic Electron Product-identity gap; diagnostic prerequisite, not runtime PASS |
@@ -300,6 +302,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 | `architecture/AUDIT-018-V1-SLICE-1-INDEPENDENT-CLOSURE-AUDIT.md` | Formal persistence of the Slice 1 Independent Closure Audit (`PASS`; no Blocking Findings; Owner accepted and froze Slice 1) |
 | `architecture/AUDIT-019-V1-SLICE-2-CORRECTIVE-V2-ARCHITECTURE-REREVIEW.md` | Persistence of the external Independent Corrective V2 Re-Review (`PASS`; B1-B4 closed; seven non-blocking Contract obligations retained) |
 | `architecture/AUDIT-020-V1-SLICE-2-CONTRACT-TARGETED-DELTA-REREVIEW.md` | V1-SLICE-2 Contract Targeted Delta Re-Review (`PASS`; F-01 closed; no new Blocking drift; ready for Owner freeze) |
+| `architecture/AUDIT-021-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-REVIEW.md` | Owner-supplied Independent Minimal Trusted Discovery Corrective Review (`PASS`; no Blocking Findings; V-1 through V-5 persistence obligations) |
 | `implementation/` | 实现审计 |
 | `corrective/` | Corrective 审计 |
 | `templates/` | Review 模板 |
