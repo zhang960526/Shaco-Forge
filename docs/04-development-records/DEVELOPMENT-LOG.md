@@ -2,6 +2,26 @@
 
 Status: ACTIVE
 
+## 2026-09-09 - V1-SLICE-2 Step 2 Shared Source Extension Scope Clarification
+
+- Before formal Step 2 implementation, an execution-semantics ambiguity was
+  identified between frozen Step 1 acceptance and later shared Product source
+  evolution.
+- Step 1 acceptance and capability baseline remains `FROZEN`; Step 1 is not
+  reopened and receives no additional implementation authority.
+- Step 1 historical Evidence, Implementation Record, REVIEW-023, Owner Closure,
+  Blocked Record, historical probe Evidence and frozen review artifacts remain
+  byte-immutable.
+- A later formally authorized Step may extend Product source shared with an
+  earlier Step when the change is genuinely required by the current frozen
+  scope and does not change frozen Architecture, Security or Carrier contracts.
+- Every shared-source change requires cumulative regression to prove the prior
+  Step capability did not regress; test weakening or regression-coverage
+  removal is forbidden.
+- Step 2 scope is not expanded. Provider authorization remains `NO`; Step 3
+  remains `NOT_AUTHORIZED`.
+- Next: `EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`.
+
 ## 2026-09-09 - V1 Cumulative Regression Closure Gate Governance Persistence
 
 - The user / Architecture Owner requires a cumulative chained regression

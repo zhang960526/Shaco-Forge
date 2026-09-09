@@ -1,6 +1,14 @@
 # Shaco Forge Document Map
 
-> Current summary (2026-09-09, Step 2 Entry / Implementation Authorization):
+> Latest execution-scope clarification (2026-09-09): the
+> [Step 2 Shared Source Extension Scope Clarification Decision](../04-development-records/V1-SLICE-2-STEP2-SHARED-SOURCE-EXTENSION-SCOPE-CLARIFICATION-DECISION.md)
+> confirms that Step 1 acceptance, Evidence, Review and Closure history remains
+> frozen, while later formally authorized Steps may extend shared Product
+> source within their frozen scope. Closure after such a change must pass
+> cumulative regression proving that earlier capability did not regress. This
+> neither reopens Step 1 nor expands Step 2.
+
+> Current implementation authority (2026-09-09, Step 2 Entry / Implementation Authorization):
 > the [Step 2 Entry and Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md)
 > accepts Step 1 as `PASS / CLOSED / FROZEN`, approves Step 2 entry and
 > authorizes its bounded implementation as `AUTHORIZED_NOT_STARTED`. Step 3 is
@@ -46,6 +54,11 @@ V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
 V1_SLICE_2_STEP1_RESULT = PASS
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
 V1_SLICE_2_STEP1_BASELINE = FROZEN
+V1_SLICE_2_STEP2_SHARED_PRODUCT_SOURCE_EXTENSION = AUTHORIZED
+STEP1_ACCEPTANCE_BASELINE = FROZEN
+STEP1_CAPABILITY_CONTRACT = MUST_NOT_REGRESS
+STEP1_HISTORICAL_ARTIFACTS = BYTE_IMMUTABLE
+LATER_STEP_SHARED_SOURCE_CHANGE_REQUIRES_CUMULATIVE_REGRESSION = YES
 V1_CUMULATIVE_CLOSURE_REGRESSION_GATE = FROZEN
 CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
 STEP2_CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
@@ -280,6 +293,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 | Document/Folder | Role |
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
+| `V1-SLICE-2-STEP2-SHARED-SOURCE-EXTENSION-SCOPE-CLARIFICATION-DECISION.md` | Latest Architecture Owner clarification: Step 1 acceptance/history remains frozen and byte-immutable where historical, later authorized Steps may evolve shared Product source, and cumulative regression must prove prior capability remains intact |
 | `V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md` | Current Architecture Owner authority approving Step 2 entry and bounded Connection Recovery and Cold Projection implementation; Step 3 and Provider remain unauthorized |
 | `V1-SLICE-2-STEP1-OWNER-CLOSURE-AND-FREEZE-DECISION.md` | Architecture Owner authority accepting REVIEW-023, closing Step 1 and freezing its reviewed implementation baseline |
 | `V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md` | Current Architecture Owner authority accepting AUDIT-022, re-freezing the corrected Contract/Amendment and re-authorizing bounded Step 1 implementation |

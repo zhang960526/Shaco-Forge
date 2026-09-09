@@ -2,7 +2,16 @@
 
 Status: ACTIVE
 
-> Current V1.0 route authority is the
+> Latest execution-scope clarification is the
+> [Step 2 Shared Source Extension Scope Clarification Decision](../04-development-records/V1-SLICE-2-STEP2-SHARED-SOURCE-EXTENSION-SCOPE-CLARIFICATION-DECISION.md).
+> Step 1 remains `PASS / CLOSED / FROZEN`: its acceptance baseline and
+> capability contract are frozen, and its historical Evidence/Review/Closure
+> assets remain byte-immutable. That state does not make shared Product source
+> bytes permanently immutable. A later formally authorized Step may evolve
+> shared Product source within its frozen scope, and must prove prior capability
+> through cumulative regression before Closure.
+
+> Current V1.0 route implementation authority is the
 > [V1-SLICE-2 Step 2 Entry and Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md),
 > which accepts the frozen Step 1 closure baseline and approves Step 2 entry.
 > Slice 1A/1B/1C and Slice 1 remain `PASS / CLOSED / FROZEN`. The
@@ -46,6 +55,11 @@ V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
 V1_SLICE_2_STEP1_RESULT = PASS
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
 V1_SLICE_2_STEP1_BASELINE = FROZEN
+V1_SLICE_2_STEP2_SHARED_PRODUCT_SOURCE_EXTENSION = AUTHORIZED
+STEP1_ACCEPTANCE_BASELINE = FROZEN
+STEP1_CAPABILITY_CONTRACT = MUST_NOT_REGRESS
+STEP1_HISTORICAL_ARTIFACTS = BYTE_IMMUTABLE
+LATER_STEP_SHARED_SOURCE_CHANGE_REQUIRES_CUMULATIVE_REGRESSION = YES
 V1_CUMULATIVE_CLOSURE_REGRESSION_GATE = FROZEN
 CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
 STEP2_CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
@@ -92,6 +106,15 @@ typecheck, unit and static regression `PASS`, frozen baseline identity
 validation, and every other applicable Closure Gate. The next action is
 `EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`; Step 3 and Provider
 work remain unauthorized.
+
+Step 1 `CLOSED / FROZEN` is a capability and acceptance freeze, not a permanent
+ban on changing source bytes shared with a later authorized Step. Step 2 may
+extend shared Product source only for Connection Recovery, Cold Projection,
+generation fencing, read-only Workspace/Session repull, Worker replacement
+recovery and truthful no-business-replay failure projection. Such evolution
+must preserve the frozen Architecture/Security/Carrier contracts, must not
+reimplement Step 1, and requires `STEP1_REGRESSION = PASS` through cumulative
+non-Provider E2E before Step 2 Closure.
 
 ## Phase Order
 

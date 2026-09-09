@@ -1,6 +1,17 @@
 # Shaco Forge Current State
 
-> Latest authority (2026-09-09, Step 2 Entry / Implementation Authorization):
+> Latest authority (2026-09-09, Step 2 Shared Source Extension Scope
+> Clarification): the
+> [Step 2 Shared Source Extension Scope Clarification Decision](../04-development-records/V1-SLICE-2-STEP2-SHARED-SOURCE-EXTENSION-SCOPE-CLARIFICATION-DECISION.md)
+> freezes Step 1 acceptance and capability without making all Step 1-era
+> Product source bytes permanently immutable. Later formally authorized Steps
+> may evolve shared Product source within their frozen scope, but Step 1
+> historical Evidence/Review/Closure assets remain byte-immutable and every
+> shared-source change requires cumulative regression proving the old
+> capability did not regress. This is not a Step 1 reopen, new Step 1
+> implementation authority or Step 2 scope expansion.
+
+> Step 2 entry and implementation authority (2026-09-09):
 > the [Step 2 Entry and Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md)
 > accepts Step 1 as `PASS / CLOSED / FROZEN`, approves Step 2 entry and
 > authorizes the bounded Connection Recovery and Cold Projection implementation.
@@ -60,6 +71,11 @@ V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
 V1_SLICE_2_STEP1_RESULT = PASS
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
 V1_SLICE_2_STEP1_BASELINE = FROZEN
+V1_SLICE_2_STEP2_SHARED_PRODUCT_SOURCE_EXTENSION = AUTHORIZED
+STEP1_ACCEPTANCE_BASELINE = FROZEN
+STEP1_CAPABILITY_CONTRACT = MUST_NOT_REGRESS
+STEP1_HISTORICAL_ARTIFACTS = BYTE_IMMUTABLE
+LATER_STEP_SHARED_SOURCE_CHANGE_REQUIRES_CUMULATIVE_REGRESSION = YES
 V1_CUMULATIVE_CLOSURE_REGRESSION_GATE = FROZEN
 CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
 STEP2_CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
@@ -303,6 +319,11 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 - `V1_SLICE_2_STEP1_RESULT = PASS`
 - `V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS`
 - `V1_SLICE_2_STEP1_BASELINE = FROZEN`
+- `V1_SLICE_2_STEP2_SHARED_PRODUCT_SOURCE_EXTENSION = AUTHORIZED`
+- `STEP1_ACCEPTANCE_BASELINE = FROZEN`
+- `STEP1_CAPABILITY_CONTRACT = MUST_NOT_REGRESS`
+- `STEP1_HISTORICAL_ARTIFACTS = BYTE_IMMUTABLE`
+- `LATER_STEP_SHARED_SOURCE_CHANGE_REQUIRES_CUMULATIVE_REGRESSION = YES`
 - `V1_SLICE_2_STEP2_ENTRY = APPROVED`
 - `V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = YES`
 - `V1_SLICE_2_IMPLEMENTATION = IN_PROGRESS`
