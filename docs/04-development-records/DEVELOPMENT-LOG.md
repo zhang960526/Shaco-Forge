@@ -2,6 +2,21 @@
 
 Status: ACTIVE
 
+## 2026-09-09 - V1-SLICE-2 Step 2 Entry and Implementation Authorization
+
+- Step 1 is `PASS / CLOSED / FROZEN` at commit `1e7c1641bad533817052535cd7ab8a306a969184`.
+- The Architecture Owner assessed and approved Step 2 entry.
+- Step 2 implementation is authorized as `AUTHORIZED_NOT_STARTED`; its frozen
+  scope is Connection Recovery and Cold Projection.
+- Connection recovery is not business replay. Automatic Prompt, Tool,
+  Agent-turn, Approval, Question, Cancel or implicit mutation replay remains
+  forbidden.
+- Harness remains the sole Workspace, Session and Conversation truth owner;
+  Shaco may hold only an ephemeral generation-fenced projection.
+- The conditional Provider Gate remains separately gated with authorization
+  `NO`; Step 3 remains `NOT_AUTHORIZED`.
+- Next: `EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`.
+
 ## 2026-09-09 - V1-SLICE-2 Step 1 Owner Closure and Baseline Freeze
 
 - The Step 1 long-running implementation initially stopped as

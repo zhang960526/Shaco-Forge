@@ -1,12 +1,11 @@
 # Shaco Forge Document Map
 
-> Current summary (2026-09-09, Step 1 Owner Closure / Freeze): Independent
-> [REVIEW-023](../05-reviews/architecture/AUDIT-023-V1-SLICE-2-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md)
-> is `PASS` with no Blocking Findings. The
-> [Owner Closure and Freeze Decision](../04-development-records/V1-SLICE-2-STEP1-OWNER-CLOSURE-AND-FREEZE-DECISION.md)
-> accepts the implementation and freezes the reviewed baseline. Step 1 is
-> `PASS / CLOSED / FROZEN`; Step 2/3 and Provider remain unauthorized. Next is
-> `ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP2_ENTRY`.
+> Current summary (2026-09-09, Step 2 Entry / Implementation Authorization):
+> the [Step 2 Entry and Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md)
+> accepts Step 1 as `PASS / CLOSED / FROZEN`, approves Step 2 entry and
+> authorizes its bounded implementation as `AUTHORIZED_NOT_STARTED`. Step 3 is
+> `NOT_AUTHORIZED`; Provider authorization is `NO`. Next is
+> `EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`.
 
 > Prior re-authorization summary (2026-09-09): the
 > [V1-SLICE-2 Step 1 Minimal Trusted Discovery Re-Freeze and Re-Authorization Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md)
@@ -42,15 +41,17 @@ V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
 V1_SLICE_2_STEP1_RESULT = PASS
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
 V1_SLICE_2_STEP1_BASELINE = FROZEN
+V1_SLICE_2_STEP2_ENTRY = APPROVED
+V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = YES
 V1_SLICE_2_IMPLEMENTATION = IN_PROGRESS
-V1_SLICE_2_STEP2 = NOT_AUTHORIZED
+V1_SLICE_2_STEP2 = AUTHORIZED_NOT_STARTED
 V1_SLICE_2_STEP3 = NOT_AUTHORIZED
 PROVIDER_GATE_AUTHORIZATION = NO
 V1_SLICE_2 = IN_PROGRESS
 V1_0_MAINLINE = MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION
 V1_1_TO_V1_3 = PRESERVE_SEAMS_ONLY
-V1_CURRENT_STEP = V1_SLICE_2_STEP1_CLOSED_PENDING_STEP2_ENTRY_DECISION
-V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP2_ENTRY
+V1_CURRENT_STEP = V1_SLICE_2_STEP2_AUTHORIZED_NOT_STARTED
+V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL
 ```
 
 Status: ACTIVE
@@ -270,7 +271,8 @@ Baseline candidate now gates that Slice behind Independent Review.
 | Document/Folder | Role |
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
-| `V1-SLICE-2-STEP1-OWNER-CLOSURE-AND-FREEZE-DECISION.md` | Current Architecture Owner authority accepting REVIEW-023, closing Step 1 and freezing its reviewed implementation baseline; Step 2 remains separately gated |
+| `V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md` | Current Architecture Owner authority approving Step 2 entry and bounded Connection Recovery and Cold Projection implementation; Step 3 and Provider remain unauthorized |
+| `V1-SLICE-2-STEP1-OWNER-CLOSURE-AND-FREEZE-DECISION.md` | Architecture Owner authority accepting REVIEW-023, closing Step 1 and freezing its reviewed implementation baseline |
 | `V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md` | Current Architecture Owner authority accepting AUDIT-022, re-freezing the corrected Contract/Amendment and re-authorizing bounded Step 1 implementation |
 | `V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md` | Current Architecture Owner security/scope corrective accepting the current-user SID trust principal and minimal Step 1 trusted-discovery model; targeted persisted-delta review required |
 | `V1-0-MAINLINE-AND-STEP1-SCOPE-RECONCILIATION-DECISION.md` | Current Architecture Owner authority preserving Step 1 history, freezing the minimum V1.0 Harness Desktop productization mainline and limiting V1.1-V1.3 to extension seams |

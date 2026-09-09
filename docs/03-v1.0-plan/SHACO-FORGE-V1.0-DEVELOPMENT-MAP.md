@@ -3,14 +3,15 @@
 Status: ACTIVE
 
 > Current V1.0 route authority is the
-> [V1-SLICE-2 Step 1 Owner Closure and Freeze Decision](../04-development-records/V1-SLICE-2-STEP1-OWNER-CLOSURE-AND-FREEZE-DECISION.md),
-> which accepts Independent [REVIEW-023](../05-reviews/architecture/AUDIT-023-V1-SLICE-2-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md).
+> [V1-SLICE-2 Step 2 Entry and Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md),
+> which accepts the frozen Step 1 closure baseline and approves Step 2 entry.
 > Slice 1A/1B/1C and Slice 1 remain `PASS / CLOSED / FROZEN`. The
 > [V1-SLICE-2 Architecture Contract](V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md)
 > and [Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md)
 > remain frozen. Step 1 implementation, Independent Review and Owner Closure are
-> `PASS`, `PASS` and `ACCEPTED`; Step 1 is `PASS / CLOSED / FROZEN`. Step 2/3
-> and Provider remain unauthorized. The implementation mainline remains
+> `PASS`, `PASS` and `ACCEPTED`; Step 1 is `PASS / CLOSED / FROZEN`. Step 2 is
+> `AUTHORIZED_NOT_STARTED`; Step 3 and Provider remain unauthorized. The
+> implementation mainline remains
 > `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`.
 
 ## Current Implementation Route
@@ -42,8 +43,10 @@ V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
 V1_SLICE_2_STEP1_RESULT = PASS
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
 V1_SLICE_2_STEP1_BASELINE = FROZEN
+V1_SLICE_2_STEP2_ENTRY = APPROVED
+V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = YES
 V1_SLICE_2_IMPLEMENTATION = IN_PROGRESS
-V1_SLICE_2_STEP2 = NOT_AUTHORIZED
+V1_SLICE_2_STEP2 = AUTHORIZED_NOT_STARTED
 V1_SLICE_2_STEP3 = NOT_AUTHORIZED
 PROVIDER_GATE_AUTHORIZATION = NO
 V1_SLICE_2 = IN_PROGRESS
@@ -51,8 +54,8 @@ V1_SLICE_3 = PACKAGING / COMPATIBILITY / RELEASE / NOT_STARTED
 V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
 P0_5_P1_P2_TO_P8 = NEED_DRIVEN_CONTRACT_CAPABILITY_ACCEPTANCE_TAXONOMY
 P0_5_P1_P2_TO_P8 = NOT_A_SECOND_SEQUENTIAL_IMPLEMENTATION_ROUTE
-V1_CURRENT_STEP = V1_SLICE_2_STEP1_CLOSED_PENDING_STEP2_ENTRY_DECISION
-V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP2_ENTRY
+V1_CURRENT_STEP = V1_SLICE_2_STEP2_AUTHORIZED_NOT_STARTED
+V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL
 ```
 
 The four Slice route is the current implementation route. P0.5/P1/P2-P8 retain
@@ -75,9 +78,11 @@ overdesign remains closed. The generic Electron identity probe remains a
 historical diagnostic scenario, not a frozen V1 runtime gate. Broker,
 asymmetric authority protocol, Product Launch Grant and Windows Service are not
 V1 requirements. Step 1 implementation is `PASS`, Owner Closure is `ACCEPTED`,
-and Step 1 is `PASS / CLOSED / FROZEN`. The next action is
-`ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP2_ENTRY`; this state does not authorize
-Step 2, Step 3 or Provider work.
+and Step 1 is `PASS / CLOSED / FROZEN`. Step 2 entry is `APPROVED` and bounded
+Connection Recovery and Cold Projection implementation is authorized but not
+started. The next action is
+`EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`; Step 3 and Provider
+work remain unauthorized.
 
 ## Phase Order
 

@@ -1,16 +1,13 @@
 # Shaco Forge Current State
 
-> Latest authority (2026-09-09, Step 1 Owner Closure / Freeze): the
-> [Owner Closure and Freeze Decision](../04-development-records/V1-SLICE-2-STEP1-OWNER-CLOSURE-AND-FREEZE-DECISION.md)
-> accepts Independent [REVIEW-023](../05-reviews/architecture/AUDIT-023-V1-SLICE-2-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md)
-> (`PASS`, `BLOCKING_FINDINGS = NONE`), accepts the Step 1 implementation and
-> freezes its reviewed baseline. The historical first `STOPPED_BLOCKED` attempt,
-> the separately Owner-authorized G15 corrective, root-cause proof and both
-> Evidence groups remain preserved. Step 1 is `PASS / CLOSED / FROZEN`; its
-> implementation authorization is consumed and no additional Step 1
-> implementation is authorized. Step 2, Step 3 and Provider remain
-> unauthorized. Next is
-> `ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP2_ENTRY`.
+> Latest authority (2026-09-09, Step 2 Entry / Implementation Authorization):
+> the [Step 2 Entry and Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md)
+> accepts Step 1 as `PASS / CLOSED / FROZEN`, approves Step 2 entry and
+> authorizes the bounded Connection Recovery and Cold Projection implementation.
+> Step 2 is `AUTHORIZED_NOT_STARTED`. Business replay remains forbidden;
+> Harness remains the Workspace, Session and Conversation truth owner. Step 3
+> is `NOT_AUTHORIZED` and Provider authorization remains `NO`. Next is
+> `EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`.
 
 > Prior re-authorization authority (2026-09-09): the
 > [V1-SLICE-2 Step 1 Minimal Trusted Discovery Re-Freeze and Re-Authorization Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md)
@@ -55,15 +52,17 @@ V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
 V1_SLICE_2_STEP1_RESULT = PASS
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
 V1_SLICE_2_STEP1_BASELINE = FROZEN
+V1_SLICE_2_STEP2_ENTRY = APPROVED
+V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = YES
 V1_SLICE_2_IMPLEMENTATION = IN_PROGRESS
-V1_SLICE_2_STEP2 = NOT_AUTHORIZED
+V1_SLICE_2_STEP2 = AUTHORIZED_NOT_STARTED
 V1_SLICE_2_STEP3 = NOT_AUTHORIZED
 PROVIDER_GATE_AUTHORIZATION = NO
 V1_SLICE_2 = IN_PROGRESS
 V1_0_MAINLINE = MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION
 V1_1_TO_V1_3 = PRESERVE_SEAMS_ONLY
-V1_CURRENT_STEP = V1_SLICE_2_STEP1_CLOSED_PENDING_STEP2_ENTRY_DECISION
-V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP2_ENTRY
+V1_CURRENT_STEP = V1_SLICE_2_STEP2_AUTHORIZED_NOT_STARTED
+V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL
 ```
 
 Status: ACTIVE
@@ -225,8 +224,8 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 ## Current Phase
 
 - Phase: V1 Implementation
-- Step: V1-SLICE-2 Step 1 closed and frozen, pending separate Step 2 entry decision — `V1_SLICE_2_STEP1_CLOSED_PENDING_STEP2_ENTRY_DECISION`
-- Current Authorized Scope: Architecture Owner assessment of Step 2 entry only; Step 2/3 implementation and Provider remain unauthorized
+- Step: V1-SLICE-2 Step 2 authorized, not started — `V1_SLICE_2_STEP2_AUTHORIZED_NOT_STARTED`
+- Current Authorized Scope: bounded Step 2 Connection Recovery and Cold Projection implementation; Step 3 and Provider remain unauthorized
 - Production Implementation: IN_PROGRESS
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -258,8 +257,8 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 - `V1_IMPLEMENTATION_READY = YES`
 - `V1_IMPLEMENTATION_STARTED = YES`
 - `V1_CURRENT_SLICE = V1_SLICE_2`
-- `V1_CURRENT_STEP = V1_SLICE_2_STEP1_CLOSED_PENDING_STEP2_ENTRY_DECISION`
-- `V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP2_ENTRY`
+- `V1_CURRENT_STEP = V1_SLICE_2_STEP2_AUTHORIZED_NOT_STARTED`
+- `V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE = ACCEPTED`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PASS`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_OWNER_ACCEPTED = YES`
@@ -293,8 +292,10 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 - `V1_SLICE_2_STEP1_RESULT = PASS`
 - `V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS`
 - `V1_SLICE_2_STEP1_BASELINE = FROZEN`
+- `V1_SLICE_2_STEP2_ENTRY = APPROVED`
+- `V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = YES`
 - `V1_SLICE_2_IMPLEMENTATION = IN_PROGRESS`
-- `V1_SLICE_2_STEP2 = NOT_AUTHORIZED`
+- `V1_SLICE_2_STEP2 = AUTHORIZED_NOT_STARTED`
 - `V1_SLICE_2_STEP3 = NOT_AUTHORIZED`
 - `PROVIDER_GATE_AUTHORIZATION = NO`
 - `V1_SLICE_2 = IN_PROGRESS`
@@ -766,13 +767,14 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - V1.0 Technical Implementation Baseline: `ACCEPTED`; Independent REVIEW-011 `PASS`; Architecture Owner accepted
 - V1 Slice 1A: `PASS / CLOSED / FROZEN`; REVIEW-012 `PASS`; whitespace corrective `PASS`; REVIEW-013 Delta Re-Review `PASS`; Owner Closure `ACCEPTED`
 - V1 Slice 1: `PASS / CLOSED / FROZEN`; Slice 1A, 1B and 1C are `PASS / CLOSED / FROZEN`; AUDIT-018 `PASS`; Slice 1 Owner Closure `ACCEPTED`; no 1D/1E
-- V1 Slice 2: Architecture Contract and Carrier Amendment are `FROZEN`; Minimal Trusted Discovery Corrective Review, Persisted Delta Review and Independent Implementation REVIEW-023 are `PASS` with no Blocking Findings; the Owner accepts Step 1 as `PASS / CLOSED / FROZEN`; Step 2/3 and Provider are `NOT_AUTHORIZED`; Slice 2 implementation is `IN_PROGRESS`
+- V1 Slice 2: Architecture Contract and Carrier Amendment are `FROZEN`; Minimal Trusted Discovery Corrective Review, Persisted Delta Review and Independent Implementation REVIEW-023 are `PASS` with no Blocking Findings; Step 1 is `PASS / CLOSED / FROZEN`; Step 2 entry is `APPROVED` and implementation is `AUTHORIZED_NOT_STARTED`; Step 3 is `NOT_AUTHORIZED`; Provider authorization is `NO`; Slice 2 implementation is `IN_PROGRESS`
 
 ## Immediate Next Action
 
-Perform `ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP2_ENTRY`. Step 1 is accepted,
-closed and frozen after REVIEW-023 PASS with no Blocking Findings. Do not start
-Step 2/3 or Provider work; this state does not authorize Step 2 implementation.
+Execute `EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL` against the
+frozen Step 1 baseline and frozen Slice 2 Contract. Step 2 implementation is
+authorized but not started. Do not start Step 3 or Provider work; recovery must
+remain read-only where automatic and must never become business replay.
 
 Do not pull/switch/update the frozen Harness SHA without an Architecture
 Decision. Spike code is NOT production by default. The historical corrective
