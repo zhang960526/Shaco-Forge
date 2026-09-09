@@ -1,14 +1,14 @@
 # Shaco Forge Current State
 
 > Latest authority (2026-09-09): the
-> [V1-SLICE-2 Step 1 Minimal Trusted Discovery Corrective Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md)
-> accepts `CURRENT_WINDOWS_USER_SID` as the V1 local trust principal and
-> persists the minimal trusted-discovery correction after Independent
-> [AUDIT-021](../05-reviews/architecture/AUDIT-021-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-REVIEW.md)
-> returned `PASS`. The corrected Contract and Amendment now await targeted
-> persisted-delta review. The earlier Step 1 implementation authorization is
-> suspended pending corrective re-freeze; Step 2, Step 3 and Provider remain
-> unauthorized.
+> [V1-SLICE-2 Step 1 Minimal Trusted Discovery Re-Freeze and Re-Authorization Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md)
+> accepts persisted delta [AUDIT-022](../05-reviews/architecture/AUDIT-022-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-PERSISTED-DELTA-REVIEW.md)
+> (`PASS`, no Blocking Findings), re-freezes the corrected Main Contract and
+> Carrier Lifecycle Amendment, and restores the bounded Step 1 implementation
+> authorization. Product implementation remains not started at this exact
+> checkpoint; Step 2, Step 3 and Provider remain unauthorized. The historical
+> `STOPPED_BLOCKED` attempt and its identity/source-confirmation Evidence remain
+> preserved.
 
 ```text
 V1_SLICE_1A = CLOSED / FROZEN
@@ -26,16 +26,17 @@ V1_SLICE_1D = DO_NOT_CREATE
 V1_SLICE_1E = DO_NOT_CREATE
 V1_SLICE_1 = PASS / CLOSED / FROZEN
 V1_SLICE_1_RESULT = PASS
-V1_SLICE_2_ARCHITECTURE_CONTRACT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW
-V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW
+V1_SLICE_2_ARCHITECTURE_CONTRACT = FROZEN
+V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = FROZEN
 V1_SLICE_2_ARCHITECTURE_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS
 V1_SLICE_2_CONTRACT_BLOCKING_FINDINGS = NONE
 V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_CORRECTIVE_REVIEW = PASS
+V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW = PASS
 V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_BLOCKING_FINDINGS = NONE
-V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = SUSPENDED_PENDING_CORRECTIVE_REFREEZE
-V1_SLICE_2_STEP1 = CORRECTIVE_PERSISTED_WAITING_TARGETED_DELTA_REVIEW
-V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = STOPPED_BLOCKED
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
+V1_SLICE_2_STEP1 = REAUTHORIZED_NOT_STARTED
+V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PREVIOUS_ATTEMPT_STOPPED_BLOCKED
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
 V1_SLICE_2_STEP2 = NOT_AUTHORIZED
 V1_SLICE_2_STEP3 = NOT_AUTHORIZED
@@ -43,8 +44,8 @@ PROVIDER_GATE_AUTHORIZATION = NO
 V1_SLICE_2 = NOT_STARTED
 V1_0_MAINLINE = MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION
 V1_1_TO_V1_3 = PRESERVE_SEAMS_ONLY
-V1_CURRENT_STEP = V1_SLICE_2_STEP1_MINIMAL_TRUSTED_DISCOVERY_CORRECTIVE_PERSISTED
-V1_CURRENT_NEXT_ACTION = INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW
+V1_CURRENT_STEP = V1_SLICE_2_STEP1_REAUTHORIZED_NOT_STARTED
+V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
 ```
 
 Status: ACTIVE
@@ -206,8 +207,8 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 ## Current Phase
 
 - Phase: V1 Implementation
-- Step: V1-SLICE-2 Step 1 minimal trusted-discovery corrective persisted — `V1_SLICE_2_STEP1_MINIMAL_TRUSTED_DISCOVERY_CORRECTIVE_PERSISTED`
-- Current Authorized Scope: documentation-only corrected candidate awaiting targeted persisted-delta review; Step 1 Product implementation authorization is `SUSPENDED_PENDING_CORRECTIVE_REFREEZE`
+- Step: V1-SLICE-2 Step 1 re-authorized, not started — `V1_SLICE_2_STEP1_REAUTHORIZED_NOT_STARTED`
+- Current Authorized Scope: bounded Step 1 long-running implementation goal; Product implementation remains `NOT_STARTED` at this exact checkpoint
 - Production Implementation: IN_PROGRESS
 - `SHACO_FORGE_V1_0_P0_1 = PASS`
 - `SHACO_FORGE_V1_0_P0_2 = PASS`
@@ -239,8 +240,8 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 - `V1_IMPLEMENTATION_READY = YES`
 - `V1_IMPLEMENTATION_STARTED = YES`
 - `V1_CURRENT_SLICE = V1_SLICE_2`
-- `V1_CURRENT_STEP = V1_SLICE_2_STEP1_MINIMAL_TRUSTED_DISCOVERY_CORRECTIVE_PERSISTED`
-- `V1_CURRENT_NEXT_ACTION = INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW`
+- `V1_CURRENT_STEP = V1_SLICE_2_STEP1_REAUTHORIZED_NOT_STARTED`
+- `V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE = ACCEPTED`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_REVIEW = PASS`
 - `V1_TECHNICAL_IMPLEMENTATION_BASELINE_OWNER_ACCEPTED = YES`
@@ -257,16 +258,17 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 - `V1_SLICE_1_ADDITIONAL_IMPLEMENTATION_STEP = NONE`
 - `V1_SLICE_1D = DO_NOT_CREATE`
 - `V1_SLICE_1E = DO_NOT_CREATE`
-- `V1_SLICE_2_ARCHITECTURE_CONTRACT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW`
-- `V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW`
+- `V1_SLICE_2_ARCHITECTURE_CONTRACT = FROZEN`
+- `V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = FROZEN`
 - `V1_SLICE_2_ARCHITECTURE_REREVIEW = PASS`
 - `V1_SLICE_2_CONTRACT_TARGETED_DELTA_REREVIEW = PASS`
 - `V1_SLICE_2_CONTRACT_BLOCKING_FINDINGS = NONE`
 - `V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_CORRECTIVE_REVIEW = PASS`
+- `V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW = PASS`
 - `V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_BLOCKING_FINDINGS = NONE`
-- `V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = SUSPENDED_PENDING_CORRECTIVE_REFREEZE`
-- `V1_SLICE_2_STEP1 = CORRECTIVE_PERSISTED_WAITING_TARGETED_DELTA_REVIEW`
-- `V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = STOPPED_BLOCKED`
+- `V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES`
+- `V1_SLICE_2_STEP1 = REAUTHORIZED_NOT_STARTED`
+- `V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PREVIOUS_ATTEMPT_STOPPED_BLOCKED`
 - `V1_SLICE_2_IMPLEMENTATION = NOT_STARTED`
 - `V1_SLICE_2_STEP2 = NOT_AUTHORIZED`
 - `V1_SLICE_2_STEP3 = NOT_AUTHORIZED`
@@ -740,20 +742,18 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - V1.0 Technical Implementation Baseline: `ACCEPTED`; Independent REVIEW-011 `PASS`; Architecture Owner accepted
 - V1 Slice 1A: `PASS / CLOSED / FROZEN`; REVIEW-012 `PASS`; whitespace corrective `PASS`; REVIEW-013 Delta Re-Review `PASS`; Owner Closure `ACCEPTED`
 - V1 Slice 1: `PASS / CLOSED / FROZEN`; Slice 1A, 1B and 1C are `PASS / CLOSED / FROZEN`; AUDIT-018 `PASS`; Slice 1 Owner Closure `ACCEPTED`; no 1D/1E
-- V1 Slice 2: Architecture Contract and Carrier Amendment are `CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW`; Minimal Trusted Discovery Corrective Review `PASS` with no Blocking Findings; Step 1 is `CORRECTIVE_PERSISTED_WAITING_TARGETED_DELTA_REVIEW` after historical `STOPPED_BLOCKED`; implementation authorization is suspended pending corrective re-freeze; Step 2/3 and Provider `NOT_AUTHORIZED`; Slice 2 implementation `NOT_STARTED`
+- V1 Slice 2: Architecture Contract and Carrier Amendment are `FROZEN`; Minimal Trusted Discovery Corrective Review and Persisted Delta Review are `PASS` with no Blocking Findings; Step 1 is `REAUTHORIZED_NOT_STARTED` after the historical `STOPPED_BLOCKED` attempt; Step 2/3 and Provider are `NOT_AUTHORIZED`; Slice 2 implementation is `NOT_STARTED`
 
 ## Immediate Next Action
 
-Perform
-`INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW` against
-the corrected Contract, Amendment and Security Model. Do not re-freeze or
-restore Step 1 implementation authority before that review; do not start Product
-code, Step 2/3 or Provider work.
+Execute
+`EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL` under the re-frozen
+Contract and Amendment. Step 1 is authorized but has not started at this exact
+checkpoint. Do not start Step 2/3 or Provider work.
 
 Do not pull/switch/update the frozen Harness SHA without an Architecture
-Decision. Spike code is NOT production by default. The corrective candidate
-integrity remains a historical recorded value and is not frozen as a canonical
-replacement.
+Decision. Spike code is NOT production by default. The historical corrective
+candidate state and the previous `STOPPED_BLOCKED` attempt remain preserved.
 
 ## P0.S-6 Technical Validation Extension Final Closure State (2026-09-05)
 

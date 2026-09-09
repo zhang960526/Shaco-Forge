@@ -4,7 +4,7 @@
 |---|---|
 | Contract ID | `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-20260908-01` |
 | Document Type | `V1_SLICE_ARCHITECTURE_CONTRACT` |
-| Status | `OWNER_CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW` |
+| Status | `FROZEN_FOR_IMPLEMENTATION` |
 | Product baseline | `74d62cc6ae3dd7e690f0acffc6a0aa0eb741319c` |
 | Frozen Harness baseline | `cd5ef8148158c3a752a658978873241fdf8e2bbc` |
 | Carrier amendment | [V1-SLICE-2 Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md) |
@@ -14,20 +14,22 @@
 | Freeze authority | [V1-SLICE-2 Contract Freeze and Step 1 Authorization Decision](../04-development-records/V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md) |
 | Corrective Authority | [V1-SLICE-2 Step 1 Minimal Trusted Discovery Corrective Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md) |
 | Independent Corrective Review | [AUDIT-021](../05-reviews/architecture/AUDIT-021-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-REVIEW.md) |
+| Minimal Trusted Discovery Persisted Delta Review | [AUDIT-022](../05-reviews/architecture/AUDIT-022-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-PERSISTED-DELTA-REVIEW.md) |
+| Re-Freeze Authority | [V1-SLICE-2 Step 1 Minimal Trusted Discovery Re-Freeze and Re-Authorization Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md) |
 
 ```text
-V1_SLICE_2_ARCHITECTURE_CONTRACT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW
-V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = SUSPENDED_PENDING_CORRECTIVE_REFREEZE
+V1_SLICE_2_ARCHITECTURE_CONTRACT = FROZEN
+V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW = PASS
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
-NEXT_ACTION = INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW
+NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
 ```
 
 This document now persists the Architecture Owner-accepted Minimal V1 Trusted
-Discovery Corrective after the earlier AUDIT-020 freeze. It is a corrected
-candidate awaiting targeted persisted-delta review; the earlier Step 1
-implementation authorization is suspended pending corrective re-freeze. It
-does not itself start Product implementation, authorize a Provider run, or
-convert a planned gate into completed Evidence.
+Discovery Corrective after the earlier AUDIT-020 freeze. The Corrective has
+passed persisted delta review and is re-frozen for Step 1 implementation. This
+state does not itself start Product implementation, authorize a Provider run,
+or convert a planned gate into completed Evidence.
 
 ## 1. Goal and ownership
 
@@ -506,13 +508,16 @@ AUDIT-020 and the earlier Owner freeze remain historical authority for the
 pre-corrective bytes. The later Minimal Trusted Discovery Corrective Decision
 explicitly corrects the V1 local trust principal and credential issuance gate.
 AUDIT-021 records the supplied independent corrective review as `PASS` with no
-Blocking Findings. This corrected candidate requires a targeted persisted-delta
-review before re-freeze; no Product implementation, Step 2, Step 3 or Provider
-work is authorized by this persistence.
+Blocking Findings. AUDIT-022 records the persisted delta review as `PASS` with
+no Blocking Findings. The Architecture Owner has accepted and re-frozen the
+Corrective and restored the bounded Step 1 implementation authorization. No
+Product implementation has started, and Step 2, Step 3 and Provider work remain
+unauthorized.
 
 ```text
-V1_SLICE_2_ARCHITECTURE_CONTRACT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW
-V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = SUSPENDED_PENDING_CORRECTIVE_REFREEZE
+V1_SLICE_2_ARCHITECTURE_CONTRACT = FROZEN
+V1_SLICE_2_MINIMAL_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW = PASS
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
-NEXT_ACTION = INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW
+NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
 ```

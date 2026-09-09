@@ -4,13 +4,15 @@
 |---|---|
 | Amendment ID | `V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT-20260908-01` |
 | Document Type | `CARRIER_LIFECYCLE_CONTRACT_AMENDMENT` |
-| Status | `OWNER_CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW` |
+| Status | `FROZEN_FOR_STEP1_IMPLEMENTATION` |
 | Parent Contract | [V1-SLICE-2 Lifecycle / Native / Reconnect](V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md) |
 | Amended Contract | [V1-SLICE-1B Authenticated Physical Carrier](V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-CONTRACT.md) |
 | Targeted Delta Re-Review | [AUDIT-020](../05-reviews/architecture/AUDIT-020-V1-SLICE-2-CONTRACT-TARGETED-DELTA-REREVIEW.md) |
 | Freeze Authority | [V1-SLICE-2 Contract Freeze and Step 1 Authorization Decision](../04-development-records/V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md) |
 | Corrective Authority | [V1-SLICE-2 Step 1 Minimal Trusted Discovery Corrective Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md) |
 | Independent Corrective Review | [AUDIT-021](../05-reviews/architecture/AUDIT-021-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-REVIEW.md) |
+| Minimal Trusted Discovery Persisted Delta Review | [AUDIT-022](../05-reviews/architecture/AUDIT-022-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-PERSISTED-DELTA-REVIEW.md) |
+| Re-Freeze Authority | [V1-SLICE-2 Step 1 Minimal Trusted Discovery Re-Freeze and Re-Authorization Decision](../04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md) |
 
 ```text
 CARRIER_CONTRACT_AMENDMENT_REQUIRED = YES
@@ -18,15 +20,16 @@ CREDENTIAL_SEMANTIC_AMENDMENT = YES
 WIRE_HMAC_CHANGED = NO
 CARRIER_WIRE_SECURITY_AMENDMENT_REQUIRED = NO
 TARGETED_DELTA_REREVIEW = PASS
+MINIMAL_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW = PASS
 F_01 = CLOSED
 BLOCKING_FINDINGS = NONE
 ```
 
 This document locally supersedes only the Slice 1B lifecycle and credential
 semantics explicitly identified below. It does not rewrite the historical 1B
-Contract or change its wire bytes. It is an Owner-corrected candidate awaiting
-targeted persisted-delta review; the earlier Step 1 implementation authority is
-suspended pending corrective re-freeze. Product implementation is not started.
+Contract or change its wire bytes. The Corrective has passed persisted delta
+review and is re-frozen for Step 1 implementation. Product implementation is
+not started.
 
 ## 1. Preserved Slice 1B security and wire semantics
 
@@ -297,8 +300,9 @@ CARRIER_WIRE_SECURITY_AMENDMENT_REQUIRED = NO
 TARGETED_DELTA_REREVIEW = PASS
 F_01 = CLOSED
 BLOCKING_FINDINGS = NONE
-V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = CORRECTED_CANDIDATE_WAITING_TARGETED_DELTA_REVIEW
+MINIMAL_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW = PASS
+V1_SLICE_2_CARRIER_LIFECYCLE_AMENDMENT = FROZEN
 V1_SLICE_2_IMPLEMENTATION = NOT_STARTED
-V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = SUSPENDED_PENDING_CORRECTIVE_REFREEZE
-NEXT_ACTION = INDEPENDENT_MINIMAL_V1_STEP1_TRUSTED_DISCOVERY_PERSISTED_DELTA_REVIEW
+V1_SLICE_2_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
+NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP1_LONG_RUNNING_IMPLEMENTATION_GOAL
 ```
