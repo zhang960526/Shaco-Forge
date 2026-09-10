@@ -1,16 +1,17 @@
 # Shaco Forge Document Map
 
-> Latest authority (2026-09-10): [Step2 Owner Closure and Freeze Decision](../04-development-records/V1-SLICE-2-STEP2-OWNER-CLOSURE-AND-FREEZE-DECISION.md).
-> Step1 and Step2 are `PASS / CLOSED / FROZEN`; Step2 Owner Closure is `ACCEPTED`.
-> Final Independent Review is `PASS` via [REVIEW-024C](../05-reviews/architecture/AUDIT-024C-V1-SLICE-2-STEP2-CROSS-DOCUMENT-GOVERNANCE-CORRECTIVE-REREVIEW.md); active Blocking Findings are `NONE`.
-> Historical [REVIEW-024](../05-reviews/architecture/AUDIT-024-V1-SLICE-2-STEP2-INDEPENDENT-IMPLEMENTATION-REVIEW.md) `FAIL` / R24-01 and [REVIEW-024B](../05-reviews/architecture/AUDIT-024B-V1-SLICE-2-STEP2-GOVERNANCE-CORRECTIVE-REREVIEW.md) `FAIL` / R24B-01 remain preserved.
-> Both findings are closed by the corrective review chain. Implementation, Final Validation Corrective,
-> S2G01-S2G20, Step1 regression, cumulative non-Provider E2E and full regression are accepted as `PASS`.
-> Implementation authorization is `CONSUMED`; additional Step2 implementation is `NONE`.
-> Step3 is `NOT_AUTHORIZED`; Provider authorization is `NO`; Slice2 remains `IN_PROGRESS`.
-> Current Step: `V1_SLICE_2_STEP2_CLOSED_PENDING_STEP3_ENTRY_DECISION`.
-> Next: `ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP3_ENTRY`.
-> Step3 Entry Assessment is the only next action; it is not Step3 Implementation Authorization.
+> Latest authority (2026-09-10): [Step3 Contract Gate Freeze / Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP3-CONTRACT-GATE-FREEZE-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md).
+> Step1 and Step2 remain `PASS / CLOSED / FROZEN`; Step2 Owner Closure is `ACCEPTED` and implementation authorization is `CONSUMED`.
+> Historical [REVIEW-025](../05-reviews/architecture/AUDIT-025-V1-SLICE-2-STEP3-CONTRACT-GATE-INDEPENDENT-REVIEW.md) remains `FAIL`; its sole HIGH / BLOCKING finding was `R25-01_PUBLIC_INTERACTION_EVENT_ID_NOT_PUBLIC`.
+> R25-01 corrective was accepted by [REVIEW-025B PASS](../05-reviews/architecture/AUDIT-025B-V1-SLICE-2-STEP3-CONTRACT-GATE-CORRECTIVE-REREVIEW.md); R25-01 is `CLOSED_BY_CORRECTIVE_REREVIEW`; final Contract Gate Blocking Findings are `NONE`.
+> The [Step3 Contract Gate](../03-v1.0-plan/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-CONTRACT-GATE.md) is `FROZEN`; final Contract Review is `REVIEW-025B PASS`; Step3 Entry is `APPROVED`.
+> Composition timing is accepted as `PASS_CLARIFICATION`; Contract amendment and Frozen Harness baseline change are `NO`.
+> V1 creates no Outer Approval/Question pending projection; Harness Main Workspace retains the complete primary Approval/Question UI.
+> Gateway internal `frame.eventId` and pending-local-key substitution remain forbidden Product API dependencies.
+> Step3 implementation authorization is `YES`; Step3 is `AUTHORIZED_NOT_STARTED`; authorization != implementation started.
+> Provider authorization remains `NO`; Slice2 remains `IN_PROGRESS`. This operation records governance only.
+> Current Step: `V1_SLICE_2_STEP3_AUTHORIZED_NOT_STARTED`.
+> Next: `EXECUTE_V1_SLICE_2_STEP3_LONG_RUNNING_IMPLEMENTATION_GOAL`.
 
 > Historical / Superseded pre-REVIEW-024C checkpoint: Final Validation Corrective (STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01): all required final-source
 > regression and S2G01-S2G20 PASS. Step2 is `IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`.
@@ -115,13 +116,28 @@ PREVIOUS_IMPLEMENTATION_VERDICT = STOPPED_BLOCKED
 PREVIOUS_MINOR_BUDGET = 3/3 EXHAUSTED
 PREVIOUS_MAJOR_BUDGET = 3/4 USED
 STEP2_FINAL_VALIDATION_CORRECTIVE = PASS
-V1_SLICE_2_STEP3 = NOT_AUTHORIZED
+STEP3_ENTRY_ASSESSMENT = READY_FOR_CONTRACT_GATE_PERSISTENCE
+STEP3_ENTRY_BLOCKER = NONE
+CONTRACT_AMENDMENT_REQUIRED = NO
+CONTRACT_AMENDMENT_INTERPRETATION_STATUS = CONFIRMED_BY_REVIEW_025B
+V1_SLICE_2_STEP3_ENTRY = APPROVED
+V1_SLICE_2_STEP3_REVIEW_025 = FAIL
+V1_SLICE_2_STEP3_REVIEW_025_BLOCKING_FINDINGS = R25-01_PUBLIC_INTERACTION_EVENT_ID_NOT_PUBLIC
+V1_SLICE_2_STEP3_REVIEW_025_R25_01 = CLOSED_BY_CORRECTIVE_REREVIEW
+V1_SLICE_2_STEP3_R25_01_CORRECTIVE = CLOSED_BY_REVIEW_025B
+V1_SLICE_2_STEP3_R25_01 = CLOSED_BY_CORRECTIVE_REREVIEW
+V1_SLICE_2_STEP3_REVIEW_025B = PASS
+V1_SLICE_2_STEP3_CONTRACT_GATE = FROZEN
+V1_SLICE_2_STEP3_CONTRACT_GATE_FINAL_REVIEW = REVIEW-025B_PASS
+V1_SLICE_2_STEP3_CONTRACT_GATE_BLOCKING_FINDINGS = NONE
+V1_SLICE_2_STEP3_IMPLEMENTATION_AUTHORIZATION = YES
+V1_SLICE_2_STEP3 = AUTHORIZED_NOT_STARTED
 PROVIDER_GATE_AUTHORIZATION = NO
 V1_SLICE_2 = IN_PROGRESS
 V1_0_MAINLINE = MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION
 V1_1_TO_V1_3 = PRESERVE_SEAMS_ONLY
-V1_CURRENT_STEP = V1_SLICE_2_STEP2_CLOSED_PENDING_STEP3_ENTRY_DECISION
-V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP3_ENTRY
+V1_CURRENT_STEP = V1_SLICE_2_STEP3_AUTHORIZED_NOT_STARTED
+V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP3_LONG_RUNNING_IMPLEMENTATION_GOAL
 STEP1_REGRESSION = PASS
 V1_SLICE_2_STEP2_REVIEW_024C = PASS
 V1_SLICE_2_STEP2_REVIEW_024B_R24B_01 = CLOSED_BY_CORRECTIVE_REREVIEW
@@ -241,6 +257,7 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | Current four-Slice Harness-reuse implementation route plus need-driven P0.5/P1/P2-P8 taxonomy | ACTIVE |
 | `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md` | Re-frozen Architecture Contract for Worker authority, minimal trusted discovery, reconnect, cold projection, outer shell and Native integration | FROZEN |
 | `V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md` | Re-frozen local Slice 1B lifecycle/credential amendment preserving frozen wire/HMAC semantics | FROZEN |
+| [Step3 Contract Gate](../03-v1.0-plan/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-CONTRACT-GATE.md) | Frozen Step3 public seams, scope, composition/interaction identity, security, S3G01-S3G20 and cumulative regression; REVIEW-025B PASS; implementation authorized by Owner Decision | FROZEN |
 | `V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-CONTRACT.md` | Slice 1B authenticated physical carrier and real Client ↔ Host implementation Contract | CLOSED / BASELINE FROZEN |
 | `V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-CONTRACT.md` | Slice 1C embedded real AppWebEntry/Harness user-loop Architecture Contract | CLOSED / BASELINE FROZEN |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
@@ -352,9 +369,10 @@ Baseline candidate now gates that Slice behind Independent Review.
 | Document/Folder | Role |
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
+| [Step3 Contract Gate Freeze / Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP3-CONTRACT-GATE-FREEZE-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md) | Current Owner authority: Contract Gate FROZEN; REVIEW-025B PASS; R25-01 CLOSED; Step3 AUTHORIZED_NOT_STARTED; Provider NO |
 | [Step2 Owner Closure Decision](../04-development-records/V1-SLICE-2-STEP2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) | Current Step2 closure authority: Owner ACCEPTED; PASS / CLOSED / FROZEN; REVIEW-024C PASS |
 | `V1-SLICE-2-STEP2-SHARED-SOURCE-EXTENSION-SCOPE-CLARIFICATION-DECISION.md` | Latest Architecture Owner clarification: Step 1 acceptance/history remains frozen and byte-immutable where historical, later authorized Steps may evolve shared Product source, and cumulative regression must prove prior capability remains intact |
-| `V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md` | Historical Step2 entry authority; implementation authorization is now CONSUMED by Owner Closure; Step 3 and Provider remain unauthorized |
+| `V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md` | Historical Step2 entry authority; implementation authorization is now CONSUMED by Owner Closure; Step3 and Provider were unauthorized at that checkpoint |
 | `V1-SLICE-2-STEP1-OWNER-CLOSURE-AND-FREEZE-DECISION.md` | Architecture Owner authority accepting REVIEW-023, closing Step 1 and freezing its reviewed implementation baseline |
 | `V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md` | Current Architecture Owner authority accepting AUDIT-022, re-freezing the corrected Contract/Amendment and re-authorizing bounded Step 1 implementation |
 | `V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md` | Current Architecture Owner security/scope corrective accepting the current-user SID trust principal and minimal Step 1 trusted-discovery model; targeted persisted-delta review required |
@@ -382,6 +400,9 @@ Baseline candidate now gates that Slice behind Independent Review.
 | `templates/` | Bug / Experiment 模板 |
 
 ## 7. Reviews
+
+- [REVIEW-025](../05-reviews/architecture/AUDIT-025-V1-SLICE-2-STEP3-CONTRACT-GATE-INDEPENDENT-REVIEW.md): historical FAIL; sole blocker R25-01; corrective required.
+- [REVIEW-025B](../05-reviews/architecture/AUDIT-025B-V1-SLICE-2-STEP3-CONTRACT-GATE-CORRECTIVE-REREVIEW.md): PASS; R25-01 CLOSED_BY_CORRECTIVE_REREVIEW; final Contract Gate Blocking Findings NONE.
 
 | Document/Folder | Role |
 |---|---|

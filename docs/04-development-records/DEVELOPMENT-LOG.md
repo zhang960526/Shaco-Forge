@@ -1,16 +1,17 @@
 # Shaco Forge Development Log
 
-> Latest authority (2026-09-10): [Step2 Owner Closure and Freeze Decision](V1-SLICE-2-STEP2-OWNER-CLOSURE-AND-FREEZE-DECISION.md).
-> Step1 and Step2 are `PASS / CLOSED / FROZEN`; Step2 Owner Closure is `ACCEPTED`.
-> Final Independent Review is `PASS` via [REVIEW-024C](../05-reviews/architecture/AUDIT-024C-V1-SLICE-2-STEP2-CROSS-DOCUMENT-GOVERNANCE-CORRECTIVE-REREVIEW.md); active Blocking Findings are `NONE`.
-> Historical [REVIEW-024](../05-reviews/architecture/AUDIT-024-V1-SLICE-2-STEP2-INDEPENDENT-IMPLEMENTATION-REVIEW.md) `FAIL` / R24-01 and [REVIEW-024B](../05-reviews/architecture/AUDIT-024B-V1-SLICE-2-STEP2-GOVERNANCE-CORRECTIVE-REREVIEW.md) `FAIL` / R24B-01 remain preserved.
-> Both findings are closed by the corrective review chain. Implementation, Final Validation Corrective,
-> S2G01-S2G20, Step1 regression, cumulative non-Provider E2E and full regression are accepted as `PASS`.
-> Implementation authorization is `CONSUMED`; additional Step2 implementation is `NONE`.
-> Step3 is `NOT_AUTHORIZED`; Provider authorization is `NO`; Slice2 remains `IN_PROGRESS`.
-> Current Step: `V1_SLICE_2_STEP2_CLOSED_PENDING_STEP3_ENTRY_DECISION`.
-> Next: `ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP3_ENTRY`.
-> Step3 Entry Assessment is the only next action; it is not Step3 Implementation Authorization.
+> Latest authority (2026-09-10): [Step3 Contract Gate Freeze / Implementation Authorization Decision](V1-SLICE-2-STEP3-CONTRACT-GATE-FREEZE-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md).
+> Step1 and Step2 remain `PASS / CLOSED / FROZEN`; Step2 Owner Closure is `ACCEPTED` and implementation authorization is `CONSUMED`.
+> Historical [REVIEW-025](../05-reviews/architecture/AUDIT-025-V1-SLICE-2-STEP3-CONTRACT-GATE-INDEPENDENT-REVIEW.md) remains `FAIL`; its sole HIGH / BLOCKING finding was `R25-01_PUBLIC_INTERACTION_EVENT_ID_NOT_PUBLIC`.
+> R25-01 corrective was accepted by [REVIEW-025B PASS](../05-reviews/architecture/AUDIT-025B-V1-SLICE-2-STEP3-CONTRACT-GATE-CORRECTIVE-REREVIEW.md); R25-01 is `CLOSED_BY_CORRECTIVE_REREVIEW`; final Contract Gate Blocking Findings are `NONE`.
+> The [Step3 Contract Gate](../03-v1.0-plan/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-CONTRACT-GATE.md) is `FROZEN`; final Contract Review is `REVIEW-025B PASS`; Step3 Entry is `APPROVED`.
+> Composition timing is accepted as `PASS_CLARIFICATION`; Contract amendment and Frozen Harness baseline change are `NO`.
+> V1 creates no Outer Approval/Question pending projection; Harness Main Workspace retains the complete primary Approval/Question UI.
+> Gateway internal `frame.eventId` and pending-local-key substitution remain forbidden Product API dependencies.
+> Step3 implementation authorization is `YES`; Step3 is `AUTHORIZED_NOT_STARTED`; authorization != implementation started.
+> Provider authorization remains `NO`; Slice2 remains `IN_PROGRESS`. This operation records governance only.
+> Current Step: `V1_SLICE_2_STEP3_AUTHORIZED_NOT_STARTED`.
+> Next: `EXECUTE_V1_SLICE_2_STEP3_LONG_RUNNING_IMPLEMENTATION_GOAL`.
 
 > Historical / Superseded pre-REVIEW-024C checkpoint: Final Validation Corrective (STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01): all required final-source
 > regression and S2G01-S2G20 PASS. Step2 is `IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`.
@@ -24,6 +25,65 @@
 > Next: `INDEPENDENT_REREVIEW_V1_SLICE_2_STEP2_REVIEW_024B_CORRECTIVE`.
 
 Status: ACTIVE
+
+## 2026-09-10 - V1-SLICE-2 Step3 Contract Gate Freeze / Implementation Authorization
+
+- Persisted the existing five-path Contract Gate candidate and promoted the reviewed corrected Contract Gate to `FROZEN_FOR_STEP3_IMPLEMENTATION`.
+- Persisted [REVIEW-025 FAIL](../05-reviews/architecture/AUDIT-025-V1-SLICE-2-STEP3-CONTRACT-GATE-INDEPENDENT-REVIEW.md); its sole HIGH / BLOCKING finding was R25-01 (`PUBLIC_INTERACTION_EVENT_ID_NOT_PUBLIC`).
+- Preserved the R25-01 Corrective history below. [REVIEW-025B PASS](../05-reviews/architecture/AUDIT-025B-V1-SLICE-2-STEP3-CONTRACT-GATE-CORRECTIVE-REREVIEW.md) accepts the corrected public interaction identity boundary; R25-01 is `CLOSED_BY_CORRECTIVE_REREVIEW`.
+- Composition timing is accepted as `PASS_CLARIFICATION`; Contract amendment is `NO`; Frozen Harness and its HEAD are unchanged.
+- Contract Gate is `FROZEN`, final review is REVIEW-025B PASS, and current Blocking Findings are `NONE`. Sections 2-18 remain byte-identical to the corrected reviewed candidate.
+- [Owner Freeze / Implementation Authorization Decision](V1-SLICE-2-STEP3-CONTRACT-GATE-FREEZE-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md) authorizes only bounded Step3 Outer Shell / Native / Interaction Integration.
+- Step1 and Step2 remain `PASS / CLOSED / FROZEN`; Step3 implementation is `AUTHORIZED_NOT_STARTED`; authorization != implementation started; Slice2 remains `IN_PROGRESS`.
+- Provider authorization remains `NO`. Packaging and future domains receive no authorization. Product Source, Tests, Scripts and Evidence remain unchanged.
+- Only documentation validation and one explicit nine-path governance commit are authorized here. No Runtime, build, typecheck, test, smoke, Electron, Worker, Provider, Prompt or Tool/Agent-turn execution; no push.
+- Next: `EXECUTE_V1_SLICE_2_STEP3_LONG_RUNNING_IMPLEMENTATION_GOAL`. This operation stops after commit verification and does not begin Step3 implementation.
+
+## 2026-09-10 - REVIEW-025 R25-01 Contract Gate Corrective
+
+- REVIEW-025 is `FAIL`; the only blocker is HIGH / BLOCKING `R25-01_PUBLIC_INTERACTION_EVENT_ID_NOT_PUBLIC`.
+- Composition, Sidebar, New Chat, Settings, and the other Contract Gate areas had no Blocking Finding; their existing requirements are preserved.
+- The Architecture Owner accepts R25-01. The public interaction event ID seam claim is withdrawn: public Remote Event consumers receive Cordis event arguments, and public `TypertRemoteEventFrame` has no `eventId`; evidence visibility does not establish a public API.
+- V1 creates no Outer Approval/Question pending projection and has no Outer interaction identity dependency. Gateway internal IDs, private Gateway types, pending-local-key substitution, timing guesses, and a second interaction truth are forbidden.
+- Harness Main Workspace continues to satisfy complete V1 Approval/Question requirements as the primary UI. No duplicate pending/settlement model or automatic answer/replay/cancel is permitted; Carrier disconnect is not Agent Cancel.
+- Frozen Main Contract section 11 is treated as a conditional identity/settlement constraint, not a requirement to create an Outer pending object. `CONTRACT_AMENDMENT_REQUIRED = NO` remains `R25-01_CORRECTIVE_CANDIDATE_FOR_REREVIEW`, not independently confirmed.
+- No Harness public interaction ID API change or Frozen Harness baseline change is required. Current Step3 does not prebuild future Outer interaction capabilities.
+- S3G16 now requires Harness Main Workspace Approval/Question preservation; S3G17 enforces the public interaction identity boundary. Both remain `REQUIRED / NOT_RUN`.
+- Cumulative non-Provider E2E preserves mounted/reachable Harness interaction UI, correct Session ownership and Harness-owned pending recovery after reconnect/cold rebuild, without an Outer event ID projection. Only legal deterministic non-Provider fixtures or structural/fixture verification are permitted.
+- Frozen Harness unchanged; Main Contract unchanged; Product Source, Tests, Scripts, and Evidence unchanged. Exactly the existing five candidate documents are modified. No build, typecheck, test, smoke, Runtime, Electron, Worker, Provider, Prompt, Tool/Agent-turn, staging, commit, or push is performed.
+- Step3 is still `NOT_AUTHORIZED`; implementation authorization `NO`; Provider `NO`. Corrective awaits Independent Re-review; R25-01 is not closed and the Contract Gate is not frozen.
+
+```text
+STEP3_ENTRY_ASSESSMENT = READY_FOR_CONTRACT_GATE_PERSISTENCE
+STEP3_ENTRY_BLOCKER = NONE
+CONTRACT_AMENDMENT_REQUIRED = NO
+CONTRACT_AMENDMENT_INTERPRETATION_STATUS = R25-01_CORRECTIVE_CANDIDATE_FOR_REREVIEW
+V1_SLICE_2_STEP3_CONTRACT_GATE = CORRECTIVE_APPLIED_WAITING_INDEPENDENT_REREVIEW
+V1_SLICE_2_STEP3_REVIEW_025 = FAIL
+V1_SLICE_2_STEP3_REVIEW_025_BLOCKING_FINDINGS = R25-01_PUBLIC_INTERACTION_EVENT_ID_NOT_PUBLIC
+V1_SLICE_2_STEP3_R25_01_CORRECTIVE = APPLIED_WAITING_REREVIEW
+V1_SLICE_2_STEP3 = NOT_AUTHORIZED
+V1_SLICE_2_STEP3_IMPLEMENTATION_AUTHORIZATION = NO
+PROVIDER_GATE_AUTHORIZATION = NO
+V1_CURRENT_STEP = V1_SLICE_2_STEP3_CONTRACT_GATE_R25_01_CORRECTIVE_APPLIED_WAITING_REREVIEW
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_REREVIEW_V1_SLICE_2_STEP3_CONTRACT_GATE_R25_01_CORRECTIVE
+```
+
+Next = REVIEW-025B. This corrective stops here and does not start that review.
+
+## 2026-09-10 - V1-SLICE-2 Step3 Contract Gate Candidate Persistence
+
+Historical / superseded by the REVIEW-025 R25-01 corrective above. The status
+and next action below describe the initial persistence checkpoint only.
+
+- Step3 Entry Discovery is complete: `STEP3_ENTRY_ASSESSMENT = READY_FOR_CONTRACT_GATE_PERSISTENCE`, blocker `NONE`, and Contract amendment required `NO`.
+- The earlier Settings coverage misassessment is corrected: Provider, Custom Provider, Model, API Endpoint, Relay, and Credential have confirmed Harness-owned public capability paths; General Settings is minimal schema-driven only when required by the active V1 workflow.
+- REVIEW-025 historical defect: the initial arbitration incorrectly claimed the existing `$events` waterfall `frame.eventId` was public. R25-01 withdraws this claim: `INTERNAL_WIRE_DETAIL_NOT_PUBLIC_API`. Pending local render keys remain forbidden as event IDs.
+- The Step3 Contract Gate candidate persists exact current entry composition identity, future controlled identity generation, Sidebar/New Chat/Project Directory/Settings/Native Picker seams, Approval/Question reuse, Cancel distinction, Renderer security, truthful failure projection, S3G01-S3G20, cumulative non-Provider E2E, and Stop Conditions.
+- Composition timing remains an explicit Independent Review challenge: final Step3 identity is generated after authorized Step3 source change and before Step3 Runtime acceptance; it is not claimed as reviewed or PASS.
+- Documentation-only persistence modified exactly five allowed paths. Product Source, Tests, Scripts, and Evidence are unchanged. No Runtime, Worker, Harness, Electron, build, typecheck, test, smoke, or Provider was run.
+- `V1_SLICE_2_STEP3_CONTRACT_GATE = CANDIDATE_WAITING_INDEPENDENT_REVIEW`; Step3 remains `NOT_AUTHORIZED`; Step3 implementation authorization `NO`; Provider authorization `NO`.
+- Next: `INDEPENDENT_REVIEW_V1_SLICE_2_STEP3_CONTRACT_GATE_CANDIDATE`.
 
 ## 2026-09-10 - V1-SLICE-2 Step2 Owner Closure / Freeze
 

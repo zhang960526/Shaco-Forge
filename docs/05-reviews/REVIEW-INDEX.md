@@ -2,17 +2,18 @@
 
 Status: ACTIVE
 
-> Latest authority (2026-09-10): [Step2 Owner Closure and Freeze Decision](../04-development-records/V1-SLICE-2-STEP2-OWNER-CLOSURE-AND-FREEZE-DECISION.md).
-> Step1 and Step2 are `PASS / CLOSED / FROZEN`; Step2 Owner Closure is `ACCEPTED`.
-> Final Independent Review is `PASS` via [REVIEW-024C](architecture/AUDIT-024C-V1-SLICE-2-STEP2-CROSS-DOCUMENT-GOVERNANCE-CORRECTIVE-REREVIEW.md); active Blocking Findings are `NONE`.
-> Historical [REVIEW-024](architecture/AUDIT-024-V1-SLICE-2-STEP2-INDEPENDENT-IMPLEMENTATION-REVIEW.md) `FAIL` / R24-01 and [REVIEW-024B](architecture/AUDIT-024B-V1-SLICE-2-STEP2-GOVERNANCE-CORRECTIVE-REREVIEW.md) `FAIL` / R24B-01 remain preserved.
-> Both findings are closed by the corrective review chain. Implementation, Final Validation Corrective,
-> S2G01-S2G20, Step1 regression, cumulative non-Provider E2E and full regression are accepted as `PASS`.
-> Implementation authorization is `CONSUMED`; additional Step2 implementation is `NONE`.
-> Step3 is `NOT_AUTHORIZED`; Provider authorization is `NO`; Slice2 remains `IN_PROGRESS`.
-> Current Step: `V1_SLICE_2_STEP2_CLOSED_PENDING_STEP3_ENTRY_DECISION`.
-> Next: `ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP3_ENTRY`.
-> Step3 Entry Assessment is the only next action; it is not Step3 Implementation Authorization.
+> Latest authority (2026-09-10): [Step3 Contract Gate Freeze / Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP3-CONTRACT-GATE-FREEZE-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md).
+> Step1 and Step2 remain `PASS / CLOSED / FROZEN`; Step2 Owner Closure is `ACCEPTED` and implementation authorization is `CONSUMED`.
+> Historical [REVIEW-025](architecture/AUDIT-025-V1-SLICE-2-STEP3-CONTRACT-GATE-INDEPENDENT-REVIEW.md) remains `FAIL`; its sole HIGH / BLOCKING finding was `R25-01_PUBLIC_INTERACTION_EVENT_ID_NOT_PUBLIC`.
+> R25-01 corrective was accepted by [REVIEW-025B PASS](architecture/AUDIT-025B-V1-SLICE-2-STEP3-CONTRACT-GATE-CORRECTIVE-REREVIEW.md); R25-01 is `CLOSED_BY_CORRECTIVE_REREVIEW`; final Contract Gate Blocking Findings are `NONE`.
+> The [Step3 Contract Gate](../03-v1.0-plan/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-CONTRACT-GATE.md) is `FROZEN`; final Contract Review is `REVIEW-025B PASS`; Step3 Entry is `APPROVED`.
+> Composition timing is accepted as `PASS_CLARIFICATION`; Contract amendment and Frozen Harness baseline change are `NO`.
+> V1 creates no Outer Approval/Question pending projection; Harness Main Workspace retains the complete primary Approval/Question UI.
+> Gateway internal `frame.eventId` and pending-local-key substitution remain forbidden Product API dependencies.
+> Step3 implementation authorization is `YES`; Step3 is `AUTHORIZED_NOT_STARTED`; authorization != implementation started.
+> Provider authorization remains `NO`; Slice2 remains `IN_PROGRESS`. This operation records governance only.
+> Current Step: `V1_SLICE_2_STEP3_AUTHORIZED_NOT_STARTED`.
+> Next: `EXECUTE_V1_SLICE_2_STEP3_LONG_RUNNING_IMPLEMENTATION_GOAL`.
 
 | ID | Review | Result | Owner Disposition | Source |
 |---|---|---|---|---|
@@ -46,5 +47,7 @@ Status: ACTIVE
 | REVIEW-024 | V1-SLICE-2 Step2 Independent Implementation Review | FAIL | Governance corrective required; technical candidate otherwise accepted by review | [Source](architecture/AUDIT-024-V1-SLICE-2-STEP2-INDEPENDENT-IMPLEMENTATION-REVIEW.md) |
 | REVIEW-024B | V1-SLICE-2 Step2 Governance Corrective Re-Review | FAIL | R24-01 confirmed corrected; R24B-01 cross-document corrective required | [Source](architecture/AUDIT-024B-V1-SLICE-2-STEP2-GOVERNANCE-CORRECTIVE-REREVIEW.md) |
 | REVIEW-024C | V1-SLICE-2 Step2 Cross-Document Governance Corrective Re-Review | PASS | Final corrective review accepted; Step2 Owner Closure allowed | [Source](architecture/AUDIT-024C-V1-SLICE-2-STEP2-CROSS-DOCUMENT-GOVERNANCE-CORRECTIVE-REREVIEW.md) |
+| REVIEW-025 | V1-SLICE-2 Step3 Contract Gate Independent Review | FAIL | R25-01 public interaction eventId contract defect accepted; corrective required | [Source](architecture/AUDIT-025-V1-SLICE-2-STEP3-CONTRACT-GATE-INDEPENDENT-REVIEW.md) |
+| REVIEW-025B | V1-SLICE-2 Step3 Contract Gate Corrective Re-Review | PASS | R25-01 closed; Contract Gate accepted for Owner Freeze and Step3 authorization | [Source](architecture/AUDIT-025B-V1-SLICE-2-STEP3-CONTRACT-GATE-CORRECTIVE-REREVIEW.md) |
 
 Future implementation reviews must be stored separately from Phase Contracts.
