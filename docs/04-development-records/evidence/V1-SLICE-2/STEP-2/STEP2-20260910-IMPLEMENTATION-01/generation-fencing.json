@@ -1,0 +1,100 @@
+{
+  "runId": "STEP2-20260910-IMPLEMENTATION-01",
+  "result": "PASS",
+  "model": "monotonic Main-local generation plus attempt fence; per-document preload pins generation; generation:streamId namespace",
+  "realLoss": {
+    "before": {
+      "pendingUnary": 1,
+      "activeStreams": 5
+    },
+    "after": {
+      "pendingUnary": 0,
+      "activeStreams": 0
+    },
+    "unary": "TERMINATED",
+    "stream": "TERMINATED",
+    "staleCallbackRejected": true
+  },
+  "checkpoints": [
+    {
+      "label": "PRODUCT_STARTUP_AUTHORITY_HOST_HELPER_AUTHENTICATED_CARRIER_CLIENT_CONNECTED",
+      "generation": 1,
+      "workerInstanceIdHash": "5647038cb8db2d585c6a94dfc22ce742c181745f7842cc11f91186f601a96436",
+      "credentialEpochHash": "074163170be2bb0425c8828893760a23b88922334497169f97e72d6bec4094de",
+      "clientInstanceIdHash": "0c64243da78813c719fe106cad947e8e3c61223dfabd1db5e428287d2798991f",
+      "retiredGenerations": []
+    },
+    {
+      "label": "CURRENT_SESSION_FROM_PUBLIC_HARNESS_TRUTH",
+      "generation": 1,
+      "workerInstanceIdHash": "5647038cb8db2d585c6a94dfc22ce742c181745f7842cc11f91186f601a96436",
+      "credentialEpochHash": "074163170be2bb0425c8828893760a23b88922334497169f97e72d6bec4094de",
+      "clientInstanceIdHash": "0c64243da78813c719fe106cad947e8e3c61223dfabd1db5e428287d2798991f",
+      "retiredGenerations": []
+    },
+    {
+      "label": "FRESH_DESKTOP_SAME_WORKER_COLD_PROJECTION",
+      "generation": 1,
+      "workerInstanceIdHash": "5647038cb8db2d585c6a94dfc22ce742c181745f7842cc11f91186f601a96436",
+      "credentialEpochHash": "3e301919a481c5191cec9fbfce2647378e6d5d95b60f2bfd23fb241599d9eade",
+      "clientInstanceIdHash": "eb4eb75825f2d81452494f4321b0500d0e9720ba9cbd5c48ed50ec89f1d45055",
+      "retiredGenerations": []
+    },
+    {
+      "label": "FRESH_DESKTOP_AFTER_CRASH_SAME_WORKER_REATTACH",
+      "generation": 1,
+      "workerInstanceIdHash": "5647038cb8db2d585c6a94dfc22ce742c181745f7842cc11f91186f601a96436",
+      "credentialEpochHash": "3cc083375ea0a638fd669986dca7bdf9a553bad29e89681b9709dd52b432d8e4",
+      "clientInstanceIdHash": "b775530b8a60e24f2fd5a13117a3b10e31cf9cd2596a568078c8c4ad3e49b954",
+      "retiredGenerations": []
+    },
+    {
+      "label": "CARRIER_LOSS_REDISCOVERY_FRESH_AUTH_GENERATION_COLD_PROJECTION_CONNECTED",
+      "generation": 2,
+      "workerInstanceIdHash": "5647038cb8db2d585c6a94dfc22ce742c181745f7842cc11f91186f601a96436",
+      "credentialEpochHash": "b3abc27b4eec62ce4c602d5f2e4a07aa6208e5fd3defa829b858c718e6b2b48c",
+      "clientInstanceIdHash": "0445c6fd180995e908f3fd0977b2d4ecb1f014d466db0f6a0554c983d86fff9b",
+      "retiredGenerations": [
+        {
+          "generation": 1,
+          "pendingUnary": 0,
+          "activeStreams": 0
+        }
+      ]
+    },
+    {
+      "label": "WORKER_CRASH_JOB_CLEANUP_REPLACEMENT_COLD_PROJECTION_CONNECTED",
+      "generation": 3,
+      "workerInstanceIdHash": "20fba3d8b6ca05dcda775b63546b748ed04cc0dc8667cf91b2cc7afd92bc0c08",
+      "credentialEpochHash": "196bf689b698a8a1358a483d28470e3912fb8c58d7e153ecf6989db353bd936c",
+      "clientInstanceIdHash": "19912f4436d00d58acb5f883b624a38923fbb4dd3c42aacf47c7be9d0c3cd8b2",
+      "retiredGenerations": [
+        {
+          "generation": 1,
+          "pendingUnary": 0,
+          "activeStreams": 0
+        },
+        {
+          "generation": 2,
+          "pendingUnary": 0,
+          "activeStreams": 0
+        }
+      ]
+    }
+  ],
+  "deterministicCoverage": [
+    "old callback/report",
+    "late unary settlement",
+    "late stream item/end/error",
+    "reused raw stream ID pull/cancel",
+    "late recovery after stop",
+    "loss during pending new mount and its late completion"
+  ],
+  "currentSourceUnitSuite": {
+    "passed": 134,
+    "failed": 0
+  },
+  "runtimeScope": "Checkpoints are prior passing attempt 4 before Major 3; current-source real cumulative revalidation NOT_EXECUTED",
+  "noNewAuthorityIdentity": true,
+  "noBusinessReplay": true
+}

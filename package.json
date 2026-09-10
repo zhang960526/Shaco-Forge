@@ -10,7 +10,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "typecheck": "node scripts/typecheck.mjs",
-    "test": "node scripts/build.mjs && node --test packages/contracts/dist/index.test.js packages/contracts/dist/carrier.test.js apps/worker/dist/config.test.js apps/worker/dist/host-readiness-marker.test.js apps/worker/dist/host-carrier-preflight.test.js apps/worker/host-profile/events-route-preflight.test.mjs apps/desktop/dist/main/security.test.js apps/desktop/dist-tests/tests/theme.test.js apps/desktop/dist-tests/tests/transport.test.js apps/desktop/dist/main/window-lifecycle.test.js apps/desktop/dist/main/worker-supervisor.test.js apps/desktop/dist/main/carrier-client.test.js apps/desktop/dist-tests/tests/user-loop-evidence.test.js apps/desktop/dist/main/frame-observation.test.js scripts/user-loop-policy.test.mjs",
+    "test": "node scripts/build.mjs && node --test packages/contracts/dist/index.test.js packages/contracts/dist/carrier.test.js apps/worker/dist/config.test.js apps/worker/dist/host-readiness-marker.test.js apps/worker/dist/host-carrier-preflight.test.js apps/worker/host-profile/events-route-preflight.test.mjs apps/desktop/dist/main/security.test.js apps/desktop/dist-tests/tests/theme.test.js apps/desktop/dist-tests/tests/transport.test.js apps/desktop/dist/main/window-lifecycle.test.js apps/desktop/dist/main/worker-supervisor.test.js apps/desktop/dist/main/carrier-client.test.js apps/desktop/dist-tests/tests/user-loop-evidence.test.js apps/desktop/dist/main/frame-observation.test.js scripts/user-loop-policy.test.mjs apps/desktop/dist/main/recovery-coordinator.test.js apps/worker/dist/profile.test.js",
     "smoke:worker": "node scripts/smoke-worker.mjs",
     "smoke:electron": "node scripts/smoke-electron.mjs",
     "smoke:failure": "node scripts/smoke-electron.mjs --inject-carrier-failure",
@@ -18,7 +18,8 @@
     "smoke:slice2-step1": "node scripts/smoke-slice2-step1.mjs --runtime",
     "smoke:user-loop": "node scripts/smoke-user-loop.mjs",
     "verify:static": "node scripts/verify-static.mjs",
-    "verify:theme": "node scripts/verify-theme.mjs"
+    "verify:theme": "node scripts/verify-theme.mjs",
+    "smoke:slice2-step2": "node scripts/smoke-slice2-step2.mjs"
   },
   "devDependencies": {
     "@types/node": "22.20.0",

@@ -1,17 +1,56 @@
 import assert from 'node:assert/strict'
 import { execFileSync, spawn, spawnSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
-import { mkdir, mkdtemp, readFile, readdir, writeFile } from 'node:fs/promises'
-import { dirname, join } from 'node:path'
+import { mkdir, mkdtemp, readFile, readdir, realpath, stat, writeFile } from 'node:fs/promises'
+import { dirname, isAbsolute, join } from 'node:path'
 import { randomBytes, randomUUID } from 'node:crypto'
 import { createConnection } from 'node:net'
 import { paths } from './runtime-paths.mjs'
 
 export const runId = 'STEP1-20260909-G15-CORRECTIVE-01'
-export const evidenceRoot = join(paths.root, 'docs/04-development-records/evidence/V1-SLICE-2/STEP-1', runId)
+export const evidenceRoot = process.env.SHACO_FORGE_STEP1_EVIDENCE_ROOT ?? join(paths.root, 'node_modules/.step1-regression', new Date().toISOString().replaceAll(':', '-'))
 export async function evidence(name, value) {
   await mkdir(evidenceRoot, { recursive: true })
   await writeFile(join(evidenceRoot, name), `${JSON.stringify(value, null, 2)}\n`, 'utf8')
+}
+
+let powershellResolution
+export async function resolvePowerShellExecutable() {
+  if (powershellResolution) return powershellResolution
+  const override = process.env.SHACO_FORGE_POWERSHELL
+  const pathKey = Object.keys(process.env).find(key => key.toLowerCase() === 'path')
+  const directories = [...new Set((process.env[pathKey] ?? '').split(';').map(value => value.trim().replace(/^"(.*)"$/, '$1')))]
+    .filter(value => isAbsolute(value)).slice(0, 128)
+  const findExecutable = async command => {
+    if (typeof command !== 'string' || command.trim() === '') return undefined
+    const name = command.trim()
+    const candidates = isAbsolute(name) ? [name] : directories.map(directory => join(directory, /\.exe$/i.test(name) ? name : `${name}.exe`))
+    for (const candidate of candidates) {
+      try { if ((await stat(candidate)).isFile()) return await realpath(candidate) } catch {}
+    }
+  }
+  const candidates = override !== undefined
+    ? [{ source: 'EXPLICIT_ENV', executable: await findExecutable(override) }]
+    : process.platform === 'win32' ? [
+      { source: 'PATH_PWSH', executable: await findExecutable('pwsh.exe') },
+      { source: 'WINDOWS_POWERSHELL_FALLBACK', executable: process.env.SystemRoot
+        ? await findExecutable(join(process.env.SystemRoot, 'System32/WindowsPowerShell/v1.0/powershell.exe')) : undefined },
+    ] : []
+  const attempts = []
+  for (const candidate of candidates) {
+    if (!candidate.executable) { attempts.push(`${candidate.source}: executable not found or empty`); continue }
+    const probe = spawnSync(candidate.executable, ['-NoLogo', '-NoProfile', '-NonInteractive', '-Command',
+      "$ErrorActionPreference = 'Stop'; [void][IO.Pipes.NamedPipeServerStreamAcl]; [Console]::Out.Write('SHACO_FORGE_POWERSHELL_READY')"],
+    { encoding: 'utf8', windowsHide: true, timeout: 5_000, maxBuffer: 16_384 })
+    if (!probe.error && probe.status === 0 && probe.stdout === 'SHACO_FORGE_POWERSHELL_READY') {
+      powershellResolution = { ...candidate, result: 'PASS', fixtureApiVerified: true }
+      await evidence('powershell-resolution.json', powershellResolution)
+      console.log(JSON.stringify({ powershellResolution }))
+      return powershellResolution
+    }
+    attempts.push(`${candidate.source}: PowerShell/fixture API probe failed (${probe.error?.code ?? probe.status})`)
+  }
+  throw new Error(`POWERSHELL_PREFLIGHT_FAILED: ${attempts.join('; ') || 'automatic discovery requires Windows'}. Install a compatible pwsh.exe on PATH or set SHACO_FORGE_POWERSHELL to a compatible executable.`)
 }
 
 if (process.argv.includes('--foundation')) {
@@ -450,6 +489,7 @@ export async function runAuthorityFailures() {
 if (process.argv.includes('--authority-failures')) await runAuthorityFailures()
 
 export async function runAmbiguousAuthority() {
+  const { executable } = await resolvePowerShellExecutable()
   const { inspectLocalPlatform } = await import('../apps/desktop/dist/main/lifecycle-client.js')
   const platform = await inspectLocalPlatform(paths.nativeHelper)
   assert.equal(platform.mutexExists, false, 'Controlled negative requires no existing authority')
@@ -457,7 +497,7 @@ export async function runAmbiguousAuthority() {
   const results = []
   let attemptedWorker
   async function fixture(mode) {
-    const child = spawn(process.env.SHACO_FORGE_POWERSHELL, ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', join(paths.desktopRoot, 'test-fixtures/step1-authority-negative.ps1'), '-Mode', mode, '-LifecycleName', platform.lifecycleName],
+    const child = spawn(executable, ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', join(paths.desktopRoot, 'test-fixtures/step1-authority-negative.ps1'), '-Mode', mode, '-LifecycleName', platform.lifecycleName],
       { stdio: ['pipe', 'pipe', 'pipe'], windowsHide: true })
     fixtureChildren.push(child)
     let stdout = ''
@@ -558,6 +598,7 @@ export async function runAuthorityOverlap() {
 if (process.argv.includes('--authority-overlap')) await runAuthorityOverlap()
 
 if (process.argv.includes('--runtime')) {
+  await resolvePowerShellExecutable()
   await runCarrierNegatives()
   await runAuthorityFailures()
   await runAmbiguousAuthority()

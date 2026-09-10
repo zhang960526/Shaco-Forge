@@ -1,0 +1,188 @@
+{
+  "runId": "STEP2-20260910-IMPLEMENTATION-01",
+  "result": "STOPPED_BLOCKED",
+  "gates": [
+    {
+      "id": "S2G01",
+      "requirement": "Carrier loss leaves CONNECTED",
+      "result": "PASS",
+      "proof": "real canonical loss transitions; pending-mount loss unit",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "recovery-state-machine.json"
+    },
+    {
+      "id": "S2G02",
+      "requirement": "Healthy same-Worker rediscovery",
+      "result": "NOT_EXECUTED",
+      "proof": "real desktop restart and carrier recovery checkpoints",
+      "validationLimit": "Current-source required runtime not fully revalidated. Prior attempt 4 PASS and/or deterministic proof retained; no promotion to final PASS.",
+      "evidence": "cumulative-e2e.json"
+    },
+    {
+      "id": "S2G03",
+      "requirement": "Same Worker with fresh credential and client identity",
+      "result": "NOT_EXECUTED",
+      "proof": "equal Worker hash, unequal credential/client hashes",
+      "validationLimit": "Current-source required runtime not fully revalidated. Prior attempt 4 PASS and/or deterministic proof retained; no promotion to final PASS.",
+      "evidence": "generation-fencing.json"
+    },
+    {
+      "id": "S2G04",
+      "requirement": "Old generation callbacks rejected",
+      "result": "PASS",
+      "proof": "real stale callback plus delayed item/end/error tests",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "generation-fencing.json"
+    },
+    {
+      "id": "S2G05",
+      "requirement": "Old pending unary terminated",
+      "result": "PASS",
+      "proof": "real pending unary count > 0, terminal result, count 0; authenticated peer fixture",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "generation-fencing.json"
+    },
+    {
+      "id": "S2G06",
+      "requirement": "Old active streams terminated",
+      "result": "PASS",
+      "proof": "real active stream and pending pull terminate, count 0",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "generation-fencing.json"
+    },
+    {
+      "id": "S2G07",
+      "requirement": "Old stream IDs cannot address fresh streams",
+      "result": "PASS",
+      "proof": "generation namespace with deliberately reused raw ID unit",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "generation-fencing.json"
+    },
+    {
+      "id": "S2G08",
+      "requirement": "Workspace rebuilt from Harness truth",
+      "result": "NOT_EXECUTED",
+      "proof": "actual workspace baseline with seeded identity hash",
+      "validationLimit": "Current-source required runtime not fully revalidated. Prior attempt 4 PASS and/or deterministic proof retained; no promotion to final PASS.",
+      "evidence": "cold-projection.json"
+    },
+    {
+      "id": "S2G09",
+      "requirement": "Session roster rebuilt from Harness truth",
+      "result": "NOT_EXECUTED",
+      "proof": "actual session/list response and public store readiness",
+      "validationLimit": "Current-source required runtime not fully revalidated. Prior attempt 4 PASS and/or deterministic proof retained; no promotion to final PASS.",
+      "evidence": "cold-projection.json"
+    },
+    {
+      "id": "S2G10",
+      "requirement": "Current Session cold projection rebuilt",
+      "result": "NOT_EXECUTED",
+      "proof": "persisted current identity hash, snapshot/history count, fresh public Client",
+      "validationLimit": "Current-source required runtime not fully revalidated. Prior attempt 4 PASS and/or deterministic proof retained; no promotion to final PASS.",
+      "evidence": "cold-projection.json"
+    },
+    {
+      "id": "S2G11",
+      "requirement": "Projection completes after required reads",
+      "result": "PASS",
+      "proof": "Main actual read proofs plus public store reports; controlled negative predicates",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "recovery-state-machine.json"
+    },
+    {
+      "id": "S2G12",
+      "requirement": "CONNECTED requires all three predicates",
+      "result": "PASS",
+      "proof": "assert every real CONNECTED transition and controlled missing predicates",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "recovery-state-machine.json"
+    },
+    {
+      "id": "S2G13",
+      "requirement": "Recovery failures truthful",
+      "result": "PASS",
+      "proof": "ambiguity/public store failure tests and preserved failed attempts",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "recovery-state-machine.json"
+    },
+    {
+      "id": "S2G14",
+      "requirement": "Stale completion cannot overwrite current state",
+      "result": "PASS",
+      "proof": "late unary, item/end/error, mount and after-stop controlled tests",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "generation-fencing.json"
+    },
+    {
+      "id": "S2G15",
+      "requirement": "OUTCOME_UNKNOWN and no blind retry",
+      "result": "PASS",
+      "proof": "authenticated peer sees exactly one mutation frame then unknown outcome",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "mutation-outcome.json"
+    },
+    {
+      "id": "S2G16",
+      "requirement": "Worker replacement without overlap or adoption",
+      "result": "NOT_EXECUTED",
+      "proof": "hard crash, old Job members gone before fresh authority; real chain",
+      "validationLimit": "Current-source required runtime not fully revalidated. Prior attempt 4 PASS and/or deterministic proof retained; no promotion to final PASS.",
+      "evidence": "worker-replacement.json"
+    },
+    {
+      "id": "S2G17",
+      "requirement": "Replacement changes Worker and Client generation",
+      "result": "NOT_EXECUTED",
+      "proof": "new Worker hash and generation 3; continuity explicitly unproven",
+      "validationLimit": "Current-source required runtime not fully revalidated. Prior attempt 4 PASS and/or deterministic proof retained; no promotion to final PASS.",
+      "evidence": "worker-replacement.json"
+    },
+    {
+      "id": "S2G18",
+      "requirement": "Ambiguous authority fails closed",
+      "result": "NOT_EXECUTED",
+      "proof": "actual Supervisor.recover unverified native fixture; Step1 real ambiguity runtime",
+      "validationLimit": "Current-source required runtime not fully revalidated. Prior attempt 4 PASS and/or deterministic proof retained; no promotion to final PASS.",
+      "evidence": "worker-replacement.json"
+    },
+    {
+      "id": "S2G19",
+      "requirement": "No second business truth store",
+      "result": "PASS",
+      "proof": "source review: transient readiness/hashed diagnostics only; one fresh Harness Context",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "cold-projection.json"
+    },
+    {
+      "id": "S2G20",
+      "requirement": "No Provider/Prompt/Tool/Agent turn",
+      "result": "PASS",
+      "proof": "only 3 local fixture mutations; runtime prompt counter 0 and command allowlist",
+      "validationLimit": "Current-source deterministic/unit/security proof; any prior cumulative checkpoint remains explicitly scoped before Major 3.",
+      "evidence": "test-summary.json"
+    }
+  ],
+  "STEP1_REGRESSION": "FAIL",
+  "STEP2_DEDICATED_GATES": "NOT_PROVEN",
+  "CUMULATIVE_NON_PROVIDER_E2E": "NOT_EXECUTED_ON_FINAL_SOURCE",
+  "priorCumulativeAttempt4": "PASS",
+  "fullRegression": "FAIL",
+  "stop": {
+    "result": "STOPPED_BLOCKED",
+    "boundary": "MINOR_CORRECTIVE_BUDGET_EXHAUSTED",
+    "failedCommand": "pnpm run smoke:slice2-step1",
+    "exitCode": 1,
+    "rootCause": "Existing authority-negative fixture calls spawn(process.env.SHACO_FORGE_POWERSHELL); this invocation omitted that required environment value, causing ERR_INVALID_ARG_TYPE before fixture launch",
+    "sourceLocation": "scripts/smoke-slice2-step1.mjs:460",
+    "code": "ERR_INVALID_ARG_TYPE",
+    "failedArgument": "file=undefined",
+    "requiredNextCorrection": "Complete the existing pinned PowerShell execution environment and revalidate full Step1 and final cumulative chain",
+    "applied": false,
+    "rerunsAfterFailure": 0,
+    "budgetAssessment": "Conservatively count execution/fixture configuration as Minor; 3/3 already used, so a fourth correction is not authorized. No reclassification to Major or uncounted environment exception.",
+    "nextAction": "ARCHITECTURE_OWNER_ASSESS_STEP2_IMPLEMENTATION_BLOCKER"
+  },
+  "providerGateRequired": false,
+  "providerRuns": 0
+}

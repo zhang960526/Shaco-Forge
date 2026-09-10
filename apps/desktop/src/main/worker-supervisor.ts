@@ -3,7 +3,7 @@ import { access } from 'node:fs/promises'
 import { isAbsolute, resolve } from 'node:path'
 import type { Socket } from 'node:net'
 import { isRecord, type BootstrapEvent } from '@shaco-forge/contracts'
-import { lifecycleRequest, type AuthorityStatus } from './lifecycle-client.js'
+import { inspectLocalPlatform, lifecycleRequest, type AuthorityStatus } from './lifecycle-client.js'
 
 export const WORKER_STARTUP_TIMEOUT_MS = 90_000
 export type StopDelivery = 'STOP_DELIVERED' | 'STOP_REJECTED' | 'STOP_PIPE_BUSY' | 'STOP_DELIVERY_FAILED' | 'STOP_DELIVERED_BUT_AUTHORITY_DID_NOT_EXIT'
@@ -67,6 +67,7 @@ export class WorkerSupervisor {
   #status: AuthorityStatus | undefined
   #healthTimer: NodeJS.Timeout | undefined
   #healthInFlight: Promise<unknown> | undefined
+  #attachmentRevision = 0
   constructor(readonly config: SupervisorConfig, readonly startupTimeoutMs = WORKER_STARTUP_TIMEOUT_MS) {}
   onEvent(listener: (event: BootstrapEvent) => void): () => void { this.#listeners.add(listener); return () => this.#listeners.delete(listener) }
   onCarrierFailure(listener: (reason: string) => void): () => void { this.#failureListeners.add(listener); return () => this.#failureListeners.delete(listener) }
@@ -131,14 +132,17 @@ export class WorkerSupervisor {
     return this.#bootstrap
   }
   carrierReady(): void {
+    const revision = this.#attachmentRevision
     this.#publish('carrier-ready')
     let checking = false
     this.#healthTimer = setInterval(() => {
       if (checking) return
       checking = true
       const probe = this.discover().then(status => {
+        if (revision !== this.#attachmentRevision) return
         if (status.workerInstanceId !== this.#status?.workerInstanceId) throw new Error('WORKER_AUTHORITY_FAILURE')
       }).catch((error: unknown) => {
+        if (revision !== this.#attachmentRevision) return
         if (error instanceof Error && error.message === 'BUSY') return
         this.detach()
         const reason = 'WORKER_AUTHORITY_FAILURE'
@@ -151,10 +155,39 @@ export class WorkerSupervisor {
     this.#healthTimer.unref()
   }
   detach(): void {
+    this.#attachmentRevision++
     clearInterval(this.#healthTimer)
     this.#bootstrap?.secret.fill(0)
     this.#bootstrap?.lifecycle?.destroy()
     this.#bootstrap = undefined
+  }
+  // Recovery never starts a candidate while any old process or OS authority
+  // remains live/ambiguous. PID reuse is conservatively treated as still live.
+  async recover(): Promise<CarrierBootstrap> {
+    const old = this.#status
+    this.detach()
+    if (this.#healthInFlight !== undefined) await Promise.race([this.#healthInFlight, delay(2_000)])
+    const deadline = Date.now() + 8_000
+    while (Date.now() < deadline) {
+      try {
+        const status = await this.discover()
+        if (old !== undefined && status.workerInstanceId !== old.workerInstanceId && !authorityProcessesGone(old)) {
+          throw new Error('AUTHORITY_AMBIGUOUS_FAIL_CLOSED')
+        }
+        if (status.state !== 'DETACHED') { await delay(250); continue }
+        return await this.start()
+      } catch (error) {
+        const reason = error instanceof Error ? error.message : ''
+        if (reason === 'BUSY') { await delay(250); continue }
+        if (reason !== 'WORKER_NOT_FOUND') throw error
+        if (old !== undefined && !authorityProcessesGone(old)) { await delay(250); continue }
+        const platform = await inspectLocalPlatform(this.config.nativeHelperPath)
+        if (platform.mutexExists || platform.lifecycleBusy) throw new Error('AUTHORITY_AMBIGUOUS_FAIL_CLOSED')
+        this.#status = undefined
+        return await this.start()
+      }
+    }
+    throw new Error('RECONNECT_FAILED: authority unavailable or prior death unproven')
   }
   // Bounded internal controlled shutdown; never exposed through preload/Renderer.
   // The controlled stop is serialized against the in-flight health discovery so the
@@ -204,4 +237,11 @@ export class WorkerSupervisor {
     if (delivery === 'STOP_DELIVERED') { delivery = 'STOP_DELIVERED_BUT_AUTHORITY_DID_NOT_EXIT' }
     return { workerPid: status.worker.pid, exited: false, delivery, reason }
   }
+}
+
+export function authorityProcessesGone(status: AuthorityStatus): boolean {
+  return [status.worker.pid, status.host.pid, status.helper.pid].every(pid => {
+    try { process.kill(pid, 0); return false }
+    catch (error) { return (error as NodeJS.ErrnoException).code === 'ESRCH' }
+  })
 }

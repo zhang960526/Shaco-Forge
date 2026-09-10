@@ -1,0 +1,25 @@
+{
+  "runId": "STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01",
+  "result": "PASS",
+  "evidenceFiles": [
+    "run-manifest.json",
+    "powershell-resolution.json",
+    "step1-regression.json",
+    "step2-cumulative-e2e.json",
+    "gate-results.json",
+    "test-summary.json",
+    "redaction-summary.json"
+  ],
+  "strictUtf8": true,
+  "bomCount": 0,
+  "mojibakeCount": 0,
+  "rawCredentialValues": 0,
+  "hmacProofValues": 0,
+  "exactPrivateCarrierEndpoints": 0,
+  "privateWorkspacePaths": 0,
+  "privateSessionContent": 0,
+  "valuesHashedOrRedacted": 200,
+  "method": "Structured runtime capture; Step1 private paths and raw identifiers/diagnostics replaced with SHA256 identities. All formal JSON, changed source and record scanned with strict UTF8, forbidden raw-field/value and mojibake checks before delivery.",
+  "exception": "Canonical PowerShell executable path is retained solely as the explicitly authorized nonsecret test-tool identity.",
+  "providerRuns": 0
+}

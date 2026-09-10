@@ -229,10 +229,15 @@ test('production Client package loader retains exact identity, web declaration a
   await assert.rejects(unavailable.loadPackage(id), /Missing public export/)
 })
 
-test('generated picker manifest has exactly 28 public modules and no native or auto picker', async () => {
+test('generated picker manifest preserves 28 public Harness modules plus one static observer and no native or auto picker', async () => {
   const manifest = JSON.parse(await readFile('apps/desktop/.generated-client/harness-client-manifest.json', 'utf8'))
-  assert.equal(manifest.graph.totalCount, 28)
-  assert.equal(new Set(manifest.graph.orderedIds).size, 28)
+  const frozen = manifest.graph.orderedIds.filter(id => id.startsWith('@deepseek-ai/'))
+  assert.equal(frozen.length, 28)
+  assert.equal(new Set(frozen).size, 28)
+  assert.equal(manifest.graph.totalCount, 29)
+  assert.equal(new Set(manifest.graph.orderedIds).size, 29)
+  assert.equal(manifest.graph.orderedIds.at(-1), '@shaco-forge/desktop')
+  assert.equal(manifest.artifacts.find(row => row.id === '@shaco-forge/desktop').publicExport, '@shaco-forge/desktop/client')
   const picker = manifest.artifacts.filter(row => row.id.includes('directory-picker'))
   assert.equal(picker.length, 1)
   assert.equal(picker[0].publicExport, '@deepseek-ai/dsh-client-ui-directory-picker-browse/client')

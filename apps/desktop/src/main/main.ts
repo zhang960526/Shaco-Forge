@@ -11,6 +11,7 @@ import {
   type BootstrapEvent,
 } from '@shaco-forge/contracts'
 import { CarrierClient } from './carrier-client.js'
+import { RecoveryCoordinator, type RecoveryProjection } from './recovery-coordinator.js'
 import { isSecureRendererConfiguration, rendererSecurityPreferences } from './security.js'
 import { sendProjectionIfAlive, snapshotLoadingUrl } from './window-lifecycle.js'
 import { readSupervisorConfig, WorkerSupervisor, type CarrierBootstrap } from './worker-supervisor.js'
@@ -33,6 +34,9 @@ interface Projection {
   workerPid?: number
   hostPid?: number
   helperPid?: number
+  generation?: number
+  connectionState?: string
+  projectionRebuildComplete?: boolean
 }
 
 let projection: Projection = { phase: 'worker-starting', message: 'Worker Starting', mainPid: process.pid }
@@ -40,6 +44,7 @@ let rendererEvidence: Record<string, unknown> | undefined
 let supervisor: WorkerSupervisor | undefined
 let carrier: CarrierClient | undefined
 let carrierBootstrap: CarrierBootstrap | undefined
+let recovery: RecoveryCoordinator | undefined
 let mainWindow: BrowserWindow | undefined
 let finalizing = false
 let userLoopEvidence: Record<string, unknown> | undefined
@@ -77,6 +82,7 @@ function updateProjection(event: BootstrapEvent): void {
     'worker-stopped': 'Worker Stopped',
   }
   publishProjection({
+    ...projection,
     phase: event.phase,
     message: event.error === undefined ? messages[event.phase] ?? event.phase : `${messages[event.phase] ?? event.phase}: ${event.error.split('\n')[0]}`,
     mainPid: process.pid,
@@ -97,8 +103,47 @@ function requireCarrier(): CarrierClient {
   return carrier
 }
 
+function requireRecovery(): RecoveryCoordinator {
+  if (recovery === undefined) throw new Error('DISCONNECTED')
+  return recovery
+}
+
+function publishRecovery(state: RecoveryProjection): void {
+  carrier = recovery?.carrier
+  carrierBootstrap = recovery?.bootstrap
+  publishProjection({ ...projection, ...state, phase: state.authenticatedCarrier ? 'carrier-ready' : state.connectionState.toLowerCase().replaceAll('_', '-'),
+    message: state.connectionState === 'CONNECTED' ? 'Connected · Harness projection ready' : `${state.connectionState}${state.failure ? `: ${state.failure}` : ''}`,
+    helperPid: carrierBootstrap?.helperPid })
+}
+
+// Narrow Main-only controls for the canonical non-Provider runtime driver.
+export function observeStep2Recovery(): Record<string, unknown> {
+  return { ...observeStep1Lifecycle(), recovery: recovery?.projection, transitions: recovery?.transitions, recoveryMetrics: recovery?.metrics, readProof: recovery?.readProof, retiredGenerations: recovery?.retiredGenerations }
+}
+export async function simulateStep2CarrierLoss(): Promise<Record<string, unknown>> {
+  const current = requireRecovery()
+  const generation = current.projection.generation
+  const old = requireCarrier()
+  const handle = await current.openStream(generation, 'session/control', { args: {} })
+  await current.pullStream(generation, handle)
+  const pull = current.pullStream(generation, handle).then(() => 'UNEXPECTED_COMPLETION', () => 'TERMINATED')
+  const unary = current.request(generation, 'session/list', { type: 'client-request', rpcId: 'step2-loss-read', method: 'session/list', payload: { args: { _request: {} } } })
+    .then(() => 'UNEXPECTED_COMPLETION', () => 'TERMINATED')
+  const before = { pendingUnary: old.metrics.pendingUnary, activeStreams: old.metrics.activeStreams }
+  old.fail('CARRIER_LOST')
+  const results = { unary: await unary, stream: await pull }
+  let staleCallbackRejected = false
+  try { current.report(generation, { clientGenerationReady: true, workspaceReady: true, sessionRosterReady: true, currentSessionReady: true, currentSessionPresent: false }) }
+  catch { staleCallbackRejected = true }
+  return { before, after: { pendingUnary: old.metrics.pendingUnary, activeStreams: old.metrics.activeStreams }, ...results, staleCallbackRejected }
+}
+
 function registerTransportIpc(): void {
-  ipcMain.handle('transport:fetch', async (event, input: unknown) => {
+  ipcMain.handle('bootstrap:projection-ready', (event, generation: unknown, report: unknown) => {
+    assertTrustedRenderer(event)
+    requireRecovery().report(generation, report)
+  })
+  ipcMain.handle('transport:fetch', async (event, input: unknown, generation: unknown) => {
     assertTrustedRenderer(event)
     if (!isRecord(input)
       || typeof input.url !== 'string'
@@ -108,24 +153,24 @@ function registerTransportIpc(): void {
     const normalized = normalizeRendererRequest({
       url: input.url, method: input.method, contentType: input.contentType, body: input.body,
     })
-    const envelope = await requireCarrier().request(normalized.endpoint, normalized.envelope)
+    const envelope = await requireRecovery().request(generation, normalized.endpoint, normalized.envelope)
     return { status: 200, contentType: 'application/json', body: JSON.stringify(envelope) }
   })
-  ipcMain.handle('transport:open-stream', async (event, input: unknown) => {
+  ipcMain.handle('transport:open-stream', async (event, input: unknown, generation: unknown) => {
     assertTrustedRenderer(event)
     if (!isRecord(input)) throw new TypeError('Invalid Renderer stream capability input')
     const validated = validateStreamOpen(input.endpoint, input.payload)
-    return await requireCarrier().openStream(validated.endpoint, validated.payload)
+    return await requireRecovery().openStream(generation, validated.endpoint, validated.payload)
   })
-  ipcMain.handle('transport:pull-stream', async (event, streamId: unknown) => {
+  ipcMain.handle('transport:pull-stream', async (event, streamId: unknown, generation: unknown) => {
     assertTrustedRenderer(event)
     if (typeof streamId !== 'string') throw new TypeError('Invalid Renderer stream id')
-    return await requireCarrier().pullStream(streamId)
+    return await requireRecovery().pullStream(generation, streamId)
   })
-  ipcMain.handle('transport:cancel-stream', async (event, streamId: unknown, reason: unknown) => {
+  ipcMain.handle('transport:cancel-stream', async (event, streamId: unknown, reason: unknown, generation: unknown) => {
     assertTrustedRenderer(event)
     if (typeof streamId !== 'string' || typeof reason !== 'string' || reason.length > 80) throw new TypeError('Invalid Renderer stream cancellation')
-    await requireCarrier().cancelStream(streamId, reason)
+    await requireRecovery().cancelStream(generation, streamId, reason)
   })
 }
 
@@ -192,7 +237,7 @@ async function maybeFinalizeEvidence(): Promise<void> {
     mainWindow = undefined
     await new Promise(resolveDelay => setTimeout(resolveDelay, 200))
   }
-  carrier?.close()
+  recovery?.stop()
   const cleanup = await supervisor.stop()
   const clientManifestPath = resolve(rendererRoot, 'harness-client-manifest.json')
   const clientManifest = JSON.parse(await readFile(clientManifestPath, 'utf8')) as Record<string, unknown>
@@ -315,15 +360,16 @@ app.whenReady().then(async () => {
     supervisor = new WorkerSupervisor(readSupervisorConfig(process.env))
     supervisor.onEvent(updateProjection)
     supervisor.onCarrierFailure(reason => {
-      carrier?.fail(reason)
-      publishProjection({ ...projection, phase: 'carrier-failed', message: `Carrier Failed: ${reason}` })
+      if (injectCarrierFailure) recovery?.fail(reason)
+      else recovery?.lost(reason)
     })
-    carrierBootstrap = await supervisor.start()
-    carrier = new CarrierClient(carrierBootstrap)
-    await carrier.connect()
-    supervisor.carrierReady()
-    publishProjection({ ...projection, phase: 'carrier-ready', message: 'Authenticated Physical Carrier Ready', helperPid: carrierBootstrap.helperPid })
-    await createMainWindow()
+    recovery = new RecoveryCoordinator(supervisor, publishRecovery, async () => {
+      carrier = recovery?.carrier
+      carrierBootstrap = recovery?.bootstrap
+      if (mainWindow === undefined) await createMainWindow()
+      else await mainWindow.loadURL(snapshotLoadingUrl(mainWindow) ?? 'shaco-forge://client/')
+    })
+    await recovery.start()
     if (evidencePath !== undefined) {
       setTimeout(() => {
         if (rendererEvidence !== undefined || finalizing) return
@@ -360,6 +406,6 @@ app.on('window-all-closed', () => {
 })
 
 app.on('before-quit', () => {
-  carrier?.close()
+  recovery?.stop()
   supervisor?.detach()
 })

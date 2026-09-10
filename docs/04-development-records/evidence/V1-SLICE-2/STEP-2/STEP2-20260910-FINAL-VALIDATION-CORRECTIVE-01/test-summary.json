@@ -1,0 +1,329 @@
+{
+  "runId": "STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01",
+  "result": "PASS",
+  "commands": [
+    {
+      "commandId": "initial-smoke-slice2-step1",
+      "phase": "initial",
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-10T02:20:19.799Z",
+      "endedAt": "2026-09-10T02:22:51.102Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/initial-smoke-slice2-step1/output.log",
+        "bytes": 3835,
+        "sha256": "587ceb2af68158c9dcd37edd8ff0cd5fce89a46e327564e686318b7e5418ca93"
+      }
+    },
+    {
+      "commandId": "initial-smoke-slice2-step2",
+      "phase": "initial",
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-10T02:23:23.919Z",
+      "endedAt": "2026-09-10T02:23:58.807Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/initial-smoke-slice2-step2/output.log",
+        "bytes": 711,
+        "sha256": "98ed5a75b957bd9f38a685413f3af91d74cc8c583cb8702fe8137f45459e9222"
+      }
+    },
+    {
+      "commandId": "full-typecheck",
+      "phase": "full",
+      "command": "pnpm run typecheck",
+      "startedAt": "2026-09-10T02:24:50.464Z",
+      "endedAt": "2026-09-10T02:24:54.746Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/full-typecheck/output.log",
+        "bytes": 29,
+        "sha256": "c9fb96e5ca149db7c634cfa23e702fcceffc5738dcd972e7d45d6ff933413b55"
+      }
+    },
+    {
+      "commandId": "full-build",
+      "phase": "full",
+      "command": "pnpm run build",
+      "startedAt": "2026-09-10T02:24:55.506Z",
+      "endedAt": "2026-09-10T02:25:14.069Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/full-build/output.log",
+        "bytes": 8334,
+        "sha256": "7ed5cb55cfbf412297f751cc6fc65e3c8680e82b363011a8b8a8a9dc58d1606b"
+      }
+    },
+    {
+      "commandId": "full-test",
+      "phase": "full",
+      "command": "pnpm test",
+      "startedAt": "2026-09-10T02:25:14.805Z",
+      "endedAt": "2026-09-10T02:25:32.740Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/full-test/output.log",
+        "bytes": 36876,
+        "sha256": "044e0a7ae655016cbb8f50da06b65c6dc2095795da7f4772d0b4b874dac62d4c"
+      }
+    },
+    {
+      "commandId": "full-verify-static",
+      "phase": "full",
+      "command": "pnpm run verify:static",
+      "startedAt": "2026-09-10T02:25:33.480Z",
+      "endedAt": "2026-09-10T02:25:34.030Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/full-verify-static/output.log",
+        "bytes": 70,
+        "sha256": "38f05a51f07bd31ab38568847ccfb1b09b5ca2f8ef8c6b01d8dd217546a1d7bd"
+      }
+    },
+    {
+      "commandId": "full-smoke-worker",
+      "phase": "full",
+      "command": "pnpm run smoke:worker",
+      "startedAt": "2026-09-10T02:26:19.602Z",
+      "endedAt": "2026-09-10T02:26:31.411Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/full-smoke-worker/output.log",
+        "bytes": 1505,
+        "sha256": "4446723f8b9e7c0599af2948522cfb9b00f601a3acfeb7f514d3070957d8c34f"
+      }
+    },
+    {
+      "commandId": "full-smoke-carrier",
+      "phase": "full",
+      "command": "pnpm run smoke:carrier",
+      "startedAt": "2026-09-10T02:26:32.152Z",
+      "endedAt": "2026-09-10T02:27:23.408Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/full-smoke-carrier/output.log",
+        "bytes": 2612,
+        "sha256": "69dc30ea10531a4b2e42706ea854540ce0dba1a8aca294f8388b14c30a22aa47"
+      }
+    },
+    {
+      "commandId": "full-smoke-electron",
+      "phase": "full",
+      "command": "pnpm run smoke:electron",
+      "startedAt": "2026-09-10T02:27:24.153Z",
+      "endedAt": "2026-09-10T02:27:44.306Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/full-smoke-electron/output.log",
+        "bytes": 4484,
+        "sha256": "850220d00f69a9aa0655c13ed3536bef4f956b6cd5facda17633d9b1cf3ee180"
+      }
+    },
+    {
+      "commandId": "full-smoke-slice2-step1",
+      "phase": "full",
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-10T02:27:45.031Z",
+      "endedAt": "2026-09-10T02:30:26.266Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/full-smoke-slice2-step1/output.log",
+        "bytes": 3833,
+        "sha256": "32e6b9b0af5d3602862faa01a9089eed3a57942e4b2865f9df7958496526d1f0"
+      }
+    },
+    {
+      "commandId": "full-smoke-slice2-step2",
+      "phase": "full",
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-10T02:30:27.018Z",
+      "endedAt": "2026-09-10T02:31:07.772Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/full-smoke-slice2-step2/output.log",
+        "bytes": 711,
+        "sha256": "98ed5a75b957bd9f38a685413f3af91d74cc8c583cb8702fe8137f45459e9222"
+      }
+    }
+  ],
+  "unit": {
+    "tests": 134,
+    "passed": 134,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "currentSourcePassingDedicatedTests": [
+      "S2G05/S2G15 sent mutation loses response: OUTCOME_UNKNOWN, all unary terminal, zero resend",
+      "S2G11/S2G12 carrier and Client alone cannot publish CONNECTED; real repull is required",
+      "S2G01/S2G04/S2G07 healthy loss fences callbacks and reused stream IDs across generations",
+      "S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {\"done\":false,\"value\":\"old\"}",
+      "S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {\"done\":true}",
+      "S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {\"done\":true,\"error\":\"old error\"}",
+      "S2G14 late unary completion cannot settle or modify replacement projection",
+      "S2G13/S2G18 ambiguous recovery fails closed without a fresh Carrier",
+      "S2G17 replacement loses continuity and clears all prior read proofs",
+      "S2G14 late recovery after Desktop stop cannot mount or authenticate",
+      "S2G01/S2G14 loss during a pending replacement mount fences it and its late completion",
+      "S2G13 a public cold projection error is terminal and cannot remain CONNECTED",
+      "S2G18 recovery also fails closed on unverified native discovery and launches no replacement",
+      "S2G16 same Harness home supports replacement; mismatched profile junction fails closed"
+    ]
+  },
+  "dotnetRelease": {
+    "command": "dotnet build apps/native-carrier/ShacoForge.NativeCarrier.csproj --configuration Release --no-restore",
+    "executedBy": [
+      "pnpm run build",
+      "pnpm test"
+    ],
+    "exitCode": 0,
+    "sdk": "10.0.302",
+    "warnings": 0,
+    "errors": 0
+  },
+  "static": {
+    "result": "PASS",
+    "scannedFiles": 107
+  },
+  "runtimeToolchain": {
+    "node": "v22.19.0",
+    "pnpm": "11.7.0",
+    "electron": "35.7.5"
+  },
+  "executionContext": {
+    "buildUnitStatic": "Sandbox",
+    "runtime": "Normal Windows user, required for actual Electron and same-user native authority fixtures"
+  },
+  "budget": {
+    "testHarnessCycles": {
+      "used": 1,
+      "max": 2
+    },
+    "resolutionApproaches": {
+      "used": 1,
+      "max": 2
+    },
+    "productCycles": {
+      "used": 0,
+      "max": 1
+    },
+    "productStrategies": {
+      "used": 0,
+      "max": 1
+    },
+    "runtime": {
+      "step1": {
+        "initial": 1,
+        "unchangedConfirmation": 1
+      },
+      "step2": {
+        "initial": 1,
+        "unchangedConfirmation": 1
+      },
+      "postProductFixReruns": 0,
+      "blindRetries": 0
+    },
+    "resolutionPreflightChecks": {
+      "count": 6,
+      "fixtureExecutions": 0,
+      "note": "Expected error exit codes are successful negative preflight assertions, not failed runtime attempts."
+    }
+  },
+  "processCheck": {
+    "checkedAt": "2026-09-10T02:32:49.6670808Z",
+    "method": "Normal-user CIM inventory for Product Node/Electron command paths and native Helper; every runtime also asserted recorded Worker/Host/Helper cleanup",
+    "productProcesses": []
+  },
+  "electron": {
+    "tcpListeners": [],
+    "cleanupExited": true,
+    "evidenceIdentity": {
+      "path": "node_modules/.step1-electron-regression/electron-runtime.json",
+      "bytes": 21009,
+      "sha256": "98d5428f0c1f9d3a95d1ba0f57c2a579408d254e38625751eab8558b21e6aceb"
+    }
+  },
+  "composition": {
+    "frozenRows": 28,
+    "productRows": 1,
+    "privateHarnessImport": false,
+    "manifestIdentity": {
+      "path": "apps/desktop/.generated-client/harness-client-manifest.json",
+      "bytes": 12610,
+      "sha256": "3c84efd8417a8925fd8fb649e64f8b5b96a3f36eb6a371f78be169db8a183eff"
+    }
+  },
+  "mutationOutcome": {
+    "test": "S2G05/S2G15 sent mutation loses response: OUTCOME_UNKNOWN, all unary terminal, zero resend",
+    "mutationFrames": 1,
+    "unaryFrames": 2,
+    "automaticResends": 0,
+    "result": "OUTCOME_UNKNOWN"
+  },
+  "providerRuns": 0
+}

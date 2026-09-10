@@ -7,7 +7,7 @@ import { indexFrozenHarnessPackages, resolvePublicExport } from './frozen-harnes
 
 const EXPECTED_VERSION = '0.1.2-alpha.1'
 const EXPECTED_COMMIT = 'cd5ef8148158c3a752a658978873241fdf8e2bbc'
-const REVISION = 'shaco-v1-slice-1a-cd5ef81'
+const REVISION = 'shaco-v1-slice-2-step2-cd5ef81'
 const REQUIRED = [
   '@deepseek-ai/dsh-client-modules',
   '@deepseek-ai/dsh-client-connection',
@@ -114,6 +114,22 @@ const modules = await import(pathToFileURL(clientModulesEntry).href)
 const ordered = modules.orderByModuleGraph(rows)
 assertPinnedClientGraph(ordered)
 
+// Preserve the exact frozen 28-row order. Append one nonvisual static Product
+// observer through its public ./client export; no dynamic Cordis registration.
+const { build } = await import(pathToFileURL(await realpath(require.resolve('vite'))).href)
+const observerBuild = await build({ configFile: false, publicDir: false, build: {
+  lib: { entry: join(desktopRoot, 'src/client/recovery.mjs'), formats: ['cjs'], fileName: () => 'recovery.cjs' },
+  write: false, target: 'es2022', minify: false,
+} })
+const observerCode = observerBuild[0].output.find(item => item.type === 'chunk').code
+const observerBytes = Buffer.from(`window.__ModuleLoader__.load({id: '@shaco-forge/desktop', factory: (require) => { const module = {exports: {}}; const exports = module.exports;\n${observerCode}\nreturn module.exports; }});\n`, 'utf8')
+const observerPath = join(desktopRoot, 'dist/client/recovery.js')
+await mkdir(dirname(observerPath), { recursive: true })
+await writeFile(observerPath, observerBytes)
+ordered.push({ id: '@shaco-forge/desktop', url: `shaco-forge://client/static/application.js?rev=${REVISION}`, rev: REVISION,
+  inject: ['@deepseek-ai/dsh-client-connection', '@deepseek-ai/dsh-api-workspace-controller', '@deepseek-ai/dsh-api-session-controller', '@deepseek-ai/dsh-client-ui-workspace'],
+  external: [], immediately: false, bundlePath: observerPath, bundleBytes: observerBytes.length, bundleSha256: sha256(observerBytes) })
+
 const bootstrap = ordered.slice(0, 1)
 const application = ordered.slice(1)
 const concatenate = async entries => Buffer.concat((await Promise.all(entries.map(async row => {
@@ -141,7 +157,6 @@ if (facade?.kind !== 'script' || graphGlobal?.kind !== 'global') {
 }
 await writeFile(join(staticRoot, 'boot-facade.js'), `${facade.text}\nwindow.${graphGlobal.name} = ${JSON.stringify(graphGlobal.value)};\n`, 'utf8')
 // Bundle the same adapter used by unit tests before the frozen Client evaluates.
-const { build } = await import(pathToFileURL(await realpath(require.resolve('vite'))).href)
 await build({
   configFile: false,
   publicDir: false,
@@ -156,11 +171,11 @@ await build({
 
 const manifest = {
   schemaVersion: 1,
-  productSlice: 'V1-SLICE-1B',
+  productSlice: 'V1-SLICE-2-STEP2',
   frozenHarness: { commit: EXPECTED_COMMIT, release: `dsh-v${EXPECTED_VERSION}`, packageVersion: EXPECTED_VERSION },
   composition: { package: '@deepseek-ai/dsh-client-web', export: 'AppWebEntry', publicExportOnly: true },
   reactResolution: { react: require('react/package.json').version, reactDom: require('react-dom/package.json').version },
-  graph: { requiredCount: REQUIRED.length, supportCount: SUPPORT.length, totalCount: ordered.length, orderedIds: ordered.map(row => row.id) },
+  graph: { requiredCount: REQUIRED.length, supportCount: SUPPORT.length, frozenHarnessCount: 28, productCount: 1, totalCount: ordered.length, orderedIds: ordered.map(row => row.id) },
   artifacts: ordered.map(row => ({
     id: row.id,
     publicExport: `${row.id}/client`,

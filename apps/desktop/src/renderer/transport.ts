@@ -57,7 +57,7 @@ export function createHarnessTransport(bridge: RendererTransportBridge, evidence
           let terminal = false
           const abort = (): void => {
             evidence.abortCancels += 1
-            void bridge.cancelStream(streamId, 'abort-signal')
+            void bridge.cancelStream(streamId, 'abort-signal').catch(() => {})
           }
           if (signal?.aborted === true) abort()
           else signal?.addEventListener('abort', abort, { once: true })
@@ -81,7 +81,7 @@ export function createHarnessTransport(bridge: RendererTransportBridge, evidence
             signal?.removeEventListener('abort', abort)
             if (!terminal) {
               evidence.iteratorCancels += 1
-              await bridge.cancelStream(streamId, 'iterator-return')
+              await bridge.cancelStream(streamId, 'iterator-return').catch(() => {})
             }
           }
         },

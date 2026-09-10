@@ -62,6 +62,13 @@ test('Unavailable native discovery fails closed before starting a Worker', async
   assert.equal((await supervisor.stop()).exited, true)
 })
 
+test('S2G18 recovery also fails closed on unverified native discovery and launches no replacement', async () => {
+  const supervisor = new WorkerSupervisor(fixtureConfig('test-recovery-unverified'), 80)
+  await assert.rejects(supervisor.recover(), /Native lifecycle inspection rejected/)
+  assert.equal(supervisor.workerLaunchAttempts, 0)
+  assert.equal((await supervisor.stop()).exited, true)
+})
+
 test('Desktop detach does not notify authority failure or require an owned child', async () => {
   const supervisor = new WorkerSupervisor(fixtureConfig('test-deliberate'), 1_000)
   const failures: string[] = []

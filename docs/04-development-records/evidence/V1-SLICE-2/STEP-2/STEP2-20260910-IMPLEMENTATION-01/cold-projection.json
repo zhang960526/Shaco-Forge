@@ -1,0 +1,273 @@
+{
+  "runId": "STEP2-20260910-IMPLEMENTATION-01",
+  "result": "NOT_EXECUTED",
+  "priorRuntimeResult": "PASS_ATTEMPT_4_BEFORE_MAJOR_3",
+  "acceptanceLimit": "Final current-source cumulative revalidation not executed after regression budget stop",
+  "ownership": "Harness public Client stores only; old document/AppWebEntry disposed on generation loss; fresh document creates one fresh AppWebEntry/Context",
+  "publicCapabilities": {
+    "workspace": "workspace/follow baseline.value.items",
+    "roster": "session/list args._request",
+    "session": "session/follow request.address.kind=session + address.sessionId snapshot; public Client history/page readiness",
+    "events": "$events ready",
+    "observation": "connection.generation, workspaces.list, sessions.list and sessions.binding(current).session public getSnapshot/subscribe",
+    "ipc": "six boolean readiness/failure fields; generation pinned by preload"
+  },
+  "requiredRepullBeforeConnected": true,
+  "checkpoints": [
+    {
+      "label": "PRODUCT_STARTUP_AUTHORITY_HOST_HELPER_AUTHENTICATED_CARRIER_CLIENT_CONNECTED",
+      "generation": 1,
+      "workerInstanceIdHash": "5647038cb8db2d585c6a94dfc22ce742c181745f7842cc11f91186f601a96436",
+      "credentialEpochHash": "074163170be2bb0425c8828893760a23b88922334497169f97e72d6bec4094de",
+      "clientInstanceIdHash": "0c64243da78813c719fe106cad947e8e3c61223dfabd1db5e428287d2798991f",
+      "readProof": {
+        "eventsReady": true,
+        "workspaceBaseline": true,
+        "sessionRoster": true,
+        "sessionSnapshot": false,
+        "workspaceCount": 0,
+        "sessionCount": 0,
+        "historyCount": 0,
+        "sessionHash": "",
+        "workspaceHashes": []
+      },
+      "recovery": {
+        "connectionState": "CONNECTED",
+        "generation": 1,
+        "authenticatedCarrier": true,
+        "clientGenerationReady": true,
+        "projectionRebuildComplete": true,
+        "continuity": "INITIAL"
+      },
+      "renderer": {
+        "requireAvailable": false,
+        "processAvailable": false,
+        "rootPresent": true,
+        "projectionVisible": true,
+        "currentSessionSelected": false,
+        "eventsReady": 1,
+        "promptRuns": 0
+      },
+      "retiredGenerations": []
+    },
+    {
+      "label": "CURRENT_SESSION_FROM_PUBLIC_HARNESS_TRUTH",
+      "generation": 1,
+      "workerInstanceIdHash": "5647038cb8db2d585c6a94dfc22ce742c181745f7842cc11f91186f601a96436",
+      "credentialEpochHash": "074163170be2bb0425c8828893760a23b88922334497169f97e72d6bec4094de",
+      "clientInstanceIdHash": "0c64243da78813c719fe106cad947e8e3c61223dfabd1db5e428287d2798991f",
+      "readProof": {
+        "eventsReady": true,
+        "workspaceBaseline": true,
+        "sessionRoster": true,
+        "sessionSnapshot": true,
+        "workspaceCount": 0,
+        "sessionCount": 0,
+        "historyCount": 4,
+        "sessionHash": "20e22064d7b50541789e7e30824bcffc31919c3380316dab2bdba49f61d73090",
+        "workspaceHashes": []
+      },
+      "recovery": {
+        "connectionState": "CONNECTED",
+        "generation": 1,
+        "authenticatedCarrier": true,
+        "clientGenerationReady": true,
+        "projectionRebuildComplete": true,
+        "continuity": "INITIAL"
+      },
+      "renderer": {
+        "requireAvailable": false,
+        "processAvailable": false,
+        "rootPresent": true,
+        "projectionVisible": true,
+        "currentSessionSelected": true,
+        "eventsReady": 1,
+        "promptRuns": 0
+      },
+      "retiredGenerations": []
+    },
+    {
+      "label": "FRESH_DESKTOP_SAME_WORKER_COLD_PROJECTION",
+      "generation": 1,
+      "workerInstanceIdHash": "5647038cb8db2d585c6a94dfc22ce742c181745f7842cc11f91186f601a96436",
+      "credentialEpochHash": "3e301919a481c5191cec9fbfce2647378e6d5d95b60f2bfd23fb241599d9eade",
+      "clientInstanceIdHash": "eb4eb75825f2d81452494f4321b0500d0e9720ba9cbd5c48ed50ec89f1d45055",
+      "readProof": {
+        "eventsReady": true,
+        "workspaceBaseline": true,
+        "sessionRoster": true,
+        "sessionSnapshot": true,
+        "workspaceCount": 1,
+        "sessionCount": 1,
+        "historyCount": 4,
+        "sessionHash": "20e22064d7b50541789e7e30824bcffc31919c3380316dab2bdba49f61d73090",
+        "workspaceHashes": [
+          "c8c32a266b806a25a35f606c69607799675ef19c48297c2c7d8f9af43fcbacfc"
+        ]
+      },
+      "recovery": {
+        "connectionState": "CONNECTED",
+        "generation": 1,
+        "authenticatedCarrier": true,
+        "clientGenerationReady": true,
+        "projectionRebuildComplete": true,
+        "continuity": "INITIAL"
+      },
+      "renderer": {
+        "requireAvailable": false,
+        "processAvailable": false,
+        "rootPresent": true,
+        "projectionVisible": true,
+        "currentSessionSelected": true,
+        "eventsReady": 1,
+        "promptRuns": 0
+      },
+      "retiredGenerations": []
+    },
+    {
+      "label": "FRESH_DESKTOP_AFTER_CRASH_SAME_WORKER_REATTACH",
+      "generation": 1,
+      "workerInstanceIdHash": "5647038cb8db2d585c6a94dfc22ce742c181745f7842cc11f91186f601a96436",
+      "credentialEpochHash": "3cc083375ea0a638fd669986dca7bdf9a553bad29e89681b9709dd52b432d8e4",
+      "clientInstanceIdHash": "b775530b8a60e24f2fd5a13117a3b10e31cf9cd2596a568078c8c4ad3e49b954",
+      "readProof": {
+        "eventsReady": true,
+        "workspaceBaseline": true,
+        "sessionRoster": true,
+        "sessionSnapshot": true,
+        "workspaceCount": 1,
+        "sessionCount": 1,
+        "historyCount": 4,
+        "sessionHash": "20e22064d7b50541789e7e30824bcffc31919c3380316dab2bdba49f61d73090",
+        "workspaceHashes": [
+          "c8c32a266b806a25a35f606c69607799675ef19c48297c2c7d8f9af43fcbacfc"
+        ]
+      },
+      "recovery": {
+        "connectionState": "CONNECTED",
+        "generation": 1,
+        "authenticatedCarrier": true,
+        "clientGenerationReady": true,
+        "projectionRebuildComplete": true,
+        "continuity": "INITIAL"
+      },
+      "renderer": {
+        "requireAvailable": false,
+        "processAvailable": false,
+        "rootPresent": true,
+        "projectionVisible": true,
+        "currentSessionSelected": true,
+        "eventsReady": 1,
+        "promptRuns": 0
+      },
+      "retiredGenerations": []
+    },
+    {
+      "label": "CARRIER_LOSS_REDISCOVERY_FRESH_AUTH_GENERATION_COLD_PROJECTION_CONNECTED",
+      "generation": 2,
+      "workerInstanceIdHash": "5647038cb8db2d585c6a94dfc22ce742c181745f7842cc11f91186f601a96436",
+      "credentialEpochHash": "b3abc27b4eec62ce4c602d5f2e4a07aa6208e5fd3defa829b858c718e6b2b48c",
+      "clientInstanceIdHash": "0445c6fd180995e908f3fd0977b2d4ecb1f014d466db0f6a0554c983d86fff9b",
+      "readProof": {
+        "eventsReady": true,
+        "workspaceBaseline": true,
+        "sessionRoster": true,
+        "sessionSnapshot": true,
+        "workspaceCount": 1,
+        "sessionCount": 1,
+        "historyCount": 4,
+        "sessionHash": "20e22064d7b50541789e7e30824bcffc31919c3380316dab2bdba49f61d73090",
+        "workspaceHashes": [
+          "c8c32a266b806a25a35f606c69607799675ef19c48297c2c7d8f9af43fcbacfc"
+        ]
+      },
+      "recovery": {
+        "connectionState": "CONNECTED",
+        "generation": 2,
+        "authenticatedCarrier": true,
+        "clientGenerationReady": true,
+        "projectionRebuildComplete": true,
+        "continuity": "SAME_WORKER"
+      },
+      "renderer": {
+        "requireAvailable": false,
+        "processAvailable": false,
+        "rootPresent": true,
+        "projectionVisible": true,
+        "currentSessionSelected": true,
+        "eventsReady": 1,
+        "promptRuns": 0
+      },
+      "retiredGenerations": [
+        {
+          "generation": 1,
+          "pendingUnary": 0,
+          "activeStreams": 0
+        }
+      ]
+    },
+    {
+      "label": "WORKER_CRASH_JOB_CLEANUP_REPLACEMENT_COLD_PROJECTION_CONNECTED",
+      "generation": 3,
+      "workerInstanceIdHash": "20fba3d8b6ca05dcda775b63546b748ed04cc0dc8667cf91b2cc7afd92bc0c08",
+      "credentialEpochHash": "196bf689b698a8a1358a483d28470e3912fb8c58d7e153ecf6989db353bd936c",
+      "clientInstanceIdHash": "19912f4436d00d58acb5f883b624a38923fbb4dd3c42aacf47c7be9d0c3cd8b2",
+      "readProof": {
+        "eventsReady": true,
+        "workspaceBaseline": true,
+        "sessionRoster": true,
+        "sessionSnapshot": true,
+        "workspaceCount": 1,
+        "sessionCount": 1,
+        "historyCount": 4,
+        "sessionHash": "20e22064d7b50541789e7e30824bcffc31919c3380316dab2bdba49f61d73090",
+        "workspaceHashes": [
+          "c8c32a266b806a25a35f606c69607799675ef19c48297c2c7d8f9af43fcbacfc"
+        ]
+      },
+      "recovery": {
+        "connectionState": "CONNECTED",
+        "generation": 3,
+        "authenticatedCarrier": true,
+        "clientGenerationReady": true,
+        "projectionRebuildComplete": true,
+        "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+      },
+      "renderer": {
+        "requireAvailable": false,
+        "processAvailable": false,
+        "rootPresent": true,
+        "projectionVisible": true,
+        "currentSessionSelected": true,
+        "eventsReady": 1,
+        "promptRuns": 0
+      },
+      "retiredGenerations": [
+        {
+          "generation": 1,
+          "pendingUnary": 0,
+          "activeStreams": 0
+        },
+        {
+          "generation": 2,
+          "pendingUnary": 0,
+          "activeStreams": 0
+        }
+      ]
+    }
+  ],
+  "seed": {
+    "workspaceHash": "c8c32a266b806a25a35f606c69607799675ef19c48297c2c7d8f9af43fcbacfc",
+    "sessionHash": "20e22064d7b50541789e7e30824bcffc31919c3380316dab2bdba49f61d73090",
+    "publicMutations": [
+      "workspace/create",
+      "session/create",
+      "session/rename"
+    ],
+    "promptRuns": 0
+  },
+  "privateContentCaptured": false,
+  "persistentProductTruthStore": false,
+  "continuity": "Replacement repulls persisted Harness fixture truth but does not prove in-flight business operation continuity",
+  "providerRuns": 0
+}

@@ -26,11 +26,25 @@ function requiredElement<T extends Element>(selector: string): T {
 const status = requiredElement<HTMLOutputElement>('[data-testid="connection-status"]')
 const truthfulState = requiredElement<HTMLElement>('[data-testid="truthful-state"]')
 const mountRoot = requiredElement<HTMLElement>('#harness-client-root')
+let entry: AppWebEntry | undefined
 
 function projectBootstrap(state: BootstrapProjection): void {
   status.textContent = state.message
   status.dataset.phase = state.phase
-  if (state.phase === 'host-ready') {
+  if (state.connectionState !== undefined) {
+    const heading = document.createElement('strong')
+    const detail = document.createElement('span')
+    heading.textContent = state.connectionState === 'CONNECTED' ? 'Harness 已连接' : 'Harness 连接恢复中'
+    detail.textContent = state.connectionState === 'CONNECTED' ? 'Physical Carrier 已认证，当前 Client 与冷投影已就绪。' : state.message
+    truthfulState.replaceChildren(heading, detail)
+    mountRoot.inert = state.connectionState !== 'CONNECTED'
+    mountRoot.style.visibility = state.connectionState === 'CONNECTED' ? 'visible' : 'hidden'
+    if (['CONNECTION_LOST', 'RECONNECTING', 'FAILED', 'INCOMPATIBLE', 'DISCONNECTED'].includes(state.connectionState)) {
+      const old = entry
+      entry = undefined
+      void old?.dispose()
+    }
+  } else if (state.phase === 'host-ready') {
     truthfulState.innerHTML = '<strong>Harness Host 已就绪</strong><span>正在完成 Physical Carrier mutual authentication。</span>'
   } else if (state.phase === 'carrier-ready') {
     truthfulState.innerHTML = '<strong>Authenticated Physical Carrier 已连接</strong><span>Harness Client 正通过本地受保护载体连接 Host。</span>'
@@ -46,7 +60,7 @@ const fatalEvents: Array<{ kind: string; message: string }> = []
 window.addEventListener('error', event => fatalEvents.push({ kind: 'error', message: String(event.message).slice(0, 800) }))
 window.addEventListener('unhandledrejection', event => fatalEvents.push({ kind: 'unhandledrejection', message: String(event.reason).slice(0, 800) }))
 
-const entry = new AppWebEntry(mountRoot)
+entry = new AppWebEntry(mountRoot)
 let runResolved = false
 let runFailure: string | undefined
 try {

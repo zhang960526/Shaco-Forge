@@ -1,0 +1,102 @@
+{
+  "runId": "STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01",
+  "result": "PASS",
+  "rootCause": "Existing authority-negative fixture spawned process.env.SHACO_FORGE_POWERSHELL directly; unset value reached spawn as undefined (ERR_INVALID_ARG_TYPE).",
+  "correction": "Explicit override first; at most 128 absolute PATH directories, pwsh.exe preference, SystemRoot Windows PowerShell fallback; executable and required existing fixture API verified with at most two 5-second probes before any runtime fixture; clear POWERSHELL_PREFLIGHT_FAILED on failure.",
+  "canonicalRuns": [
+    {
+      "commandId": "initial-smoke-slice2-step1",
+      "powershellOverrideSet": false,
+      "source": "PATH_PWSH",
+      "executable": "C:\\Users\\18902\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "result": "PASS",
+      "fixtureApiVerified": true
+    },
+    {
+      "commandId": "full-smoke-slice2-step1",
+      "powershellOverrideSet": false,
+      "source": "PATH_PWSH",
+      "executable": "C:\\Users\\18902\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "result": "PASS",
+      "fixtureApiVerified": true
+    }
+  ],
+  "checks": {
+    "result": "PASS",
+    "cases": [
+      {
+        "name": "explicit-override-precedes-empty-PATH",
+        "startedAt": "2026-09-10T02:24:27.452Z",
+        "endedAt": "2026-09-10T02:24:27.790Z",
+        "exitCode": 0,
+        "expectedExitCode": 0,
+        "result": "PASS",
+        "output": "{\"powershellResolution\":{\"source\":\"EXPLICIT_ENV\",\"executable\":\"C:\\\\Users\\\\18902\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\",\"result\":\"PASS\",\"fixtureApiVerified\":true}}\n{\"probe\":{\"source\":\"EXPLICIT_ENV\",\"executable\":\"C:\\\\Users\\\\18902\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\",\"result\":\"PASS\",\"fixtureApiVerified\":true}}",
+        "fixtureStarted": false
+      },
+      {
+        "name": "empty-explicit-override-fails-closed",
+        "startedAt": "2026-09-10T02:24:27.790Z",
+        "endedAt": "2026-09-10T02:24:27.884Z",
+        "exitCode": 2,
+        "expectedExitCode": 2,
+        "result": "PASS",
+        "output": "{\"preflightError\":\"POWERSHELL_PREFLIGHT_FAILED: EXPLICIT_ENV: executable not found or empty. Install a compatible pwsh.exe on PATH or set SHACO_FORGE_POWERSHELL to a compatible executable.\"}",
+        "fixtureStarted": false
+      },
+      {
+        "name": "missing-explicit-override-fails-closed",
+        "startedAt": "2026-09-10T02:24:27.885Z",
+        "endedAt": "2026-09-10T02:24:27.970Z",
+        "exitCode": 2,
+        "expectedExitCode": 2,
+        "result": "PASS",
+        "output": "{\"preflightError\":\"POWERSHELL_PREFLIGHT_FAILED: EXPLICIT_ENV: executable not found or empty. Install a compatible pwsh.exe on PATH or set SHACO_FORGE_POWERSHELL to a compatible executable.\"}",
+        "fixtureStarted": false
+      },
+      {
+        "name": "non-PowerShell-executable-rejected",
+        "startedAt": "2026-09-10T02:24:27.970Z",
+        "endedAt": "2026-09-10T02:24:28.126Z",
+        "exitCode": 2,
+        "expectedExitCode": 2,
+        "result": "PASS",
+        "output": "{\"preflightError\":\"POWERSHELL_PREFLIGHT_FAILED: EXPLICIT_ENV: PowerShell/fixture API probe failed (9). Install a compatible pwsh.exe on PATH or set SHACO_FORGE_POWERSHELL to a compatible executable.\"}",
+        "fixtureStarted": false
+      },
+      {
+        "name": "missing-PATH-and-system-root-diagnostic",
+        "startedAt": "2026-09-10T02:24:28.126Z",
+        "endedAt": "2026-09-10T02:24:28.476Z",
+        "exitCode": 2,
+        "expectedExitCode": 2,
+        "result": "PASS",
+        "output": "{\"preflightError\":\"POWERSHELL_PREFLIGHT_FAILED: PATH_PWSH: executable not found or empty; WINDOWS_POWERSHELL_FALLBACK: PowerShell/fixture API probe failed (1). Install a compatible pwsh.exe on PATH or set SHACO_FORGE_POWERSHELL to a compatible executable.\"}",
+        "fixtureStarted": false,
+        "interpretation": "Requested SystemRoot removal; Windows process creation supplied it again. Observed proof is missing PATH plus incompatible standard fallback rejection, not absence of SystemRoot."
+      },
+      {
+        "name": "standard-Windows-PowerShell-incompatible-fixture-API-diagnostic",
+        "startedAt": "2026-09-10T02:24:28.476Z",
+        "endedAt": "2026-09-10T02:24:28.793Z",
+        "exitCode": 2,
+        "expectedExitCode": 2,
+        "result": "PASS",
+        "output": "{\"preflightError\":\"POWERSHELL_PREFLIGHT_FAILED: PATH_PWSH: executable not found or empty; WINDOWS_POWERSHELL_FALLBACK: PowerShell/fixture API probe failed (1). Install a compatible pwsh.exe on PATH or set SHACO_FORGE_POWERSHELL to a compatible executable.\"}",
+        "fixtureStarted": false
+      }
+    ],
+    "assertionLinesUnchanged": true,
+    "fixture": "apps/desktop/test-fixtures/step1-authority-negative.ps1",
+    "fixtureBaseline": {
+      "path": "apps/desktop/test-fixtures/step1-authority-negative.ps1",
+      "bytes": 2121,
+      "sha256": "d049073f20c0bef41649556ce3b91f7ac753a4f4baae32ccda0b71dae349a61a"
+    },
+    "providerRuns": 0
+  },
+  "standardFallbackLimitation": "This host Windows PowerShell lacks the existing NamedPipeServerStreamAcl fixture API and correctly fails preflight; a compatible pwsh on PATH runs the unchanged fixture.",
+  "assertionsUnchanged": true,
+  "fixtureUnchanged": true,
+  "providerRuns": 0
+}

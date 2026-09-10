@@ -1,5 +1,41 @@
 # Shaco Forge Document Map
 
+> Latest authority (2026-09-10): [Step2 Owner Closure and Freeze Decision](../04-development-records/V1-SLICE-2-STEP2-OWNER-CLOSURE-AND-FREEZE-DECISION.md).
+> Step1 and Step2 are `PASS / CLOSED / FROZEN`; Step2 Owner Closure is `ACCEPTED`.
+> Final Independent Review is `PASS` via [REVIEW-024C](../05-reviews/architecture/AUDIT-024C-V1-SLICE-2-STEP2-CROSS-DOCUMENT-GOVERNANCE-CORRECTIVE-REREVIEW.md); active Blocking Findings are `NONE`.
+> Historical [REVIEW-024](../05-reviews/architecture/AUDIT-024-V1-SLICE-2-STEP2-INDEPENDENT-IMPLEMENTATION-REVIEW.md) `FAIL` / R24-01 and [REVIEW-024B](../05-reviews/architecture/AUDIT-024B-V1-SLICE-2-STEP2-GOVERNANCE-CORRECTIVE-REREVIEW.md) `FAIL` / R24B-01 remain preserved.
+> Both findings are closed by the corrective review chain. Implementation, Final Validation Corrective,
+> S2G01-S2G20, Step1 regression, cumulative non-Provider E2E and full regression are accepted as `PASS`.
+> Implementation authorization is `CONSUMED`; additional Step2 implementation is `NONE`.
+> Step3 is `NOT_AUTHORIZED`; Provider authorization is `NO`; Slice2 remains `IN_PROGRESS`.
+> Current Step: `V1_SLICE_2_STEP2_CLOSED_PENDING_STEP3_ENTRY_DECISION`.
+> Next: `ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP3_ENTRY`.
+> Step3 Entry Assessment is the only next action; it is not Step3 Implementation Authorization.
+
+> Historical / Superseded pre-REVIEW-024C checkpoint: Final Validation Corrective (STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01): all required final-source
+> regression and S2G01-S2G20 PASS. Step2 is `IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`.
+> REVIEW-024 is `FAIL` solely for the HIGH R24-01 governance finding; no Technical
+> Correctness Finding was found. REVIEW-024B confirmed the R24-01 Current State
+> corrective as `PASS`, but REVIEW-024B remains `FAIL` solely for HIGH R24B-01
+> (`DOCUMENT_MAP_STATE_CONTRADICTION`). The R24B-01 corrective is applied and
+> awaits independent re-review.
+> Previous STOPPED_BLOCKED and Minor 3/3 EXHAUSTED remain historical facts.
+> [Corrective Evidence](../04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01/run-manifest.json).
+> Step1 PASS / CLOSED / FROZEN; Step3 NOT_AUTHORIZED; Provider NO.
+> Next: `INDEPENDENT_REREVIEW_V1_SLICE_2_STEP2_REVIEW_024B_CORRECTIVE`.
+
+> Historical implementation checkpoint (2026-09-10): Step2 was `STOPPED_BLOCKED`.
+> Required full Step1 regression failed because the existing authority-negative
+> fixture lacked its explicit `SHACO_FORGE_POWERSHELL` executable environment.
+> Minor corrective budget is exhausted (3/3); no fourth correction or rerun was
+> performed. Latest unit tests (134) pass; prior cumulative attempt 4 PASS
+> predates the final race correction and is not final-source acceptance.
+> [Step2 Implementation Record](../04-development-records/V1-SLICE-2-STEP2-CONNECTION-RECOVERY-COLD-PROJECTION-IMPLEMENTATION-RECORD.md)
+> and [Step2 Evidence](../04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-IMPLEMENTATION-01/run-manifest.json).
+> Step1 remains `PASS / CLOSED / FROZEN`; Step3 `NOT_AUTHORIZED`;
+> Provider authorization `NO`. Next:
+> `ARCHITECTURE_OWNER_ASSESS_STEP2_IMPLEMENTATION_BLOCKER`.
+
 > Latest execution-scope clarification (2026-09-09): the
 > [Step 2 Shared Source Extension Scope Clarification Decision](../04-development-records/V1-SLICE-2-STEP2-SHARED-SOURCE-EXTENSION-SCOPE-CLARIFICATION-DECISION.md)
 > confirms that Step 1 acceptance, Evidence, Review and Closure history remains
@@ -8,7 +44,7 @@
 > cumulative regression proving that earlier capability did not regress. This
 > neither reopens Step 1 nor expands Step 2.
 
-> Current implementation authority (2026-09-09, Step 2 Entry / Implementation Authorization):
+> Historical entry checkpoint (2026-09-09, retained Step 2 authorization):
 > the [Step 2 Entry and Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md)
 > accepts Step 1 as `PASS / CLOSED / FROZEN`, approves Step 2 entry and
 > authorizes its bounded implementation as `AUTHORIZED_NOT_STARTED`. Step 3 is
@@ -54,7 +90,7 @@ V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
 V1_SLICE_2_STEP1_RESULT = PASS
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
 V1_SLICE_2_STEP1_BASELINE = FROZEN
-V1_SLICE_2_STEP2_SHARED_PRODUCT_SOURCE_EXTENSION = AUTHORIZED
+V1_SLICE_2_STEP2_SHARED_PRODUCT_SOURCE_EXTENSION = CONSUMED
 STEP1_ACCEPTANCE_BASELINE = FROZEN
 STEP1_CAPABILITY_CONTRACT = MUST_NOT_REGRESS
 STEP1_HISTORICAL_ARTIFACTS = BYTE_IMMUTABLE
@@ -63,16 +99,39 @@ V1_CUMULATIVE_CLOSURE_REGRESSION_GATE = FROZEN
 CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
 STEP2_CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
 V1_SLICE_2_STEP2_ENTRY = APPROVED
-V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = YES
+V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = CONSUMED
 V1_SLICE_2_IMPLEMENTATION = IN_PROGRESS
-V1_SLICE_2_STEP2 = AUTHORIZED_NOT_STARTED
+V1_SLICE_2_STEP2 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP2_IMPLEMENTATION_RESULT = PASS
+V1_SLICE_2_STEP2_IMPLEMENTATION_BLOCKER = NONE
+V1_SLICE_2_STEP2_DEDICATED_GATES = PASS
+V1_SLICE_2_STEP2_CUMULATIVE_NON_PROVIDER_E2E = PASS
+V1_SLICE_2_STEP2_REVIEW_024 = FAIL
+V1_SLICE_2_STEP2_REVIEW_024_R24_01 = CLOSED_BY_CORRECTIVE_REVIEW_CHAIN
+V1_SLICE_2_STEP2_REVIEW_024B = FAIL
+HISTORICAL_V1_SLICE_2_STEP2_REVIEW_024B_BLOCKING_FINDINGS = R24B-01_DOCUMENT_MAP_STATE_CONTRADICTION
+V1_SLICE_2_STEP2_REVIEW_024B_CORRECTIVE = CLOSED_BY_CORRECTIVE_REREVIEW
+PREVIOUS_IMPLEMENTATION_VERDICT = STOPPED_BLOCKED
+PREVIOUS_MINOR_BUDGET = 3/3 EXHAUSTED
+PREVIOUS_MAJOR_BUDGET = 3/4 USED
+STEP2_FINAL_VALIDATION_CORRECTIVE = PASS
 V1_SLICE_2_STEP3 = NOT_AUTHORIZED
 PROVIDER_GATE_AUTHORIZATION = NO
 V1_SLICE_2 = IN_PROGRESS
 V1_0_MAINLINE = MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION
 V1_1_TO_V1_3 = PRESERVE_SEAMS_ONLY
-V1_CURRENT_STEP = V1_SLICE_2_STEP2_AUTHORIZED_NOT_STARTED
-V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL
+V1_CURRENT_STEP = V1_SLICE_2_STEP2_CLOSED_PENDING_STEP3_ENTRY_DECISION
+V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP3_ENTRY
+STEP1_REGRESSION = PASS
+V1_SLICE_2_STEP2_REVIEW_024C = PASS
+V1_SLICE_2_STEP2_REVIEW_024B_R24B_01 = CLOSED_BY_CORRECTIVE_REREVIEW
+V1_SLICE_2_STEP2_FINAL_INDEPENDENT_REVIEW = PASS
+V1_SLICE_2_STEP2_REVIEW_BLOCKING_FINDINGS = NONE
+V1_SLICE_2_STEP2_OWNER_CLOSURE = ACCEPTED
+V1_SLICE_2_STEP2_ADDITIONAL_IMPLEMENTATION = NONE
+V1_SLICE_2_STEP2_RESULT = PASS
+V1_SLICE_2_STEP2_BASELINE = FROZEN
+ACTIVE_CURRENT_AUTHORITY_COUNT = ONE
 ```
 
 Status: ACTIVE
@@ -106,7 +165,7 @@ V1_SLICE_1B = CLOSED / FROZEN
 V1_SLICE_1C = AUTHORIZED_FOR_IMPLEMENTATION
 V1_SLICE_1C_IMPLEMENTATION = NOT_STARTED
 V1_SLICE_1 = IN_PROGRESS
-V1_CURRENT_NEXT_ACTION = IMPLEMENT_V1_SLICE_1C_EMBEDDED_REAL_HARNESS_USER_LOOP
+PREVIOUS_V1_CURRENT_NEXT_ACTION = IMPLEMENT_V1_SLICE_1C_EMBEDDED_REAL_HARNESS_USER_LOOP
 ```
 
 > Latest P0.S authority (2026-09-06): P0.S-8 V1 Product Architecture Freeze and
@@ -293,8 +352,9 @@ Baseline candidate now gates that Slice behind Independent Review.
 | Document/Folder | Role |
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
+| [Step2 Owner Closure Decision](../04-development-records/V1-SLICE-2-STEP2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) | Current Step2 closure authority: Owner ACCEPTED; PASS / CLOSED / FROZEN; REVIEW-024C PASS |
 | `V1-SLICE-2-STEP2-SHARED-SOURCE-EXTENSION-SCOPE-CLARIFICATION-DECISION.md` | Latest Architecture Owner clarification: Step 1 acceptance/history remains frozen and byte-immutable where historical, later authorized Steps may evolve shared Product source, and cumulative regression must prove prior capability remains intact |
-| `V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md` | Current Architecture Owner authority approving Step 2 entry and bounded Connection Recovery and Cold Projection implementation; Step 3 and Provider remain unauthorized |
+| `V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md` | Historical Step2 entry authority; implementation authorization is now CONSUMED by Owner Closure; Step 3 and Provider remain unauthorized |
 | `V1-SLICE-2-STEP1-OWNER-CLOSURE-AND-FREEZE-DECISION.md` | Architecture Owner authority accepting REVIEW-023, closing Step 1 and freezing its reviewed implementation baseline |
 | `V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md` | Current Architecture Owner authority accepting AUDIT-022, re-freezing the corrected Contract/Amendment and re-authorizing bounded Step 1 implementation |
 | `V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md` | Current Architecture Owner security/scope corrective accepting the current-user SID trust principal and minimal Step 1 trusted-discovery model; targeted persisted-delta review required |
@@ -305,7 +365,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 | `V1-SLICE-1-SCOPE-RECONCILIATION-DECISION.md` | Owner-accepted post-1C scope allocation, four-Slice route reconciliation and Slice-1 Independent Closure Audit handoff |
 | `V1-SLICE-1-OWNER-CLOSURE-DECISION.md` | Architecture Owner acceptance and frozen baseline for the complete real Harness user-loop Slice; Slice 2 remains not started |
 | `V1-SLICE-2-ARCHITECTURE-OWNER-DECISION.md` | Owner acceptance of Corrective V2 and AUDIT-019 for Contract persistence only; targeted delta review is next; implementation not authorized |
-| `V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md` | Owner freezes the Slice 2 Contract and Carrier Amendment and authorizes Step 1 only as `AUTHORIZED_NOT_STARTED` |
+| `V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md` | Historical authorization checkpoint: Owner freezes the Slice 2 Contract and Carrier Amendment and authorizes Step 1 only as `AUTHORIZED_NOT_STARTED` |
 | `V1-SLICE-1C-FROZEN-HARNESS-USER-LOOP-SOURCE-CONFIRMATION.md` | Read-only confirmation of Frozen Harness Workspace/Session/Prompt/stream/tool/interaction/provider/public-seam facts; not an implementation result |
 | `V1-SLICE-1C-EVIDENCE-CAPTURE-REVALIDATION-OWNER-DECISION.md` | Owner-approved bounded one-time corrective Attempt #2; original history immutable; total cap two, no third attempt |
 | `V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-IMPLEMENTATION-RECORD.md` | Complete Slice 1C implementation, failures, final live Attempt #2 PASS and regression ledger |
@@ -326,6 +386,9 @@ Baseline candidate now gates that Slice behind Independent Review.
 | Document/Folder | Role |
 |---|---|
 | `REVIEW-INDEX.md` | 所有 Review 索引 |
+| [REVIEW-024](../05-reviews/architecture/AUDIT-024-V1-SLICE-2-STEP2-INDEPENDENT-IMPLEMENTATION-REVIEW.md) | Historical FAIL; R24-01 HIGH governance contradiction; closed by corrective review chain |
+| [REVIEW-024B](../05-reviews/architecture/AUDIT-024B-V1-SLICE-2-STEP2-GOVERNANCE-CORRECTIVE-REREVIEW.md) | Historical FAIL; R24-01 corrective confirmed, R24B-01 HIGH document-map contradiction; closed by corrective re-review |
+| [REVIEW-024C](../05-reviews/architecture/AUDIT-024C-V1-SLICE-2-STEP2-CROSS-DOCUMENT-GOVERNANCE-CORRECTIVE-REREVIEW.md) | PASS; both findings closed; technical review carry-forward permitted; Owner Closure accepted |
 | `architecture/` | 架构审计与复审 |
 | `architecture/AUDIT-004-INDEPENDENT-P0-CLOSURE.md` | Original Independent P0 Closure Audit (`PASS_WITH_REQUIRED_CORRECTIONS`; closure status now in AUDIT-004B) |
 | `architecture/CORRECTIVE-004-P0-CLOSURE-F01-F02-F03.md` | Executor wording record for AUDIT-004 F-01/F-02/F-03 |

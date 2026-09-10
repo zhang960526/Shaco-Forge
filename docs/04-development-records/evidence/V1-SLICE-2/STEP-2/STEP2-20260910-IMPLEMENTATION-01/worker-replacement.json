@@ -1,0 +1,103 @@
+{
+  "diagnosticAttempts": [
+    {
+      "result": "FAIL",
+      "originalError": "WORKER_AUTHORITY_FAILURE: startup exited",
+      "pidsAtLoss": [
+        {
+          "role": "worker",
+          "alive": false
+        },
+        {
+          "role": "host",
+          "alive": false
+        },
+        {
+          "role": "helper",
+          "alive": false
+        }
+      ],
+      "oldProcessesAfter": [
+        {
+          "role": "worker",
+          "alive": false
+        },
+        {
+          "role": "host",
+          "alive": false
+        },
+        {
+          "role": "helper",
+          "alive": false
+        }
+      ],
+      "platform": {
+        "mutexExists": false,
+        "lifecycleBusy": false
+      },
+      "workerLaunchAttempts": 2,
+      "cleanup": {
+        "exited": true
+      },
+      "providerRuns": 0
+    }
+  ],
+  "profileRootCause": {
+    "result": "ROOT_CAUSE_CONFIRMED",
+    "code": "EEXIST",
+    "operation": "symlink",
+    "profileJunctionAlreadyExists": true
+  },
+  "runId": "STEP2-20260910-IMPLEMENTATION-01",
+  "result": "NOT_EXECUTED",
+  "priorRuntimeResult": "PASS_ATTEMPT_4_BEFORE_MAJOR_3",
+  "priorReplacement": {
+    "oldAuthorityGone": true,
+    "overlap": 0,
+    "oldChildAdoption": false,
+    "old": {
+      "worker": {
+        "pid": 56760,
+        "startTime": "134334475390918055"
+      },
+      "host": {
+        "pid": 59152,
+        "startTime": "134334475482360034"
+      },
+      "helper": {
+        "pid": 60476,
+        "startTime": "134334475481178642"
+      },
+      "workerInstanceIdHash": "5647038cb8db2d585c6a94dfc22ce742c181745f7842cc11f91186f601a96436"
+    },
+    "fresh": {
+      "worker": {
+        "pid": 5168,
+        "startTime": "134334475588736272"
+      },
+      "host": {
+        "pid": 52320,
+        "startTime": "134334475707487093"
+      },
+      "helper": {
+        "pid": 57516,
+        "startTime": "134334475706328742"
+      },
+      "workerInstanceIdHash": "20fba3d8b6ca05dcda775b63546b748ed04cc0dc8667cf91b2cc7afd92bc0c08"
+    }
+  },
+  "proof": "Prior passing attempt: all known old Worker/Host/Helper processes gone, native mutex absent and lifecycle not busy; fresh discovery and attach use exact native identity. Final current-source cumulative runtime not revalidated.",
+  "ambiguity": {
+    "result": "NOT_EXECUTED",
+    "currentSourceUnit": "PASS: actual Supervisor.recover with unverified native discovery launches zero replacement Workers",
+    "inheritedStep1Runtime": "NOT_EXECUTED: held/hung/abandoned fixture fails to launch because SHACO_FORGE_POWERSHELL was unset",
+    "pidReuse": "conservative fail closed"
+  },
+  "projectionContinuity": "REPLACEMENT_CONTINUITY_UNPROVEN",
+  "cleanup": {
+    "noOrphan": true,
+    "authorityCount": 2,
+    "desktopProcessesExited": true
+  },
+  "providerRuns": 0
+}

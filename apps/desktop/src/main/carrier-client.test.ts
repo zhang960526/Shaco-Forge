@@ -201,3 +201,18 @@ test('CarrierClient failure clears queued streams and rejects another pending pu
     assert.equal(client.metrics.activeStreams, 0)
   })
 })
+
+test('S2G05/S2G15 sent mutation loses response: OUTCOME_UNKNOWN, all unary terminal, zero resend', { timeout: 10_000 }, async () => {
+  await withCarrierPeer(async ({ client, frames, deliver }) => {
+    const mutation = assert.rejects(client.request('workspace/rename', { type: 'client-request', rpcId: 'mutation', method: 'workspace/rename', payload: { args: { request: {} } } }), /OUTCOME_UNKNOWN/)
+    const read = assert.rejects(client.request('session/list', { type: 'client-request', rpcId: 'read', method: 'session/list', payload: { args: { _request: {} } } }), /CARRIER_LOST/)
+    await deliver([])
+    client.fail('CARRIER_LOST')
+    await Promise.all([mutation, read])
+    assert.equal(client.metrics.pendingUnary, 0)
+    assert.equal(client.metrics.activeStreams, 0)
+    assert.equal(frames.filter(frame => frame.type === 'unary-request' && frame.endpoint === 'workspace/rename').length, 1)
+    await assert.rejects(client.request('workspace/rename', { type: 'client-request', rpcId: 'new', method: 'workspace/rename', payload: { args: {} } }), /CARRIER_LOST/)
+    assert.equal(frames.filter(frame => frame.type === 'unary-request').length, 2)
+  })
+})

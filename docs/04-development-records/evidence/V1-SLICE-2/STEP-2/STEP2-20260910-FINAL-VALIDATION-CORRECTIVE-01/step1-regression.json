@@ -1,0 +1,3870 @@
+{
+  "runId": "STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01",
+  "result": "PASS",
+  "STEP1_REGRESSION": "PASS",
+  "runs": [
+    {
+      "commandId": "initial-smoke-slice2-step1",
+      "phase": "initial",
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-10T02:20:19.799Z",
+      "endedAt": "2026-09-10T02:22:51.102Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/initial-smoke-slice2-step1/output.log",
+        "bytes": 3835,
+        "sha256": "587ceb2af68158c9dcd37edd8ff0cd5fce89a46e327564e686318b7e5418ca93"
+      },
+      "STEP1_REGRESSION": "PASS",
+      "powershell": {
+        "source": "PATH_PWSH",
+        "executable": "C:\\Users\\18902\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "result": "PASS",
+        "fixtureApiVerified": true
+      },
+      "coverage": {
+        "held": true,
+        "hung": true,
+        "abandoned": true,
+        "authorityLifecycleNegatives": true,
+        "helperHostWorkerHardDeath": true,
+        "explicitStop": true,
+        "authorityOverlap": true,
+        "desktopGracefulCloseAndCrash": true
+      },
+      "consoleResults": [
+        {
+          "powershellResolution": {
+            "source": "PATH_PWSH",
+            "executable": "[sha256:81cb4c0f5b56c08f66e0272cf4287d51d0f81751608211f97ec101a17f65183a]",
+            "result": "PASS",
+            "fixtureApiVerified": true
+          }
+        },
+        {
+          "result": "PASS",
+          "carrierNegatives": [
+            {
+              "scenario": "BUSY_CREDENTIAL_ISSUED",
+              "result": "PASS"
+            },
+            {
+              "scenario": "BUSY_AUTHENTICATING",
+              "result": "PASS"
+            },
+            {
+              "scenario": "wrong-proof",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 523
+            },
+            {
+              "scenario": "unauthenticated-business",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 427
+            },
+            {
+              "scenario": "malformed",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 424
+            },
+            {
+              "scenario": "oversize",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 412
+            },
+            {
+              "scenario": "timeout",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 5413
+            },
+            {
+              "scenario": "partial-frame-timeout",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 5434
+            },
+            {
+              "scenario": "second-auth",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 438
+            },
+            {
+              "scenario": "consumed-secret",
+              "result": "PASS",
+              "dispatchDelta": 0
+            },
+            {
+              "scenario": "replayed-auth",
+              "result": "PASS",
+              "dispatchDelta": 0
+            },
+            {
+              "scenario": "expired-credential",
+              "result": "PASS",
+              "dispatchDelta": 0
+            },
+            {
+              "scenario": "carrier-peer-pid-start-mismatch",
+              "result": "PASS",
+              "actualPeerPid": 54376,
+              "reservationPid": 30288,
+              "dispatchDelta": 0
+            },
+            {
+              "scenario": "MAX_JSON_FRAME_real_gateway",
+              "result": "PASS",
+              "jsonBytes": 262144,
+              "dispatchDelta": 1
+            },
+            {
+              "scenario": "cross-user-access",
+              "result": "PASS",
+              "classification": "ACCESS_CONTROL_PROOF",
+              "method": "deterministic evaluation of actual kernel pipe ACL for a different non-admin SID with standard broad groups",
+              "realSecondUserLogin": false,
+              "acl": {
+                "verified": true,
+                "protected": true,
+                "currentUserOnly": true,
+                "inheritanceDisabled": true,
+                "otherUserGrantedAccess": false
+              }
+            },
+            {
+              "scenario": "protocol-version",
+              "result": "PASS",
+              "reason": "WORKER_VERSION_INCOMPATIBLE",
+              "credentialIssued": false
+            },
+            {
+              "scenario": "lifecycle-pid",
+              "result": "PASS",
+              "reason": "LIFECYCLE_PEER_MISMATCH",
+              "credentialIssued": false
+            },
+            {
+              "scenario": "lifecycle-start",
+              "result": "PASS",
+              "reason": "LIFECYCLE_PEER_MISMATCH",
+              "credentialIssued": false
+            },
+            {
+              "scenario": "BUSY_ATTACHED_AND_OLD_CLIENT_FENCE",
+              "result": "PASS",
+              "oldMetrics": {
+                "mainAuthenticatedCarrier": true,
+                "serverAuthenticatedToMain": true,
+                "businessFramesSent": 6,
+                "unaryRequests": 4,
+                "streamOpens": 1,
+                "streamPulls": 2,
+                "streamCancels": 0,
+                "eventsReadyObserved": 1,
+                "maxRendererInflightPullPerStream": 1,
+                "unsolicitedRendererStreamPushes": 0,
+                "activeStreams": 0,
+                "pendingUnary": 0,
+                "finalActiveStreams": 0,
+                "finalPendingUnary": 0,
+                "maxObservedJsonFrameBytes": 374,
+                "oversizeFrames": 0,
+                "maxActiveStreams": 1,
+                "maxQueueDepth": 0,
+                "creditViolations": 0,
+                "duplicateStreamTerminals": 0,
+                "itemsAfterTerminal": 0
+              },
+              "rejectedPendingCallbacks": 5,
+              "queuedOldFrameDispatchDelta": 0
+            },
+            {
+              "scenario": "SEQUENTIAL_REAL_EVENTS_RESET",
+              "result": "PASS"
+            }
+          ]
+        },
+        {
+          "result": "PASS",
+          "authorityFailures": [
+            {
+              "scenario": "helper",
+              "result": "PASS",
+              "worker": 56024,
+              "host": 54680,
+              "helper": 57652
+            },
+            {
+              "scenario": "host",
+              "result": "PASS",
+              "worker": 57464,
+              "host": 57840,
+              "helper": 50796
+            },
+            {
+              "scenario": "worker",
+              "result": "PASS",
+              "worker": 52104,
+              "host": 52488,
+              "helper": 60264
+            },
+            {
+              "scenario": "explicit-stop",
+              "result": "PASS",
+              "worker": 60576,
+              "host": 62832,
+              "helper": 17100
+            }
+          ]
+        },
+        {
+          "result": "PASS",
+          "ambiguousAuthority": [
+            {
+              "scenario": "held",
+              "result": "PASS",
+              "fixturePid": 46268,
+              "workerLaunchAttempts": 0,
+              "secondAuthorityCreated": false
+            },
+            {
+              "scenario": "hung",
+              "result": "PASS",
+              "fixturePid": 28236,
+              "workerLaunchAttempts": 0,
+              "secondAuthorityCreated": false
+            },
+            {
+              "scenario": "abandoned",
+              "result": "PASS",
+              "holderPid": 57616,
+              "retainedHandlePid": 57972,
+              "rejectedWorkerPid": 61444,
+              "workerExit": 1,
+              "authorityReady": false,
+              "hostStarted": false,
+              "productDiscoveryLaunchAttempts": 0,
+              "helperDetectedAbandonment": true
+            }
+          ]
+        },
+        {
+          "result": "PASS",
+          "authorityOverlap": {
+            "worker": 27784,
+            "rejectedCandidate": 48100
+          }
+        },
+        {
+          "result": "PASS",
+          "mains": [
+            62304,
+            59140,
+            57216
+          ],
+          "survival": [
+            {
+              "mode": "graceful",
+              "result": "PASS"
+            },
+            {
+              "mode": "crash",
+              "result": "PASS"
+            }
+          ]
+        }
+      ],
+      "authority": {
+        "results": [
+          {
+            "scenario": "helper",
+            "result": "PASS",
+            "before": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:ec18cb3f70ce7a686e52400fb8d9371cca67dd7e3eccdab2657ccb19bbe11f3b]",
+              "dshHome": "[sha256:8d093e379451d0500f3d511974ec0927a480597d731a0fcd74a4684a7a48f2a6]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 30288
+              },
+              "worker": {
+                "pid": 56024,
+                "startTime": "134334804724092926"
+              },
+              "host": {
+                "pid": 54680,
+                "startTime": "134334804797194232"
+              },
+              "helper": {
+                "pid": 57652,
+                "startTime": "134334804796019044"
+              },
+              "healthy": true,
+              "state": "CREDENTIAL_ISSUED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 56024,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 57652,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "failure": "WORKER_AUTHORITY_FAILURE",
+            "after": {
+              "workerAlive": false,
+              "hostAlive": false,
+              "helperAlive": false
+            }
+          },
+          {
+            "scenario": "host",
+            "result": "PASS",
+            "before": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:62e83d22b137c6f3eac09ab8f9b653a7c00634009bce827cb3b6ca754803511b]",
+              "dshHome": "[sha256:a9aedc5fc0281b2aa6e983967910c72815681646f1396396efb5340478adf880]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 30288
+              },
+              "worker": {
+                "pid": 57464,
+                "startTime": "134334804830132853"
+              },
+              "host": {
+                "pid": 57840,
+                "startTime": "134334804907249827"
+              },
+              "helper": {
+                "pid": 50796,
+                "startTime": "134334804906039220"
+              },
+              "healthy": true,
+              "state": "CREDENTIAL_ISSUED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 57464,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 50796,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "failure": "WORKER_AUTHORITY_FAILURE",
+            "after": {
+              "workerAlive": false,
+              "hostAlive": false,
+              "helperAlive": false
+            }
+          },
+          {
+            "scenario": "worker",
+            "result": "PASS",
+            "before": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:a0505c81e1ed6a4b1d904df971f2b88be5a56809cf243c94fe4ebfb5e0e63328]",
+              "dshHome": "[sha256:4ed72b3996c7afa3fb8f779c4f99640115f4dfa779ac1c100420b770deb50ab0]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 30288
+              },
+              "worker": {
+                "pid": 52104,
+                "startTime": "134334804942827189"
+              },
+              "host": {
+                "pid": 52488,
+                "startTime": "134334805021859750"
+              },
+              "helper": {
+                "pid": 60264,
+                "startTime": "134334805020744419"
+              },
+              "healthy": true,
+              "state": "CREDENTIAL_ISSUED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 52104,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 60264,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "failure": "WORKER_AUTHORITY_FAILURE",
+            "after": {
+              "workerAlive": false,
+              "hostAlive": false,
+              "helperAlive": false
+            },
+            "jobProof": "Worker hard death closed its final Job handle; Host and Helper both terminated"
+          },
+          {
+            "scenario": "explicit-stop",
+            "result": "PASS",
+            "before": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:8b1e0a326a03eb79c2c942de314696655d1c6ae09c3dd42a1c61255a189ff675]",
+              "dshHome": "[sha256:61c2240394fe2cafcd146aea6b2b3afc9422e2b63dfda5f6e67432d599b0396f]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 30288
+              },
+              "worker": {
+                "pid": 60576,
+                "startTime": "134334805058488386"
+              },
+              "host": {
+                "pid": 62832,
+                "startTime": "134334805137210491"
+              },
+              "helper": {
+                "pid": 17100,
+                "startTime": "134334805136103101"
+              },
+              "healthy": true,
+              "state": "CREDENTIAL_ISSUED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 60576,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 17100,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "after": {
+              "workerAlive": false,
+              "hostAlive": false,
+              "helperAlive": false
+            }
+          }
+        ],
+        "failureAttempts": [
+          [
+            {
+              "scenario": "helper",
+              "result": "PASS",
+              "before": {
+                "type": "authority-status",
+                "protocolVersion": "1",
+                "workerInstanceId": "[sha256:ec18cb3f70ce7a686e52400fb8d9371cca67dd7e3eccdab2657ccb19bbe11f3b]",
+                "dshHome": "[sha256:8d093e379451d0500f3d511974ec0927a480597d731a0fcd74a4684a7a48f2a6]",
+                "workerRuntime": {
+                  "nodeVersion": "v22.19.0",
+                  "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "argv": [
+                    "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                  ],
+                  "parentPid": 30288
+                },
+                "worker": {
+                  "pid": 56024,
+                  "startTime": "134334804724092926"
+                },
+                "host": {
+                  "pid": 54680,
+                  "startTime": "134334804797194232"
+                },
+                "helper": {
+                  "pid": 57652,
+                  "startTime": "134334804796019044"
+                },
+                "healthy": true,
+                "state": "CREDENTIAL_ISSUED",
+                "hostPreflight": {
+                  "type": "host-carrier-preflight",
+                  "profilePluginLoaded": true,
+                  "fetchHandlerReady": true,
+                  "wireStreamReady": true,
+                  "eventsRouteReady": true,
+                  "eventsRouteProbe": {
+                    "endpoint": "$events",
+                    "opened": true,
+                    "readyObserved": true,
+                    "readyShapeValid": true,
+                    "cancelled": true,
+                    "iteratorClosed": true,
+                    "activeStreamsAfterCleanup": 0,
+                    "eventSubscriptionRetained": false,
+                    "clientRuntimeMetricCounted": false,
+                    "businessOperationsPerformed": 0
+                  },
+                  "stockWebStarted": false
+                },
+                "job": {
+                  "ownerPid": 56024,
+                  "hostContained": true,
+                  "helperContained": true,
+                  "helperSetupHandleClosed": true,
+                  "killOnClose": true
+                },
+                "mutex": {
+                  "ownerPid": 57652,
+                  "soleSteadyStateHolder": "HELPER"
+                },
+                "dispatchCount": 0,
+                "rejectedOldFrames": 0,
+                "detaches": 0
+              },
+              "failure": "WORKER_AUTHORITY_FAILURE",
+              "after": {
+                "workerAlive": false,
+                "hostAlive": false,
+                "helperAlive": false
+              }
+            },
+            {
+              "scenario": "host",
+              "result": "PASS",
+              "before": {
+                "type": "authority-status",
+                "protocolVersion": "1",
+                "workerInstanceId": "[sha256:62e83d22b137c6f3eac09ab8f9b653a7c00634009bce827cb3b6ca754803511b]",
+                "dshHome": "[sha256:a9aedc5fc0281b2aa6e983967910c72815681646f1396396efb5340478adf880]",
+                "workerRuntime": {
+                  "nodeVersion": "v22.19.0",
+                  "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "argv": [
+                    "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                  ],
+                  "parentPid": 30288
+                },
+                "worker": {
+                  "pid": 57464,
+                  "startTime": "134334804830132853"
+                },
+                "host": {
+                  "pid": 57840,
+                  "startTime": "134334804907249827"
+                },
+                "helper": {
+                  "pid": 50796,
+                  "startTime": "134334804906039220"
+                },
+                "healthy": true,
+                "state": "CREDENTIAL_ISSUED",
+                "hostPreflight": {
+                  "type": "host-carrier-preflight",
+                  "profilePluginLoaded": true,
+                  "fetchHandlerReady": true,
+                  "wireStreamReady": true,
+                  "eventsRouteReady": true,
+                  "eventsRouteProbe": {
+                    "endpoint": "$events",
+                    "opened": true,
+                    "readyObserved": true,
+                    "readyShapeValid": true,
+                    "cancelled": true,
+                    "iteratorClosed": true,
+                    "activeStreamsAfterCleanup": 0,
+                    "eventSubscriptionRetained": false,
+                    "clientRuntimeMetricCounted": false,
+                    "businessOperationsPerformed": 0
+                  },
+                  "stockWebStarted": false
+                },
+                "job": {
+                  "ownerPid": 57464,
+                  "hostContained": true,
+                  "helperContained": true,
+                  "helperSetupHandleClosed": true,
+                  "killOnClose": true
+                },
+                "mutex": {
+                  "ownerPid": 50796,
+                  "soleSteadyStateHolder": "HELPER"
+                },
+                "dispatchCount": 0,
+                "rejectedOldFrames": 0,
+                "detaches": 0
+              },
+              "failure": "WORKER_AUTHORITY_FAILURE",
+              "after": {
+                "workerAlive": false,
+                "hostAlive": false,
+                "helperAlive": false
+              }
+            },
+            {
+              "scenario": "worker",
+              "result": "PASS",
+              "before": {
+                "type": "authority-status",
+                "protocolVersion": "1",
+                "workerInstanceId": "[sha256:a0505c81e1ed6a4b1d904df971f2b88be5a56809cf243c94fe4ebfb5e0e63328]",
+                "dshHome": "[sha256:4ed72b3996c7afa3fb8f779c4f99640115f4dfa779ac1c100420b770deb50ab0]",
+                "workerRuntime": {
+                  "nodeVersion": "v22.19.0",
+                  "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "argv": [
+                    "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                  ],
+                  "parentPid": 30288
+                },
+                "worker": {
+                  "pid": 52104,
+                  "startTime": "134334804942827189"
+                },
+                "host": {
+                  "pid": 52488,
+                  "startTime": "134334805021859750"
+                },
+                "helper": {
+                  "pid": 60264,
+                  "startTime": "134334805020744419"
+                },
+                "healthy": true,
+                "state": "CREDENTIAL_ISSUED",
+                "hostPreflight": {
+                  "type": "host-carrier-preflight",
+                  "profilePluginLoaded": true,
+                  "fetchHandlerReady": true,
+                  "wireStreamReady": true,
+                  "eventsRouteReady": true,
+                  "eventsRouteProbe": {
+                    "endpoint": "$events",
+                    "opened": true,
+                    "readyObserved": true,
+                    "readyShapeValid": true,
+                    "cancelled": true,
+                    "iteratorClosed": true,
+                    "activeStreamsAfterCleanup": 0,
+                    "eventSubscriptionRetained": false,
+                    "clientRuntimeMetricCounted": false,
+                    "businessOperationsPerformed": 0
+                  },
+                  "stockWebStarted": false
+                },
+                "job": {
+                  "ownerPid": 52104,
+                  "hostContained": true,
+                  "helperContained": true,
+                  "helperSetupHandleClosed": true,
+                  "killOnClose": true
+                },
+                "mutex": {
+                  "ownerPid": 60264,
+                  "soleSteadyStateHolder": "HELPER"
+                },
+                "dispatchCount": 0,
+                "rejectedOldFrames": 0,
+                "detaches": 0
+              },
+              "failure": "WORKER_AUTHORITY_FAILURE",
+              "after": {
+                "workerAlive": false,
+                "hostAlive": false,
+                "helperAlive": false
+              },
+              "jobProof": "Worker hard death closed its final Job handle; Host and Helper both terminated"
+            },
+            {
+              "scenario": "explicit-stop",
+              "result": "PASS",
+              "before": {
+                "type": "authority-status",
+                "protocolVersion": "1",
+                "workerInstanceId": "[sha256:8b1e0a326a03eb79c2c942de314696655d1c6ae09c3dd42a1c61255a189ff675]",
+                "dshHome": "[sha256:61c2240394fe2cafcd146aea6b2b3afc9422e2b63dfda5f6e67432d599b0396f]",
+                "workerRuntime": {
+                  "nodeVersion": "v22.19.0",
+                  "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "argv": [
+                    "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                  ],
+                  "parentPid": 30288
+                },
+                "worker": {
+                  "pid": 60576,
+                  "startTime": "134334805058488386"
+                },
+                "host": {
+                  "pid": 62832,
+                  "startTime": "134334805137210491"
+                },
+                "helper": {
+                  "pid": 17100,
+                  "startTime": "134334805136103101"
+                },
+                "healthy": true,
+                "state": "CREDENTIAL_ISSUED",
+                "hostPreflight": {
+                  "type": "host-carrier-preflight",
+                  "profilePluginLoaded": true,
+                  "fetchHandlerReady": true,
+                  "wireStreamReady": true,
+                  "eventsRouteReady": true,
+                  "eventsRouteProbe": {
+                    "endpoint": "$events",
+                    "opened": true,
+                    "readyObserved": true,
+                    "readyShapeValid": true,
+                    "cancelled": true,
+                    "iteratorClosed": true,
+                    "activeStreamsAfterCleanup": 0,
+                    "eventSubscriptionRetained": false,
+                    "clientRuntimeMetricCounted": false,
+                    "businessOperationsPerformed": 0
+                  },
+                  "stockWebStarted": false
+                },
+                "job": {
+                  "ownerPid": 60576,
+                  "hostContained": true,
+                  "helperContained": true,
+                  "helperSetupHandleClosed": true,
+                  "killOnClose": true
+                },
+                "mutex": {
+                  "ownerPid": 17100,
+                  "soleSteadyStateHolder": "HELPER"
+                },
+                "dispatchCount": 0,
+                "rejectedOldFrames": 0,
+                "detaches": 0
+              },
+              "after": {
+                "workerAlive": false,
+                "hostAlive": false,
+                "helperAlive": false
+              }
+            }
+          ]
+        ],
+        "ambiguousAuthorityAttempts": [
+          [
+            {
+              "scenario": "held",
+              "result": "PASS",
+              "fixturePid": 46268,
+              "workerLaunchAttempts": 0,
+              "secondAuthorityCreated": false
+            },
+            {
+              "scenario": "hung",
+              "result": "PASS",
+              "fixturePid": 28236,
+              "workerLaunchAttempts": 0,
+              "secondAuthorityCreated": false
+            },
+            {
+              "scenario": "abandoned",
+              "result": "PASS",
+              "holderPid": 57616,
+              "retainedHandlePid": 57972,
+              "rejectedWorkerPid": 61444,
+              "workerExit": 1,
+              "authorityReady": false,
+              "hostStarted": false,
+              "productDiscoveryLaunchAttempts": 0,
+              "helperDetectedAbandonment": true
+            }
+          ]
+        ],
+        "overlapAttempts": [
+          {
+            "result": "PASS",
+            "before": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:ebfeb0cc2717405edd6c0a0e70c9b45f052e01e8d648edb25a2f2075faf0b061]",
+              "dshHome": "[sha256:f03828bebd0259600b70956c9cefb25d9acce12ce559d42c236fc3c711e34292]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 30288
+              },
+              "worker": {
+                "pid": 27784,
+                "startTime": "134334805314893371"
+              },
+              "host": {
+                "pid": 36656,
+                "startTime": "134334805393261367"
+              },
+              "helper": {
+                "pid": 44328,
+                "startTime": "134334805392110815"
+              },
+              "healthy": true,
+              "state": "CREDENTIAL_ISSUED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 27784,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 44328,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "after": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:ebfeb0cc2717405edd6c0a0e70c9b45f052e01e8d648edb25a2f2075faf0b061]",
+              "dshHome": "[sha256:f03828bebd0259600b70956c9cefb25d9acce12ce559d42c236fc3c711e34292]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 30288
+              },
+              "worker": {
+                "pid": 27784,
+                "startTime": "134334805314893371"
+              },
+              "host": {
+                "pid": 36656,
+                "startTime": "134334805393261367"
+              },
+              "helper": {
+                "pid": 44328,
+                "startTime": "134334805392110815"
+              },
+              "healthy": true,
+              "state": "DETACHED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 27784,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 44328,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "candidatePid": 48100,
+            "candidateExit": 1,
+            "candidateHostStarted": false,
+            "candidateAuthorityReady": false,
+            "maximumReadyAuthorities": 1,
+            "oldChildAdoption": false
+          }
+        ]
+      },
+      "attachment": {
+        "attempts": [
+          {
+            "result": "PASS",
+            "snapshots": [
+              {
+                "mainPid": 62304,
+                "phase": "carrier-ready",
+                "authority": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:99dd04f6a62ee798f198d9b9be84dd0e518ce6e8133b12ee07cfe8756c69b841]",
+                  "dshHome": "[sha256:3a1017784eb85205b1f49192056e0fbba8e569d74304fdd98ac7e3ffe92f1256]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 62304
+                  },
+                  "worker": {
+                    "pid": 46400,
+                    "startTime": "134334805522794603"
+                  },
+                  "host": {
+                    "pid": 61632,
+                    "startTime": "134334805607239481"
+                  },
+                  "helper": {
+                    "pid": 30212,
+                    "startTime": "134334805605916346"
+                  },
+                  "healthy": true,
+                  "state": "CREDENTIAL_ISSUED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 46400,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 30212,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 0,
+                  "rejectedOldFrames": 0,
+                  "detaches": 0
+                },
+                "clientInstanceId": "[sha256:426f0acc784a4168b8c149d418470bcb27b40a2094008baf01251f387fa2842a]",
+                "metrics": {
+                  "mainAuthenticatedCarrier": true,
+                  "serverAuthenticatedToMain": true,
+                  "businessFramesSent": 0,
+                  "unaryRequests": 0,
+                  "streamOpens": 0,
+                  "streamPulls": 0,
+                  "streamCancels": 0,
+                  "eventsReadyObserved": 0,
+                  "maxRendererInflightPullPerStream": 0,
+                  "unsolicitedRendererStreamPushes": 0,
+                  "activeStreams": 0,
+                  "pendingUnary": 0,
+                  "finalActiveStreams": 0,
+                  "finalPendingUnary": 0,
+                  "maxObservedJsonFrameBytes": 374,
+                  "oversizeFrames": 0,
+                  "maxActiveStreams": 0,
+                  "maxQueueDepth": 0,
+                  "creditViolations": 0,
+                  "duplicateStreamTerminals": 0,
+                  "itemsAfterTerminal": 0
+                },
+                "rendererSecurity": {
+                  "nodeIntegration": false,
+                  "contextIsolation": true,
+                  "sandbox": true,
+                  "webSecurity": true,
+                  "allowRunningInsecureContent": false
+                },
+                "credentialEpochHash": "e9461140f724864661e0b701a6427d4caaa058ca1f372e49440cf79eaa838f6a",
+                "renderer": {
+                  "requireAvailable": false,
+                  "processAvailable": false,
+                  "lifecycleAvailable": false,
+                  "nodeIntegration": false
+                }
+              },
+              {
+                "mainPid": 59140,
+                "phase": "carrier-ready",
+                "authority": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:99dd04f6a62ee798f198d9b9be84dd0e518ce6e8133b12ee07cfe8756c69b841]",
+                  "dshHome": "[sha256:3a1017784eb85205b1f49192056e0fbba8e569d74304fdd98ac7e3ffe92f1256]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 62304
+                  },
+                  "worker": {
+                    "pid": 46400,
+                    "startTime": "134334805522794603"
+                  },
+                  "host": {
+                    "pid": 61632,
+                    "startTime": "134334805607239481"
+                  },
+                  "helper": {
+                    "pid": 30212,
+                    "startTime": "134334805605916346"
+                  },
+                  "healthy": true,
+                  "state": "CREDENTIAL_ISSUED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 46400,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 30212,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 11,
+                  "rejectedOldFrames": 0,
+                  "detaches": 1
+                },
+                "clientInstanceId": "[sha256:7a95acee7f34e299564a428e0d77738b67c38c764cafd5fbcaa154d808a223ba]",
+                "metrics": {
+                  "mainAuthenticatedCarrier": true,
+                  "serverAuthenticatedToMain": true,
+                  "businessFramesSent": 0,
+                  "unaryRequests": 0,
+                  "streamOpens": 0,
+                  "streamPulls": 0,
+                  "streamCancels": 0,
+                  "eventsReadyObserved": 0,
+                  "maxRendererInflightPullPerStream": 0,
+                  "unsolicitedRendererStreamPushes": 0,
+                  "activeStreams": 0,
+                  "pendingUnary": 0,
+                  "finalActiveStreams": 0,
+                  "finalPendingUnary": 0,
+                  "maxObservedJsonFrameBytes": 374,
+                  "oversizeFrames": 0,
+                  "maxActiveStreams": 0,
+                  "maxQueueDepth": 0,
+                  "creditViolations": 0,
+                  "duplicateStreamTerminals": 0,
+                  "itemsAfterTerminal": 0
+                },
+                "rendererSecurity": {
+                  "nodeIntegration": false,
+                  "contextIsolation": true,
+                  "sandbox": true,
+                  "webSecurity": true,
+                  "allowRunningInsecureContent": false
+                },
+                "credentialEpochHash": "2f316db76cbea67795fe3c385ae9a9e2142d34ab53c2c42fd71968f6d2631264",
+                "renderer": {
+                  "requireAvailable": false,
+                  "processAvailable": false,
+                  "lifecycleAvailable": false,
+                  "nodeIntegration": false
+                }
+              },
+              {
+                "mainPid": 57216,
+                "phase": "carrier-ready",
+                "authority": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:99dd04f6a62ee798f198d9b9be84dd0e518ce6e8133b12ee07cfe8756c69b841]",
+                  "dshHome": "[sha256:3a1017784eb85205b1f49192056e0fbba8e569d74304fdd98ac7e3ffe92f1256]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 62304
+                  },
+                  "worker": {
+                    "pid": 46400,
+                    "startTime": "134334805522794603"
+                  },
+                  "host": {
+                    "pid": 61632,
+                    "startTime": "134334805607239481"
+                  },
+                  "helper": {
+                    "pid": 30212,
+                    "startTime": "134334805605916346"
+                  },
+                  "healthy": true,
+                  "state": "CREDENTIAL_ISSUED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 46400,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 30212,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 11,
+                  "rejectedOldFrames": 0,
+                  "detaches": 2
+                },
+                "clientInstanceId": "[sha256:f532b8c1b08fbdb02ca1591bc92abab2fe7a0c655ff458a197847d142103855d]",
+                "metrics": {
+                  "mainAuthenticatedCarrier": true,
+                  "serverAuthenticatedToMain": true,
+                  "businessFramesSent": 0,
+                  "unaryRequests": 0,
+                  "streamOpens": 0,
+                  "streamPulls": 0,
+                  "streamCancels": 0,
+                  "eventsReadyObserved": 0,
+                  "maxRendererInflightPullPerStream": 0,
+                  "unsolicitedRendererStreamPushes": 0,
+                  "activeStreams": 0,
+                  "pendingUnary": 0,
+                  "finalActiveStreams": 0,
+                  "finalPendingUnary": 0,
+                  "maxObservedJsonFrameBytes": 374,
+                  "oversizeFrames": 0,
+                  "maxActiveStreams": 0,
+                  "maxQueueDepth": 0,
+                  "creditViolations": 0,
+                  "duplicateStreamTerminals": 0,
+                  "itemsAfterTerminal": 0
+                },
+                "rendererSecurity": {
+                  "nodeIntegration": false,
+                  "contextIsolation": true,
+                  "sandbox": true,
+                  "webSecurity": true,
+                  "allowRunningInsecureContent": false
+                },
+                "credentialEpochHash": "7cd4b375151a9010b05584965bd1fface39a0b5d237883946f50c6521a0a825c",
+                "renderer": {
+                  "requireAvailable": false,
+                  "processAvailable": false,
+                  "lifecycleAvailable": false,
+                  "nodeIntegration": false
+                }
+              }
+            ],
+            "survival": [
+              {
+                "mode": "graceful",
+                "mainPid": 62304,
+                "mainExit": 0,
+                "before": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:99dd04f6a62ee798f198d9b9be84dd0e518ce6e8133b12ee07cfe8756c69b841]",
+                  "dshHome": "[sha256:3a1017784eb85205b1f49192056e0fbba8e569d74304fdd98ac7e3ffe92f1256]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 62304
+                  },
+                  "worker": {
+                    "pid": 46400,
+                    "startTime": "134334805522794603"
+                  },
+                  "host": {
+                    "pid": 61632,
+                    "startTime": "134334805607239481"
+                  },
+                  "helper": {
+                    "pid": 30212,
+                    "startTime": "134334805605916346"
+                  },
+                  "healthy": true,
+                  "state": "CREDENTIAL_ISSUED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 46400,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 30212,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 0,
+                  "rejectedOldFrames": 0,
+                  "detaches": 0
+                },
+                "after": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:99dd04f6a62ee798f198d9b9be84dd0e518ce6e8133b12ee07cfe8756c69b841]",
+                  "dshHome": "[sha256:3a1017784eb85205b1f49192056e0fbba8e569d74304fdd98ac7e3ffe92f1256]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 62304
+                  },
+                  "worker": {
+                    "pid": 46400,
+                    "startTime": "134334805522794603"
+                  },
+                  "host": {
+                    "pid": 61632,
+                    "startTime": "134334805607239481"
+                  },
+                  "helper": {
+                    "pid": 30212,
+                    "startTime": "134334805605916346"
+                  },
+                  "healthy": true,
+                  "state": "DETACHED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 46400,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 30212,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 11,
+                  "rejectedOldFrames": 0,
+                  "detaches": 1
+                },
+                "result": "PASS"
+              },
+              {
+                "mode": "crash",
+                "mainPid": 59140,
+                "mainSignal": "SIGKILL",
+                "before": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:99dd04f6a62ee798f198d9b9be84dd0e518ce6e8133b12ee07cfe8756c69b841]",
+                  "dshHome": "[sha256:3a1017784eb85205b1f49192056e0fbba8e569d74304fdd98ac7e3ffe92f1256]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 62304
+                  },
+                  "worker": {
+                    "pid": 46400,
+                    "startTime": "134334805522794603"
+                  },
+                  "host": {
+                    "pid": 61632,
+                    "startTime": "134334805607239481"
+                  },
+                  "helper": {
+                    "pid": 30212,
+                    "startTime": "134334805605916346"
+                  },
+                  "healthy": true,
+                  "state": "CREDENTIAL_ISSUED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 46400,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 30212,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 11,
+                  "rejectedOldFrames": 0,
+                  "detaches": 1
+                },
+                "after": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:99dd04f6a62ee798f198d9b9be84dd0e518ce6e8133b12ee07cfe8756c69b841]",
+                  "dshHome": "[sha256:3a1017784eb85205b1f49192056e0fbba8e569d74304fdd98ac7e3ffe92f1256]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 62304
+                  },
+                  "worker": {
+                    "pid": 46400,
+                    "startTime": "134334805522794603"
+                  },
+                  "host": {
+                    "pid": 61632,
+                    "startTime": "134334805607239481"
+                  },
+                  "helper": {
+                    "pid": 30212,
+                    "startTime": "134334805605916346"
+                  },
+                  "healthy": true,
+                  "state": "DETACHED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 46400,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 30212,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 11,
+                  "rejectedOldFrames": 0,
+                  "detaches": 2
+                },
+                "result": "PASS"
+              }
+            ],
+            "diagnostics": {
+              "redacted": true,
+              "sha256": "10f2c1d28fde029a84fade526bc5c14a45acecc1e790ed39133cd7a5d1e8ce0c"
+            }
+          }
+        ]
+      },
+      "security": {
+        "attempts": [
+          {
+            "results": [
+              {
+                "scenario": "BUSY_CREDENTIAL_ISSUED",
+                "result": "PASS"
+              },
+              {
+                "scenario": "BUSY_AUTHENTICATING",
+                "result": "PASS"
+              },
+              {
+                "scenario": "wrong-proof",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 523
+              },
+              {
+                "scenario": "unauthenticated-business",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 427
+              },
+              {
+                "scenario": "malformed",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 424
+              },
+              {
+                "scenario": "oversize",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 412
+              },
+              {
+                "scenario": "timeout",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 5413
+              },
+              {
+                "scenario": "partial-frame-timeout",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 5434
+              },
+              {
+                "scenario": "second-auth",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 438
+              },
+              {
+                "scenario": "consumed-secret",
+                "result": "PASS",
+                "dispatchDelta": 0
+              },
+              {
+                "scenario": "replayed-auth",
+                "result": "PASS",
+                "dispatchDelta": 0
+              },
+              {
+                "scenario": "expired-credential",
+                "result": "PASS",
+                "dispatchDelta": 0
+              },
+              {
+                "scenario": "carrier-peer-pid-start-mismatch",
+                "result": "PASS",
+                "actualPeerPid": 54376,
+                "reservationPid": 30288,
+                "dispatchDelta": 0
+              },
+              {
+                "scenario": "MAX_JSON_FRAME_real_gateway",
+                "result": "PASS",
+                "jsonBytes": 262144,
+                "dispatchDelta": 1
+              },
+              {
+                "scenario": "cross-user-access",
+                "result": "PASS",
+                "classification": "ACCESS_CONTROL_PROOF",
+                "method": "deterministic evaluation of actual kernel pipe ACL for a different non-admin SID with standard broad groups",
+                "realSecondUserLogin": false,
+                "acl": {
+                  "verified": true,
+                  "protected": true,
+                  "currentUserOnly": true,
+                  "inheritanceDisabled": true,
+                  "otherUserGrantedAccess": false
+                }
+              },
+              {
+                "scenario": "protocol-version",
+                "result": "PASS",
+                "reason": "WORKER_VERSION_INCOMPATIBLE",
+                "credentialIssued": false
+              },
+              {
+                "scenario": "lifecycle-pid",
+                "result": "PASS",
+                "reason": "LIFECYCLE_PEER_MISMATCH",
+                "credentialIssued": false
+              },
+              {
+                "scenario": "lifecycle-start",
+                "result": "PASS",
+                "reason": "LIFECYCLE_PEER_MISMATCH",
+                "credentialIssued": false
+              },
+              {
+                "scenario": "BUSY_ATTACHED_AND_OLD_CLIENT_FENCE",
+                "result": "PASS",
+                "oldMetrics": {
+                  "mainAuthenticatedCarrier": true,
+                  "serverAuthenticatedToMain": true,
+                  "businessFramesSent": 6,
+                  "unaryRequests": 4,
+                  "streamOpens": 1,
+                  "streamPulls": 2,
+                  "streamCancels": 0,
+                  "eventsReadyObserved": 1,
+                  "maxRendererInflightPullPerStream": 1,
+                  "unsolicitedRendererStreamPushes": 0,
+                  "activeStreams": 0,
+                  "pendingUnary": 0,
+                  "finalActiveStreams": 0,
+                  "finalPendingUnary": 0,
+                  "maxObservedJsonFrameBytes": 374,
+                  "oversizeFrames": 0,
+                  "maxActiveStreams": 1,
+                  "maxQueueDepth": 0,
+                  "creditViolations": 0,
+                  "duplicateStreamTerminals": 0,
+                  "itemsAfterTerminal": 0
+                },
+                "rejectedPendingCallbacks": 5,
+                "queuedOldFrameDispatchDelta": 0
+              },
+              {
+                "scenario": "SEQUENTIAL_REAL_EVENTS_RESET",
+                "result": "PASS"
+              }
+            ],
+            "stopped": {
+              "workerPid": 46660,
+              "exited": true,
+              "delivery": "STOP_DELIVERY_FAILED",
+              "reason": "WORKER_NOT_FOUND"
+            },
+            "workerEvents": [
+              {
+                "protocolVersion": 1,
+                "phase": "worker-starting",
+                "timestamp": "2026-09-10T02:20:29.796Z",
+                "workerPid": 46660,
+                "parentPid": 30288,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "dshHome": "[sha256:3bc3fbdff259a3aa13f7efd76f788d0f6a5d30de281825a0038e3a85b59fd3d6]",
+                "harnessCliPath": "[sha256:933da1e7cfc925eb15c480528fffec46a0e0ee9007d001b254c9ddea4ffd8efd]",
+                "harnessSourceRoot": "[sha256:5987a626b3e3b1d3e4586eb4fc18750148bacc1960c88ea45efedf4dcda43ee3]",
+                "profileName": "shaco-forge-v1-slice-1b"
+              },
+              {
+                "protocolVersion": 1,
+                "phase": "host-starting",
+                "timestamp": "2026-09-10T02:20:30.100Z",
+                "workerPid": 46660,
+                "parentPid": 30288,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "hostPid": 57600,
+                "hostLaunchArgv": [
+                  "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "[sha256:933da1e7cfc925eb15c480528fffec46a0e0ee9007d001b254c9ddea4ffd8efd]",
+                  "--profile",
+                  "shaco-forge-v1-slice-1b"
+                ],
+                "profileName": "shaco-forge-v1-slice-1b",
+                "profilePath": "[sha256:70532d1ff151ace92ee671556e9820ec0c0a485dc933ba6bf71c0dcd7a3212ee]",
+                "dshHome": "[sha256:3bc3fbdff259a3aa13f7efd76f788d0f6a5d30de281825a0038e3a85b59fd3d6]",
+                "harnessCliPath": "[sha256:933da1e7cfc925eb15c480528fffec46a0e0ee9007d001b254c9ddea4ffd8efd]",
+                "harnessSourceRoot": "[sha256:5987a626b3e3b1d3e4586eb4fc18750148bacc1960c88ea45efedf4dcda43ee3]"
+              },
+              {
+                "protocolVersion": 1,
+                "phase": "host-ready",
+                "timestamp": "2026-09-10T02:20:32.066Z",
+                "workerPid": 46660,
+                "parentPid": 30288,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "hostPid": 57600,
+                "hostLaunchArgv": [
+                  "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "[sha256:933da1e7cfc925eb15c480528fffec46a0e0ee9007d001b254c9ddea4ffd8efd]",
+                  "--profile",
+                  "shaco-forge-v1-slice-1b"
+                ],
+                "profileName": "shaco-forge-v1-slice-1b",
+                "profilePath": "[sha256:70532d1ff151ace92ee671556e9820ec0c0a485dc933ba6bf71c0dcd7a3212ee]",
+                "dshHome": "[sha256:3bc3fbdff259a3aa13f7efd76f788d0f6a5d30de281825a0038e3a85b59fd3d6]",
+                "harnessCliPath": "[sha256:933da1e7cfc925eb15c480528fffec46a0e0ee9007d001b254c9ddea4ffd8efd]",
+                "harnessSourceRoot": "[sha256:5987a626b3e3b1d3e4586eb4fc18750148bacc1960c88ea45efedf4dcda43ee3]",
+                "readiness": {
+                  "gatewayPresetCount": 4,
+                  "standardPresetPresent": true
+                }
+              },
+              {
+                "protocolVersion": 1,
+                "phase": "carrier-ready",
+                "timestamp": "2026-09-10T02:20:32.086Z",
+                "workerPid": 46660,
+                "parentPid": 30288,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "hostPid": 57600
+              },
+              {
+                "protocolVersion": 1,
+                "phase": "host-exited",
+                "timestamp": "2026-09-10T02:21:12.120Z",
+                "workerPid": 46660,
+                "parentPid": 30288,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "hostPid": 57600,
+                "exitCode": null,
+                "signal": "SIGTERM"
+              },
+              {
+                "protocolVersion": 1,
+                "phase": "worker-stopped",
+                "timestamp": "2026-09-10T02:21:12.120Z",
+                "workerPid": 46660,
+                "parentPid": 30288,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "hostPid": 57600,
+                "exitCode": 0
+              }
+            ],
+            "workerErrors": ""
+          }
+        ]
+      },
+      "rawIdentities": [
+        {
+          "path": "node_modules/.final-validation/initial-smoke-slice2-step1/step1/attachment-sequence.json",
+          "bytes": 25585,
+          "sha256": "54f9f089b0813d8a6a63787e1cf8ace0c3dbec1d2ec93dff1a933a5d0a69b69a"
+        },
+        {
+          "path": "node_modules/.final-validation/initial-smoke-slice2-step1/step1/authority-identity.json",
+          "bytes": 23788,
+          "sha256": "29f7efcf6a701c57b1d6ae2a12b9a37361b0738d1cecbd499625ce9c5a201bc8"
+        },
+        {
+          "path": "node_modules/.final-validation/initial-smoke-slice2-step1/step1/powershell-resolution.json",
+          "bytes": 205,
+          "sha256": "37ec78f0bf1958c20f2b70f99a2f83f08454c6f83108fa400613fed7cf605639"
+        },
+        {
+          "path": "node_modules/.final-validation/initial-smoke-slice2-step1/step1/security-negative-results.json",
+          "bytes": 10888,
+          "sha256": "a8a5f11d8d6871048acedebc4a46966935abcdcbba53f2f2c4df16cfcab91060"
+        }
+      ]
+    },
+    {
+      "commandId": "full-smoke-slice2-step1",
+      "phase": "full",
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-10T02:27:45.031Z",
+      "endedAt": "2026-09-10T02:30:26.266Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "builtSha256": "0d44df42f14fdeed910f9c51e81861a3e20fe24cdef6e1b5b59402894612934a",
+      "sourceUnchanged": true,
+      "powershellOverrideSet": false,
+      "providerRuns": 0,
+      "output": {
+        "path": "node_modules/.final-validation/full-smoke-slice2-step1/output.log",
+        "bytes": 3833,
+        "sha256": "32e6b9b0af5d3602862faa01a9089eed3a57942e4b2865f9df7958496526d1f0"
+      },
+      "STEP1_REGRESSION": "PASS",
+      "powershell": {
+        "source": "PATH_PWSH",
+        "executable": "C:\\Users\\18902\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "result": "PASS",
+        "fixtureApiVerified": true
+      },
+      "coverage": {
+        "held": true,
+        "hung": true,
+        "abandoned": true,
+        "authorityLifecycleNegatives": true,
+        "helperHostWorkerHardDeath": true,
+        "explicitStop": true,
+        "authorityOverlap": true,
+        "desktopGracefulCloseAndCrash": true
+      },
+      "consoleResults": [
+        {
+          "powershellResolution": {
+            "source": "PATH_PWSH",
+            "executable": "[sha256:81cb4c0f5b56c08f66e0272cf4287d51d0f81751608211f97ec101a17f65183a]",
+            "result": "PASS",
+            "fixtureApiVerified": true
+          }
+        },
+        {
+          "result": "PASS",
+          "carrierNegatives": [
+            {
+              "scenario": "BUSY_CREDENTIAL_ISSUED",
+              "result": "PASS"
+            },
+            {
+              "scenario": "BUSY_AUTHENTICATING",
+              "result": "PASS"
+            },
+            {
+              "scenario": "wrong-proof",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 523
+            },
+            {
+              "scenario": "unauthenticated-business",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 441
+            },
+            {
+              "scenario": "malformed",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 452
+            },
+            {
+              "scenario": "oversize",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 425
+            },
+            {
+              "scenario": "timeout",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 5391
+            },
+            {
+              "scenario": "partial-frame-timeout",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 5437
+            },
+            {
+              "scenario": "second-auth",
+              "result": "PASS",
+              "dispatchDelta": 0,
+              "elapsedMs": 432
+            },
+            {
+              "scenario": "consumed-secret",
+              "result": "PASS",
+              "dispatchDelta": 0
+            },
+            {
+              "scenario": "replayed-auth",
+              "result": "PASS",
+              "dispatchDelta": 0
+            },
+            {
+              "scenario": "expired-credential",
+              "result": "PASS",
+              "dispatchDelta": 0
+            },
+            {
+              "scenario": "carrier-peer-pid-start-mismatch",
+              "result": "PASS",
+              "actualPeerPid": 2076,
+              "reservationPid": 2180,
+              "dispatchDelta": 0
+            },
+            {
+              "scenario": "MAX_JSON_FRAME_real_gateway",
+              "result": "PASS",
+              "jsonBytes": 262144,
+              "dispatchDelta": 1
+            },
+            {
+              "scenario": "cross-user-access",
+              "result": "PASS",
+              "classification": "ACCESS_CONTROL_PROOF",
+              "method": "deterministic evaluation of actual kernel pipe ACL for a different non-admin SID with standard broad groups",
+              "realSecondUserLogin": false,
+              "acl": {
+                "verified": true,
+                "protected": true,
+                "currentUserOnly": true,
+                "inheritanceDisabled": true,
+                "otherUserGrantedAccess": false
+              }
+            },
+            {
+              "scenario": "protocol-version",
+              "result": "PASS",
+              "reason": "WORKER_VERSION_INCOMPATIBLE",
+              "credentialIssued": false
+            },
+            {
+              "scenario": "lifecycle-pid",
+              "result": "PASS",
+              "reason": "LIFECYCLE_PEER_MISMATCH",
+              "credentialIssued": false
+            },
+            {
+              "scenario": "lifecycle-start",
+              "result": "PASS",
+              "reason": "LIFECYCLE_PEER_MISMATCH",
+              "credentialIssued": false
+            },
+            {
+              "scenario": "BUSY_ATTACHED_AND_OLD_CLIENT_FENCE",
+              "result": "PASS",
+              "oldMetrics": {
+                "mainAuthenticatedCarrier": true,
+                "serverAuthenticatedToMain": true,
+                "businessFramesSent": 6,
+                "unaryRequests": 4,
+                "streamOpens": 1,
+                "streamPulls": 2,
+                "streamCancels": 0,
+                "eventsReadyObserved": 1,
+                "maxRendererInflightPullPerStream": 1,
+                "unsolicitedRendererStreamPushes": 0,
+                "activeStreams": 0,
+                "pendingUnary": 0,
+                "finalActiveStreams": 0,
+                "finalPendingUnary": 0,
+                "maxObservedJsonFrameBytes": 374,
+                "oversizeFrames": 0,
+                "maxActiveStreams": 1,
+                "maxQueueDepth": 0,
+                "creditViolations": 0,
+                "duplicateStreamTerminals": 0,
+                "itemsAfterTerminal": 0
+              },
+              "rejectedPendingCallbacks": 5,
+              "queuedOldFrameDispatchDelta": 0
+            },
+            {
+              "scenario": "SEQUENTIAL_REAL_EVENTS_RESET",
+              "result": "PASS"
+            }
+          ]
+        },
+        {
+          "result": "PASS",
+          "authorityFailures": [
+            {
+              "scenario": "helper",
+              "result": "PASS",
+              "worker": 40268,
+              "host": 58948,
+              "helper": 58428
+            },
+            {
+              "scenario": "host",
+              "result": "PASS",
+              "worker": 55632,
+              "host": 55884,
+              "helper": 24092
+            },
+            {
+              "scenario": "worker",
+              "result": "PASS",
+              "worker": 43036,
+              "host": 40268,
+              "helper": 60296
+            },
+            {
+              "scenario": "explicit-stop",
+              "result": "PASS",
+              "worker": 62288,
+              "host": 32604,
+              "helper": 61068
+            }
+          ]
+        },
+        {
+          "result": "PASS",
+          "ambiguousAuthority": [
+            {
+              "scenario": "held",
+              "result": "PASS",
+              "fixturePid": 61036,
+              "workerLaunchAttempts": 0,
+              "secondAuthorityCreated": false
+            },
+            {
+              "scenario": "hung",
+              "result": "PASS",
+              "fixturePid": 43012,
+              "workerLaunchAttempts": 0,
+              "secondAuthorityCreated": false
+            },
+            {
+              "scenario": "abandoned",
+              "result": "PASS",
+              "holderPid": 62460,
+              "retainedHandlePid": 40244,
+              "rejectedWorkerPid": 37628,
+              "workerExit": 1,
+              "authorityReady": false,
+              "hostStarted": false,
+              "productDiscoveryLaunchAttempts": 0,
+              "helperDetectedAbandonment": true
+            }
+          ]
+        },
+        {
+          "result": "PASS",
+          "authorityOverlap": {
+            "worker": 36904,
+            "rejectedCandidate": 59448
+          }
+        },
+        {
+          "result": "PASS",
+          "mains": [
+            18112,
+            43068,
+            12996
+          ],
+          "survival": [
+            {
+              "mode": "graceful",
+              "result": "PASS"
+            },
+            {
+              "mode": "crash",
+              "result": "PASS"
+            }
+          ]
+        }
+      ],
+      "authority": {
+        "results": [
+          {
+            "scenario": "helper",
+            "result": "PASS",
+            "before": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:e151044abdd29963b9aace1dcd561d22b642da046f574eab6a145899717bcba3]",
+              "dshHome": "[sha256:82ac2e987202e800ec1773192e5cd0e59753206ccf8b9e96720dcd9765cedcc0]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 2180
+              },
+              "worker": {
+                "pid": 40268,
+                "startTime": "134334809169520991"
+              },
+              "host": {
+                "pid": 58948,
+                "startTime": "134334809254880232"
+              },
+              "helper": {
+                "pid": 58428,
+                "startTime": "134334809253754868"
+              },
+              "healthy": true,
+              "state": "CREDENTIAL_ISSUED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 40268,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 58428,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "failure": "WORKER_AUTHORITY_FAILURE",
+            "after": {
+              "workerAlive": false,
+              "hostAlive": false,
+              "helperAlive": false
+            }
+          },
+          {
+            "scenario": "host",
+            "result": "PASS",
+            "before": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:00430bf9cc513b666cf7603acefef9de3f4fe263a39cf7d7fb02ba5c01b4bf8c]",
+              "dshHome": "[sha256:204e7271b7c8492ed65e976097336bd37c73bae9aa71354e535564deedb23116]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 2180
+              },
+              "worker": {
+                "pid": 55632,
+                "startTime": "134334809291128062"
+              },
+              "host": {
+                "pid": 55884,
+                "startTime": "134334809385550816"
+              },
+              "helper": {
+                "pid": 24092,
+                "startTime": "134334809384369463"
+              },
+              "healthy": true,
+              "state": "CREDENTIAL_ISSUED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 55632,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 24092,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "failure": "WORKER_AUTHORITY_FAILURE",
+            "after": {
+              "workerAlive": false,
+              "hostAlive": false,
+              "helperAlive": false
+            }
+          },
+          {
+            "scenario": "worker",
+            "result": "PASS",
+            "before": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:6899b0e813dc86337e9ca7fb2494774028d0ed08f41e1e58c06560c7ab64c9c0]",
+              "dshHome": "[sha256:4f375da0f093cd80ba48eeb231ff967d8235276acd2fe44ee4edf4e71d7e0b7a]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 2180
+              },
+              "worker": {
+                "pid": 43036,
+                "startTime": "134334809420712403"
+              },
+              "host": {
+                "pid": 40268,
+                "startTime": "134334809514985345"
+              },
+              "helper": {
+                "pid": 60296,
+                "startTime": "134334809513820332"
+              },
+              "healthy": true,
+              "state": "CREDENTIAL_ISSUED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 43036,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 60296,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "failure": "WORKER_AUTHORITY_FAILURE",
+            "after": {
+              "workerAlive": false,
+              "hostAlive": false,
+              "helperAlive": false
+            },
+            "jobProof": "Worker hard death closed its final Job handle; Host and Helper both terminated"
+          },
+          {
+            "scenario": "explicit-stop",
+            "result": "PASS",
+            "before": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:b6416afebb36fde058c608c01529885ced0e4d810e6ecbb60b7e61a4a3458b9b]",
+              "dshHome": "[sha256:3f84059656ea36b027aaa7d7e238b4a869c7cd83224f89066f0b7dc77d513a26]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 2180
+              },
+              "worker": {
+                "pid": 62288,
+                "startTime": "134334809549647501"
+              },
+              "host": {
+                "pid": 32604,
+                "startTime": "134334809637350863"
+              },
+              "helper": {
+                "pid": 61068,
+                "startTime": "134334809636195939"
+              },
+              "healthy": true,
+              "state": "CREDENTIAL_ISSUED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 62288,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 61068,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "after": {
+              "workerAlive": false,
+              "hostAlive": false,
+              "helperAlive": false
+            }
+          }
+        ],
+        "failureAttempts": [
+          [
+            {
+              "scenario": "helper",
+              "result": "PASS",
+              "before": {
+                "type": "authority-status",
+                "protocolVersion": "1",
+                "workerInstanceId": "[sha256:e151044abdd29963b9aace1dcd561d22b642da046f574eab6a145899717bcba3]",
+                "dshHome": "[sha256:82ac2e987202e800ec1773192e5cd0e59753206ccf8b9e96720dcd9765cedcc0]",
+                "workerRuntime": {
+                  "nodeVersion": "v22.19.0",
+                  "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "argv": [
+                    "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                  ],
+                  "parentPid": 2180
+                },
+                "worker": {
+                  "pid": 40268,
+                  "startTime": "134334809169520991"
+                },
+                "host": {
+                  "pid": 58948,
+                  "startTime": "134334809254880232"
+                },
+                "helper": {
+                  "pid": 58428,
+                  "startTime": "134334809253754868"
+                },
+                "healthy": true,
+                "state": "CREDENTIAL_ISSUED",
+                "hostPreflight": {
+                  "type": "host-carrier-preflight",
+                  "profilePluginLoaded": true,
+                  "fetchHandlerReady": true,
+                  "wireStreamReady": true,
+                  "eventsRouteReady": true,
+                  "eventsRouteProbe": {
+                    "endpoint": "$events",
+                    "opened": true,
+                    "readyObserved": true,
+                    "readyShapeValid": true,
+                    "cancelled": true,
+                    "iteratorClosed": true,
+                    "activeStreamsAfterCleanup": 0,
+                    "eventSubscriptionRetained": false,
+                    "clientRuntimeMetricCounted": false,
+                    "businessOperationsPerformed": 0
+                  },
+                  "stockWebStarted": false
+                },
+                "job": {
+                  "ownerPid": 40268,
+                  "hostContained": true,
+                  "helperContained": true,
+                  "helperSetupHandleClosed": true,
+                  "killOnClose": true
+                },
+                "mutex": {
+                  "ownerPid": 58428,
+                  "soleSteadyStateHolder": "HELPER"
+                },
+                "dispatchCount": 0,
+                "rejectedOldFrames": 0,
+                "detaches": 0
+              },
+              "failure": "WORKER_AUTHORITY_FAILURE",
+              "after": {
+                "workerAlive": false,
+                "hostAlive": false,
+                "helperAlive": false
+              }
+            },
+            {
+              "scenario": "host",
+              "result": "PASS",
+              "before": {
+                "type": "authority-status",
+                "protocolVersion": "1",
+                "workerInstanceId": "[sha256:00430bf9cc513b666cf7603acefef9de3f4fe263a39cf7d7fb02ba5c01b4bf8c]",
+                "dshHome": "[sha256:204e7271b7c8492ed65e976097336bd37c73bae9aa71354e535564deedb23116]",
+                "workerRuntime": {
+                  "nodeVersion": "v22.19.0",
+                  "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "argv": [
+                    "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                  ],
+                  "parentPid": 2180
+                },
+                "worker": {
+                  "pid": 55632,
+                  "startTime": "134334809291128062"
+                },
+                "host": {
+                  "pid": 55884,
+                  "startTime": "134334809385550816"
+                },
+                "helper": {
+                  "pid": 24092,
+                  "startTime": "134334809384369463"
+                },
+                "healthy": true,
+                "state": "CREDENTIAL_ISSUED",
+                "hostPreflight": {
+                  "type": "host-carrier-preflight",
+                  "profilePluginLoaded": true,
+                  "fetchHandlerReady": true,
+                  "wireStreamReady": true,
+                  "eventsRouteReady": true,
+                  "eventsRouteProbe": {
+                    "endpoint": "$events",
+                    "opened": true,
+                    "readyObserved": true,
+                    "readyShapeValid": true,
+                    "cancelled": true,
+                    "iteratorClosed": true,
+                    "activeStreamsAfterCleanup": 0,
+                    "eventSubscriptionRetained": false,
+                    "clientRuntimeMetricCounted": false,
+                    "businessOperationsPerformed": 0
+                  },
+                  "stockWebStarted": false
+                },
+                "job": {
+                  "ownerPid": 55632,
+                  "hostContained": true,
+                  "helperContained": true,
+                  "helperSetupHandleClosed": true,
+                  "killOnClose": true
+                },
+                "mutex": {
+                  "ownerPid": 24092,
+                  "soleSteadyStateHolder": "HELPER"
+                },
+                "dispatchCount": 0,
+                "rejectedOldFrames": 0,
+                "detaches": 0
+              },
+              "failure": "WORKER_AUTHORITY_FAILURE",
+              "after": {
+                "workerAlive": false,
+                "hostAlive": false,
+                "helperAlive": false
+              }
+            },
+            {
+              "scenario": "worker",
+              "result": "PASS",
+              "before": {
+                "type": "authority-status",
+                "protocolVersion": "1",
+                "workerInstanceId": "[sha256:6899b0e813dc86337e9ca7fb2494774028d0ed08f41e1e58c06560c7ab64c9c0]",
+                "dshHome": "[sha256:4f375da0f093cd80ba48eeb231ff967d8235276acd2fe44ee4edf4e71d7e0b7a]",
+                "workerRuntime": {
+                  "nodeVersion": "v22.19.0",
+                  "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "argv": [
+                    "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                  ],
+                  "parentPid": 2180
+                },
+                "worker": {
+                  "pid": 43036,
+                  "startTime": "134334809420712403"
+                },
+                "host": {
+                  "pid": 40268,
+                  "startTime": "134334809514985345"
+                },
+                "helper": {
+                  "pid": 60296,
+                  "startTime": "134334809513820332"
+                },
+                "healthy": true,
+                "state": "CREDENTIAL_ISSUED",
+                "hostPreflight": {
+                  "type": "host-carrier-preflight",
+                  "profilePluginLoaded": true,
+                  "fetchHandlerReady": true,
+                  "wireStreamReady": true,
+                  "eventsRouteReady": true,
+                  "eventsRouteProbe": {
+                    "endpoint": "$events",
+                    "opened": true,
+                    "readyObserved": true,
+                    "readyShapeValid": true,
+                    "cancelled": true,
+                    "iteratorClosed": true,
+                    "activeStreamsAfterCleanup": 0,
+                    "eventSubscriptionRetained": false,
+                    "clientRuntimeMetricCounted": false,
+                    "businessOperationsPerformed": 0
+                  },
+                  "stockWebStarted": false
+                },
+                "job": {
+                  "ownerPid": 43036,
+                  "hostContained": true,
+                  "helperContained": true,
+                  "helperSetupHandleClosed": true,
+                  "killOnClose": true
+                },
+                "mutex": {
+                  "ownerPid": 60296,
+                  "soleSteadyStateHolder": "HELPER"
+                },
+                "dispatchCount": 0,
+                "rejectedOldFrames": 0,
+                "detaches": 0
+              },
+              "failure": "WORKER_AUTHORITY_FAILURE",
+              "after": {
+                "workerAlive": false,
+                "hostAlive": false,
+                "helperAlive": false
+              },
+              "jobProof": "Worker hard death closed its final Job handle; Host and Helper both terminated"
+            },
+            {
+              "scenario": "explicit-stop",
+              "result": "PASS",
+              "before": {
+                "type": "authority-status",
+                "protocolVersion": "1",
+                "workerInstanceId": "[sha256:b6416afebb36fde058c608c01529885ced0e4d810e6ecbb60b7e61a4a3458b9b]",
+                "dshHome": "[sha256:3f84059656ea36b027aaa7d7e238b4a869c7cd83224f89066f0b7dc77d513a26]",
+                "workerRuntime": {
+                  "nodeVersion": "v22.19.0",
+                  "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "argv": [
+                    "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                  ],
+                  "parentPid": 2180
+                },
+                "worker": {
+                  "pid": 62288,
+                  "startTime": "134334809549647501"
+                },
+                "host": {
+                  "pid": 32604,
+                  "startTime": "134334809637350863"
+                },
+                "helper": {
+                  "pid": 61068,
+                  "startTime": "134334809636195939"
+                },
+                "healthy": true,
+                "state": "CREDENTIAL_ISSUED",
+                "hostPreflight": {
+                  "type": "host-carrier-preflight",
+                  "profilePluginLoaded": true,
+                  "fetchHandlerReady": true,
+                  "wireStreamReady": true,
+                  "eventsRouteReady": true,
+                  "eventsRouteProbe": {
+                    "endpoint": "$events",
+                    "opened": true,
+                    "readyObserved": true,
+                    "readyShapeValid": true,
+                    "cancelled": true,
+                    "iteratorClosed": true,
+                    "activeStreamsAfterCleanup": 0,
+                    "eventSubscriptionRetained": false,
+                    "clientRuntimeMetricCounted": false,
+                    "businessOperationsPerformed": 0
+                  },
+                  "stockWebStarted": false
+                },
+                "job": {
+                  "ownerPid": 62288,
+                  "hostContained": true,
+                  "helperContained": true,
+                  "helperSetupHandleClosed": true,
+                  "killOnClose": true
+                },
+                "mutex": {
+                  "ownerPid": 61068,
+                  "soleSteadyStateHolder": "HELPER"
+                },
+                "dispatchCount": 0,
+                "rejectedOldFrames": 0,
+                "detaches": 0
+              },
+              "after": {
+                "workerAlive": false,
+                "hostAlive": false,
+                "helperAlive": false
+              }
+            }
+          ]
+        ],
+        "ambiguousAuthorityAttempts": [
+          [
+            {
+              "scenario": "held",
+              "result": "PASS",
+              "fixturePid": 61036,
+              "workerLaunchAttempts": 0,
+              "secondAuthorityCreated": false
+            },
+            {
+              "scenario": "hung",
+              "result": "PASS",
+              "fixturePid": 43012,
+              "workerLaunchAttempts": 0,
+              "secondAuthorityCreated": false
+            },
+            {
+              "scenario": "abandoned",
+              "result": "PASS",
+              "holderPid": 62460,
+              "retainedHandlePid": 40244,
+              "rejectedWorkerPid": 37628,
+              "workerExit": 1,
+              "authorityReady": false,
+              "hostStarted": false,
+              "productDiscoveryLaunchAttempts": 0,
+              "helperDetectedAbandonment": true
+            }
+          ]
+        ],
+        "overlapAttempts": [
+          {
+            "result": "PASS",
+            "before": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:9c2c5052604232c8526c5c59c53363a2d234b13e5e1da8a110675789e5e0886c]",
+              "dshHome": "[sha256:47b8d691fc43525e59721d3795f56a1f5b1329a65a8d6d1c1118d476c26a41d2]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 2180
+              },
+              "worker": {
+                "pid": 36904,
+                "startTime": "134334809821734822"
+              },
+              "host": {
+                "pid": 51528,
+                "startTime": "134334809913717936"
+              },
+              "helper": {
+                "pid": 42928,
+                "startTime": "134334809912526921"
+              },
+              "healthy": true,
+              "state": "CREDENTIAL_ISSUED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 36904,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 42928,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "after": {
+              "type": "authority-status",
+              "protocolVersion": "1",
+              "workerInstanceId": "[sha256:9c2c5052604232c8526c5c59c53363a2d234b13e5e1da8a110675789e5e0886c]",
+              "dshHome": "[sha256:47b8d691fc43525e59721d3795f56a1f5b1329a65a8d6d1c1118d476c26a41d2]",
+              "workerRuntime": {
+                "nodeVersion": "v22.19.0",
+                "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "argv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "parentPid": 2180
+              },
+              "worker": {
+                "pid": 36904,
+                "startTime": "134334809821734822"
+              },
+              "host": {
+                "pid": 51528,
+                "startTime": "134334809913717936"
+              },
+              "helper": {
+                "pid": 42928,
+                "startTime": "134334809912526921"
+              },
+              "healthy": true,
+              "state": "DETACHED",
+              "hostPreflight": {
+                "type": "host-carrier-preflight",
+                "profilePluginLoaded": true,
+                "fetchHandlerReady": true,
+                "wireStreamReady": true,
+                "eventsRouteReady": true,
+                "eventsRouteProbe": {
+                  "endpoint": "$events",
+                  "opened": true,
+                  "readyObserved": true,
+                  "readyShapeValid": true,
+                  "cancelled": true,
+                  "iteratorClosed": true,
+                  "activeStreamsAfterCleanup": 0,
+                  "eventSubscriptionRetained": false,
+                  "clientRuntimeMetricCounted": false,
+                  "businessOperationsPerformed": 0
+                },
+                "stockWebStarted": false
+              },
+              "job": {
+                "ownerPid": 36904,
+                "hostContained": true,
+                "helperContained": true,
+                "helperSetupHandleClosed": true,
+                "killOnClose": true
+              },
+              "mutex": {
+                "ownerPid": 42928,
+                "soleSteadyStateHolder": "HELPER"
+              },
+              "dispatchCount": 0,
+              "rejectedOldFrames": 0,
+              "detaches": 0
+            },
+            "candidatePid": 59448,
+            "candidateExit": 1,
+            "candidateHostStarted": false,
+            "candidateAuthorityReady": false,
+            "maximumReadyAuthorities": 1,
+            "oldChildAdoption": false
+          }
+        ]
+      },
+      "attachment": {
+        "attempts": [
+          {
+            "result": "PASS",
+            "snapshots": [
+              {
+                "mainPid": 18112,
+                "phase": "carrier-ready",
+                "authority": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:b2c11bd84c2b25681fea45eb7304257b341362e850c4b7969a4a074b05b8b966]",
+                  "dshHome": "[sha256:15dbbf42211b73724f9ecea2ed02821c296f2968585768237ecadd554c2e167e]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 18112
+                  },
+                  "worker": {
+                    "pid": 62304,
+                    "startTime": "134334810061973363"
+                  },
+                  "host": {
+                    "pid": 48192,
+                    "startTime": "134334810162578473"
+                  },
+                  "helper": {
+                    "pid": 61368,
+                    "startTime": "134334810161464714"
+                  },
+                  "healthy": true,
+                  "state": "CREDENTIAL_ISSUED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 62304,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 61368,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 0,
+                  "rejectedOldFrames": 0,
+                  "detaches": 0
+                },
+                "clientInstanceId": "[sha256:66b309d3b0ca6ba1b3111d564dc68264b2249cd1b02d9d6b51f61569b99f0dde]",
+                "metrics": {
+                  "mainAuthenticatedCarrier": true,
+                  "serverAuthenticatedToMain": true,
+                  "businessFramesSent": 0,
+                  "unaryRequests": 0,
+                  "streamOpens": 0,
+                  "streamPulls": 0,
+                  "streamCancels": 0,
+                  "eventsReadyObserved": 0,
+                  "maxRendererInflightPullPerStream": 0,
+                  "unsolicitedRendererStreamPushes": 0,
+                  "activeStreams": 0,
+                  "pendingUnary": 0,
+                  "finalActiveStreams": 0,
+                  "finalPendingUnary": 0,
+                  "maxObservedJsonFrameBytes": 374,
+                  "oversizeFrames": 0,
+                  "maxActiveStreams": 0,
+                  "maxQueueDepth": 0,
+                  "creditViolations": 0,
+                  "duplicateStreamTerminals": 0,
+                  "itemsAfterTerminal": 0
+                },
+                "rendererSecurity": {
+                  "nodeIntegration": false,
+                  "contextIsolation": true,
+                  "sandbox": true,
+                  "webSecurity": true,
+                  "allowRunningInsecureContent": false
+                },
+                "credentialEpochHash": "5d7d5b189bd5c567617142f53c380b569ce364fd7212df0bb55dd869515f21dc",
+                "renderer": {
+                  "requireAvailable": false,
+                  "processAvailable": false,
+                  "lifecycleAvailable": false,
+                  "nodeIntegration": false
+                }
+              },
+              {
+                "mainPid": 43068,
+                "phase": "carrier-ready",
+                "authority": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:b2c11bd84c2b25681fea45eb7304257b341362e850c4b7969a4a074b05b8b966]",
+                  "dshHome": "[sha256:15dbbf42211b73724f9ecea2ed02821c296f2968585768237ecadd554c2e167e]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 18112
+                  },
+                  "worker": {
+                    "pid": 62304,
+                    "startTime": "134334810061973363"
+                  },
+                  "host": {
+                    "pid": 48192,
+                    "startTime": "134334810162578473"
+                  },
+                  "helper": {
+                    "pid": 61368,
+                    "startTime": "134334810161464714"
+                  },
+                  "healthy": true,
+                  "state": "CREDENTIAL_ISSUED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 62304,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 61368,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 11,
+                  "rejectedOldFrames": 0,
+                  "detaches": 1
+                },
+                "clientInstanceId": "[sha256:bbb5615d2a1a3b7309dd0bea981526edb4619dfc4424f147d0c5ec5344b7351d]",
+                "metrics": {
+                  "mainAuthenticatedCarrier": true,
+                  "serverAuthenticatedToMain": true,
+                  "businessFramesSent": 0,
+                  "unaryRequests": 0,
+                  "streamOpens": 0,
+                  "streamPulls": 0,
+                  "streamCancels": 0,
+                  "eventsReadyObserved": 0,
+                  "maxRendererInflightPullPerStream": 0,
+                  "unsolicitedRendererStreamPushes": 0,
+                  "activeStreams": 0,
+                  "pendingUnary": 0,
+                  "finalActiveStreams": 0,
+                  "finalPendingUnary": 0,
+                  "maxObservedJsonFrameBytes": 374,
+                  "oversizeFrames": 0,
+                  "maxActiveStreams": 0,
+                  "maxQueueDepth": 0,
+                  "creditViolations": 0,
+                  "duplicateStreamTerminals": 0,
+                  "itemsAfterTerminal": 0
+                },
+                "rendererSecurity": {
+                  "nodeIntegration": false,
+                  "contextIsolation": true,
+                  "sandbox": true,
+                  "webSecurity": true,
+                  "allowRunningInsecureContent": false
+                },
+                "credentialEpochHash": "53056baba8689ae9ba93f669513e73f40fb24f8ba30231671718aab076cd7ee0",
+                "renderer": {
+                  "requireAvailable": false,
+                  "processAvailable": false,
+                  "lifecycleAvailable": false,
+                  "nodeIntegration": false
+                }
+              },
+              {
+                "mainPid": 12996,
+                "phase": "carrier-ready",
+                "authority": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:b2c11bd84c2b25681fea45eb7304257b341362e850c4b7969a4a074b05b8b966]",
+                  "dshHome": "[sha256:15dbbf42211b73724f9ecea2ed02821c296f2968585768237ecadd554c2e167e]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 18112
+                  },
+                  "worker": {
+                    "pid": 62304,
+                    "startTime": "134334810061973363"
+                  },
+                  "host": {
+                    "pid": 48192,
+                    "startTime": "134334810162578473"
+                  },
+                  "helper": {
+                    "pid": 61368,
+                    "startTime": "134334810161464714"
+                  },
+                  "healthy": true,
+                  "state": "CREDENTIAL_ISSUED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 62304,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 61368,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 11,
+                  "rejectedOldFrames": 0,
+                  "detaches": 2
+                },
+                "clientInstanceId": "[sha256:8afd9e7849530d3cde1560829773611c363a78932e18d886825306c81f18ab40]",
+                "metrics": {
+                  "mainAuthenticatedCarrier": true,
+                  "serverAuthenticatedToMain": true,
+                  "businessFramesSent": 0,
+                  "unaryRequests": 0,
+                  "streamOpens": 0,
+                  "streamPulls": 0,
+                  "streamCancels": 0,
+                  "eventsReadyObserved": 0,
+                  "maxRendererInflightPullPerStream": 0,
+                  "unsolicitedRendererStreamPushes": 0,
+                  "activeStreams": 0,
+                  "pendingUnary": 0,
+                  "finalActiveStreams": 0,
+                  "finalPendingUnary": 0,
+                  "maxObservedJsonFrameBytes": 374,
+                  "oversizeFrames": 0,
+                  "maxActiveStreams": 0,
+                  "maxQueueDepth": 0,
+                  "creditViolations": 0,
+                  "duplicateStreamTerminals": 0,
+                  "itemsAfterTerminal": 0
+                },
+                "rendererSecurity": {
+                  "nodeIntegration": false,
+                  "contextIsolation": true,
+                  "sandbox": true,
+                  "webSecurity": true,
+                  "allowRunningInsecureContent": false
+                },
+                "credentialEpochHash": "203c579e6b9c5a46740c9d6963c73773c73995cf51135bed46809e0030ee2f4d",
+                "renderer": {
+                  "requireAvailable": false,
+                  "processAvailable": false,
+                  "lifecycleAvailable": false,
+                  "nodeIntegration": false
+                }
+              }
+            ],
+            "survival": [
+              {
+                "mode": "graceful",
+                "mainPid": 18112,
+                "mainExit": 0,
+                "before": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:b2c11bd84c2b25681fea45eb7304257b341362e850c4b7969a4a074b05b8b966]",
+                  "dshHome": "[sha256:15dbbf42211b73724f9ecea2ed02821c296f2968585768237ecadd554c2e167e]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 18112
+                  },
+                  "worker": {
+                    "pid": 62304,
+                    "startTime": "134334810061973363"
+                  },
+                  "host": {
+                    "pid": 48192,
+                    "startTime": "134334810162578473"
+                  },
+                  "helper": {
+                    "pid": 61368,
+                    "startTime": "134334810161464714"
+                  },
+                  "healthy": true,
+                  "state": "CREDENTIAL_ISSUED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 62304,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 61368,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 0,
+                  "rejectedOldFrames": 0,
+                  "detaches": 0
+                },
+                "after": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:b2c11bd84c2b25681fea45eb7304257b341362e850c4b7969a4a074b05b8b966]",
+                  "dshHome": "[sha256:15dbbf42211b73724f9ecea2ed02821c296f2968585768237ecadd554c2e167e]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 18112
+                  },
+                  "worker": {
+                    "pid": 62304,
+                    "startTime": "134334810061973363"
+                  },
+                  "host": {
+                    "pid": 48192,
+                    "startTime": "134334810162578473"
+                  },
+                  "helper": {
+                    "pid": 61368,
+                    "startTime": "134334810161464714"
+                  },
+                  "healthy": true,
+                  "state": "DETACHED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 62304,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 61368,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 11,
+                  "rejectedOldFrames": 0,
+                  "detaches": 1
+                },
+                "result": "PASS"
+              },
+              {
+                "mode": "crash",
+                "mainPid": 43068,
+                "mainSignal": "SIGKILL",
+                "before": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:b2c11bd84c2b25681fea45eb7304257b341362e850c4b7969a4a074b05b8b966]",
+                  "dshHome": "[sha256:15dbbf42211b73724f9ecea2ed02821c296f2968585768237ecadd554c2e167e]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 18112
+                  },
+                  "worker": {
+                    "pid": 62304,
+                    "startTime": "134334810061973363"
+                  },
+                  "host": {
+                    "pid": 48192,
+                    "startTime": "134334810162578473"
+                  },
+                  "helper": {
+                    "pid": 61368,
+                    "startTime": "134334810161464714"
+                  },
+                  "healthy": true,
+                  "state": "CREDENTIAL_ISSUED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 62304,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 61368,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 11,
+                  "rejectedOldFrames": 0,
+                  "detaches": 1
+                },
+                "after": {
+                  "type": "authority-status",
+                  "protocolVersion": "1",
+                  "workerInstanceId": "[sha256:b2c11bd84c2b25681fea45eb7304257b341362e850c4b7969a4a074b05b8b966]",
+                  "dshHome": "[sha256:15dbbf42211b73724f9ecea2ed02821c296f2968585768237ecadd554c2e167e]",
+                  "workerRuntime": {
+                    "nodeVersion": "v22.19.0",
+                    "executable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                    "argv": [
+                      "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                    ],
+                    "parentPid": 18112
+                  },
+                  "worker": {
+                    "pid": 62304,
+                    "startTime": "134334810061973363"
+                  },
+                  "host": {
+                    "pid": 48192,
+                    "startTime": "134334810162578473"
+                  },
+                  "helper": {
+                    "pid": 61368,
+                    "startTime": "134334810161464714"
+                  },
+                  "healthy": true,
+                  "state": "DETACHED",
+                  "hostPreflight": {
+                    "type": "host-carrier-preflight",
+                    "profilePluginLoaded": true,
+                    "fetchHandlerReady": true,
+                    "wireStreamReady": true,
+                    "eventsRouteReady": true,
+                    "eventsRouteProbe": {
+                      "endpoint": "$events",
+                      "opened": true,
+                      "readyObserved": true,
+                      "readyShapeValid": true,
+                      "cancelled": true,
+                      "iteratorClosed": true,
+                      "activeStreamsAfterCleanup": 0,
+                      "eventSubscriptionRetained": false,
+                      "clientRuntimeMetricCounted": false,
+                      "businessOperationsPerformed": 0
+                    },
+                    "stockWebStarted": false
+                  },
+                  "job": {
+                    "ownerPid": 62304,
+                    "hostContained": true,
+                    "helperContained": true,
+                    "helperSetupHandleClosed": true,
+                    "killOnClose": true
+                  },
+                  "mutex": {
+                    "ownerPid": 61368,
+                    "soleSteadyStateHolder": "HELPER"
+                  },
+                  "dispatchCount": 11,
+                  "rejectedOldFrames": 0,
+                  "detaches": 2
+                },
+                "result": "PASS"
+              }
+            ],
+            "diagnostics": {
+              "redacted": true,
+              "sha256": "2df54bf2216f4905d7fab389413af2570ba048564728aa5d3bc413f78f0a19e9"
+            }
+          }
+        ]
+      },
+      "security": {
+        "attempts": [
+          {
+            "results": [
+              {
+                "scenario": "BUSY_CREDENTIAL_ISSUED",
+                "result": "PASS"
+              },
+              {
+                "scenario": "BUSY_AUTHENTICATING",
+                "result": "PASS"
+              },
+              {
+                "scenario": "wrong-proof",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 523
+              },
+              {
+                "scenario": "unauthenticated-business",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 441
+              },
+              {
+                "scenario": "malformed",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 452
+              },
+              {
+                "scenario": "oversize",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 425
+              },
+              {
+                "scenario": "timeout",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 5391
+              },
+              {
+                "scenario": "partial-frame-timeout",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 5437
+              },
+              {
+                "scenario": "second-auth",
+                "result": "PASS",
+                "dispatchDelta": 0,
+                "elapsedMs": 432
+              },
+              {
+                "scenario": "consumed-secret",
+                "result": "PASS",
+                "dispatchDelta": 0
+              },
+              {
+                "scenario": "replayed-auth",
+                "result": "PASS",
+                "dispatchDelta": 0
+              },
+              {
+                "scenario": "expired-credential",
+                "result": "PASS",
+                "dispatchDelta": 0
+              },
+              {
+                "scenario": "carrier-peer-pid-start-mismatch",
+                "result": "PASS",
+                "actualPeerPid": 2076,
+                "reservationPid": 2180,
+                "dispatchDelta": 0
+              },
+              {
+                "scenario": "MAX_JSON_FRAME_real_gateway",
+                "result": "PASS",
+                "jsonBytes": 262144,
+                "dispatchDelta": 1
+              },
+              {
+                "scenario": "cross-user-access",
+                "result": "PASS",
+                "classification": "ACCESS_CONTROL_PROOF",
+                "method": "deterministic evaluation of actual kernel pipe ACL for a different non-admin SID with standard broad groups",
+                "realSecondUserLogin": false,
+                "acl": {
+                  "verified": true,
+                  "protected": true,
+                  "currentUserOnly": true,
+                  "inheritanceDisabled": true,
+                  "otherUserGrantedAccess": false
+                }
+              },
+              {
+                "scenario": "protocol-version",
+                "result": "PASS",
+                "reason": "WORKER_VERSION_INCOMPATIBLE",
+                "credentialIssued": false
+              },
+              {
+                "scenario": "lifecycle-pid",
+                "result": "PASS",
+                "reason": "LIFECYCLE_PEER_MISMATCH",
+                "credentialIssued": false
+              },
+              {
+                "scenario": "lifecycle-start",
+                "result": "PASS",
+                "reason": "LIFECYCLE_PEER_MISMATCH",
+                "credentialIssued": false
+              },
+              {
+                "scenario": "BUSY_ATTACHED_AND_OLD_CLIENT_FENCE",
+                "result": "PASS",
+                "oldMetrics": {
+                  "mainAuthenticatedCarrier": true,
+                  "serverAuthenticatedToMain": true,
+                  "businessFramesSent": 6,
+                  "unaryRequests": 4,
+                  "streamOpens": 1,
+                  "streamPulls": 2,
+                  "streamCancels": 0,
+                  "eventsReadyObserved": 1,
+                  "maxRendererInflightPullPerStream": 1,
+                  "unsolicitedRendererStreamPushes": 0,
+                  "activeStreams": 0,
+                  "pendingUnary": 0,
+                  "finalActiveStreams": 0,
+                  "finalPendingUnary": 0,
+                  "maxObservedJsonFrameBytes": 374,
+                  "oversizeFrames": 0,
+                  "maxActiveStreams": 1,
+                  "maxQueueDepth": 0,
+                  "creditViolations": 0,
+                  "duplicateStreamTerminals": 0,
+                  "itemsAfterTerminal": 0
+                },
+                "rejectedPendingCallbacks": 5,
+                "queuedOldFrameDispatchDelta": 0
+              },
+              {
+                "scenario": "SEQUENTIAL_REAL_EVENTS_RESET",
+                "result": "PASS"
+              }
+            ],
+            "stopped": {
+              "workerPid": 60312,
+              "exited": true,
+              "delivery": "STOP_DELIVERY_FAILED",
+              "reason": "WORKER_NOT_FOUND"
+            },
+            "workerEvents": [
+              {
+                "protocolVersion": 1,
+                "phase": "worker-starting",
+                "timestamp": "2026-09-10T02:27:54.026Z",
+                "workerPid": 60312,
+                "parentPid": 2180,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "dshHome": "[sha256:e33d0a9af513e2be0ba2de457aa53f7af9d3c6a9c1e2f35f8b783ccb70164721]",
+                "harnessCliPath": "[sha256:996e44d01fb788b846dd3b2ddc6501ec598d7782f76c7a1cd6c1740f1cc3cae5]",
+                "harnessSourceRoot": "[sha256:5987a626b3e3b1d3e4586eb4fc18750148bacc1960c88ea45efedf4dcda43ee3]",
+                "profileName": "shaco-forge-v1-slice-1b"
+              },
+              {
+                "protocolVersion": 1,
+                "phase": "host-starting",
+                "timestamp": "2026-09-10T02:27:54.183Z",
+                "workerPid": 60312,
+                "parentPid": 2180,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "hostPid": 34852,
+                "hostLaunchArgv": [
+                  "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "[sha256:996e44d01fb788b846dd3b2ddc6501ec598d7782f76c7a1cd6c1740f1cc3cae5]",
+                  "--profile",
+                  "shaco-forge-v1-slice-1b"
+                ],
+                "profileName": "shaco-forge-v1-slice-1b",
+                "profilePath": "[sha256:700b316e66ac5411249910b8f3408b5ec7498e8809aff5272ce00ee23d2c60bd]",
+                "dshHome": "[sha256:e33d0a9af513e2be0ba2de457aa53f7af9d3c6a9c1e2f35f8b783ccb70164721]",
+                "harnessCliPath": "[sha256:996e44d01fb788b846dd3b2ddc6501ec598d7782f76c7a1cd6c1740f1cc3cae5]",
+                "harnessSourceRoot": "[sha256:5987a626b3e3b1d3e4586eb4fc18750148bacc1960c88ea45efedf4dcda43ee3]"
+              },
+              {
+                "protocolVersion": 1,
+                "phase": "host-ready",
+                "timestamp": "2026-09-10T02:27:55.905Z",
+                "workerPid": 60312,
+                "parentPid": 2180,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "hostPid": 34852,
+                "hostLaunchArgv": [
+                  "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                  "[sha256:996e44d01fb788b846dd3b2ddc6501ec598d7782f76c7a1cd6c1740f1cc3cae5]",
+                  "--profile",
+                  "shaco-forge-v1-slice-1b"
+                ],
+                "profileName": "shaco-forge-v1-slice-1b",
+                "profilePath": "[sha256:700b316e66ac5411249910b8f3408b5ec7498e8809aff5272ce00ee23d2c60bd]",
+                "dshHome": "[sha256:e33d0a9af513e2be0ba2de457aa53f7af9d3c6a9c1e2f35f8b783ccb70164721]",
+                "harnessCliPath": "[sha256:996e44d01fb788b846dd3b2ddc6501ec598d7782f76c7a1cd6c1740f1cc3cae5]",
+                "harnessSourceRoot": "[sha256:5987a626b3e3b1d3e4586eb4fc18750148bacc1960c88ea45efedf4dcda43ee3]",
+                "readiness": {
+                  "gatewayPresetCount": 4,
+                  "standardPresetPresent": true
+                }
+              },
+              {
+                "protocolVersion": 1,
+                "phase": "carrier-ready",
+                "timestamp": "2026-09-10T02:27:55.928Z",
+                "workerPid": 60312,
+                "parentPid": 2180,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "hostPid": 34852
+              },
+              {
+                "protocolVersion": 1,
+                "phase": "host-exited",
+                "timestamp": "2026-09-10T02:28:36.647Z",
+                "workerPid": 60312,
+                "parentPid": 2180,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "hostPid": 34852,
+                "exitCode": null,
+                "signal": "SIGTERM"
+              },
+              {
+                "protocolVersion": 1,
+                "phase": "worker-stopped",
+                "timestamp": "2026-09-10T02:28:36.647Z",
+                "workerPid": 60312,
+                "parentPid": 2180,
+                "workerNodeVersion": "v22.19.0",
+                "workerExecutable": "[sha256:a3c89cf3b0314cf6ef495565026568d020edc4b86414f6885fd2bab940a62eae]",
+                "workerArgv": [
+                  "[sha256:d7d4f9b6354af7ca99e059d9ad108704d60f0042d094e3d60555635d06e570bc]"
+                ],
+                "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+                "harnessRelease": "dsh-v0.1.2-alpha.1",
+                "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+                "hostPid": 34852,
+                "exitCode": 0
+              }
+            ],
+            "workerErrors": ""
+          }
+        ]
+      },
+      "rawIdentities": [
+        {
+          "path": "node_modules/.final-validation/full-smoke-slice2-step1/step1/attachment-sequence.json",
+          "bytes": 25585,
+          "sha256": "9d1577f9d92104477126cb8f9d1349c4f6f000766c38426a54fdb644c30674d5"
+        },
+        {
+          "path": "node_modules/.final-validation/full-smoke-slice2-step1/step1/authority-identity.json",
+          "bytes": 23778,
+          "sha256": "7c44eb8a5c51433fbaa02b2faa358b14cac178c1a3bbf4464d6082def5d4659b"
+        },
+        {
+          "path": "node_modules/.final-validation/full-smoke-slice2-step1/step1/powershell-resolution.json",
+          "bytes": 205,
+          "sha256": "37ec78f0bf1958c20f2b70f99a2f83f08454c6f83108fa400613fed7cf605639"
+        },
+        {
+          "path": "node_modules/.final-validation/full-smoke-slice2-step1/step1/security-negative-results.json",
+          "bytes": 10880,
+          "sha256": "d9d3f818a7ad568df1972340e0db754d47c96f88a7495d7e2b3ba176a28f81fb"
+        }
+      ]
+    }
+  ],
+  "historicalAcceptance": "PASS / CLOSED / FROZEN",
+  "historicalFilesUnchanged": 51,
+  "testWeakening": false,
+  "coverageRemoval": false,
+  "providerRuns": 0
+}

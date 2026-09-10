@@ -1,0 +1,27 @@
+{
+  "runId": "STEP2-20260910-IMPLEMENTATION-01",
+  "result": "PASS",
+  "evidenceFiles": [
+    "run-manifest.json",
+    "recovery-state-machine.json",
+    "generation-fencing.json",
+    "cold-projection.json",
+    "worker-replacement.json",
+    "mutation-outcome.json",
+    "cumulative-e2e.json",
+    "gate-results.json",
+    "test-summary.json",
+    "redaction-summary.json"
+  ],
+  "strictUtf8": true,
+  "bomCount": 0,
+  "mojibakeCount": 0,
+  "exactPrivateCarrierEndpoints": 0,
+  "rawCredentialValues": 0,
+  "hmacProofValues": 0,
+  "privateWorkspacePaths": 0,
+  "privateSessionContent": 0,
+  "identityPolicy": "Only SHA-256 identities, numeric PID/start tuples and nonsecret readiness counts are retained",
+  "method": "Strict UTF8 decoder; forbidden raw-field names and exact pipe/path patterns; source inspection of sanitized runtime driver; scan every formal JSON and final record. No raw runtime stdout copied to formal Evidence.",
+  "providerRuns": 0
+}

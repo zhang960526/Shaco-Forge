@@ -2,6 +2,30 @@
 
 Status: ACTIVE
 
+> Latest authority (2026-09-10): [Step2 Owner Closure and Freeze Decision](../04-development-records/V1-SLICE-2-STEP2-OWNER-CLOSURE-AND-FREEZE-DECISION.md).
+> Step1 and Step2 are `PASS / CLOSED / FROZEN`; Step2 Owner Closure is `ACCEPTED`.
+> Final Independent Review is `PASS` via [REVIEW-024C](../05-reviews/architecture/AUDIT-024C-V1-SLICE-2-STEP2-CROSS-DOCUMENT-GOVERNANCE-CORRECTIVE-REREVIEW.md); active Blocking Findings are `NONE`.
+> Historical [REVIEW-024](../05-reviews/architecture/AUDIT-024-V1-SLICE-2-STEP2-INDEPENDENT-IMPLEMENTATION-REVIEW.md) `FAIL` / R24-01 and [REVIEW-024B](../05-reviews/architecture/AUDIT-024B-V1-SLICE-2-STEP2-GOVERNANCE-CORRECTIVE-REREVIEW.md) `FAIL` / R24B-01 remain preserved.
+> Both findings are closed by the corrective review chain. Implementation, Final Validation Corrective,
+> S2G01-S2G20, Step1 regression, cumulative non-Provider E2E and full regression are accepted as `PASS`.
+> Implementation authorization is `CONSUMED`; additional Step2 implementation is `NONE`.
+> Step3 is `NOT_AUTHORIZED`; Provider authorization is `NO`; Slice2 remains `IN_PROGRESS`.
+> Current Step: `V1_SLICE_2_STEP2_CLOSED_PENDING_STEP3_ENTRY_DECISION`.
+> Next: `ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP3_ENTRY`.
+> Step3 Entry Assessment is the only next action; it is not Step3 Implementation Authorization.
+
+> Historical / Superseded pre-REVIEW-024C route summary (2026-09-10): Step 1 and `STEP1_REGRESSION` are `PASS`;
+> Step 1 is `PASS / CLOSED / FROZEN`. Step 2 implementation, Final Validation
+> Corrective, S2G01-S2G20, and cumulative Step 1 + Step 2 non-Provider E2E are
+> `PASS`; Step 2 remains `IMPLEMENTED_WAITING_INDEPENDENT_REVIEW` and is not
+> closed or frozen. REVIEW-024 is `FAIL` solely for the R24-01 governance
+> contradiction; REVIEW-024B confirmed the R24-01 Current State corrective.
+> REVIEW-024B remains `FAIL` solely for R24B-01
+> (`DOCUMENT_MAP_STATE_CONTRADICTION`); its corrective is
+> `APPLIED_WAITING_REREVIEW`. Step 3 is `NOT_AUTHORIZED`, Provider authorization
+> is `NO`, and the next action is
+> `INDEPENDENT_REREVIEW_V1_SLICE_2_STEP2_REVIEW_024B_CORRECTIVE`.
+
 > Latest execution-scope clarification is the
 > [Step 2 Shared Source Extension Scope Clarification Decision](../04-development-records/V1-SLICE-2-STEP2-SHARED-SOURCE-EXTENSION-SCOPE-CLARIFICATION-DECISION.md).
 > Step 1 remains `PASS / CLOSED / FROZEN`: its acceptance baseline and
@@ -11,15 +35,16 @@ Status: ACTIVE
 > shared Product source within its frozen scope, and must prove prior capability
 > through cumulative regression before Closure.
 
-> Current V1.0 route implementation authority is the
+> Historical Step 2 entry checkpoint (2026-09-09): the
 > [V1-SLICE-2 Step 2 Entry and Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md),
-> which accepts the frozen Step 1 closure baseline and approves Step 2 entry.
+> which accepted the frozen Step 1 closure baseline and approved Step 2 entry.
 > Slice 1A/1B/1C and Slice 1 remain `PASS / CLOSED / FROZEN`. The
 > [V1-SLICE-2 Architecture Contract](V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md)
 > and [Carrier Lifecycle Amendment](V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md)
-> remain frozen. Step 1 implementation, Independent Review and Owner Closure are
-> `PASS`, `PASS` and `ACCEPTED`; Step 1 is `PASS / CLOSED / FROZEN`. Step 2 is
-> `AUTHORIZED_NOT_STARTED`; Step 3 and Provider remain unauthorized. The
+> remain frozen. At that historical checkpoint, Step 2 was
+> `AUTHORIZED_NOT_STARTED`, and the historical next action was
+> `EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`. Step 3 and Provider
+> were unauthorized. The
 > implementation mainline remains
 > `MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION`.
 > The frozen
@@ -55,7 +80,8 @@ V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
 V1_SLICE_2_STEP1_RESULT = PASS
 V1_SLICE_2_STEP1_IMPLEMENTATION_RESULT = PASS
 V1_SLICE_2_STEP1_BASELINE = FROZEN
-V1_SLICE_2_STEP2_SHARED_PRODUCT_SOURCE_EXTENSION = AUTHORIZED
+STEP1_REGRESSION = PASS
+V1_SLICE_2_STEP2_SHARED_PRODUCT_SOURCE_EXTENSION = CONSUMED
 STEP1_ACCEPTANCE_BASELINE = FROZEN
 STEP1_CAPABILITY_CONTRACT = MUST_NOT_REGRESS
 STEP1_HISTORICAL_ARTIFACTS = BYTE_IMMUTABLE
@@ -64,9 +90,21 @@ V1_CUMULATIVE_CLOSURE_REGRESSION_GATE = FROZEN
 CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
 STEP2_CUMULATIVE_CLOSURE_REGRESSION_REQUIRED = YES
 V1_SLICE_2_STEP2_ENTRY = APPROVED
-V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = YES
+V1_SLICE_2_STEP2_IMPLEMENTATION_AUTHORIZATION = CONSUMED
 V1_SLICE_2_IMPLEMENTATION = IN_PROGRESS
-V1_SLICE_2_STEP2 = AUTHORIZED_NOT_STARTED
+V1_SLICE_2_STEP2 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP2_IMPLEMENTATION_RESULT = PASS
+STEP2_FINAL_VALIDATION_CORRECTIVE = PASS
+V1_SLICE_2_STEP2_DEDICATED_GATES = PASS
+V1_SLICE_2_STEP2_CUMULATIVE_NON_PROVIDER_E2E = PASS
+V1_SLICE_2_STEP2_REVIEW_024 = FAIL
+V1_SLICE_2_STEP2_REVIEW_024_R24_01 = CLOSED_BY_CORRECTIVE_REVIEW_CHAIN
+V1_SLICE_2_STEP2_REVIEW_024B = FAIL
+HISTORICAL_V1_SLICE_2_STEP2_REVIEW_024B_BLOCKING_FINDINGS = R24B-01_DOCUMENT_MAP_STATE_CONTRADICTION
+V1_SLICE_2_STEP2_REVIEW_024B_CORRECTIVE = CLOSED_BY_CORRECTIVE_REREVIEW
+PREVIOUS_IMPLEMENTATION_VERDICT = STOPPED_BLOCKED
+PREVIOUS_MINOR_BUDGET = 3/3 EXHAUSTED
+PREVIOUS_MAJOR_BUDGET = 3/4 USED
 V1_SLICE_2_STEP3 = NOT_AUTHORIZED
 PROVIDER_GATE_AUTHORIZATION = NO
 V1_SLICE_2 = IN_PROGRESS
@@ -74,8 +112,17 @@ V1_SLICE_3 = PACKAGING / COMPATIBILITY / RELEASE / NOT_STARTED
 V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
 P0_5_P1_P2_TO_P8 = NEED_DRIVEN_CONTRACT_CAPABILITY_ACCEPTANCE_TAXONOMY
 P0_5_P1_P2_TO_P8 = NOT_A_SECOND_SEQUENTIAL_IMPLEMENTATION_ROUTE
-V1_CURRENT_STEP = V1_SLICE_2_STEP2_AUTHORIZED_NOT_STARTED
-V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL
+V1_CURRENT_STEP = V1_SLICE_2_STEP2_CLOSED_PENDING_STEP3_ENTRY_DECISION
+V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP3_ENTRY
+V1_SLICE_2_STEP2_REVIEW_024C = PASS
+V1_SLICE_2_STEP2_REVIEW_024B_R24B_01 = CLOSED_BY_CORRECTIVE_REREVIEW
+V1_SLICE_2_STEP2_FINAL_INDEPENDENT_REVIEW = PASS
+V1_SLICE_2_STEP2_REVIEW_BLOCKING_FINDINGS = NONE
+V1_SLICE_2_STEP2_OWNER_CLOSURE = ACCEPTED
+V1_SLICE_2_STEP2_ADDITIONAL_IMPLEMENTATION = NONE
+V1_SLICE_2_STEP2_RESULT = PASS
+V1_SLICE_2_STEP2_BASELINE = FROZEN
+ACTIVE_CURRENT_AUTHORITY_COUNT = ONE
 ```
 
 The four Slice route is the current implementation route. P0.5/P1/P2-P8 retain
@@ -98,23 +145,25 @@ overdesign remains closed. The generic Electron identity probe remains a
 historical diagnostic scenario, not a frozen V1 runtime gate. Broker,
 asymmetric authority protocol, Product Launch Grant and Windows Service are not
 V1 requirements. Step 1 implementation is `PASS`, Owner Closure is `ACCEPTED`,
-and Step 1 is `PASS / CLOSED / FROZEN`. Step 2 entry is `APPROVED` and bounded
-Connection Recovery and Cold Projection implementation is authorized but not
-started. A Step 2 dedicated-gate `PASS` is not Step 2 Closure. Closure also
-requires cumulative Step 1 + Step 2 non-Provider E2E `PASS`, full build,
-typecheck, unit and static regression `PASS`, frozen baseline identity
-validation, and every other applicable Closure Gate. The next action is
-`EXECUTE_V1_SLICE_2_STEP2_LONG_RUNNING_IMPLEMENTATION_GOAL`; Step 3 and Provider
-work remain unauthorized.
+and Step 1 is `PASS / CLOSED / FROZEN`. Step 2 entry is `APPROVED`; its bounded
+Connection Recovery and Cold Projection implementation, Final Validation
+Corrective, S2G01-S2G20, and cumulative Step 1 + Step 2 non-Provider E2E are
+`PASS`. Historical REVIEW-024 `FAIL` / R24-01 was followed by corrective work, REVIEW-024B `FAIL` / R24B-01, cross-document corrective work, and REVIEW-024C `PASS`. Both findings are closed; final Blocking Findings are `NONE`. Owner Closure is `ACCEPTED`; Step2 is `PASS / CLOSED / FROZEN`. Next is `ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP3_ENTRY`: Step3 Entry Assessment only, not Step3 Implementation Authorization. Step3 remains `NOT_AUTHORIZED`; Provider remains `NO`.
+
+> Historical stopped implementation checkpoint (2026-09-10): the required
+> `SHACO_FORGE_POWERSHELL` fixture value was missing and reached
+> `spawn(undefined)`, producing `STOPPED_BLOCKED`. Minor corrective budget was
+> `3/3 EXHAUSTED` and Major corrective budget was `3/4 USED`. This remains a
+> truthful previous result and is not the current Step 2 implementation result.
 
 Step 1 `CLOSED / FROZEN` is a capability and acceptance freeze, not a permanent
-ban on changing source bytes shared with a later authorized Step. Step 2 may
-extend shared Product source only for Connection Recovery, Cold Projection,
+ban on changing source bytes shared with a later authorized Step. The consumed Step2 authorization permitted
+shared Product source extension only for Connection Recovery, Cold Projection,
 generation fencing, read-only Workspace/Session repull, Worker replacement
 recovery and truthful no-business-replay failure projection. Such evolution
 must preserve the frozen Architecture/Security/Carrier contracts, must not
 reimplement Step 1, and requires `STEP1_REGRESSION = PASS` through cumulative
-non-Provider E2E before Step 2 Closure.
+non-Provider E2E before Step2 Closure; this requirement is now accepted as PASS. Additional Step2 implementation is NONE.
 
 ## Phase Order
 
@@ -151,7 +200,7 @@ Frozen Harness baseline: `cd5ef8148158c3a752a658978873241fdf8e2bbc` (`dsh@0.1.2-
 
 Risk / Spike input freeze: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md`.
 
-P0 PASS did not by itself authorize P0.S. AUDIT-004B Independent Corrective Re-Review = `PASS`. `P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. Historical P0.S-6 records preserve that `P0S6-MEC-20260903-01` exhausted two physical attempts without reaching Runtime and `P0S6-DRRC-20260904-01` exhausted its sole Dependency Preparation invocation at `NPM_CI / EINTEGRITY`; at that recording boundary P0.S-6 was blocked and P0.S-7 was unauthorized. Later authority closes P0.S-6 as `VERIFIED_WITH_CANDIDATE`, closes reassessed P0.S-7 as `CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATED`, and closes P0.S-8/P0.S after the sufficient V1 Product Architecture Freeze. V1 implementation is ready but not started.
+P0 PASS did not by itself authorize P0.S. AUDIT-004B Independent Corrective Re-Review = `PASS`. `P0_CLOSURE_AUDIT = PASS`. `ALLOW_P0S = YES`. Historical P0.S-6 records preserve that `P0S6-MEC-20260903-01` exhausted two physical attempts without reaching Runtime and `P0S6-DRRC-20260904-01` exhausted its sole Dependency Preparation invocation at `NPM_CI / EINTEGRITY`; at that recording boundary P0.S-6 was blocked and P0.S-7 was unauthorized. Later authority closes P0.S-6 as `VERIFIED_WITH_CANDIDATE`, closes reassessed P0.S-7 as `CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATED`, and closes P0.S-8/P0.S after the sufficient V1 Product Architecture Freeze. At the historical P0 closure checkpoint, V1 implementation was ready but not started.
 
 ## P0.S
 
@@ -166,7 +215,7 @@ Steps:
 - P0.S-5 Desktop Independence & Reconnect — PASS / CLOSED; Owner-accepted `MET_WITH_CONSTRAINT`
 - P0.S-6 Client Module / Plugin Frontend — CLOSED; latest result `VERIFIED_WITH_CANDIDATE`; historical Runtime Gate and H-05/H-20 limitations remain preserved
 - P0.S-7 Controlled Agent Execution Architecture Validation — CLOSED; `CONTROLLED_AGENT_EXECUTION_ARCHITECTURE_VALIDATED`; product Runtime not executed; Enterprise Runtime deferred
-- P0.S-8 V1 Product Architecture Freeze — PASS / CLOSED; `V1_PRODUCT_ARCHITECTURE_FROZEN`; V1 implementation ready but not started
+- P0.S-8 V1 Product Architecture Freeze — PASS / CLOSED; `V1_PRODUCT_ARCHITECTURE_FROZEN`; at that historical closure checkpoint, V1 implementation was ready but not started
 
 ### Historical P0.S-7 / P0.S-8 Goal Reconciliation (2026-09-05)
 
@@ -252,7 +301,7 @@ Draft a bounded P0.S-6 Lockfile Integrity Corrective Contract that independently
 
 Do not modify the lockfile, execute npm, prepare dependencies, authorize Recovery Runtime, authorize Global Physical Attempt #3, or start P0.S-7.
 
-### Current P0.S-7 Closure and P0.S-8 Handoff (2026-09-06)
+### Historical P0.S-7 Closure and P0.S-8 Handoff (2026-09-06)
 
 The [Roadmap Reassessment Decision](../04-development-records/P0S-ROADMAP-REASSESSMENT-DECISION.md)
 repositioned P0.S-7 as Controlled Agent Execution Architecture Validation and
@@ -281,7 +330,7 @@ no Freeze Decision or implementation authorization has been created, and V1
 implementation has not started. `V1-SLICE-1-SINGLE-AGENT-USER-CLOSURE` is a later
 implementation sequencing recommendation only; it is neither frozen nor executed.
 
-### Current P0.S-8 Freeze, Umbrella Closure and Implementation Sequencing (2026-09-06)
+### Historical P0.S-8 Freeze, Umbrella Closure and Implementation Sequencing (2026-09-06)
 
 Authority: [P0.S-8 V1 Product Architecture Freeze Decision](../04-development-records/P0S-8-V1-PRODUCT-ARCHITECTURE-FREEZE-DECISION.md),
 Decision ID `P0S8-V1-PRODUCT-ARCHITECTURE-FREEZE-20260906-01`.
@@ -309,7 +358,7 @@ implementation by the Harness-reuse Corrective. They remain historical records
 of the expanded allocation and do not reopen or invalidate the P0.S-8
 foundational architecture freeze.
 
-### Current V1.0 Harness-Reuse Slice Route (2026-09-06)
+### Retained V1.0 Harness-Reuse Slice Route — Historical Entry Snapshot (2026-09-06)
 
 Authority:
 [V1.0 Harness Reuse Implementation Scope Corrective Decision](../04-development-records/V1-0-HARNESS-REUSE-IMPLEMENTATION-SCOPE-CORRECTIVE-DECISION.md),
@@ -331,11 +380,12 @@ V1_SLICE_1_INDEPENDENT_CLOSURE_AUDIT = PASS
 V1_SLICE_1_OWNER_CLOSURE = ACCEPTED
 V1_SLICE_1 = PASS / CLOSED / FROZEN
 V1_SLICE_1_ADDITIONAL_IMPLEMENTATION = NONE
-V1_SLICE_2 = NOT_STARTED
-V1_CURRENT_NEXT_ACTION = PREPARE_V1_SLICE_2_LIFECYCLE_NATIVE_RECONNECT
+PREVIOUS_V1_SLICE_2 = NOT_STARTED
+PREVIOUS_V1_CURRENT_NEXT_ACTION = PREPARE_V1_SLICE_2_LIFECYCLE_NATIVE_RECONNECT
 ```
 
-The current Slice route is:
+The retained four-Slice route remains current; the execution-state snapshot
+above is historical:
 
 1. `V1-SLICE-1 — REAL HARNESS USER LOOP`: Desktop -> Worker -> Harness Host ->
    Harness Client -> configured Harness Provider/model -> Workspace -> Session ->

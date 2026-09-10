@@ -2,6 +2,18 @@
 
 Status: ACTIVE
 
+> Latest authority (2026-09-10): [Step2 Owner Closure and Freeze Decision](../04-development-records/V1-SLICE-2-STEP2-OWNER-CLOSURE-AND-FREEZE-DECISION.md).
+> Step1 and Step2 are `PASS / CLOSED / FROZEN`; Step2 Owner Closure is `ACCEPTED`.
+> Final Independent Review is `PASS` via [REVIEW-024C](architecture/AUDIT-024C-V1-SLICE-2-STEP2-CROSS-DOCUMENT-GOVERNANCE-CORRECTIVE-REREVIEW.md); active Blocking Findings are `NONE`.
+> Historical [REVIEW-024](architecture/AUDIT-024-V1-SLICE-2-STEP2-INDEPENDENT-IMPLEMENTATION-REVIEW.md) `FAIL` / R24-01 and [REVIEW-024B](architecture/AUDIT-024B-V1-SLICE-2-STEP2-GOVERNANCE-CORRECTIVE-REREVIEW.md) `FAIL` / R24B-01 remain preserved.
+> Both findings are closed by the corrective review chain. Implementation, Final Validation Corrective,
+> S2G01-S2G20, Step1 regression, cumulative non-Provider E2E and full regression are accepted as `PASS`.
+> Implementation authorization is `CONSUMED`; additional Step2 implementation is `NONE`.
+> Step3 is `NOT_AUTHORIZED`; Provider authorization is `NO`; Slice2 remains `IN_PROGRESS`.
+> Current Step: `V1_SLICE_2_STEP2_CLOSED_PENDING_STEP3_ENTRY_DECISION`.
+> Next: `ARCHITECTURE_OWNER_ASSESS_V1_SLICE_2_STEP3_ENTRY`.
+> Step3 Entry Assessment is the only next action; it is not Step3 Implementation Authorization.
+
 | ID | Review | Result | Owner Disposition | Source |
 |---|---|---|---|---|
 | REVIEW-001 | Pre-Implementation Architecture Audit | FAIL | Major findings accepted; corrective architecture created | `architecture/AUDIT-001-PRE-IMPLEMENTATION-ARCHITECTURE.md` |
@@ -31,5 +43,8 @@ Status: ACTIVE
 | REVIEW-021 | V1-SLICE-2 Step1 Minimal Trusted Discovery Corrective Review | PASS | Corrective persisted as candidate; targeted delta review required before Step1 re-freeze | `architecture/AUDIT-021-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-REVIEW.md` |
 | REVIEW-022 | V1-SLICE-2 Step1 Minimal Trusted Discovery Persisted Delta Review | PASS | Corrective bytes accepted; Contract/Amendment re-frozen; Step1 implementation re-authorized | `architecture/AUDIT-022-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-PERSISTED-DELTA-REVIEW.md` |
 | REVIEW-023 | V1-SLICE-2 Step1 Independent Implementation Review | PASS | Step1 implementation accepted; baseline frozen; Step1 closed; Step2 remains separately gated | `architecture/AUDIT-023-V1-SLICE-2-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md` |
+| REVIEW-024 | V1-SLICE-2 Step2 Independent Implementation Review | FAIL | Governance corrective required; technical candidate otherwise accepted by review | [Source](architecture/AUDIT-024-V1-SLICE-2-STEP2-INDEPENDENT-IMPLEMENTATION-REVIEW.md) |
+| REVIEW-024B | V1-SLICE-2 Step2 Governance Corrective Re-Review | FAIL | R24-01 confirmed corrected; R24B-01 cross-document corrective required | [Source](architecture/AUDIT-024B-V1-SLICE-2-STEP2-GOVERNANCE-CORRECTIVE-REREVIEW.md) |
+| REVIEW-024C | V1-SLICE-2 Step2 Cross-Document Governance Corrective Re-Review | PASS | Final corrective review accepted; Step2 Owner Closure allowed | [Source](architecture/AUDIT-024C-V1-SLICE-2-STEP2-CROSS-DOCUMENT-GOVERNANCE-CORRECTIVE-REREVIEW.md) |
 
 Future implementation reviews must be stored separately from Phase Contracts.

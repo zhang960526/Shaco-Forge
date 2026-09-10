@@ -1,0 +1,252 @@
+{
+  "runId": "STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01",
+  "result": "PASS",
+  "gates": [
+    {
+      "id": "S2G01",
+      "requirement": "Carrier loss leaves CONNECTED",
+      "result": "PASS",
+      "proof": "Fresh cumulative CONNECTION_LOST transition plus passing pending-mount loss unit.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G02",
+      "requirement": "Healthy same-Worker rediscovery",
+      "result": "PASS",
+      "proof": "Both new cumulative runs: same Worker rediscovered after graceful close, crash and Carrier loss.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G03",
+      "requirement": "Same Worker with fresh credential and client identity",
+      "result": "PASS",
+      "proof": "Same Worker hash with unequal credential/client hashes at new attachment.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G04",
+      "requirement": "Old generation callbacks rejected",
+      "result": "PASS",
+      "proof": "Actual stale callback rejected plus delayed item/end/error generation tests.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G05",
+      "requirement": "Old pending unary terminated",
+      "result": "PASS",
+      "proof": "Pending unary before loss > 0, TERMINATED result and 0 pending afterwards; authenticated peer unit.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G06",
+      "requirement": "Old active streams terminated",
+      "result": "PASS",
+      "proof": "Active stream before loss > 0, TERMINATED result and 0 active afterwards.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G07",
+      "requirement": "Old stream IDs cannot address fresh streams",
+      "result": "PASS",
+      "proof": "Passing current-source test deliberately reuses a raw stream ID across generations.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G08",
+      "requirement": "Workspace rebuilt from Harness truth",
+      "result": "PASS",
+      "proof": "Actual Harness Workspace baseline, seeded identity hash and positive count after each cold reattach.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G09",
+      "requirement": "Session roster rebuilt from Harness truth",
+      "result": "PASS",
+      "proof": "Actual Session roster repull, seeded current Session identity and positive count.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G10",
+      "requirement": "Current Session cold projection rebuilt",
+      "result": "PASS",
+      "proof": "Fresh public Client reads current Session snapshot/history with matching hash and nonzero history count.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G11",
+      "requirement": "Projection completes after required reads",
+      "result": "PASS",
+      "proof": "Actual read proofs precede all three ready predicates; missing-read controlled test passes.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G12",
+      "requirement": "CONNECTED requires all three predicates",
+      "result": "PASS",
+      "proof": "Every observed CONNECTED transition has authenticated Carrier, current Client and complete projection.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G13",
+      "requirement": "Recovery failures truthful",
+      "result": "PASS",
+      "proof": "Passing current-source ambiguity and public projection-error terminal failure tests.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G14",
+      "requirement": "Stale completion cannot overwrite current state",
+      "result": "PASS",
+      "proof": "Late unary/item/end/error/after-stop and pending-mount completion tests all pass.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G15",
+      "requirement": "OUTCOME_UNKNOWN and no blind retry",
+      "result": "PASS",
+      "proof": "Authenticated deterministic NamedPipe peer: one mutation frame, OUTCOME_UNKNOWN, zero resend.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G16",
+      "requirement": "Worker replacement without overlap or adoption",
+      "result": "PASS",
+      "proof": "Old Worker/Host/Helper gone, zero authority overlap, no old-child adoption; replacement runtime passes.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G17",
+      "requirement": "Replacement changes Worker and Client generation",
+      "result": "PASS",
+      "proof": "Worker hash changes, generation 3, prior read proofs cleared; replacement continuity remains explicitly unproven.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G18",
+      "requirement": "Ambiguous authority fails closed",
+      "result": "PASS",
+      "proof": "Both new Step1 held/hung/abandoned fixtures plus actual Supervisor.recover unverified-native unit pass.",
+      "evidence": [
+        "step1-regression.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G19",
+      "requirement": "No second business truth store",
+      "result": "PASS",
+      "proof": "Current-source inspection: public Harness stores own truth; Product observer and coordinator retain transient readiness/counts/hashes only. Static composition 28 Frozen public rows plus 1 observer.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    },
+    {
+      "id": "S2G20",
+      "requirement": "No Provider/Prompt/Tool/Agent turn",
+      "result": "PASS",
+      "proof": "All runtime prompt counters and business replay counters 0; allowlisted commands only; no Provider/Prompt/Tool/Agent-turn execution.",
+      "evidence": [
+        "step2-cumulative-e2e.json",
+        "test-summary.json"
+      ],
+      "sourceSha256": "5bbaaa6a463c43e11e9cda4efb1595149e6186138850e7af99123eb92e0711c1",
+      "previousAttempt4UsedForAcceptance": false
+    }
+  ],
+  "STEP1_REGRESSION": "PASS",
+  "STEP2_DEDICATED_GATES": "PASS",
+  "CUMULATIVE_NON_PROVIDER_E2E": "PASS",
+  "fullRegression": "PASS",
+  "providerRuns": 0,
+  "providerGateRequired": false
+}

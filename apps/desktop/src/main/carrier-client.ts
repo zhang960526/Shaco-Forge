@@ -25,6 +25,16 @@ interface UnaryState {
   reject(error: Error): void
   timeout: NodeJS.Timeout
   cleanup(): void
+  mutation: boolean
+  sent: boolean
+}
+
+// Conservative classification: only confirmed public reads avoid unknown outcome.
+const READ_ONLY = new Set(['session/list', 'session/search', 'session/page', 'session/attachment', 'session/modelCatalog',
+  'session/canOpenWorkspacePath', 'agentPresets/list', 'directoryPicker/list', 'skills/list', 'fileReferences/list',
+  'settings/read', 'settings/schema', 'credentials/describe', 'llm/list'])
+export function mutationOutcome(error: Error, mutation: boolean, sent: boolean): Error {
+  return mutation && sent ? new Error('OUTCOME_UNKNOWN: mutation response unavailable; reread Harness truth; no automatic resend') : error
 }
 
 interface StreamState {
@@ -129,6 +139,7 @@ export class CarrierClient {
   #writeChain = Promise.resolve()
   #frameObservation = new FrameSizeObservation()
   #completedStreams: string[] = []
+  #failureListeners = new Set<(error: Error) => void>()
   clientInstanceId: string | undefined
   readonly metrics = {
     mainAuthenticatedCarrier: false,
@@ -155,6 +166,13 @@ export class CarrierClient {
   }
 
   constructor(readonly bootstrap: CarrierBootstrap) {}
+
+  onFailure(listener: (error: Error) => void): () => void {
+    this.#failureListeners.add(listener)
+    return () => this.#failureListeners.delete(listener)
+  }
+
+  get authenticated(): boolean { return this.#authenticated && this.#failed === undefined }
 
   async connect(): Promise<void> {
     if (this.#socket !== undefined) throw new Error('Carrier is already connected')
@@ -246,27 +264,29 @@ export class CarrierClient {
     return await new Promise<unknown>((resolveRequest, rejectRequest) => {
       const timeout = setTimeout(() => {
         this.#unary.delete(requestId)
+        this.metrics.pendingUnary = this.#unary.size
         cleanup()
-        rejectRequest(new Error('Carrier unary request timed out'))
+        rejectRequest(mutationOutcome(new Error('Carrier unary request timed out'), state.mutation, state.sent))
       }, 30_000)
       const cleanup = (): void => signal?.removeEventListener('abort', abort)
-      const state: UnaryState = { resolve: resolveRequest, reject: rejectRequest, timeout, cleanup }
+      const state: UnaryState = { resolve: resolveRequest, reject: rejectRequest, timeout, cleanup, mutation: !READ_ONLY.has(endpoint), sent: false }
       this.#unary.set(requestId, state)
       this.metrics.pendingUnary = this.#unary.size
       const abort = (): void => {
         if (!this.#unary.delete(requestId)) return
         clearTimeout(timeout)
+        this.metrics.pendingUnary = this.#unary.size
         cleanup()
-        rejectRequest(signal?.reason instanceof Error ? signal.reason : new Error('Unary request aborted'))
+        rejectRequest(mutationOutcome(signal?.reason instanceof Error ? signal.reason : new Error('Unary request aborted'), state.mutation, state.sent))
       }
       signal?.addEventListener('abort', abort, { once: true })
       if (signal?.aborted) { abort(); return }
-      this.#writeRaw({ type: 'unary-request', requestId, endpoint, envelope }, true).catch(error => {
+      this.#writeRaw({ type: 'unary-request', requestId, endpoint, envelope }, true, () => { state.sent = true }).catch(error => {
         signal?.removeEventListener('abort', abort)
         this.#unary.delete(requestId)
         this.metrics.pendingUnary = this.#unary.size
         clearTimeout(timeout)
-        rejectRequest(error)
+        rejectRequest(mutationOutcome(error instanceof Error ? error : new Error('Carrier write failed'), state.mutation, state.sent))
       })
     })
   }
@@ -337,7 +357,7 @@ export class CarrierClient {
     if (!this.#authenticated) throw new Error('Carrier is not mutually authenticated')
   }
 
-  #writeRaw(value: unknown, business: boolean): Promise<void> {
+  #writeRaw(value: unknown, business: boolean, sending?: () => void): Promise<void> {
     if (business) {
       this.#requireAuthenticated()
       this.metrics.businessFramesSent += 1
@@ -348,6 +368,7 @@ export class CarrierClient {
     this.metrics.maxObservedJsonFrameBytes = Math.max(this.metrics.maxObservedJsonFrameBytes, frame.byteLength - 4)
     this.#writeChain = this.#writeChain.then(() => new Promise<void>((resolveWrite, rejectWrite) => {
       if (this.#failed !== undefined || socket.destroyed) { rejectWrite(this.#failed ?? new Error('Carrier generation ended')); return }
+      sending?.()
       socket.write(frame, error => error ? rejectWrite(error) : resolveWrite())
     }))
     return this.#writeChain
@@ -402,7 +423,7 @@ export class CarrierClient {
     for (const state of this.#unary.values()) {
       clearTimeout(state.timeout)
       state.cleanup()
-      state.reject(error)
+      state.reject(mutationOutcome(error, state.mutation, state.sent))
     }
     this.#unary.clear()
     this.metrics.pendingUnary = 0
@@ -411,5 +432,7 @@ export class CarrierClient {
     this.metrics.activeStreams = 0
     this.metrics.finalActiveStreams = 0
     this.metrics.finalPendingUnary = 0
+    for (const listener of this.#failureListeners) listener(error)
+    this.#failureListeners.clear()
   }
 }

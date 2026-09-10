@@ -1,0 +1,17 @@
+{
+  "runId": "STEP2-20260910-IMPLEMENTATION-01",
+  "result": "PASS",
+  "fixture": "Actual Product CarrierClient with authenticated deterministic NamedPipe peer",
+  "test": "S2G05/S2G15 sent mutation loses response: OUTCOME_UNKNOWN, all unary terminal, zero resend",
+  "sentMutation": "workspace/rename",
+  "readRequest": "session/list",
+  "sentMutationResult": "OUTCOME_UNKNOWN",
+  "readResult": "CARRIER_LOST",
+  "mutationFrames": 1,
+  "totalUnaryFrames": 2,
+  "automaticResends": 0,
+  "pendingUnaryAfterLoss": 0,
+  "activeStreamsAfterLoss": 0,
+  "policy": "Only automatically repull Harness truth. Already-sent mutation response loss, abort or timeout is unknown; reject reuse after failure. No Prompt/Tool/Agent/Approval/Question/Cancel replay.",
+  "providerRuns": 0
+}

@@ -1,7 +1,19 @@
-import { copyFile, mkdir, symlink, writeFile } from 'node:fs/promises'
+import { copyFile, lstat, mkdir, realpath, symlink, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 
 const utf8 = { encoding: 'utf8' } as const
+
+async function ensureProfileJunction(source: string, target: string): Promise<void> {
+  try { await symlink(source, target, 'junction') }
+  catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'EEXIST') throw error
+    // Replacement reuses the same Harness home, but never adopts an unexpected
+    // directory/link. Only the exact approved runtime/profile target is legal.
+    if (!(await lstat(target)).isSymbolicLink() || await realpath(target) !== await realpath(source)) {
+      throw new Error('HARNESS_PROFILE_JUNCTION_IDENTITY_MISMATCH')
+    }
+  }
+}
 
 export async function materializeHarnessProfile(
   dshHome: string,
@@ -16,7 +28,7 @@ export async function materializeHarnessProfile(
   const profilePath = join(dshHome, 'profiles', profileName)
   const bundlePath = join(profilePath, 'node_modules', '@shaco-forge', 'harness-bootstrap')
   await mkdir(bundlePath, { recursive: true })
-  await symlink(harnessScopePath, join(profilePath, 'node_modules', '@deepseek-ai'), 'junction')
+  await ensureProfileJunction(harnessScopePath, join(profilePath, 'node_modules', '@deepseek-ai'))
 
   const profilePackage = {
     name: '@shaco-forge/harness-profile-v1-slice-1b',
@@ -111,6 +123,6 @@ export async function materializeHarnessProfile(
   await copyFile(carrierGatewayPath, join(bundlePath, 'carrier-gateway.mjs'))
   await copyFile(eventsRoutePreflightPath, join(bundlePath, 'events-route-preflight.mjs'))
   await mkdir(join(overlayNodeModules, '@shaco-forge'), { recursive: true })
-  await symlink(bundlePath, join(overlayNodeModules, '@shaco-forge', 'harness-bootstrap'), 'junction')
+  await ensureProfileJunction(bundlePath, join(overlayNodeModules, '@shaco-forge', 'harness-bootstrap'))
   return profilePath
 }

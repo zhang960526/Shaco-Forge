@@ -4,12 +4,16 @@ interface BootstrapProjection {
   mainPid: number
   workerPid?: number
   hostPid?: number
+  generation: number
+  connectionState?: string
+  projectionRebuildComplete?: boolean
 }
 
 interface Window {
   shacoForge: {
     bootstrap: {
       getState(): Promise<BootstrapProjection>
+      reportProjection(report: Record<string, boolean>): Promise<void>
       subscribe(listener: (state: BootstrapProjection) => void): () => void
     }
     transport: {
@@ -41,6 +45,7 @@ declare module '@deepseek-ai/dsh-client-web' {
   export class AppWebEntry {
     constructor(container: HTMLElement)
     run(): Promise<void>
+    dispose(): Promise<void>
   }
 }
 

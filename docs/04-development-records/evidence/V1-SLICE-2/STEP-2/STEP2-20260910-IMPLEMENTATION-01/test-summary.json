@@ -1,0 +1,488 @@
+{
+  "commands": [
+    {
+      "command": "pnpm run typecheck",
+      "startedAt": "2026-09-09T16:47:31.939Z",
+      "endedAt": "2026-09-09T16:47:33.072Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run typecheck",
+      "startedAt": "2026-09-09T16:47:59.428Z",
+      "endedAt": "2026-09-09T16:48:05.430Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-09T16:48:15.095Z",
+      "endedAt": "2026-09-09T16:48:43.362Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-09T16:49:16.943Z",
+      "endedAt": "2026-09-09T16:49:36.745Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-09T16:51:44.369Z",
+      "endedAt": "2026-09-09T16:52:04.857Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "startedAt": "2026-09-09T16:52:15.892Z",
+      "endedAt": "2026-09-09T16:52:17.311Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "startedAt": "2026-09-09T16:52:48.848Z",
+      "endedAt": "2026-09-09T16:53:11.863Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-09T16:57:55.909Z",
+      "endedAt": "2026-09-09T16:58:11.254Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-09T16:58:39.017Z",
+      "endedAt": "2026-09-09T16:59:02.933Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run verify:static",
+      "startedAt": "2026-09-09T16:59:09.126Z",
+      "endedAt": "2026-09-09T16:59:09.676Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-09T17:01:27.777Z",
+      "endedAt": "2026-09-09T17:01:44.593Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-09T17:04:07.858Z",
+      "endedAt": "2026-09-09T17:04:24.256Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-09T17:04:41.183Z",
+      "endedAt": "2026-09-09T17:05:16.006Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-09T17:11:03.583Z",
+      "endedAt": "2026-09-09T17:11:23.421Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-09T17:12:18.159Z",
+      "endedAt": "2026-09-09T17:12:56.414Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-09T17:15:01.907Z",
+      "endedAt": "2026-09-09T17:15:21.017Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run typecheck",
+      "startedAt": "2026-09-09T17:16:01.399Z",
+      "endedAt": "2026-09-09T17:16:05.455Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-09T17:19:28.250Z",
+      "endedAt": "2026-09-09T17:19:46.084Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:static",
+      "startedAt": "2026-09-09T17:19:48.802Z",
+      "endedAt": "2026-09-09T17:19:49.358Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:worker",
+      "startedAt": "2026-09-09T17:20:10.997Z",
+      "endedAt": "2026-09-09T17:20:23.508Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:carrier",
+      "startedAt": "2026-09-09T17:20:51.707Z",
+      "endedAt": "2026-09-09T17:21:44.212Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "startedAt": "2026-09-09T17:22:18.798Z",
+      "endedAt": "2026-09-09T17:22:39.767Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-09T17:23:11.585Z",
+      "endedAt": "2026-09-09T17:24:54.707Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    }
+  ],
+  "correctiveHistory": [
+    {
+      "category": "MINOR",
+      "cycle": 1,
+      "issue": "Pinned command could not find Node",
+      "rootCause": "Windows PATH/Path duplicate casing preserved ambient resolution",
+      "fix": "Remove every case variant and install short pinned PATH",
+      "verification": "typecheck exit 1 then corrected exit 0; one rerun",
+      "approaches": 1
+    },
+    {
+      "category": "MINOR",
+      "cycle": 2,
+      "issue": "Static composition assertion expected total 28",
+      "rootCause": "Authorized nonvisual observer adds one Product row",
+      "fix": "Assert unchanged 28 unique Frozen rows plus exactly one Product public export; retain picker/native/source checks",
+      "verification": "127 tests: 126 pass / 1 fail, then 127 pass; one rerun",
+      "approaches": 1
+    },
+    {
+      "category": "MINOR",
+      "cycle": 3,
+      "issue": "COLD_SESSION_UI_SELECTION_NOT_FOUND",
+      "rootCause": "Frozen Harness hides unselected blank sessions and labels selected blanks New Session",
+      "fix": "Use the existing public workspace New Session UI action, which reuses the seeded blank session",
+      "verification": "Cumulative attempt 1 failed; attempt 2 passed selection and exposed independent read-proof issue",
+      "approaches": 1
+    },
+    {
+      "category": "MAJOR",
+      "cycle": 1,
+      "issue": "Cold Session identity hash empty",
+      "rootCause": "Public follow request uses request.address.sessionId, not request.sessionId",
+      "fix": "Bind hash to the actual public Session address and assert it in controlled coverage",
+      "verification": "Cumulative attempt 2 failed; attempt 3 passed cold projection through same-Worker generation 2",
+      "strategies": 1
+    },
+    {
+      "category": "MAJOR",
+      "cycle": 2,
+      "issue": "Replacement startup exited",
+      "rootCause": "Profile materialization attempted to recreate existing junctions in the same DSH_HOME (EEXIST)",
+      "fix": "Reuse only an existing symbolic link whose real target exactly matches; mismatches fail closed",
+      "verification": "Cumulative attempt 3 failed; one unchanged supervisor probe plus direct materialization confirmed root cause; attempt 4 full chain PASS",
+      "strategies": 1
+    },
+    {
+      "category": "MAJOR",
+      "cycle": 3,
+      "issue": "Self-review: newly attached Carrier loss during pending recovery mount could be ignored",
+      "rootCause": "Existing in-flight recovery guard returned before fencing the new failed Carrier",
+      "fix": "Immediately fence and fail the in-flight recovery; invalidate late completion; public store error also publishes terminal failure",
+      "verification": "Added pending-mount loss/late completion and projection-error tests; 134 tests PASS; final cumulative revalidation NOT_EXECUTED after regression budget stop",
+      "strategies": 1
+    }
+  ],
+  "budget": {
+    "minor": {
+      "used": 3,
+      "limit": 3,
+      "approaches": 1,
+      "approachesLimit": 2
+    },
+    "major": {
+      "used": 3,
+      "limit": 4,
+      "strategies": 1,
+      "strategiesLimit": 2
+    },
+    "runtimeRetries": "Each fixed independent runtime root cause has one post-fix rerun. One unchanged Worker diagnostic confirmation. Final regression failure was diagnosed but not rerun because Minor budget is exhausted. No blind rerun.",
+    "environmentConfirmation": {
+      "count": 1,
+      "issue": "Sandbox Electron GPU exited -1073741515 / process exit 2147483651",
+      "correction": "Run unchanged Electron regression in normal Windows user session",
+      "productSourceChanged": false,
+      "result": "PASS",
+      "cleanup": "Initial sandbox Worker 35256, Helper 62424, Host 38784 tied to Electron 62212 by CIM parent/start identity; controlled termination verified and final Product process inventory empty"
+    }
+  },
+  "finalCommands": [
+    {
+      "command": "pnpm run typecheck",
+      "startedAt": "2026-09-09T17:16:01.399Z",
+      "endedAt": "2026-09-09T17:16:05.455Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "currentSourceAcceptance": "PASS"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-09T17:19:28.250Z",
+      "endedAt": "2026-09-09T17:19:46.084Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "currentSourceAcceptance": "PASS"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-09T17:15:01.907Z",
+      "endedAt": "2026-09-09T17:15:21.017Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "currentSourceAcceptance": "PASS"
+    },
+    {
+      "command": "pnpm run verify:static",
+      "startedAt": "2026-09-09T17:19:48.802Z",
+      "endedAt": "2026-09-09T17:19:49.358Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "currentSourceAcceptance": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:worker",
+      "startedAt": "2026-09-09T17:20:10.997Z",
+      "endedAt": "2026-09-09T17:20:23.508Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "currentSourceAcceptance": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:carrier",
+      "startedAt": "2026-09-09T17:20:51.707Z",
+      "endedAt": "2026-09-09T17:21:44.212Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "currentSourceAcceptance": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "startedAt": "2026-09-09T17:22:18.798Z",
+      "endedAt": "2026-09-09T17:22:39.767Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "currentSourceAcceptance": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-09T17:23:11.585Z",
+      "endedAt": "2026-09-09T17:24:54.707Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "currentSourceAcceptance": "FAIL"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-09T17:12:18.159Z",
+      "endedAt": "2026-09-09T17:12:56.414Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "currentSourceAcceptance": "NOT_EXECUTED_AFTER_MAJOR_3"
+    }
+  ],
+  "unit": {
+    "tests": 134,
+    "passed": 134,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "coverageNames": [
+      "S2G05/S2G15 sent mutation loses response: OUTCOME_UNKNOWN, all unary terminal, zero resend",
+      "S2G11/S2G12 carrier and Client alone cannot publish CONNECTED; real repull is required",
+      "S2G01/S2G04/S2G07 healthy loss fences callbacks and reused stream IDs across generations",
+      "S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {\"done\":false,\"value\":\"old\"}",
+      "S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {\"done\":true}",
+      "S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {\"done\":true,\"error\":\"old error\"}",
+      "S2G14 late unary completion cannot settle or modify replacement projection",
+      "S2G13/S2G18 ambiguous recovery fails closed without a fresh Carrier",
+      "S2G17 replacement loses continuity and clears all prior read proofs",
+      "S2G14 late recovery after Desktop stop cannot mount or authenticate",
+      "S2G01/S2G14 loss during a pending replacement mount fences it and its late completion",
+      "S2G13 a public cold projection error is terminal and cannot remain CONNECTED",
+      "S2G18 recovery also fails closed on unverified native discovery and launches no replacement",
+      "S2G16 same Harness home supports replacement; mismatched profile junction fails closed"
+    ]
+  },
+  "logIdentities": [
+    {
+      "path": "node_modules/.step2-validation/typecheck.log",
+      "bytes": 29,
+      "sha256": "c9fb96e5ca149db7c634cfa23e702fcceffc5738dcd972e7d45d6ff933413b55"
+    },
+    {
+      "path": "node_modules/.step2-validation/build.log",
+      "bytes": 8333,
+      "sha256": "1533d3df31ffea5d92b0d8ef15377b2e9e9382b4127a5408d0cbd2ec3a5a6995"
+    },
+    {
+      "path": "node_modules/.step2-validation/test.log",
+      "bytes": 36878,
+      "sha256": "1f1b386aee2ad533bcf94722823ea3bf69514333614f3872b98d21df9c779f17"
+    },
+    {
+      "path": "node_modules/.step2-validation/verify-static.log",
+      "bytes": 70,
+      "sha256": "38f05a51f07bd31ab38568847ccfb1b09b5ca2f8ef8c6b01d8dd217546a1d7bd"
+    },
+    {
+      "path": "node_modules/.step2-validation/smoke-worker.log",
+      "bytes": 1505,
+      "sha256": "362c1e1c7bdaed2def857106aa9c537a3427037f935137bc693a1e848e9300ee"
+    },
+    {
+      "path": "node_modules/.step2-validation/smoke-carrier.log",
+      "bytes": 2612,
+      "sha256": "30a8a29547909b3549417c64fa9c76c6c486f0724587164d8a95772995240a4f"
+    },
+    {
+      "path": "node_modules/.step2-validation/smoke-electron.log",
+      "bytes": 4484,
+      "sha256": "ee24b87347287606a02b147279a044ec7d795ef2ccf9e8ca4fe3037127e9647b"
+    },
+    {
+      "path": "node_modules/.step2-validation/smoke-slice2-step1.log",
+      "bytes": 3633,
+      "sha256": "3bfebf23b97bb444bf7b2828952866d0ccd273a4e3ddc3559c8944a25970502a"
+    },
+    {
+      "path": "node_modules/.step2-validation/smoke-slice2-step2.log",
+      "bytes": 711,
+      "sha256": "98ed5a75b957bd9f38a685413f3af91d74cc8c583cb8702fe8137f45459e9222"
+    }
+  ],
+  "stop": {
+    "result": "STOPPED_BLOCKED",
+    "boundary": "MINOR_CORRECTIVE_BUDGET_EXHAUSTED",
+    "failedCommand": "pnpm run smoke:slice2-step1",
+    "exitCode": 1,
+    "rootCause": "Existing authority-negative fixture calls spawn(process.env.SHACO_FORGE_POWERSHELL); this invocation omitted that required environment value, causing ERR_INVALID_ARG_TYPE before fixture launch",
+    "sourceLocation": "scripts/smoke-slice2-step1.mjs:460",
+    "code": "ERR_INVALID_ARG_TYPE",
+    "failedArgument": "file=undefined",
+    "requiredNextCorrection": "Complete the existing pinned PowerShell execution environment and revalidate full Step1 and final cumulative chain",
+    "applied": false,
+    "rerunsAfterFailure": 0,
+    "budgetAssessment": "Conservatively count execution/fixture configuration as Minor; 3/3 already used, so a fourth correction is not authorized. No reclassification to Major or uncounted environment exception.",
+    "nextAction": "ARCHITECTURE_OWNER_ASSESS_STEP2_IMPLEMENTATION_BLOCKER"
+  },
+  "step1Regression": {
+    "result": "FAIL",
+    "runtimeEntry": "scripts/smoke-slice2-step1.mjs --runtime",
+    "emittedPassResults": 2,
+    "completed": [
+      "carrier negatives",
+      "authority failures"
+    ],
+    "notReached": [
+      "ambiguous authority",
+      "authority overlap",
+      "Desktop survival"
+    ],
+    "evidenceRedirect": "node_modules/.step2-validation/step1",
+    "evidence": [
+      {
+        "path": "node_modules/.step2-validation/step1/authority-identity.json",
+        "bytes": 18944,
+        "sha256": "95b3ca0867a0e0c27eab142c4c9b3f291d0875407f4872f4fbead712d88d5563",
+        "topLevelKeys": [
+          "results",
+          "failureAttempts",
+          "ambiguousAuthorityAttempts"
+        ]
+      },
+      {
+        "path": "node_modules/.step2-validation/step1/electron-regression.json",
+        "bytes": 21009,
+        "sha256": "31f7acdb4e25db60b27b759be4c8a2117490974e6a6def1460c40eac5a692258",
+        "topLevelKeys": [
+          "result",
+          "nonProviderResult",
+          "capturedAt",
+          "desktop",
+          "topology",
+          "bootstrapSupervisorChannel",
+          "carrier",
+          "failureTruthfulness",
+          "renderer",
+          "harnessClientManifest",
+          "tcpListenersOwnedByObservedProductProcesses",
+          "cleanup",
+          "screenshotPath"
+        ]
+      },
+      {
+        "path": "node_modules/.step2-validation/step1/security-negative-results.json",
+        "bytes": 21753,
+        "sha256": "1e2c3fea1b90585b5fade5b7806ba4ea3e0848614b59d0ad09a7eda6a2aaa74d",
+        "topLevelKeys": [
+          "attempts"
+        ]
+      }
+    ],
+    "assertionsWeakened": false,
+    "assertionChange": "Composition preserves exactly 28 unique Frozen public rows and checks exactly one added nonvisual Product public row; Step1 runtime only changes evidence destination."
+  },
+  "finalValidation": {
+    "strictUtf8": "PASS",
+    "bom": "NONE; original encoding preserved",
+    "mojibake": "PASS",
+    "json": "PASS",
+    "nodeSyntax": "PASS",
+    "powerShellAst": "NOT_APPLICABLE_NO_POWERSHELL_CHANGED",
+    "dotnetRelease": {
+      "version": "10.0.302",
+      "result": "PASS",
+      "warnings": 0,
+      "errors": 0
+    },
+    "gitDiffCheck": "PASS",
+    "harnessClean": true,
+    "historicalBytesIdentical": true,
+    "productTcpListeners": 0,
+    "processCleanup": {
+      "checkedAt": "2026-09-09T17:31:25.6592146Z",
+      "method": "Normal-user CIM Product process inventory after runtime failure; no unrelated process mutation",
+      "productProcesses": []
+    },
+    "providerRuns": 0
+  },
+  "nonBlockingDiagnostics": [
+    "Existing Vite classic-script and large-chunk warnings; build exit 0.",
+    "Electron teardown logs terminal pull rejection (Carrier closed by Desktop); pending resources terminate and cleanup exits successfully."
+  ]
+}
