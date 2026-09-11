@@ -1,7 +1,14 @@
 # Shaco Forge Current Checkpoint
 
 <!-- FULL_SHACO_HISTORICAL_POINTER -->
+> 当前状态以 [Current State](../00-governance/SHACO-FORGE-CURRENT-STATE.md) 为准；Slice2 PASS / CLOSED / FROZEN，NF-6 CLOSED_BY_SLICE2_RECOVERY_IMPLEMENTATION，Provider Gate NOT_TRIGGERED / runs 0，见 [Slice2 Owner Closure Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md)。Step1/2/3 保持闭合，Slice3 NOT_STARTED；下一步仅等待 Architecture Owner 后续阶段授权。下方交接快照为历史，不构成当前授权。
+
+<details>
+<summary>Historical — handover pointer before Slice2 Owner Closure</summary>
+
 > 下文为 2026-09-04 的历史交接快照。当前阶段只以 [Current State](../00-governance/SHACO-FORGE-CURRENT-STATE.md) 为准；F-IFR-01 已通过 Targeted Independent Re-review 关闭，UI-G14 CONFIRMED，Step3 PASS / CLOSED / FROZEN，见 [Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md)。Slice2 仍为 IN_PROGRESS_PENDING_INDEPENDENT_CLOSURE_AUDIT；NEXT_ACTION=INDEPENDENT_CLOSURE_AUDIT_V1_SLICE_2。Visual Polish 非阻断延后；Provider 0，Slice3 NOT_STARTED。本历史快照不构成当前授权。 Owner 已批准仅三个确切 Historical Raw Evidence logs 的 whitespace exception，以保持接受时的原始字节。CR-aware 完整检查仍有 27 项，全部位于这三个日志；非豁免暂存内容检查 PASS，三个原始日志 SHA256 / staged blob / byte preservation PASS。KNOWN_RAW_EVIDENCE_FORMATTING_PRESERVED_BY_DESIGN；没有修正或规范化日志。
+
+</details>
 
 Date: 2026-09-04
 

@@ -2,6 +2,55 @@
 
 Status: ACTIVE
 
+## Current — Slice2 Owner Closure / Baseline Frozen (2026-09-11)
+
+<!-- SLICE2_CLOSURE_CURRENT_START -->
+Architecture Owner 已接受 V1-SLICE-2-INDEPENDENT-CLOSURE-AUDIT PASS（OWNER_SUPPLIED_INLINE_REVIEW_TRANSCRIPT，Reviewer READ_ONLY），最终 Blocking Findings NONE，并正式关闭 Slice2、冻结基线。当前阶段与页首 checkpoint 一致；[Slice2 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) 保存 Audit 来源、最终 disposition 与累计证据依据。Current State 保持唯一阶段 authority。
+
+```text
+CURRENT_IMPLEMENTATION_ROUTE = FOUR_SLICE_HARNESS_REUSE_ROUTE
+V1_SLICE_1 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP2 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP3 = PASS / CLOSED / FROZEN
+STEP3_CLOSURE = YES
+STEP3_BASELINE_FREEZE_AUTHORITY = d8f52042374f27aa7b6e8ddfe38d76478737ac3b
+F_IFR_01 = CLOSED_BY_INDEPENDENT_REREVIEW
+UI_G14 = CONFIRMED
+V1_SLICE_2_INDEPENDENT_CLOSURE_AUDIT = PASS
+V1_SLICE_2_CLOSURE_BLOCKING_FINDINGS = NONE
+V1_SLICE_2_RESULT = PASS
+V1_SLICE_2_OWNER_CLOSURE = ACCEPTED
+V1_SLICE_2_BASELINE = FROZEN_BY_THIS_CLOSURE_COMMIT
+V1_SLICE_2 = PASS / CLOSED / FROZEN
+SLICE2_CLOSURE = YES
+V1_SLICE_1B_NF_6_DISPOSITION = CLOSED_BY_SLICE2_RECOVERY_IMPLEMENTATION
+SLICE2_PROVIDER_GATE_DETERMINATION = NOT_TRIGGERED
+PROVIDER_GATE_AUTHORIZATION = NO
+PROVIDER_RUN_COUNT = 0
+SLICE2_CUMULATIVE_STEP1_STEP2_STEP3_CHAIN = PASS
+FINAL_NON_PROVIDER_REGRESSION = PASS
+FROZEN_BASELINE_IDENTITY = VERIFIED
+SOURCE_DRIFT = NONE
+VISUAL_ACCEPTANCE = PASS
+V1_VISUAL_POLISH = DEFERRED_NON_BLOCKING_TO_V1_FINAL_POLISH
+V1_SLICE_3 = NOT_STARTED
+V1_SLICE_4 = NOT_STARTED
+V1_CURRENT_STEP = V1_SLICE_2_CLOSED_PENDING_NEXT_PHASE_OWNER_AUTHORIZATION
+V1_CURRENT_NEXT_ACTION = WAIT_FOR_ARCHITECTURE_OWNER_NEXT_PHASE_AUTHORIZATION
+ACTIVE_CURRENT_AUTHORITY_COUNT = ONE
+```
+
+NF-6 已由独立 Slice2 Audit 判定、Owner 接受为 CLOSED_BY_SLICE2_RECOVERY_IMPLEMENTATION；历史 Slice1 Decision 中 OPEN_NON_BLOCKING / TARGET = SLICE_2 保持原文。Closure 接受的是最终冻结 source 上累计 Step1 + Step2 + Step3 non-Provider chain；active real Agent turn continuity Gate 未触发且未授权，不改写为已验证。
+
+BRAUN / FAMICOM 与 Visual Acceptance PASS；polish 非阻断延后。Step3 原始 freeze authority d8f52042374f27aa7b6e8ddfe38d76478737ac3b 不变。三个 raw log 精确例外、.gitattributes 与历史 Evidence 保持原字节。此处 FROZEN_BY_THIS_CLOSURE_COMMIT 指本 Slice2 Decision 所在 Closure commit，不改变 Step3 authority。
+
+当前仅等待 Architecture Owner 后续阶段授权。本轮未运行 Runtime / Provider、未重新生成 Composition、未进入 Slice3 或 Packaging；一个本地 Slice2 Closure commit 后停止，不 push。
+<!-- SLICE2_CLOSURE_CURRENT_END -->
+
+<details>
+<summary>Historical — Step3 Closure and pre-Slice2-Audit checkpoint; not current Slice2 status</summary>
+
 ## Current — Step3 Owner Closure / Baseline Frozen (2026-09-11)
 
 <!-- FULL_SHACO_CURRENT_START -->
@@ -51,6 +100,8 @@ ACTIVE_CURRENT_AUTHORITY_COUNT = ONE
 Owner 已批准仅三个确切 Historical Raw Evidence logs 的 whitespace exception，以保持接受时的原始字节。CR-aware 完整检查仍有 27 项，全部位于这三个日志；非豁免暂存内容检查 PASS，三个原始日志 SHA256 / staged blob / byte preservation PASS。KNOWN_RAW_EVIDENCE_FORMATTING_PRESERVED_BY_DESIGN；没有修正或规范化日志。
 
 <!-- FULL_SHACO_CURRENT_END -->
+
+</details>
 
 <details>
 <summary>Historical — 双模板 Delta 待审 checkpoint，已被 Owner acceptance 取代</summary>
@@ -525,7 +576,8 @@ Baseline candidate now gates that Slice behind Independent Review.
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
 | [Full Shaco Presentation Direction Decision](../04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md) | Owner 已接受 REVIEW-027 / 027A 与 BRAUN/FAMICOM Delta；方向保持，实施授权已消费；Step3 已 Owner Closure / Frozen |
-| [Step3 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md) | Step3 PASS / CLOSED / FROZEN；唯一 Closure commit 为 baseline authority；Slice2 待独立 Closure Audit |
+| [Slice2 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) | Slice2 PASS / CLOSED / FROZEN；独立 Audit PASS；NF-6 最终关闭；Provider Gate NOT_TRIGGERED；Slice3 NOT_STARTED |
+| [Step3 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md) | Step3 PASS / CLOSED / FROZEN；原 Step3 Closure commit 为该 Step baseline authority；Slice2 最终状态见 Slice2 Owner Closure Decision |
 | [Full Shaco Implementation Record](../04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-DUAL-THEME-IMPLEMENTATION-RECORD.md) | 当前 Step3 Full Shaco 最终实现与累计六批 Evidence；F-IFR-01 已独立复审关闭；历史结果保留 |
 | [Step3 Implementation Record](../04-development-records/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md) | Pre-UI-corrective source record: historical PASS evidence retained; REVIEW-026/026B remain FAIL; REVIEW-026C deferred pending Full Shaco corrective |
 | [Step3 Contract Gate Freeze / Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP3-CONTRACT-GATE-FREEZE-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md) | Historical frozen authorization: Contract Gate FROZEN; REVIEW-025B PASS; authorization CONSUMED; no new UI implementation authorization; Provider NO |
