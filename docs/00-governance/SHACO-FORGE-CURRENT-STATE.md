@@ -485,6 +485,34 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 
 ## Current Phase
 
+Phase: V1 Implementation。当前阶段与页首 checkpoint 及 [Current Implementation Route](../03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md#current-implementation-route) 一致；Step3 已由 [Step3 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md) 接受并冻结。当前授权仅为本次治理视图一致性修正，下一阶段动作仍待独立 Slice2 Closure Audit 执行。
+
+```text
+CURRENT_IMPLEMENTATION_ROUTE = FOUR_SLICE_HARNESS_REUSE_ROUTE
+V1_SLICE_1 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP2 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP3 = PASS / CLOSED / FROZEN
+STEP3_CLOSURE = YES
+F_IFR_01 = CLOSED_BY_INDEPENDENT_REREVIEW
+UI_G14 = CONFIRMED
+V1_SLICE_2 = IN_PROGRESS_PENDING_INDEPENDENT_CLOSURE_AUDIT
+SLICE2_CLOSURE = NO
+V1_SLICE_3 = PACKAGING / COMPATIBILITY / RELEASE / NOT_STARTED
+V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
+V1_CURRENT_STEP = V1_SLICE_2_ALL_STEPS_CLOSED_PENDING_SLICE_CLOSURE_AUDIT
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_CLOSURE_AUDIT_V1_SLICE_2
+PROVIDER_GATE_AUTHORIZATION = NO
+V1_VISUAL_POLISH = DEFERRED_NON_BLOCKING_TO_V1_FINAL_POLISH
+```
+
+Slice1 carry-forward 保留：`V1_SLICE_1B_NF_6 = FROZEN_CLIENT_RETRY_VS_SHACO_RECOVERY_SEMANTICS`；历史 disposition 为 `OPEN_NON_BLOCKING`，`TARGET = SLICE_2`，见 [Slice1 Owner Closure Decision](../04-development-records/V1-SLICE-1-OWNER-CLOSURE-DECISION.md)。本次不判定其关闭；由后续 Slice2 Independent Closure Audit 独立判断 recovery implementation 是否已满足并正确处置该事项。
+
+本次仅为 `PRE_SLICE2_CLOSURE_AUDIT_GOVERNANCE_RECONCILIATION`。Step3 frozen baseline authority 仍为 `d8f52042374f27aa7b6e8ddfe38d76478737ac3b`，本次 documentation commit 不取代该基线；不重新打开 Step3，不执行 Slice2 Audit，不关闭 Slice2，不进入 Slice3。
+
+<details>
+<summary>Historical / Superseded — previous phase, capability and review snapshots; not active current state</summary>
+
 Current Step3 状态以页首 current checkpoint 为准；以下既有能力/Review/Contract Gate PASS 指历史已验证范围，不提升本次 corrective UI gates。
 
 - Phase: V1 Implementation
@@ -966,7 +994,14 @@ initialization failure was an incomplete execution preflight, not a technical
 Finding; no unsupported root cause is asserted. The final deterministic
 alternate-index path proved raw blob identity before the bounded Closure Commit.
 
+</details>
+
 ## Architecture Review State
+
+当前 Step3 最终审查为 `PASS_AFTER_F_IFR_01_TARGETED_REREVIEW`，Owner Closure `ACCEPTED`；见 [Step3 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md)。以下按阶段保留历史审查结果，其中旧“未开始”“IN_PROGRESS”“未冻结”等措辞仅描述当时状态。
+
+<details>
+<summary>Historical architecture review chronology — original results preserved</summary>
 
 - Initial Pre-Implementation Architecture Audit: FAIL
 - Corrective Architecture Re-Audit: PASS_WITH_REQUIRED_CORRECTIONS
@@ -1000,6 +1035,8 @@ alternate-index path proved raw blob identity before the bounded Closure Commit.
 - Historical Architecture Owner MEC-01 Outcome: `P0S6-MEC-20260903-01` is `EXHAUSTED_INCONCLUSIVE`; two `PRE_HYPOTHESIS` attempts consumed the full budget without reaching Runtime. At that historical boundary, recovery-contract planning was still pending. The later frozen DRRC supplied one Dependency Preparation authority, which is now also exhausted inconclusively; P0.S-7 remains not authorized.
 - P0.S-6 Final Closure Review: `PASS`; one controlled Verification Invocation completed with final classification `AUTHORITY_BLOCKED`; P0.S-6 closed without changing the historical MEC-01 or DRRC classifications; P0.S-7 remains not authorized
 - P0.S-6 Technical Validation Extension: Architecture Owner activated one bounded Execution Authority under `P0S6-TVEC-EA-ACTIVATION-20260904-01`; Extension governance artifacts are frozen in commit `5132777747dbe26185a4ba3a22a07f70e51413e1`; Final Preflight is `AUTHORITY_BLOCKED` because Runner, Execution Root, Invocation and Frozen Input Manifest identities are not established; Verification remains unexecuted and P0.S-7 remains not authorized
+
+</details>
 
 ## Current Architecture Baseline
 
@@ -1059,15 +1096,32 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - V1.0 Technical Implementation Baseline: `ACCEPTED`; Independent REVIEW-011 `PASS`; Architecture Owner accepted
 - V1 Slice 1A: `PASS / CLOSED / FROZEN`; REVIEW-012 `PASS`; whitespace corrective `PASS`; REVIEW-013 Delta Re-Review `PASS`; Owner Closure `ACCEPTED`
 - V1 Slice 1: `PASS / CLOSED / FROZEN`; Slice 1A, 1B and 1C are `PASS / CLOSED / FROZEN`; AUDIT-018 `PASS`; Slice 1 Owner Closure `ACCEPTED`; no 1D/1E
+- V1 Slice 2: Step1 / Step2 / Step3 均 PASS / CLOSED / FROZEN；Slice2 为 IN_PROGRESS_PENDING_INDEPENDENT_CLOSURE_AUDIT，SLICE2_CLOSURE = NO。F-IFR-01 CLOSED_BY_INDEPENDENT_REREVIEW，UI-G14 CONFIRMED；Visual Polish 非阻断延后，Provider NO。
+- V1 Slice 3: NOT_STARTED；V1 Slice 4: NOT_STARTED。
+
+<details>
+<summary>Historical / Superseded — previous Slice2 readiness before Dual Theme Delta review</summary>
+
 - V1 Slice 2: Step1/Step2 PASS / CLOSED / FROZEN；旧 Step3 Contract 与 Freeze Decision 原文保留。Full Shaco Presentation 已选择，REVIEW-027 单模板基线 PASS；BRAUN/FAMICOM Delta 等待 Independent Review。Step3 BLOCKED_PENDING_DUAL_TEMPLATE_DELTA_REVIEW；Full Shaco Implementation PAUSED_PENDING_DUAL_TEMPLATE_DELTA_REVIEW，Provider NO。
 
+</details>
+
 ## Immediate Next Action
+
+`INDEPENDENT_CLOSURE_AUDIT_V1_SLICE_2`。本次仅完成治理一致性修正后停止，不执行该 Audit。Step3 保持 PASS / CLOSED / FROZEN；Slice2 未关闭；Slice3 未开始；Provider authorization NO。
+
+Slice1 carry-forward 保留：`V1_SLICE_1B_NF_6 = FROZEN_CLIENT_RETRY_VS_SHACO_RECOVERY_SEMANTICS`；历史 disposition 为 `OPEN_NON_BLOCKING`，`TARGET = SLICE_2`，见 [Slice1 Owner Closure Decision](../04-development-records/V1-SLICE-1-OWNER-CLOSURE-DECISION.md)。本次不判定其关闭；由后续 Slice2 Independent Closure Audit 独立判断 recovery implementation 是否已满足并正确处置该事项。
+
+<details>
+<summary>Historical / Superseded — previous Dual Theme Delta next action; not current authorization</summary>
 
 Execute `INDEPENDENT_REVIEW_V1_DUAL_THEME_TEMPLATE_SCOPE_DELTA`。仅审查 REVIEW-027 后新增的 BRAUN/FAMICOM scope、真实切换与验收 Delta；REVIEW-027 PASS 保留，不执行 Implementation 或 REVIEW-026C。REVIEW-026/026B 保持 FAIL；F-026-01 CLOSED_BY_REVIEW_026B；F-026-02 OPEN_PENDING_INDEPENDENT_REREVIEW；F-026B-01 corrective APPLIED_WAITING_INDEPENDENT_REREVIEW。双模板扩展条款须经 Delta Review；本轮不追加 Freeze 或实施旧 UI ownership 的 supersession。既有架构方向和 REVIEW-027 PASS 保持，Provider authorization NO。
 
 Do not pull/switch/update the frozen Harness SHA without an Architecture
 Decision. Spike code is NOT production by default. The historical corrective
 candidate state and the previous `STOPPED_BLOCKED` attempt remain preserved.
+
+</details>
 
 ## P0.S-6 Technical Validation Extension Final Closure State (2026-09-05)
 

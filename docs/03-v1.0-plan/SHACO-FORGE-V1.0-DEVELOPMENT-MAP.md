@@ -198,6 +198,38 @@ Status: ACTIVE
 
 ## Current Implementation Route
 
+当前 route 与页首唯一 current checkpoint 及 [Current State](../00-governance/SHACO-FORGE-CURRENT-STATE.md) 一致。[Step3 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md) 已接受 Step3；Slice2 三个 implementation steps 已全部 PASS / CLOSED / FROZEN，当前仅待 Slice2 Independent Closure Audit。
+
+```text
+CURRENT_IMPLEMENTATION_ROUTE = FOUR_SLICE_HARNESS_REUSE_ROUTE
+V1_SLICE_1 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP2 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP3 = PASS / CLOSED / FROZEN
+STEP3_CLOSURE = YES
+F_IFR_01 = CLOSED_BY_INDEPENDENT_REREVIEW
+UI_G14 = CONFIRMED
+V1_SLICE_2 = IN_PROGRESS_PENDING_INDEPENDENT_CLOSURE_AUDIT
+SLICE2_CLOSURE = NO
+V1_SLICE_3 = PACKAGING / COMPATIBILITY / RELEASE / NOT_STARTED
+V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
+V1_CURRENT_STEP = V1_SLICE_2_ALL_STEPS_CLOSED_PENDING_SLICE_CLOSURE_AUDIT
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_CLOSURE_AUDIT_V1_SLICE_2
+PROVIDER_GATE_AUTHORIZATION = NO
+V1_VISUAL_POLISH = DEFERRED_NON_BLOCKING_TO_V1_FINAL_POLISH
+```
+
+四 Slice Harness-reuse route 保持；Slice2 的三个步骤仍为 Worker Authority and Trusted Discovery、Connection Recovery and Cold Projection、Outer Shell / Native / Interaction Integration（已完成 Full Shaco / BRAUN + FAMICOM）。P0.5 / P1 / P2–P8 保留按需合同、能力和验收分类，不构成第二条顺序实施路线。
+
+Step3 Review chain：REVIEW-025 FAIL → REVIEW-025B PASS；REVIEW-026 / 026B historical FAIL；REVIEW-027 PASS；REVIEW-027A PASS；Independent Final Review FAIL / F-IFR-01 → Corrective + Finalization → F-IFR-01 Targeted Re-review PASS → Owner Closure ACCEPTED。旧 FAIL 与旧 source candidate 的 findings 保留；最终 Full Shaco 审查链的 authority 以 Closure Decision 为准。
+
+Slice1 carry-forward 保留：`V1_SLICE_1B_NF_6 = FROZEN_CLIENT_RETRY_VS_SHACO_RECOVERY_SEMANTICS`；历史 disposition 为 `OPEN_NON_BLOCKING`，`TARGET = SLICE_2`，见 [Slice1 Owner Closure Decision](../04-development-records/V1-SLICE-1-OWNER-CLOSURE-DECISION.md)。本次不判定其关闭；由后续 Slice2 Independent Closure Audit 独立判断 recovery implementation 是否已满足并正确处置该事项。
+
+本次仅为 `PRE_SLICE2_CLOSURE_AUDIT_GOVERNANCE_RECONCILIATION`。Step3 frozen baseline authority 仍为 `d8f52042374f27aa7b6e8ddfe38d76478737ac3b`，本次 documentation commit 不取代该基线；不重新打开 Step3，不执行 Slice2 Audit，不关闭 Slice2，不进入 Slice3。
+
+<details>
+<summary>Historical / Superseded — pre-Full-Shaco / Dual Theme Delta route snapshot; not active current state</summary>
+
 Full Shaco UI 方向与 current 状态见页首；REVIEW-027 单模板基线 PASS 保留，当前仅等待 BRAUN/FAMICOM scope Delta Review，Implementation 暂停；下列已完成 Gate/Review 字段只适用于各自历史 source。未来新 UI source 必须重新通过 cumulative regression 与 UI-G01–UI-G18，不能复用历史截图作为 PASS。
 
 ```text
@@ -336,6 +368,8 @@ recovery and truthful no-business-replay failure projection. Such evolution
 must preserve the frozen Architecture/Security/Carrier contracts, must not
 reimplement Step 1, and requires `STEP1_REGRESSION = PASS` through cumulative
 non-Provider E2E before Step2 Closure; this requirement is now accepted as PASS. Additional Step2 implementation is NONE.
+
+</details>
 
 ## Phase Order
 
