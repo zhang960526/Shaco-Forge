@@ -27,6 +27,7 @@ import { materializeHarnessProfile } from './profile.js'
 import { materializeFrozenHarnessRuntime } from './harness-runtime.js'
 import { parseHostReadinessMarker } from './host-readiness-marker.js'
 import { validateHostCarrierPreflight } from './host-carrier-preflight.js'
+import { readPackagedWorkerConfig, packagedChildEnvironment, packagedHarnessRuntime } from './packaged-config.js'
 
 const sourceDir = dirname(fileURLToPath(import.meta.url))
 let host: ChildProcess | undefined
@@ -158,9 +159,11 @@ async function main(): Promise<void> {
   if (process.version !== EXPECTED_WORKER_NODE_VERSION) {
     throw new Error(`Worker requires ${EXPECTED_WORKER_NODE_VERSION}; received ${process.version}`)
   }
-  const config = readWorkerConfig(process.env)
+  const config = await readPackagedWorkerConfig(sourceDir) ?? readWorkerConfig(process.env)
   await access(config.nativeHelperPath)
-  const runtime = await materializeFrozenHarnessRuntime(config.harnessRoot, config.dshHome)
+  const runtime = config.packagedRoot === undefined
+    ? await materializeFrozenHarnessRuntime(config.harnessRoot, config.dshHome)
+    : packagedHarnessRuntime(config.packagedRoot)
   emit('worker-starting', {
     dshHome: config.dshHome,
     harnessCliPath: runtime.cliPath,
@@ -171,7 +174,7 @@ async function main(): Promise<void> {
   const readinessModulePath = join(sourceDir, 'harness-readiness.js')
   const hostProfileRoot = resolve(sourceDir, '..', 'host-profile')
   const harnessScopePath = join(runtime.overlayNodeModules, '@deepseek-ai')
-  const profilePath = await materializeHarnessProfile(
+  const profilePath = config.packagedRoot === undefined ? await materializeHarnessProfile(
     config.dshHome,
     config.profileName,
     readinessModulePath,
@@ -180,7 +183,7 @@ async function main(): Promise<void> {
     join(hostProfileRoot, 'events-route-preflight.mjs'),
     harnessScopePath,
     runtime.overlayNodeModules,
-  )
+  ) : join(config.harnessRoot, 'profiles', config.profileName)
 
   helper = spawn(config.nativeHelperPath, [], {
     cwd: dirname(config.nativeHelperPath),
@@ -204,7 +207,7 @@ async function main(): Promise<void> {
   const hostLaunchArgv = [runtime.cliPath, '--profile', config.profileName]
   host = spawn(process.execPath, hostLaunchArgv, {
     cwd: dirname(runtime.cliPath),
-    env: { ...process.env, DSH_HOME: config.dshHome },
+    env: { ...(config.packagedRoot === undefined ? process.env : packagedChildEnvironment(process.env)), DSH_HOME: config.dshHome },
     stdio: ['ignore', 'pipe', 'pipe', 'pipe', 'pipe'],
     windowsHide: true,
   })

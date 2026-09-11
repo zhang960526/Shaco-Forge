@@ -1,0 +1,54 @@
+{
+  "format": "EXACT_RAW_BYTES_BASE64_WITH_SHA256",
+  "reason": "Preserve complete original successful command output while satisfying the repository whitespace gate for readable log copies",
+  "entries": [
+    {
+      "log": "logs/package-runtime-4.log",
+      "rawBytesBase64": "JCBub2RlIHNjcmlwdHMvcGFja2FnZS1ydW50aW1lLm1qcwpQYWNrYWdpbmcgYXBwIGZvciBwbGF0Zm9ybSB3aW4zMiB4NjQgdXNpbmcgZWxlY3Ryb24gdjM1LjcuNQogIOato+WcqOehruWumuimgei/mOWOn+eahOmhueebruKApg0KICDlt7Lov5jljp8gRDpcUHJvamVjdFxTaGFjby1Gb3JnZVxhcHBzXG5hdGl2ZS1jYXJyaWVyXFNoYWNvRm9yZ2UuTmF0aXZlQ2Fycmllci5jc3Byb2ogKOeUqOaXtiAxLjM3IOenkinjgIINCiAgU2hhY29Gb3JnZS5OYXRpdmVDYXJyaWVyIC0+IEQ6XFByb2plY3RcU2hhY28tRm9yZ2VcYXBwc1xuYXRpdmUtY2FycmllclxiaW5cUmVsZWFzZVxuZXQxMC4wLXdpbmRvd3Ncd2luLXg2NFxTaGFjb0ZvcmdlLk5hdGl2ZUNhcnJpZXIuZGxsDQogIFNoYWNvRm9yZ2UuTmF0aXZlQ2FycmllciAtPiBEOlxQcm9qZWN0XFNoYWNvLUZvcmdlXGRpc3RccGFja2FnaW5nXDE3ODkxMTIxOTM4MzBcb3V0cHV0XFNoYWNvIEZvcmdlLXdpbjMyLXg2NFxuYXRpdmVcDQp7CiAgInJlc3VsdCI6ICJQQVNTIiwKICAicGFja2FnZWRSb290IjogIkQ6XFxQcm9qZWN0XFxTaGFjby1Gb3JnZVxcZGlzdFxccGFja2FnaW5nXFwxNzg5MTEyMTkzODMwXFxvdXRwdXRcXFNoYWNvIEZvcmdlLXdpbjMyLXg2NCIsCiAgImRpZ2VzdCI6ICJkN2M3NDg3NmJhZGRiM2I0N2I0YTY4NDU3YjdkMjQxNjhhMjUwNGNlZDA5NmQ3NDNiNmJiZThhMDFhNTExNGYxIiwKICAiZmlsZXMiOiA0NDI0MAp9Cgo=",
+      "rawBytes": 731,
+      "rawSha256": "5de1f9826f7a2a77345feb3f93914bf175a8ff2a0462edaf6e5e01e873203787",
+      "displaySha256": "04181fbfb0ab0d7a7dbd33fc9ab89428ed2d758dce2b4b8763d8a2ff0cdd9345",
+      "transformation": "Trailing blank EOF lines only; exactly one final LF in readable display"
+    },
+    {
+      "log": "logs/package-runtime-6.log",
+      "rawBytesBase64": "JCBub2RlIHNjcmlwdHMvcGFja2FnZS1ydW50aW1lLm1qcwpQYWNrYWdpbmcgYXBwIGZvciBwbGF0Zm9ybSB3aW4zMiB4NjQgdXNpbmcgZWxlY3Ryb24gdjM1LjcuNQogIOato+WcqOehruWumuimgei/mOWOn+eahOmhueebruKApg0KICDlt7Lov5jljp8gRDpcUHJvamVjdFxTaGFjby1Gb3JnZVxhcHBzXG5hdGl2ZS1jYXJyaWVyXFNoYWNvRm9yZ2UuTmF0aXZlQ2Fycmllci5jc3Byb2ogKOeUqOaXtiAxODYg5q+r56eSKeOAgg0KICBTaGFjb0ZvcmdlLk5hdGl2ZUNhcnJpZXIgLT4gRDpcUHJvamVjdFxTaGFjby1Gb3JnZVxhcHBzXG5hdGl2ZS1jYXJyaWVyXGJpblxSZWxlYXNlXG5ldDEwLjAtd2luZG93c1x3aW4teDY0XFNoYWNvRm9yZ2UuTmF0aXZlQ2Fycmllci5kbGwNCiAgU2hhY29Gb3JnZS5OYXRpdmVDYXJyaWVyIC0+IEQ6XFByb2plY3RcU2hhY28tRm9yZ2VcZGlzdFxwYWNrYWdpbmdcMTc4OTExMjQ4OTM2M1xvdXRwdXRcU2hhY28gRm9yZ2Utd2luMzIteDY0XG5hdGl2ZVwNCnsKICAicmVzdWx0IjogIlBBU1MiLAogICJwYWNrYWdlZFJvb3QiOiAiRDpcXFByb2plY3RcXFNoYWNvLUZvcmdlXFxkaXN0XFxwYWNrYWdpbmdcXDE3ODkxMTI0ODkzNjNcXG91dHB1dFxcU2hhY28gRm9yZ2Utd2luMzIteDY0IiwKICAiZGlnZXN0IjogIjRmNzM0NGIzMzJlMzgxODUyOTliNDRlMDA3ZTg4ZjZkOWNjOGZmOWY5MzY0MDdiMDE2NDQyM2M4YmZkYjA1NzYiLAogICJmaWxlcyI6IDQ0MjQwCn0KCg==",
+      "rawBytes": 733,
+      "rawSha256": "35db5701ce71e463db103245d16e056fa24cd903f7e3d54c6bee679b2afde478",
+      "displaySha256": "9fc400dd2e6466450dd3f53e95f9d4ce3cbd37350e85b138193262e049259c1b",
+      "transformation": "Trailing blank EOF lines only; exactly one final LF in readable display"
+    },
+    {
+      "log": "logs/package-runtime-7.log",
+      "rawBytesBase64": "JCBub2RlIHNjcmlwdHMvcGFja2FnZS1ydW50aW1lLm1qcwpQYWNrYWdpbmcgYXBwIGZvciBwbGF0Zm9ybSB3aW4zMiB4NjQgdXNpbmcgZWxlY3Ryb24gdjM1LjcuNQogIOato+WcqOehruWumuimgei/mOWOn+eahOmhueebruKApg0KICDmiYDmnInpobnnm67lnYfmmK/mnIDmlrDnmoTvvIzml6Dms5Xov5jljp/jgIINCiAgU2hhY29Gb3JnZS5OYXRpdmVDYXJyaWVyIC0+IEQ6XFByb2plY3RcU2hhY28tRm9yZ2VcYXBwc1xuYXRpdmUtY2FycmllclxiaW5cUmVsZWFzZVxuZXQxMC4wLXdpbmRvd3Ncd2luLXg2NFxTaGFjb0ZvcmdlLk5hdGl2ZUNhcnJpZXIuZGxsDQogIFNoYWNvRm9yZ2UuTmF0aXZlQ2FycmllciAtPiBEOlxQcm9qZWN0XFNoYWNvLUZvcmdlXGRpc3RccGFja2FnaW5nXDE3ODkxMTM0NTU0ODdcb3V0cHV0XFNoYWNvIEZvcmdlLXdpbjMyLXg2NFxuYXRpdmVcDQp7CiAgInJlc3VsdCI6ICJQQVNTIiwKICAicGFja2FnZWRSb290IjogIkQ6XFxQcm9qZWN0XFxTaGFjby1Gb3JnZVxcZGlzdFxccGFja2FnaW5nXFwxNzg5MTEzNDU1NDg3XFxvdXRwdXRcXFNoYWNvIEZvcmdlLXdpbjMyLXg2NCIsCiAgImRpZ2VzdCI6ICI5MDAwMzY0MDgxNjg1OTI0OTRlNmNjZmFiMTI3OWE5YmQyOWRkMzNmYmUyNDg1NjMzNWNhZDEzZDMzNThjZTlhIiwKICAiZmlsZXMiOiA0NDI0MAp9Cgo=",
+      "rawBytes": 671,
+      "rawSha256": "98d09b3c4a76374ed43ef6eddda3e9e8dcf08cd2229035ee2b4faa37d4c1d858",
+      "displaySha256": "a2e80ec372cdebe4d76a34bf3875379d9ac26bdde182b9dfdec6aa40d1de5040",
+      "transformation": "Trailing blank EOF lines only; exactly one final LF in readable display"
+    },
+    {
+      "log": "logs/package-runtime-8.log",
+      "rawBytesBase64": "JCBub2RlIHNjcmlwdHMvcGFja2FnZS1ydW50aW1lLm1qcwpQYWNrYWdpbmcgYXBwIGZvciBwbGF0Zm9ybSB3aW4zMiB4NjQgdXNpbmcgZWxlY3Ryb24gdjM1LjcuNQogIOato+WcqOehruWumuimgei/mOWOn+eahOmhueebruKApg0KICDmiYDmnInpobnnm67lnYfmmK/mnIDmlrDnmoTvvIzml6Dms5Xov5jljp/jgIINCiAgU2hhY29Gb3JnZS5OYXRpdmVDYXJyaWVyIC0+IEQ6XFByb2plY3RcU2hhY28tRm9yZ2VcYXBwc1xuYXRpdmUtY2FycmllclxiaW5cUmVsZWFzZVxuZXQxMC4wLXdpbmRvd3Ncd2luLXg2NFxTaGFjb0ZvcmdlLk5hdGl2ZUNhcnJpZXIuZGxsDQogIFNoYWNvRm9yZ2UuTmF0aXZlQ2FycmllciAtPiBEOlxQcm9qZWN0XFNoYWNvLUZvcmdlXGRpc3RccGFja2FnaW5nXDE3ODkxMTQ4NzIwNzJcb3V0cHV0XFNoYWNvIEZvcmdlLXdpbjMyLXg2NFxuYXRpdmVcDQp7CiAgInJlc3VsdCI6ICJQQVNTIiwKICAicGFja2FnZWRSb290IjogIkQ6XFxQcm9qZWN0XFxTaGFjby1Gb3JnZVxcZGlzdFxccGFja2FnaW5nXFwxNzg5MTE0ODcyMDcyXFxvdXRwdXRcXFNoYWNvIEZvcmdlLXdpbjMyLXg2NCIsCiAgImRpZ2VzdCI6ICI5NmI3YWEzOWM2MDFkYTFlOWFhNjVmZTdiMDQ4ZjExZjIxOGI4Njg2ZjlhZDVjYWQ4ZTA1NjJlYmU0Njc3MDliIiwKICAiZmlsZXMiOiA0NDI0MAp9Cgo=",
+      "rawBytes": 671,
+      "rawSha256": "92bf5f67ccb142a1af14f2218d7660473df4e1d52d5995b7202534dac65e3e3e",
+      "displaySha256": "e2bade071f39b485803505436ae937dcbc614c99c23d4d740db6b48cb83f8e28",
+      "transformation": "Trailing blank EOF lines only; exactly one final LF in readable display"
+    },
+    {
+      "log": "logs/package-runtime-9.log",
+      "rawBytesBase64": "JCBub2RlIHNjcmlwdHMvcGFja2FnZS1ydW50aW1lLm1qcwpQYWNrYWdpbmcgYXBwIGZvciBwbGF0Zm9ybSB3aW4zMiB4NjQgdXNpbmcgZWxlY3Ryb24gdjM1LjcuNQogIOato+WcqOehruWumuimgei/mOWOn+eahOmhueebruKApg0KICDmiYDmnInpobnnm67lnYfmmK/mnIDmlrDnmoTvvIzml6Dms5Xov5jljp/jgIINCiAgU2hhY29Gb3JnZS5OYXRpdmVDYXJyaWVyIC0+IEQ6XFByb2plY3RcU2hhY28tRm9yZ2VcYXBwc1xuYXRpdmUtY2FycmllclxiaW5cUmVsZWFzZVxuZXQxMC4wLXdpbmRvd3Ncd2luLXg2NFxTaGFjb0ZvcmdlLk5hdGl2ZUNhcnJpZXIuZGxsDQogIFNoYWNvRm9yZ2UuTmF0aXZlQ2FycmllciAtPiBEOlxQcm9qZWN0XFNoYWNvLUZvcmdlXGRpc3RccGFja2FnaW5nXDE3ODkxMTY4MDc4NTBcb3V0cHV0XFNoYWNvIEZvcmdlLXdpbjMyLXg2NFxuYXRpdmVcDQp7CiAgInJlc3VsdCI6ICJQQVNTIiwKICAicGFja2FnZWRSb290IjogIkQ6XFxQcm9qZWN0XFxTaGFjby1Gb3JnZVxcZGlzdFxccGFja2FnaW5nXFwxNzg5MTE2ODA3ODUwXFxvdXRwdXRcXFNoYWNvIEZvcmdlLXdpbjMyLXg2NCIsCiAgImRpZ2VzdCI6ICI2NzlhOTIxNzFjMDQ3ZjcwYjRkNjA3ZDA2NmY5MjJlYzAxNTNkM2Y1MTZhMmZhZmJlZjkxOThkNDFhYjdjMmFhIiwKICAiZmlsZXMiOiA0NDI0MAp9Cgo=",
+      "rawBytes": 671,
+      "rawSha256": "709ac2eabf3a4ebdef8576024af771d69698dc2085d8bfc7a92c6528fad78551",
+      "displaySha256": "37620e752484d4834ffa2ef4a2c6efd8a86b2944d6a030dc0c1f1172bba7eb3e",
+      "transformation": "Trailing blank EOF lines only; exactly one final LF in readable display"
+    },
+    {
+      "log": "logs/smoke-packaged-runtime-2.log",
+      "rawBytesBase64": "JCBub2RlIHNjcmlwdHMvc21va2UtcGFja2FnZWQtcnVudGltZS5tanMKewogICJyZXN1bHQiOiAiUEFTUyIsCiAgImV2aWRlbmNlIjogIkQ6XFxQcm9qZWN0XFxTaGFjby1Gb3JnZVxcZG9jc1xcMDQtZGV2ZWxvcG1lbnQtcmVjb3Jkc1xcZXZpZGVuY2VcXFYxLVNMSUNFLTNcXFNURVAtMVxcUzNTVEVQMS0yMDI2MDkxMS1GT1VOREFUSU9OLTAxXFxydW5zXFxzbW9rZS1wYWNrYWdlZC1ydW50aW1lLTIiLAogICJnYXRlcyI6IDI1LAogICJob21lIjogIkM6XFxVc2Vyc1xcMTg5MDJcXEFwcERhdGFcXExvY2FsXFxTaGFjbyBGb3JnZVxcZHNoIgp9Cgo=",
+      "rawBytes": 311,
+      "rawSha256": "421313f4fdf2587a46dbe5c1291574ada022a6199a7fc401253ae9a23a8bec33",
+      "displaySha256": "96722c1f8f854ec21fa6f22b1abc8e2f91216fb8dc3a7b69c0af774c3e4fb098",
+      "transformation": "Trailing blank EOF lines only; exactly one final LF in readable display"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "results": [
+    {
+      "id": "COMPOSITION_AND_NO_PATH_TOOLCHAIN",
+      "result": "PASS",
+      "nodeIdentity": {
+        "version": "v22.19.0",
+        "platform": "win32",
+        "arch": "x64",
+        "execPath": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789116807850\\output\\Shaco Forge-win32-x64\\runtime\\node.exe"
+      },
+      "path": "C:\\WINDOWS\\System32;C:\\WINDOWS"
+    },
+    {
+      "id": "MISSING_NODE",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "MISSING_NODE.json"
+    },
+    {
+      "id": "MISSING_NODE_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "WRONG_NODE",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "WRONG_NODE.json"
+    },
+    {
+      "id": "WRONG_NODE_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "MISSING_HARNESS",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "MISSING_HARNESS.json"
+    },
+    {
+      "id": "MISSING_HARNESS_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "WRONG_HARNESS",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "WRONG_HARNESS.json"
+    },
+    {
+      "id": "WRONG_HARNESS_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "MODIFIED_CRITICAL",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "MODIFIED_CRITICAL.json"
+    },
+    {
+      "id": "MODIFIED_CRITICAL_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "MISSING_CRITICAL",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "MISSING_CRITICAL.json"
+    },
+    {
+      "id": "MISSING_CRITICAL_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "UNEXPECTED_CRITICAL",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "UNEXPECTED_CRITICAL.json"
+    },
+    {
+      "id": "UNEXPECTED_CRITICAL_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "HOME_REJECT_INSTALL_ROOT",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_CWD",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_TEMP",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_SHARED",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_JUNCTION",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_ACTUAL_KNOWN_FOLDER_JUNCTION",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "REAL_WORKER_HARNESS_AND_CONTROLLED_HOME",
+      "result": "PASS",
+      "home": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+      "canonicalHome": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+      "testEnvironment": "CURRENT_USER_EXPLORER_DESKTOP",
+      "proof": [
+        {
+          "pid": 38464,
+          "executable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789116807850\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+          "startTime": "2026-09-11T09:01:24.5338036Z"
+        },
+        {
+          "pid": 32984,
+          "executable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789116807850\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+          "startTime": "2026-09-11T09:02:02.5570150Z"
+        }
+      ],
+      "ready": {
+        "protocolVersion": 1,
+        "phase": "host-ready",
+        "timestamp": "2026-09-11T09:02:06.014Z",
+        "workerPid": 38464,
+        "parentPid": 20492,
+        "workerNodeVersion": "v22.19.0",
+        "workerExecutable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789116807850\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+        "workerArgv": [
+          "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789116807850\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+        ],
+        "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+        "harnessRelease": "dsh-v0.1.2-alpha.1",
+        "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+        "hostPid": 32984,
+        "hostLaunchArgv": [
+          "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789116807850\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+          "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789116807850\\output\\Shaco Forge-win32-x64\\harness\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "--profile",
+          "shaco-forge"
+        ],
+        "profileName": "shaco-forge",
+        "profilePath": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789116807850\\output\\Shaco Forge-win32-x64\\harness\\profiles\\shaco-forge",
+        "dshHome": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+        "harnessCliPath": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789116807850\\output\\Shaco Forge-win32-x64\\harness\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+        "harnessSourceRoot": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789116807850\\output\\Shaco Forge-win32-x64\\harness",
+        "readiness": {
+          "gatewayPresetCount": 4,
+          "standardPresetPresent": true
+        }
+      }
+    },
+    {
+      "id": "ORDINARY_STARTUP",
+      "result": "PASS",
+      "exitCode": 0,
+      "evidence": "ORDINARY_STARTUP.json"
+    },
+    {
+      "id": "EVIDENCE_OBSERVER_STARTUP",
+      "result": "PASS",
+      "exitCode": 0,
+      "evidence": "EVIDENCE_OBSERVER_STARTUP.json"
+    },
+    {
+      "id": "FINAL_INTEGRITY_AND_CLEANUP",
+      "result": "PASS",
+      "productDataHomePreserved": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+      "tempScope": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-FOUNDATION-01\\runs\\smoke-packaged-runtime-2",
+      "packageBytesRestored": true,
+      "noProvider": true,
+      "noSigning": true
+    }
+  ],
+  "providerRuns": 0,
+  "signingRuns": 0
+}

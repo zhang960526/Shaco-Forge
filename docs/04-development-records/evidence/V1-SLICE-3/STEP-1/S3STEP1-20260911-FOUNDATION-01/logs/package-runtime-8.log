@@ -1,0 +1,12 @@
+$ node scripts/package-runtime.mjs
+Packaging app for platform win32 x64 using electron v35.7.5
+  正在确定要还原的项目…
+  所有项目均是最新的，无法还原。
+  ShacoForge.NativeCarrier -> D:\Project\Shaco-Forge\apps\native-carrier\bin\Release\net10.0-windows\win-x64\ShacoForge.NativeCarrier.dll
+  ShacoForge.NativeCarrier -> D:\Project\Shaco-Forge\dist\packaging\1789114872072\output\Shaco Forge-win32-x64\native\
+{
+  "result": "PASS",
+  "packagedRoot": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789114872072\\output\\Shaco Forge-win32-x64",
+  "digest": "96b7aa39c601da1e9aa65fe7b048f11f218b8686f9ad5cad8e0562ebe467709b",
+  "files": 44240
+}

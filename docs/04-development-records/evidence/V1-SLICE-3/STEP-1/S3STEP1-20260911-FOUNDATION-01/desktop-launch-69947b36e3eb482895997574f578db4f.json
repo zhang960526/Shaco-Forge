@@ -1,0 +1,6 @@
+{
+  "command": "packaged-startup-probe",
+  "environment": "CURRENT_USER_EXPLORER_DESKTOP",
+  "driverPid": 35532,
+  "exitCode": 1
+}

@@ -2,7 +2,53 @@
 
 Status: ACTIVE
 
-## Current — Slice3 Contract Frozen / Step1 Authorized Not Started (2026-09-11)
+## Current - Slice3 Step1 Implemented Waiting Independent Review (2026-09-11)
+
+<!-- SLICE3_STEP1_CURRENT_START -->
+Step1 implementation and all required dedicated/cumulative non-Provider gates have passed.
+
+The candidate is **IMPLEMENTED_WAITING_INDEPENDENT_REVIEW**. [Current State](SHACO-FORGE-CURRENT-STATE.md) remains the sole current-phase authority.
+
+[Implementation Record](../04-development-records/V1-SLICE-3-STEP1-PACKAGED-RUNTIME-FOUNDATION-IMPLEMENTATION-RECORD.md) · [Evidence and complete execution report](../04-development-records/evidence/V1-SLICE-3/STEP-1/S3STEP1-20260911-FOUNDATION-01/final-report.md) · [Review handoff](../04-development-records/evidence/V1-SLICE-3/STEP-1/S3STEP1-20260911-FOUNDATION-01/review-handoff.md).
+
+Independent Review is NOT_STARTED; no review ID or review verdict is created here. Step1 is not closed or frozen. NF-1/NF-3 are technical candidates only; final disposition belongs to subsequent Reviewer/Owner action.
+
+Frozen Contract, REVIEW-028 historical FAIL, REVIEW-028B PASS and Owner closure of S3-AR-001 remain unchanged. F-05 stays open; NF-4 and the 262144-byte Carrier frame cap are unchanged. Step2/Step3 remain unauthorized; Provider and Signing counts are zero; Slice4 is not started.
+
+```text
+V1_SLICE_3 = IN_PROGRESS
+V1_SLICE_3_ARCHITECTURE_CONTRACT = FROZEN_FOR_IMPLEMENTATION
+V1_SLICE_3_STEP1_IMPLEMENTATION_AUTHORIZATION = CONSUMED
+V1_SLICE_3_STEP1_IMPLEMENTATION_RESULT = PASS
+V1_SLICE_3_STEP1 = IMPLEMENTED_WAITING_INDEPENDENT_REVIEW
+V1_SLICE_3_STEP1_DEDICATED_GATES = PASS
+V1_SLICE_3_STEP1_CUMULATIVE_NON_PROVIDER_REGRESSION = PASS
+V1_SLICE_3_STEP1_INDEPENDENT_REVIEW = NOT_STARTED
+V1_SLICE_3_STEP1_OWNER_CLOSURE = NOT_PERFORMED
+V1_SLICE_3_STEP1_BASELINE = NOT_FROZEN
+V1_SLICE_3_STEP2 = NOT_AUTHORIZED
+V1_SLICE_3_STEP3 = NOT_AUTHORIZED
+V1_SLICE_3_CLOSURE = NO
+REVIEW_012_F_05 = OPEN_KNOWN_CONSTRAINT
+F05_SECURITY_DISPOSITION = PENDING_ARCHITECTURE_OWNER_ACCEPTANCE
+F05_CLOSURE_BY_EXECUTOR = FORBIDDEN
+F05_CLOSURE_BY_REVIEWER = FORBIDDEN
+F05_RESIDUAL_RISK_ACCEPTANCE_OWNER = ARCHITECTURE_OWNER_ONLY
+STEP2_CLOSURE_WITHOUT_F05_OWNER_DISPOSITION = FORBIDDEN
+NF1_TECHNICAL_DISPOSITION_CANDIDATE = CLOSED_BY_PACKAGING_HARDENING
+NF3_TECHNICAL_DISPOSITION_CANDIDATE = CLOSED_BY_STABLE_RELEASE_IDENTITY
+NF4_STATUS = DEFERRED_TO_SLICE3_STEP3 / NOT_CLOSED
+PROVIDER_GATE_AUTHORIZATION = NO
+PROVIDER_RUN_COUNT = 0
+SIGNING_EXECUTION_AUTHORIZATION = NO
+SIGNING_RUN_COUNT = 0
+V1_SLICE_4 = NOT_STARTED
+V1_CURRENT_STEP = V1_SLICE_3_STEP1_IMPLEMENTED_WAITING_INDEPENDENT_REVIEW
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_REVIEW_V1_SLICE_3_STEP1_IMPLEMENTATION
+```
+<!-- SLICE3_STEP1_CURRENT_END -->
+
+## Historical — Slice3 Contract Frozen / Step1 Authorized Not Started (2026-09-11)
 
 <!-- SLICE3_FREEZE_CURRENT_START -->
 Architecture Owner 已接受 [REVIEW-028B PASS](../05-reviews/architecture/AUDIT-028B-V1-SLICE-3-S3-AR-001-TARGETED-CORRECTIVE-REREVIEW.md)，
@@ -110,7 +156,7 @@ BRAUN / FAMICOM 与 Visual Acceptance PASS；polish 非阻断延后。Step3 原�
 <details>
 <summary>Historical — Step3 Closure and pre-Slice2-Audit checkpoint; not current Slice2 status</summary>
 
-## Current — Step3 Owner Closure / Baseline Frozen (2026-09-11)
+## Historical — Slice2 Step3 Owner Closure / Baseline Frozen (2026-09-11)
 
 <!-- FULL_SHACO_CURRENT_START -->
 本节是唯一 current checkpoint。Architecture Owner 已接受 F-IFR-01-TARGETED-REREVIEW PASS，并正式接受 Step3 Closure / Baseline Freeze。独立复审来源为 OWNER_SUPPLIED_INLINE_REVIEW_TRANSCRIPT；本执行者只持久化该事实，不虚构独立报告路径。历史 Independent Final Review FAIL 和旧 Finding 保留；当前最终 Blocking Findings 为 NONE。
@@ -595,32 +641,41 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 
 ## Current Phase
 
-V1-SLICE-3 Planning 已完成；REVIEW-028B 对唯一 Contract Finding S3-AR-001 的
-Corrective 返回 `PASS`，Architecture Owner 已接受、关闭该 Finding、冻结 Contract，并
-只授权尚未开始的 Step1。REVIEW-028 保持历史 `FAIL`；REVIEW-012 F-05 保持 open。
+Slice3 Architecture Contract remains frozen after REVIEW-028B PASS and Owner closure of S3-AR-001. Step1 implementation and its required gates passed; Independent Review has not started. Current state:
 
 ```text
-V1_SLICE_3_ARCHITECTURE_REENTRY = AUTHORIZED
-V1_SLICE_3_PLANNING = COMPLETED
+V1_SLICE_3 = IN_PROGRESS
 V1_SLICE_3_ARCHITECTURE_CONTRACT = FROZEN_FOR_IMPLEMENTATION
-V1_SLICE_3_ARCHITECTURE_REVIEW = PASS_AFTER_S3_AR_001_TARGETED_REREVIEW
-V1_SLICE_3_ARCHITECTURE_REVIEW_BLOCKING_FINDINGS = NONE
-S3_AR_001 = CLOSED_BY_TARGETED_REREVIEW_AND_OWNER_ACCEPTANCE
-V1_SLICE_3_ARCHITECTURE_OWNER_FREEZE = ACCEPTED
-V1_SLICE_3_IMPLEMENTATION = AUTHORIZED_NOT_STARTED
-V1_SLICE_3_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
-V1_SLICE_3_STEP1 = PACKAGED_RUNTIME_FOUNDATION / AUTHORIZED_NOT_STARTED
-V1_SLICE_3_STEP2 = COMPATIBILITY_DISTRIBUTION_UPGRADE_SAFETY / NOT_AUTHORIZED
-V1_SLICE_3_STEP3 = PACKAGED_RUNTIME_CUMULATIVE_ACCEPTANCE / NOT_AUTHORIZED
+V1_SLICE_3_STEP1_IMPLEMENTATION_AUTHORIZATION = CONSUMED
+V1_SLICE_3_STEP1_IMPLEMENTATION_RESULT = PASS
+V1_SLICE_3_STEP1 = IMPLEMENTED_WAITING_INDEPENDENT_REVIEW
+V1_SLICE_3_STEP1_DEDICATED_GATES = PASS
+V1_SLICE_3_STEP1_CUMULATIVE_NON_PROVIDER_REGRESSION = PASS
+V1_SLICE_3_STEP1_INDEPENDENT_REVIEW = NOT_STARTED
+V1_SLICE_3_STEP1_OWNER_CLOSURE = NOT_PERFORMED
+V1_SLICE_3_STEP1_BASELINE = NOT_FROZEN
+V1_SLICE_3_STEP2 = NOT_AUTHORIZED
+V1_SLICE_3_STEP3 = NOT_AUTHORIZED
 V1_SLICE_3_CLOSURE = NO
-V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
 REVIEW_012_F_05 = OPEN_KNOWN_CONSTRAINT
 F05_SECURITY_DISPOSITION = PENDING_ARCHITECTURE_OWNER_ACCEPTANCE
+F05_CLOSURE_BY_EXECUTOR = FORBIDDEN
+F05_CLOSURE_BY_REVIEWER = FORBIDDEN
+F05_RESIDUAL_RISK_ACCEPTANCE_OWNER = ARCHITECTURE_OWNER_ONLY
+STEP2_CLOSURE_WITHOUT_F05_OWNER_DISPOSITION = FORBIDDEN
+NF1_TECHNICAL_DISPOSITION_CANDIDATE = CLOSED_BY_PACKAGING_HARDENING
+NF3_TECHNICAL_DISPOSITION_CANDIDATE = CLOSED_BY_STABLE_RELEASE_IDENTITY
+NF4_STATUS = DEFERRED_TO_SLICE3_STEP3 / NOT_CLOSED
 PROVIDER_GATE_AUTHORIZATION = NO
+PROVIDER_RUN_COUNT = 0
 SIGNING_EXECUTION_AUTHORIZATION = NO
+SIGNING_RUN_COUNT = 0
+V1_SLICE_4 = NOT_STARTED
+V1_CURRENT_STEP = V1_SLICE_3_STEP1_IMPLEMENTED_WAITING_INDEPENDENT_REVIEW
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_REVIEW_V1_SLICE_3_STEP1_IMPLEMENTATION
 ```
 
-详见 [Slice3 Architecture Contract](../03-v1.0-plan/V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md)。
+The implementation record and evidence linked above establish this candidate.
 
 <details>
 <summary>Historical — Current Phase before Slice3 planning authorization</summary>
@@ -1187,9 +1242,11 @@ alternate-index path proved raw blob identity before the bounded Closure Commit.
 
 ## Architecture Review State
 
+Slice3 Architecture Review remains REVIEW-028 historical FAIL / REVIEW-028B PASS, accepted by the Owner. Step1 implementation Independent Review is NOT_STARTED.
+
 Slice2 Independent Closure Audit PASS，Owner Closure ACCEPTED；NF-6 final disposition CLOSED_BY_SLICE2_RECOVERY_IMPLEMENTATION，Provider Gate NOT_TRIGGERED。详见 [Slice2 Closure Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md)。
 
-当前 Step3 最终审查为 `PASS_AFTER_F_IFR_01_TARGETED_REREVIEW`，Owner Closure `ACCEPTED`；见 [Step3 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md)。以下按阶段保留历史审查结果，其中旧“未开始”“IN_PROGRESS”“未冻结”等措辞仅描述当时状态。
+Slice2 Step3 历史最终审查为 `PASS_AFTER_F_IFR_01_TARGETED_REREVIEW`，Owner Closure `ACCEPTED`；见 [Step3 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md)。以下按阶段保留历史审查结果，其中旧“未开始”“IN_PROGRESS”“未冻结”等措辞仅描述当时状态。
 
 <details>
 <summary>Historical architecture review chronology — original results preserved</summary>
@@ -1295,7 +1352,7 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - V1 Slice 2: Step1 / Step2 / Step3 均 PASS / CLOSED / FROZEN；Slice2 为 IN_PROGRESS_PENDING_INDEPENDENT_CLOSURE_AUDIT，SLICE2_CLOSURE = NO。F-IFR-01 CLOSED_BY_INDEPENDENT_REREVIEW，UI-G14 CONFIRMED；Visual Polish 非阻断延后，Provider NO。
 
 </details>
-- V1 Slice 3: `IN_PROGRESS`；REVIEW-028 历史 `FAIL`，REVIEW-028B `PASS`；S3-AR-001 已由 Targeted Re-Review 与 Owner acceptance 关闭；Contract `FROZEN_FOR_IMPLEMENTATION`；仅 Step1 `AUTHORIZED_NOT_STARTED`，Step2/Step3 `NOT_AUTHORIZED`；REVIEW-012 F-05 仍 `OPEN_KNOWN_CONSTRAINT`；V1 Slice 4: NOT_STARTED。
+- V1 Slice 3: IN_PROGRESS; Contract FROZEN_FOR_IMPLEMENTATION; Step1 IMPLEMENTED_WAITING_INDEPENDENT_REVIEW, implementation/dedicated gates/cumulative non-Provider regression PASS; review NOT_STARTED, Owner closure NOT_PERFORMED, baseline NOT_FROZEN. Step2/Step3 NOT_AUTHORIZED; F-05 OPEN_KNOWN_CONSTRAINT; Slice4 NOT_STARTED.
 
 <details>
 <summary>Historical / Superseded — previous Slice2 readiness before Dual Theme Delta review</summary>
@@ -1306,9 +1363,7 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 
 ## Immediate Next Action
 
-`EXECUTE_V1_SLICE_3_STEP1_PACKAGED_RUNTIME_FOUNDATION`。该动作只能在后续独立的
-Step1 Implementation 批次中执行，并须由 Owner 核验交接范围。本次 Freeze 批次不开始
-Step1，不授权 Step2/Step3、Provider、Signing、Fresh Windows 或 F-05 closure。
+`INDEPENDENT_REVIEW_V1_SLICE_3_STEP1_IMPLEMENTATION`. The Executor stops at the review-ready implementation candidate. Review is NOT_STARTED; Step1 closure/freeze and Step2/Step3 authorization are not performed. Provider and Signing counts remain zero; Fresh Windows is not run.
 
 <details>
 <summary>Historical / Superseded — pre-Slice2-Closure governance view; original wording preserved</summary>

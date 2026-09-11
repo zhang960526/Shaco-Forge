@@ -1,0 +1,113 @@
+$ node --test scripts/packaged-runtime.test.mjs
+TAP version 13
+# Subtest: complete composition and deterministic byte-derived manifests, without a self-hash cycle
+ok 1 - complete composition and deterministic byte-derived manifests, without a self-hash cycle
+  ---
+  duration_ms: 72.3774
+  type: 'test'
+  ...
+# Subtest: missing Node fails closed
+ok 2 - missing Node fails closed
+  ---
+  duration_ms: 40.1032
+  type: 'test'
+  ...
+# Subtest: missing Harness fails closed
+ok 3 - missing Harness fails closed
+  ---
+  duration_ms: 38.285
+  type: 'test'
+  ...
+# Subtest: missing Desktop fails closed
+ok 4 - missing Desktop fails closed
+  ---
+  duration_ms: 37.0721
+  type: 'test'
+  ...
+# Subtest: modified critical bytes fails closed
+ok 5 - modified critical bytes fails closed
+  ---
+  duration_ms: 39.612
+  type: 'test'
+  ...
+# Subtest: unexpected critical file fails closed
+ok 6 - unexpected critical file fails closed
+  ---
+  duration_ms: 41.8669
+  type: 'test'
+  ...
+# Subtest: wrong WorkerNodeVersion rejected even with recomputed manifests
+ok 7 - wrong WorkerNodeVersion rejected even with recomputed manifests
+  ---
+  duration_ms: 40.1107
+  type: 'test'
+  ...
+# Subtest: wrong HarnessCommit rejected even with recomputed manifests
+ok 8 - wrong HarnessCommit rejected even with recomputed manifests
+  ---
+  duration_ms: 38.6273
+  type: 'test'
+  ...
+# Subtest: wrong HarnessPackage rejected even with recomputed manifests
+ok 9 - wrong HarnessPackage rejected even with recomputed manifests
+  ---
+  duration_ms: 40.56
+  type: 'test'
+  ...
+# Subtest: wrong ProductionProfileIdentity rejected even with recomputed manifests
+ok 10 - wrong ProductionProfileIdentity rejected even with recomputed manifests
+  ---
+  duration_ms: 38.7597
+  type: 'test'
+  ...
+# Subtest: wrong Platform rejected even with recomputed manifests
+ok 11 - wrong Platform rejected even with recomputed manifests
+  ---
+  duration_ms: 42.536
+  type: 'test'
+  ...
+# Subtest: wrong Architecture rejected even with recomputed manifests
+ok 12 - wrong Architecture rejected even with recomputed manifests
+  ---
+  duration_ms: 46.3957
+  type: 'test'
+  ...
+# Subtest: wrong FrozenContractIdentity rejected even with recomputed manifests
+ok 13 - wrong FrozenContractIdentity rejected even with recomputed manifests
+  ---
+  duration_ms: 39.7015
+  type: 'test'
+  ...
+# Subtest: wrong actual Harness package identity rejected even with recomputed inventory
+ok 14 - wrong actual Harness package identity rejected even with recomputed inventory
+  ---
+  duration_ms: 52.5168
+  type: 'test'
+  ...
+# Subtest: identity envelope modification rejected
+ok 15 - identity envelope modification rejected
+  ---
+  duration_ms: 30.8918
+  type: 'test'
+  ...
+# Subtest: critical directory junction rejected without following it
+ok 16 - critical directory junction rejected without following it
+  ---
+  duration_ms: 36.1782
+  type: 'test'
+  ...
+# Subtest: inventory path traversal, alternate separator and ADS rejected
+ok 17 - inventory path traversal, alternate separator and ADS rejected
+  ---
+  duration_ms: 0.2556
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 761.1108

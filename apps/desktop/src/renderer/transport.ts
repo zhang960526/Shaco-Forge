@@ -6,7 +6,7 @@ export interface RendererTransportEvidence {
   abortCancels: number
   iteratorCancels: number
   eventsReady: number
-  userLoop: ReturnType<typeof createUserLoopObserver>
+  userLoop?: ReturnType<typeof createUserLoopObserver>
   activeStreams: number
   maxActiveStreams: number
 }
@@ -18,8 +18,10 @@ export interface RendererTransportBridge {
   cancelStream(streamId: string, reason: string): Promise<void>
 }
 
-export function createRendererTransportEvidence(): RendererTransportEvidence {
-  return { fetchEndpoints: [], streamEndpoints: [], abortCancels: 0, iteratorCancels: 0, eventsReady: 0, userLoop: createUserLoopObserver(), activeStreams: 0, maxActiveStreams: 0 }
+export function createRendererTransportEvidence(fullObserver: true): RendererTransportEvidence & { userLoop: ReturnType<typeof createUserLoopObserver> }
+export function createRendererTransportEvidence(fullObserver?: boolean): RendererTransportEvidence
+export function createRendererTransportEvidence(fullObserver = false): RendererTransportEvidence {
+  return { fetchEndpoints: [], streamEndpoints: [], abortCancels: 0, iteratorCancels: 0, eventsReady: 0, ...(fullObserver ? { userLoop: createUserLoopObserver() } : {}), activeStreams: 0, maxActiveStreams: 0 }
 }
 
 function rememberEndpoint(endpoints: string[], endpoint: string): void {
@@ -36,14 +38,14 @@ export function createHarnessTransport(bridge: RendererTransportBridge, evidence
       if (typeof body !== 'string') throw new TypeError('Shaco transport accepts JSON string bodies only')
       const endpoint = new URL(url).pathname.replace(/^\/api\//, '')
       rememberEndpoint(evidence.fetchEndpoints, endpoint)
-      const observation = evidence.userLoop.request(endpoint, body)
+      const observation = evidence.userLoop?.request(endpoint, body)
       const response = await bridge.fetch({
         url,
         method: init.method ?? (input instanceof Request ? input.method : 'GET'),
         contentType: headers.get('content-type') ?? '',
         body,
       })
-      evidence.userLoop.response(endpoint, response.body, observation)
+      evidence.userLoop?.response(endpoint, response.body, observation)
       return new Response(response.body, { status: response.status, headers: { 'content-type': response.contentType } })
     },
     openStream(endpoint: string, payload: Record<string, unknown>, signal?: AbortSignal): AsyncIterable<unknown> {
@@ -53,7 +55,7 @@ export function createHarnessTransport(bridge: RendererTransportBridge, evidence
           const streamId = await bridge.openStream(endpoint, payload)
           evidence.activeStreams++
           evidence.maxActiveStreams = Math.max(evidence.maxActiveStreams, evidence.activeStreams)
-          if (endpoint === 'session/follow') evidence.userLoop.open(streamId, endpoint, payload)
+          if (endpoint === 'session/follow') evidence.userLoop?.open(streamId, endpoint, payload)
           let terminal = false
           const abort = (): void => {
             evidence.abortCancels += 1
@@ -72,12 +74,12 @@ export function createHarnessTransport(bridge: RendererTransportBridge, evidence
               if (endpoint === '$events' && typeof item.value === 'object' && item.value !== null && 'type' in item.value && item.value.type === 'ready') {
                 evidence.eventsReady += 1
               }
-              if (endpoint === 'session/follow') evidence.userLoop.item(streamId, endpoint, item.value)
+              if (endpoint === 'session/follow') evidence.userLoop?.item(streamId, endpoint, item.value)
               yield item.value
             }
           } finally {
             evidence.activeStreams--
-            evidence.userLoop.close(streamId)
+            evidence.userLoop?.close(streamId)
             signal?.removeEventListener('abort', abort)
             if (!terminal) {
               evidence.iteratorCancels += 1

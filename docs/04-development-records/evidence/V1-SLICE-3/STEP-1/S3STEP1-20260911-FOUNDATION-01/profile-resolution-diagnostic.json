@@ -1,0 +1,10 @@
+[
+  {
+    "name": "@deepseek-ai/dsh-workspace",
+    "error": "MODULE_NOT_FOUND"
+  },
+  {
+    "name": "@shaco-forge/harness-bootstrap/readiness",
+    "resolved": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\profiles\\shaco-forge\\node_modules\\@shaco-forge\\harness-bootstrap\\readiness.js"
+  }
+]

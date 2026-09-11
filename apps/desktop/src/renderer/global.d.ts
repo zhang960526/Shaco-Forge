@@ -10,6 +10,7 @@ interface BootstrapProjection {
 }
 
 interface Window {
+  __SHACO_FORGE_EVIDENCE_MODE__: boolean
   __SHACO_PRESENTATION__: import('./shaco-bootstrap.mjs').ShacoPresentationBridge & { theme: import('./theme/theme.js').RootThemeController }
   shacoForge: {
     workspace: { pickDirectory(): Promise<string | null> }
@@ -32,7 +33,7 @@ interface Window {
     abortCancels: number
     iteratorCancels: number
     eventsReady: number
-    userLoop: ReturnType<typeof import('./user-loop-evidence.js').createUserLoopObserver>
+    userLoop?: ReturnType<typeof import('./user-loop-evidence.js').createUserLoopObserver>
     activeStreams: number
     maxActiveStreams: number
   }

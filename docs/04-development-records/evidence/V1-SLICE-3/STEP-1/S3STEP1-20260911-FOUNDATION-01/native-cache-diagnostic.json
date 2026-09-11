@@ -1,0 +1,6 @@
+{
+  "observedTestCache": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-FOUNDATION-01\\runs\\packaged-startup-probe-3\\forbidden-ambient-localappdata",
+  "cause": "Frozen native dependency defaults to ambient LOCALAPPDATA extraction cache",
+  "correction": "Use supported NARB_DISABLE_NATIVE_CACHE=1, preserving upstream bytes",
+  "cleanup": "REMOVE_ONLY_THIS_ATTEMPT_TEST_CACHE"
+}

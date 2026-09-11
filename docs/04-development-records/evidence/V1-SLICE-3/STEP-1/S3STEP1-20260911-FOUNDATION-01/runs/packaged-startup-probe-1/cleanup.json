@@ -1,0 +1,13 @@
+{
+  "noAuthority": true,
+  "preexistingHomePreserved": false,
+  "newlyCreatedTestHomeRemoved": true,
+  "knownFolders": {
+    "localApplicationData": "C:\\Users\\18902\\AppData\\Local",
+    "userProfile": "C:\\Users\\18902",
+    "source": "SHGetKnownFolderPath_CURRENT_USER"
+  },
+  "expectedHome": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+  "providerRuns": 0,
+  "signingRuns": 0
+}

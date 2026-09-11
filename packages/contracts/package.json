@@ -6,6 +6,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
+    "./packaged-runtime": {
+      "types": "./dist/packaged-runtime.d.ts",
+      "default": "./dist/packaged-runtime.js"
+    },
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"

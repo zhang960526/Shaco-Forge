@@ -1,0 +1,120 @@
+{
+  "events": [
+    {
+      "protocolVersion": 1,
+      "phase": "worker-starting",
+      "timestamp": "2026-09-11T08:16:19.440Z",
+      "workerPid": 38072,
+      "parentPid": 452,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "dshHome": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+      "harnessCliPath": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\harness\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+      "harnessSourceRoot": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\harness",
+      "profileName": "shaco-forge"
+    },
+    {
+      "protocolVersion": 1,
+      "phase": "host-starting",
+      "timestamp": "2026-09-11T08:16:19.578Z",
+      "workerPid": 38072,
+      "parentPid": 452,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "hostPid": 43608,
+      "hostLaunchArgv": [
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\harness\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+        "--profile",
+        "shaco-forge"
+      ],
+      "profileName": "shaco-forge",
+      "profilePath": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\profiles\\shaco-forge",
+      "dshHome": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+      "harnessCliPath": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\harness\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+      "harnessSourceRoot": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\harness"
+    },
+    {
+      "protocolVersion": 1,
+      "phase": "host-exited",
+      "timestamp": "2026-09-11T08:16:22.225Z",
+      "workerPid": 38072,
+      "parentPid": 452,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "hostPid": 43608,
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "protocolVersion": 1,
+      "phase": "carrier-failed",
+      "timestamp": "2026-09-11T08:16:22.226Z",
+      "workerPid": 38072,
+      "parentPid": 452,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "hostPid": 43608,
+      "error": "Harness Host exited (0)"
+    },
+    {
+      "protocolVersion": 1,
+      "phase": "worker-failed",
+      "timestamp": "2026-09-11T08:16:22.226Z",
+      "workerPid": 38072,
+      "parentPid": 452,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "error": "Error: Host exited before readiness\n    at ChildProcess.<anonymous> (file:///D:/Project/Shaco-Forge/dist/packaging/1789113455487/output/Shaco%20Forge-win32-x64/resources/app/worker/dist/index.js:357:33)\n    at Object.onceWrapper (node:events:634:26)\n    at ChildProcess.emit (node:events:519:28)\n    at ChildProcess._handle.onexit (node:internal/child_process:293:12)"
+    },
+    {
+      "protocolVersion": 1,
+      "phase": "worker-stopped",
+      "timestamp": "2026-09-11T08:16:22.231Z",
+      "workerPid": 38072,
+      "parentPid": 452,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "hostPid": 43608,
+      "exitCode": 1
+    }
+  ],
+  "exitCode": 1,
+  "stderrBytes": 120
+}

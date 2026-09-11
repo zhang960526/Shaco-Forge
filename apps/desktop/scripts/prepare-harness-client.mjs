@@ -8,7 +8,8 @@ import { frozenRoster, validateComposition } from './composition-identity.mjs'
 
 const EXPECTED_VERSION = '0.1.2-alpha.1'
 const EXPECTED_COMMIT = 'cd5ef8148158c3a752a658978873241fdf8e2bbc'
-const REVISION = 'shaco-v1-slice-2-step3-full-shaco-dual-theme-cd5ef81'
+const productVersion = JSON.parse(await readFile(new URL('../../../package.json', import.meta.url), 'utf8')).version
+const REVISION = `shaco-forge-${productVersion}-harness-cd5ef81`
 const REQUIRED = [
   '@deepseek-ai/dsh-client-modules',
   '@deepseek-ai/dsh-client-connection',
@@ -176,7 +177,8 @@ await build({
 
 const manifest = {
   schemaVersion: 1,
-  productSlice: 'V1-SLICE-2-STEP3',
+  productSlice: 'SHACO_FORGE_PRODUCT',
+  productVersion,
   graphRevision: REVISION,
   frozenHarness: { commit: EXPECTED_COMMIT, release: `dsh-v${EXPECTED_VERSION}`, packageVersion: EXPECTED_VERSION },
   composition: { package: '@deepseek-ai/dsh-client-web', export: 'OPTION_B_PUBLIC_LOWER_LEVEL_CLIENT_BOOTSTRAP', publicExportOnly: true },

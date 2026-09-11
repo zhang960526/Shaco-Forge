@@ -1,0 +1,38 @@
+{
+  "events": [
+    {
+      "protocolVersion": 1,
+      "phase": "worker-failed",
+      "timestamp": "2026-09-11T08:11:56.900Z",
+      "workerPid": 16012,
+      "parentPid": 35060,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "error": "Error: DSH_HOME_ATTESTATION_REJECTED\n    at readPackagedWorkerConfig (file:///D:/Project/Shaco-Forge/dist/packaging/1789113455487/output/Shaco%20Forge-win32-x64/resources/app/worker/dist/packaged-config.js:30:15)\n    at async main (file:///D:/Project/Shaco-Forge/dist/packaging/1789113455487/output/Shaco%20Forge-win32-x64/resources/app/worker/dist/index.js:156:20)"
+    },
+    {
+      "protocolVersion": 1,
+      "phase": "worker-stopped",
+      "timestamp": "2026-09-11T08:11:56.903Z",
+      "workerPid": 16012,
+      "parentPid": 35060,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "exitCode": 1
+    }
+  ],
+  "exitCode": 1,
+  "stderrBytes": 0
+}

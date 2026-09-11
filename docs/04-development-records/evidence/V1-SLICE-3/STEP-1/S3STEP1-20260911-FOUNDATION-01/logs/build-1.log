@@ -1,0 +1,36 @@
+$ node scripts/build.mjs
+  ShacoForge.NativeCarrier -> D:\Project\Shaco-Forge\apps\native-carrier\bin\Release\net10.0-windows\ShacoForge.NativeCarrier.dll
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.95
+vite v6.4.3 building for production...
+transforming...
+✓ 11 modules transformed.
+rendering chunks...
+✓ built in 791ms
+vite v6.4.3 building for production...
+transforming...
+✓ 3 modules transformed.
+rendering chunks...
+computing gzip size...
+apps/desktop/.generated-client/static/shell-bootstrap.js  17.77 kB │ gzip: 4.95 kB
+✓ built in 34ms
+{"result":"PREPARED","graphCount":29,"react":"18.3.1"}
+apps/desktop/tests/transport.test.ts(49,3): error TS18048: 'evidence.userLoop' is possibly 'undefined'.
+apps/desktop/tests/transport.test.ts(50,3): error TS18048: 'evidence.userLoop' is possibly 'undefined'.
+apps/desktop/tests/transport.test.ts(63,16): error TS18048: 'evidence.userLoop' is possibly 'undefined'.
+apps/desktop/tests/transport.test.ts(64,30): error TS18048: 'evidence.userLoop' is possibly 'undefined'.
+apps/desktop/tests/transport.test.ts(65,38): error TS18048: 'evidence.userLoop' is possibly 'undefined'.
+file:///D:/Project/Shaco-Forge/scripts/tool-runner.mjs:14
+  if (result.status !== 0) throw new Error(`${label} failed with exit code ${result.status ?? 'unknown'}`)
+                                 ^
+
+Error: desktop theme test build failed with exit code 2
+    at runNode (file:///D:/Project/Shaco-Forge/scripts/tool-runner.mjs:14:34)
+    at file:///D:/Project/Shaco-Forge/scripts/build.mjs:16:1
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

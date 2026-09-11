@@ -1,0 +1,126 @@
+{
+  "results": [
+    {
+      "id": "COMPOSITION_AND_NO_PATH_TOOLCHAIN",
+      "result": "PASS",
+      "nodeIdentity": {
+        "version": "v22.19.0",
+        "platform": "win32",
+        "arch": "x64",
+        "execPath": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789112489363\\output\\Shaco Forge-win32-x64\\runtime\\node.exe"
+      },
+      "path": "C:\\WINDOWS\\System32;C:\\WINDOWS"
+    },
+    {
+      "id": "MISSING_NODE",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "MISSING_NODE.json"
+    },
+    {
+      "id": "MISSING_NODE_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "WRONG_NODE",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "WRONG_NODE.json"
+    },
+    {
+      "id": "WRONG_NODE_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "MISSING_HARNESS",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "MISSING_HARNESS.json"
+    },
+    {
+      "id": "MISSING_HARNESS_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "WRONG_HARNESS",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "WRONG_HARNESS.json"
+    },
+    {
+      "id": "WRONG_HARNESS_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "MODIFIED_CRITICAL",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "MODIFIED_CRITICAL.json"
+    },
+    {
+      "id": "MODIFIED_CRITICAL_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "MISSING_CRITICAL",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "MISSING_CRITICAL.json"
+    },
+    {
+      "id": "MISSING_CRITICAL_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "UNEXPECTED_CRITICAL",
+      "result": "FAIL",
+      "exitCode": 1,
+      "evidence": "UNEXPECTED_CRITICAL.json"
+    },
+    {
+      "id": "UNEXPECTED_CRITICAL_FAIL_CLOSED",
+      "result": "PASS",
+      "actualStartupResult": "FAIL",
+      "fallback": false
+    },
+    {
+      "id": "HOME_REJECT_INSTALL_ROOT",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_CWD",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_TEMP",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_SHARED",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_JUNCTION",
+      "result": "PASS",
+      "writePathEntered": false
+    }
+  ],
+  "providerRuns": 0,
+  "signingRuns": 0
+}

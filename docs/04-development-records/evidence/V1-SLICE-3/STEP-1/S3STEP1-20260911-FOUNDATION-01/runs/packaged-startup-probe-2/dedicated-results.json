@@ -1,0 +1,42 @@
+{
+  "results": [
+    {
+      "id": "COMPOSITION_AND_NO_PATH_TOOLCHAIN",
+      "result": "PASS",
+      "nodeIdentity": {
+        "version": "v22.19.0",
+        "platform": "win32",
+        "arch": "x64",
+        "execPath": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789113455487\\output\\Shaco Forge-win32-x64\\runtime\\node.exe"
+      },
+      "path": "C:\\WINDOWS\\System32;C:\\WINDOWS"
+    },
+    {
+      "id": "HOME_REJECT_INSTALL_ROOT",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_CWD",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_TEMP",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_SHARED",
+      "result": "PASS",
+      "writePathEntered": false
+    },
+    {
+      "id": "HOME_REJECT_JUNCTION",
+      "result": "PASS",
+      "writePathEntered": false
+    }
+  ],
+  "providerRuns": 0,
+  "signingRuns": 0
+}

@@ -1,0 +1,23 @@
+$ node scripts/package-runtime.mjs
+D:\Project\Shaco-Forge\node_modules\.pnpm\get-package-info@1.0.0\node_modules\get-package-info\lib\index.js:23
+      var err = new Error('Unable to find all properties in parent package.json files. Missing props: ' + props.map(function (prop) {
+                ^
+
+Error: Could not locate a package.json file in "D:\Project\Shaco-Forge\dist\packaging\1789112095143\app" or its parent directories for an Electron app with the following fields: author
+    at D:\Project\Shaco-Forge\node_modules\.pnpm\get-package-info@1.0.0\node_modules\get-package-info\lib\index.js:23:17
+    at tryCatcher (D:\Project\Shaco-Forge\node_modules\.pnpm\bluebird@3.7.2\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (D:\Project\Shaco-Forge\node_modules\.pnpm\bluebird@3.7.2\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (D:\Project\Shaco-Forge\node_modules\.pnpm\bluebird@3.7.2\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (D:\Project\Shaco-Forge\node_modules\.pnpm\bluebird@3.7.2\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (D:\Project\Shaco-Forge\node_modules\.pnpm\bluebird@3.7.2\node_modules\bluebird\js\release\promise.js:729:18)
+    at _drainQueueStep (D:\Project\Shaco-Forge\node_modules\.pnpm\bluebird@3.7.2\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (D:\Project\Shaco-Forge\node_modules\.pnpm\bluebird@3.7.2\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (D:\Project\Shaco-Forge\node_modules\.pnpm\bluebird@3.7.2\node_modules\bluebird\js\release\async.js:102:5)
+    at Async.drainQueues (D:\Project\Shaco-Forge\node_modules\.pnpm\bluebird@3.7.2\node_modules\bluebird\js\release\async.js:15:14)
+    at process.processImmediate (node:internal/timers:485:21) {
+  missingProps: [ 'author' ],
+  result: { values: {}, source: {} }
+}
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

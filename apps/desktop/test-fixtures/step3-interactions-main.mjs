@@ -52,6 +52,8 @@ ipcMain.handle = (channel, handler) => originalHandle(channel, async (...args) =
   }
   return result
 })
+// The explicit evidence driver needs bounded observer counters for its proofs.
+process.env.SHACO_FORGE_EVIDENCE_OBSERVER = '1'
 const product = await import('../dist/main/main.js')
 
 async function windowReady() {

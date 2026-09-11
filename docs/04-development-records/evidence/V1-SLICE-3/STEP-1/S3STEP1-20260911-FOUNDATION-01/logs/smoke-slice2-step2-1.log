@@ -1,0 +1,3 @@
+$ node scripts/smoke-slice2-step2.mjs
+{"result":"FAIL","failure":"Product CONNECTED: TIMEOUT","chain":["BOUNDED_CLEANUP_NO_ORPHAN"],"cleanup":{"noOrphan":true,"authorityCount":1,"desktopProcessesExited":true},"providerRuns":0}
+[ELIFECYCLE] Command failed with exit code 1.

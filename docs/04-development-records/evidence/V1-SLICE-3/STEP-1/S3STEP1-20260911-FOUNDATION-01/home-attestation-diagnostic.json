@@ -1,0 +1,14 @@
+{
+  "proof": {
+    "dshHome": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+    "productDataRoot": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge",
+    "knownFolder": "C:\\Users\\18902\\AppData\\Local",
+    "canonical": true,
+    "currentUserOnly": true,
+    "writable": true,
+    "reparseRejected": true,
+    "source": "SHGetKnownFolderPath_CURRENT_USER"
+  },
+  "nodeRealpath": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+  "equal": true
+}

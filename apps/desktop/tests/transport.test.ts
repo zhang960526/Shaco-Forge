@@ -45,7 +45,7 @@ test('Renderer forwards interaction traffic unchanged without observing private 
   const frame = Object.freeze({ type: 'waterfall', event: 'approval/request',
     get eventId() { privateReads++; throw new Error('PRIVATE_ID_READ') } })
   const bridge = bridgeWithItems([frame])
-  const evidence = createRendererTransportEvidence()
+  const evidence = createRendererTransportEvidence(true)
   evidence.userLoop.open = () => { throw new Error('UNEXPECTED_INTERACTION_OBSERVER') }
   evidence.userLoop.item = () => { throw new Error('UNEXPECTED_INTERACTION_OBSERVER') }
   const transport = createHarnessTransport(bridge, evidence)
@@ -63,4 +63,16 @@ test('Renderer forwards interaction traffic unchanged without observing private 
   assert.equal(evidence.userLoop.evidence.observerErrors, 0)
   assert.equal(Object.hasOwn(evidence.userLoop.evidence, 'interactions'), false)
   assert.doesNotMatch(JSON.stringify(evidence.userLoop.evidence), /private-id|allowed-once/)
+})
+
+test('ordinary runtime does not construct a full observer and preserves stream object identity', async () => {
+  const value = Object.freeze({ type: 'message', privatePrompt: 'not-retained' })
+  const evidence = createRendererTransportEvidence()
+  assert.equal(Object.hasOwn(evidence, 'userLoop'), false)
+  const transport = createHarnessTransport(bridgeWithItems([value]), evidence)
+  const output = []
+  for await (const item of transport.openStream('session/follow', { args: {} })) output.push(item)
+  assert.equal(output[0], value)
+  assert.doesNotMatch(JSON.stringify(evidence), /not-retained|privatePrompt/)
+  assert.equal(evidence.activeStreams, 0)
 })

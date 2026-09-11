@@ -1,0 +1,33 @@
+{
+  "command": "git -c core.whitespace=cr-at-eol diff --cached --check",
+  "attempt": 1,
+  "exitCode": 2,
+  "result": "FAIL",
+  "findings": [
+    {
+      "log": "logs/package-runtime-4.log",
+      "error": "new blank line at EOF"
+    },
+    {
+      "log": "logs/package-runtime-6.log",
+      "error": "new blank line at EOF"
+    },
+    {
+      "log": "logs/package-runtime-7.log",
+      "error": "new blank line at EOF"
+    },
+    {
+      "log": "logs/package-runtime-8.log",
+      "error": "new blank line at EOF"
+    },
+    {
+      "log": "logs/package-runtime-9.log",
+      "error": "new blank line at EOF"
+    },
+    {
+      "log": "logs/smoke-packaged-runtime-2.log",
+      "error": "new blank line at EOF"
+    }
+  ],
+  "correction": "Exact original bytes retained in raw-command-log-bytes.json; readable copies normalize EOF only. Failed command logs unchanged. Source and runtime package bytes unchanged."
+}

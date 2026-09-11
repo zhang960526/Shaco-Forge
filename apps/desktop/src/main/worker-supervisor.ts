@@ -4,18 +4,33 @@ import { isAbsolute, resolve } from 'node:path'
 import type { Socket } from 'node:net'
 import { isRecord, type BootstrapEvent } from '@shaco-forge/contracts'
 import { inspectLocalPlatform, lifecycleRequest, type AuthorityStatus } from './lifecycle-client.js'
+import { RELEASE_LAYOUT, releasePath, verifyPackagedRuntime } from '@shaco-forge/contracts/packaged-runtime'
 
 export const WORKER_STARTUP_TIMEOUT_MS = 90_000
 export type StopDelivery = 'STOP_DELIVERED' | 'STOP_REJECTED' | 'STOP_PIPE_BUSY' | 'STOP_DELIVERY_FAILED' | 'STOP_DELIVERED_BUT_AUTHORITY_DID_NOT_EXIT'
 export interface StopResult { workerPid?: number; exited: boolean; delivery: StopDelivery; reason?: string }
 function delay(ms: number): Promise<void> { return new Promise(resolveDelay => setTimeout(resolveDelay, ms)) }
 export interface SupervisorConfig {
+  packagedRoot?: string
   workerNodePath: string
   workerEntryPath: string
   nativeHelperPath: string
   harnessRoot: string
   dshHome: string
   profileName: string
+}
+export async function readPackagedSupervisorConfig(root: string): Promise<SupervisorConfig> {
+  await verifyPackagedRuntime(root)
+  return { packagedRoot: root, workerNodePath: releasePath(root, RELEASE_LAYOUT.node),
+    workerEntryPath: releasePath(root, RELEASE_LAYOUT.workerEntry), nativeHelperPath: releasePath(root, RELEASE_LAYOUT.nativeHelper),
+    harnessRoot: resolve(root, 'harness'), dshHome: '', profileName: 'shaco-forge' }
+}
+function workerEnvironment(config: SupervisorConfig): NodeJS.ProcessEnv {
+  if (config.packagedRoot === undefined) return {
+    ...process.env, SHACO_FORGE_DSH_HOME: config.dshHome, SHACO_FORGE_HARNESS_ROOT: config.harnessRoot,
+    SHACO_FORGE_HARNESS_PROFILE_NAME: config.profileName, SHACO_FORGE_NATIVE_HELPER: config.nativeHelperPath,
+  }
+  return Object.fromEntries(Object.entries(process.env).filter(([key]) => !/^(DSH_|SHACO_FORGE_|NODE_|ELECTRON_|NPM_|PNPM_|COREPACK_)/i.test(key)))
 }
 export interface CarrierBootstrap {
   pipeEndpoint: string
@@ -43,7 +58,7 @@ export function readSupervisorConfig(env: NodeJS.ProcessEnv): SupervisorConfig {
     nativeHelperPath: requiredPath(env, 'SHACO_FORGE_NATIVE_HELPER'),
     harnessRoot: requiredPath(env, 'SHACO_FORGE_HARNESS_ROOT'),
     dshHome: requiredPath(env, 'SHACO_FORGE_DSH_HOME'),
-    profileName: env.SHACO_FORGE_HARNESS_PROFILE_NAME?.trim() || 'shaco-forge-v1-slice-1b',
+    profileName: env.SHACO_FORGE_HARNESS_PROFILE_NAME?.trim() || 'shaco-forge',
   }
 }
 export function mapWorkerTerminal(exitCode: number | null, signal: NodeJS.Signals | null): string {
@@ -86,6 +101,7 @@ export class WorkerSupervisor {
   }
   async start(): Promise<CarrierBootstrap> {
     if (this.#bootstrap !== undefined) throw new Error('Desktop attachment already exists')
+    if (this.config.packagedRoot !== undefined) await verifyPackagedRuntime(this.config.packagedRoot)
     await Promise.all([this.config.workerNodePath, this.config.workerEntryPath, this.config.nativeHelperPath, this.config.harnessRoot].map(path => access(path)))
     try { this.#status = await this.discover() }
     catch (error) {
@@ -93,10 +109,8 @@ export class WorkerSupervisor {
       this.workerLaunchAttempts++
       const child = spawn(this.config.workerNodePath, [this.config.workerEntryPath], {
         detached: true, windowsHide: true, stdio: 'ignore',
-        env: {
-          ...process.env, SHACO_FORGE_DSH_HOME: this.config.dshHome, SHACO_FORGE_HARNESS_ROOT: this.config.harnessRoot,
-          SHACO_FORGE_HARNESS_PROFILE_NAME: this.config.profileName, SHACO_FORGE_NATIVE_HELPER: this.config.nativeHelperPath,
-        },
+        cwd: this.config.packagedRoot ?? undefined,
+        env: workerEnvironment(this.config),
       })
       let startupError = false
       child.once('error', () => { startupError = true })
@@ -111,6 +125,9 @@ export class WorkerSupervisor {
         }
       }
       if (this.#status === undefined) throw new Error(`Worker startup timed out after ${this.startupTimeoutMs} ms; authority replacement forbidden`)
+    }
+    if (this.config.packagedRoot !== undefined && this.#status?.workerRuntime.executable !== this.config.workerNodePath) {
+      throw new Error('RELEASE_INTEGRITY_FAILURE: discovered Worker executable')
     }
     const { response, socket, status } = await lifecycleRequest(this.config.nativeHelperPath, 'attach')
     if (response.type !== 'credential-issued' || !isRecord(response.status)

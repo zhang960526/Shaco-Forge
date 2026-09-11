@@ -37,6 +37,17 @@ internal static partial class Program
                 object result;
                 if (args[0] == "--platform" && args.Length == 2)
                     result = WindowsAuthority.Platform(uint.Parse(args[1], System.Globalization.CultureInfo.InvariantCulture));
+                else if (args[0] == "--product-home" && args.Length is 3 or 4)
+                    result = ProductHome.Resolve(args[1], args[2], args.Length == 4 ? args[3] : null);
+                else if (args[0] == "--inspect-product-home" && args.Length == 1)
+                    result = ProductHome.Inspect();
+                else if (args[0] == "--runtime-processes" && args.Length == 2)
+                    result = args[1].Split(',').Select(value =>
+                    {
+                        using var process = System.Diagnostics.Process.GetProcessById(int.Parse(value, System.Globalization.CultureInfo.InvariantCulture));
+                        return new { pid = process.Id, executable = process.MainModule?.FileName ?? throw new IOException("PROCESS_IMAGE_UNAVAILABLE"),
+                            startTime = process.StartTime.ToUniversalTime().ToString("O", System.Globalization.CultureInfo.InvariantCulture) };
+                    }).ToArray();
                 else if (args[0] == "--inspect-pipe" && args.Length == 1)
                 {
                     using SafePipeHandle pipe = new(_get_osfhandle(3), ownsHandle: false);
@@ -46,7 +57,13 @@ internal static partial class Program
                 Console.Out.WriteLine(JsonSerializer.Serialize(result, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase }));
                 return 0;
             }
-            catch (Exception error) { Console.Error.WriteLine(error.GetType().Name); return 1; }
+            catch (Exception error)
+            {
+                string code = System.Text.RegularExpressions.Regex.IsMatch(error.Message, "^(DSH_HOME|KNOWN_FOLDER)_[A-Z_]+$")
+                    ? error.Message : error.GetType().Name;
+                Console.Error.WriteLine(code);
+                return 1;
+            }
         }
         return await RunAuthorityAsync();
     }

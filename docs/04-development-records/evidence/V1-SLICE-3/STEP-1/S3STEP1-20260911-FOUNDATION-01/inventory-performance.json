@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "concurrency": 8,
+  "files": 44240,
+  "elapsedMs": 11504.0785,
+  "allBytesHashed": true,
+  "cachedHashes": false,
+  "inventoryUnchanged": true
+}

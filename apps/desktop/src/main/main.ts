@@ -15,7 +15,7 @@ import { RecoveryCoordinator, type RecoveryProjection } from './recovery-coordin
 import { pickWorkspaceDirectory } from './workspace-picker.js'
 import { isSecureRendererConfiguration, rendererSecurityPreferences } from './security.js'
 import { sendProjectionIfAlive, snapshotLoadingUrl } from './window-lifecycle.js'
-import { readSupervisorConfig, WorkerSupervisor, type CarrierBootstrap } from './worker-supervisor.js'
+import { readSupervisorConfig, readPackagedSupervisorConfig, WorkerSupervisor, type CarrierBootstrap } from './worker-supervisor.js'
 
 protocol.registerSchemesAsPrivileged([{ scheme: 'shaco-forge', privileges: { standard: true, secure: true, supportFetchAPI: true, stream: true } }])
 
@@ -243,6 +243,8 @@ async function maybeFinalizeEvidence(): Promise<void> {
     ...supervisor.events.flatMap(event => [event.workerPid, event.hostPid]),
   ].filter((pid): pid is number => pid !== undefined)
   const listeners = await productListeners([...new Set(processIds)])
+  const packagedProcessProof = app.isPackaged ? JSON.parse((await execFileAsync(supervisor.config.nativeHelperPath,
+    ['--runtime-processes', [...new Set(processIds)].join(',')], { env: {}, windowsHide: true, timeout: 10_000 })).stdout) as unknown : undefined
   const observedCarrier = injectedFailureCarrier ?? carrier
   const observedBootstrap = injectedFailureBootstrap ?? carrierBootstrap
   const carrierEvidence = observedCarrier === undefined || observedBootstrap === undefined ? undefined : {
@@ -286,6 +288,8 @@ async function maybeFinalizeEvidence(): Promise<void> {
     nonProviderResult: result ? 'PASS' : 'FAIL',
     capturedAt: new Date().toISOString(),
     desktop: {
+      executable: process.execPath,
+      packaged: app.isPackaged,
       electronVersion: process.versions.electron,
       mainPid: process.pid,
       loadingUrl,
@@ -294,6 +298,7 @@ async function maybeFinalizeEvidence(): Promise<void> {
       secureConfiguration: isSecureRendererConfiguration(),
     },
     topology: {
+      packagedProcessProof,
       mainPid: process.pid,
       workerPid: supervisor.events.at(-1)?.workerPid,
       hostPid: [...supervisor.events].reverse().find((event: BootstrapEvent) => event.hostPid !== undefined)?.hostPid,
@@ -360,7 +365,8 @@ async function createMainWindow(): Promise<void> {
     minWidth: 760,
     minHeight: 600,
     show: evidencePath === undefined,
-    webPreferences: { ...rendererSecurityPreferences, preload: preloadPath, devTools: false },
+    webPreferences: { ...rendererSecurityPreferences, preload: preloadPath, devTools: false,
+      additionalArguments: userLoopRequested || process.env.SHACO_FORGE_EVIDENCE_OBSERVER === '1' ? ['--shaco-evidence-observer'] : [] },
   })
   mainWindow.webContents.setWindowOpenHandler(() => ({ action: 'deny' }))
   mainWindow.webContents.on('did-start-navigation', (_event, _url, isInPlace, isMainFrame) => {
@@ -413,7 +419,8 @@ registerTransportIpc()
 app.whenReady().then(async () => {
   try {
     await registerClientProtocol()
-    supervisor = new WorkerSupervisor(readSupervisorConfig(process.env))
+    supervisor = new WorkerSupervisor(app.isPackaged
+      ? await readPackagedSupervisorConfig(dirname(process.execPath)) : readSupervisorConfig(process.env))
     supervisor.onEvent(updateProjection)
     supervisor.onCarrierFailure(reason => {
       if (injectCarrierFailure) recovery?.fail(reason)

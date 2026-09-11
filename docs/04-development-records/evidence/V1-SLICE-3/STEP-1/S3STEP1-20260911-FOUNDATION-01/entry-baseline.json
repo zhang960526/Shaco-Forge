@@ -1,0 +1,22 @@
+{
+  "entryHead": "19f200851c47d5ce1b93026e07d88a6d583ef7f5",
+  "entryGitStatus": "CLEAN",
+  "frozenContractSha256": "35152ace7e1bb85ad6ecec801e20202d55ee960acb2137340ae932777da1bf76",
+  "harnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+  "harnessStatus": "",
+  "providerRuns": 0,
+  "signingRuns": 0,
+  "entryInspectionFailures": [
+    "Git Harness read initially rejected sandbox ownership; resolved with process-local -c safe.directory, no config mutation."
+  ],
+  "packagingTool": {
+    "name": "@electron/packager",
+    "version": "18.3.6",
+    "why": "Minimal mature Electron folder packager; real filesystem resources; future external installer/signing seam; no installer/updater framework.",
+    "alternativesRejected": [
+      "Electron Forge: more orchestration than this foundation requires",
+      "electron-builder: installer/update feature set unnecessary in Step1"
+    ],
+    "source": "https://electron.github.io/packager/main/interfaces/Options.html"
+  }
+}

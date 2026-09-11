@@ -1,0 +1,46 @@
+{
+  "ProductVersion": "1.0.0-dev.1",
+  "DesktopVersion": "1.0.0-dev.1",
+  "WorkerVersion": "1.0.0-dev.1",
+  "CarrierVersion": 1,
+  "HarnessBaselineVersion": "0.1.2-alpha.1",
+  "ControlStoreSchemaVersion": "NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES",
+  "ElectronVersion": "35.7.5",
+  "WorkerNodeVersion": "22.19.0",
+  "Platform": "win32",
+  "Architecture": "x64",
+  "HarnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+  "HarnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+  "ProductionProfileIdentity": "shaco-forge",
+  "SourceCommit": "19f200851c47d5ce1b93026e07d88a6d583ef7f5",
+  "FrozenContractIdentity": "35152ace7e1bb85ad6ecec801e20202d55ee960acb2137340ae932777da1bf76",
+  "PackagedRuntimeLayoutVersion": 1,
+  "PackagingTool": {
+    "name": "@electron/packager",
+    "version": "18.3.6"
+  },
+  "NativeRuntime": {
+    "target": "net10.0-windows",
+    "runtime": "win-x64",
+    "selfContained": true,
+    "workerNodeAbi": "127"
+  },
+  "BuildProvenance": {
+    "sourceInventorySha256": "19243b46e1018c3472a05317089a56d1c1885b16154557ca784a09c9e0bc48da",
+    "lockfileSha256": "22c6b61a70c5c716d8b5914632af26dd593a90b78e07b9c2fc4a4a70420e758a",
+    "harnessLockfileSha256": "506ad1fc7c40f71ce8c6afe08724fdd55020c1a527d7a7a185c559d39ecfcaf1",
+    "clientCompositionSha256": "ea3085e80ac65bbbb439db49268eb20b84f0b8788560beb68026eb62600568dd"
+  },
+  "layout": {
+    "desktop": "Shaco Forge.exe",
+    "desktopEntry": "resources/app/desktop/dist/main/main.js",
+    "workerEntry": "resources/app/worker-launch.mjs",
+    "workerMain": "resources/app/worker/dist/index.js",
+    "node": "runtime/node.exe",
+    "harness": "harness/node_modules/@deepseek-ai/dsh/lib/bin.js",
+    "harnessManifest": "harness/node_modules/@deepseek-ai/dsh/package.json",
+    "profile": "profiles/shaco-forge",
+    "nativeHelper": "native/ShacoForge.NativeCarrier.exe",
+    "client": "resources/app/desktop/dist/renderer/index.html"
+  }
+}

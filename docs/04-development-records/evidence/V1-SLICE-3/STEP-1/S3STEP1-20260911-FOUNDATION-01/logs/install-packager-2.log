@@ -1,0 +1,24 @@
+✓ Lockfile passes supply-chain policies (verified 4d ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 6, reused 0, downloaded 0, added 0
+
+   ╭─────────────────────────────────────────╮
+   │                                         │
+   │   Update available! 11.7.0 → 12.3.4.    │
+   │   Changelog: https://pnpm.io/v/12.3.4   │
+   │    To update, run: pnpm add -g pnpm     │
+   │                                         │
+   ╰─────────────────────────────────────────╯
+
+Progress: resolved 30, reused 0, downloaded 0, added 0
+Progress: resolved 82, reused 0, downloaded 0, added 0
+Progress: resolved 222, reused 0, downloaded 0, added 0
+[WARN] 4 deprecated subdependencies found: boolean@3.2.0, glob@7.2.3, inflight@1.0.6, lodash.get@4.4.2
+Progress: resolved 235, reused 0, downloaded 0, added 0, done
+
+devDependencies:
++ @electron/packager 18.3.6
+
+Packages: +95
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Done in 5.6s using pnpm v11.7.0

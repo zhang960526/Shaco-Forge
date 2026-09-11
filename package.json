@@ -24,9 +24,13 @@
     "smoke:slice2-step3-interactions": "node scripts/smoke-slice2-step3-interactions.mjs",
     "test:full-shaco": "node --test apps/desktop/tests/presentation-lifecycle.test.mjs apps/desktop/tests/presentation-actions.test.mjs apps/desktop/tests/full-shaco-boundaries.test.mjs",
     "smoke:full-shaco": "node scripts/smoke-full-shaco.mjs",
-    "smoke:full-shaco:development": "node scripts/smoke-full-shaco.mjs --development"
+    "smoke:full-shaco:development": "node scripts/smoke-full-shaco.mjs --development",
+    "package:runtime": "node scripts/package-runtime.mjs",
+    "test:packaged-runtime": "node --test scripts/packaged-runtime.test.mjs",
+    "smoke:packaged-runtime": "node scripts/smoke-packaged-runtime.mjs"
   },
   "devDependencies": {
+    "@electron/packager": "18.3.6",
     "@types/node": "22.20.0",
     "electron": "35.7.5",
     "typescript": "6.0.3",

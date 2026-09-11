@@ -1,0 +1,36 @@
+$ node scripts/package-runtime.mjs
+Packaging app for platform win32 x64 using electron v35.7.5
+  正在确定要还原的项目…
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301: 无法获取源 https://api.nuget.org/v3-index/repository-signatures/5.0.0/index.json 的存储库签名信息。
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301:   The SSL connection could not be established, see inner exception.
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301:   Authentication failed, see inner exception.
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301:   安全包中没有可用的凭证
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301: 无法获取源 https://api.nuget.org/v3-index/repository-signatures/5.0.0/index.json 的存储库签名信息。
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301:   The SSL connection could not be established, see inner exception.
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301:   Authentication failed, see inner exception.
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301:   安全包中没有可用的凭证
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301: 无法获取源 https://api.nuget.org/v3-index/repository-signatures/5.0.0/index.json 的存储库签名信息。
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301:   The SSL connection could not be established, see inner exception.
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301:   Authentication failed, see inner exception.
+D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj : error NU1301:   安全包中没有可用的凭证
+  未能还原 D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj (用时 2.55 秒)。
+node:internal/errors:983
+  const err = new Error(message);
+              ^
+
+Error: Command failed: dotnet publish apps/native-carrier/ShacoForge.NativeCarrier.csproj -c Release -r win-x64 --self-contained true -o D:\Project\Shaco-Forge\dist\packaging\1789112461169\output\Shaco Forge-win32-x64\native
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at checkExecSyncError (node:child_process:915:11)
+    at execFileSync (node:child_process:951:15)
+    at file:///D:/Project/Shaco-Forge/scripts/package-runtime.mjs:72:1 {
+  status: 1,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 27624,
+  stdout: null,
+  stderr: null
+}
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

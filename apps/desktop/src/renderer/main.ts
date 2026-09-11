@@ -187,6 +187,7 @@ const evidence = {
   },
   transport: {
     ownsHost: true,
+    fullObserverInstalled: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.userLoop !== undefined,
     fetchUsed: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.fetchEndpoints.length > 0,
     fetchEndpoints: [...new Set(window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.fetchEndpoints)],
     openStreamUsed: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.streamEndpoints.length > 0,

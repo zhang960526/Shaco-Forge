@@ -1,0 +1,25 @@
+{
+  "scope": "READ_ONLY_KNOWN_FOLDER_DIAGNOSIS_PLUS_PROJECT_NATIVE_BUILD",
+  "commands": [
+    { "command": "dotnet build apps/native-carrier/ShacoForge.NativeCarrier.csproj -c Release --no-restore", "exitCode": 0 },
+    { "command": "ShacoForge.NativeCarrier.exe --inspect-product-home", "context": "SANDBOX", "exitCode": 0 },
+    { "command": "ShacoForge.NativeCarrier.exe --product-home <actual-packaged-root> <actual-packaged-root>", "context": "SANDBOX", "exitCode": 1, "error": "DSH_HOME_PATH_REJECTED" },
+    { "command": "ShacoForge.NativeCarrier.exe --inspect-product-home", "context": "NORMAL_CURRENT_USER", "exitCode": 0 }
+  ],
+  "sandbox": {
+    "localApplicationData": "C:\\Users\\18902\\AppData\\Local",
+    "userProfile": "C:\\Users\\CodexSandboxOffline",
+    "result": "CORRECTLY_REJECTED_DIFFERENT_USER_PROFILE_MAPPING"
+  },
+  "normalCurrentUser": {
+    "localApplicationData": "C:\\Users\\18902\\AppData\\Local",
+    "userProfile": "C:\\Users\\18902",
+    "productRootExistedBeforeRuntime": false,
+    "dshHomeExistedBeforeRuntime": false
+  },
+  "resolver": "SHGetKnownFolderPath_CURRENT_USER",
+  "pathPolicyRelaxed": false,
+  "ambientFallbackAdded": false,
+  "providerRuns": 0,
+  "signingRuns": 0
+}

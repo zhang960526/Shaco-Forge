@@ -1,0 +1,15 @@
+{
+  "proof": {
+    "dshHome": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+    "productDataRoot": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge",
+    "knownFolder": "C:\\Users\\18902\\AppData\\Local",
+    "canonical": true,
+    "currentUserOnly": true,
+    "writable": true,
+    "reparseRejected": true,
+    "source": "SHGetKnownFolderPath_CURRENT_USER"
+  },
+  "nodeRealpath": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+  "nodeNativeRealpath": "C:\\Users\\18902\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\Shaco Forge\\dsh",
+  "nodeAsyncRealpath": "C:\\Users\\18902\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\Shaco Forge\\dsh"
+}

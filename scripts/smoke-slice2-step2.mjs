@@ -36,6 +36,8 @@ async function desktop(index) {
   const output = join(root, `snapshot-${index}.json`)
   const env = { ...process.env, SHACO_FORGE_WORKER_NODE: process.execPath, SHACO_FORGE_WORKER_ENTRY: paths.workerEntry,
     SHACO_FORGE_NATIVE_HELPER: paths.nativeHelper, SHACO_FORGE_DSH_HOME: dshHome,
+    // This explicit evidence driver reads the full observer's bounded metadata.
+    SHACO_FORGE_EVIDENCE_OBSERVER: '1',
     SHACO_FORGE_STEP2_CONTROL: control, SHACO_FORGE_STEP2_OUTPUT: output, SHACO_FORGE_STEP2_WORKSPACE: workspace }
   for (const key of ['SHACO_FORGE_USER_LOOP', 'SHACO_FORGE_EVIDENCE_PATH', 'SHACO_FORGE_EVIDENCE_INJECT_CARRIER_FAILURE', 'ELECTRON_RUN_AS_NODE']) delete env[key]
   const child = spawn(electron, [`--user-data-dir=${profile}`, join(paths.desktopRoot, 'test-fixtures/step2-recovery-main.mjs')], { env, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] })

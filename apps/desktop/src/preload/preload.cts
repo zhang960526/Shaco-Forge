@@ -1,5 +1,7 @@
 import { contextBridge, ipcRenderer } from 'electron'
 
+contextBridge.exposeInMainWorld('__SHACO_FORGE_EVIDENCE_MODE__', process.argv.includes('--shaco-evidence-observer'))
+
 interface BootstrapProjection {
   phase: string
   message: string

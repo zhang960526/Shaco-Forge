@@ -31,7 +31,7 @@ export async function materializeHarnessProfile(
   await ensureProfileJunction(harnessScopePath, join(profilePath, 'node_modules', '@deepseek-ai'))
 
   const profilePackage = {
-    name: '@shaco-forge/harness-profile-v1-slice-1b',
+    name: '@shaco-forge/harness-profile',
     version: '1.0.0-dev.1',
     private: true,
     dependencies: {

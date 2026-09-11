@@ -1,0 +1,21 @@
+{
+  "attempts": [
+    {
+      "runId": "STEP2-REGRESSION-2026-09-11T08-39-06.211Z",
+      "scenario": "STEP2_REGRESSION",
+      "result": "FAIL",
+      "failure": "Product CONNECTED: TIMEOUT",
+      "chain": [
+        "BOUNDED_CLEANUP_NO_ORPHAN"
+      ],
+      "snapshots": [],
+      "cleanup": {
+        "noOrphan": true,
+        "authorityCount": 1,
+        "desktopProcessesExited": true
+      },
+      "shellEvidence": [],
+      "providerRuns": 0
+    }
+  ]
+}

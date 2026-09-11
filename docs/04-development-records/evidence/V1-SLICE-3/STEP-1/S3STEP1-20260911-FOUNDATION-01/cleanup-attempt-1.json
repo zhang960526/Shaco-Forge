@@ -1,0 +1,12 @@
+{
+  "command": "node dist/cleanup-step1-tests.mjs",
+  "attempt": 1,
+  "exitCode": 1,
+  "result": "FAIL",
+  "boundary": "FAILED_INSTALL_STORE_CONTENT_ASSERTION",
+  "error": "Expected only index.db, observed files/ and index.db. Refused store deletion before investigating the extra directory.",
+  "effects": "Scoped current-run temporary runtime directories had been removed and final Electron artifacts archived before this assertion. No original per-path removal receipt was written by the failed driver. Subsequent scoped remaining-directory check returned 0.",
+  "nextAction": "Verify the unexpected files directory is empty and retry only the remaining store cleanup; retain this failure.",
+  "providerRuns": 0,
+  "signingRuns": 0
+}
