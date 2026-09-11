@@ -1,0 +1,6 @@
+{
+  "exitCode": 0,
+  "driverPid": 1184,
+  "command": "smoke:packaged-runtime",
+  "environment": "CURRENT_USER_EXPLORER_DESKTOP"
+}

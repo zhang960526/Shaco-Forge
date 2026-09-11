@@ -1,0 +1,96 @@
+{
+  "commands": [
+    {
+      "command": "package:runtime",
+      "phase": "DEVELOPMENT",
+      "sourceBefore": "eb879528b255ce3412a3f84d4d0f352b3cd39d013c518ac2424faa5a91e72484",
+      "sourceAfter": "232162fd78e15641ec32e1cf63b0f22e3d1f5290112457d239e617016e7c5bc4",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "package:runtime"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-11T10:36:04.524Z",
+      "endedAt": "2026-09-11T10:38:02.282Z",
+      "sourceHead": "bdf0cbfeade58ae288ece1b8b94ba5c91346c97a",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/package-runtime-1.log"
+    },
+    {
+      "command": "test:packaged-runtime",
+      "phase": "DEVELOPMENT",
+      "sourceBefore": "232162fd78e15641ec32e1cf63b0f22e3d1f5290112457d239e617016e7c5bc4",
+      "sourceAfter": "232162fd78e15641ec32e1cf63b0f22e3d1f5290112457d239e617016e7c5bc4",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "test:packaged-runtime"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-11T10:38:37.230Z",
+      "endedAt": "2026-09-11T10:38:44.089Z",
+      "sourceHead": "bdf0cbfeade58ae288ece1b8b94ba5c91346c97a",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-packaged-runtime-1.log"
+    },
+    {
+      "command": "packaged-startup-probe",
+      "phase": "FINAL_REGRESSION",
+      "sourceBefore": "f3b59070e3ef3b5871bfc37abfb12774c91beea0d29d9e47ef6760f7bf3c7480",
+      "sourceAfter": "fbe22a740be03e99bc40a3afe5d4bef324c745f2a4f763e71eb4617ca5dd4b72",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "scripts/smoke-packaged-runtime.mjs",
+        "--startup-only"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-11T10:40:00.335Z",
+      "endedAt": "2026-09-11T10:43:27.252Z",
+      "sourceHead": "bdf0cbfeade58ae288ece1b8b94ba5c91346c97a",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/packaged-startup-probe-1.log"
+    },
+    {
+      "command": "packaged-startup-probe",
+      "phase": "FINAL_REGRESSION",
+      "sourceBefore": "c4044e9c89752308cbb91172b83df63e65e486fbe5f982353f55d9572d642fdd",
+      "sourceAfter": "c4044e9c89752308cbb91172b83df63e65e486fbe5f982353f55d9572d642fdd",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "scripts/smoke-packaged-runtime.mjs",
+        "--startup-only"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-11T10:46:28.680Z",
+      "endedAt": "2026-09-11T10:49:52.759Z",
+      "sourceHead": "bdf0cbfeade58ae288ece1b8b94ba5c91346c97a",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/packaged-startup-probe-2.log"
+    },
+    {
+      "command": "packaged-desktop-diagnostic",
+      "phase": "FINAL_REGRESSION",
+      "sourceBefore": "dca60cb57b8e5845cc28364f1e5d134c18e2a4486a6f05770fa4f6e079f823a0",
+      "sourceAfter": "dca60cb57b8e5845cc28364f1e5d134c18e2a4486a6f05770fa4f6e079f823a0",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-CLOSURE-CORRECTIVE-01\\desktop-inspector-diagnostic.mjs",
+        "2"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-11T10:55:26.152Z",
+      "endedAt": "2026-09-11T10:59:05.612Z",
+      "sourceHead": "bdf0cbfeade58ae288ece1b8b94ba5c91346c97a",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/packaged-desktop-diagnostic-1.log"
+    }
+  ]
+}

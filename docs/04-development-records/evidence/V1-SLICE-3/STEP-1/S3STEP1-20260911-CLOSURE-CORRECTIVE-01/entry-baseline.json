@@ -1,0 +1,54 @@
+{
+  "entryHead": "bdf0cbfeade58ae288ece1b8b94ba5c91346c97a",
+  "entryGitStatus": "CLEAN_BEFORE_CORRECTIVE_EVIDENCE",
+  "parentReviewId": "REVIEW-029",
+  "parentReviewVerdict": "FAIL",
+  "finding": "S3S1-IR-001",
+  "originalArtifactDigest": "679a92171c047f70b4d607d066f922ec0153d3f516a2fafbef9198d41ab7c2aa",
+  "harnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+  "harnessStatus": "",
+  "originalEncodings": [
+    {
+      "path": "docs/00-governance/SHACO-FORGE-CURRENT-STATE.md",
+      "encoding": "UTF8_WITHOUT_BOM",
+      "sha256": "d07574bace502fd2171b494c94cdaaf4398e925378305d5390c24bd26fe23795",
+      "crlf": false
+    },
+    {
+      "path": "docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md",
+      "encoding": "UTF8_WITHOUT_BOM",
+      "sha256": "8deb7b6e9f3c29af971d42c0f9a7babf117d997c46933257151ef73caa9b92be",
+      "crlf": false
+    },
+    {
+      "path": "docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md",
+      "encoding": "UTF8_WITHOUT_BOM",
+      "sha256": "e69befabf3248d469e762da15fe8b2c544f39418f02b7ccfa799e62fd1d2d4d0",
+      "crlf": false
+    },
+    {
+      "path": "docs/04-development-records/DEVELOPMENT-LOG.md",
+      "encoding": "UTF8_WITHOUT_BOM",
+      "sha256": "cccc8748d42cb59774c2f2d41dad737d3a6e9384548dccf52ea31571f7d9494c",
+      "crlf": false
+    },
+    {
+      "path": "docs/05-reviews/REVIEW-INDEX.md",
+      "encoding": "UTF8_WITHOUT_BOM",
+      "sha256": "b4239c86a5d8338b1c5d2abdbcf7a2c266e92e8e78a4ce3235f1455402ad023c",
+      "crlf": false
+    },
+    {
+      "path": "docs/07-handover/CURRENT-CHECKPOINT.md",
+      "encoding": "UTF8_WITHOUT_BOM",
+      "sha256": "55f4e6346b1ad4c565096172d8e711eb48bf9a95adacf5e92b64f83245568349",
+      "crlf": false
+    }
+  ],
+  "entryInspectionFailures": [
+    "Initial upstream Git inspection rejected sandbox ownership; process-local safe.directory resolved it without config mutation.",
+    "Initial rg wildcard paths were invalid on Windows; corrected to directory with glob filters."
+  ],
+  "providerRuns": 0,
+  "signingRuns": 0
+}

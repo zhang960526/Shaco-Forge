@@ -1,0 +1,6 @@
+{
+  "command": "packaged-worker-diagnostic",
+  "exitCode": 1,
+  "environment": "CURRENT_USER_EXPLORER_DESKTOP",
+  "driverPid": 5484
+}

@@ -1,0 +1,29 @@
+{
+  "previousTopLevelPackageCount": 803,
+  "previousAllPackagePlacements": 863,
+  "previousUniqueNameVersionCount": 829,
+  "newTopLevelPackageCount": 493,
+  "newAllPackagePlacements": 523,
+  "newResolvedPackageIdentities": 505,
+  "newUniqueNameVersionCount": 505,
+  "previousReleaseFileCount": 44240,
+  "newReleaseFileCount": 25847,
+  "previousReleaseBytes": 1647659038,
+  "newReleaseBytes": 688823925,
+  "previousHarnessPackageBytes": 1176545005,
+  "newHarnessPackageBytes": 217709790,
+  "unreachableOldPlacementsRemoved": 330,
+  "unreachableOldUniqueNameVersionsRemoved": 324,
+  "unreachableOldBytesRemoved": 922280576,
+  "excludedOverlayTopLevelEntries": 39,
+  "contentPruningSourceFiles": 2276,
+  "contentPruningSourceBytes": 26418501,
+  "outsideClosure": 0,
+  "forbiddenPackages": {
+    "@vitest/coverage-v8": "ABSENT",
+    "vitest": "ABSENT",
+    "vite": "ABSENT",
+    "@deepseek-ai/dsh-agent-loop-testkit": "ABSENT"
+  },
+  "measurement": "Historical sealed manifest paths and identity-verified package manifests; bytes assigned to nearest package owner; unreachable means no production-reachable name/version identity, independent of duplicate placements or content pruning."
+}

@@ -1,0 +1,31 @@
+{
+  "result": "PASS",
+  "packageEvidence": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-CLOSURE-CORRECTIVE-01\\runs\\package-runtime-4",
+  "previouslyMissedFilesNowAbsent": 46,
+  "previouslyMissedBytesNowAbsent": 106010,
+  "retainedPublicRuntimeModules": [
+    {
+      "path": "harness/node_modules/react-dom/test-utils.js",
+      "reason": "PACKAGE_PUBLIC_EXPORT"
+    },
+    {
+      "path": "harness/node_modules/hono/dist/helper/testing/index.js",
+      "reason": "PACKAGE_PUBLIC_EXPORT"
+    },
+    {
+      "path": "harness/node_modules/@earendil-works/pi-telemetry/dist/testing/index.js",
+      "reason": "PACKAGE_PUBLIC_EXPORT"
+    },
+    {
+      "path": "harness/node_modules/@deepseek-ai/dsh-message-feedback/lib/types/spec.js",
+      "reason": "PRODUCTION_MODULE_IMPORT"
+    },
+    {
+      "path": "harness/node_modules/undici/lib/mock/mock-agent.js",
+      "reason": "PRODUCTION_ENTRY_REFERENCE"
+    }
+  ],
+  "retainedJavaScriptFilesScanned": 9209,
+  "directVitestMochaTapeImports": [],
+  "policy": "Remove proven test-only artifacts; keep documented public/runtime modules. No import graph optimization or runtime rewrite."
+}

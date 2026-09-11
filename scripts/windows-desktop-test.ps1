@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('packaged-startup-probe', 'smoke:packaged-runtime')]
+    [ValidateSet('packaged-startup-probe', 'smoke:packaged-runtime', 'packaged-desktop-diagnostic', 'packaged-worker-diagnostic', 'packaged-diagnostic-cleanup')]
     [string]$Command = 'packaged-startup-probe',
     [switch]$Child,
     [string]$Receipt
@@ -9,7 +9,7 @@ $ErrorActionPreference = 'Stop'
 # No token/job/ACL alteration and no change to the packaged Product's home policy.
 # https://devblogs.microsoft.com/oldnewthing/20131118-00/?p=2643
 $testRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
-$testEvidence = Join-Path $testRoot 'docs/04-development-records/evidence/V1-SLICE-3/STEP-1/S3STEP1-20260911-FOUNDATION-01'
+$testEvidence = Join-Path $testRoot 'docs/04-development-records/evidence/V1-SLICE-3/STEP-1/S3STEP1-20260911-CLOSURE-CORRECTIVE-01'
 $testPowerShell = 'C:\Users\18902\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe'
 if ($Child) {
     if ([IO.Path]::GetDirectoryName([IO.Path]::GetFullPath($Receipt)) -ne $testEvidence) { throw 'Receipt outside evidence root' }

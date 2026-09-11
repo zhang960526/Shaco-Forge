@@ -1,0 +1,17 @@
+{
+  "rootDiagnosticAttempts": [
+    {"attempt": 1, "result": "FAIL", "cause": "Windows absolute dynamic-import path in the diagnostic driver; graph did not execute.", "corrective": "Use pathToFileURL."},
+    {"attempt": 2, "result": "FAIL", "cause": "Resolver boundary tested the ancestor directory instead of the candidate path, excluding overlay's own node_modules root.", "corrective": "Test the resolved dependency candidate against allowed source roots."},
+    {"attempt": 3, "result": "FAIL", "cause": "Overly strict workspace rule rejected frozen prebuilt native entry workspaces exposed through overlay dependency links.", "corrective": "Require exact frozen repository origin and existing lib main for native entry packages; apply optional platform filtering before requiring built native entry."},
+    {"attempt": 4, "result": "PASS", "packages": 505, "edges": 2398, "purpose": "Development graph diagnosis only, superseded by final packaged evidence."}
+  ],
+  "standaloneUnitDiagnostic": {
+    "command": "Node 22.19.0 --test scripts/harness-production-closure.test.mjs",
+    "exitCode": 0,
+    "fixtureTestsExecuted": 13,
+    "actualPackageTest": "NOT_EXECUTED_NO_LOCATION_ENVIRONMENT; initial test reported a no-op success. Corrected to explicit skip without location; later ledger test:packaged-runtime executes and verifies this gate against the actual package.",
+    "acceptedFinalGate": false
+  },
+  "developmentPackageAttempt1": "PASS is development-only; sourceBefore/sourceAfter differ because additional verification scripts were completed during packaging. No final gate acceptance derives from this attempt.",
+  "historicalEvidence": "S3STEP1-20260911-FOUNDATION-01 is immutable; no old PASS substitutes for corrective reruns."
+}

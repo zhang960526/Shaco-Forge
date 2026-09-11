@@ -1,0 +1,47 @@
+{
+  "purpose": "PACKAGED_WORKER_RESTART_DIAGNOSTIC",
+  "referenceAnomalies": [
+    {
+      "path": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh\\profiles\\node_modules\\typescript",
+      "actual": "D:\\Project\\Shaco-Forge\\node_modules\\.pnpm\\typescript@6.0.3\\node_modules\\typescript"
+    }
+  ],
+  "events": [
+    {
+      "protocolVersion": 1,
+      "phase": "worker-failed",
+      "timestamp": "2026-09-11T11:07:14.040Z",
+      "workerPid": 20192,
+      "parentPid": 30132,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "error": "Error: DSH_HOME_MODULE_REFERENCE_REJECTED\n    at walk (file:///D:/Project/Shaco-Forge/dist/packaging/1789122966770/output/Shaco%20Forge-win32-x64/resources/app/worker/dist/packaged-config.js:21:23)\n    at async validateHarnessModuleReferences (file:///D:/Project/Shaco-Forge/dist/packaging/1789122966770/output/Shaco%20Forge-win32-x64/resources/app/worker/dist/packaged-config.js:27:5)\n    at async readPackagedWorkerConfig (file:///D:/Project/Shaco-Forge/dist/packaging/1789122966770/output/Shaco%20Forge-win32-x64/resources/app/worker/dist/packaged-config.js:62:5)\n    at async main (file:///D:/Project/Shaco-Forge/dist/packaging/1789122966770/output/Shaco%20Forge-win32-x64/resources/app/worker/dist/index.js:156:20)"
+    },
+    {
+      "protocolVersion": 1,
+      "phase": "worker-stopped",
+      "timestamp": "2026-09-11T11:07:14.043Z",
+      "workerPid": 20192,
+      "parentPid": 30132,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "exitCode": 1
+    }
+  ],
+  "exitCode": 1,
+  "stderrBytes": 0,
+  "cleanupDiscovery": "WORKER_NOT_FOUND",
+  "result": "FAIL_RESTART"
+}

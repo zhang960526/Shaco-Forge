@@ -1,0 +1,39 @@
+{
+  "name": "bootstrap-loading",
+  "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-CLOSURE-CORRECTIVE-01\\runs\\smoke-full-shaco-2\\step2\\bootstrap-loading.png",
+  "width": 2139,
+  "height": 1256,
+  "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f",
+  "ui": {
+    "rootCount": 0,
+    "sidebarCount": 0,
+    "forbiddenBrand": false,
+    "harnessSeats": 0,
+    "template": "BRAUN",
+    "mode": "light",
+    "rootVisible": false,
+    "horizontalOverflow": false,
+    "composer": false,
+    "approval": false,
+    "question": false,
+    "kinds": [],
+    "tools": [],
+    "geometry": {
+      "conversation": null,
+      "composer": null,
+      "tool": null
+    },
+    "lowNoiseWorkbar": true,
+    "bootstrapVisible": true,
+    "plan": false,
+    "tokens": {
+      "--surface-primary": "rgb(248, 248, 246)",
+      "--surface-sidebar": "rgb(235, 235, 232)",
+      "--accent-primary": "rgb(55, 59, 54)",
+      "--control-radius": "6px",
+      "--template-decoration-height": "0px",
+      "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+    }
+  },
+  "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+}

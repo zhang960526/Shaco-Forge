@@ -1,0 +1,6 @@
+{
+  "result": "PASS_FIXTURES_ONLY",
+  "exitCode": 0,
+  "actualCandidateCase": "EXPLICIT_SKIP_UNTIL_REPACKAGED_FINAL_GATE",
+  "log": "corrected-pruning-unit-diagnostic.log"
+}

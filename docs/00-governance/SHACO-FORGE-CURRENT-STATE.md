@@ -2,49 +2,34 @@
 
 Status: ACTIVE
 
-## Current - Slice3 Step1 Implemented Waiting Independent Review (2026-09-11)
+## Current - Slice3 Step1 Corrective Implemented / Waiting Targeted Re-Review (2026-09-11)
 
 <!-- SLICE3_STEP1_CURRENT_START -->
-Step1 implementation and all required dedicated/cumulative non-Provider gates have passed.
-
-The candidate is **IMPLEMENTED_WAITING_INDEPENDENT_REVIEW**. [Current State](SHACO-FORGE-CURRENT-STATE.md) remains the sole current-phase authority.
-
-[Implementation Record](../04-development-records/V1-SLICE-3-STEP1-PACKAGED-RUNTIME-FOUNDATION-IMPLEMENTATION-RECORD.md) · [Evidence and complete execution report](../04-development-records/evidence/V1-SLICE-3/STEP-1/S3STEP1-20260911-FOUNDATION-01/final-report.md) · [Review handoff](../04-development-records/evidence/V1-SLICE-3/STEP-1/S3STEP1-20260911-FOUNDATION-01/review-handoff.md).
-
-Independent Review is NOT_STARTED; no review ID or review verdict is created here. Step1 is not closed or frozen. NF-1/NF-3 are technical candidates only; final disposition belongs to subsequent Reviewer/Owner action.
-
-Frozen Contract, REVIEW-028 historical FAIL, REVIEW-028B PASS and Owner closure of S3-AR-001 remain unchanged. F-05 stays open; NF-4 and the 262144-byte Carrier frame cap are unchanged. Step2/Step3 remain unauthorized; Provider and Signing counts are zero; Slice4 is not started.
+Owner-supplied [REVIEW-029](../05-reviews/architecture/AUDIT-029-V1-SLICE-3-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md) remains historical **FAIL**, with S3S1-IR-001 as its sole HIGH / BLOCKING finding. The authorized [closure corrective](../04-development-records/V1-SLICE-3-STEP1-PACKAGE-CONTENT-CLOSURE-CORRECTIVE-IMPLEMENTATION-RECORD.md) now has Executor PASS on all 18 rerun gates and stops at **CORRECTIVE_IMPLEMENTED_WAITING_TARGETED_REREVIEW**. No targeted independent re-review or Owner closure has been executed. Original Executor PASS does not close Step1.
 
 ```text
 V1_SLICE_3 = IN_PROGRESS
 V1_SLICE_3_ARCHITECTURE_CONTRACT = FROZEN_FOR_IMPLEMENTATION
-V1_SLICE_3_STEP1_IMPLEMENTATION_AUTHORIZATION = CONSUMED
-V1_SLICE_3_STEP1_IMPLEMENTATION_RESULT = PASS
-V1_SLICE_3_STEP1 = IMPLEMENTED_WAITING_INDEPENDENT_REVIEW
-V1_SLICE_3_STEP1_DEDICATED_GATES = PASS
-V1_SLICE_3_STEP1_CUMULATIVE_NON_PROVIDER_REGRESSION = PASS
-V1_SLICE_3_STEP1_INDEPENDENT_REVIEW = NOT_STARTED
+V1_SLICE_3_STEP1_INDEPENDENT_REVIEW = FAIL / HISTORICAL_PARENT_REVIEW
+V1_SLICE_3_STEP1_REVIEW_BLOCKING_FINDINGS = S3S1-IR-001
+S3S1_IR_001 = CORRECTIVE_IMPLEMENTED_WAITING_TARGETED_REREVIEW
+V1_SLICE_3_STEP1 = CORRECTIVE_IMPLEMENTED_WAITING_TARGETED_REREVIEW
+V1_SLICE_3_STEP1_CORRECTIVE_RESULT = PASS
 V1_SLICE_3_STEP1_OWNER_CLOSURE = NOT_PERFORMED
 V1_SLICE_3_STEP1_BASELINE = NOT_FROZEN
-V1_SLICE_3_STEP2 = NOT_AUTHORIZED
-V1_SLICE_3_STEP3 = NOT_AUTHORIZED
-V1_SLICE_3_CLOSURE = NO
+NF1_REVIEW_DISPOSITION = READY_FOR_OWNER_CLOSURE
+NF3_REVIEW_DISPOSITION = READY_FOR_OWNER_CLOSURE
+NF4_STATUS = DEFERRED_TO_SLICE3_STEP3 / NOT_CLOSED
+MAX_JSON_FRAME = 262144
 REVIEW_012_F_05 = OPEN_KNOWN_CONSTRAINT
 F05_SECURITY_DISPOSITION = PENDING_ARCHITECTURE_OWNER_ACCEPTANCE
-F05_CLOSURE_BY_EXECUTOR = FORBIDDEN
-F05_CLOSURE_BY_REVIEWER = FORBIDDEN
-F05_RESIDUAL_RISK_ACCEPTANCE_OWNER = ARCHITECTURE_OWNER_ONLY
-STEP2_CLOSURE_WITHOUT_F05_OWNER_DISPOSITION = FORBIDDEN
-NF1_TECHNICAL_DISPOSITION_CANDIDATE = CLOSED_BY_PACKAGING_HARDENING
-NF3_TECHNICAL_DISPOSITION_CANDIDATE = CLOSED_BY_STABLE_RELEASE_IDENTITY
-NF4_STATUS = DEFERRED_TO_SLICE3_STEP3 / NOT_CLOSED
+V1_SLICE_3_STEP2 = NOT_AUTHORIZED
+V1_SLICE_3_STEP3 = NOT_AUTHORIZED
 PROVIDER_GATE_AUTHORIZATION = NO
 PROVIDER_RUN_COUNT = 0
 SIGNING_EXECUTION_AUTHORIZATION = NO
 SIGNING_RUN_COUNT = 0
-V1_SLICE_4 = NOT_STARTED
-V1_CURRENT_STEP = V1_SLICE_3_STEP1_IMPLEMENTED_WAITING_INDEPENDENT_REVIEW
-V1_CURRENT_NEXT_ACTION = INDEPENDENT_REVIEW_V1_SLICE_3_STEP1_IMPLEMENTATION
+V1_CURRENT_NEXT_ACTION = TARGETED_INDEPENDENT_REREVIEW_V1_SLICE_3_STEP1_S3S1_IR_001_CORRECTIVE
 ```
 <!-- SLICE3_STEP1_CURRENT_END -->
 
@@ -641,41 +626,7 @@ V1_SLICE_1C_IMPLEMENTATION_BLOCKER = PICKER_COMPOSITION_SCOPE_CONFIRMATION_PENDI
 
 ## Current Phase
 
-Slice3 Architecture Contract remains frozen after REVIEW-028B PASS and Owner closure of S3-AR-001. Step1 implementation and its required gates passed; Independent Review has not started. Current state:
-
-```text
-V1_SLICE_3 = IN_PROGRESS
-V1_SLICE_3_ARCHITECTURE_CONTRACT = FROZEN_FOR_IMPLEMENTATION
-V1_SLICE_3_STEP1_IMPLEMENTATION_AUTHORIZATION = CONSUMED
-V1_SLICE_3_STEP1_IMPLEMENTATION_RESULT = PASS
-V1_SLICE_3_STEP1 = IMPLEMENTED_WAITING_INDEPENDENT_REVIEW
-V1_SLICE_3_STEP1_DEDICATED_GATES = PASS
-V1_SLICE_3_STEP1_CUMULATIVE_NON_PROVIDER_REGRESSION = PASS
-V1_SLICE_3_STEP1_INDEPENDENT_REVIEW = NOT_STARTED
-V1_SLICE_3_STEP1_OWNER_CLOSURE = NOT_PERFORMED
-V1_SLICE_3_STEP1_BASELINE = NOT_FROZEN
-V1_SLICE_3_STEP2 = NOT_AUTHORIZED
-V1_SLICE_3_STEP3 = NOT_AUTHORIZED
-V1_SLICE_3_CLOSURE = NO
-REVIEW_012_F_05 = OPEN_KNOWN_CONSTRAINT
-F05_SECURITY_DISPOSITION = PENDING_ARCHITECTURE_OWNER_ACCEPTANCE
-F05_CLOSURE_BY_EXECUTOR = FORBIDDEN
-F05_CLOSURE_BY_REVIEWER = FORBIDDEN
-F05_RESIDUAL_RISK_ACCEPTANCE_OWNER = ARCHITECTURE_OWNER_ONLY
-STEP2_CLOSURE_WITHOUT_F05_OWNER_DISPOSITION = FORBIDDEN
-NF1_TECHNICAL_DISPOSITION_CANDIDATE = CLOSED_BY_PACKAGING_HARDENING
-NF3_TECHNICAL_DISPOSITION_CANDIDATE = CLOSED_BY_STABLE_RELEASE_IDENTITY
-NF4_STATUS = DEFERRED_TO_SLICE3_STEP3 / NOT_CLOSED
-PROVIDER_GATE_AUTHORIZATION = NO
-PROVIDER_RUN_COUNT = 0
-SIGNING_EXECUTION_AUTHORIZATION = NO
-SIGNING_RUN_COUNT = 0
-V1_SLICE_4 = NOT_STARTED
-V1_CURRENT_STEP = V1_SLICE_3_STEP1_IMPLEMENTED_WAITING_INDEPENDENT_REVIEW
-V1_CURRENT_NEXT_ACTION = INDEPENDENT_REVIEW_V1_SLICE_3_STEP1_IMPLEMENTATION
-```
-
-The implementation record and evidence linked above establish this candidate.
+REVIEW-029 returned FAIL with S3S1-IR-001 HIGH / BLOCKING. The bounded corrective implementation and all 18 final gates passed; targeted independent re-review is pending as recorded in the current checkpoint at the top of this document. Original Executor PASS is historical and does not close or freeze Step1. Step2/Step3, Provider and Signing remain unauthorized.
 
 <details>
 <summary>Historical — Current Phase before Slice3 planning authorization</summary>
@@ -1242,7 +1193,7 @@ alternate-index path proved raw blob identity before the bounded Closure Commit.
 
 ## Architecture Review State
 
-Slice3 Architecture Review remains REVIEW-028 historical FAIL / REVIEW-028B PASS, accepted by the Owner. Step1 implementation Independent Review is NOT_STARTED.
+Slice3 Architecture Review remains REVIEW-028 historical FAIL / REVIEW-028B PASS, accepted by the Owner. Step1 implementation Independent Review is REVIEW-029 / FAIL; S3S1-IR-001 corrective follows the current checkpoint.
 
 Slice2 Independent Closure Audit PASS，Owner Closure ACCEPTED；NF-6 final disposition CLOSED_BY_SLICE2_RECOVERY_IMPLEMENTATION，Provider Gate NOT_TRIGGERED。详见 [Slice2 Closure Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md)。
 
@@ -1352,7 +1303,7 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 - V1 Slice 2: Step1 / Step2 / Step3 均 PASS / CLOSED / FROZEN；Slice2 为 IN_PROGRESS_PENDING_INDEPENDENT_CLOSURE_AUDIT，SLICE2_CLOSURE = NO。F-IFR-01 CLOSED_BY_INDEPENDENT_REREVIEW，UI-G14 CONFIRMED；Visual Polish 非阻断延后，Provider NO。
 
 </details>
-- V1 Slice 3: IN_PROGRESS; Contract FROZEN_FOR_IMPLEMENTATION; Step1 IMPLEMENTED_WAITING_INDEPENDENT_REVIEW, implementation/dedicated gates/cumulative non-Provider regression PASS; review NOT_STARTED, Owner closure NOT_PERFORMED, baseline NOT_FROZEN. Step2/Step3 NOT_AUTHORIZED; F-05 OPEN_KNOWN_CONSTRAINT; Slice4 NOT_STARTED.
+- V1 Slice 3: IN_PROGRESS; Contract FROZEN_FOR_IMPLEMENTATION; Step1 REVIEW-029 FAIL / S3S1-IR-001 corrective per current checkpoint; Owner closure NOT_PERFORMED; baseline NOT_FROZEN. Step2/Step3 NOT_AUTHORIZED; F-05 OPEN_KNOWN_CONSTRAINT; Slice4 NOT_STARTED.
 
 <details>
 <summary>Historical / Superseded — previous Slice2 readiness before Dual Theme Delta review</summary>
@@ -1363,7 +1314,7 @@ Previous audits used the same commit/release as a reference only. P0-1 re-confir
 
 ## Immediate Next Action
 
-`INDEPENDENT_REVIEW_V1_SLICE_3_STEP1_IMPLEMENTATION`. The Executor stops at the review-ready implementation candidate. Review is NOT_STARTED; Step1 closure/freeze and Step2/Step3 authorization are not performed. Provider and Signing counts remain zero; Fresh Windows is not run.
+Follow V1_CURRENT_NEXT_ACTION in the single current checkpoint above. S3S1-IR-001 corrective implementation and Executor validation are complete. The next action is targeted independent re-review by a separate authorized reviewer; this Executor stops without performing it.
 
 <details>
 <summary>Historical / Superseded — pre-Slice2-Closure governance view; original wording preserved</summary>

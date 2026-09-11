@@ -1,16 +1,16 @@
 // Step1 build/test ledger. Never executes Provider, signing or installer commands.
 import assert from 'node:assert/strict'
 import { spawn, execFileSync } from 'node:child_process'
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { mkdir, open, readFile, unlink, writeFile } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
 import { createHash } from 'node:crypto'
 
 assert.equal(process.version, 'v22.19.0')
 const root = resolve(import.meta.dirname, '..')
-const evidence = join(root, 'docs/04-development-records/evidence/V1-SLICE-3/STEP-1/S3STEP1-20260911-FOUNDATION-01')
+const evidence = join(root, 'docs/04-development-records/evidence/V1-SLICE-3/STEP-1/S3STEP1-20260911-CLOSURE-CORRECTIVE-01')
 const command = process.argv[2]
 const allowed = ['typecheck', 'build', 'test', 'verify:static', 'verify:theme', 'smoke:worker', 'smoke:carrier', 'smoke:electron', 'smoke:failure', 'smoke:slice2-step1', 'smoke:slice2-step2', 'smoke:slice2-step3', 'smoke:slice2-step3-interactions', 'test:full-shaco', 'smoke:full-shaco', 'package:runtime', 'test:packaged-runtime', 'smoke:packaged-runtime', 'packaged-startup-probe', 'composition', 'install-packager']
-assert.ok(allowed.includes(command), 'Command outside Step1 non-Provider allowlist')
+assert.ok(allowed.includes(command) || ['packaged-desktop-diagnostic', 'packaged-worker-diagnostic', 'packaged-diagnostic-cleanup'].includes(command), 'Command outside Step1 non-Provider allowlist')
 const pnpm = process.env.SHACO_FORGE_PNPM_ENTRY
 assert.ok(pnpm)
 const env = { ...process.env, SHACO_FORGE_HARNESS_ROOT: 'D:/Project/Shaco-Forge-Upstream/deepseek-harness', SHACO_FORGE_WORKER_NODE: process.execPath }
@@ -20,6 +20,10 @@ env.PATH = `${dirname(process.execPath)};${join(env.ProgramFiles, 'dotnet')};${d
 env.PATHEXT = '.COM;.EXE;.BAT;.CMD'
 delete env.ELECTRON_RUN_AS_NODE
 const summaryPath = join(evidence, 'test-summary.json')
+const ledgerLockPath = join(evidence, 'command.lock')
+const ledgerLock = await open(ledgerLockPath, 'wx')
+await ledgerLock.writeFile(JSON.stringify({ pid: process.pid, command }), 'utf8')
+try {
 const summary = await readFile(summaryPath, 'utf8').then(JSON.parse).catch(() => ({ commands: [] }))
 const attempt = summary.commands.filter(row => row.command === command).length + 1
 const run = join(evidence, 'runs', `${command.replaceAll(':', '-')}-${attempt}`)
@@ -27,8 +31,13 @@ env.SHACO_FORGE_STEP1_EVIDENCE_ROOT = join(run, 'step1')
 env.SHACO_FORGE_STEP2_EVIDENCE_ROOT = join(run, 'step2')
 env.SHACO_FORGE_STEP3_COMPOSITION_EVIDENCE_ROOT = join(evidence, 'composition')
 env.SHACO_FORGE_PACKAGED_EVIDENCE_ROOT = run
+env.SHACO_FORGE_PACKAGED_LOCATION = join(root, 'dist/packaged-runtime-location.json')
 for (const dir of [env.SHACO_FORGE_STEP1_EVIDENCE_ROOT, env.SHACO_FORGE_STEP2_EVIDENCE_ROOT, join(evidence, 'logs')]) await mkdir(dir, { recursive: true })
-const args = command === 'install-packager' ? [pnpm, 'add', '-Dw', '--save-exact', '--store-dir', 'D:/.pnpm-store', '@electron/packager@18.3.6']
+assert.notEqual(command, 'install-packager', 'Corrective forbids dependency installation/network')
+const args = command === 'install-packager' ? []
+  : command === 'packaged-desktop-diagnostic' ? [join(evidence, 'desktop-inspector-diagnostic.mjs'), String(attempt + 1)]
+  : command === 'packaged-worker-diagnostic' ? [join(evidence, 'restart-worker-diagnostic.mjs')]
+  : command === 'packaged-diagnostic-cleanup' ? [join(evidence, 'cleanup-diagnostic-home.mjs')]
   : command === 'packaged-startup-probe' ? ['scripts/smoke-packaged-runtime.mjs', '--startup-only']
   : command === 'composition' ? ['scripts/step3-final-composition.mjs', '--freeze']
     : [pnpm, ...(command === 'test' ? ['test'] : ['run', command])]
@@ -53,3 +62,7 @@ summary.commands.push({ command, phase: process.env.SHACO_FORGE_STEP1_FINAL === 
   sourceBefore, sourceAfter: await sourceIdentity(), executable: process.execPath, args, attempt, startedAt, endedAt: new Date().toISOString(), sourceHead: execFileSync(env.SHACO_FORGE_GIT, ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(), exitCode, result: exitCode === 0 ? 'PASS' : 'FAIL', log })
 await writeFile(summaryPath, JSON.stringify(summary, null, 2) + '\n', 'utf8')
 process.exitCode = exitCode ?? 1
+} finally {
+  await ledgerLock.close()
+  await unlink(ledgerLockPath)
+}

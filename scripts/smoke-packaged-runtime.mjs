@@ -3,12 +3,13 @@ import { execFile, spawn, spawnSync } from 'node:child_process'
 import { copyFile, lstat, mkdir, readFile, realpath, rename, rm, symlink, unlink, writeFile } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
 import { promisify } from 'node:util'
-import { RELEASE_LAYOUT, jsonBytes, verifyPackagedRuntime } from '../packages/contracts/dist/packaged-runtime.js'
+import { RELEASE_LAYOUT, hashFile, jsonBytes, verifyPackagedRuntime } from '../packages/contracts/dist/packaged-runtime.js'
+import { verifyProductionClosure } from './harness-production-closure.mjs'
 import { inspectLocalPlatform, lifecycleRequest } from '../apps/desktop/dist/main/lifecycle-client.js'
 
 const run = promisify(execFile)
 const root = resolve(import.meta.dirname, '..')
-const { packagedRoot } = JSON.parse(await readFile(join(root, 'dist/packaged-runtime-location.json'), 'utf8'))
+const { packagedRoot, evidence: packageEvidence } = JSON.parse(await readFile(join(root, 'dist/packaged-runtime-location.json'), 'utf8'))
 const evidence = process.env.SHACO_FORGE_PACKAGED_EVIDENCE_ROOT
 assert.ok(evidence)
 await mkdir(evidence, { recursive: true })
@@ -35,6 +36,15 @@ assert.equal((await inspectLocalPlatform(helper)).mutexExists, false, 'PACKAGED_
 const children = []
 try {
 const manifest = await verifyPackagedRuntime(packagedRoot)
+for (let dir = dirname(packagedRoot); ; dir = dirname(dir)) {
+  const present = await lstat(join(dir, 'node_modules')).then(() => true).catch(error => { if (error.code === 'ENOENT') return false; throw error })
+  assert.equal(present, false, `AMBIENT_ANCESTOR_NODE_MODULES: ${dir}`)
+  if (dirname(dir) === dir) break
+}
+await record('ISOLATED_RELEASE_ANCESTRY', { result: 'PASS', ancestorNodeModules: 'ABSENT', runtimeDependencyFallbackToDevelopmentRepository: false })
+const closurePath = join(packageEvidence, 'harness-production-closure.json')
+assert.equal(await hashFile(closurePath), manifest.BuildProvenance.harnessProductionClosureSha256)
+await record('PRODUCTION_DEPENDENCY_CLOSURE', await verifyProductionClosure(join(packagedRoot, 'harness/node_modules'), JSON.parse(await readFile(closurePath, 'utf8'))))
 assert.equal(manifest.ProductionProfileIdentity, 'shaco-forge')
 assert.doesNotMatch(JSON.stringify(manifest), /V1-SLICE-|shaco-forge-v1-slice-|shaco-v1-slice-/)
 for (const name of ['node', 'pnpm', 'dsh']) {
@@ -49,6 +59,7 @@ await record('COMPOSITION_AND_NO_PATH_TOOLCHAIN', { result: 'PASS', nodeIdentity
 // Each negative attempt alters only this generated package and restores the exact
 // bytes in finally. A real Desktop launch must fail before any Worker is started.
 async function desktopAttempt(name, fullObserver = false) {
+  const startedAt = Date.now()
   const path = join(evidence, `${name}.json`)
   const child = spawn(desktop, [`--user-data-dir=${join(evidence, 'electron-profile')}`], { cwd: evidence, env: { ...environment,
     SHACO_FORGE_EVIDENCE_PATH: path, SHACO_FORGE_SCREENSHOT_PATH: join(evidence, `${name}.png`),
@@ -62,7 +73,20 @@ async function desktopAttempt(name, fullObserver = false) {
   // Runtime logs are not retained verbatim: selected bounded evidence is the
   // authoritative record. Do not retain raw Harness business/credential content.
   const value = await readFile(path, 'utf8').then(JSON.parse).catch(() => ({ result: 'FAIL', evidenceMissing: true, processOutputBytes: Buffer.byteLength(output) }))
-  await record(name, { result: value.result, exitCode: code, evidence: `${name}.json` })
+  const selectedStartupDiagnostics = {
+    errorCodes: [...new Set(output.match(/\b(?:ERR_[A-Z0-9_]+|[A-Z][A-Z0-9_]*(?:FAILURE|REJECTED|MISMATCH|TIMEOUT))\b/g) ?? [])],
+    missingModules: [...output.matchAll(/Cannot find (?:module|package) ['"]([^'"\r\n]+)['"]/g)].map(match => match[1]),
+    processOutputBytes: Buffer.byteLength(output), evidenceMissing: value.evidenceMissing === true,
+    elapsedMs: Date.now() - startedAt, timedOut: code === null,
+  }
+  if (code === null) {
+    try {
+      const { status, socket } = await lifecycleRequest(helper, 'discover')
+      socket.destroy()
+      selectedStartupDiagnostics.authorityAtTimeout = { state: status?.state, worker: status?.worker, host: status?.host, workerRuntime: status?.workerRuntime }
+    } catch (error) { selectedStartupDiagnostics.discoveryError = error.message }
+  }
+  await record(name, { result: value.result, exitCode: code, evidence: `${name}.json`, selectedStartupDiagnostics })
   return { code, value }
 }
 for (const [id, path, kind] of (process.argv.includes('--startup-only') ? [] : [['MISSING_NODE', RELEASE_LAYOUT.node, 'missing'], ['WRONG_NODE', RELEASE_LAYOUT.node, 'modified'],

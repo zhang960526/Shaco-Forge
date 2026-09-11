@@ -1,0 +1,3673 @@
+{
+  "phase": "DEVELOPMENT_PRUNING_DIAGNOSTIC",
+  "packages": [
+    {
+      "name": "@deepseek-ai/node-addon-landlock-run",
+      "excludedFiles": 4,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@agentclientprotocol/sdk",
+      "excludedFiles": 60,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@anthropic-ai/sdk",
+      "excludedFiles": 108,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws/lambda-invoke-store",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-crypto/crc32",
+      "excludedFiles": 4,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-crypto/sha256-browser",
+      "excludedFiles": 7,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-crypto/sha256-js",
+      "excludedFiles": 7,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-crypto/supports-web-crypto",
+      "excludedFiles": 4,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-crypto/util",
+      "excludedFiles": 7,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/client-bedrock-runtime",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/core",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/credential-provider-env",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/credential-provider-http",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/credential-provider-ini",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/credential-provider-login",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/credential-provider-node",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/credential-provider-process",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/credential-provider-sso",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/credential-provider-web-identity",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/eventstream-handler-node",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/middleware-eventstream",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/middleware-websocket",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/nested-clients",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/signature-v4-multi-region",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/token-providers",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/token-providers",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/types",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/util-locate-window",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@aws-sdk/xml-builder",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@babel/code-frame",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@babel/helper-validator-identifier",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@babel/runtime",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@earendil-works/pi-ai",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@earendil-works/pi-telemetry",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@google/genai",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: dist/index.cjs",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/index.mjs",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/node/index.cjs",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/node/index.mjs",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/web/index.mjs"
+      ]
+    },
+    {
+      "name": "@hono/node-server",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@img/colour",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@img/sharp-win32-x64",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@joplin/turndown-plugin-gfm",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@koromix/koffi-win32-x64",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@lexical/clipboard",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@lexical/dragon",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@lexical/extension",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@lexical/history",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@lexical/html",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@lexical/internal",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@lexical/list",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@lexical/plain-text",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@lexical/selection",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@lexical/text",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@lexical/utils",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@mixmark-io/domino",
+      "excludedFiles": 959,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: lib/select.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/svg.js"
+      ]
+    },
+    {
+      "name": "@modelcontextprotocol/sdk",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@nodable/entities",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@octokit/openapi-types",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@octokit/openapi-webhooks-types",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@octokit/request-error",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@octokit/types",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@octokit/webhooks-methods",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@octokit/webhooks",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@opentelemetry/api-logs",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/api",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/api",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/core",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/core",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/exporter-logs-otlp-http",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/otlp-exporter-base",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/otlp-transformer",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/resources",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/resources",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/sdk-logs",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/sdk-metrics",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/sdk-trace",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@opentelemetry/semantic-conventions",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@preact/signals-core",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@protobufjs/aspromise",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@protobufjs/base64",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@protobufjs/codegen",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@protobufjs/eventemitter",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@protobufjs/fetch",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@protobufjs/float",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@protobufjs/path",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@protobufjs/pool",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@protobufjs/utf8",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@smithy/core",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@smithy/credential-provider-imds",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@smithy/fetch-http-handler",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@smithy/is-array-buffer",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@smithy/node-http-handler",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@smithy/node-http-handler",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@smithy/signature-v4",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@smithy/types",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@smithy/util-buffer-from",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@smithy/util-utf8",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@standard-schema/spec",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@tanstack/react-virtual",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@tanstack/virtual-core",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@types/node",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@types/retry",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@types/trusted-types",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@vscode/ripgrep-win32-x64",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@vscode/ripgrep",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@xterm/headless",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "accepts",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "agent-base",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "ajv-formats",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "ajv",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "anynum",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "argparse",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "base64-js",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "bignumber.js",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "body-parser",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "bowser",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: bundled.js"
+      ]
+    },
+    {
+      "name": "buffer-equal-constant-time",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "bundle-name",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "bytes",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "call-bind-apply-helpers",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "call-bound",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "chokidar",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "chokidar",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "clsx",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "commander",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "compressible",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "compression",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "content-disposition",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "content-type",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "content-type",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "cookie-signature",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "cookie",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "cors",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "cross-spawn",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "data-uri-to-buffer",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "debug",
+      "excludedFiles": 1,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: karma.conf.js",
+        "RUNTIME_FILE_REFERENCES_SRC: node.js"
+      ]
+    },
+    {
+      "name": "debug",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "default-browser-id",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "default-browser",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "define-lazy-prop",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "depd",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "detect-libc",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "diff",
+      "excludedFiles": 1,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: eslint.config.mjs"
+      ]
+    },
+    {
+      "name": "dunder-proto",
+      "excludedFiles": 5,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "ecdsa-sig-formatter",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "ee-first",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "encodeurl",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "es-define-property",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "es-errors",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "es-object-atoms",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "escape-html",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "etag",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "eventsource-parser",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "eventsource",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "express-rate-limit",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "express",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "extend",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "fast-deep-equal",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "fast-uri",
+      "excludedFiles": 15,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "fast-xml-builder",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "fast-xml-parser",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "fetch-blob",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "fflate",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "finalhandler",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "formdata-polyfill",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "forwarded",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "fresh",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "function-bind",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "gaxios",
+      "excludedFiles": 20,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: build/cjs/browser-test/test.browser.js",
+        "RUNTIME_FILE_REFERENCES_SRC: build/cjs/system-test/test.install.js",
+        "RUNTIME_FILE_REFERENCES_SRC: build/esm/browser-test/test.browser.js",
+        "RUNTIME_FILE_REFERENCES_SRC: build/esm/system-test/test.install.js"
+      ]
+    },
+    {
+      "name": "gcp-metadata",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "get-intrinsic",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "get-proto",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "google-auth-library",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "google-logging-utils",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "gopd",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "has-symbols",
+      "excludedFiles": 6,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "hasown",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "hono",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: dist/cjs/jsx/dom/intrinsic-element/components.js",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/cjs/jsx/intrinsic-element/common.js",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/cjs/jsx/intrinsic-element/components.js",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/cjs/middleware/secure-headers/secure-headers.js",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/jsx/dom/intrinsic-element/components.js",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/jsx/intrinsic-element/common.js",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/jsx/intrinsic-element/components.js",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/middleware/secure-headers/secure-headers.js"
+      ]
+    },
+    {
+      "name": "http-errors",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "http-proxy-agent",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "https-proxy-agent",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "iconv-lite",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "inherits",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "ip-address",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "ipaddr.js",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "ipaddr.js",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "is-docker",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "is-in-ssh",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "is-inside-container",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "is-promise",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "is-wsl",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "isexe",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "jose",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "js-tokens",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "js-yaml",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "json-bigint",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "json-schema-to-ts",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "json-schema-traverse",
+      "excludedFiles": 4,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "json-schema-typed",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "jwa",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "jws",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "koffi",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: index.cjs",
+        "RUNTIME_FILE_REFERENCES_SRC: index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: indirect.cjs",
+        "RUNTIME_FILE_REFERENCES_SRC: indirect.js"
+      ]
+    },
+    {
+      "name": "lexical",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "long",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "loose-envify",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "math-intrinsics",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "media-typer",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "merge-descriptors",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "mime-db",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "mime-types",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "ms",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "ms",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "negotiator",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "negotiator",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "node-addon-api",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "node-addon-native-custom-loader",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "node-addon-require-builtin-win32-x64-msvc",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "node-addon-require-builtin",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "node-domexception",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "node-fetch",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "node-pty",
+      "excludedFiles": 7,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "object-assign",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "object-inspect",
+      "excludedFiles": 20,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "on-finished",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "on-headers",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "once",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "open",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "openai",
+      "excludedFiles": 290,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "p-retry",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "parseurl",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "partial-json",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "path-expression-matcher",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "path-key",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "path-to-regexp",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "picocolors",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "picomatch",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "pkce-challenge",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "powershell-utils",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "protobufjs",
+      "excludedFiles": 1,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: light.js",
+        "RUNTIME_FILE_REFERENCES_SRC: minimal.js"
+      ]
+    },
+    {
+      "name": "proxy-addr",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "qs",
+      "excludedFiles": 5,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "range-parser",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "raw-body",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "react-dom",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-dom-server-legacy.browser.development.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-dom-server-legacy.browser.production.min.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-dom-server-legacy.node.development.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-dom-server-legacy.node.production.min.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-dom-server.browser.development.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-dom-server.browser.production.min.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-dom-server.node.development.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-dom-server.node.production.min.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-dom.development.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-dom.production.min.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-dom.profiling.min.js",
+        "RUNTIME_FILE_REFERENCES_SRC: umd/react-dom-server-legacy.browser.development.js",
+        "RUNTIME_FILE_REFERENCES_SRC: umd/react-dom-server-legacy.browser.production.min.js",
+        "RUNTIME_FILE_REFERENCES_SRC: umd/react-dom-server.browser.development.js",
+        "RUNTIME_FILE_REFERENCES_SRC: umd/react-dom-server.browser.production.min.js",
+        "RUNTIME_FILE_REFERENCES_SRC: umd/react-dom.development.js",
+        "RUNTIME_FILE_REFERENCES_SRC: umd/react-dom.production.min.js",
+        "RUNTIME_FILE_REFERENCES_SRC: umd/react-dom.profiling.min.js"
+      ]
+    },
+    {
+      "name": "react",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-jsx-dev-runtime.development.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react-jsx-runtime.development.js",
+        "RUNTIME_FILE_REFERENCES_SRC: cjs/react.development.js",
+        "RUNTIME_FILE_REFERENCES_SRC: umd/react.development.js"
+      ]
+    },
+    {
+      "name": "readdirp",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "readdirp",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "require-from-string",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "resolve.exports",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "retry",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "router",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "run-applescript",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "safe-buffer",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "safer-buffer",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "scheduler",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "semver",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "send",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "serve-static",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "setprototypeof",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "sharp",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: dist/sharp.cjs",
+        "RUNTIME_FILE_REFERENCES_SRC: dist/sharp.mjs"
+      ]
+    },
+    {
+      "name": "shebang-command",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "shebang-regex",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "side-channel-list",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "side-channel-map",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "side-channel-weakmap",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "side-channel",
+      "excludedFiles": 3,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "statuses",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "strnum",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "toidentifier",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "ts-algebra",
+      "excludedFiles": 1,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "tslib",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "turndown",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: dist/turndown.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/turndown.browser.cjs.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/turndown.browser.es.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/turndown.browser.umd.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/turndown.cjs.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/turndown.es.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/turndown.umd.js"
+      ]
+    },
+    {
+      "name": "type-is",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "typebox",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "undici-types",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "undici",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "unpipe",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "use-sync-external-store",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "vary",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "web-streams-polyfill",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "which",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "wrappy",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "ws",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "wsl-utils",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "xml-naming",
+      "excludedFiles": 0,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "yaml",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "zod-to-json-schema",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "zod",
+      "excludedFiles": 170,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@shaco-forge/harness-bootstrap",
+      "excludedFiles": 0,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@deepseek-ai/cordis",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/cordis-plugin-group",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/cordis-plugin-hmr",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/cordis-plugin-include",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/cordis-plugin-loader",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/cordis-plugin-timer",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/cosmokit",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: lib/profile-boot-BTzzdrGY.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/profile-boot.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-acp",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-acp-app",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-agent",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-agent-default-model",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-agent-instructions",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-agent-loop",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@deepseek-ai/dsh-agent-presets",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/invariant.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/discovery.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-agent-spine-demo",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-agent-tool-presentation",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-anonymous-user-id",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-api-gateway",
+      "excludedFiles": 5,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-api-remotes",
+      "excludedFiles": 5,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/client.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-api-session-controller",
+      "excludedFiles": 5,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-api-settings-controller",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-api-workspace-controller",
+      "excludedFiles": 5,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-app-boot",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/index.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-atomic-write",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-attachment",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-attachment-local",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-authorization",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-base",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-bash-local",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-bash-sandbox",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-brand",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-connection",
+      "excludedFiles": 5,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/client.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/client/fixture.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-hmr",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-locale",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-modules",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/index.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-agent-preset",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-approval",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-attachment",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-brand-official",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-chat",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-commands",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-conversation",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-cordis",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-deliverables",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-directory-picker-browse",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-directory-picker-native",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-goal",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-input-trigger",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-jobs",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-layout",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-message-feedback",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-model-selection",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-permission-presets",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-plan",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-reference",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-renderer",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-session",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-settings",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-settings-general",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-settings-models",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-settings-plugin-inventory",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-settings-plugins",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-sidebar",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-skill",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-subagent",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-theme",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-tool",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-trajectory",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-user-questions",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-workflow-run",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-client-ui-workspace",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-cmdline",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-code-runtime",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-code-runtime-worker-thread",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/index.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-command-compact",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-command-feedback",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-command-goal",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-commands",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-compaction",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-compaction-basic",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-compaction-tool-result-pruner",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-cordis-client-runner",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/client.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/client/slot-catalog.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-cordis-host-runner",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-credentials",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-credentials-local",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-deepseek-llm-api-extensions",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-file-reference",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-file-reference-local",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/search.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-fs",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-fs-local",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-fs-observation-policy",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-fs-sandbox",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-goal",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-goal-round-driver",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-headless",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-home-paths",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-hook-protocol",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-hooks-claude-code",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-hooks-codex",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-host-directory-picker",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-host-directory-picker-auto",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-host-directory-picker-browse",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-host-directory-picker-native",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-host-frontend-static",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-host-plugin-inventory",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-host-webserver",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/injections.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-invariants",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-jobs",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-jobs-local",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-launch-environment",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-llm",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/attribution.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-llm-deepseek",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-llm-pi-ai",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-llm-retry",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@deepseek-ai/dsh-mcp-client",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-message-feedback",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-native-command",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-output-retention",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-permission-presets",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-persona",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-plan-mode",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-plugin-package-inventory-deepseek",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-pwsh-local",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-pwsh-sandbox",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/helpers.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-repeat-tool-reminder",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-sandbox",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-sandbox-local",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/index.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-sandbox-policy",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-sandbox-windows-acl",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-schedule",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-scope",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-sdk-app",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-sdk-jsonrpc-server",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-sdk-minimal",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-sdk-protocol",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@deepseek-ai/dsh-session",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-checkpoint-policy",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-log-deepseek",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-log-export",
+      "excludedFiles": 5,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-persistence",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-persistence-jsonl",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-projection",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-projection-cache",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-query",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-query-sqlite",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/index.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-reference",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-stats",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-telemetry",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-telemetry-otel",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-title",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-title-first-prompt-llm",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@deepseek-ai/dsh-session-title-llm",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-settings",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-settings-file",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-shell",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-shell-env",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-skill",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-skill-badge",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@deepseek-ai/dsh-skill-filesystem",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-spill",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-spill-local",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-spill-policy",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-storage",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-storage-domain",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/index.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-storage-json",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-subagent",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.host.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/typert.remote-client.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-subagent-fork-in-process",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-subagent-in-process-driver",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-subagent-spawn-in-process",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-subprocess",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-subprocess-local",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-system-prompt",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-terminal",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-terminal-bash",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-time-context",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-timeout",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tmux-context",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-token-meter",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-ask-user",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-bash",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/render.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-bash-persistent",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-call-timeout-policy",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-cordis",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/api-catalog.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-fs",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/read-image.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-fs-search",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/index.js",
+        "RUNTIME_FILE_REFERENCES_SRC: lib/types/glob.js"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-goal",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-jobs",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-pwsh",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-pwsh-persistent",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-ralph",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-skill",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-str-replace-editor",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-subagent",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-subagent-control",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-subagent-report",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-todo",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-web",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tool-workflow",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-tools",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-typert-loader",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-typert-protocol",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-typert-registry",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-user-approval",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-user-questions",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-util-crypto",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-util-workspace-path",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-web",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-web-app",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-web-fetch-http",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-web-frontend",
+      "excludedFiles": 2,
+      "srcDisposition": "EXCLUDE_UNREFERENCED_SOURCE_TREE",
+      "srcReasons": []
+    },
+    {
+      "name": "@deepseek-ai/dsh-web-search-deepseek",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-webhook",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-webhook-github",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-win32-process",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-workflow",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-workflow-worker-thread",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/dsh-workspace",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    },
+    {
+      "name": "@deepseek-ai/schemastery",
+      "excludedFiles": 2,
+      "srcDisposition": "RETAIN_RUNTIME_REFERENCED_SRC",
+      "srcReasons": [
+        "MANIFEST_RUNTIME_ENTRY_OR_EXPORT_REFERENCES_SRC"
+      ]
+    }
+  ],
+  "failures": [],
+  "result": "PASS"
+}

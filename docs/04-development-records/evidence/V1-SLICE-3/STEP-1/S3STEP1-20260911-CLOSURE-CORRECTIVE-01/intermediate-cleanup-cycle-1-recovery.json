@@ -1,0 +1,28 @@
+{
+  "providerRuns": 0,
+  "desktopCleanup": "runs/smoke-packaged-runtime-1/cleanup.json",
+  "earlierCleanupFailure": {
+    "command": "final-cleanup-driver.mjs intermediate-cleanup-cycle-1.json",
+    "effects": "Screenshots were archived and temporary-root cleanup completed before the late assertion. The first driver did not persist its in-memory removed-root list; no names or counts are fabricated.",
+    "exitCode": 1,
+    "observedError": "Expected true === false at final home absence assertion"
+  },
+  "context": "CALLER_VIEW_EMPTY_DIAGNOSTIC_DIRECTORIES",
+  "precondition": "Both directories were empty, non-reparse and created after this task began. Non-recursive removal only.",
+  "result": "PASS",
+  "signingRuns": 0,
+  "removed": [
+    {
+      "path": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+      "empty": true,
+      "createdAt": "2026-09-11T10:53:48.1127987Z",
+      "recursive": false
+    },
+    {
+      "path": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge",
+      "empty": true,
+      "createdAt": "2026-09-11T10:53:48.1088000Z",
+      "recursive": false
+    }
+  ]
+}

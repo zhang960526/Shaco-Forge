@@ -1,0 +1,92 @@
+$ node scripts/smoke-electron.mjs --inject-carrier-failure
+{
+  "result": "PASS",
+  "evidencePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-electron-regression\\carrier-failure-runtime.json",
+  "screenshotPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-electron-regression\\carrier-failure-runtime.png",
+  "mainPid": 43704,
+  "events": [
+    {
+      "protocolVersion": 1,
+      "phase": "host-ready",
+      "timestamp": "2026-09-11T11:50:32.074Z",
+      "workerPid": 24860,
+      "hostPid": 37624,
+      "parentPid": 43704,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+      ]
+    },
+    {
+      "protocolVersion": 1,
+      "phase": "carrier-ready",
+      "timestamp": "2026-09-11T11:50:32.085Z",
+      "workerPid": 24860,
+      "hostPid": 37624,
+      "parentPid": 43704,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "workerArgv": [
+        "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+      ]
+    }
+  ],
+  "theme": {
+    "architecture": "MODE_PLUS_TEMPLATE",
+    "supportedModes": [
+      "light",
+      "dark",
+      "system"
+    ],
+    "initial": {
+      "mode": "light",
+      "resolved": "light",
+      "rootTheme": "light",
+      "values": {
+        "appSurface": "rgb(244, 244, 242)",
+        "sidebarSurface": "rgb(235, 235, 232)",
+        "primaryText": "rgb(36, 38, 36)",
+        "border": "rgb(210, 211, 205)",
+        "selectedRow": "rgb(216, 219, 212)",
+        "composerSurface": "rgb(250, 250, 248)"
+      }
+    },
+    "systemPreferenceQuery": "(prefers-color-scheme: dark)",
+    "rootSwitchSmoke": {
+      "requested": true,
+      "pass": true,
+      "lightValues": {
+        "appSurface": "rgb(244, 244, 242)",
+        "sidebarSurface": "rgb(235, 235, 232)",
+        "primaryText": "rgb(36, 38, 36)",
+        "border": "rgb(210, 211, 205)",
+        "selectedRow": "rgb(216, 219, 212)",
+        "composerSurface": "rgb(250, 250, 248)"
+      },
+      "darkValues": {
+        "appSurface": "rgb(23, 27, 24)",
+        "sidebarSurface": "rgb(29, 34, 30)",
+        "primaryText": "rgb(237, 241, 233)",
+        "border": "rgb(68, 77, 63)",
+        "selectedRow": "rgb(57, 72, 49)",
+        "composerSurface": "rgb(43, 49, 43)"
+      },
+      "changedSemanticTokens": [
+        "appSurface",
+        "border",
+        "composerSurface",
+        "primaryText",
+        "selectedRow",
+        "sidebarSurface"
+      ],
+      "finalMode": "light",
+      "finalResolved": "light",
+      "finalRootTheme": "light"
+    },
+    "visibleAppearanceSettings": false,
+    "harnessClientThemeUnification": "SHACO_TEMPLATE_AUTHORITY"
+  },
+  "dshHomeRemoved": true,
+  "stderr": "Error occurred in handler for 'transport:pull-stream': Error: Carrier closed by Desktop\n    at CarrierClient.close (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:328:20)\n    at #fence (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:133:14)\n    at RecoveryCoordinator.fail (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:142:20)\n    at IpcMainImpl.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:387:19)\n    at IpcMainImpl.emit (node:events:518:28)\n    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:88892)\n    at WebContents.emit (node:events:518:28)\nError occurred in handler for 'transport:pull-stream': Error: Carrier closed by Desktop\n    at CarrierClient.close (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:328:20)\n    at #fence (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:133:14)\n    at RecoveryCoordinator.fail (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:142:20)\n    at IpcMainImpl.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:387:19)\n    at IpcMainImpl.emit (node:events:518:28)\n    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:88892)\n    at WebContents.emit (node:events:518:28)\nError occurred in handler for 'transport:pull-stream': Error: Carrier closed by Desktop\n    at CarrierClient.close (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:328:20)\n    at #fence (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:133:14)\n    at RecoveryCoordinator.fail (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:142:20)\n    at IpcMainImpl.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:387:19)\n    at IpcMainImpl.emit (node:events:518:28)\n    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:88892)\n    at WebContents.emit (node:events:518:28)\nError occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION\n    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)\n    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)\n    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:176:33\n    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)\n    at WebContents.emit (node:events:518:28)\nError occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION\n    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)\n    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)\n    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:176:33\n    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)\n    at WebContents.emit (node:events:518:28)\nError occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION\n    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)\n    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)\n    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:176:33\n    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)\n    at WebContents.emit (node:events:518:28)\nError occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION\n    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)\n    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)\n    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:176:33\n    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)\n    at WebContents.emit (node:events:518:28)\nError occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION\n    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)\n    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)\n    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:176:33\n    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)\n    at WebContents.emit (node:events:518:28)\nError occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION\n    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)\n    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)\n    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:176:33\n    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)\n    at WebContents.emit (node:events:518:28)\n"
+}

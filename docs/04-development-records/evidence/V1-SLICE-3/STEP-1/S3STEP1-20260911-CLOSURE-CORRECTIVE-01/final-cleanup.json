@@ -1,0 +1,145 @@
+{
+  "result": "PASS",
+  "removedTemporaryRoots": [
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.full-shaco-visual-QjHNNm",
+      "createdAt": "2026-09-11T11:56:55.584Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.review026-interactions-OcGa8V",
+      "createdAt": "2026-09-11T11:56:21.932Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-electron-XkNrU2",
+      "createdAt": "2026-09-11T11:53:57.213Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-overlap-HVbIy8",
+      "createdAt": "2026-09-11T11:53:41.930Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-02ICae",
+      "createdAt": "2026-09-11T11:53:08.230Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-1jJQKQ",
+      "createdAt": "2026-09-11T11:51:03.753Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-6cim3B",
+      "createdAt": "2026-09-11T11:52:21.473Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-80EjR3",
+      "createdAt": "2026-09-11T11:53:01.277Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-daRjVH",
+      "createdAt": "2026-09-11T11:49:00.848Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-ejLzLC",
+      "createdAt": "2026-09-11T11:48:59.926Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-fuicAz",
+      "createdAt": "2026-09-11T11:48:36.369Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-GqQ3mk",
+      "createdAt": "2026-09-11T11:48:17.735Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-Is3w6g",
+      "createdAt": "2026-09-11T11:49:36.141Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-JfQr0g",
+      "createdAt": "2026-09-11T11:50:39.451Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-K5i4xp",
+      "createdAt": "2026-09-11T11:51:04.656Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-l8dGEo",
+      "createdAt": "2026-09-11T11:53:22.795Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-NknDtx",
+      "createdAt": "2026-09-11T11:52:41.065Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-SgAPpA",
+      "createdAt": "2026-09-11T11:51:43.179Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-U5EcD7",
+      "createdAt": "2026-09-11T11:51:40.745Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-U821VZ",
+      "createdAt": "2026-09-11T11:53:02.004Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-VysEqD",
+      "createdAt": "2026-09-11T11:52:02.237Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step2-runtime-AXD9CV",
+      "createdAt": "2026-09-11T11:54:27.346Z",
+      "removed": true
+    },
+    {
+      "path": "D:\\Project\\Shaco-Forge\\node_modules\\.step2-runtime-Tjmty2",
+      "createdAt": "2026-09-11T11:55:22.132Z",
+      "removed": true
+    }
+  ],
+  "archivedFinalElectronArtifacts": [
+    "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-CLOSURE-CORRECTIVE-01\\runs\\smoke-electron-2\\step1\\electron-runtime.json",
+    "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-CLOSURE-CORRECTIVE-01\\runs\\smoke-electron-2\\step1\\electron-runtime.png",
+    "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-CLOSURE-CORRECTIVE-01\\runs\\smoke-failure-2\\step1\\carrier-failure-runtime.json",
+    "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-CLOSURE-CORRECTIVE-01\\runs\\smoke-failure-2\\step1\\carrier-failure-runtime.png"
+  ],
+  "noAuthority": true,
+  "productProcesses": [],
+  "tempCreationBoundary": "2026-09-11T11:21:27.111Z",
+  "dedicatedCleanup": "runs/smoke-packaged-runtime-2/cleanup.json",
+  "diagnosticCleanup": [
+    "diagnostic-authority-recovery.json",
+    "diagnostic-home-cleanup.json",
+    "intermediate-cleanup-cycle-1-recovery.json"
+  ],
+  "retained": [
+    "dist/packaging/*",
+    "dist/corrective-probes/*",
+    "isolated development and final packages in Temp/shaco-forge-s3s1-packages",
+    "all corrective evidence and failed attempts"
+  ],
+  "retentionReason": "Read-only reviewable generated build/artifact evidence; no mutable product test home retained.",
+  "finalPackage": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789127875464\\output\\Shaco Forge-win32-x64",
+  "providerRuns": 0,
+  "signingRuns": 0
+}

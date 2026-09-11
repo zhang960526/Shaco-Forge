@@ -5,6 +5,7 @@ import { dirname, join, resolve } from 'node:path'
 import { tmpdir } from 'node:os'
 import { CONTRACT_SHA256, HARNESS_COMMIT, RELEASE_LAYOUT, artifactIdentity, inventory, jsonBytes, releasePath, verifyPackagedRuntime } from '../packages/contracts/dist/packaged-runtime.js'
 import { packagedChildEnvironment, validateHarnessModuleReferences } from '../apps/worker/dist/packaged-config.js'
+import './harness-production-closure.test.mjs'
 
 async function fixture(fn) {
   const root = await mkdtemp(join(tmpdir(), 'shaco-package-identity-'))

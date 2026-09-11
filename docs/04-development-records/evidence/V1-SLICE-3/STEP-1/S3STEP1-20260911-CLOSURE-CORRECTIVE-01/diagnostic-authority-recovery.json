@@ -1,0 +1,20 @@
+{
+  "reason": "Diagnostic exited while detached packaged Worker initialization was still in flight; late authority recovered using exact packaged runtime identity.",
+  "worker": {
+    "pid": 40044,
+    "startTime": "134335977533536784"
+  },
+  "host": {
+    "pid": 25836,
+    "startTime": "134335977706254805"
+  },
+  "workerRuntime": {
+    "nodeVersion": "v22.19.0",
+    "executable": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+    "argv": [
+      "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+    ],
+    "parentPid": 17084
+  },
+  "noAuthority": true
+}

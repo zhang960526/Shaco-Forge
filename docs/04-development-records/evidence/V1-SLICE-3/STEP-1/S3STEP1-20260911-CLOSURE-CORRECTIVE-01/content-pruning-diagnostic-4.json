@@ -1,0 +1,256 @@
+{
+  "attempt": "4",
+  "purpose": "EXECUTOR_CONTENT_PRUNING_CORRECTIVE_DIAGNOSTIC",
+  "priorCandidateAcceptance": "FAIL_TEST_ONLY_CONTENT_CENSUS",
+  "previousPackageEvidence": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-CLOSURE-CORRECTIVE-01\\runs\\package-runtime-3",
+  "previousSourceIdentity": "fb69db2cf42f880e956f5da11369f735a9c97126cb10ec2d79fd0f1e80d07bbd",
+  "observation": "Cycle 1 completed 18 command PASS results, but a subsequent content census found generated browser/system tests, SDK test-support, and standalone tape runners. Cycle 1 is retained and is not final acceptance.",
+  "discoveredFiles": [
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/streams.d.ts",
+      "bytes": 576,
+      "sha256": "ee5d13b9f0b2475a009431081ca6ce293da52fb0ab6fef443ddd5c1c73537418"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/streams.js",
+      "bytes": 1482,
+      "sha256": "b877155b5aff51333057bc253a93a08043903603859a9aafcb74f2441ac2fea5"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/streams.js.map",
+      "bytes": 1598,
+      "sha256": "506043e2d70853f0aa74b9e0e4c8e10b8a604cc1b00ed13fccb5c00d47ca831b"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-agent.d.ts",
+      "bytes": 1415,
+      "sha256": "5732c75dc3a7d2c35aee42a039159d96cb93c3d85a0dfb8497f970a766b7d95b"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-agent.js",
+      "bytes": 5800,
+      "sha256": "2b70684f789d753c09cf00ad0202fe9804c6f7a5a853107f0894232ffa67d0cd"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-agent.js.map",
+      "bytes": 4755,
+      "sha256": "0f21168615799e08499b516c6779c0678e3306f3b4ce42c6dc702f47106eb50d"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-http-server.d.ts",
+      "bytes": 304,
+      "sha256": "277714ccda6b1201620aa51844a8945c110c769eb92b346a84737ad5a1a0b96b"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-http-server.js",
+      "bytes": 2469,
+      "sha256": "823ec9b019a6cb1f70daaab2ac0e6456ff933e1503d9f4bff97d2d5d3a43ad15"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-http-server.js.map",
+      "bytes": 2566,
+      "sha256": "2e17adcb0795cdcb63d6a25028deb80324dc12d3533bac98270d38860b8a01c5"
+    },
+    {
+      "path": "harness/node_modules/@protobufjs/float/bench/index.js",
+      "bytes": 1966,
+      "sha256": "80310d389bb9ec48eac72ef1f6807479bf319587f5eda0a5f9ff63f145f6ca33"
+    },
+    {
+      "path": "harness/node_modules/@protobufjs/float/bench/suite.js",
+      "bytes": 1522,
+      "sha256": "3ea9f59d25254c88ba42c6fce0efad7934eb518eab22da41e9af427475d28ad9"
+    },
+    {
+      "path": "harness/node_modules/fast-uri/benchmark/benchmark.mjs",
+      "bytes": 4421,
+      "sha256": "45ba9783c3258e448b05bd371161ef9fcbeed332ba1e9455ca9c98edb24e1f33"
+    },
+    {
+      "path": "harness/node_modules/fast-uri/benchmark/equal.mjs",
+      "bytes": 1305,
+      "sha256": "36eb5b2acea9c4e969ab8fe028e88b781aa948e597368655a13528c3a93f1d39"
+    },
+    {
+      "path": "harness/node_modules/fast-uri/benchmark/non-simple-domain.mjs",
+      "bytes": 838,
+      "sha256": "303eb41faa6c2489b5086f3d2764bf6ecaf3b937b385647c6e8b14aaf2582524"
+    },
+    {
+      "path": "harness/node_modules/fast-uri/benchmark/package.json",
+      "bytes": 293,
+      "sha256": "463a034d344b042e495841b770ca69a812693087ee2053d7c18cc8497e020b58"
+    },
+    {
+      "path": "harness/node_modules/fast-uri/benchmark/string-array-to-hex-stripped.mjs",
+      "bytes": 819,
+      "sha256": "693d4a312b0e275e02ef5531d707ff7df6cddf14cd83bc09a79909ea2008bfd4"
+    },
+    {
+      "path": "harness/node_modules/fast-uri/benchmark/ws-is-secure.mjs",
+      "bytes": 1891,
+      "sha256": "6f105dc633aadd4bd4b8362765f4a1d44fb31fe0c8754cb11d73f27ff7d6527b"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/browser-test-runner.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/browser-test-runner.js",
+      "bytes": 4210,
+      "sha256": "a2a31674fdc188e34ca2ff31d32e9460ff2dc3559d0fe3fc5b3a22508a53e7b1"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/browser-test-runner.js.map",
+      "bytes": 2538,
+      "sha256": "4e7a4fae8f5348eb19e261d2b25b3816394f8163f31f9f265b74446467cdc528"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/test.browser.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/test.browser.js",
+      "bytes": 3530,
+      "sha256": "a2a11e7827248d063eaf6f23557b2dc264405b4fdead8e72688b9fc3bf128ac9"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/test.browser.js.map",
+      "bytes": 2514,
+      "sha256": "d9e7df17481360b94899979ab09a1698ce801c15759bb9cbf716d525c9790107"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/system-test/test.install.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/system-test/test.install.js",
+      "bytes": 4953,
+      "sha256": "8fcbdf4cac3947551cab7c254da8d594d645a0f51dc214196b9d2d1f19922713"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/system-test/test.install.js.map",
+      "bytes": 3391,
+      "sha256": "c7c16775e9616e6c967a32c80229a04fb1469affa579833c31c9ffa13fe8e5a8"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/browser-test-runner.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/browser-test-runner.js",
+      "bytes": 2509,
+      "sha256": "b60f2bc834981acfeecbd83f6f396a3e343bba048bba3ceb9da9523612d2ee81"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/browser-test-runner.js.map",
+      "bytes": 2597,
+      "sha256": "f1c171814e36f1bfbe7dcad1063912c587c173b0cf6a7867849c1a1e450a7573"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/test.browser.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/test.browser.js",
+      "bytes": 3096,
+      "sha256": "d67e6eb8925da3a0e9b78d04ed5fd23996c7e248322fb67870682752918e241c"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/test.browser.js.map",
+      "bytes": 2539,
+      "sha256": "c482285526d7ba9463f2372a3bf33ce37c8a303e0ac9cf7fbb43300bef2799a5"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/system-test/test.install.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/system-test/test.install.js",
+      "bytes": 4244,
+      "sha256": "76cac1381f82c5aba30adc5080c01f4b0756a9de16ad38ff4c42242e5206e589"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/system-test/test.install.js.map",
+      "bytes": 3582,
+      "sha256": "b317911e4145ec5e55526ea7d4ec54833bf57c9f123fe6ae35d4a5496fb62b95"
+    },
+    {
+      "path": "harness/node_modules/object-inspect/test-core-js.js",
+      "bytes": 534,
+      "sha256": "16d580a89dec81a3657e20d9f827768178abe029bf31a950136a38852b493b9a"
+    },
+    {
+      "path": "harness/node_modules/safer-buffer/tests.js",
+      "bytes": 15735,
+      "sha256": "511906fdf6a233c84a9216065d1701dbfd84f380fbd495ae1cf5a002370b9885"
+    },
+    {
+      "path": "harness/node_modules/zod/src/v3/benchmarks/datetime.ts",
+      "bytes": 1908,
+      "sha256": "0d1a81e5608b286c1843aaecb20bd7d1f62b6674a610a51dc7d1043bed05963d"
+    },
+    {
+      "path": "harness/node_modules/zod/src/v3/benchmarks/discriminatedUnion.ts",
+      "bytes": 1593,
+      "sha256": "33e4f792dbfdc735a72f92fcc117d3dbaea8e7ff3937d523bef3df44814805d3"
+    },
+    {
+      "path": "harness/node_modules/zod/src/v3/benchmarks/index.ts",
+      "bytes": 1582,
+      "sha256": "27f4322ad98e28575d5849a7612c6acea55cd5be8a1571d1885a656e8a9d5620"
+    },
+    {
+      "path": "harness/node_modules/zod/src/v3/benchmarks/ipv4.ts",
+      "bytes": 1818,
+      "sha256": "3ef475926d7e95a5880cd9d7bd780f98642189010046bb9748e27e50360da333"
+    },
+    {
+      "path": "harness/node_modules/zod/src/v3/benchmarks/object.ts",
+      "bytes": 1623,
+      "sha256": "ea0f6d4b3e2c6f47bf1739a53473997da4aaacc1e5f59e57f00cfb6b7f59a4e5"
+    },
+    {
+      "path": "harness/node_modules/zod/src/v3/benchmarks/primitives.ts",
+      "bytes": 3489,
+      "sha256": "706d51c7048aff5108dd71b33b5c66d354a6856be0a48b23bc32e55d284c31d0"
+    },
+    {
+      "path": "harness/node_modules/zod/src/v3/benchmarks/realworld.ts",
+      "bytes": 1157,
+      "sha256": "9bcc944a5e875ca191ca10542c113dde3c754e45a196400726f251b045e14215"
+    },
+    {
+      "path": "harness/node_modules/zod/src/v3/benchmarks/string.ts",
+      "bytes": 1257,
+      "sha256": "ed17ef186249dc4f1da01a2d5e0bd3c87da6d0d2dcad89e8afa05e0920d98536"
+    },
+    {
+      "path": "harness/node_modules/zod/src/v3/benchmarks/union.ts",
+      "bytes": 1525,
+      "sha256": "9eec8e3e58cb4d3dd76be11874187f71a99c27e06c639de0cc9d8d928687fe0a"
+    }
+  ],
+  "discoveredBytes": 106010,
+  "proof": [
+    "gaxios package scripts explicitly invoke browser-test and system-test; their JS imports dev-only mocha.",
+    "object-inspect/test-core-js.js and safer-buffer/tests.js import dev-only tape.",
+    "@agentclientprotocol/sdk dist/test-support is not exported; production modules must not import it (pruning guard enforces this)."
+  ],
+  "preservedPublicRuntimeApis": [
+    "hono ./testing is an explicit package export.",
+    "@earendil-works/pi-telemetry ./testing is an explicit package export.",
+    "undici lib/mock is exported/referenced by its production entry. No global testing/mock substring deletion."
+  ],
+  "codeSha256": "f2f7db90f0f86e149848abfeadf50df6cde71aca89cebce710a73521299cbb99",
+  "result": "PASS_CORRECTED_CONTENT_PLANS",
+  "checkedPackages": 505,
+  "excludedFiles": 2276,
+  "excludedBytes": 26418501
+}

@@ -1,0 +1,83 @@
+{
+  "events": [
+    {
+      "protocolVersion": 1,
+      "phase": "worker-starting",
+      "timestamp": "2026-09-11T11:15:29.565Z",
+      "workerPid": 1936,
+      "parentPid": 37104,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "dshHome": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+      "harnessCliPath": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\harness\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+      "harnessSourceRoot": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\harness",
+      "profileName": "shaco-forge"
+    },
+    {
+      "protocolVersion": 1,
+      "phase": "host-starting",
+      "timestamp": "2026-09-11T11:15:29.709Z",
+      "workerPid": 1936,
+      "parentPid": 37104,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "hostPid": 6688,
+      "hostLaunchArgv": [
+        "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+        "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\harness\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+        "--profile",
+        "shaco-forge"
+      ],
+      "profileName": "shaco-forge",
+      "profilePath": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\harness\\profiles\\shaco-forge",
+      "dshHome": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+      "harnessCliPath": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\harness\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+      "harnessSourceRoot": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\harness"
+    },
+    {
+      "protocolVersion": 1,
+      "phase": "host-ready",
+      "timestamp": "2026-09-11T11:15:32.335Z",
+      "workerPid": 1936,
+      "parentPid": 37104,
+      "workerNodeVersion": "v22.19.0",
+      "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+      "workerArgv": [
+        "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\resources\\app\\worker-launch.mjs"
+      ],
+      "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+      "harnessRelease": "dsh-v0.1.2-alpha.1",
+      "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "hostPid": 6688,
+      "hostLaunchArgv": [
+        "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\runtime\\node.exe",
+        "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\harness\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+        "--profile",
+        "shaco-forge"
+      ],
+      "profileName": "shaco-forge",
+      "profilePath": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\harness\\profiles\\shaco-forge",
+      "dshHome": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh",
+      "harnessCliPath": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\harness\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+      "harnessSourceRoot": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789125091944\\output\\Shaco Forge-win32-x64\\harness",
+      "readiness": {
+        "gatewayPresetCount": 4,
+        "standardPresetPresent": true
+      }
+    }
+  ],
+  "exitCode": null,
+  "stderrBytes": 0
+}

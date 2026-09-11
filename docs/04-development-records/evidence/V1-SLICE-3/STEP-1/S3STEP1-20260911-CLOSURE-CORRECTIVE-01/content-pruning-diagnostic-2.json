@@ -1,0 +1,220 @@
+{
+  "attempt": "2",
+  "purpose": "EXECUTOR_CONTENT_PRUNING_CORRECTIVE_DIAGNOSTIC",
+  "priorCandidateAcceptance": "FAIL_TEST_ONLY_CONTENT_CENSUS",
+  "previousPackageEvidence": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-CLOSURE-CORRECTIVE-01\\runs\\package-runtime-3",
+  "previousSourceIdentity": "fb69db2cf42f880e956f5da11369f735a9c97126cb10ec2d79fd0f1e80d07bbd",
+  "observation": "Cycle 1 completed 18 command PASS results, but a subsequent content census found generated browser/system tests, SDK test-support, and standalone tape runners. Cycle 1 is retained and is not final acceptance.",
+  "discoveredFiles": [
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/streams.d.ts",
+      "bytes": 576,
+      "sha256": "ee5d13b9f0b2475a009431081ca6ce293da52fb0ab6fef443ddd5c1c73537418"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/streams.js",
+      "bytes": 1482,
+      "sha256": "b877155b5aff51333057bc253a93a08043903603859a9aafcb74f2441ac2fea5"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/streams.js.map",
+      "bytes": 1598,
+      "sha256": "506043e2d70853f0aa74b9e0e4c8e10b8a604cc1b00ed13fccb5c00d47ca831b"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-agent.d.ts",
+      "bytes": 1415,
+      "sha256": "5732c75dc3a7d2c35aee42a039159d96cb93c3d85a0dfb8497f970a766b7d95b"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-agent.js",
+      "bytes": 5800,
+      "sha256": "2b70684f789d753c09cf00ad0202fe9804c6f7a5a853107f0894232ffa67d0cd"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-agent.js.map",
+      "bytes": 4755,
+      "sha256": "0f21168615799e08499b516c6779c0678e3306f3b4ce42c6dc702f47106eb50d"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-http-server.d.ts",
+      "bytes": 304,
+      "sha256": "277714ccda6b1201620aa51844a8945c110c769eb92b346a84737ad5a1a0b96b"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-http-server.js",
+      "bytes": 2469,
+      "sha256": "823ec9b019a6cb1f70daaab2ac0e6456ff933e1503d9f4bff97d2d5d3a43ad15"
+    },
+    {
+      "path": "harness/node_modules/@agentclientprotocol/sdk/dist/test-support/test-http-server.js.map",
+      "bytes": 2566,
+      "sha256": "2e17adcb0795cdcb63d6a25028deb80324dc12d3533bac98270d38860b8a01c5"
+    },
+    {
+      "path": "harness/node_modules/@deepseek-ai/dsh-message-feedback/lib/types/spec.js",
+      "bytes": 2984,
+      "sha256": "92ad230d6c2cae0159445e8c3236fe89e819531c062fe69108bac4d02a5d956e"
+    },
+    {
+      "path": "harness/node_modules/@deepseek-ai/dsh-message-feedback/lib/types/spec.js.map",
+      "bytes": 2474,
+      "sha256": "5bd77863327bb9f1bf8f01b2e2a2704fb5145a55015df73a46263f00902aa678"
+    },
+    {
+      "path": "harness/node_modules/@deepseek-ai/dsh-session-projection-cache/lib/types/spec.js",
+      "bytes": 2948,
+      "sha256": "2e3f35d0706ae059eedaf2d56e088de6f429723b07b7ca563729a1ee7dfce8b8"
+    },
+    {
+      "path": "harness/node_modules/@deepseek-ai/dsh-session-projection-cache/lib/types/spec.js.map",
+      "bytes": 1053,
+      "sha256": "37a063d1e14e89c63c93dcaf581da0bb4babdf74e39c9d9dc3145cc369f8d5d0"
+    },
+    {
+      "path": "harness/node_modules/@deepseek-ai/dsh-storage-domain/lib/types/spec.js",
+      "bytes": 3236,
+      "sha256": "2917eb04b41dcc6a96ff32885ef05b7c01c295321a2968e0a47590738bff863b"
+    },
+    {
+      "path": "harness/node_modules/@deepseek-ai/dsh-storage-domain/lib/types/spec.js.map",
+      "bytes": 1718,
+      "sha256": "899b20f998bebc09c39ce4d1d1ec36b3f6e665b30b7fe378635674acd64fe5e9"
+    },
+    {
+      "path": "harness/node_modules/@deepseek-ai/dsh-workspace/lib/types/spec.js",
+      "bytes": 2820,
+      "sha256": "cd7ade47f4d76c1638a08e6a9754f01cd46ce0f3deef85a11deba7edf5d1bef7"
+    },
+    {
+      "path": "harness/node_modules/@deepseek-ai/dsh-workspace/lib/types/spec.js.map",
+      "bytes": 1546,
+      "sha256": "bd44c19af6a595e5499351de0b220005895fa8e526c44c15bf77a1665352465d"
+    },
+    {
+      "path": "harness/node_modules/buffer-equal-constant-time/test.js",
+      "bytes": 1013,
+      "sha256": "9563fa194940e1ada764b9b5c0bd652baaec734b3aec6151a1bbe6f999f8bbde"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/browser-test-runner.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/browser-test-runner.js",
+      "bytes": 4210,
+      "sha256": "a2a31674fdc188e34ca2ff31d32e9460ff2dc3559d0fe3fc5b3a22508a53e7b1"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/browser-test-runner.js.map",
+      "bytes": 2538,
+      "sha256": "4e7a4fae8f5348eb19e261d2b25b3816394f8163f31f9f265b74446467cdc528"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/test.browser.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/test.browser.js",
+      "bytes": 3530,
+      "sha256": "a2a11e7827248d063eaf6f23557b2dc264405b4fdead8e72688b9fc3bf128ac9"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/browser-test/test.browser.js.map",
+      "bytes": 2514,
+      "sha256": "d9e7df17481360b94899979ab09a1698ce801c15759bb9cbf716d525c9790107"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/system-test/test.install.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/system-test/test.install.js",
+      "bytes": 4953,
+      "sha256": "8fcbdf4cac3947551cab7c254da8d594d645a0f51dc214196b9d2d1f19922713"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/cjs/system-test/test.install.js.map",
+      "bytes": 3391,
+      "sha256": "c7c16775e9616e6c967a32c80229a04fb1469affa579833c31c9ffa13fe8e5a8"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/browser-test-runner.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/browser-test-runner.js",
+      "bytes": 2509,
+      "sha256": "b60f2bc834981acfeecbd83f6f396a3e343bba048bba3ceb9da9523612d2ee81"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/browser-test-runner.js.map",
+      "bytes": 2597,
+      "sha256": "f1c171814e36f1bfbe7dcad1063912c587c173b0cf6a7867849c1a1e450a7573"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/test.browser.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/test.browser.js",
+      "bytes": 3096,
+      "sha256": "d67e6eb8925da3a0e9b78d04ed5fd23996c7e248322fb67870682752918e241c"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/browser-test/test.browser.js.map",
+      "bytes": 2539,
+      "sha256": "c482285526d7ba9463f2372a3bf33ce37c8a303e0ac9cf7fbb43300bef2799a5"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/system-test/test.install.d.ts",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/system-test/test.install.js",
+      "bytes": 4244,
+      "sha256": "76cac1381f82c5aba30adc5080c01f4b0756a9de16ad38ff4c42242e5206e589"
+    },
+    {
+      "path": "harness/node_modules/gaxios/build/esm/system-test/test.install.js.map",
+      "bytes": 3582,
+      "sha256": "b317911e4145ec5e55526ea7d4ec54833bf57c9f123fe6ae35d4a5496fb62b95"
+    },
+    {
+      "path": "harness/node_modules/object-inspect/test-core-js.js",
+      "bytes": 534,
+      "sha256": "16d580a89dec81a3657e20d9f827768178abe029bf31a950136a38852b493b9a"
+    },
+    {
+      "path": "harness/node_modules/protobufjs/ext/descriptor/test.js",
+      "bytes": 1461,
+      "sha256": "d3bb94e0889ee21f307cd2efd47716ba5b07b5208d877a8d0e848ed1bad155cc"
+    },
+    {
+      "path": "harness/node_modules/safer-buffer/tests.js",
+      "bytes": 15735,
+      "sha256": "511906fdf6a233c84a9216065d1701dbfd84f380fbd495ae1cf5a002370b9885"
+    }
+  ],
+  "discoveredBytes": 98256,
+  "proof": [
+    "gaxios package scripts explicitly invoke browser-test and system-test; their JS imports dev-only mocha.",
+    "object-inspect/test-core-js.js and safer-buffer/tests.js import dev-only tape.",
+    "@agentclientprotocol/sdk dist/test-support is not exported; production modules must not import it (pruning guard enforces this)."
+  ],
+  "preservedPublicRuntimeApis": [
+    "hono ./testing is an explicit package export.",
+    "@earendil-works/pi-telemetry ./testing is an explicit package export.",
+    "undici lib/mock is exported/referenced by its production entry. No global testing/mock substring deletion."
+  ],
+  "codeSha256": "56a7949bdda155bfcd9e56989154fcb1f6bc709c04dd835d398c7988cb3c92d2",
+  "result": "FAIL",
+  "error": "AssertionError [ERR_ASSERTION]: PRUNING_RUNTIME_IMPORT: zod/src/v3/benchmarks/primitives.ts -> src/v3/tests/Mocker.js",
+  "stack": "AssertionError [ERR_ASSERTION]: PRUNING_RUNTIME_IMPORT: zod/src/v3/benchmarks/primitives.ts -> src/v3/tests/Mocker.js\n    at packageContentPlan (file:///D:/Project/Shaco-Forge/scripts/harness-production-closure.mjs:276:14)\n    at async file:///D:/Project/Shaco-Forge/docs/04-development-records/evidence/V1-SLICE-3/STEP-1/S3STEP1-20260911-CLOSURE-CORRECTIVE-01/content-pruning-diagnostic.mjs:25:50"
+}

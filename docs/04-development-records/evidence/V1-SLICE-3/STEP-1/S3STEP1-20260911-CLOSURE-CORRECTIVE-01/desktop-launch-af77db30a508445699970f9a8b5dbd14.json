@@ -1,0 +1,6 @@
+{
+  "command": "packaged-desktop-diagnostic",
+  "environment": "CURRENT_USER_EXPLORER_DESKTOP",
+  "driverPid": 37136,
+  "exitCode": 0
+}

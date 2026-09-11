@@ -1,0 +1,7 @@
+$ node scripts/smoke-packaged-runtime.mjs
+{
+  "result": "PASS",
+  "evidence": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-CLOSURE-CORRECTIVE-01\\runs\\smoke-packaged-runtime-2",
+  "gates": 27,
+  "home": "C:\\Users\\18902\\AppData\\Local\\Shaco Forge\\dsh"
+}

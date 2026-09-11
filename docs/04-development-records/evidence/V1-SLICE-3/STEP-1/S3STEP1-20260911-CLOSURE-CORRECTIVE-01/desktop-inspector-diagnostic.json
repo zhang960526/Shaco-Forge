@@ -1,0 +1,197 @@
+{
+  "purpose": "READ_ONLY_MAIN_PROCESS_DIAGNOSTIC",
+  "snapshots": [
+    {
+      "elapsedMs": 12134,
+      "process": {
+        "id": 1,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 33496,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      },
+      "electron": {
+        "id": 2,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "code": "ERR_VM_DYNAMIC_IMPORT_CALLBACK_MISSING"
+            }
+          },
+          "exceptionDetails": {
+            "exceptionId": 1,
+            "text": "Uncaught (in promise) TypeError: A dynamic import callback was not specified.",
+            "lineNumber": 105,
+            "columnNumber": 5,
+            "scriptId": "30",
+            "stackTrace": {
+              "callFrames": [
+                {
+                  "functionName": "processTicksAndRejections",
+                  "scriptId": "30",
+                  "url": "node:internal/process/task_queues",
+                  "lineNumber": 104,
+                  "columnNumber": 4
+                }
+              ]
+            },
+            "exception": {
+              "type": "object",
+              "subtype": "error",
+              "className": "TypeError",
+              "description": "TypeError: A dynamic import callback was not specified.\n    at importModuleDynamicallyCallback (node:internal/modules/esm/utils:272:9)\n    at <anonymous>:1:1\n    at FSReqCallback.oncomplete (node:fs:188:10)",
+              "objectId": "897977915972507530.1.1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 24143,
+      "process": {
+        "id": 3,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 33496,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      },
+      "electron": {
+        "id": 4,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "code": "ERR_VM_DYNAMIC_IMPORT_CALLBACK_MISSING"
+            }
+          },
+          "exceptionDetails": {
+            "exceptionId": 2,
+            "text": "Uncaught (in promise) TypeError: A dynamic import callback was not specified.",
+            "lineNumber": 105,
+            "columnNumber": 5,
+            "scriptId": "30",
+            "stackTrace": {
+              "callFrames": [
+                {
+                  "functionName": "processTicksAndRejections",
+                  "scriptId": "30",
+                  "url": "node:internal/process/task_queues",
+                  "lineNumber": 104,
+                  "columnNumber": 4
+                }
+              ]
+            },
+            "exception": {
+              "type": "object",
+              "subtype": "error",
+              "className": "TypeError",
+              "description": "TypeError: A dynamic import callback was not specified.\n    at importModuleDynamicallyCallback (node:internal/modules/esm/utils:272:9)\n    at <anonymous>:1:1\n    at FSReqCallback.wrapper [as oncomplete] (node:fs:670:19)",
+              "objectId": "897977915972507530.1.2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 36159,
+      "process": {
+        "id": 5,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 33496,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap",
+                "Timeout"
+              ]
+            }
+          }
+        }
+      },
+      "electron": {
+        "id": 6,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "code": "ERR_VM_DYNAMIC_IMPORT_CALLBACK_MISSING"
+            }
+          },
+          "exceptionDetails": {
+            "exceptionId": 3,
+            "text": "Uncaught (in promise) TypeError: A dynamic import callback was not specified.",
+            "lineNumber": 0,
+            "columnNumber": 0,
+            "exception": {
+              "type": "object",
+              "subtype": "error",
+              "className": "TypeError",
+              "description": "TypeError: A dynamic import callback was not specified.\n    at importModuleDynamicallyCallback (node:internal/modules/esm/utils:272:9)\n    at <anonymous>:1:1",
+              "objectId": "897977915972507530.1.3"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "result": "DIAGNOSTIC_CAPTURED",
+  "cleanupDiscovery": "WORKER_NOT_FOUND",
+  "platformAfter": {
+    "process": {
+      "pid": 40508,
+      "startTime": "134335975881456560"
+    },
+    "lifecycleName": "shaco-forge-lifecycle-v1-62946077d6ae48faf3c8d7a59b5c34e6daea602719f0ff3a8a5512f83c0bf873",
+    "mutexExists": false,
+    "lifecycleBusy": false
+  },
+  "outputBytes": 285
+}

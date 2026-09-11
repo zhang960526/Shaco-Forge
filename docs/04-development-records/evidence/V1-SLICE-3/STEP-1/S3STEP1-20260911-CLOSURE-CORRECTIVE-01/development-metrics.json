@@ -1,0 +1,9 @@
+{
+  "previousTopLevelPackages": 803,
+  "previousAllPackagePlacements": 863,
+  "newAllPackagePlacements": 523,
+  "newResolvedPackageIdentities": 505,
+  "unreachableOldPlacements": 330,
+  "unreachableOldBytes": 922280576,
+  "reviewerNumbersAreApproximateAndNotAcceptanceConstants": true
+}

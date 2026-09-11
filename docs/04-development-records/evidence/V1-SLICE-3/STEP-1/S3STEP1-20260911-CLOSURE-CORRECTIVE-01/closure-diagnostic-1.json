@@ -1,0 +1,10 @@
+{
+  "attempt": "1",
+  "phase": "DEVELOPMENT_DIAGNOSTIC",
+  "result": "FAIL",
+  "exitCode": 1,
+  "boundary": "DIAGNOSTIC_DRIVER_IMPORT_BEFORE_GRAPH",
+  "error": "ERR_UNSUPPORTED_ESM_URL_SCHEME: On Windows, absolute paths must be valid file:// URLs. Received protocol 'd:'",
+  "graphExecuted": false,
+  "corrective": "Use pathToFileURL for dynamic import; next diagnostic has a new attempt number."
+}

@@ -1,0 +1,112 @@
+{
+  "purpose": "READ_ONLY_MAIN_PROCESS_DIAGNOSTIC",
+  "attempt": "2",
+  "snapshots": [
+    {
+      "elapsedMs": 12159,
+      "process": {
+        "id": 3,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 17084,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 24174,
+      "process": {
+        "id": 4,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 17084,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 36187,
+      "process": {
+        "id": 5,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 17084,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap",
+                "PipeWrap",
+                "PipeWrap",
+                "ProcessWrap",
+                "Timeout"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "caughtStartupErrors": [],
+  "breakpoint": {
+    "id": 2,
+    "result": {
+      "breakpointId": "2:75:0:recovery-coordinator\\.js$",
+      "locations": []
+    }
+  },
+  "result": "DIAGNOSTIC_CAPTURED",
+  "cleanupDiscovery": "WORKER_NOT_FOUND",
+  "platformAfter": {
+    "process": {
+      "pid": 43808,
+      "startTime": "134335977262653412"
+    },
+    "lifecycleName": "shaco-forge-lifecycle-v1-62946077d6ae48faf3c8d7a59b5c34e6daea602719f0ff3a8a5512f83c0bf873",
+    "mutexExists": false,
+    "lifecycleBusy": false
+  },
+  "outputBytes": 285
+}

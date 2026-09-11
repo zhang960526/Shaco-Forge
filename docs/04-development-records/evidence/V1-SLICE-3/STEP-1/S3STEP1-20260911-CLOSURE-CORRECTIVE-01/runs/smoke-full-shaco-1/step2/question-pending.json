@@ -1,0 +1,50 @@
+{
+  "name": "question-pending",
+  "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-1\\S3STEP1-20260911-CLOSURE-CORRECTIVE-01\\runs\\smoke-full-shaco-1\\step2\\question-pending.png",
+  "width": 2139,
+  "height": 1256,
+  "sha256": "f2a5840cd042c4b3f579ae7a8cb2331bda31a7112027eb8cbc3a6f39cb30effc",
+  "ui": {
+    "rootCount": 1,
+    "sidebarCount": 1,
+    "forbiddenBrand": false,
+    "harnessSeats": 0,
+    "template": "BRAUN",
+    "mode": "light",
+    "rootVisible": true,
+    "horizontalOverflow": false,
+    "composer": true,
+    "approval": false,
+    "question": true,
+    "kinds": [
+      "command",
+      "command"
+    ],
+    "tools": [],
+    "geometry": {
+      "conversation": {
+        "width": 1100,
+        "center": 845,
+        "maxWidth": "1100px"
+      },
+      "composer": {
+        "width": 1100,
+        "center": 845,
+        "maxWidth": "1100px"
+      },
+      "tool": null
+    },
+    "lowNoiseWorkbar": true,
+    "bootstrapVisible": false,
+    "plan": false,
+    "tokens": {
+      "--surface-primary": "rgb(248, 248, 246)",
+      "--surface-sidebar": "rgb(235, 235, 232)",
+      "--accent-primary": "rgb(55, 59, 54)",
+      "--control-radius": "6px",
+      "--template-decoration-height": "0px",
+      "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+    }
+  },
+  "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+}

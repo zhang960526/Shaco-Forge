@@ -1,0 +1,315 @@
+{
+  "purpose": "READ_ONLY_MAIN_PROCESS_DIAGNOSTIC",
+  "attempt": "3",
+  "snapshots": [
+    {
+      "elapsedMs": 12160,
+      "process": {
+        "id": 3,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "FSReqPromise",
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 24170,
+      "process": {
+        "id": 4,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "FSReqCallback",
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 36178,
+      "process": {
+        "id": 5,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap",
+                "Timeout"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 48181,
+      "process": {
+        "id": 8,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap",
+                "Timeout"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 60195,
+      "process": {
+        "id": 9,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap",
+                "Timeout"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 72199,
+      "process": {
+        "id": 10,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 84208,
+      "process": {
+        "id": 11,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 96223,
+      "process": {
+        "id": 12,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 108224,
+      "process": {
+        "id": 13,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 120225,
+      "process": {
+        "id": 14,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 132238,
+      "process": {
+        "id": 15,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 144254,
+      "process": {
+        "id": 16,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "pid": 43088,
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789122966770\\output\\Shaco Forge-win32-x64\\Shaco Forge.exe",
+                "--inspect=127.0.0.1:0",
+                "--user-data-dir=D:\\Project\\Shaco-Forge\\dist\\corrective-inspector-profile"
+              ],
+              "resources": [
+                "PipeWrap"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "caughtStartupErrors": [
+    {
+      "id": 6,
+      "result": {
+        "result": {
+          "type": "object",
+          "value": {
+            "message": "WORKER_AUTHORITY_FAILURE: startup exited",
+            "stack": "Error: WORKER_AUTHORITY_FAILURE: startup exited\n    at WorkerSupervisor.start (file:///D:/Project/Shaco-Forge/dist/packaging/1789122966770/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/worker-supervisor.js:109:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async #attach (file:///D:/Project/Shaco-Forge/dist/packaging/1789122966770/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/recovery-coordinator.js:48:31)\n    at async RecoveryCoordinator.start (file:///D:/Project/Shaco-Forge/dist/packaging/1789122966770/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/recovery-coordinator.js:38:21)\n    at async file:///D:/Project/Shaco-Forge/dist/packaging/1789122966770/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/main.js:436:9"
+          }
+        }
+      }
+    }
+  ],
+  "breakpoint": {
+    "id": 2,
+    "result": {
+      "breakpointId": "2:75:0:recovery-coordinator\\.js$",
+      "locations": []
+    }
+  },
+  "result": "DIAGNOSTIC_CAPTURED",
+  "cleanupDiscovery": "WORKER_NOT_FOUND",
+  "platformAfter": {
+    "process": {
+      "pid": 43924,
+      "startTime": "134335980687821126"
+    },
+    "lifecycleName": "shaco-forge-lifecycle-v1-62946077d6ae48faf3c8d7a59b5c34e6daea602719f0ff3a8a5512f83c0bf873",
+    "mutexExists": false,
+    "lifecycleBusy": false
+  },
+  "outputBytes": 285
+}
