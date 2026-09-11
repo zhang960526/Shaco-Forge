@@ -1,0 +1,11 @@
+$ node scripts/package-runtime.mjs
+Packaging app for platform win32 x64 using electron v35.7.5
+  ShacoForge.NativeCarrier -> D:\Project\Shaco-Forge\apps\native-carrier\bin\Release\net10.0-windows\win-x64\ShacoForge.NativeCarrier.dll
+  ShacoForge.NativeCarrier -> C:\Users\18902\AppData\Local\Temp\shaco-forge-s3s1-packages\1789146541276\output\Shaco Forge-win32-x64\native\
+{
+  "result": "PASS",
+  "packagedRoot": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789146541276\\output\\Shaco Forge-win32-x64",
+  "digest": "df35daad07b98e6a4bdb81501fcd33390b6c07f37dd7b813a18218d718bfde6f",
+  "files": 25869
+}
+

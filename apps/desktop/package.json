@@ -3,7 +3,7 @@
   "version": "1.0.0-dev.1",
   "private": true,
   "type": "module",
-  "main": "dist/main/main.js",
+  "main": "dist/main/bootstrap.js",
   "exports": { "./client": "./dist/client/recovery.js" },
   "scripts": {
     "build": "node scripts/prepare-harness-client.mjs && tsc -p tsconfig.node.json && vite build",

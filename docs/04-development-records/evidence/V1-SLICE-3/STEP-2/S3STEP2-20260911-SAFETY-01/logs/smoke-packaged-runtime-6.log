@@ -1,0 +1,23 @@
+$ node scripts/smoke-packaged-runtime.mjs
+(node:35284) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PRODUCTION_DESKTOP_PREWRITE_BEGIN
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: PRODUCTION_DESKTOP_MUST_FINISH_PREWRITE_REFUSAL
+
+null !== 0
+
+    at file:///D:/Project/Shaco-Forge/scripts/smoke-packaged-step2.mjs:61:8 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: null,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

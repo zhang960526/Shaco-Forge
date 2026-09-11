@@ -10,6 +10,10 @@ import { inspectLocalPlatform, lifecycleRequest } from '../apps/desktop/dist/mai
 const run = promisify(execFile)
 const root = resolve(import.meta.dirname, '..')
 const { packagedRoot, evidence: packageEvidence } = JSON.parse(await readFile(join(root, 'dist/packaged-runtime-location.json'), 'utf8'))
+if (JSON.parse(await readFile(join(packagedRoot, 'release-manifest.json'), 'utf8')).ControlStoreSchemaVersion === '1') {
+  await import('./smoke-packaged-step2.mjs')
+  process.exit(0)
+}
 const evidence = process.env.SHACO_FORGE_PACKAGED_EVIDENCE_ROOT
 assert.ok(evidence)
 await mkdir(evidence, { recursive: true })

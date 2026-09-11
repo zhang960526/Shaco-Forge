@@ -1,0 +1,50 @@
+{
+  "phase": "DIAGNOSTIC_ONLY",
+  "pid": 43692,
+  "exitCode": null,
+  "probes": [
+    {
+      "id": 1,
+      "result": {
+        "result": {
+          "type": "object",
+          "value": {
+            "pid": 43692,
+            "resources": [
+              "CloseReq"
+            ],
+            "handles": []
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "result": {
+        "result": {
+          "type": "object",
+          "value": {
+            "code": "ERR_VM_DYNAMIC_IMPORT_CALLBACK_MISSING"
+          }
+        },
+        "exceptionDetails": {
+          "exceptionId": 1,
+          "text": "Uncaught (in promise) TypeError: A dynamic import callback was not specified.",
+          "lineNumber": 0,
+          "columnNumber": 0,
+          "exception": {
+            "type": "object",
+            "subtype": "error",
+            "className": "TypeError",
+            "description": "TypeError: A dynamic import callback was not specified.\n    at importModuleDynamicallyCallback (node:internal/modules/esm/utils:272:9)\n    at <anonymous>:1:1",
+            "objectId": "-2147100266904926783.1.1"
+          }
+        }
+      }
+    }
+  ],
+  "diagnostic": "\r\nDebugger listening on [LOOPBACK_INSPECTOR_REDACTED]\r\nFor help, see: https://nodejs.org/en/docs/inspector\r\nDebugger attached.\r\n",
+  "productionDataWrites": 0,
+  "providerRuns": 0,
+  "signingRuns": 0
+}

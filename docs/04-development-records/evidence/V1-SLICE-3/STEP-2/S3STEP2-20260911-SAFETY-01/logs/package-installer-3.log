@@ -1,0 +1,45 @@
+$ node scripts/package-installer.mjs
+MakeNSIS v3.12 - Copyright 1999-2026 Contributors
+See the file COPYING for license details.
+Credits can be found in the Users Manual.
+
+Command line defined: "SOURCE=D:\Project\Shaco-Forge"
+Command line defined: "PAYLOAD=\\?\C:\Users\18902\AppData\Local\Temp\shaco-forge-s3s1-packages\1789142690455\output\Shaco Forge-win32-x64"
+Command line defined: "OUTPUT=D:\Project\Shaco-Forge\dist\installers\Shaco-Forge-1.0.0-dev.1-1789143003889-unsigned.exe"
+Processing config: D:\Project\Shaco-Forge\dist\installer-toolchain\nsis-3.12-verified\nsis-3.12\nsisconf.nsh
+Processing script file: "D:\Project\Shaco-Forge\apps\installer\installer.nsi" (UTF8)
+
+Processed 1 file, writing output (x86-unicode):
+
+Output: "D:\Project\Shaco-Forge\dist\installers\Shaco-Forge-1.0.0-dev.1-1789143003889-unsigned.exe"
+Install: 1 page (64 bytes), 1 section (1 required) (2072 bytes), 29378 instructions (822584 bytes), 12478 strings (746618 bytes), 1 language table (198 bytes).
+Datablock optimizer saved 96493 KiB (~12.7%).
+
+Using lzma (compress whole) compression.
+
+EXE header size:               37376 / 38912 bytes
+Install code:                          (1571928 bytes)
+Install data:                          (676202801 bytes)
+Compressed data:           162984258 / 677774729 bytes
+CRC (0xF7DEDA6E):                  4 / 4 bytes
+
+Total size:                163021638 / 677813645 bytes (24.0%)
+{
+  "result": "UNSIGNED_INSTALLER_CANDIDATE",
+  "releaseReady": false,
+  "productionSigned": false,
+  "path": "D:\\Project\\Shaco-Forge\\dist\\installers\\Shaco-Forge-1.0.0-dev.1-1789143003889-unsigned.exe",
+  "bytes": 163021638,
+  "sha256": "304dc5af591fdaf0fe6e09d8171212c950a70bfaef9595b4926099a11c047527",
+  "packagedArtifactDigest": "344a17248add5b49c3617d4cf5e7f41520884b542f125135107b94a45bded616",
+  "releaseManifestDigest": "5126af7f269083b97cb5f73bb7d7075bae22a6bea12821c02ad370fad6db6605",
+  "installerTool": {
+    "name": "NSIS",
+    "version": "3.12",
+    "archiveSha256": "56581f90db321581c5381193d796fffcf2d24b2f8fed2160a6c6a3baa67f2c4f"
+  },
+  "target": "WINDOWS_X64_PER_USER",
+  "signingRuns": 0,
+  "providerRuns": 0
+}
+

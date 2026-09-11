@@ -1,0 +1,55 @@
+param([Parameter(Mandatory=$true)][string]$Artifact)
+$ErrorActionPreference = 'Stop'
+$artifactPath = [IO.Path]::GetFullPath($Artifact)
+function PublicIdentity($certificate) {
+    if ($null -eq $certificate) { return $null }
+    $hash = [Security.Cryptography.SHA256]::Create()
+    try { $sha = ([BitConverter]::ToString($hash.ComputeHash($certificate.RawData))).Replace('-', '').ToLowerInvariant() }
+    finally { $hash.Dispose() }
+    return @{ sha256=$sha; subject=$certificate.Subject; issuer=$certificate.Issuer; serialNumber=$certificate.SerialNumber;
+        notBefore=$certificate.NotBefore.ToUniversalTime().ToString('O'); notAfter=$certificate.NotAfter.ToUniversalTime().ToString('O') }
+}
+# Windows performs chain, Authenticode hash and timestamp validation. This script
+# exports public certificates only. It never asks for a certificate private key.
+$signature = Get-AuthenticodeSignature -LiteralPath $artifactPath
+$publicResult = @{ status=$signature.Status.ToString(); signatureType=$signature.SignatureType.ToString(); signer=(PublicIdentity $signature.SignerCertificate);
+    timestamp=@{ certificate=(PublicIdentity $signature.TimeStamperCertificate); signingTimes=@(); rfc3161Present=$false } }
+if ($null -ne $signature.SignerCertificate) {
+    Add-Type -AssemblyName System.Security
+    $bytes = [IO.File]::ReadAllBytes($artifactPath)
+    if ($bytes.Length -gt 256 -and $bytes[0] -eq 0x4d -and $bytes[1] -eq 0x5a) {
+        $pe = [BitConverter]::ToInt32($bytes, 60)
+        $optional = $pe + 24
+        $magic = [BitConverter]::ToUInt16($bytes, $optional)
+        $directory = $optional + $(if ($magic -eq 0x20b) { 112 } else { 96 }) + 32
+        $offset = [BitConverter]::ToInt32($bytes, $directory)
+        $size = [BitConverter]::ToInt32($bytes, $directory + 4)
+        if ($offset -gt 0 -and $size -ge 8 -and $offset + $size -le $bytes.Length) {
+            $length = [BitConverter]::ToInt32($bytes, $offset) - 8
+            if ($length -le 0 -or $length + 8 -gt $size) { throw 'TIMESTAMP_ENVELOPE_INVALID' }
+            $blob = New-Object byte[] $length
+            [Array]::Copy($bytes, $offset + 8, $blob, 0, $length)
+            $cms = New-Object Security.Cryptography.Pkcs.SignedCms
+            $cms.Decode($blob)
+            $times = @()
+            foreach ($signer in $cms.SignerInfos) {
+                foreach ($counter in $signer.CounterSignerInfos) {
+                    foreach ($attribute in $counter.SignedAttributes) {
+                        if ($attribute.Oid.Value -eq '1.2.840.113549.1.9.5') {
+                            foreach ($value in $attribute.Values) {
+                                $time = New-Object Security.Cryptography.Pkcs.Pkcs9SigningTime
+                                $time.CopyFrom($value)
+                                $times += $time.SigningTime.ToUniversalTime().ToString('O')
+                            }
+                        }
+                    }
+                }
+                foreach ($attribute in $signer.UnsignedAttributes) {
+                    if ($attribute.Oid.Value -eq '1.2.840.113549.1.9.16.2.14') { $publicResult.timestamp.rfc3161Present=$true }
+                }
+            }
+            $publicResult.timestamp.signingTimes = @($times | Sort-Object -Unique)
+        }
+    }
+}
+$publicResult | ConvertTo-Json -Depth 6 -Compress

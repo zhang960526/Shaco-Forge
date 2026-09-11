@@ -15,7 +15,7 @@ import { RecoveryCoordinator, type RecoveryProjection } from './recovery-coordin
 import { pickWorkspaceDirectory } from './workspace-picker.js'
 import { isSecureRendererConfiguration, rendererSecurityPreferences } from './security.js'
 import { sendProjectionIfAlive, snapshotLoadingUrl } from './window-lifecycle.js'
-import { readSupervisorConfig, readPackagedSupervisorConfig, WorkerSupervisor, type CarrierBootstrap } from './worker-supervisor.js'
+import { readSupervisorConfig, readPackagedSupervisorConfig, WorkerSupervisor, type CarrierBootstrap, type SupervisorConfig } from './worker-supervisor.js'
 
 protocol.registerSchemesAsPrivileged([{ scheme: 'shaco-forge', privileges: { standard: true, secure: true, supportFetchAPI: true, stream: true } }])
 
@@ -416,11 +416,14 @@ ipcMain.on('runtime:evidence', (_event, evidence: unknown) => {
 })
 registerTransportIpc()
 
-app.whenReady().then(async () => {
+// Production bootstrap calls without arguments. Isolated test containers call
+// this function directly; no production flag or environment root override exists.
+export async function startDesktop(providedConfig?: SupervisorConfig): Promise<void> {
+  await app.whenReady()
   try {
     await registerClientProtocol()
-    supervisor = new WorkerSupervisor(app.isPackaged
-      ? await readPackagedSupervisorConfig(dirname(process.execPath)) : readSupervisorConfig(process.env))
+    supervisor = new WorkerSupervisor(providedConfig ?? (app.isPackaged
+      ? await readPackagedSupervisorConfig(dirname(process.execPath)) : readSupervisorConfig(process.env)))
     supervisor.onEvent(updateProjection)
     supervisor.onCarrierFailure(reason => {
       if (injectCarrierFailure) recovery?.fail(reason)
@@ -433,6 +436,7 @@ app.whenReady().then(async () => {
       else await mainWindow.loadURL(snapshotLoadingUrl(mainWindow) ?? 'shaco-forge://client/')
     })
     await recovery.start()
+    if (!recovery.projection.authenticatedCarrier && recovery.projection.failure) throw new Error(recovery.projection.failure)
     if (evidencePath !== undefined) {
       setTimeout(() => {
         if (rendererEvidence !== undefined || finalizing) return
@@ -442,7 +446,11 @@ app.whenReady().then(async () => {
     }
   } catch (error) {
     projection = { phase: 'worker-failed', message: error instanceof Error ? error.message : String(error), mainPid: process.pid }
-    if (evidencePath === undefined) throw error
+    if (evidencePath === undefined) {
+      dialog.showErrorBox('Shaco Forge', projection.message)
+      app.quit()
+      return
+    }
     rendererEvidence = { ok: false, startupFailure: projection.message }
     const cleanup = supervisor === undefined ? undefined : await supervisor.stop()
     await mkdir(dirname(evidencePath), { recursive: true })
@@ -462,7 +470,7 @@ app.whenReady().then(async () => {
     }, null, 2)}\n`, 'utf8')
     app.quit()
   }
-})
+}
 
 app.on('window-all-closed', () => {
   if (evidencePath === undefined) app.quit()

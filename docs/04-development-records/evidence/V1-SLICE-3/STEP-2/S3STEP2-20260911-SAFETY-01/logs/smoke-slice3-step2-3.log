@@ -1,0 +1,26 @@
+$ node scripts/smoke-slice3-step2.mjs
+(node:7984) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+FRESH_PRE_INSTALL_CANCEL: PASS
+FRESH_INSTALL: PASS
+ACTUAL_VALIDATION_DRAIN: PASS
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: ISOLATED_PROFILE_REFERENCE_TARGET
+    at visit (file:///D:/Project/Shaco-Forge/scripts/slice3-step2-fixtures.mjs:22:16)
+    at async visit (file:///D:/Project/Shaco-Forge/scripts/slice3-step2-fixtures.mjs:24:38)
+    at async visit (file:///D:/Project/Shaco-Forge/scripts/slice3-step2-fixtures.mjs:24:38)
+    at async isolatedProfileLinks (file:///D:/Project/Shaco-Forge/scripts/slice3-step2-fixtures.mjs:27:3)
+    at async file:///D:/Project/Shaco-Forge/scripts/smoke-slice3-step2.mjs:41:15 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

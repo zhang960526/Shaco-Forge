@@ -11,6 +11,7 @@ test('S2G16 same Harness home supports replacement; mismatched profile junction 
   const source = join(root, 'module.mjs')
   await mkdir(scope, { recursive: true })
   await writeFile(source, 'export {}\n', 'utf8')
+  await writeFile(join(root, 'upgrade-drain.mjs'), 'export {}\n', 'utf8')
   const args = [root, 'test-profile', source, source, source, source, scope, overlay] as const
   try {
     const profile = await materializeHarnessProfile(...args)

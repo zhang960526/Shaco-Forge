@@ -1,0 +1,36 @@
+$ node scripts/diagnose-slice3-step2.mjs
+(node:33204) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "result": "READY_OBSERVED",
+  "exitCode": 1,
+  "root": "D:\\Project\\Shaco-Forge\\dist\\slice3-step2-runtime-tests\\diagnostic-1789136161090-dd10d816-7bb7-4e2f-a044-25195f049885",
+  "errors": [
+    "{\"protocolVersion\":1,\"phase\":\"carrier-failed\",\"timestamp\":\"2026-09-11T14:16:22.236Z\",\"workerPid\":41524,\"parentPid\":33204,\"workerNodeVersion\":\"v22.19.0\",\"workerExecutable\":\"C:\\\\Users\\\\18902\\\\AppData\\\\Local\\\\Temp\\\\shaco-forge-s3s1-packages\\\\1789135547378\\\\output\\\\Shaco Forge-win32-x64\\\\runtime\\\\node.exe\",\"workerArgv\":[\"D:\\\\Project\\\\Shaco-Forge\\\\dist\\\\slice3-step2-runtime-tests\\\\diagnostic-1789136161090-dd10d816-7bb7-4e2f-a044-25195f049885\\\\adapters\\\\worker-7003b8af-f667-4ae7-8a2f-ad6ad269825d.mjs\",\"--validate-upgrade\"],\"harnessPackage\":\"@deepseek-ai/dsh@0.1.2-alpha.1\",\"harnessRelease\":\"dsh-v0.1.2-alpha.1\",\"harnessCommit\":\"cd5ef8148158c3a752a658978873241fdf8e2bbc\",\"hostPid\":29304,\"error\":\"WORKER_AUTHORITY_FAILURE: Host heartbeat lost\"}",
+    "{\"protocolVersion\":1,\"phase\":\"host-exited\",\"timestamp\":\"2026-09-11T14:16:22.251Z\",\"workerPid\":41524,\"parentPid\":33204,\"workerNodeVersion\":\"v22.19.0\",\"workerExecutable\":\"C:\\\\Users\\\\18902\\\\AppData\\\\Local\\\\Temp\\\\shaco-forge-s3s1-packages\\\\1789135547378\\\\output\\\\Shaco Forge-win32-x64\\\\runtime\\\\node.exe\",\"workerArgv\":[\"D:\\\\Project\\\\Shaco-Forge\\\\dist\\\\slice3-step2-runtime-tests\\\\diagnostic-1789136161090-dd10d816-7bb7-4e2f-a044-25195f049885\\\\adapters\\\\worker-7003b8af-f667-4ae7-8a2f-ad6ad269825d.mjs\",\"--validate-upgrade\"],\"harnessPackage\":\"@deepseek-ai/dsh@0.1.2-alpha.1\",\"harnessRelease\":\"dsh-v0.1.2-alpha.1\",\"harnessCommit\":\"cd5ef8148158c3a752a658978873241fdf8e2bbc\",\"hostPid\":29304,\"exitCode\":null,\"signal\":\"SIGTERM\"}",
+    "{\"protocolVersion\":1,\"phase\":\"worker-stopped\",\"timestamp\":\"2026-09-11T14:16:22.251Z\",\"workerPid\":41524,\"parentPid\":33204,\"workerNodeVersion\":\"v22.19.0\",\"workerExecutable\":\"C:\\\\Users\\\\18902\\\\AppData\\\\Local\\\\Temp\\\\shaco-forge-s3s1-packages\\\\1789135547378\\\\output\\\\Shaco Forge-win32-x64\\\\runtime\\\\node.exe\",\"workerArgv\":[\"D:\\\\Project\\\\Shaco-Forge\\\\dist\\\\slice3-step2-runtime-tests\\\\diagnostic-1789136161090-dd10d816-7bb7-4e2f-a044-25195f049885\\\\adapters\\\\worker-7003b8af-f667-4ae7-8a2f-ad6ad269825d.mjs\",\"--validate-upgrade\"],\"harnessPackage\":\"@deepseek-ai/dsh@0.1.2-alpha.1\",\"harnessRelease\":\"dsh-v0.1.2-alpha.1\",\"harnessCommit\":\"cd5ef8148158c3a752a658978873241fdf8e2bbc\",\"hostPid\":29304,\"exitCode\":1}"
+  ],
+  "outputBytes": 7644,
+  "providerRuns": 0,
+  "signingRuns": 0
+}
+
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== 0
+
+    at file:///D:/Project/Shaco-Forge/scripts/diagnose-slice3-step2.mjs:42:8 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

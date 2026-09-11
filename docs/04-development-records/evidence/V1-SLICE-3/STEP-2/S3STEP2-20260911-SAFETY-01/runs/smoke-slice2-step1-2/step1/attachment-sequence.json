@@ -1,0 +1,628 @@
+{
+  "attempts": [
+    {
+      "result": "PASS",
+      "snapshots": [
+        {
+          "mainPid": 43020,
+          "phase": "carrier-ready",
+          "authority": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "563e5070-6d29-4536-aa6f-24ab6ce6878d",
+            "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-electron-Sy17ua",
+            "workerRuntime": {
+              "nodeVersion": "v22.19.0",
+              "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+              ],
+              "parentPid": 43020
+            },
+            "compatibility": null,
+            "upgradeState": "IDLE",
+            "worker": {
+              "pid": 3828,
+              "startTime": "134336150088478308"
+            },
+            "host": {
+              "pid": 37380,
+              "startTime": "134336150196421650"
+            },
+            "helper": {
+              "pid": 45016,
+              "startTime": "134336150195088553"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 3828,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 45016,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 0,
+            "rejectedOldFrames": 0,
+            "detaches": 0
+          },
+          "clientInstanceId": "a355f5f9-ea64-47d5-b71b-b7b4da6e6375",
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 0,
+            "unaryRequests": 0,
+            "streamOpens": 0,
+            "streamPulls": 0,
+            "streamCancels": 0,
+            "eventsReadyObserved": 0,
+            "maxRendererInflightPullPerStream": 0,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 0,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rendererSecurity": {
+            "nodeIntegration": false,
+            "contextIsolation": true,
+            "sandbox": true,
+            "webSecurity": true,
+            "allowRunningInsecureContent": false
+          },
+          "credentialEpochHash": "72fde7bfa621ed1ef337cefec051d0735e0d88ab6d48070a7c89c77d05410e69",
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "lifecycleAvailable": false,
+            "nodeIntegration": false
+          }
+        },
+        {
+          "mainPid": 33736,
+          "phase": "carrier-ready",
+          "authority": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "563e5070-6d29-4536-aa6f-24ab6ce6878d",
+            "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-electron-Sy17ua",
+            "workerRuntime": {
+              "nodeVersion": "v22.19.0",
+              "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+              ],
+              "parentPid": 43020
+            },
+            "compatibility": null,
+            "upgradeState": "IDLE",
+            "worker": {
+              "pid": 3828,
+              "startTime": "134336150088478308"
+            },
+            "host": {
+              "pid": 37380,
+              "startTime": "134336150196421650"
+            },
+            "helper": {
+              "pid": 45016,
+              "startTime": "134336150195088553"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 3828,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 45016,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 14,
+            "rejectedOldFrames": 0,
+            "detaches": 1
+          },
+          "clientInstanceId": "3eb30815-ba38-43da-b3b7-0e08d8ff7ec8",
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 0,
+            "unaryRequests": 0,
+            "streamOpens": 0,
+            "streamPulls": 0,
+            "streamCancels": 0,
+            "eventsReadyObserved": 0,
+            "maxRendererInflightPullPerStream": 0,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 0,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rendererSecurity": {
+            "nodeIntegration": false,
+            "contextIsolation": true,
+            "sandbox": true,
+            "webSecurity": true,
+            "allowRunningInsecureContent": false
+          },
+          "credentialEpochHash": "b85336a2171dfcf40d2c3d79b3f26951ed1836888567b76af1f5e4377d7e98f4",
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "lifecycleAvailable": false,
+            "nodeIntegration": false
+          }
+        },
+        {
+          "mainPid": 39868,
+          "phase": "carrier-ready",
+          "authority": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "563e5070-6d29-4536-aa6f-24ab6ce6878d",
+            "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-electron-Sy17ua",
+            "workerRuntime": {
+              "nodeVersion": "v22.19.0",
+              "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+              ],
+              "parentPid": 43020
+            },
+            "compatibility": null,
+            "upgradeState": "IDLE",
+            "worker": {
+              "pid": 3828,
+              "startTime": "134336150088478308"
+            },
+            "host": {
+              "pid": 37380,
+              "startTime": "134336150196421650"
+            },
+            "helper": {
+              "pid": 45016,
+              "startTime": "134336150195088553"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 3828,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 45016,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 14,
+            "rejectedOldFrames": 0,
+            "detaches": 2
+          },
+          "clientInstanceId": "5c05b484-f518-487e-b330-e45fc3c03226",
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 0,
+            "unaryRequests": 0,
+            "streamOpens": 0,
+            "streamPulls": 0,
+            "streamCancels": 0,
+            "eventsReadyObserved": 0,
+            "maxRendererInflightPullPerStream": 0,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 0,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rendererSecurity": {
+            "nodeIntegration": false,
+            "contextIsolation": true,
+            "sandbox": true,
+            "webSecurity": true,
+            "allowRunningInsecureContent": false
+          },
+          "credentialEpochHash": "925ce23377fcf9422c9222740e5a6befd61e7cbcfd3cc607a9060af3d3cbaaa6",
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "lifecycleAvailable": false,
+            "nodeIntegration": false
+          }
+        }
+      ],
+      "survival": [
+        {
+          "mode": "graceful",
+          "mainPid": 43020,
+          "mainExit": 0,
+          "before": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "563e5070-6d29-4536-aa6f-24ab6ce6878d",
+            "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-electron-Sy17ua",
+            "workerRuntime": {
+              "nodeVersion": "v22.19.0",
+              "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+              ],
+              "parentPid": 43020
+            },
+            "compatibility": null,
+            "upgradeState": "IDLE",
+            "worker": {
+              "pid": 3828,
+              "startTime": "134336150088478308"
+            },
+            "host": {
+              "pid": 37380,
+              "startTime": "134336150196421650"
+            },
+            "helper": {
+              "pid": 45016,
+              "startTime": "134336150195088553"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 3828,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 45016,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 0,
+            "rejectedOldFrames": 0,
+            "detaches": 0
+          },
+          "after": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "563e5070-6d29-4536-aa6f-24ab6ce6878d",
+            "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-electron-Sy17ua",
+            "workerRuntime": {
+              "nodeVersion": "v22.19.0",
+              "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+              ],
+              "parentPid": 43020
+            },
+            "compatibility": null,
+            "upgradeState": "IDLE",
+            "worker": {
+              "pid": 3828,
+              "startTime": "134336150088478308"
+            },
+            "host": {
+              "pid": 37380,
+              "startTime": "134336150196421650"
+            },
+            "helper": {
+              "pid": 45016,
+              "startTime": "134336150195088553"
+            },
+            "healthy": true,
+            "state": "DETACHED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 3828,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 45016,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 14,
+            "rejectedOldFrames": 0,
+            "detaches": 1
+          },
+          "result": "PASS"
+        },
+        {
+          "mode": "crash",
+          "mainPid": 33736,
+          "mainSignal": "SIGKILL",
+          "before": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "563e5070-6d29-4536-aa6f-24ab6ce6878d",
+            "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-electron-Sy17ua",
+            "workerRuntime": {
+              "nodeVersion": "v22.19.0",
+              "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+              ],
+              "parentPid": 43020
+            },
+            "compatibility": null,
+            "upgradeState": "IDLE",
+            "worker": {
+              "pid": 3828,
+              "startTime": "134336150088478308"
+            },
+            "host": {
+              "pid": 37380,
+              "startTime": "134336150196421650"
+            },
+            "helper": {
+              "pid": 45016,
+              "startTime": "134336150195088553"
+            },
+            "healthy": true,
+            "state": "CREDENTIAL_ISSUED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 3828,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 45016,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 14,
+            "rejectedOldFrames": 0,
+            "detaches": 1
+          },
+          "after": {
+            "type": "authority-status",
+            "protocolVersion": "1",
+            "workerInstanceId": "563e5070-6d29-4536-aa6f-24ab6ce6878d",
+            "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-electron-Sy17ua",
+            "workerRuntime": {
+              "nodeVersion": "v22.19.0",
+              "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+              "argv": [
+                "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+              ],
+              "parentPid": 43020
+            },
+            "compatibility": null,
+            "upgradeState": "IDLE",
+            "worker": {
+              "pid": 3828,
+              "startTime": "134336150088478308"
+            },
+            "host": {
+              "pid": 37380,
+              "startTime": "134336150196421650"
+            },
+            "helper": {
+              "pid": 45016,
+              "startTime": "134336150195088553"
+            },
+            "healthy": true,
+            "state": "DETACHED",
+            "hostPreflight": {
+              "type": "host-carrier-preflight",
+              "profilePluginLoaded": true,
+              "fetchHandlerReady": true,
+              "wireStreamReady": true,
+              "eventsRouteReady": true,
+              "eventsRouteProbe": {
+                "endpoint": "$events",
+                "opened": true,
+                "readyObserved": true,
+                "readyShapeValid": true,
+                "cancelled": true,
+                "iteratorClosed": true,
+                "activeStreamsAfterCleanup": 0,
+                "eventSubscriptionRetained": false,
+                "clientRuntimeMetricCounted": false,
+                "businessOperationsPerformed": 0
+              },
+              "stockWebStarted": false
+            },
+            "job": {
+              "ownerPid": 3828,
+              "hostContained": true,
+              "helperContained": true,
+              "helperSetupHandleClosed": true,
+              "killOnClose": true
+            },
+            "mutex": {
+              "ownerPid": 45016,
+              "soleSteadyStateHolder": "HELPER"
+            },
+            "dispatchCount": 14,
+            "rejectedOldFrames": 0,
+            "detaches": 2
+          },
+          "result": "PASS"
+        }
+      ],
+      "diagnostics": [
+        {
+          "pid": 43020,
+          "code": 0,
+          "signal": null,
+          "controlEvents": [
+            "window-close",
+            "before-quit",
+            "will-quit"
+          ],
+          "stderr": ""
+        },
+        {
+          "pid": 33736,
+          "code": null,
+          "signal": "SIGKILL",
+          "controlEvents": [],
+          "stderr": ""
+        },
+        {
+          "pid": 39868,
+          "code": 0,
+          "signal": null,
+          "controlEvents": [
+            "window-close",
+            "before-quit",
+            "will-quit"
+          ],
+          "stderr": ""
+        }
+      ]
+    }
+  ]
+}

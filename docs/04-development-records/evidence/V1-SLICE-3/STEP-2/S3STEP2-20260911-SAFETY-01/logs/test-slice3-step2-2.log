@@ -1,0 +1,250 @@
+$ node --test scripts/slice3-step2.test.mjs && node scripts/slice3-step2-native.mjs
+TAP version 13
+# (node:37764) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: six identities; positive compatibility admits exactly the explicit tuple
+ok 1 - six identities; positive compatibility admits exactly the explicit tuple
+  ---
+  duration_ms: 1.7538
+  type: 'test'
+  ...
+# Subtest: compatibility PRODUCT_RELEASE_MISMATCH: no credential, no Harness write, no fallback
+ok 2 - compatibility PRODUCT_RELEASE_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.8728
+  type: 'test'
+  ...
+# Subtest: compatibility DESKTOP_TOO_OLD: no credential, no Harness write, no fallback
+ok 3 - compatibility DESKTOP_TOO_OLD: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1592
+  type: 'test'
+  ...
+# Subtest: compatibility WORKER_TOO_OLD: no credential, no Harness write, no fallback
+ok 4 - compatibility WORKER_TOO_OLD: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.0999
+  type: 'test'
+  ...
+# Subtest: compatibility WORKER_TOO_NEW: no credential, no Harness write, no fallback
+ok 5 - compatibility WORKER_TOO_NEW: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1515
+  type: 'test'
+  ...
+# Subtest: compatibility DESKTOP_WORKER_MISMATCH: no credential, no Harness write, no fallback
+ok 6 - compatibility DESKTOP_WORKER_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1241
+  type: 'test'
+  ...
+# Subtest: compatibility CARRIER_UNSUPPORTED: no credential, no Harness write, no fallback
+ok 7 - compatibility CARRIER_UNSUPPORTED: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1188
+  type: 'test'
+  ...
+# Subtest: compatibility HARNESS_BASELINE_MISMATCH: no credential, no Harness write, no fallback
+ok 8 - compatibility HARNESS_BASELINE_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.0997
+  type: 'test'
+  ...
+# Subtest: compatibility CONTROL_SCHEMA_UNSUPPORTED: no credential, no Harness write, no fallback
+ok 9 - compatibility CONTROL_SCHEMA_UNSUPPORTED: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.3184
+  type: 'test'
+  ...
+# Subtest: compatibility DSH_HOME_MISMATCH: no credential, no Harness write, no fallback
+ok 10 - compatibility DSH_HOME_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.7487
+  type: 'test'
+  ...
+# Subtest: compatibility UPGRADE_IN_PROGRESS: no credential, no Harness write, no fallback
+ok 11 - compatibility UPGRADE_IN_PROGRESS: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.2475
+  type: 'test'
+  ...
+# Subtest: compatibility RESTORE_REQUIRED: no credential, no Harness write, no fallback
+ok 12 - compatibility RESTORE_REQUIRED: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.0914
+  type: 'test'
+  ...
+# Subtest: compatibility RELEASE_INTEGRITY_FAILURE: no credential, no Harness write, no fallback
+ok 13 - compatibility RELEASE_INTEGRITY_FAILURE: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.151
+  type: 'test'
+  ...
+# Subtest: unknown/missing identities and unlisted tuples all refuse before writes
+ok 14 - unknown/missing identities and unlisted tuples all refuse before writes
+  ---
+  duration_ms: 1.2881
+  type: 'test'
+  ...
+# Subtest: SQLite bootstrap, current schema, ownership, missing/future/older/corrupt refusal
+ok 15 - SQLite bootstrap, current schema, ownership, missing/future/older/corrupt refusal
+  ---
+  duration_ms: 59.0197
+  type: 'test'
+  ...
+# Subtest: SQLite control transaction failure rolls back all fields and event insert
+ok 16 - SQLite control transaction failure rolls back all fields and event insert
+  ---
+  duration_ms: 23.7748
+  type: 'test'
+  ...
+# Subtest: transaction positive durable transition order and committed restart
+ok 17 - transaction positive durable transition order and committed restart
+  ---
+  duration_ms: 27.5131
+  type: 'test'
+  ...
+# Subtest: transaction failure check persists and restores only after install
+ok 18 - transaction failure check persists and restores only after install
+  ---
+  duration_ms: 9.3972
+  type: 'test'
+  ...
+# Subtest: transaction failure drain persists and restores only after install
+ok 19 - transaction failure drain persists and restores only after install
+  ---
+  duration_ms: 13.3511
+  type: 'test'
+  ...
+# Subtest: transaction failure quiescence persists and restores only after install
+ok 20 - transaction failure quiescence persists and restores only after install
+  ---
+  duration_ms: 16.886
+  type: 'test'
+  ...
+# Subtest: transaction failure backup persists and restores only after install
+ok 21 - transaction failure backup persists and restores only after install
+  ---
+  duration_ms: 17.3015
+  type: 'test'
+  ...
+# Subtest: transaction failure verifyBackup persists and restores only after install
+ok 22 - transaction failure verifyBackup persists and restores only after install
+  ---
+  duration_ms: 17.1798
+  type: 'test'
+  ...
+# Subtest: transaction failure install persists and restores only after install
+ok 23 - transaction failure install persists and restores only after install
+  ---
+  duration_ms: 24.9923
+  type: 'test'
+  ...
+# Subtest: transaction failure migrate persists and restores only after install
+ok 24 - transaction failure migrate persists and restores only after install
+  ---
+  duration_ms: 28.3791
+  type: 'test'
+  ...
+# Subtest: transaction failure validate persists and restores only after install
+ok 25 - transaction failure validate persists and restores only after install
+  ---
+  duration_ms: 30.8144
+  type: 'test'
+  ...
+# Subtest: transaction failure commit persists and restores only after install
+ok 26 - transaction failure commit persists and restores only after install
+  ---
+  duration_ms: 30.1766
+  type: 'test'
+  ...
+# Subtest: failure during restore persists RESTORE_FAILED and blocks restart
+ok 27 - failure during restore persists RESTORE_FAILED and blocks restart
+  ---
+  duration_ms: 30.4781
+  type: 'test'
+  ...
+# Subtest: restart authority for every transaction state; cancellation is only pre-install
+ok 28 - restart authority for every transaction state; cancellation is only pre-install
+  ---
+  duration_ms: 46.2586
+  type: 'test'
+  ...
+# Subtest: backup byte integrity, missing/corrupt bytes rejection and runtime/data pair restore
+ok 29 - backup byte integrity, missing/corrupt bytes rejection and runtime/data pair restore
+  ---
+  duration_ms: 98.0956
+  type: 'test'
+  ...
+# Subtest: uninstall retains durable and unowned bytes; purge requires separate confirmation
+ok 30 - uninstall retains durable and unowned bytes; purge requires separate confirmation
+  ---
+  duration_ms: 10.7413
+  type: 'test'
+  ...
+# Subtest: signature pure verification: public identity, timestamp, unsigned, invalid, tamper, wrong signer
+ok 31 - signature pure verification: public identity, timestamp, unsigned, invalid, tamper, wrong signer
+  ---
+  duration_ms: 0.4103
+  type: 'test'
+  ...
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 611.2409
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+
+Caught error:
+
+Error: Command failed: D:\Project\Shaco-Forge\apps\native-carrier\bin\Release\net10.0-windows\ShacoForge.NativeCarrier.exe --verify-installer C:\Users\18902\AppData\Local\Temp\shaco-forge-v1-slice-1a-toolchain\node-v22.19.0-win-x64\node.exe D:\Project\Shaco-Forge\dist\slice3-step2-signature-tests\1789135118118\public-fixture-policy.json
+IOException
+
+    at file:///D:/Project/Shaco-Forge/scripts/slice3-step2-native.mjs:40:8 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: Error: Command failed: D:\Project\Shaco-Forge\apps\native-carrier\bin\Release\net10.0-windows\ShacoForge.NativeCarrier.exe --verify-installer C:\Users\18902\AppData\Local\Temp\shaco-forge-v1-slice-1a-toolchain\node-v22.19.0-win-x64\node.exe D:\Project\Shaco-Forge\dist\slice3-step2-signature-tests\1789135118118\public-fixture-policy.json
+  IOException
+  
+      at genericNodeError (node:internal/errors:983:15)
+      at wrappedFn (node:internal/errors:537:14)
+      at checkExecSyncError (node:child_process:915:11)
+      at execFileSync (node:child_process:951:15)
+      at file:///D:/Project/Shaco-Forge/scripts/slice3-step2-native.mjs:40:21
+      at getActual (node:assert:609:5)
+      at Function.throws (node:assert:757:24)
+      at file:///D:/Project/Shaco-Forge/scripts/slice3-step2-native.mjs:40:8 {
+    status: 1,
+    signal: null,
+    output: [
+      null,
+      Buffer(0) [Uint8Array] [],
+      Buffer(13) [Uint8Array] [
+         73,  79,  69, 120,  99,
+        101, 112, 116, 105, 111,
+        110,  13,  10
+      ]
+    ],
+    pid: 45044,
+    stdout: Buffer(0) [Uint8Array] [],
+    stderr: Buffer(13) [Uint8Array] [
+       73,  79,  69, 120,  99,
+      101, 112, 116, 105, 111,
+      110,  13,  10
+    ]
+  },
+  expected: [Function (anonymous)],
+  operator: 'throws',
+  diff: 'simple'
+}
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

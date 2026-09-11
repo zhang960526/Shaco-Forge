@@ -27,7 +27,13 @@
     "smoke:full-shaco:development": "node scripts/smoke-full-shaco.mjs --development",
     "package:runtime": "node scripts/package-runtime.mjs",
     "test:packaged-runtime": "node --test scripts/packaged-runtime.test.mjs",
-    "smoke:packaged-runtime": "node scripts/smoke-packaged-runtime.mjs"
+    "smoke:packaged-runtime": "node scripts/smoke-packaged-runtime.mjs",
+    "test:slice3-step2": "node --test scripts/slice3-step2.test.mjs scripts/slice3-step2-gateway.test.mjs && node scripts/slice3-step2-native.mjs",
+    "package:installer": "node scripts/package-installer.mjs",
+    "smoke:slice3-step2": "node scripts/smoke-slice3-step2.mjs",
+    "diagnose:slice3-step2": "node scripts/diagnose-slice3-step2.mjs",
+    "verify:f05": "node scripts/slice3-step2-f05.mjs",
+    "test:installer": "node scripts/test-installer.mjs"
   },
   "devDependencies": {
     "@electron/packager": "18.3.6",

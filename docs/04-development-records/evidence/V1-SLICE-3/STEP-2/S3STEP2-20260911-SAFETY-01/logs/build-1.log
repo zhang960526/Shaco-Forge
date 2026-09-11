@@ -1,0 +1,23 @@
+$ node scripts/build.mjs
+CSC : error CS2012: 无法打开“D:\Project\Shaco-Forge\apps\native-carrier\obj\Release\net10.0-windows\ShacoForge.NativeCarrier.dll”以进行写入 - Access to the path 'D:\Project\Shaco-Forge\apps\native-carrier\obj\Release\net10.0-windows\ShacoForge.NativeCarrier.dll' is denied. [D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj]
+
+生成失败。
+
+CSC : error CS2012: 无法打开“D:\Project\Shaco-Forge\apps\native-carrier\obj\Release\net10.0-windows\ShacoForge.NativeCarrier.dll”以进行写入 - Access to the path 'D:\Project\Shaco-Forge\apps\native-carrier\obj\Release\net10.0-windows\ShacoForge.NativeCarrier.dll' is denied. [D:\Project\Shaco-Forge\apps\native-carrier\ShacoForge.NativeCarrier.csproj]
+    0 个警告
+    1 个错误
+
+已用时间 00:00:00.83
+file:///D:/Project/Shaco-Forge/scripts/tool-runner.mjs:20
+  if (result.status !== 0) throw new Error(`${label} failed with exit code ${result.status ?? 'unknown'}`)
+                                 ^
+
+Error: .NET 10 Native Carrier build failed with exit code 1
+    at runTool (file:///D:/Project/Shaco-Forge/scripts/tool-runner.mjs:20:34)
+    at file:///D:/Project/Shaco-Forge/scripts/build.mjs:6:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:345:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:651:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

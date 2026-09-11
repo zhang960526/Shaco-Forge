@@ -1,0 +1,235 @@
+$ node --test scripts/packaged-runtime.test.mjs
+TAP version 13
+# (node:27124) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: closure traverses only production declarations; required peers, optional policy and determinism
+ok 1 - closure traverses only production declarations; required peers, optional policy and determinism
+  ---
+  duration_ms: 106.0348
+  type: 'test'
+  ...
+# Subtest: optionalDependencies override dependencies, while optional peers do not enter the graph
+ok 2 - optionalDependencies override dependencies, while optional peers do not enter the graph
+  ---
+  duration_ms: 0.3962
+  type: 'test'
+  ...
+# Subtest: missing dependencies fails closed
+ok 3 - missing dependencies fails closed
+  ---
+  duration_ms: 14.4114
+  type: 'test'
+  ...
+# Subtest: missing peerDependencies fails closed
+ok 4 - missing peerDependencies fails closed
+  ---
+  duration_ms: 11.1066
+  type: 'test'
+  ...
+# Subtest: wrong resolved name fails closed
+ok 5 - wrong resolved name fails closed
+  ---
+  duration_ms: 13.7375
+  type: 'test'
+  ...
+# Subtest: wrong resolved version fails closed
+ok 6 - wrong resolved version fails closed
+  ---
+  duration_ms: 15.7659
+  type: 'test'
+  ...
+# Subtest: present optional dependency with wrong identity fails closed
+ok 7 - present optional dependency with wrong identity fails closed
+  ---
+  duration_ms: 17.9272
+  type: 'test'
+  ...
+# Subtest: ambiguous production roots fail closed
+ok 8 - ambiguous production roots fail closed
+  ---
+  duration_ms: 10.9218
+  type: 'test'
+  ...
+# Subtest: forbidden package through a production edge fails with the complete parent chain
+ok 9 - forbidden package through a production edge fails with the complete parent chain
+  ---
+  duration_ms: 21.9671
+  type: 'test'
+  ...
+# Subtest: materialization preserves distinct versions and cycles; every actual package must match its production graph
+ok 10 - materialization preserves distinct versions and cycles; every actual package must match its production graph
+  ---
+  duration_ms: 114.9445
+  type: 'test'
+  ...
+# Subtest: pruning removes obvious test/dev artifacts and preserves licenses and executable src entry points
+ok 11 - pruning removes obvious test/dev artifacts and preserves licenses and executable src entry points
+  ---
+  duration_ms: 62.283
+  type: 'test'
+  ...
+# Subtest: src policy preserves runtime references and excludes unreferenced source trees
+ok 12 - src policy preserves runtime references and excludes unreferenced source trees
+  ---
+  duration_ms: 18.6355
+  type: 'test'
+  ...
+# Subtest: explicit runtime target under a test directory fails closed instead of silently breaking runtime
+ok 13 - explicit runtime target under a test directory fails closed instead of silently breaking runtime
+  ---
+  duration_ms: 16.5958
+  type: 'test'
+  ...
+# Subtest: runtime import into a test-only directory prevents unsafe pruning
+ok 14 - runtime import into a test-only directory prevents unsafe pruning
+  ---
+  duration_ms: 13.4665
+  type: 'test'
+  ...
+# Subtest: generated browser/system tests, unexported test support and standalone test runners are excluded
+ok 15 - generated browser/system tests, unexported test support and standalone test runners are excluded
+  ---
+  duration_ms: 34.867
+  type: 'test'
+  ...
+# Subtest: public testing and mock runtime APIs are preserved without treating a name as proof of test-only content
+ok 16 - public testing and mock runtime APIs are preserved without treating a name as proof of test-only content
+  ---
+  duration_ms: 20.7848
+  type: 'test'
+  ...
+# Subtest: runtime src imports into excluded generated test support fail closed
+ok 17 - runtime src imports into excluded generated test support fail closed
+  ---
+  duration_ms: 18.2913
+  type: 'test'
+  ...
+# Subtest: actual production root inventory is stable and comes from CLI/profile/bootstrap entry bytes
+ok 18 - actual production root inventory is stable and comes from CLI/profile/bootstrap entry bytes
+  ---
+  duration_ms: 5481.5415
+  type: 'test'
+  ...
+# Subtest: complete composition and deterministic byte-derived manifests, without a self-hash cycle
+ok 19 - complete composition and deterministic byte-derived manifests, without a self-hash cycle
+  ---
+  duration_ms: 87.5415
+  type: 'test'
+  ...
+# Subtest: missing Node fails closed
+ok 20 - missing Node fails closed
+  ---
+  duration_ms: 61.0605
+  type: 'test'
+  ...
+# Subtest: missing Harness fails closed
+ok 21 - missing Harness fails closed
+  ---
+  duration_ms: 54.9758
+  type: 'test'
+  ...
+# Subtest: missing Desktop fails closed
+ok 22 - missing Desktop fails closed
+  ---
+  duration_ms: 56.431
+  type: 'test'
+  ...
+# Subtest: modified critical bytes fails closed
+ok 23 - modified critical bytes fails closed
+  ---
+  duration_ms: 62.8851
+  type: 'test'
+  ...
+# Subtest: unexpected critical file fails closed
+ok 24 - unexpected critical file fails closed
+  ---
+  duration_ms: 59.4709
+  type: 'test'
+  ...
+# Subtest: wrong WorkerNodeVersion rejected even with recomputed manifests
+ok 25 - wrong WorkerNodeVersion rejected even with recomputed manifests
+  ---
+  duration_ms: 64.9128
+  type: 'test'
+  ...
+# Subtest: wrong HarnessCommit rejected even with recomputed manifests
+ok 26 - wrong HarnessCommit rejected even with recomputed manifests
+  ---
+  duration_ms: 57.9124
+  type: 'test'
+  ...
+# Subtest: wrong HarnessPackage rejected even with recomputed manifests
+ok 27 - wrong HarnessPackage rejected even with recomputed manifests
+  ---
+  duration_ms: 62.3967
+  type: 'test'
+  ...
+# Subtest: wrong ProductionProfileIdentity rejected even with recomputed manifests
+ok 28 - wrong ProductionProfileIdentity rejected even with recomputed manifests
+  ---
+  duration_ms: 62.1709
+  type: 'test'
+  ...
+# Subtest: wrong Platform rejected even with recomputed manifests
+ok 29 - wrong Platform rejected even with recomputed manifests
+  ---
+  duration_ms: 64.8972
+  type: 'test'
+  ...
+# Subtest: wrong Architecture rejected even with recomputed manifests
+ok 30 - wrong Architecture rejected even with recomputed manifests
+  ---
+  duration_ms: 59.6381
+  type: 'test'
+  ...
+# Subtest: wrong FrozenContractIdentity rejected even with recomputed manifests
+ok 31 - wrong FrozenContractIdentity rejected even with recomputed manifests
+  ---
+  duration_ms: 55.4195
+  type: 'test'
+  ...
+# Subtest: wrong actual Harness package identity rejected even with recomputed inventory
+ok 32 - wrong actual Harness package identity rejected even with recomputed inventory
+  ---
+  duration_ms: 78.5352
+  type: 'test'
+  ...
+# Subtest: identity envelope modification rejected
+ok 33 - identity envelope modification rejected
+  ---
+  duration_ms: 55.9858
+  type: 'test'
+  ...
+# Subtest: critical directory junction rejected without following it
+ok 34 - critical directory junction rejected without following it
+  ---
+  duration_ms: 83.102
+  type: 'test'
+  ...
+# Subtest: inventory path traversal, alternate separator and ADS rejected
+ok 35 - inventory path traversal, alternate separator and ADS rejected
+  ---
+  duration_ms: 0.4701
+  type: 'test'
+  ...
+# Subtest: packaged child rejects ambient runtime overrides and loads native binaries in place
+ok 36 - packaged child rejects ambient runtime overrides and loads native binaries in place
+  ---
+  duration_ms: 0.3795
+  type: 'test'
+  ...
+# Subtest: Harness fallback container cannot redirect writes; only package-owned leaf references are accepted
+ok 37 - Harness fallback container cannot redirect writes; only package-owned leaf references are accepted
+  ---
+  duration_ms: 65.9219
+  type: 'test'
+  ...
+1..37
+# tests 37
+# suites 0
+# pass 37
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7560.1854

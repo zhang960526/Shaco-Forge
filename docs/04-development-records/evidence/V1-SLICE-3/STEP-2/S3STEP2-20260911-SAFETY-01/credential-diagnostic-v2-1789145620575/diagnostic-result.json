@@ -1,0 +1,14 @@
+{
+  "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+  "args": [
+    "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+    "exec",
+    "node",
+    "dist/credential-diagnostic-v2/run.mjs"
+  ],
+  "exitCode": 0,
+  "result": "PASS_DIAGNOSTIC_ONLY",
+  "sourceDigest": "6d15c406a6846476111872d7a8272347b0d5e445e8388f58cbc3b9d78025663d",
+  "providerRuns": 0,
+  "signingRuns": 0
+}

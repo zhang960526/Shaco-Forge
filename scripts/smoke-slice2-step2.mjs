@@ -2,13 +2,15 @@ import assert from 'node:assert/strict'
 import { spawn } from 'node:child_process'
 import { mkdtemp, mkdir, readFile, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
+import { tmpdir } from 'node:os'
 import electron from 'electron'
 import { paths } from './runtime-paths.mjs'
 import { evidence, evidenceRoot, runId } from './step2-evidence.mjs'
 import { inspectLocalPlatform, lifecycleRequest } from '../apps/desktop/dist/main/lifecycle-client.js'
 
 assert.equal(process.version, 'v22.19.0')
-const root = await mkdtemp(join(paths.root, 'node_modules/.step2-runtime-'))
+// Keep mutable regression data outside checkout/package discovery and watchers.
+const root = await mkdtemp(join(tmpdir(), 'shaco-forge-slice2-cumulative-'))
 const workspace = join(root, 'workspace')
 await mkdir(workspace)
 const dshHome = join(root, 'harness')

@@ -1,0 +1,7 @@
+$ node scripts/slice3-step2-f05.mjs
+{
+  "result": "TECHNICAL_CANDIDATE_RECORDED",
+  "disposition": "RESIDUAL_EXCEPTION_REQUIRED",
+  "ownerAcceptance": "PENDING"
+}
+

@@ -1,0 +1,3 @@
+$ node scripts/smoke-slice2-step3.mjs
+{"result":"FAIL","failure":"STEP3_CREDENTIAL_UNSET_TIMEOUT","chain":["PRODUCT_STARTUP_AUTHORITY_HOST_HELPER_AUTHENTICATED_CARRIER_CLIENT_CONNECTED","CURRENT_SESSION_FROM_PUBLIC_HARNESS_TRUTH","BOUNDED_CLEANUP_NO_ORPHAN"],"cleanup":{"noOrphan":true,"authorityCount":1,"desktopProcessesExited":true},"providerRuns":0}
+[ELIFECYCLE] Command failed with exit code 1.

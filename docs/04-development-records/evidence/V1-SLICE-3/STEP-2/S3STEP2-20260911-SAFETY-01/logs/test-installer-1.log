@@ -1,0 +1,7 @@
+$ node scripts/test-installer.mjs
+{
+  "result": "PASS",
+  "productionUnsignedEntryRejected": true,
+  "signingRuns": 0
+}
+

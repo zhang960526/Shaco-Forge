@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "packagedRoot": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-s3s1-packages\\1789139804235\\output\\Shaco Forge-win32-x64",
+  "files": 25869,
+  "bytes": 688957946,
+  "nodeIdentity": {
+    "version": "v22.19.0",
+    "platform": "win32",
+    "arch": "x64",
+    "modules": "127"
+  },
+  "identity": {
+    "format": "SHACO_FORGE_PACKAGED_ARTIFACT_V1",
+    "releaseManifestSha256": "08ffb9405e40a2f275302cb24c8a49f27c98be28f768825bcd1d3c129a5e0e98",
+    "fileManifestSha256": "b98d593c56eb7f6c7de9c6d4ecc0b4dce78b9a902af03bee2a1a2e7f28b176ae",
+    "digest": "5ad3c2872ea50f8b9051ce85f3839af4ac61ff16f9f31e0db9558b15fc683254",
+    "scope": "PACKAGED_RUNTIME_BYTES_EXCLUDING_IDENTITY_ENVELOPES",
+    "signing": "NOT_PERFORMED"
+  },
+  "harnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+  "harnessStatus": "",
+  "providerRuns": 0,
+  "signingRuns": 0
+}

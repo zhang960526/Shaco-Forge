@@ -1,0 +1,199 @@
+$ node --test scripts/slice3-step2.test.mjs
+TAP version 13
+# (node:12632) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: six identities; positive compatibility admits exactly the explicit tuple
+ok 1 - six identities; positive compatibility admits exactly the explicit tuple
+  ---
+  duration_ms: 1.2545
+  type: 'test'
+  ...
+# Subtest: compatibility PRODUCT_RELEASE_MISMATCH: no credential, no Harness write, no fallback
+ok 2 - compatibility PRODUCT_RELEASE_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.9219
+  type: 'test'
+  ...
+# Subtest: compatibility DESKTOP_TOO_OLD: no credential, no Harness write, no fallback
+ok 3 - compatibility DESKTOP_TOO_OLD: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1761
+  type: 'test'
+  ...
+# Subtest: compatibility WORKER_TOO_OLD: no credential, no Harness write, no fallback
+ok 4 - compatibility WORKER_TOO_OLD: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1305
+  type: 'test'
+  ...
+# Subtest: compatibility WORKER_TOO_NEW: no credential, no Harness write, no fallback
+ok 5 - compatibility WORKER_TOO_NEW: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.196
+  type: 'test'
+  ...
+# Subtest: compatibility DESKTOP_WORKER_MISMATCH: no credential, no Harness write, no fallback
+ok 6 - compatibility DESKTOP_WORKER_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1786
+  type: 'test'
+  ...
+# Subtest: compatibility CARRIER_UNSUPPORTED: no credential, no Harness write, no fallback
+ok 7 - compatibility CARRIER_UNSUPPORTED: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1702
+  type: 'test'
+  ...
+# Subtest: compatibility HARNESS_BASELINE_MISMATCH: no credential, no Harness write, no fallback
+ok 8 - compatibility HARNESS_BASELINE_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1243
+  type: 'test'
+  ...
+# Subtest: compatibility CONTROL_SCHEMA_UNSUPPORTED: no credential, no Harness write, no fallback
+ok 9 - compatibility CONTROL_SCHEMA_UNSUPPORTED: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.2466
+  type: 'test'
+  ...
+# Subtest: compatibility DSH_HOME_MISMATCH: no credential, no Harness write, no fallback
+ok 10 - compatibility DSH_HOME_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.355
+  type: 'test'
+  ...
+# Subtest: compatibility UPGRADE_IN_PROGRESS: no credential, no Harness write, no fallback
+ok 11 - compatibility UPGRADE_IN_PROGRESS: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1506
+  type: 'test'
+  ...
+# Subtest: compatibility RESTORE_REQUIRED: no credential, no Harness write, no fallback
+ok 12 - compatibility RESTORE_REQUIRED: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.0722
+  type: 'test'
+  ...
+# Subtest: compatibility RELEASE_INTEGRITY_FAILURE: no credential, no Harness write, no fallback
+ok 13 - compatibility RELEASE_INTEGRITY_FAILURE: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.053
+  type: 'test'
+  ...
+# Subtest: unknown/missing identities and unlisted tuples all refuse before writes
+ok 14 - unknown/missing identities and unlisted tuples all refuse before writes
+  ---
+  duration_ms: 0.8037
+  type: 'test'
+  ...
+# Subtest: SQLite bootstrap, current schema, ownership, missing/future/older/corrupt refusal
+ok 15 - SQLite bootstrap, current schema, ownership, missing/future/older/corrupt refusal
+  ---
+  duration_ms: 53.9141
+  type: 'test'
+  ...
+# Subtest: SQLite control transaction failure rolls back all fields and event insert
+ok 16 - SQLite control transaction failure rolls back all fields and event insert
+  ---
+  duration_ms: 21.6271
+  type: 'test'
+  ...
+# Subtest: transaction positive durable transition order and committed restart
+ok 17 - transaction positive durable transition order and committed restart
+  ---
+  duration_ms: 25.0787
+  type: 'test'
+  ...
+# Subtest: transaction failure check persists and restores only after install
+ok 18 - transaction failure check persists and restores only after install
+  ---
+  duration_ms: 9.4711
+  type: 'test'
+  ...
+# Subtest: transaction failure drain persists and restores only after install
+ok 19 - transaction failure drain persists and restores only after install
+  ---
+  duration_ms: 13.1021
+  type: 'test'
+  ...
+# Subtest: transaction failure quiescence persists and restores only after install
+ok 20 - transaction failure quiescence persists and restores only after install
+  ---
+  duration_ms: 15.6442
+  type: 'test'
+  ...
+# Subtest: transaction failure backup persists and restores only after install
+ok 21 - transaction failure backup persists and restores only after install
+  ---
+  duration_ms: 15.8463
+  type: 'test'
+  ...
+# Subtest: transaction failure verifyBackup persists and restores only after install
+ok 22 - transaction failure verifyBackup persists and restores only after install
+  ---
+  duration_ms: 16.6131
+  type: 'test'
+  ...
+# Subtest: transaction failure install persists and restores only after install
+ok 23 - transaction failure install persists and restores only after install
+  ---
+  duration_ms: 24.701
+  type: 'test'
+  ...
+# Subtest: transaction failure migrate persists and restores only after install
+ok 24 - transaction failure migrate persists and restores only after install
+  ---
+  duration_ms: 25.7706
+  type: 'test'
+  ...
+# Subtest: transaction failure validate persists and restores only after install
+ok 25 - transaction failure validate persists and restores only after install
+  ---
+  duration_ms: 29.423
+  type: 'test'
+  ...
+# Subtest: transaction failure commit persists and restores only after install
+ok 26 - transaction failure commit persists and restores only after install
+  ---
+  duration_ms: 29.5671
+  type: 'test'
+  ...
+# Subtest: failure during restore persists RESTORE_FAILED and blocks restart
+ok 27 - failure during restore persists RESTORE_FAILED and blocks restart
+  ---
+  duration_ms: 28.2412
+  type: 'test'
+  ...
+# Subtest: restart authority for every transaction state; cancellation is only pre-install
+ok 28 - restart authority for every transaction state; cancellation is only pre-install
+  ---
+  duration_ms: 42.322
+  type: 'test'
+  ...
+# Subtest: backup byte integrity, missing/corrupt bytes rejection and runtime/data pair restore
+ok 29 - backup byte integrity, missing/corrupt bytes rejection and runtime/data pair restore
+  ---
+  duration_ms: 85.9884
+  type: 'test'
+  ...
+# Subtest: uninstall retains durable and unowned bytes; purge requires separate confirmation
+ok 30 - uninstall retains durable and unowned bytes; purge requires separate confirmation
+  ---
+  duration_ms: 9.5071
+  type: 'test'
+  ...
+# Subtest: signature pure verification: public identity, timestamp, unsigned, invalid, tamper, wrong signer
+ok 31 - signature pure verification: public identity, timestamp, unsigned, invalid, tamper, wrong signer
+  ---
+  duration_ms: 0.3352
+  type: 'test'
+  ...
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 554.211

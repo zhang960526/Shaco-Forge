@@ -5,6 +5,7 @@ import { dirname, join, resolve } from 'node:path'
 import { tmpdir } from 'node:os'
 import packager from '@electron/packager'
 import { CONTRACT_SHA256, HARNESS_COMMIT, RELEASE_LAYOUT, artifactIdentity, hashFile, inventory, jsonBytes, sha256, verifyPackagedRuntime } from '../packages/contracts/dist/packaged-runtime.js'
+import { declaration, STEP1_ARTIFACT } from '../packages/contracts/dist/compatibility.js'
 import { materializeHarnessProfile } from '../apps/worker/dist/profile.js'
 import { assertToolchain } from './tool-runner.mjs'
 import { discoverProductionRoots, calculateProductionClosure, excludedTopLevelPackages, materializeProductionClosure, verifyProductionClosure, comparePreviousPackage } from './harness-production-closure.mjs'
@@ -47,7 +48,8 @@ import { writeFile } from 'node:fs/promises'
 import { verifyPackagedRuntime } from '@shaco-forge/contracts/packaged-runtime'
 try {
   await verifyPackagedRuntime(dirname(process.execPath))
-  await import('./desktop/dist/main/main.js')
+  const { startDesktop } = await import('./desktop/dist/main/main.js')
+  void startDesktop()
 } catch (error) {
   if (process.env.SHACO_FORGE_EVIDENCE_PATH) await writeFile(process.env.SHACO_FORGE_EVIDENCE_PATH, JSON.stringify({ result: 'FAIL', startupFailure: String(error) }), 'utf8')
   app.exit(1)
@@ -56,7 +58,8 @@ try {
 await utf8(join(app, 'worker-launch.mjs'), `import { fileURLToPath } from 'node:url'
 import { verifyPackagedRuntime } from '@shaco-forge/contracts/packaged-runtime'
 await verifyPackagedRuntime(fileURLToPath(new URL('../../', import.meta.url)))
-await import('./worker/dist/index.js')
+const { startWorker } = await import('./worker/dist/index.js')
+await startWorker()
 `)
 // A release under the development repository can resolve omitted optional peers
 // from its ancestor node_modules. Build the reviewable package in an isolated
@@ -116,7 +119,8 @@ const sourceFiles = execFileSync(git, ['ls-files', '--cached', '--others', '--ex
 const sourceInventory = await Promise.all(sourceFiles.map(async path => ({ path, sha256: await hashFile(join(root, path)) })))
 const release = {
   ProductVersion: product.version, DesktopVersion: product.version, WorkerVersion: product.version, CarrierVersion: 1,
-  HarnessBaselineVersion: '0.1.2-alpha.1', ControlStoreSchemaVersion: 'NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES',
+  HarnessBaselineVersion: '0.1.2-alpha.1', ControlStoreSchemaVersion: '1', Compatibility: declaration(product.version, STEP1_ARTIFACT),
+  ProductionSignerPolicy: JSON.parse(await readFile(join(root, 'apps/installer/signer-policy.json'), 'utf8')),
   ElectronVersion: '35.7.5', WorkerNodeVersion: '22.19.0', Platform: 'win32', Architecture: 'x64',
   HarnessPackage: '@deepseek-ai/dsh@0.1.2-alpha.1', HarnessCommit: HARNESS_COMMIT, ProductionProfileIdentity: 'shaco-forge',
   SourceCommit: sourceCommit, SourceState: 'WORKTREE_OVER_SOURCE_COMMIT_BOUND_BY_SOURCE_INVENTORY', FrozenContractIdentity: CONTRACT_SHA256, PackagedRuntimeLayoutVersion: 1,

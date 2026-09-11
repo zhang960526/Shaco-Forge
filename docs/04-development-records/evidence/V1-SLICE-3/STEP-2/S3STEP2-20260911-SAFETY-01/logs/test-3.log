@@ -1,0 +1,1235 @@
+$ node scripts/build.mjs && node --test packages/contracts/dist/index.test.js packages/contracts/dist/carrier.test.js apps/worker/dist/config.test.js apps/worker/dist/host-readiness-marker.test.js apps/worker/dist/host-carrier-preflight.test.js apps/worker/host-profile/events-route-preflight.test.mjs apps/desktop/dist/main/security.test.js apps/desktop/dist-tests/tests/theme.test.js apps/desktop/dist-tests/tests/transport.test.js apps/desktop/dist/main/window-lifecycle.test.js apps/desktop/dist/main/worker-supervisor.test.js apps/desktop/dist/main/carrier-client.test.js apps/desktop/dist-tests/tests/user-loop-evidence.test.js apps/desktop/dist/main/frame-observation.test.js scripts/user-loop-policy.test.mjs apps/desktop/dist/main/recovery-coordinator.test.js apps/worker/dist/profile.test.js apps/desktop/dist/main/workspace-picker.test.js apps/desktop/src/client/shell-state.test.mjs scripts/step3-composition.test.mjs scripts/step3-interaction.test.mjs scripts/step3-fixture-boundaries.test.mjs apps/desktop/tests/presentation-lifecycle.test.mjs apps/desktop/tests/presentation-actions.test.mjs apps/desktop/tests/full-shaco-boundaries.test.mjs
+  ShacoForge.NativeCarrier -> D:\Project\Shaco-Forge\apps\native-carrier\bin\Release\net10.0-windows\ShacoForge.NativeCarrier.dll
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.60
+vite v6.4.3 building for production...
+transforming...
+✓ 11 modules transformed.
+rendering chunks...
+✓ built in 177ms
+vite v6.4.3 building for production...
+transforming...
+✓ 3 modules transformed.
+rendering chunks...
+computing gzip size...
+apps/desktop/.generated-client/static/shell-bootstrap.js  17.77 kB │ gzip: 4.95 kB
+✓ built in 34ms
+{"result":"PREPARED","graphCount":29,"react":"18.3.1"}
+vite v6.4.3 building for production...
+<script src="./static/shell-bootstrap.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="./static/boot-facade.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="./static/bootstrap.js"> in "/index.html" can't be bundled without type="module" attribute
+transforming...
+✓ 348 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/renderer/index.html                                           1.08 kB │ gzip:   0.58 kB
+dist/renderer/assets/KaTeX_Size3-Regular-CTq5MqoE.woff             4.42 kB
+dist/renderer/assets/KaTeX_Size4-Regular-Dl5lxZxV.woff2            4.93 kB
+dist/renderer/assets/KaTeX_Size2-Regular-Dy4dx90m.woff2            5.21 kB
+dist/renderer/assets/KaTeX_Size1-Regular-mCD8mA8B.woff2            5.47 kB
+dist/renderer/assets/KaTeX_Size4-Regular-BF-4gkZK.woff             5.98 kB
+dist/renderer/assets/KaTeX_Size2-Regular-oD1tc_U0.woff             6.19 kB
+dist/renderer/assets/KaTeX_Size1-Regular-C195tn64.woff             6.50 kB
+dist/renderer/assets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2      6.91 kB
+dist/renderer/assets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2         6.91 kB
+dist/renderer/assets/KaTeX_Size3-Regular-DgpXs0kz.ttf              7.59 kB
+dist/renderer/assets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff       7.66 kB
+dist/renderer/assets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff          7.72 kB
+dist/renderer/assets/KaTeX_Script-Regular-D3wIWfF6.woff2           9.64 kB
+dist/renderer/assets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2       10.34 kB
+dist/renderer/assets/KaTeX_Size4-Regular-DWFBv043.ttf             10.36 kB
+dist/renderer/assets/KaTeX_Script-Regular-D5yQViql.woff           10.59 kB
+dist/renderer/assets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2         11.32 kB
+dist/renderer/assets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2            11.35 kB
+dist/renderer/assets/KaTeX_Size2-Regular-B7gKUWhC.ttf             11.51 kB
+dist/renderer/assets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2        12.03 kB
+dist/renderer/assets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2          12.22 kB
+dist/renderer/assets/KaTeX_Size1-Regular-Dbsnue_I.ttf             12.23 kB
+dist/renderer/assets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff        12.32 kB
+dist/renderer/assets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf       12.34 kB
+dist/renderer/assets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf          12.37 kB
+dist/renderer/assets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff          13.21 kB
+dist/renderer/assets/KaTeX_Fraktur-Bold-BsDP51OF.woff             13.30 kB
+dist/renderer/assets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2      13.57 kB
+dist/renderer/assets/KaTeX_SansSerif-Italic-DN2j7dab.woff         14.11 kB
+dist/renderer/assets/KaTeX_SansSerif-Bold-DbIhKOiC.woff           14.41 kB
+dist/renderer/assets/KaTeX_Typewriter-Regular-C0xS9mPB.woff       16.03 kB
+dist/renderer/assets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2         16.40 kB
+dist/renderer/assets/KaTeX_Math-Italic-t53AETM-.woff2             16.44 kB
+dist/renderer/assets/KaTeX_Script-Regular-C5JkGWo-.ttf            16.65 kB
+dist/renderer/assets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2         16.78 kB
+dist/renderer/assets/KaTeX_Main-Italic-NWA7e6Wa.woff2             16.99 kB
+dist/renderer/assets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff          18.67 kB
+dist/renderer/assets/KaTeX_Math-Italic-DA0__PXp.woff              18.75 kB
+dist/renderer/assets/KaTeX_Main-BoldItalic-SpSLRI95.woff          19.41 kB
+dist/renderer/assets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf         19.44 kB
+dist/renderer/assets/KaTeX_Fraktur-Regular-CB_wures.ttf           19.57 kB
+dist/renderer/assets/KaTeX_Fraktur-Bold-BdnERNNW.ttf              19.58 kB
+dist/renderer/assets/KaTeX_Main-Italic-BMLOBm91.woff              19.68 kB
+dist/renderer/assets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf          22.36 kB
+dist/renderer/assets/KaTeX_SansSerif-Bold-CFMepnvq.ttf            24.50 kB
+dist/renderer/assets/KaTeX_Main-Bold-Cx986IdX.woff2               25.32 kB
+dist/renderer/assets/KaTeX_Main-Regular-B22Nviop.woff2            26.27 kB
+dist/renderer/assets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf        27.56 kB
+dist/renderer/assets/KaTeX_AMS-Regular-BQhdFMY1.woff2             28.08 kB
+dist/renderer/assets/KaTeX_Main-Bold-Jm3AIy58.woff                29.91 kB
+dist/renderer/assets/KaTeX_Main-Regular-Dr94JaBh.woff             30.77 kB
+dist/renderer/assets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf           31.20 kB
+dist/renderer/assets/KaTeX_Math-Italic-flOr_0UB.ttf               31.31 kB
+dist/renderer/assets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf           32.97 kB
+dist/renderer/assets/KaTeX_AMS-Regular-DMm9YOAa.woff              33.52 kB
+dist/renderer/assets/KaTeX_Main-Italic-3WenGoN9.ttf               33.58 kB
+dist/renderer/assets/KaTeX_Main-Bold-waoOVXN0.ttf                 51.34 kB
+dist/renderer/assets/KaTeX_Main-Regular-ypZvNtVU.ttf              53.58 kB
+dist/renderer/assets/KaTeX_AMS-Regular-DRggAlZN.ttf               63.63 kB
+dist/renderer/assets/index-B0Q1znxS.css                           84.27 kB │ gzip:  19.86 kB
+dist/renderer/assets/ini-BEwlwnbL.js                               1.53 kB │ gzip:   0.50 kB
+dist/renderer/assets/xml-sdJ4AIDG.js                               5.38 kB │ gzip:   1.21 kB
+dist/renderer/assets/toml-vGWfd6FD.js                              6.43 kB │ gzip:   1.28 kB
+dist/renderer/assets/kotlin-BdnUsdx6.js                            8.79 kB │ gzip:   2.13 kB
+dist/renderer/assets/yaml-Buea-lGh.js                             10.51 kB │ gzip:   2.27 kB
+dist/renderer/assets/rust-B1yitclQ.js                             15.07 kB │ gzip:   2.72 kB
+dist/renderer/assets/lua-BaeVxFsk.js                              15.54 kB │ gzip:   3.16 kB
+dist/renderer/assets/sql-CRqJ_cUM.js                              23.43 kB │ gzip:   7.42 kB
+dist/renderer/assets/scss-D5BDwBP9.js                             27.20 kB │ gzip:   4.20 kB
+dist/renderer/assets/java-CylS5w8V.js                             27.22 kB │ gzip:   4.26 kB
+dist/renderer/assets/go-C27-OAKa.js                               46.82 kB │ gzip:   5.18 kB
+dist/renderer/assets/css-CLj8gQPS.js                              49.04 kB │ gzip:  11.86 kB
+dist/renderer/assets/markdown-Cvjx9yec.js                         59.34 kB │ gzip:   5.64 kB
+dist/renderer/assets/python-B6aJPvgy.js                           69.95 kB │ gzip:   9.13 kB
+dist/renderer/assets/c-BIGW1oBm.js                                72.11 kB │ gzip:  10.51 kB
+dist/renderer/assets/swift-D82vCrfD.js                            86.69 kB │ gzip:  14.73 kB
+dist/renderer/assets/csharp-DSvCPggb.js                           90.19 kB │ gzip:  10.75 kB
+dist/renderer/assets/less-B1dDrJ26.js                             97.63 kB │ gzip:  14.70 kB
+dist/renderer/assets/php-BVPmos2u.js                             113.07 kB │ gzip:  28.74 kB
+dist/renderer/assets/mdx-Cmh6b_Ma.js                             136.11 kB │ gzip:  23.35 kB
+dist/renderer/assets/html-CfGypltT.js                            232.12 kB │ gzip:  28.31 kB
+dist/renderer/assets/ruby-D8HBHcz6.js                            425.75 kB │ gzip:  41.30 kB
+dist/renderer/assets/cpp-DIPi6g--.js                             637.55 kB │ gzip:  47.22 kB
+dist/renderer/assets/index-CW3DVUZ2.js                         1,162.39 kB │ gzip: 323.93 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.90s
+TAP version 13
+# Subtest: ThemeMode resolves light, dark and system
+ok 1 - ThemeMode resolves light, dark and system
+  ---
+  duration_ms: 0.5555
+  type: 'test'
+  ...
+# Subtest: root controller starts light and applies every mode at one root
+ok 2 - root controller starts light and applies every mode at one root
+  ---
+  duration_ms: 0.6599
+  type: 'test'
+  ...
+# Subtest: template and mode stay independent through Braun/FAMICOM/system changes
+ok 3 - template and mode stay independent through Braun/FAMICOM/system changes
+  ---
+  duration_ms: 0.7257
+  type: 'test'
+  ...
+# Subtest: Renderer AsyncIterable pulls only when consumer advances and iterator.return cancels
+ok 4 - Renderer AsyncIterable pulls only when consumer advances and iterator.return cancels
+  ---
+  duration_ms: 2.5845
+  type: 'test'
+  ...
+# Subtest: Renderer AsyncIterable maps AbortSignal to bounded stream cancel
+ok 5 - Renderer AsyncIterable maps AbortSignal to bounded stream cancel
+  ---
+  duration_ms: 2.7268
+  type: 'test'
+  ...
+# Subtest: Renderer forwards interaction traffic unchanged without observing private identity or settlement
+ok 6 - Renderer forwards interaction traffic unchanged without observing private identity or settlement
+  ---
+  duration_ms: 16.6167
+  type: 'test'
+  ...
+# Subtest: ordinary runtime does not construct a full observer and preserves stream object identity
+ok 7 - ordinary runtime does not construct a full observer and preserves stream object identity
+  ---
+  duration_ms: 0.2318
+  type: 'test'
+  ...
+# Subtest: outer wrapper yields the single sidebar to the same-context public Product row
+ok 8 - outer wrapper yields the single sidebar to the same-context public Product row
+  ---
+  duration_ms: 5.346
+  type: 'test'
+  ...
+# Subtest: production bootstrap bundles the tested adapter; no second Client or direct business requests
+ok 9 - production bootstrap bundles the tested adapter; no second Client or direct business requests
+  ---
+  duration_ms: 2.5168
+  type: 'test'
+  ...
+# Subtest: prompt acceptance retains hashes and timestamp, never prompt or credentials
+ok 10 - prompt acceptance retains hashes and timestamp, never prompt or credentials
+  ---
+  duration_ms: 20.5455
+  type: 'test'
+  ...
+# Subtest: live semantic ordering and pinned nested tool result shape preserve hash match
+ok 11 - live semantic ordering and pinned nested tool result shape preserve hash match
+  ---
+  duration_ms: 15.7024
+  type: 'test'
+  ...
+# Subtest: workspace proof observes the pinned nested identity and hashes the requested path even on rejection
+ok 12 - workspace proof observes the pinned nested identity and hashes the requested path even on rejection
+  ---
+  duration_ms: 15.5685
+  type: 'test'
+  ...
+# Subtest: Session creation uses the public request wrapper and redacts preset mount diagnostics
+ok 13 - Session creation uses the public request wrapper and redacts preset mount diagnostics
+  ---
+  duration_ms: 16.8442
+  type: 'test'
+  ...
+# Subtest: accepted Session identity remains associated with its requested controlled Workspace
+ok 14 - accepted Session identity remains associated with its requested controlled Workspace
+  ---
+  duration_ms: 15.0925
+  type: 'test'
+  ...
+# Subtest: follow binding requires the pinned public named request and exposes its hash before Composer submission
+ok 15 - follow binding requires the pinned public named request and exposes its hash before Composer submission
+  ---
+  duration_ms: 14.8205
+  type: 'test'
+  ...
+# Subtest: child observations are bounded, deduplicated and limited to controlled prompted parents
+ok 16 - child observations are bounded, deduplicated and limited to controlled prompted parents
+  ---
+  duration_ms: 1.8106
+  type: 'test'
+  ...
+# Subtest: continuous chunks are counted without accumulating transcript or one row per chunk
+ok 17 - continuous chunks are counted without accumulating transcript or one row per chunk
+  ---
+  duration_ms: 29.1666
+  type: 'test'
+  ...
+# Subtest: browse listing evidence keeps only accepted path hashes or error codes, never directory contents
+ok 18 - browse listing evidence keeps only accepted path hashes or error codes, never directory contents
+  ---
+  duration_ms: 17.138
+  type: 'test'
+  ...
+# Subtest: semantic metadata cap is bounded and fail-visible
+ok 19 - semantic metadata cap is bounded and fail-visible
+  ---
+  duration_ms: 3.087
+  type: 'test'
+  ...
+# Subtest: duplicate turn terminal and invalid order are detected
+ok 20 - duplicate turn terminal and invalid order are detected
+  ---
+  duration_ms: 0.9164
+  type: 'test'
+  ...
+# Subtest: snapshot history and unprompted Sessions cannot prove live gate
+ok 21 - snapshot history and unprompted Sessions cannot prove live gate
+  ---
+  duration_ms: 0.2576
+  type: 'test'
+  ...
+# Subtest: approval/request private interaction traffic is ignored by production diagnostics
+ok 22 - approval/request private interaction traffic is ignored by production diagnostics
+  ---
+  duration_ms: 0.1453
+  type: 'test'
+  ...
+# Subtest: user-questions/request private interaction traffic is ignored by production diagnostics
+ok 23 - user-questions/request private interaction traffic is ignored by production diagnostics
+  ---
+  duration_ms: 0.0473
+  type: 'test'
+  ...
+# Subtest: background stream coexistence and iterator cleanup are measured on unchanged values
+ok 24 - background stream coexistence and iterator cleanup are measured on unchanged values
+  ---
+  duration_ms: 0.4571
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: missing API key
+ok 25 - Provider failure classification: missing API key
+  ---
+  duration_ms: 0.0669
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: provider configuration invalid
+ok 26 - Provider failure classification: provider configuration invalid
+  ---
+  duration_ms: 0.0336
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: HTTP 429
+ok 27 - Provider failure classification: HTTP 429
+  ---
+  duration_ms: 0.0282
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: TLS certificate failure
+ok 28 - Provider failure classification: TLS certificate failure
+  ---
+  duration_ms: 0.0255
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: ENOTFOUND
+ok 29 - Provider failure classification: ENOTFOUND
+  ---
+  duration_ms: 0.0279
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: 401 unauthorized
+ok 30 - Provider failure classification: 401 unauthorized
+  ---
+  duration_ms: 0.0277
+  type: 'test'
+  ...
+# Subtest: Renderer stream allows at most one in-flight pull and receives no unsolicited push
+ok 31 - Renderer stream allows at most one in-flight pull and receives no unsolicited push
+  ---
+  duration_ms: 2.1073
+  type: 'test'
+  ...
+# Subtest: Renderer queue is bounded by current Carrier credit window
+ok 32 - Renderer queue is bounded by current Carrier credit window
+  ---
+  duration_ms: 0.1827
+  type: 'test'
+  ...
+# Subtest: Carrier-loss cleanup rejects pending pull and releases buffered items
+ok 33 - Carrier-loss cleanup rejects pending pull and releases buffered items
+  ---
+  duration_ms: 0.1517
+  type: 'test'
+  ...
+# Subtest: PullStreamBuffer preserves A/B before remote end
+ok 34 - PullStreamBuffer preserves A/B before remote end
+  ---
+  duration_ms: 0.1139
+  type: 'test'
+  ...
+# Subtest: PullStreamBuffer preserves A/B before remote error
+ok 35 - PullStreamBuffer preserves A/B before remote error
+  ---
+  duration_ms: 0.1822
+  type: 'test'
+  ...
+# Subtest: PullStreamBuffer preserves queued undefined before end
+ok 36 - PullStreamBuffer preserves queued undefined before end
+  ---
+  duration_ms: 0.1493
+  type: 'test'
+  ...
+# Subtest: PullStreamBuffer delivers end to a pending pull
+ok 37 - PullStreamBuffer delivers end to a pending pull
+  ---
+  duration_ms: 0.0801
+  type: 'test'
+  ...
+# Subtest: consumer cancel discards queued items even after remote terminal
+ok 38 - consumer cancel discards queued items even after remote terminal
+  ---
+  duration_ms: 0.0806
+  type: 'test'
+  ...
+# Subtest: Carrier failure discards queued items immediately
+ok 39 - Carrier failure discards queued items immediately
+  ---
+  duration_ms: 0.2343
+  type: 'test'
+  ...
+# Subtest: CarrierClient drains items before stream-end, grants no terminal credit, and removes state
+ok 40 - CarrierClient drains items before stream-end, grants no terminal credit, and removes state
+  ---
+  duration_ms: 10.7632
+  type: 'test'
+  ...
+# Subtest: CarrierClient drains items before stream-error, grants no terminal credit, and removes state
+ok 41 - CarrierClient drains items before stream-error, grants no terminal credit, and removes state
+  ---
+  duration_ms: 1.9227
+  type: 'test'
+  ...
+# Subtest: CarrierClient consumes undefined and grants exactly one credit while active
+ok 42 - CarrierClient consumes undefined and grants exactly one credit while active
+  ---
+  duration_ms: 2.504
+  type: 'test'
+  ...
+# Subtest: CarrierClient cancel clears queued state and sends cancellation
+ok 43 - CarrierClient cancel clears queued state and sends cancellation
+  ---
+  duration_ms: 2.1752
+  type: 'test'
+  ...
+# Subtest: CarrierClient failure clears queued streams and rejects another pending pull
+ok 44 - CarrierClient failure clears queued streams and rejects another pending pull
+  ---
+  duration_ms: 1.8539
+  type: 'test'
+  ...
+# Subtest: S2G05/S2G15 sent mutation loses response: OUTCOME_UNKNOWN, all unary terminal, zero resend
+ok 45 - S2G05/S2G15 sent mutation loses response: OUTCOME_UNKNOWN, all unary terminal, zero resend
+  ---
+  duration_ms: 1.4758
+  type: 'test'
+  ...
+# Subtest: frame observation uses exact wire lengths across fragmented/coalesced frames
+ok 46 - frame observation uses exact wire lengths across fragmented/coalesced frames
+  ---
+  duration_ms: 1.1746
+  type: 'test'
+  ...
+# Subtest: frame observation reports oversize without changing frozen cap or decoder admission
+ok 47 - frame observation reports oversize without changing frozen cap or decoder admission
+  ---
+  duration_ms: 1.1769
+  type: 'test'
+  ...
+# Subtest: S2G11/S2G12 carrier and Client alone cannot publish CONNECTED; real repull is required
+ok 48 - S2G11/S2G12 carrier and Client alone cannot publish CONNECTED; real repull is required
+  ---
+  duration_ms: 3.3809
+  type: 'test'
+  ...
+# Subtest: S2G01/S2G04/S2G07 healthy loss fences callbacks and reused stream IDs across generations
+ok 49 - S2G01/S2G04/S2G07 healthy loss fences callbacks and reused stream IDs across generations
+  ---
+  duration_ms: 0.5828
+  type: 'test'
+  ...
+# Subtest: S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {"done":false,"value":"old"}
+ok 50 - S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {"done":false,"value":"old"}
+  ---
+  duration_ms: 0.2337
+  type: 'test'
+  ...
+# Subtest: S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {"done":true}
+ok 51 - S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {"done":true}
+  ---
+  duration_ms: 0.2134
+  type: 'test'
+  ...
+# Subtest: S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {"done":true,"error":"old error"}
+ok 52 - S2G04/S2G14 delayed stream item/end/error cannot cross attachment: {"done":true,"error":"old error"}
+  ---
+  duration_ms: 0.3532
+  type: 'test'
+  ...
+# Subtest: S2G14 late unary completion cannot settle or modify replacement projection
+ok 53 - S2G14 late unary completion cannot settle or modify replacement projection
+  ---
+  duration_ms: 0.2886
+  type: 'test'
+  ...
+# Subtest: S2G13/S2G18 ambiguous recovery fails closed without a fresh Carrier
+ok 54 - S2G13/S2G18 ambiguous recovery fails closed without a fresh Carrier
+  ---
+  duration_ms: 0.3505
+  type: 'test'
+  ...
+# Subtest: S2G17 replacement loses continuity and clears all prior read proofs
+ok 55 - S2G17 replacement loses continuity and clears all prior read proofs
+  ---
+  duration_ms: 0.2137
+  type: 'test'
+  ...
+# Subtest: S2G14 late recovery after Desktop stop cannot mount or authenticate
+ok 56 - S2G14 late recovery after Desktop stop cannot mount or authenticate
+  ---
+  duration_ms: 0.3403
+  type: 'test'
+  ...
+# Subtest: S2G01/S2G14 loss during a pending replacement mount fences it and its late completion
+ok 57 - S2G01/S2G14 loss during a pending replacement mount fences it and its late completion
+  ---
+  duration_ms: 4.5685
+  type: 'test'
+  ...
+# Subtest: S2G13 a public cold projection error is terminal and cannot remain CONNECTED
+ok 58 - S2G13 a public cold projection error is terminal and cannot remain CONNECTED
+  ---
+  duration_ms: 0.2749
+  type: 'test'
+  ...
+# Subtest: BrowserWindow renderer security baseline is fail-closed
+ok 59 - BrowserWindow renderer security baseline is fail-closed
+  ---
+  duration_ms: 0.9588
+  type: 'test'
+  ...
+# Subtest: destroyed BrowserWindow never receives projection IPC or evidence reads
+ok 60 - destroyed BrowserWindow never receives projection IPC or evidence reads
+  ---
+  duration_ms: 1.4394
+  type: 'test'
+  ...
+# Subtest: live BrowserWindow receives projection and is snapshotted before destruction
+ok 61 - live BrowserWindow receives projection and is snapshotted before destruction
+  ---
+  duration_ms: 0.1991
+  type: 'test'
+  ...
+# Subtest: Supervisor refuses PATH-based implicit runtime lookup
+ok 62 - Supervisor refuses PATH-based implicit runtime lookup
+  ---
+  duration_ms: 0.8602
+  type: 'test'
+  ...
+# Subtest: Supervisor accepts explicit controlled runtime paths
+ok 63 - Supervisor accepts explicit controlled runtime paths
+  ---
+  duration_ms: 0.1911
+  type: 'test'
+  ...
+# Subtest: Supervisor validates absolute input semantics before resolve
+ok 64 - Supervisor validates absolute input semantics before resolve
+  ---
+  duration_ms: 0.1068
+  type: 'test'
+  ...
+# Subtest: Worker child terminal maps to a truthful failure
+ok 65 - Worker child terminal maps to a truthful failure
+  ---
+  duration_ms: 0.0744
+  type: 'test'
+  ...
+# Subtest: deliberate Supervisor stop does not publish Carrier Failure
+ok 66 - deliberate Supervisor stop does not publish Carrier Failure
+  ---
+  duration_ms: 0.1989
+  type: 'test'
+  ...
+# Subtest: unexpected Worker child exit still publishes Carrier Failure
+ok 67 - unexpected Worker child exit still publishes Carrier Failure
+  ---
+  duration_ms: 0.0652
+  type: 'test'
+  ...
+# Subtest: Unavailable native discovery fails closed before starting a Worker
+ok 68 - Unavailable native discovery fails closed before starting a Worker
+  ---
+  duration_ms: 102.1974
+  type: 'test'
+  ...
+# Subtest: S2G18 recovery also fails closed on unverified native discovery and launches no replacement
+ok 69 - S2G18 recovery also fails closed on unverified native discovery and launches no replacement
+  ---
+  duration_ms: 86.5376
+  type: 'test'
+  ...
+# Subtest: Desktop detach does not notify authority failure or require an owned child
+ok 70 - Desktop detach does not notify authority failure or require an owned child
+  ---
+  duration_ms: 0.9601
+  type: 'test'
+  ...
+# Subtest: Discovery rejects a reused PID, unhealthy authority and incompatible version
+ok 71 - Discovery rejects a reused PID, unhealthy authority and incompatible version
+  ---
+  duration_ms: 0.7046
+  type: 'test'
+  ...
+# Subtest: native picker success and cancel retain the authorized document
+ok 72 - native picker success and cancel retain the authorized document
+  ---
+  duration_ms: 0.6476
+  type: 'test'
+  ...
+# Subtest: native errors and malformed/multiple selections return only NATIVE_PICKER_FAILED
+ok 73 - native errors and malformed/multiple selections return only NATIVE_PICKER_FAILED
+  ---
+  duration_ms: 0.9226
+  type: 'test'
+  ...
+# Subtest: picker rejects generation, document, frame, window and webContents changes after await
+ok 74 - picker rejects generation, document, frame, window and webContents changes after await
+  ---
+  duration_ms: 0.2631
+  type: 'test'
+  ...
+# Subtest: untrusted renderer cannot open a picker
+ok 75 - untrusted renderer cannot open a picker
+  ---
+  duration_ms: 0.163
+  type: 'test'
+  ...
+# Subtest: Sidebar preserves public source method receivers and renders the single navigation surface
+ok 76 - Sidebar preserves public source method receivers and renders the single navigation surface
+  ---
+  duration_ms: 4.8767
+  type: 'test'
+  ...
+# Subtest: New Chat selected Workspace uses public connect and open, allowing blank reuse
+ok 77 - New Chat selected Workspace uses public connect and open, allowing blank reuse
+  ---
+  duration_ms: 1.7463
+  type: 'test'
+  ...
+# Subtest: no selection goes through native picker even when recent Workspace exists
+ok 78 - no selection goes through native picker even when recent Workspace exists
+  ---
+  duration_ms: 0.4531
+  type: 'test'
+  ...
+# Subtest: picker cancellation makes no mutation and native failure is truthful
+ok 79 - picker cancellation makes no mutation and native failure is truthful
+  ---
+  duration_ms: 0.8719
+  type: 'test'
+  ...
+# Subtest: late picker and late connect are fenced, state cleared on generation change
+ok 80 - late picker and late connect are fenced, state cleared on generation change
+  ---
+  duration_ms: 0.391
+  type: 'test'
+  ...
+# Subtest: directory follows Harness changes, correct-session navigation and unknown outcomes never replay
+ok 81 - directory follows Harness changes, correct-session navigation and unknown outcomes never replay
+  ---
+  duration_ms: 0.3049
+  type: 'test'
+  ...
+# Subtest: Settings local directory reads and profile mutations preserve exact revision and namespace
+ok 82 - Settings local directory reads and profile mutations preserve exact revision and namespace
+  ---
+  duration_ms: 0.6081
+  type: 'test'
+  ...
+# Subtest: Settings rejection is not success and lost response rereads without replay
+ok 83 - Settings rejection is not success and lost response rereads without replay
+  ---
+  duration_ms: 0.2334
+  type: 'test'
+  ...
+# Subtest: Credential uses set only, metadata reread and no blind replay on unknown result
+ok 84 - Credential uses set only, metadata reread and no blind replay on unknown result
+  ---
+  duration_ms: 0.4187
+  type: 'test'
+  ...
+# Subtest: UI-G14 covers recursive Renderer/Client source and production bootstrap imports
+ok 85 - UI-G14 covers recursive Renderer/Client source and production bootstrap imports
+  ---
+  duration_ms: 144.9213
+  type: 'test'
+  ...
+# Subtest: UI-G14 rejects private identity, settlement, waterfall types and fixture imports in Renderer source
+ok 86 - UI-G14 rejects private identity, settlement, waterfall types and fixture imports in Renderer source
+  ---
+  duration_ms: 3.3519
+  type: 'test'
+  ...
+# Subtest: UI-G14 follows local imports outside seeded roots and rejects reachable test fixtures
+ok 87 - UI-G14 follows local imports outside seeded roots and rejects reachable test fixtures
+  ---
+  duration_ms: 28.3437
+  type: 'test'
+  ...
+# Subtest: all Shaco presentation modules use public runtime exports and own no business registries
+ok 88 - all Shaco presentation modules use public runtime exports and own no business registries
+  ---
+  duration_ms: 5.3282
+  type: 'test'
+  ...
+# Subtest: Product declares every presentation service; bootstrap remains the only Context/root owner
+ok 89 - Product declares every presentation service; bootstrap remains the only Context/root owner
+  ---
+  duration_ms: 2.496
+  type: 'test'
+  ...
+# Subtest: prompt admission uses queue once and cancel never clears queued work
+ok 90 - prompt admission uses queue once and cancel never clears queued work
+  ---
+  duration_ms: 1.1762
+  type: 'test'
+  ...
+# Subtest: unknown outcome is not replayed
+ok 91 - unknown outcome is not replayed
+  ---
+  duration_ms: 0.9203
+  type: 'test'
+  ...
+# Subtest: old generation and another selected session cannot mutate any captured object
+ok 92 - old generation and another selected session cannot mutate any captured object
+  ---
+  duration_ms: 0.4707
+  type: 'test'
+  ...
+# Subtest: approval/question settles the exact current pending object, never a replaced carrier
+ok 93 - approval/question settles the exact current pending object, never a replaced carrier
+  ---
+  duration_ms: 0.4458
+  type: 'test'
+  ...
+# Subtest: permission choices are Host-owned; custom and unknown choices cannot be submitted
+ok 94 - permission choices are Host-owned; custom and unknown choices cannot be submitted
+  ---
+  duration_ms: 0.3652
+  type: 'test'
+  ...
+# Subtest: all 28 Harness rows active before Product/root; single facade, context and mount
+ok 95 - all 28 Harness rows active before Product/root; single facade, context and mount
+  ---
+  duration_ms: 4.0669
+  type: 'test'
+  ...
+# Subtest: quiescence does not authorize an inactive required row
+ok 96 - quiescence does not authorize an inactive required row
+  ---
+  duration_ms: 0.4091
+  type: 'test'
+  ...
+# Subtest: required business service absence prevents Product/root activation
+ok 97 - required business service absence prevents Product/root activation
+  ---
+  duration_ms: 0.2364
+  type: 'test'
+  ...
+# Subtest: rootError synchronously conceals before async root teardown
+ok 98 - rootError synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.3163
+  type: 'test'
+  ...
+# Subtest: loseRoot synchronously conceals before async root teardown
+ok 99 - loseRoot synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.3788
+  type: 'test'
+  ...
+# Subtest: loseService synchronously conceals before async root teardown
+ok 100 - loseService synchronously conceals before async root teardown
+  ---
+  duration_ms: 1.3157
+  type: 'test'
+  ...
+# Subtest: slot error during synchronous React mount fails closed and disposes root
+ok 101 - slot error during synchronous React mount fails closed and disposes root
+  ---
+  duration_ms: 0.355
+  type: 'test'
+  ...
+# Subtest: readWorkerConfig requires explicit controlled paths
+ok 102 - readWorkerConfig requires explicit controlled paths
+  ---
+  duration_ms: 0.7808
+  type: 'test'
+  ...
+# Subtest: readWorkerConfig accepts an explicit profile and paths
+ok 103 - readWorkerConfig accepts an explicit profile and paths
+  ---
+  duration_ms: 0.3066
+  type: 'test'
+  ...
+# Subtest: readWorkerConfig validates absolute input before canonicalization
+ok 104 - readWorkerConfig validates absolute input before canonicalization
+  ---
+  duration_ms: 0.123
+  type: 'test'
+  ...
+# Subtest: Worker accepts complete real events route preflight evidence
+ok 105 - Worker accepts complete real events route preflight evidence
+  ---
+  duration_ms: 0.9548
+  type: 'test'
+  ...
+# Subtest: Worker rejects literal readiness without probe metadata
+ok 106 - Worker rejects literal readiness without probe metadata
+  ---
+  duration_ms: 0.4478
+  type: 'test'
+  ...
+# Subtest: Worker rejects incomplete or fake events probe fields
+    # Subtest: endpoint
+    ok 1 - endpoint
+      ---
+      duration_ms: 0.1758
+      type: 'test'
+      ...
+    # Subtest: opened
+    ok 2 - opened
+      ---
+      duration_ms: 0.1503
+      type: 'test'
+      ...
+    # Subtest: readyObserved
+    ok 3 - readyObserved
+      ---
+      duration_ms: 0.0812
+      type: 'test'
+      ...
+    # Subtest: readyShapeValid
+    ok 4 - readyShapeValid
+      ---
+      duration_ms: 0.0696
+      type: 'test'
+      ...
+    # Subtest: cancelled
+    ok 5 - cancelled
+      ---
+      duration_ms: 0.0592
+      type: 'test'
+      ...
+    # Subtest: iteratorClosed
+    ok 6 - iteratorClosed
+      ---
+      duration_ms: 0.1371
+      type: 'test'
+      ...
+    # Subtest: activeStreamsAfterCleanup
+    ok 7 - activeStreamsAfterCleanup
+      ---
+      duration_ms: 0.2277
+      type: 'test'
+      ...
+    # Subtest: eventSubscriptionRetained
+    ok 8 - eventSubscriptionRetained
+      ---
+      duration_ms: 0.188
+      type: 'test'
+      ...
+    # Subtest: clientRuntimeMetricCounted
+    ok 9 - clientRuntimeMetricCounted
+      ---
+      duration_ms: 0.0598
+      type: 'test'
+      ...
+    # Subtest: businessOperationsPerformed
+    ok 10 - businessOperationsPerformed
+      ---
+      duration_ms: 0.0413
+      type: 'test'
+      ...
+    1..10
+ok 107 - Worker rejects incomplete or fake events probe fields
+  ---
+  duration_ms: 3.3778
+  type: 'test'
+  ...
+# Subtest: CARRIER_READY publication remains withheld when events evidence fails
+ok 108 - CARRIER_READY publication remains withheld when events evidence fails
+  ---
+  duration_ms: 0.1092
+  type: 'test'
+  ...
+# Subtest: Host readiness marker parses the allowlisted envelope
+ok 109 - Host readiness marker parses the allowlisted envelope
+  ---
+  duration_ms: 1.7442
+  type: 'test'
+  ...
+# Subtest: malformed Host readiness JSON and shape fail closed
+ok 110 - malformed Host readiness JSON and shape fail closed
+  ---
+  duration_ms: 0.5439
+  type: 'test'
+  ...
+# Subtest: S2G16 same Harness home supports replacement; mismatched profile junction fails closed
+ok 111 - S2G16 same Harness home supports replacement; mismatched profile junction fails closed
+  ---
+  duration_ms: 59.5859
+  type: 'test'
+  ...
+# Subtest: valid real $events ready record produces complete redacted evidence
+ok 112 - valid real $events ready record produces complete redacted evidence
+  ---
+  duration_ms: 2.3062
+  type: 'test'
+  ...
+# Subtest: service-unavailable route open fails closed
+ok 113 - service-unavailable route open fails closed
+  ---
+  duration_ms: 0.6599
+  type: 'test'
+  ...
+# Subtest: missing public route opener fails closed
+ok 114 - missing public route opener fails closed
+  ---
+  duration_ms: 0.1716
+  type: 'test'
+  ...
+# Subtest: wrong first frame fails closed
+ok 115 - wrong first frame fails closed
+  ---
+  duration_ms: 0.3129
+  type: 'test'
+  ...
+# Subtest: stream ending before ready fails closed
+ok 116 - stream ending before ready fails closed
+  ---
+  duration_ms: 0.4277
+  type: 'test'
+  ...
+# Subtest: ready timeout fails closed and still cleans up
+ok 117 - ready timeout fails closed and still cleans up
+  ---
+  duration_ms: 32.6939
+  type: 'test'
+  ...
+# Subtest: successful probe aborts, returns the iterator, and leaves no active stream
+ok 118 - successful probe aborts, returns the iterator, and leaves no active stream
+  ---
+  duration_ms: 0.6357
+  type: 'test'
+  ...
+# Subtest: iterator cleanup failure fails closed
+ok 119 - iterator cleanup failure fails closed
+  ---
+  duration_ms: 0.3199
+  type: 'test'
+  ...
+# Subtest: preflight does not alter Desktop Client ready metrics or execute business operations
+ok 120 - preflight does not alter Desktop Client ready metrics or execute business operations
+  ---
+  duration_ms: 0.4131
+  type: 'test'
+  ...
+# Subtest: canonical HMAC transcript is deterministic and length-prefixed
+ok 121 - canonical HMAC transcript is deterministic and length-prefixed
+  ---
+  duration_ms: 1.6196
+  type: 'test'
+  ...
+# Subtest: mutual Client and Server proofs validate and wrong proofs fail
+ok 122 - mutual Client and Server proofs validate and wrong proofs fail
+  ---
+  duration_ms: 0.917
+  type: 'test'
+  ...
+# Subtest: protocol mismatch is rejected before proof construction by caller contract
+ok 123 - protocol mismatch is rejected before proof construction by caller contract
+  ---
+  duration_ms: 0.13
+  type: 'test'
+  ...
+# Subtest: frame decoder supports partial reads and multiple frames
+ok 124 - frame decoder supports partial reads and multiple frames
+  ---
+  duration_ms: 0.4691
+  type: 'test'
+  ...
+# Subtest: frame decoder rejects malformed JSON and 262145 bytes while accepting exactly 262144
+ok 125 - frame decoder rejects malformed JSON and 262145 bytes while accepting exactly 262144
+  ---
+  duration_ms: 2.594
+  type: 'test'
+  ...
+# Subtest: URL normalization accepts both frozen Client origins
+ok 126 - URL normalization accepts both frozen Client origins
+  ---
+  duration_ms: 0.4679
+  type: 'test'
+  ...
+# Subtest: admission rejects other origins, bad targets, malformed envelopes and oversize
+ok 127 - admission rejects other origins, bad targets, malformed envelopes and oversize
+  ---
+  duration_ms: 0.2986
+  type: 'test'
+  ...
+# Subtest: parseBootstrapEvent accepts the bounded bootstrap protocol
+ok 128 - parseBootstrapEvent accepts the bounded bootstrap protocol
+  ---
+  duration_ms: 0.7025
+  type: 'test'
+  ...
+# Subtest: parseBootstrapEvent rejects malformed and wrong-version input
+ok 129 - parseBootstrapEvent rejects malformed and wrong-version input
+  ---
+  duration_ms: 0.1209
+  type: 'test'
+  ...
+# Subtest: exact 28 pinned public rows plus one Shaco row and actual factory registrations
+ok 130 - exact 28 pinned public rows plus one Shaco row and actual factory registrations
+  ---
+  duration_ms: 48.1592
+  type: 'test'
+  ...
+# Subtest: DUPLICATE_ROW fails closed on actual composition
+ok 131 - DUPLICATE_ROW fails closed on actual composition
+  ---
+  duration_ms: 1.4687
+  type: 'test'
+  ...
+# Subtest: DUPLICATE_FACTORY fails closed on actual composition
+ok 132 - DUPLICATE_FACTORY fails closed on actual composition
+  ---
+  duration_ms: 12.7362
+  type: 'test'
+  ...
+# Subtest: MISSING_REQUIRED_FROZEN_ROW fails closed on actual composition
+ok 133 - MISSING_REQUIRED_FROZEN_ROW fails closed on actual composition
+  ---
+  duration_ms: 1.5248
+  type: 'test'
+  ...
+# Subtest: WRONG_ROW_ORDER fails closed on actual composition
+ok 134 - WRONG_ROW_ORDER fails closed on actual composition
+  ---
+  duration_ms: 0.6881
+  type: 'test'
+  ...
+# Subtest: GRAPH_BATCH_INCONSISTENCY fails closed on actual composition
+ok 135 - GRAPH_BATCH_INCONSISTENCY fails closed on actual composition
+  ---
+  duration_ms: 0.9661
+  type: 'test'
+  ...
+# Subtest: TOTAL_ROWS_NOT_29 fails closed on actual composition
+ok 136 - TOTAL_ROWS_NOT_29 fails closed on actual composition
+  ---
+  duration_ms: 0.3979
+  type: 'test'
+  ...
+# Subtest: WRONG_PUBLIC_EXPORT fails closed on actual composition
+ok 137 - WRONG_PUBLIC_EXPORT fails closed on actual composition
+  ---
+  duration_ms: 0.9626
+  type: 'test'
+  ...
+# Subtest: WRONG_FROZEN_HASH fails closed on actual composition
+ok 138 - WRONG_FROZEN_HASH fails closed on actual composition
+  ---
+  duration_ms: 0.7591
+  type: 'test'
+  ...
+# Subtest: WRONG_GRAPH_REVISION fails closed on actual composition
+ok 139 - WRONG_GRAPH_REVISION fails closed on actual composition
+  ---
+  duration_ms: 1.1117
+  type: 'test'
+  ...
+# Subtest: default and singly enabled Host profiles cannot load test-only RPC; double opt-in copies exact fixture
+ok 140 - default and singly enabled Host profiles cannot load test-only RPC; double opt-in copies exact fixture
+  ---
+  duration_ms: 156.5137
+  type: 'test'
+  ...
+# Subtest: ui-approval: public composer remains reachable with exact Session binding and one settlement
+ok 141 - ui-approval: public composer remains reachable with exact Session binding and one settlement
+  ---
+  duration_ms: 5.8916
+  type: 'test'
+  ...
+# Subtest: ui-approval: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+ok 142 - ui-approval: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+  ---
+  duration_ms: 0.359
+  type: 'test'
+  ...
+# Subtest: ui-user-questions: public composer remains reachable with exact Session binding and one settlement
+ok 143 - ui-user-questions: public composer remains reachable with exact Session binding and one settlement
+  ---
+  duration_ms: 3.5913
+  type: 'test'
+  ...
+# Subtest: ui-user-questions: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+ok 144 - ui-user-questions: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+  ---
+  duration_ms: 0.8122
+  type: 'test'
+  ...
+# Subtest: Shaco navigation/settings retain no interaction runtime or generic Renderer native capability
+ok 145 - Shaco navigation/settings retain no interaction runtime or generic Renderer native capability
+  ---
+  duration_ms: 3.305
+  type: 'test'
+  ...
+# Subtest: Owner exception admits exactly the second capture revalidation without modifying first history
+ok 146 - Owner exception admits exactly the second capture revalidation without modifying first history
+  ---
+  duration_ms: 3.7316
+  type: 'test'
+  ...
+# Subtest: corrective route rejects missing, invalid or consumed Owner authority and every missing prerequisite
+ok 147 - corrective route rejects missing, invalid or consumed Owner authority and every missing prerequisite
+  ---
+  duration_ms: 1.5818
+  type: 'test'
+  ...
+# Subtest: Owner exception cannot authorize Provider, Tool, mutating, subagent, ordinary failure or normal-retry outcomes
+ok 148 - Owner exception cannot authorize Provider, Tool, mutating, subagent, ordinary failure or normal-retry outcomes
+  ---
+  duration_ms: 0.7521
+  type: 'test'
+  ...
+# Subtest: corrective route requires new run, Workspace, path, marker, Session and request identities
+ok 149 - corrective route requires new run, Workspace, path, marker, Session and request identities
+  ---
+  duration_ms: 0.668
+  type: 'test'
+  ...
+# Subtest: durable exclusive reservation survives restart, cannot be reused, and leaves Attempt 1 byte-equivalent
+ok 150 - durable exclusive reservation survives restart, cannot be reused, and leaves Attempt 1 byte-equivalent
+  ---
+  duration_ms: 34.8536
+  type: 'test'
+  ...
+# Subtest: a failed rejected Prompt still consumes the one-time authority
+ok 151 - a failed rejected Prompt still consumes the one-time authority
+  ---
+  duration_ms: 21.4919
+  type: 'test'
+  ...
+# Subtest: zero-Prompt preflight fails closed for budget changes, missing real follow binding or any Prompt
+ok 152 - zero-Prompt preflight fails closed for budget changes, missing real follow binding or any Prompt
+  ---
+  duration_ms: 6.6132
+  type: 'test'
+  ...
+# Subtest: live gate waits for pending evidence hashes instead of asserting a premature PASS
+ok 153 - live gate waits for pending evidence hashes instead of asserting a premature PASS
+  ---
+  duration_ms: 0.9598
+  type: 'test'
+  ...
+# Subtest: actual generated Host profile includes one approved settings entry before standard presets without configuration overrides
+ok 154 - actual generated Host profile includes one approved settings entry before standard presets without configuration overrides
+  ---
+  duration_ms: 31.8861
+  type: 'test'
+  ...
+# Subtest: Session creation distinguishes ineffective settings, another missing composition, Provider failure and Product failure
+ok 155 - Session creation distinguishes ineffective settings, another missing composition, Provider failure and Product failure
+  ---
+  duration_ms: 0.5247
+  type: 'test'
+  ...
+# Subtest: unsubmitted UI reservation keeps its original number and audit; any prompt or incomplete evidence prevents reuse
+ok 156 - unsubmitted UI reservation keeps its original number and audit; any prompt or incomplete evidence prevents reuse
+  ---
+  duration_ms: 0.579
+  type: 'test'
+  ...
+# Subtest: picker Client graph requires exactly 28 unique explicit modules and rejects missing, duplicate or unknown entries
+ok 157 - picker Client graph requires exactly 28 unique explicit modules and rejects missing, duplicate or unknown entries
+  ---
+  duration_ms: 2.2966
+  type: 'test'
+  ...
+# Subtest: production Client package loader retains exact identity, web declaration and public built-export checks
+ok 158 - production Client package loader retains exact identity, web declaration and public built-export checks
+  ---
+  duration_ms: 2.5957
+  type: 'test'
+  ...
+# Subtest: generated picker manifest preserves 28 public Harness modules plus one static observer and no native or auto picker
+ok 159 - generated picker manifest preserves 28 public Harness modules plus one static observer and no native or auto picker
+  ---
+  duration_ms: 0.7311
+  type: 'test'
+  ...
+# Subtest: controlled workspace gate requires accepted creation, exact path hash and a returned identity
+ok 160 - controlled workspace gate requires accepted creation, exact path hash and a returned identity
+  ---
+  duration_ms: 0.1721
+  type: 'test'
+  ...
+# Subtest: PASS needs correlated real read/result/final and rendered marker plus all stream gates
+ok 161 - PASS needs correlated real read/result/final and rendered marker plus all stream gates
+  ---
+  duration_ms: 0.4027
+  type: 'test'
+  ...
+# Subtest: current public transport diagnostics do not require historical interaction telemetry
+ok 162 - current public transport diagnostics do not require historical interaction telemetry
+  ---
+  duration_ms: 0.0825
+  type: 'test'
+  ...
+# Subtest: healthy no-tool retry requires accepted prompt and complete semantic stream
+ok 163 - healthy no-tool retry requires accepted prompt and complete semantic stream
+  ---
+  duration_ms: 0.0804
+  type: 'test'
+  ...
+# Subtest: real error, duplicate terminal, missing terminal and interaction duplicates never pass
+ok 164 - real error, duplicate terminal, missing terminal and interaction duplicates never pass
+  ---
+  duration_ms: 0.123
+  type: 'test'
+  ...
+# Subtest: healthy no-tool first attempt permits exactly one new Session retry; no attempt three
+ok 165 - healthy no-tool first attempt permits exactly one new Session retry; no attempt three
+  ---
+  duration_ms: 0.1932
+  type: 'test'
+  ...
+# Subtest: PASS never gains a retry
+ok 166 - PASS never gains a retry
+  ---
+  duration_ms: 0.0717
+  type: 'test'
+  ...
+# Subtest: TOOL_EXECUTION_FAILED never gains a retry
+ok 167 - TOOL_EXECUTION_FAILED never gains a retry
+  ---
+  duration_ms: 0.038
+  type: 'test'
+  ...
+# Subtest: UNAUTHORIZED_MUTATING_TOOL_OBSERVED never gains a retry
+ok 168 - UNAUTHORIZED_MUTATING_TOOL_OBSERVED never gains a retry
+  ---
+  duration_ms: 0.0314
+  type: 'test'
+  ...
+# Subtest: UNAUTHORIZED_SUBAGENT_TOOL_OBSERVED never gains a retry
+ok 169 - UNAUTHORIZED_SUBAGENT_TOOL_OBSERVED never gains a retry
+  ---
+  duration_ms: 0.0328
+  type: 'test'
+  ...
+# Subtest: SHACO_IMPLEMENTATION_FAILURE never gains a retry
+ok 170 - SHACO_IMPLEMENTATION_FAILURE never gains a retry
+  ---
+  duration_ms: 0.0384
+  type: 'test'
+  ...
+# Subtest: HARNESS_PROVIDER_OR_NETWORK_FAILURE never gains a retry
+ok 171 - HARNESS_PROVIDER_OR_NETWORK_FAILURE never gains a retry
+  ---
+  duration_ms: 0.1443
+  type: 'test'
+  ...
+# Subtest: delegation or a child observation cannot be hidden by successful read proof; model listing alone is not read proof
+ok 172 - delegation or a child observation cannot be hidden by successful read proof; model listing alone is not read proof
+  ---
+  duration_ms: 0.2821
+  type: 'test'
+  ...
+# Subtest: write/edit observation fails even when final text matches
+ok 173 - write/edit observation fails even when final text matches
+  ---
+  duration_ms: 0.139
+  type: 'test'
+  ...
+# Subtest: workspace integrity compares complete listing and proof bytes/hash
+ok 174 - workspace integrity compares complete listing and proof bytes/hash
+  ---
+  duration_ms: 10.6688
+  type: 'test'
+  ...
+1..174
+# tests 184
+# suites 0
+# pass 184
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1055.4249

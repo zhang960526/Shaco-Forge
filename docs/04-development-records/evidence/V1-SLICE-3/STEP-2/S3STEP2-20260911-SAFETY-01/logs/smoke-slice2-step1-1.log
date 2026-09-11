@@ -1,0 +1,11 @@
+$ node scripts/smoke-slice2-step1.mjs --runtime
+file:///D:/Project/Shaco-Forge/scripts/smoke-slice2-step1.mjs:53
+  throw new Error(`POWERSHELL_PREFLIGHT_FAILED: ${attempts.join('; ') || 'automatic discovery requires Windows'}. Install a compatible pwsh.exe on PATH or set SHACO_FORGE_POWERSHELL to a compatible executable.`)
+        ^
+
+Error: POWERSHELL_PREFLIGHT_FAILED: PATH_PWSH: executable not found or empty; WINDOWS_POWERSHELL_FALLBACK: PowerShell/fixture API probe failed (1). Install a compatible pwsh.exe on PATH or set SHACO_FORGE_POWERSHELL to a compatible executable.
+    at resolvePowerShellExecutable (file:///D:/Project/Shaco-Forge/scripts/smoke-slice2-step1.mjs:53:9)
+    at async file:///D:/Project/Shaco-Forge/scripts/smoke-slice2-step1.mjs:601:3
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

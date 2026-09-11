@@ -240,4 +240,5 @@ async function drive(window) {
 }
 
 app.on('browser-window-created', (_event, window) => window.webContents.once('did-finish-load', () => { void drive(window) }))
-await import('../apps/desktop/dist/main/main.js')
+const { startDesktop } = await import('../apps/desktop/dist/main/main.js')
+void startDesktop()

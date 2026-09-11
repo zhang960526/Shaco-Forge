@@ -1,0 +1,12 @@
+$ node scripts/smoke-slice3-step2.mjs
+(node:35660) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+FRESH_PRE_INSTALL_CANCEL: PASS
+FRESH_INSTALL: PASS
+ACTUAL_VALIDATION_DRAIN: PASS
+NO_WRITE_AFTER_DRAIN: PASS
+STEP1_PAIR_RESTORE: PASS
+RESTORED_RESTART: PASS
+STEP1_HAPPY_UPGRADE: PASS
+REAL_PACKAGE_UNINSTALL: PASS
+CLEANUP: PASS

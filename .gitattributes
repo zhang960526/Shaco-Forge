@@ -2,3 +2,6 @@
 docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/logs/smoke-electron-1.log -text
 docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/logs/smoke-failure-1.log -text
 docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/logs/test-1.log -text
+
+# Preserve this Step2 task's raw command logs without line-ending conversion.
+docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/*.log -text

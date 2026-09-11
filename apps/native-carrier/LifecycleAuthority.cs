@@ -22,6 +22,8 @@ internal static partial class Program
         internal required string WorkerInstanceId;
         internal required string DshHome;
         internal required JsonElement WorkerRuntime;
+        internal JsonElement? Compatibility;
+        internal bool Upgrading;
         internal required WindowsAuthority.ProcessIdentity Worker;
         internal required WindowsAuthority.ProcessIdentity Host;
         internal required object HostPreflight;
@@ -55,7 +57,7 @@ internal static partial class Program
         internal object Status() => new {
             type = "authority-status", protocolVersion = "1", workerInstanceId = WorkerInstanceId,
             dshHome = DshHome,
-            workerRuntime = WorkerRuntime,
+            workerRuntime = WorkerRuntime, compatibility = Compatibility, upgradeState = Upgrading ? "DRAINING" : "IDLE",
             worker = Worker, host = Host, helper = WindowsAuthority.InspectProcess((uint)Environment.ProcessId),
             healthy = Healthy(), state = State, hostPreflight = HostPreflight,
             job = new { ownerPid = Worker.Pid, hostContained = true, helperContained = true, helperSetupHandleClosed = true, killOnClose = true },
@@ -114,6 +116,8 @@ internal static partial class Program
             authority = new Authority {
                 WorkerInstanceId = workerId, DshHome = RequiredString(root, "dshHome"), WorkerRuntime = root.GetProperty("workerRuntime").Clone(), Worker = worker, Host = host,
                 HostPreflight = readiness.RootElement.GetProperty("hostPreflight").Clone(),
+                Compatibility = root.TryGetProperty("compatibility", out var compatibility) ? compatibility.Clone() : null,
+                Upgrading = root.TryGetProperty("validationOnly", out var validationOnly) && validationOnly.ValueKind == JsonValueKind.True,
                 Input = input, Output = output, Carrier = carrier, Endpoint = endpoint,
                 EndpointId = Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(endpoint))).ToLowerInvariant(),
             };
@@ -184,7 +188,25 @@ internal static partial class Program
                     await a.SendWorker(new { type = "stop-authority" });
                     return;
                 }
+                if (action == "upgrade-drain")
+                {
+                    if (RequiredString(request, "workerInstanceId") != a.WorkerInstanceId || !Guid.TryParse(RequiredString(request, "transactionId"), out _)) throw new InvalidDataException("WORKER_IDENTITY_MISMATCH");
+                    a.Upgrading = true;
+                    await ReplyAndWaitForClose(pipe, new { type = "draining", workerInstanceId = a.WorkerInstanceId });
+                    await a.SendWorker(new { type = "upgrade-drain", transactionId = RequiredString(request, "transactionId") });
+                    continue;
+                }
                 if (action != "attach") throw new InvalidDataException("LIFECYCLE_OPERATION_NOT_ALLOWED");
+                if (a.Upgrading) { await ReplyAndWaitForClose(pipe, new { type = "rejected", reason = "UPGRADE_IN_PROGRESS" }); continue; }
+                if (a.Compatibility is JsonElement expected)
+                {
+                    string? mismatch = null;
+                    if (!request.TryGetProperty("compatibility", out var observed) || observed.ValueKind != JsonValueKind.Object || observed.EnumerateObject().Count() != 6) mismatch = "DESKTOP_WORKER_MISMATCH";
+                    else foreach (var identity in expected.EnumerateObject())
+                        if (!observed.TryGetProperty(identity.Name, out var value) || value.GetRawText() != identity.Value.GetRawText()) { mismatch = "DESKTOP_WORKER_MISMATCH"; break; }
+                    if (!request.TryGetProperty("dshHome", out var requestedHome) || requestedHome.ValueKind != JsonValueKind.String || !Path.GetFullPath(requestedHome.GetString()!).Equals(a.DshHome, StringComparison.OrdinalIgnoreCase)) mismatch = "DSH_HOME_MISMATCH";
+                    if (mismatch is not null) { await ReplyAndWaitForClose(pipe, new { type = "rejected", reason = mismatch }); continue; }
+                }
                 string desktop = RequiredString(request, "desktopInstanceId");
                 string nonce = RequiredString(request, "nonce");
                 lock (a.Sync)

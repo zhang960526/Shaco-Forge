@@ -13,6 +13,9 @@ export interface AuthorityStatus {
   helper: ProcessIdentity
   healthy: boolean
   state: string
+  compatibility?: import('@shaco-forge/contracts/compatibility').SixIdentities
+  dshHome?: string
+  upgradeState?: string
   hostPreflight: Record<string, unknown>
   workerRuntime: { nodeVersion: string; executable: string; argv: string[]; parentPid: number }
 }
@@ -96,15 +99,15 @@ export function validateAuthority(value: unknown, peer: ProcessIdentity): Author
   return value as unknown as AuthorityStatus
 }
 
-export async function lifecycleRequest(helperPath: string, type: 'discover' | 'attach' | 'stop-authority', workerInstanceId?: string): Promise<{ response: Record<string, unknown>; socket: Socket; status?: AuthorityStatus }> {
+export async function lifecycleRequest(helperPath: string, type: 'discover' | 'attach' | 'stop-authority' | 'upgrade-drain', workerInstanceId?: string, controls: Record<string, unknown> = {}): Promise<{ response: Record<string, unknown>; socket: Socket; status?: AuthorityStatus }> {
   const connection = await openLifecycle(helperPath)
   try {
     const response = await lifecycleFrame(connection.socket, {
       type, protocolVersion: '1', pid: connection.process.pid, startTime: connection.process.startTime,
-      desktopInstanceId: randomUUID(), nonce: randomBytes(32).toString('hex'), workerInstanceId,
+      desktopInstanceId: randomUUID(), nonce: randomBytes(32).toString('hex'), workerInstanceId, ...controls,
     })
     if (response.type === 'rejected') throw new Error(typeof response.reason === 'string' ? response.reason : 'LIFECYCLE_REJECTED')
-    if (type === 'stop-authority') { connection.socket.destroy(); return { response, socket: connection.socket } }
+    if (type === 'stop-authority' || type === 'upgrade-drain') { connection.socket.destroy(); return { response, socket: connection.socket } }
     const status = validateAuthority(type === 'attach' ? response.status : response, connection.peer)
     if (type === 'discover') connection.socket.destroy()
     return { response, socket: connection.socket, status }

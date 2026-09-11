@@ -5,6 +5,7 @@ import { promisify } from 'node:util'
 import { RELEASE_LAYOUT, releasePath, verifyPackagedRuntime } from '@shaco-forge/contracts/packaged-runtime'
 import type { WorkerConfig } from './config.js'
 
+import { controlPreflight } from './control-preflight.js'
 const run = promisify(execFile)
 export async function validateHarnessModuleReferences(path: string, releaseModules: string): Promise<void> {
   const stat = await lstat(path).catch(error => { if (error.code === 'ENOENT') return undefined; throw error })
@@ -38,9 +39,11 @@ export async function readPackagedWorkerConfig(sourceDir: string): Promise<Worke
   const pkg = JSON.parse(await readFile(join(sourceDir, '../package.json'), 'utf8')) as { shacoRuntimeMode?: string }
   if (pkg.shacoRuntimeMode !== 'packaged') return undefined
   const root = resolve(sourceDir, '../../../..')
-  await verifyPackagedRuntime(root)
+  const release = await verifyPackagedRuntime(root)
   if (process.platform !== 'win32' || process.arch !== 'x64' || await realpath(process.execPath) !== releasePath(root, RELEASE_LAYOUT.node)) throw new Error('RELEASE_INTEGRITY_FAILURE: Worker executable')
   const nativeHelperPath = releasePath(root, RELEASE_LAYOUT.nativeHelper)
+  const control = await controlPreflight(root, nativeHelperPath, release, process.argv.includes('--validate-upgrade'))
+  if (process.argv.includes('--preflight')) return { dshHome: control.dshHome, harnessRoot: join(root, 'harness'), nativeHelperPath, profileName: 'shaco-forge', packagedRoot: root }
   const { stdout } = await run(nativeHelperPath, ['--product-home', root, process.cwd()], {
     env: {}, windowsHide: true, timeout: 15_000,
   })

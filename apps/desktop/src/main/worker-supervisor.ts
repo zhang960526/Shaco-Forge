@@ -1,4 +1,6 @@
-import { spawn } from 'node:child_process'
+import { spawn, execFile } from 'node:child_process'
+import { promisify } from 'node:util'
+import { assertCompatibility, sixIdentities, MISMATCH_ACTIONS } from '@shaco-forge/contracts/compatibility'
 import { access } from 'node:fs/promises'
 import { isAbsolute, resolve } from 'node:path'
 import type { Socket } from 'node:net'
@@ -101,7 +103,18 @@ export class WorkerSupervisor {
   }
   async start(): Promise<CarrierBootstrap> {
     if (this.#bootstrap !== undefined) throw new Error('Desktop attachment already exists')
-    if (this.config.packagedRoot !== undefined) await verifyPackagedRuntime(this.config.packagedRoot)
+    const release = this.config.packagedRoot === undefined ? undefined : await verifyPackagedRuntime(this.config.packagedRoot)
+    let attestedDshHome: string | undefined
+    if (release) {
+      try {
+        const preflight = await promisify(execFile)(this.config.workerNodePath, [this.config.workerEntryPath, "--preflight"], { env: workerEnvironment(this.config), windowsHide: true, timeout: 60000 })
+        attestedDshHome = (JSON.parse(preflight.stdout) as { dshHome: string }).dshHome
+      } catch (error) {
+        const output = ((error as { stdout?: string }).stdout ?? "") + ((error as { stderr?: string }).stderr ?? "")
+        const code = Object.keys(MISMATCH_ACTIONS).find(code => output.includes(code))
+        throw new Error(code ? code + ": " + MISMATCH_ACTIONS[code as keyof typeof MISMATCH_ACTIONS] : "RELEASE_INTEGRITY_FAILURE: pre-write verification failed")
+      }
+    }
     await Promise.all([this.config.workerNodePath, this.config.workerEntryPath, this.config.nativeHelperPath, this.config.harnessRoot].map(path => access(path)))
     try { this.#status = await this.discover() }
     catch (error) {
@@ -129,7 +142,10 @@ export class WorkerSupervisor {
     if (this.config.packagedRoot !== undefined && this.#status?.workerRuntime.executable !== this.config.workerNodePath) {
       throw new Error('RELEASE_INTEGRITY_FAILURE: discovered Worker executable')
     }
-    const { response, socket, status } = await lifecycleRequest(this.config.nativeHelperPath, 'attach')
+    if (release) assertCompatibility(release, this.#status?.compatibility ?? {}, { dshHome: this.#status?.dshHome,
+      attestedDshHome, transactionState: this.#status?.upgradeState, integrity: true })
+    const { response, socket, status } = await lifecycleRequest(this.config.nativeHelperPath, 'attach', undefined,
+      release ? { compatibility: sixIdentities(release), dshHome: this.#status?.dshHome } : {})
     if (response.type !== 'credential-issued' || !isRecord(response.status)
       || typeof response.pipeEndpoint !== 'string' || !response.pipeEndpoint.startsWith('\\\\.\\pipe\\shaco-forge-v1-')
       || typeof response.endpointId !== 'string' || typeof response.credentialEpoch !== 'string'

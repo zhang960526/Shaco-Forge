@@ -1,0 +1,48 @@
+import {readFile, writeFile, mkdir} from 'node:fs/promises'
+import {pathToFileURL} from 'node:url'
+import {resolve, join} from 'node:path'
+const root=resolve(import.meta.dirname,'..')
+const dir=join(root,'dist/credential-diagnostic')
+await mkdir(dir,{recursive:true})
+const uri=p=>pathToFileURL(join(root,p)).href
+let driver=await readFile(join(root,'apps/desktop/test-fixtures/step3-shell-driver.mjs'),'utf8')
+const marker="  await window.webContents.executeJavaScript(`[...document.querySelectorAll('.settings-editor button')].find(x=>x.textContent==='移除凭据').click()`)"
+if(!driver.includes(marker))throw new Error('MARKER_MISSING')
+const debuggerSetup=`  const errors=[]
+  const ui=()=>window.webContents.executeJavaScript(\`({status:document.querySelector('[data-testid="credential-status"]').textContent,message:document.querySelector('.settings-editor [role="status"]')?.textContent,buttons:[...document.querySelectorAll('.settings-editor button')].filter(b=>b.textContent.includes('凭据')).map(b=>({text:b.textContent,disabled:b.disabled}))})\`)
+  window.webContents.debugger.attach('1.3')
+  window.webContents.debugger.on('message',async (_event,method,params)=>{
+    if(method==='Debugger.paused'){
+      errors.push({reason:params.reason,description:params.data?.description,frames:params.callFrames.slice(0,6).map(f=>({functionName:f.functionName,url:f.url,location:f.location}))})
+      await window.webContents.debugger.sendCommand('Debugger.resume')
+    }
+  })
+  await window.webContents.debugger.sendCommand('Debugger.enable')
+  await window.webContents.debugger.sendCommand('Debugger.setPauseOnExceptions',{state:'all'})
+`
+driver=driver.replace('async function settingsMutation(window) {','async function settingsMutation(window) {\n'+debuggerSetup)
+driver=driver.replace(marker,`${marker}
+  await delay(2000)
+  await writeFile(join(process.env.SHACO_FORGE_STEP2_EVIDENCE_ROOT,'credential-ui-exceptions-3.json'),JSON.stringify({after:await ui(),errors,diagnosticOnly:true,providerRuns:0},null,2)+'\\n','utf8')
+  window.webContents.debugger.detach()
+  throw new Error('DIAGNOSTIC_CAPTURE_COMPLETE')`)
+// Preserve original UI driver timing; observe only the completed IPC result.
+await writeFile(join(dir,'step3-shell-driver.mjs'),await readFile(join(root,'apps/desktop/test-fixtures/step3-shell-driver.mjs'),'utf8'),'utf8')
+let main=await readFile(join(root,'apps/desktop/test-fixtures/step2-recovery-main.mjs'),'utf8')
+main=main.replace("import { app, BrowserWindow } from 'electron'","import { app, BrowserWindow, ipcMain } from 'electron'")
+main=main.replace("import { startDesktop, observeStep2Recovery, simulateStep2CarrierLoss } from '../dist/main/main.js'",`const originalHandle=ipcMain.handle.bind(ipcMain)
+ipcMain.handle=(channel,fn)=>originalHandle(channel,async(...args)=>{
+  const response=await fn(...args)
+  if(channel==='transport:fetch'&&args[1]?.url?.endsWith('/credentials/unset')) {
+    const parsed=JSON.parse(response.body)
+    await writeFile(process.env.SHACO_FORGE_STEP2_EVIDENCE_ROOT+'/credential-ipc-unset.json',JSON.stringify({result:parsed.result,diagnosticOnly:true,providerRuns:0},null,2)+'\\n','utf8')
+  }
+  return response
+})
+const { startDesktop, observeStep2Recovery, simulateStep2CarrierLoss } = await import(${JSON.stringify(uri('apps/desktop/dist/main/main.js'))})`)
+await writeFile(join(dir,'main.mjs'),main,'utf8')
+let runner=await readFile(join(root,'scripts/smoke-slice2-step2.mjs'),'utf8')
+runner=runner.replace("'./runtime-paths.mjs'",JSON.stringify(uri('scripts/runtime-paths.mjs'))).replace("'./step2-evidence.mjs'",JSON.stringify(uri('scripts/step2-evidence.mjs'))).replace("'../apps/desktop/dist/main/lifecycle-client.js'",JSON.stringify(uri('apps/desktop/dist/main/lifecycle-client.js')))
+runner=runner.replace("join(paths.desktopRoot, 'test-fixtures/step2-recovery-main.mjs')",JSON.stringify(join(dir,'main.mjs')))
+await writeFile(join(dir,'run.mjs'),runner,'utf8')
+console.log('PREPARED_NON_SHIPPED_DIAGNOSTIC')

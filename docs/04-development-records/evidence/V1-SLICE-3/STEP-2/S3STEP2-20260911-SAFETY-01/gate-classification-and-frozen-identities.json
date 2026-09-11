@@ -1,0 +1,271 @@
+{
+  "reproducible": [
+    {
+      "command": "typecheck",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 4,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "build",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 12,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "test",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 6,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "verify:static",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 4,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "verify:theme",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 4,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "smoke:worker",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 3,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "smoke:carrier",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 3,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "smoke:electron",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 3,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "smoke:failure",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 3,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "smoke:slice2-step1",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 4,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "smoke:slice2-step2",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 3,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "smoke:slice2-step3",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 9,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "smoke:slice2-step3-interactions",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 2,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "test:full-shaco",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 3,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "smoke:full-shaco",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 2,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "package:runtime",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 7,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "test:packaged-runtime",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 2,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "smoke:packaged-runtime",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 9,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "test:slice3-step2",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 10,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "smoke:slice3-step2",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 5,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "package:installer",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 4,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "test:installer",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 3,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "verify:f05",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 4,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    },
+    {
+      "command": "composition",
+      "classification": "REPRODUCIBLE",
+      "rerun": "RERUN_THIS_CANDIDATE",
+      "result": "PASS",
+      "attempt": 4,
+      "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39"
+    }
+  ],
+  "provider": {
+    "classification": "EXPENSIVE_EXTERNAL_PROVIDER_DEPENDENT",
+    "authorization": "NO",
+    "rerun": "NOT_RUN",
+    "providerRuns": 0
+  },
+  "historical": [
+    {
+      "path": "docs/00-governance/SHACO-FORGE-V1-CUMULATIVE-REGRESSION-CLOSURE-GATE.md",
+      "sha256": "16775da48208e3de47bcf2a6811143ab78df20c410fb31c0f5021d55e9b16a1f",
+      "entryBaseline": "514e1759b4991e950d5ad5169e3fc86dc3cc025f",
+      "result": "IDENTITY_VALIDATED",
+      "classification": "NOT_PRACTICALLY_REPEATABLE",
+      "rerun": "NOT_RERUN",
+      "note": "Historical governance/review event is not rerun and does not substitute for current reproducible tests."
+    },
+    {
+      "path": "docs/03-v1.0-plan/V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md",
+      "sha256": "35152ace7e1bb85ad6ecec801e20202d55ee960acb2137340ae932777da1bf76",
+      "entryBaseline": "514e1759b4991e950d5ad5169e3fc86dc3cc025f",
+      "result": "IDENTITY_VALIDATED",
+      "classification": "NOT_PRACTICALLY_REPEATABLE",
+      "rerun": "NOT_RERUN",
+      "note": "Historical governance/review event is not rerun and does not substitute for current reproducible tests."
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-3-STEP1-OWNER-CLOSURE-AND-BASELINE-FREEZE-DECISION.md",
+      "sha256": "70875ef24ca01d183dbe2f3228c1a3040cae824b92f04bdd419f043eb74dc2c2",
+      "entryBaseline": "514e1759b4991e950d5ad5169e3fc86dc3cc025f",
+      "result": "IDENTITY_VALIDATED",
+      "classification": "NOT_PRACTICALLY_REPEATABLE",
+      "rerun": "NOT_RERUN",
+      "note": "Historical governance/review event is not rerun and does not substitute for current reproducible tests."
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md",
+      "sha256": "180499236e566cc86a3288c3a41b58d4ae9c6b988d786ed3ef61a3919eabb8c5",
+      "entryBaseline": "514e1759b4991e950d5ad5169e3fc86dc3cc025f",
+      "result": "IDENTITY_VALIDATED",
+      "classification": "NOT_PRACTICALLY_REPEATABLE",
+      "rerun": "NOT_RERUN",
+      "note": "Historical governance/review event is not rerun and does not substitute for current reproducible tests."
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-029-V1-SLICE-3-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md",
+      "sha256": "24e7974f9d9d6dc4eba160013642ee1c409b6fca000d5f12a74c58e1ede52514",
+      "entryBaseline": "514e1759b4991e950d5ad5169e3fc86dc3cc025f",
+      "result": "IDENTITY_VALIDATED",
+      "classification": "NOT_PRACTICALLY_REPEATABLE",
+      "rerun": "NOT_RERUN",
+      "note": "Historical governance/review event is not rerun and does not substitute for current reproducible tests."
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-029B-V1-SLICE-3-STEP1-PACKAGE-CONTENT-CLOSURE-CORRECTIVE-REREVIEW.md",
+      "sha256": "5f0172fc2ee73c1662cd917a5ea30f789e0c41bc1f20a245d054adaf7d985718",
+      "entryBaseline": "514e1759b4991e950d5ad5169e3fc86dc3cc025f",
+      "result": "IDENTITY_VALIDATED",
+      "classification": "NOT_PRACTICALLY_REPEATABLE",
+      "rerun": "NOT_RERUN",
+      "note": "Historical governance/review event is not rerun and does not substitute for current reproducible tests."
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-023-V1-SLICE-2-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md",
+      "sha256": "93a8f3f75cbd03cb0c017e0709c031441e8c533ec8c98f871d0a4cdb403893c3",
+      "entryBaseline": "514e1759b4991e950d5ad5169e3fc86dc3cc025f",
+      "result": "IDENTITY_VALIDATED",
+      "classification": "NOT_PRACTICALLY_REPEATABLE",
+      "rerun": "NOT_RERUN",
+      "note": "Historical governance/review event is not rerun and does not substitute for current reproducible tests."
+    }
+  ],
+  "currentIndependentReview": "NOT_STARTED_UNAUTHORIZED",
+  "freshWindows": "NOT_RUN_SLICE4_NOT_AUTHORIZED",
+  "slice3Step3": "NOT_AUTHORIZED",
+  "ownerClosure": "NOT_PERFORMED"
+}

@@ -1,0 +1,778 @@
+[
+  {
+    "path": "apps/desktop/THIRD_PARTY_NOTICES.md",
+    "sha256": "e94466be34da418f5358945857faecea05e329b8a1df39083788d0ab3337bcaa"
+  },
+  {
+    "path": "apps/desktop/index.html",
+    "sha256": "7450bbfdf26a55474b156a76e203f1cbc0453c9d0b1141e21e9f7add1386df43"
+  },
+  {
+    "path": "apps/desktop/package.json",
+    "sha256": "7518954a3c1e69a6a2e94d750f05cc719795b641854511f95b244f28af6f2c5f"
+  },
+  {
+    "path": "apps/desktop/scripts/composition-identity.mjs",
+    "sha256": "a594fa58f61827f409afaa4ea4ecd1350b568d6a1314fc8c18fe28c32f2f60d4"
+  },
+  {
+    "path": "apps/desktop/scripts/frozen-harness-packages.mjs",
+    "sha256": "1928c33d5a6cf07512ee836f8cf13385e3f28b7f0cba78bd5a549885579f9284"
+  },
+  {
+    "path": "apps/desktop/scripts/prepare-harness-client.mjs",
+    "sha256": "d70f39c984773465a7d15d92a8f60f44899f3459620240761fd548cf50a8579b"
+  },
+  {
+    "path": "apps/desktop/src/client/composer.mjs",
+    "sha256": "03773d6697c9650727d7ca4caa68dd5bff778bf2d46180bcf66bd8a80e0247f2"
+  },
+  {
+    "path": "apps/desktop/src/client/conversation.mjs",
+    "sha256": "5b084a11ba6a6f2d00f89502c076f93a8bc86503cd83948735cd9c14834b617e"
+  },
+  {
+    "path": "apps/desktop/src/client/interactions.mjs",
+    "sha256": "040bc4be461ec4fe59bcdfc4d9b0e400a6de512965d7eb5a2a93f20928aca912"
+  },
+  {
+    "path": "apps/desktop/src/client/message.mjs",
+    "sha256": "30c89f50c432b0a1f6caf569b64fe6d917b6ee9facec5ce4e8f3474844d7c3a0"
+  },
+  {
+    "path": "apps/desktop/src/client/presentation-actions.mjs",
+    "sha256": "8c30c7133f959f1891d8cb5be6718e6278b6b400a47f8d8bdde52601cb5f3d7a"
+  },
+  {
+    "path": "apps/desktop/src/client/presentation-hooks.mjs",
+    "sha256": "9f89a1302683416a2aaa60e3c2ec91bb1d4aaafb370b13fc35836cfb168ac181"
+  },
+  {
+    "path": "apps/desktop/src/client/recovery.mjs",
+    "sha256": "7a18dc3d17fbcbfb97df207bccf25f0f9b9069af837648e960ba89bf7724476f"
+  },
+  {
+    "path": "apps/desktop/src/client/settings.mjs",
+    "sha256": "b60b2e3d0d585daec61270c7deabfd37f3ed8a110d56a0deb30a8b6337a206f6"
+  },
+  {
+    "path": "apps/desktop/src/client/shaco-root.mjs",
+    "sha256": "89dfcf5c63474f7c11318a19aac6b5be462c1b59cbe9147cc6737dfb467d0ecf"
+  },
+  {
+    "path": "apps/desktop/src/client/shell-state.mjs",
+    "sha256": "cb58eb8ccf61ed5eeb52af7838c2771bf9e44a3e911bc3aeb2380617c1895926"
+  },
+  {
+    "path": "apps/desktop/src/client/shell-state.test.mjs",
+    "sha256": "f46248b17f8af20587ef4b047811e8548e63eb33267e605161e4d62a25ab520e"
+  },
+  {
+    "path": "apps/desktop/src/client/sidebar.mjs",
+    "sha256": "84314ffea63bad2f211720c2f227163a82bc9374a3b35ad44d4326737e31f7c7"
+  },
+  {
+    "path": "apps/desktop/src/main/bootstrap.ts",
+    "sha256": "1707b4fb20485e1236c993cf05f1ae0e0d1651fd5265b911c1751a75d63698ea"
+  },
+  {
+    "path": "apps/desktop/src/main/carrier-client.test.ts",
+    "sha256": "44d562c90c72b6c300beb2d7b7a9fbb8d6cd5ae10da638a82806993396b0e0a8"
+  },
+  {
+    "path": "apps/desktop/src/main/carrier-client.ts",
+    "sha256": "a91bc29704af2f665bc78016fec8fef79a098966c6f13dfc61e20505e6f8e6aa"
+  },
+  {
+    "path": "apps/desktop/src/main/frame-observation.test.ts",
+    "sha256": "393b30af30486f71cee48ef1e82a042b1bd5969f0ef5051716266cbf400fd12b"
+  },
+  {
+    "path": "apps/desktop/src/main/lifecycle-client.ts",
+    "sha256": "adee5f2505a0afd1d275c68f3eb92488c4ff74f2b5de54f911ba468c3bcc1a96"
+  },
+  {
+    "path": "apps/desktop/src/main/main.ts",
+    "sha256": "19f6d4dcb773163f744f65739071534f1d1057ba0cc58ba63b39967a63118b57"
+  },
+  {
+    "path": "apps/desktop/src/main/recovery-coordinator.test.ts",
+    "sha256": "9bf18ae36eaa4ae0f4a9a5a43c04deed486518a70777c69482f1c8e9ea0ddee2"
+  },
+  {
+    "path": "apps/desktop/src/main/recovery-coordinator.ts",
+    "sha256": "5c64b02f7b657703683973501d18f629e404fe4c30a67ea518eb6a712db35ead"
+  },
+  {
+    "path": "apps/desktop/src/main/security.test.ts",
+    "sha256": "1f4163436926e3de67baa2dda15139dfceefc866992f29912675ed2c8d9d80de"
+  },
+  {
+    "path": "apps/desktop/src/main/security.ts",
+    "sha256": "6bf43e273e9a75c49d74be1c0828f09505f941e16cb0288ecc30463598d8ec6c"
+  },
+  {
+    "path": "apps/desktop/src/main/window-lifecycle.test.ts",
+    "sha256": "830dc7190cd9fc578513d58eb5ecbc5000eac6b143161b1cf154c04a96e46178"
+  },
+  {
+    "path": "apps/desktop/src/main/window-lifecycle.ts",
+    "sha256": "f6d1eecc199ba33ba2209f4035123fe4cf8951d897684ebce6744759f01757e2"
+  },
+  {
+    "path": "apps/desktop/src/main/worker-supervisor.test.ts",
+    "sha256": "1f474d0248de211d0a725f9861af7da3fe655d484ca28e6edb5108c56a2da52e"
+  },
+  {
+    "path": "apps/desktop/src/main/worker-supervisor.ts",
+    "sha256": "35a8b4be68dd62d779ca9b99baf28a11b6c84446d548dae47a2371a64e0f7602"
+  },
+  {
+    "path": "apps/desktop/src/main/workspace-picker.test.ts",
+    "sha256": "26aebc8d565c52d916bdc20314977988a01a487b28541e32bd6788bc13718980"
+  },
+  {
+    "path": "apps/desktop/src/main/workspace-picker.ts",
+    "sha256": "e2443e4f1503497db0c60649839188ad8d169b011572470a4fdc00abd5c3493c"
+  },
+  {
+    "path": "apps/desktop/src/preload/preload.cts",
+    "sha256": "4224d0ed3a001472c4ccee93d2fa4e078d37b40188caa2454fbd79cc384ed823"
+  },
+  {
+    "path": "apps/desktop/src/renderer/global.d.ts",
+    "sha256": "af7a10015f5ea4875070de05531b9527c8a8e275383bccca55558dad750981de"
+  },
+  {
+    "path": "apps/desktop/src/renderer/main.ts",
+    "sha256": "bce36c486960589afed533e5da89abea908f0d951b168f788853e30b9414b478"
+  },
+  {
+    "path": "apps/desktop/src/renderer/node-module-stub.ts",
+    "sha256": "db7d34fe138bbc53bd94cee1c95c32b28164101087b8718058be6b6c6f4687e0"
+  },
+  {
+    "path": "apps/desktop/src/renderer/presentation-lifecycle.mjs",
+    "sha256": "5644f977294404a8e9502dcd3f990101263aa979c08ededb496f05ab8e6dd1ab"
+  },
+  {
+    "path": "apps/desktop/src/renderer/shaco-bootstrap.d.mts",
+    "sha256": "05601a92bd5271ab45272273705129291183be733f1dafadbd5f25c128b536d9"
+  },
+  {
+    "path": "apps/desktop/src/renderer/shaco-bootstrap.mjs",
+    "sha256": "ea6154ce6b7d55085c1acbe1dd868d998dd077b3d3e36daf18f97dc82df6027d"
+  },
+  {
+    "path": "apps/desktop/src/renderer/shell-bootstrap.ts",
+    "sha256": "a403f43cd0f4de000408132dcf3308c1e7b96364191a03ea3388bf5eb62535b4"
+  },
+  {
+    "path": "apps/desktop/src/renderer/styles.css",
+    "sha256": "6360c102672b08d73dda1161d3769bdadcbdb9b3c0660f455cefac02ad407789"
+  },
+  {
+    "path": "apps/desktop/src/renderer/theme/theme.ts",
+    "sha256": "71cabdc3f358b3a7fd8e0e0ee20876505eec5b2306502ef2b9cef537f47ba402"
+  },
+  {
+    "path": "apps/desktop/src/renderer/theme/themes.css",
+    "sha256": "3b084c851e12ce7f420d564c947c5d231639d44b9a44550ba05ba396c3548216"
+  },
+  {
+    "path": "apps/desktop/src/renderer/theme/tokens.css",
+    "sha256": "b15506249bc3542a5d4208c50e29dcca340418ed4fd7c5328f842d1a13dac309"
+  },
+  {
+    "path": "apps/desktop/src/renderer/transport.ts",
+    "sha256": "db3e80df6ae5e187a4b7b0910263866ceb56d115a2e9541437c73e3590fb78b0"
+  },
+  {
+    "path": "apps/desktop/src/renderer/user-loop-evidence.ts",
+    "sha256": "05f3552e0ab03e621b34b1dd655f0782cfcef4a8794c9f93f0dd0084c5e65ad0"
+  },
+  {
+    "path": "apps/desktop/test-fixtures/full-shaco-visual-driver.mjs",
+    "sha256": "ed951319dda10c442238769a6660955746c4ba2fe76720475b8c262fa69ad8a9"
+  },
+  {
+    "path": "apps/desktop/test-fixtures/step1-authority-negative.ps1",
+    "sha256": "d049073f20c0bef41649556ce3b91f7ac753a4f4baae32ccda0b71dae349a61a"
+  },
+  {
+    "path": "apps/desktop/test-fixtures/step1-lifecycle-main.mjs",
+    "sha256": "b075283d266236848172f15faf6e8ac7140c12250545ba7b58bd9ad915cd9e8d"
+  },
+  {
+    "path": "apps/desktop/test-fixtures/step1-non-product-peer.cjs",
+    "sha256": "ae8eaaffca1ebadc19f7d975a5751abc464c3eef2905a761da3aabca64002295"
+  },
+  {
+    "path": "apps/desktop/test-fixtures/step2-recovery-main.mjs",
+    "sha256": "9950ffe01d1ee756fac48ceb1c0b666e0e3972d909683417ec82f76958509c64"
+  },
+  {
+    "path": "apps/desktop/test-fixtures/step3-interactions-main.mjs",
+    "sha256": "54cf6cabe578b8581ee5fbae401ed2a4f6df388565df5e3ee7027f10a0519e28"
+  },
+  {
+    "path": "apps/desktop/test-fixtures/step3-shell-driver.mjs",
+    "sha256": "31c2e278e38b0037df6c61e568b1020dcc576b2021e4bbbdf4a07fccb9001571"
+  },
+  {
+    "path": "apps/desktop/test-fixtures/supervisor-native-wait-worker.mjs",
+    "sha256": "f47e167daca7a5be7046c03e746ef14139e023c15f9de4f5598f6b7e4f1d39e5"
+  },
+  {
+    "path": "apps/desktop/test-fixtures/supervisor-worker.mjs",
+    "sha256": "55f4668236b1bca5e9cb631967b46490f798f3ac2386ba57c5b5e9f4cc7fe547"
+  },
+  {
+    "path": "apps/desktop/tests/full-shaco-boundaries.test.mjs",
+    "sha256": "0e52d414b4d15ee791113ca1472f5446c5ac6bdd3893ccdfebce539ae9db22d1"
+  },
+  {
+    "path": "apps/desktop/tests/presentation-actions.test.mjs",
+    "sha256": "94e7d93718b3ae903129b593e257d3814f96d18df55dbc21ed7a3aae324645ab"
+  },
+  {
+    "path": "apps/desktop/tests/presentation-lifecycle.test.mjs",
+    "sha256": "949046d7c45fd7133dd6ca445a08fa78b5f5cf9eb00cf6a5dcdcd433c2c9817b"
+  },
+  {
+    "path": "apps/desktop/tests/theme.test.ts",
+    "sha256": "bdc279fcf453062640019c5ba1f95ede698577e8c7f8edecfd9f8a5d38f646a5"
+  },
+  {
+    "path": "apps/desktop/tests/transport.test.ts",
+    "sha256": "ba2e10c1a237ff008ce1a61eb912b5c503710275b1fa86d367430745be11f868"
+  },
+  {
+    "path": "apps/desktop/tests/user-loop-evidence.test.ts",
+    "sha256": "be75cdd867a696ef1c46c4753a14b4d3c22debddb297a11627e8c7d518ff5ddd"
+  },
+  {
+    "path": "apps/desktop/tsconfig.node.json",
+    "sha256": "2f8667a2e9c65d532f192cc30b680d885f1f1ad22a15d255ed045c3d8fb636fe"
+  },
+  {
+    "path": "apps/desktop/tsconfig.renderer.json",
+    "sha256": "c94935cb42adaee8e1cb85a607eef6b3ca80bbf3663f9388f78b0ca70aa43aa0"
+  },
+  {
+    "path": "apps/desktop/tsconfig.test.json",
+    "sha256": "b3dba2b152dc14ee9dcd0d044f7d1bb4f750eb977f15a1d64306685ba4061b67"
+  },
+  {
+    "path": "apps/desktop/vite.config.ts",
+    "sha256": "eafb74965312538cde71e4e68be50e09ee9f15d9cc2f94ea21e008af29c5a6f0"
+  },
+  {
+    "path": "apps/installer/installer.nsi",
+    "sha256": "408673888bd4e1fd33f410c8c24cb1d91b76e8847a8104d868edd69d53a3dc60"
+  },
+  {
+    "path": "apps/installer/signer-policy.json",
+    "sha256": "1e7a885a3892f03932c5e397489b92c8c67c1046135611e20a7147b0309ed3c6"
+  },
+  {
+    "path": "apps/native-carrier-tests/IsolatedBoundary.cs",
+    "sha256": "1c9ff8334341cc09db494cf8729dabe3144cd03aa606a2e6b2cbe51d490934a8"
+  },
+  {
+    "path": "apps/native-carrier-tests/Program.cs",
+    "sha256": "f34673e3a9c8d7376c1bf97dc3ca0544ad3af518c21c16bc785a136c89413930"
+  },
+  {
+    "path": "apps/native-carrier-tests/ShacoForge.Step2.Tests.csproj",
+    "sha256": "cfaf8178431c3c1864cf7c864dda578a61af1875fd7ef1163cf7c6037e23ec9c"
+  },
+  {
+    "path": "apps/native-carrier-tests/bin/Release/net10.0-windows/ShacoForge.Step2.Tests.deps.json",
+    "sha256": "657b7f2966a30c56ec6700d1eab708098f819399a4f1c1d5a41ed4a5c7b0a3a2"
+  },
+  {
+    "path": "apps/native-carrier-tests/bin/Release/net10.0-windows/ShacoForge.Step2.Tests.dll",
+    "sha256": "22806e9694ef1e089effde99ec3356127be9e5648e88b97121f6d1e5b2c5ea39"
+  },
+  {
+    "path": "apps/native-carrier-tests/bin/Release/net10.0-windows/ShacoForge.Step2.Tests.exe",
+    "sha256": "2ed531b60b674939f2c2a8cfc07325268a8d199647b950dbee38259dde3c2791"
+  },
+  {
+    "path": "apps/native-carrier-tests/bin/Release/net10.0-windows/ShacoForge.Step2.Tests.pdb",
+    "sha256": "c5c82a0c492111c91d20312ff145f1cc6cc466e74171d12f77b5957aa7907ea4"
+  },
+  {
+    "path": "apps/native-carrier-tests/bin/Release/net10.0-windows/ShacoForge.Step2.Tests.runtimeconfig.json",
+    "sha256": "59a7facbb38ea932bc4ca560d45a71c44959f2f09c1437c5c4b2f82d63e13acb"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/.NETCoreApp,Version=v10.0.AssemblyAttributes.cs",
+    "sha256": "93d67476196ebfc80d1d7d8844b91146cfd678d105f5ce635eb900ca40610c9b"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/ShacoForge.Step2.Tests.AssemblyInfo.cs",
+    "sha256": "3b2164519b52df058e7f901944ba4805db29d35180de91450b569098030a1809"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/ShacoForge.Step2.Tests.AssemblyInfoInputs.cache",
+    "sha256": "1cfdb5134405fe5e598ec735f91f3a1e1c572ebdd843114932e3f1c7ada98de0"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/ShacoForge.Step2.Tests.GeneratedMSBuildEditorConfig.editorconfig",
+    "sha256": "a09579f386041a00d0e1284ccaa23196fc14b24fde7286ba6c7d657c976b2f80"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/ShacoForge.Step2.Tests.GlobalUsings.g.cs",
+    "sha256": "a3c6048bb4d922b1799a9977f84362a3787b68810cac67aa86ac3aa23295f227"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/ShacoForge.Step2.Tests.assets.cache",
+    "sha256": "e1ea69e84b7b0d5a815715edb93d2639c69d5c4f02f535cad490b8eb901486be"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/ShacoForge.Step2.Tests.csproj.CoreCompileInputs.cache",
+    "sha256": "3ae3b866af533e3a4834339f07a9095c8f48882203689d9cdd03dfffe3ee67ad"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/ShacoForge.Step2.Tests.csproj.FileListAbsolute.txt",
+    "sha256": "eb2fc0ce03e34e291e0dd6b58ad97d16cbc7bde92c54b3f936c4028575b2c212"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/ShacoForge.Step2.Tests.dll",
+    "sha256": "22806e9694ef1e089effde99ec3356127be9e5648e88b97121f6d1e5b2c5ea39"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/ShacoForge.Step2.Tests.genruntimeconfig.cache",
+    "sha256": "6b736d661dd4cc7b2f78131dd5d3eb760f47782fee12597aadce27f01e4fc77e"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/ShacoForge.Step2.Tests.pdb",
+    "sha256": "c5c82a0c492111c91d20312ff145f1cc6cc466e74171d12f77b5957aa7907ea4"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/apphost.exe",
+    "sha256": "2ed531b60b674939f2c2a8cfc07325268a8d199647b950dbee38259dde3c2791"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/ref/ShacoForge.Step2.Tests.dll",
+    "sha256": "7a5916e123e3524a3a200fbee478417c8d6d34c421632125f3decdff2162e922"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/Release/net10.0-windows/refint/ShacoForge.Step2.Tests.dll",
+    "sha256": "7a5916e123e3524a3a200fbee478417c8d6d34c421632125f3decdff2162e922"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/ShacoForge.Step2.Tests.csproj.nuget.dgspec.json",
+    "sha256": "a4fbc508a89774b9da6e595512668246555f822f303955f8911298f93e2d08ed"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/ShacoForge.Step2.Tests.csproj.nuget.g.props",
+    "sha256": "89bcdada00c4945dbc6d41ef873b2c50949c10ccab8eafc0dd979a1cd62d2841"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/ShacoForge.Step2.Tests.csproj.nuget.g.targets",
+    "sha256": "971cc9b535384849b5c661d776cd7a80833a416265e32e8968e06c367368b8b5"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/project.assets.json",
+    "sha256": "3fadc2860c51eaba543d801e59bc6409a021333551aa40ebcc8c297d01f195e3"
+  },
+  {
+    "path": "apps/native-carrier-tests/obj/project.nuget.cache",
+    "sha256": "d95512b01c31db5befc30f48186aad8e8604300adc74af5d61e161c5bd977908"
+  },
+  {
+    "path": "apps/native-carrier/Authenticode.cs",
+    "sha256": "0ce8bc7dd3b956c375cc2de9e531e6d6f264dda4d587c95cbf2a29bc6a9488b2"
+  },
+  {
+    "path": "apps/native-carrier/ControlFilePrimitives.cs",
+    "sha256": "60366af2d7b35595bf41db3f4373b9e1a2738ad556048ae03df947fcc5a57398"
+  },
+  {
+    "path": "apps/native-carrier/LifecycleAuthority.cs",
+    "sha256": "bcd92005f20ce2559b145299d20d5fa54f83289c2cb8a57e6ed4dae69850e68b"
+  },
+  {
+    "path": "apps/native-carrier/ProductControl.cs",
+    "sha256": "85ccbeaf0e96f807d5d817d0a19c92882c90af2d27126e5f916fce05da5020d6"
+  },
+  {
+    "path": "apps/native-carrier/ProductHome.cs",
+    "sha256": "3c540bb13b0954d185e61d53aae54c4a7761c89aa51b1baaaa928b10ca4ae2e3"
+  },
+  {
+    "path": "apps/native-carrier/Program.cs",
+    "sha256": "f6dca1f16fefbf01260caaf40ce00415d3cdfbb0fb481cb388b45f9caa9f10b0"
+  },
+  {
+    "path": "apps/native-carrier/RuntimeFence.cs",
+    "sha256": "2594ef4073b1ed61e7ba508c184ab83e9440d6b3e8aee680368839dd9c7813ea"
+  },
+  {
+    "path": "apps/native-carrier/ShacoForge.NativeCarrier.csproj",
+    "sha256": "0dc1acd2408df4d259d37e4c5d6c17a666a3d5a9fee4910ca15f37f998bae684"
+  },
+  {
+    "path": "apps/native-carrier/WindowsAuthority.cs",
+    "sha256": "330b4ee0e99daf359f7db32aac269c173d71e3f7e77821b8040b0a5a33b97b64"
+  },
+  {
+    "path": "apps/worker/host-profile/carrier-gateway.mjs",
+    "sha256": "523c2a9d51f7970f091946f265575e55ea18605f281d94244e25e94433a407d7"
+  },
+  {
+    "path": "apps/worker/host-profile/connection-compatibility.mjs",
+    "sha256": "1d765b237400cc81261f76988f88caf6f9920d1a5fc4d09a3151491028796748"
+  },
+  {
+    "path": "apps/worker/host-profile/events-route-preflight.mjs",
+    "sha256": "0c696585b96b979a1302ae0fda46d9a6b9428ffb30bebaa55494b302ad8bf3a0"
+  },
+  {
+    "path": "apps/worker/host-profile/events-route-preflight.test.mjs",
+    "sha256": "13d950ebeaaec0d620aeef82a19071b8bf496af1a8e67c4ad2ec69d60bde0dce"
+  },
+  {
+    "path": "apps/worker/host-profile/upgrade-drain.mjs",
+    "sha256": "20bf7a01869ebd89b806244c3108b93e2ccac989e478cf8f6f7e7089c6ea831f"
+  },
+  {
+    "path": "apps/worker/package.json",
+    "sha256": "773ebfdafb4e3630f697e26448ade7e821f569847ceb48813a21501e1e45fec4"
+  },
+  {
+    "path": "apps/worker/src/config.test.ts",
+    "sha256": "5cce94e53a5341b0780f5224ad659bd6e3284ec378d606b0fd0bef509970a486"
+  },
+  {
+    "path": "apps/worker/src/config.ts",
+    "sha256": "d592b042ebf2ecd9df2bcf05c4a6d03472ab381b49c7361381522e8eff1c6bb9"
+  },
+  {
+    "path": "apps/worker/src/control-preflight.ts",
+    "sha256": "c3f59f9de75690ad4f76694b84164e8f4ff43972fa7792aabca09421ab19060f"
+  },
+  {
+    "path": "apps/worker/src/control-store.ts",
+    "sha256": "b006d5bbcd158d00cb77fece5f2716ed893f3c21e9e224a2558d8cfc2f0a36c9"
+  },
+  {
+    "path": "apps/worker/src/durable-files.ts",
+    "sha256": "2c5ef7b6e7a3759cde35988f019f095716460af0cbd43b69158f631742d38b20"
+  },
+  {
+    "path": "apps/worker/src/harness-readiness.ts",
+    "sha256": "2bc37adef53796d7665fe91043bc872d424851f0206d4d5b9ef60110c3e1f28d"
+  },
+  {
+    "path": "apps/worker/src/harness-runtime.ts",
+    "sha256": "a9b1562763cfa2c05d6fc27026299313ab8ee0f4048b0319929a59a7805da2a5"
+  },
+  {
+    "path": "apps/worker/src/host-carrier-preflight.test.ts",
+    "sha256": "de7ca0b5ce1b8ca0c228e6a029b7f9e8ebc7b1aec93e1ac92c17a77d7ab02519"
+  },
+  {
+    "path": "apps/worker/src/host-carrier-preflight.ts",
+    "sha256": "1e2912d9b7148d69683aa81a9ceb331dec56abf046b9b3a4021493ed336800f6"
+  },
+  {
+    "path": "apps/worker/src/host-readiness-marker.test.ts",
+    "sha256": "cb9ad9d1e6ad1168bc7c41a3b721170fa081a7b253eab5f42745a1da97203edc"
+  },
+  {
+    "path": "apps/worker/src/host-readiness-marker.ts",
+    "sha256": "f25c0859488a7ed936dced333bc6e0cb6298d3f6f5e4577af5b1c2a2ac737487"
+  },
+  {
+    "path": "apps/worker/src/index.ts",
+    "sha256": "2e8d82a87cb957e641f48d2d25e37097ecbdcc2cf925892949632a4d621f3dc3"
+  },
+  {
+    "path": "apps/worker/src/installer-entry.ts",
+    "sha256": "0d537aaf460e58a35fc5fca902a6ab2b16bcf6a4e4ca7a86b42b96b32da8f015"
+  },
+  {
+    "path": "apps/worker/src/installer-operations.ts",
+    "sha256": "77753b0f8621760163df43078108e0a68bc78c77eade107d34b0390e08752b4e"
+  },
+  {
+    "path": "apps/worker/src/packaged-config.ts",
+    "sha256": "dd2b35bc448598370406f8147001d5643d248f8e359afcebde5c839db0769a4d"
+  },
+  {
+    "path": "apps/worker/src/profile.test.ts",
+    "sha256": "8386d35760bb5c8830793de92310b38e7a89c1fba8fb8c9057e05a830e6a992f"
+  },
+  {
+    "path": "apps/worker/src/profile.ts",
+    "sha256": "d7f8cd3d0df67c331c5f72cba651309501e92697d861a624284cdaf77640e9c6"
+  },
+  {
+    "path": "apps/worker/src/signature-verification.ts",
+    "sha256": "c45294cb68e7dadc238825f1629f9130cf8c36164893b913417434a9ccdef8f7"
+  },
+  {
+    "path": "apps/worker/src/uninstall.ts",
+    "sha256": "b4acebf43953e5870ca4ecc05df96fa210798e2e5d1f9571d540dc564232d64a"
+  },
+  {
+    "path": "apps/worker/src/update-transaction.ts",
+    "sha256": "9d1fa66c11bff9c6d5f39cb5b8d6c4095cbc4feb458b4cfd4bcc8e7d019de66f"
+  },
+  {
+    "path": "apps/worker/test-fixtures/step3-interactions.mjs",
+    "sha256": "eec5113415ad03a5436dec1c8e8b08b27254d5c16dced26a6f804531b6a3177b"
+  },
+  {
+    "path": "apps/worker/tsconfig.json",
+    "sha256": "c120dcf9982d59a1a348e982bf5666b4f86b1d3e21a2f49f93bc73b7dc06579e"
+  },
+  {
+    "path": "package.json",
+    "sha256": "de85528a2a52632a0062ff1e7640892ccc008885270ed936a5457a8e66919868"
+  },
+  {
+    "path": "packages/contracts/package.json",
+    "sha256": "1e8e1fa61ad001b99a26a78a9db61c6ce883917d5a1065dc3dfcd250e552e5e5"
+  },
+  {
+    "path": "packages/contracts/src/carrier.test.ts",
+    "sha256": "06bf8a848acb3047ff5d652be35a510b8f6383a90a30af5b158021dc50d18c34"
+  },
+  {
+    "path": "packages/contracts/src/carrier.ts",
+    "sha256": "1c61df395e9cf4f54795958ffbe3419f49872366216f36a77b82d0772cb4a1ac"
+  },
+  {
+    "path": "packages/contracts/src/compatibility.ts",
+    "sha256": "ab1385b647fa2208390321e6734bd25c873ccec1018ad45e96a371c7329d098a"
+  },
+  {
+    "path": "packages/contracts/src/index.test.ts",
+    "sha256": "5aa50a38e45f3404763754ae08b191b02f1618b8c1813af610ffded24c9d26d1"
+  },
+  {
+    "path": "packages/contracts/src/index.ts",
+    "sha256": "60581367cb36c2c6cfda7d93cd2259ba9480d9eaf4ce8b313eb85bdf11da8dac"
+  },
+  {
+    "path": "packages/contracts/src/packaged-runtime.ts",
+    "sha256": "6c7875febeadcfacc265f9a4dea4c48765e5d00d2b6f2868e2e7fe7fc55d6b35"
+  },
+  {
+    "path": "packages/contracts/tsconfig.json",
+    "sha256": "337c4a8b967d337cc7227448678b4fc9a30d43c08e6227e208d71b4d44a9011f"
+  },
+  {
+    "path": "pnpm-lock.yaml",
+    "sha256": "22c6b61a70c5c716d8b5914632af26dd593a90b78e07b9c2fc4a4a70420e758a"
+  },
+  {
+    "path": "pnpm-workspace.yaml",
+    "sha256": "9e24c65fad2e0f1633ab9caddedb287bb14a890dddd60125473365f96c134cc6"
+  },
+  {
+    "path": "scripts/build.mjs",
+    "sha256": "6422985b7d63babcb17e557593a77f6fefd18f34ab0ddfdba6419dd4bb44a024"
+  },
+  {
+    "path": "scripts/diagnose-slice3-step2.mjs",
+    "sha256": "3fbd3072a06fd31c3033b5a7b04028929cf2f52e8bce126ba2ca0c2a1186f36e"
+  },
+  {
+    "path": "scripts/electron-user-loop.mjs",
+    "sha256": "d07da1e9fea798c08ef0a4a8215e80cd613b6a16381ccd138998c55777d7fba6"
+  },
+  {
+    "path": "scripts/full-shaco-command.mjs",
+    "sha256": "3ffc4a21f846255bf95059955a9dacd7ad9b912b9e156d3aaa028bb65dcf8e61"
+  },
+  {
+    "path": "scripts/harness-production-closure.mjs",
+    "sha256": "f2f7db90f0f86e149848abfeadf50df6cde71aca89cebce710a73521299cbb99"
+  },
+  {
+    "path": "scripts/harness-production-closure.test.mjs",
+    "sha256": "4c2ba34bcc5006ab4abab3507da6360887e5708630ca623c88d92f9fb90b6e04"
+  },
+  {
+    "path": "scripts/package-installer.mjs",
+    "sha256": "0ce1883f174423ed8074893477ab7ffb2e592d290ae660d370914d00e7e9a167"
+  },
+  {
+    "path": "scripts/package-runtime.mjs",
+    "sha256": "d11b2a4d06934ada717ecf78e6063b771fc9a93aad6ef2f678b7d88302d957df"
+  },
+  {
+    "path": "scripts/packaged-runtime.test.mjs",
+    "sha256": "de7651f63b2e03ae2cafd5938dccb7a1f0b6f5aaff8dbbce1946d7d8788d2faf"
+  },
+  {
+    "path": "scripts/production-boundary.mjs",
+    "sha256": "7a7a57e310fb6cc012614f3dec262e262b9740c9bdebb8c9d192dea375945593"
+  },
+  {
+    "path": "scripts/runtime-paths.mjs",
+    "sha256": "ce6ff6e813bc51d96add74624d1eb75f3ae923003b89c09f98dccfb87695096a"
+  },
+  {
+    "path": "scripts/slice3-step1-command.mjs",
+    "sha256": "6a71763b7f4e598092a0ae4a906053b305fc0e3389effefb8bae300a66dbe78a"
+  },
+  {
+    "path": "scripts/slice3-step2-command.mjs",
+    "sha256": "125ec6c78b5bec737641bfb26b4c59056a1cf6be93453a5e2998d99cd5a4cf5d"
+  },
+  {
+    "path": "scripts/slice3-step2-f05.mjs",
+    "sha256": "e0a2fedda411205b9b110f5b80c288d1409f5afe7a8e7ff2eb60a2403d2ef11b"
+  },
+  {
+    "path": "scripts/slice3-step2-fixtures.mjs",
+    "sha256": "5a4e1dcd81265d32bee6ed815e57197e8df234438a5a3b2ccf9d99266b3ee70e"
+  },
+  {
+    "path": "scripts/slice3-step2-native.mjs",
+    "sha256": "4b8bcd47e125fec49173ccbf990437380b77b699d87ad4767d645c3b66f3a786"
+  },
+  {
+    "path": "scripts/slice3-step2.test.mjs",
+    "sha256": "0d1e39baa6ad231e65ccd99f77552a5d8d365447a27c74542dfc2bc02ac3c1cf"
+  },
+  {
+    "path": "scripts/smoke-carrier.mjs",
+    "sha256": "c7eaabd412fb4be96aefaf70b3c5e3c044cc87b871b751a34edf32ea839b682c"
+  },
+  {
+    "path": "scripts/smoke-electron.mjs",
+    "sha256": "6412b251205bc16ecbe06918f2dd0d6ffc65826733a074882a4af9f2ff2563c2"
+  },
+  {
+    "path": "scripts/smoke-full-shaco.mjs",
+    "sha256": "45db64839cd2698e77b0df71c1d6906dbfd233a96371acda4f591c9b9741118b"
+  },
+  {
+    "path": "scripts/smoke-packaged-runtime.mjs",
+    "sha256": "40b70da7207f6a55ddc661a35bad64adaf3ef829faa5254c9cc7373c324da2d1"
+  },
+  {
+    "path": "scripts/smoke-slice2-step1.mjs",
+    "sha256": "784cd39b2201d69cc711bd7dda6f067d03a44d42ce537a548624e950209a9f47"
+  },
+  {
+    "path": "scripts/smoke-slice2-step2.mjs",
+    "sha256": "abd6f769d76e26f1bce8374f3d9db21cfcb4ec333b248f821509dd8cde6fe1b7"
+  },
+  {
+    "path": "scripts/smoke-slice2-step3-interactions.mjs",
+    "sha256": "6ce165beece32b22a4b0e604d2b2d83272c95a3a5497b64388e8ffd553dee559"
+  },
+  {
+    "path": "scripts/smoke-slice2-step3.mjs",
+    "sha256": "72a1f13561f4859165b2543d94ebf637cd80b6b34d1d38a51bc643918d4c91b1"
+  },
+  {
+    "path": "scripts/smoke-slice3-step2.mjs",
+    "sha256": "df56814706e26fbe9281c3e007fd0440670d828290d5dc3494b5b8e0e4e541bf"
+  },
+  {
+    "path": "scripts/smoke-user-loop.mjs",
+    "sha256": "f0504c6f9f9c3142d488804a694e27e2e42fe110c0e09745bf3124376f55799c"
+  },
+  {
+    "path": "scripts/smoke-worker.mjs",
+    "sha256": "e39099bf048d8e984adf1d938704359f4c9f89b751014b73f9c4e3480462a8ac"
+  },
+  {
+    "path": "scripts/step1-identity-probe.ps1",
+    "sha256": "32306f6944b107dc016cff6aad5ff8677e7d8459dcdb136f61cf473ae1eb37d1"
+  },
+  {
+    "path": "scripts/step1-server-attestation-probe.ps1",
+    "sha256": "7c3344827cd82833924ec14108c918aa8cb378f45d20355dddc66e9dca71be39"
+  },
+  {
+    "path": "scripts/step2-command.mjs",
+    "sha256": "86fd9df793f82b68ec4068deb550096544a199d59cbb06114a9b03fb114e1853"
+  },
+  {
+    "path": "scripts/step2-evidence.mjs",
+    "sha256": "0b2584206a79f75fdf194635f5bb421ec63149eea42bd570970ba112f333e9d8"
+  },
+  {
+    "path": "scripts/step2-replacement-probe.mjs",
+    "sha256": "3141b77609024833b26d95b8a02c0fdfe6e87ecc122d4f57e379debaa9a3e446"
+  },
+  {
+    "path": "scripts/step3-baseline.mjs",
+    "sha256": "dfab7b88f13663649825cc27f3017eeb7e293ee58538c146d5e5eb3e4f32c3e6"
+  },
+  {
+    "path": "scripts/step3-composition.test.mjs",
+    "sha256": "755c0feebb729e0e97c675bc0f8896181b72fa6b8659bff8126c4fc3cd182834"
+  },
+  {
+    "path": "scripts/step3-final-composition.mjs",
+    "sha256": "9dc8201f940f80832a5743922a246a92b68cef376929a072202a4553cc086b16"
+  },
+  {
+    "path": "scripts/step3-fixture-boundaries.test.mjs",
+    "sha256": "a417132a7986c2200c3279df35b2d67ea5811a53a61cb6548a63bea6ad9e0b12"
+  },
+  {
+    "path": "scripts/step3-interaction.test.mjs",
+    "sha256": "e6c05e601ffb482eb5368b024fdfe1a035aafb41810b7b4216bca6049f48c5e1"
+  },
+  {
+    "path": "scripts/tool-runner.mjs",
+    "sha256": "1b0727c4d2e38fdd100cd8930210cae3032b38d4222ffd66689611bfd8997063"
+  },
+  {
+    "path": "scripts/typecheck.mjs",
+    "sha256": "af3f552138b2006719a5c56ca1d38a35804f1fdbc96393c0a486e81670513d69"
+  },
+  {
+    "path": "scripts/user-loop-policy.mjs",
+    "sha256": "418184aa184a762890f0802fbd5a8c50be2c23a41b0ba2f93d7911328b59f1c2"
+  },
+  {
+    "path": "scripts/user-loop-policy.test.mjs",
+    "sha256": "f02d9f2d4a8e1bd138bc9533a250a37b5c5bfabfcdc8d72ae8ac424254f8752d"
+  },
+  {
+    "path": "scripts/user-loop-revalidation-preflight.mjs",
+    "sha256": "3bad895dc5ed2a17fcc12a9b4ffe45f43d3336f73180496d578d3dd2729c9993"
+  },
+  {
+    "path": "scripts/user-loop-revalidation.mjs",
+    "sha256": "605022f4baf5b2bf8b617b0d5b301db1c23502f14438439aa72826651635cc58"
+  },
+  {
+    "path": "scripts/verify-slice3-step1-evidence.mjs",
+    "sha256": "79fe30345350090ba783d0394f47e0fad9584086874d8f3a0b4d7edd002ec4bb"
+  },
+  {
+    "path": "scripts/verify-static.mjs",
+    "sha256": "cb9f6d1f664f9f66ef775998f0f9c7dcaa691f21985d4c6403b7f7e73673bb30"
+  },
+  {
+    "path": "scripts/verify-theme.mjs",
+    "sha256": "7680fa5d7d3ad99688afb9da6b857d4bbf39169aca34418cc3f093873e27fb36"
+  },
+  {
+    "path": "scripts/verify-user-loop-hygiene.mjs",
+    "sha256": "5c79256a4d7b4015022a215cd1009ba1d7fdad73baf1fd5c72a7e9212e55ea06"
+  },
+  {
+    "path": "scripts/windows-desktop-test.ps1",
+    "sha256": "fb125e7c39407a7c60c1e007a0c8f0e47b90e4b197ded83137256e5cf683a0c1"
+  },
+  {
+    "path": "tsconfig.base.json",
+    "sha256": "2b1639214617fad1569a5c55c14cb70c6893a3a2dcc4f6953b6de636b1f8c0cb"
+  }
+]

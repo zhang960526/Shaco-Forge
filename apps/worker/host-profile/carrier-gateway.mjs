@@ -1,8 +1,9 @@
 import { createReadStream, createWriteStream } from 'node:fs'
 import { probeEventsRoute } from './events-route-preflight.mjs'
+import { drainHarness } from './upgrade-drain.mjs'
 
 export const name = 'shaco-forge-carrier-gateway'
-export const inject = ['typertGateway', 'connection', 'agentPresets']
+export const inject = ['typertGateway', 'connection', 'agentPresets', 'agents', 'sessions']
 
 const MAX_JSON_FRAME = 262_144
 const STREAM_CREDIT_LIMIT = 4
@@ -46,6 +47,7 @@ export function apply(ctx) {
   let currentClient
   let incomingClient
   const unary = new Set()
+  let upgrading = false
 
   function send(value) {
     const frame = value.type === 'attachment-frame'
@@ -96,6 +98,8 @@ export function apply(ctx) {
   }
 
   async function handleStreamOpen(frame, client) {
+    const opening = { client }
+    unary.add(opening)
     const state = { controller: new AbortController(), credits: 0, wake: undefined, iterator: undefined, client }
     const sendCurrent = value => currentClient === client && !state.controller.signal.aborted
       ? send({ type: 'attachment-frame', clientInstanceId: client, frame: value }) : Promise.resolve()
@@ -103,6 +107,7 @@ export function apply(ctx) {
     grantCredit(state, frame.initialCredits)
     try {
       const source = await ctx.typertGateway.wireStream.open(frame.endpoint, frame.payload, state.controller.signal)
+      unary.delete(opening)
       const iterator = source[Symbol.asyncIterator]()
       state.iterator = iterator
       for (;;) {
@@ -121,6 +126,7 @@ export function apply(ctx) {
         await sendCurrent({ type: 'stream-error', streamId: frame.streamId, error: ctx.typertGateway.wireStream.failure(error) })
       }
     } finally {
+      unary.delete(opening)
       if (streams.get(frame.streamId) === state) streams.delete(frame.streamId)
     }
   }
@@ -140,7 +146,6 @@ export function apply(ctx) {
       try { await state.iterator?.return?.() } catch {}
     })
     streams.clear()
-    unary.clear()
     await Promise.all(pending)
     await send({ type: 'attachment-reset' })
   }
@@ -152,6 +157,17 @@ export function apply(ctx) {
       incomingClient = undefined
     } else if (value?.type === 'attachment-frame' && typeof value.clientInstanceId === 'string') {
       incomingClient = value.clientInstanceId
+      return
+    }
+    if (message?.type === 'upgrade-drain') {
+      if (upgrading) return
+      upgrading = true
+      void drainHarness(ctx, unary).then(async proof => {
+        await send({ type: 'upgrade-drained', proof })
+        const exit = ctx.get('appExit')
+        if (typeof exit !== 'function') throw new Error('DRAIN_EXIT_UNAVAILABLE')
+        exit(0)
+      }).catch(() => send({ type: 'upgrade-drain-failed', reason: 'DRAIN_QUIESCENCE_UNPROVEN' }))
       return
     }
     if (message?.type === 'attachment-start' && typeof message.clientInstanceId === 'string') {
@@ -167,6 +183,13 @@ export function apply(ctx) {
     if (message?.type !== 'attachment-frame') throw new Error('Host attachment envelope invalid')
     if (currentClient === undefined || message.clientInstanceId !== currentClient) return
     const frame = message.frame
+    if (upgrading && (frame?.type === 'unary-request' || frame?.type === 'stream-open')) {
+      if (frame.type === 'unary-request') void send({ type: 'attachment-frame', clientInstanceId: currentClient, frame: {
+        type: 'unary-response', requestId: frame.requestId, envelope: { type: 'server-response', rpcId: frame.envelope.rpcId,
+          result: { ok: false, error: { code: 'transport', message: 'UPGRADE_IN_PROGRESS', details: {} } } } } })
+      else void send({ type: 'attachment-frame', clientInstanceId: currentClient, frame: { type: 'stream-error', streamId: frame.streamId, error: ctx.typertGateway.wireStream.failure(new Error('UPGRADE_IN_PROGRESS')) } })
+      return
+    }
     if (frame?.type === 'unary-request') void handleUnary(frame, currentClient)
     else if (frame?.type === 'stream-open' && typeof frame.streamId === 'string') void handleStreamOpen(frame, currentClient)
     else if (frame?.type === 'stream-credit') {
@@ -185,6 +208,7 @@ export function apply(ctx) {
     }
   })
   input.on('end', () => {
+    if (upgrading) return // Product closes the input only after the drain proof.
     for (const state of streams.values()) state.controller.abort(new Error('Carrier bridge closed'))
     streams.clear()
     process.exit(1)

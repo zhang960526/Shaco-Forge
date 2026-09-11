@@ -1,0 +1,19 @@
+{
+  "unsignedInstallerPath": "D:\\Project\\Shaco-Forge\\dist\\installers\\Shaco-Forge-1.0.0-dev.1-1789140507599-unsigned.exe",
+  "unsignedInstallerDigest": "64d17cd85d350811e0c0514df42609a21efd749327d20f773c5cb19b376dfafe",
+  "releaseManifestDigest": "08ffb9405e40a2f275302cb24c8a49f27c98be28f768825bcd1d3c129a5e0e98",
+  "packagedArtifactDigest": "5ad3c2872ea50f8b9051ce85f3839af4ac61ff16f9f31e0db9558b15fc683254",
+  "expectedSignerPolicy": {
+    "certificateSha256": [],
+    "timestampRequired": true,
+    "state": "PENDING_ARCHITECTURE_OWNER_PUBLIC_SIGNER_IDENTITY"
+  },
+  "verificationSeam": "apps/worker/src/signature-verification.ts verifyAuthenticode / native helper --verify-installer",
+  "ownerActions": [
+    "Provide the accepted PUBLIC certificate SHA-256 identity in signer-policy.json, then rebuild and rerun affected source-bound gates before signing.",
+    "Authorize and execute signing under Owner control; collect certificate public identity, timestamp metadata, signature validation and final signed installer SHA-256."
+  ],
+  "signingExecutionAuthorization": "NO",
+  "signingRuns": 0,
+  "releaseReady": false
+}

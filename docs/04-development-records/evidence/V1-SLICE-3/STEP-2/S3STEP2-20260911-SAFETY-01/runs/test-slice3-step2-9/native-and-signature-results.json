@@ -1,0 +1,95 @@
+{
+  "result": "PASS",
+  "acl": {
+    "result": "PASS",
+    "root": "D:\\Project\\Shaco-Forge\\dist\\slice3-step2-native-tests\\2d30ae919ceb490abecc66bc22c3c438",
+    "currentUserOnly": true,
+    "fenceCallerExited": true,
+    "initialExecution": true,
+    "fencedExecution": false,
+    "inheritedFenceExecution": false,
+    "backupReadable": true,
+    "releaseExecution": true,
+    "implementation": "shared RuntimeFence.cs",
+    "productionDataWrites": 0
+  },
+  "publicFixture": {
+    "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+    "status": "Valid",
+    "signatureType": "Authenticode",
+    "signer": {
+      "sha256": "1a9c92bf7eeb44b087ac149e839999104855a708d13c90eb90d12ddea11490f5",
+      "subject": "CN=OpenJS Foundation, O=OpenJS Foundation, L=San Francisco, S=California, C=US",
+      "issuer": "CN=Microsoft ID Verified CS AOC CA 01, O=Microsoft Corporation, C=US",
+      "serialNumber": "3300053165E42AA173271381DD000000053165",
+      "notBefore": "2025-08-28T05:59:38.0000000Z",
+      "notAfter": "2025-08-31T05:59:38.0000000Z"
+    },
+    "timestamp": {
+      "certificate": {
+        "sha256": "de3a6cea159aaa7646dfc6e9323c54866483ba89f0e75d88f0ea93a8d8fa689d",
+        "subject": "CN=Microsoft Public RSA Time Stamping Authority, OU=nShield TSS ESN:7800-05E0-D947, OU=Microsoft America Operations, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "issuer": "CN=Microsoft Public RSA Timestamping CA 2020, O=Microsoft Corporation, C=US",
+        "serialNumber": "330000004C1B4B9C63C2E4D37A00000000004C",
+        "notBefore": "2024-11-26T18:48:59.0000000Z",
+        "notAfter": "2025-11-19T18:48:59.0000000Z"
+      },
+      "signingTimes": [
+        "2025-08-28T07:54:45.8220000Z"
+      ],
+      "source": "WINTRUST_VERIFIED_COUNTERSIGNER"
+    },
+    "fileSha256": "995a3fb3cefad590cd3f4b321532a4b9582fb9c6575320ed2e3e894caac3e362",
+    "winTrustStatus": "0x00000000"
+  },
+  "unsigned": {
+    "status": "NotSigned",
+    "signatureType": "None",
+    "signer": null,
+    "timestamp": {
+      "certificate": null,
+      "signingTimes": [],
+      "source": "WINTRUST_VERIFIED_COUNTERSIGNER"
+    },
+    "fileSha256": "285208e2dc6fb657ef92a611cd5015048e6cbef6f249c1d26199f6aa1199b6d1",
+    "winTrustStatus": "NO_EMBEDDED_SIGNATURE"
+  },
+  "tampered": {
+    "status": "HashMismatch",
+    "signatureType": "Authenticode",
+    "signer": {
+      "sha256": "1a9c92bf7eeb44b087ac149e839999104855a708d13c90eb90d12ddea11490f5",
+      "subject": "CN=OpenJS Foundation, O=OpenJS Foundation, L=San Francisco, S=California, C=US",
+      "issuer": "CN=Microsoft ID Verified CS AOC CA 01, O=Microsoft Corporation, C=US",
+      "serialNumber": "3300053165E42AA173271381DD000000053165",
+      "notBefore": "2025-08-28T05:59:38.0000000Z",
+      "notAfter": "2025-08-31T05:59:38.0000000Z"
+    },
+    "timestamp": {
+      "certificate": {
+        "sha256": "de3a6cea159aaa7646dfc6e9323c54866483ba89f0e75d88f0ea93a8d8fa689d",
+        "subject": "CN=Microsoft Public RSA Time Stamping Authority, OU=nShield TSS ESN:7800-05E0-D947, OU=Microsoft America Operations, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "issuer": "CN=Microsoft Public RSA Timestamping CA 2020, O=Microsoft Corporation, C=US",
+        "serialNumber": "330000004C1B4B9C63C2E4D37A00000000004C",
+        "notBefore": "2024-11-26T18:48:59.0000000Z",
+        "notAfter": "2025-11-19T18:48:59.0000000Z"
+      },
+      "signingTimes": [
+        "2025-08-28T07:54:45.8220000Z"
+      ],
+      "source": "WINTRUST_VERIFIED_COUNTERSIGNER"
+    },
+    "fileSha256": "a36b9caf57a60cd04a00cda6a6444ec8c35354d20abadcb4b73f8e88cfa3b285",
+    "winTrustStatus": "0x80096010"
+  },
+  "wrongSignerRejected": true,
+  "digestMismatchRejected": true,
+  "nativeGatePositive": true,
+  "productionDataWrites": 0,
+  "productionSigningRuns": 0,
+  "privateKeyOperations": 0,
+  "cleanup": {
+    "fixturesRetainedForEvidence": "D:\\Project\\Shaco-Forge\\dist\\slice3-step2-signature-tests\\1789144820421",
+    "processesExited": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "negatives": [
+    {
+      "identity": "ProductVersion",
+      "credentialIssued": false
+    },
+    {
+      "identity": "DesktopVersion",
+      "credentialIssued": false
+    },
+    {
+      "identity": "WorkerVersion",
+      "credentialIssued": false
+    },
+    {
+      "identity": "CarrierVersion",
+      "credentialIssued": false
+    },
+    {
+      "identity": "HarnessBaselineVersion",
+      "credentialIssued": false
+    },
+    {
+      "identity": "ControlStoreSchemaVersion",
+      "credentialIssued": false
+    }
+  ],
+  "missingIdentitiesRejected": true,
+  "wrongHomeRejected": true,
+  "freshCredentialsIssued": 0,
+  "agentDispatchDelta": 0,
+  "harnessDataChanged": false,
+  "inspectedDurableEntries": 520
+}

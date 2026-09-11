@@ -1,0 +1,173 @@
+import assert from 'node:assert/strict'
+import { spawn } from 'node:child_process'
+import { mkdtemp, mkdir, readFile, writeFile } from 'node:fs/promises'
+import { join } from 'node:path'
+import electron from 'electron'
+import { paths } from "file:///D:/Project/Shaco-Forge/scripts/runtime-paths.mjs"
+import { evidence, evidenceRoot, runId } from "file:///D:/Project/Shaco-Forge/scripts/step2-evidence.mjs"
+import { inspectLocalPlatform, lifecycleRequest } from "file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/lifecycle-client.js"
+
+assert.equal(process.version, 'v22.19.0')
+const root = await mkdtemp(join(paths.root, 'node_modules/.step2-runtime-'))
+const workspace = join(root, 'workspace')
+await mkdir(workspace)
+const dshHome = join(root, 'harness')
+const profile = join(root, 'desktop')
+const children = []
+const chain = []
+const snapshots = []
+const authorities = []
+const shellEvidence = []
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
+const alive = pid => { try { process.kill(pid, 0); return true } catch (error) { if (error.code === 'ESRCH') return false; throw error } }
+async function until(predicate, label, timeout = 90_000) {
+  const deadline = Date.now() + timeout
+  while (Date.now() < deadline) { const value = await predicate(); if (value) return value; await delay(150) }
+  throw new Error(`${label}: TIMEOUT`)
+}
+async function discovery() {
+  return await until(async () => {
+    try { return (await lifecycleRequest(paths.nativeHelper, 'discover')).status }
+    catch (error) { if (error.message === 'BUSY') return undefined; throw error }
+  }, 'discovery', 5_000)
+}
+async function desktop(index) {
+  const control = join(root, `control-${index}.json`)
+  const output = join(root, `snapshot-${index}.json`)
+  const env = { ...process.env, SHACO_FORGE_WORKER_NODE: process.execPath, SHACO_FORGE_WORKER_ENTRY: paths.workerEntry,
+    SHACO_FORGE_NATIVE_HELPER: paths.nativeHelper, SHACO_FORGE_DSH_HOME: dshHome,
+    // This explicit evidence driver reads the full observer's bounded metadata.
+    SHACO_FORGE_EVIDENCE_OBSERVER: '1',
+    SHACO_FORGE_STEP2_CONTROL: control, SHACO_FORGE_STEP2_OUTPUT: output, SHACO_FORGE_STEP2_WORKSPACE: workspace }
+  for (const key of ['SHACO_FORGE_USER_LOOP', 'SHACO_FORGE_EVIDENCE_PATH', 'SHACO_FORGE_EVIDENCE_INJECT_CARRIER_FAILURE', 'ELECTRON_RUN_AS_NODE']) delete env[key]
+  const child = spawn(electron, [`--user-data-dir=${profile}`, "D:\\Project\\Shaco-Forge\\dist\\credential-diagnostic-v2\\main.mjs"], { env, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] })
+  children.push(child)
+  let diagnostics = ''
+  child.stdout.resume()
+  child.stderr.on('data', chunk => { diagnostics = (diagnostics + chunk.toString()).slice(-8000) })
+  let commandId = 0
+  const read = async () => {
+    if (child.exitCode !== null || child.signalCode !== null) throw new Error(`DESKTOP_EARLY_EXIT:${child.exitCode ?? child.signalCode}`)
+    const value = await readFile(output, 'utf8').then(JSON.parse).catch(() => undefined)
+    if (value?.failure) throw new Error(value.failure)
+    if (value?.recovery?.connectionState === 'FAILED' || value?.recovery?.connectionState === 'INCOMPATIBLE') throw new Error(`PRODUCT_RECOVERY_FAILED:${value.recovery.failure}`)
+    return value
+  }
+  const connected = async (generation, requireSession = false) => await until(async () => {
+    const value = await read()
+    return value?.recovery?.connectionState === 'CONNECTED' && value.recovery.generation >= generation
+      && value.renderer?.projectionVisible && (!requireSession || value.readProof.sessionSnapshot) ? value : undefined
+  }, 'Product CONNECTED')
+  const command = async action => {
+    const id = ++commandId
+    await writeFile(control, JSON.stringify({ id, action }), 'utf8')
+    if (action === 'close') return
+    return await until(async () => { const value = await read(); return value?.commandId === id ? value.response : undefined }, action, 30_000)
+  }
+  return { child, connected, command, read, diagnostics: () => diagnostics }
+}
+function capture(label, value) {
+  snapshots.push({ label, ...value })
+  chain.push(label)
+  if (!authorities.some(item => item.worker.pid === value.authority.worker.pid)) authorities.push(value.authority)
+  assert.equal(value.renderer.requireAvailable, false)
+  assert.equal(value.renderer.processAvailable, false)
+  assert.equal(value.renderer.promptRuns, 0)
+  assert.equal(value.recovery.authenticatedCarrier, true)
+  assert.equal(value.recovery.clientGenerationReady, true)
+  assert.equal(value.recovery.projectionRebuildComplete, true)
+  for (const state of value.transitions) if (state.connectionState === 'CONNECTED') assert.ok(state.authenticatedCarrier && state.clientGenerationReady && state.projectionRebuildComplete)
+}
+let result = 'FAIL'
+let failure
+let loss
+let seeded
+let replacement
+let cleanup
+try {
+  const platform = await inspectLocalPlatform(paths.nativeHelper)
+  assert.equal(platform.mutexExists, false, 'Isolated runtime requires no pre-existing authority')
+  assert.equal(platform.lifecycleBusy, false)
+  const first = await desktop(1)
+  const initial = await first.connected(1)
+  capture('PRODUCT_STARTUP_AUTHORITY_HOST_HELPER_AUTHENTICATED_CARRIER_CLIENT_CONNECTED', initial)
+  seeded = await first.command('seed')
+  const current = await first.connected(1, true)
+  capture('CURRENT_SESSION_FROM_PUBLIC_HARNESS_TRUTH', current)
+  assert.equal(current.readProof.sessionHash, seeded.sessionHash)
+  if (process.env.SHACO_FORGE_STEP3_MODE === '1') shellEvidence.push(await first.command('verify-shell'))
+  await first.command('close')
+  await until(() => first.child.exitCode !== null, 'graceful Desktop close', 15_000)
+  await delay(700)
+  const afterClose = await discovery()
+  for (const role of ['worker', 'host', 'helper']) assert.deepEqual(afterClose[role], current.authority[role])
+  chain.push('DESKTOP_GRACEFUL_CLOSE_AUTHORITY_SURVIVES')
+  const second = await desktop(2)
+  const cold = await second.connected(1, true)
+  capture('FRESH_DESKTOP_SAME_WORKER_COLD_PROJECTION', cold)
+  assert.equal(cold.authority.workerInstanceIdHash, current.authority.workerInstanceIdHash)
+  assert.notEqual(cold.credentialEpochHash, current.credentialEpochHash)
+  assert.notEqual(cold.clientInstanceIdHash, current.clientInstanceIdHash)
+  assert.equal(cold.readProof.sessionHash, seeded.sessionHash)
+  if (process.env.SHACO_FORGE_STEP3_MODE === '1') shellEvidence.push(await second.command('verify-shell'))
+  second.child.kill('SIGKILL')
+  await until(() => second.child.exitCode !== null || second.child.signalCode !== null, 'Desktop crash', 15_000)
+  await delay(700)
+  const afterCrash = await discovery()
+  for (const role of ['worker', 'host', 'helper']) assert.deepEqual(afterCrash[role], current.authority[role])
+  chain.push('DESKTOP_CRASH_AUTHORITY_SURVIVES')
+  const third = await desktop(3)
+  const beforeLoss = await third.connected(1, true)
+  capture('FRESH_DESKTOP_AFTER_CRASH_SAME_WORKER_REATTACH', beforeLoss)
+  assert.equal(beforeLoss.authority.workerInstanceIdHash, current.authority.workerInstanceIdHash)
+  loss = await third.command('loss')
+  assert.equal(loss.unary, 'TERMINATED')
+  assert.equal(loss.stream, 'TERMINATED')
+  assert.equal(loss.staleCallbackRejected, true)
+  assert.ok(loss.before.pendingUnary > 0 && loss.before.activeStreams > 0)
+  assert.deepEqual(loss.after, { pendingUnary: 0, activeStreams: 0 })
+  const recovered = await third.connected(2, true)
+  capture('CARRIER_LOSS_REDISCOVERY_FRESH_AUTH_GENERATION_COLD_PROJECTION_CONNECTED', recovered)
+  assert.equal(recovered.authority.workerInstanceIdHash, beforeLoss.authority.workerInstanceIdHash)
+  assert.notEqual(recovered.credentialEpochHash, beforeLoss.credentialEpochHash)
+  assert.notEqual(recovered.clientInstanceIdHash, beforeLoss.clientInstanceIdHash)
+  assert.equal(recovered.readProof.sessionHash, seeded.sessionHash)
+  assert.ok(recovered.readProof.workspaceHashes.includes(seeded.workspaceHash))
+  assert.equal(recovered.recovery.continuity, 'SAME_WORKER')
+  if (process.env.SHACO_FORGE_STEP3_MODE === '1') shellEvidence.push(await third.command('verify-shell'))
+  assert.ok(recovered.transitions.some(state => state.connectionState === 'CONNECTION_LOST'))
+  process.kill(recovered.authority.worker.pid, 'SIGKILL')
+  await until(() => ['worker', 'host', 'helper'].every(role => !alive(recovered.authority[role].pid)), 'old authority Job gone', 10_000)
+  const afterReplacement = await third.connected(3, true)
+  capture('WORKER_CRASH_JOB_CLEANUP_REPLACEMENT_COLD_PROJECTION_CONNECTED', afterReplacement)
+  assert.notEqual(afterReplacement.authority.workerInstanceIdHash, recovered.authority.workerInstanceIdHash)
+  assert.equal(afterReplacement.recovery.continuity, 'REPLACEMENT_CONTINUITY_UNPROVEN')
+  assert.equal(afterReplacement.readProof.sessionHash, seeded.sessionHash)
+  if (process.env.SHACO_FORGE_STEP3_MODE === '1') shellEvidence.push(await third.command('verify-shell'))
+  replacement = { oldAuthorityGone: true, overlap: 0, oldChildAdoption: false, old: recovered.authority, fresh: afterReplacement.authority }
+  await third.command('close')
+  await until(() => third.child.exitCode !== null, 'last Desktop close', 15_000)
+  result = 'PASS'
+} catch (error) { failure = error.message }
+finally {
+  for (const child of children) if (child.exitCode === null && child.signalCode === null) child.kill('SIGKILL')
+  await delay(700)
+  try {
+    const status = await discovery()
+    if (status.dshHome === dshHome) {
+      if (!authorities.some(item => item.worker.pid === status.worker.pid)) authorities.push({ worker: status.worker, host: status.host, helper: status.helper })
+      await lifecycleRequest(paths.nativeHelper, 'stop-authority', status.workerInstanceId)
+    }
+  } catch {}
+  await delay(1200)
+  for (const authority of authorities) if (alive(authority.worker.pid)) process.kill(authority.worker.pid, 'SIGKILL')
+  await until(() => authorities.every(authority => ['worker', 'host', 'helper'].every(role => !alive(authority[role].pid))), 'bounded cleanup', 10_000)
+  cleanup = { noOrphan: true, authorityCount: authorities.length, desktopProcessesExited: children.every(child => child.exitCode !== null || child.signalCode !== null) }
+  chain.push('BOUNDED_CLEANUP_NO_ORPHAN')
+  const previous = await readFile(join(evidenceRoot, 'cumulative-e2e.json'), 'utf8').then(JSON.parse).catch(() => ({ attempts: [] }))
+  previous.attempts.push({ runId, scenario: process.env.SHACO_FORGE_STEP3_MODE === '1' ? 'STEP3_CUMULATIVE' : 'STEP2_REGRESSION', result, failure, chain, snapshots, seeded, loss, replacement, cleanup, shellEvidence, providerRuns: 0 })
+  await evidence('cumulative-e2e.json', previous)
+  console.log(JSON.stringify({ result, failure, chain, cleanup, providerRuns: 0 }))
+}
+if (result !== 'PASS') process.exitCode = 1
+else console.log('STEP1_REGRESSION = PASS\nSTEP2_DEDICATED_GATES = PASS\nCUMULATIVE_NON_PROVIDER_E2E = PASS')

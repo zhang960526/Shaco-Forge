@@ -1,0 +1,113 @@
+$ node --test apps/desktop/tests/presentation-lifecycle.test.mjs apps/desktop/tests/presentation-actions.test.mjs apps/desktop/tests/full-shaco-boundaries.test.mjs
+TAP version 13
+# Subtest: UI-G14 covers recursive Renderer/Client source and production bootstrap imports
+ok 1 - UI-G14 covers recursive Renderer/Client source and production bootstrap imports
+  ---
+  duration_ms: 88.3253
+  type: 'test'
+  ...
+# Subtest: UI-G14 rejects private identity, settlement, waterfall types and fixture imports in Renderer source
+ok 2 - UI-G14 rejects private identity, settlement, waterfall types and fixture imports in Renderer source
+  ---
+  duration_ms: 2.1744
+  type: 'test'
+  ...
+# Subtest: UI-G14 follows local imports outside seeded roots and rejects reachable test fixtures
+ok 3 - UI-G14 follows local imports outside seeded roots and rejects reachable test fixtures
+  ---
+  duration_ms: 14.4939
+  type: 'test'
+  ...
+# Subtest: all Shaco presentation modules use public runtime exports and own no business registries
+ok 4 - all Shaco presentation modules use public runtime exports and own no business registries
+  ---
+  duration_ms: 3.5528
+  type: 'test'
+  ...
+# Subtest: Product declares every presentation service; bootstrap remains the only Context/root owner
+ok 5 - Product declares every presentation service; bootstrap remains the only Context/root owner
+  ---
+  duration_ms: 1.7372
+  type: 'test'
+  ...
+# Subtest: prompt admission uses queue once and cancel never clears queued work
+ok 6 - prompt admission uses queue once and cancel never clears queued work
+  ---
+  duration_ms: 1.1344
+  type: 'test'
+  ...
+# Subtest: unknown outcome is not replayed
+ok 7 - unknown outcome is not replayed
+  ---
+  duration_ms: 0.9072
+  type: 'test'
+  ...
+# Subtest: old generation and another selected session cannot mutate any captured object
+ok 8 - old generation and another selected session cannot mutate any captured object
+  ---
+  duration_ms: 0.346
+  type: 'test'
+  ...
+# Subtest: approval/question settles the exact current pending object, never a replaced carrier
+ok 9 - approval/question settles the exact current pending object, never a replaced carrier
+  ---
+  duration_ms: 0.334
+  type: 'test'
+  ...
+# Subtest: permission choices are Host-owned; custom and unknown choices cannot be submitted
+ok 10 - permission choices are Host-owned; custom and unknown choices cannot be submitted
+  ---
+  duration_ms: 0.303
+  type: 'test'
+  ...
+# Subtest: all 28 Harness rows active before Product/root; single facade, context and mount
+ok 11 - all 28 Harness rows active before Product/root; single facade, context and mount
+  ---
+  duration_ms: 2.6718
+  type: 'test'
+  ...
+# Subtest: quiescence does not authorize an inactive required row
+ok 12 - quiescence does not authorize an inactive required row
+  ---
+  duration_ms: 0.2777
+  type: 'test'
+  ...
+# Subtest: required business service absence prevents Product/root activation
+ok 13 - required business service absence prevents Product/root activation
+  ---
+  duration_ms: 0.209
+  type: 'test'
+  ...
+# Subtest: rootError synchronously conceals before async root teardown
+ok 14 - rootError synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.2774
+  type: 'test'
+  ...
+# Subtest: loseRoot synchronously conceals before async root teardown
+ok 15 - loseRoot synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.833
+  type: 'test'
+  ...
+# Subtest: loseService synchronously conceals before async root teardown
+ok 16 - loseService synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.2207
+  type: 'test'
+  ...
+# Subtest: slot error during synchronous React mount fails closed and disposes root
+ok 17 - slot error during synchronous React mount fails closed and disposes root
+  ---
+  duration_ms: 0.2508
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 458.6478

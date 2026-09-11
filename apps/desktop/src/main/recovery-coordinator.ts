@@ -1,4 +1,5 @@
 import { isRecord, type ClientRequestEnvelope } from '@shaco-forge/contracts'
+import { MISMATCH_ACTIONS, type MismatchCode } from '@shaco-forge/contracts/compatibility'
 import { createHash } from 'node:crypto'
 import { CarrierClient, type StreamPullResult } from './carrier-client.js'
 import type { CarrierBootstrap, WorkerSupervisor } from './worker-supervisor.js'
@@ -83,7 +84,9 @@ export class RecoveryCoordinator {
     } catch (error) {
       if (!this.#stopped && this.#attempt === attempt && this.projection.generation === generation) {
         const text = error instanceof Error ? error.message : ''
-        this.fail(/version|protocol|incompatible/i.test(text) ? 'WORKER_VERSION_INCOMPATIBLE'
+        const mismatch = (Object.keys(MISMATCH_ACTIONS) as MismatchCode[]).find(code => text === code || text.startsWith(code + ':'))
+        this.fail(mismatch ? mismatch + ': ' + MISMATCH_ACTIONS[mismatch]
+          : /version|protocol|incompatible/i.test(text) ? 'WORKER_VERSION_INCOMPATIBLE'
           : /AMBIGUOUS|IDENTITY|prior death/.test(text) ? 'AUTHORITY_AMBIGUOUS_FAIL_CLOSED'
           : this.projection.connectionState === 'AUTHENTICATING' ? 'CARRIER_AUTH_FAILED' : 'RECONNECT_FAILED')
       }

@@ -4,6 +4,21 @@ import { createHash } from 'node:crypto'
 import type { CarrierBootstrap } from './worker-supervisor.js'
 import { CarrierClient, type StreamPullResult } from './carrier-client.js'
 import { RecoveryCoordinator } from './recovery-coordinator.js'
+import { MISMATCH_ACTIONS } from '@shaco-forge/contracts/compatibility'
+
+test('Step2 pre-write failures retain actionable taxonomy without mounting an Agent path', async () => {
+  for (const [code, action] of Object.entries(MISMATCH_ACTIONS)) {
+    let mounted = 0, credentialsConsumed = 0
+    const supervisor = { start: async (): Promise<CarrierBootstrap> => { throw new Error(code + ': untrusted diagnostic suffix') },
+      recover: async (): Promise<CarrierBootstrap> => { throw new Error('not called') }, carrierReady() {}, detach() {} }
+    const coordinator = new RecoveryCoordinator(supervisor, () => {}, async () => { mounted++ }, () => { credentialsConsumed++; throw new Error('must not create carrier') })
+    await coordinator.start()
+    assert.equal(coordinator.projection.failure, code + ': ' + action)
+    assert.equal(coordinator.projection.authenticatedCarrier, false)
+    assert.deepEqual({ mounted, credentialsConsumed }, { mounted: 0, credentialsConsumed: 0 })
+    coordinator.stop()
+  }
+})
 
 function deferred<T>() {
   let resolve!: (value: T) => void

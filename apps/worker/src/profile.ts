@@ -132,6 +132,7 @@ export async function materializeHarnessProfile(
   await copyFile(readinessModulePath, join(bundlePath, 'readiness.js'))
   await copyFile(connectionCompatibilityPath, join(bundlePath, 'connection-compatibility.mjs'))
   await copyFile(carrierGatewayPath, join(bundlePath, 'carrier-gateway.mjs'))
+  await copyFile(join(dirname(carrierGatewayPath), 'upgrade-drain.mjs'), join(bundlePath, 'upgrade-drain.mjs'))
   await copyFile(eventsRoutePreflightPath, join(bundlePath, 'events-route-preflight.mjs'))
   await mkdir(join(overlayNodeModules, '@shaco-forge'), { recursive: true })
   await ensureProfileJunction(bundlePath, join(overlayNodeModules, '@shaco-forge', 'harness-bootstrap'))

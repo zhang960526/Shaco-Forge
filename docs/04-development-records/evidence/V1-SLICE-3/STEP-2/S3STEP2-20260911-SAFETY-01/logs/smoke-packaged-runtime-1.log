@@ -1,0 +1,17 @@
+$ node scripts/smoke-packaged-runtime.mjs
+(node:35264) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+file:///D:/Project/Shaco-Forge/apps/worker/dist/durable-files.js:31
+                    throw new Error('UNEXPECTED_DATA_REPARSE');
+                          ^
+
+Error: UNEXPECTED_DATA_REPARSE
+    at walk (file:///D:/Project/Shaco-Forge/apps/worker/dist/durable-files.js:31:27)
+    at async walk (file:///D:/Project/Shaco-Forge/apps/worker/dist/durable-files.js:37:17)
+    at async walk (file:///D:/Project/Shaco-Forge/apps/worker/dist/durable-files.js:37:17)
+    at async walk (file:///D:/Project/Shaco-Forge/apps/worker/dist/durable-files.js:37:17)
+    at async durableInventory (file:///D:/Project/Shaco-Forge/apps/worker/dist/durable-files.js:45:5)
+    at async file:///D:/Project/Shaco-Forge/scripts/smoke-packaged-step2.mjs:61:23
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

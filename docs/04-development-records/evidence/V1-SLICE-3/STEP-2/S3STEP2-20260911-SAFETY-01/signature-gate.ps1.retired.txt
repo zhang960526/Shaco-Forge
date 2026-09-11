@@ -1,0 +1,11 @@
+param([Parameter(Mandatory=$true)][string]$Artifact)
+$ErrorActionPreference = 'Stop'
+try {
+    $publicResult = & (Join-Path $PSScriptRoot 'verify-authenticode.ps1') -Artifact $Artifact | ConvertFrom-Json
+    if ($publicResult.status -eq 'NotSigned' -or $null -eq $publicResult.signer) { throw 'SIGNATURE_MISSING' }
+    if ($publicResult.status -ne 'Valid' -or $publicResult.signatureType -ne 'Authenticode') { throw 'SIGNATURE_INVALID' }
+    $policy = [IO.File]::ReadAllText((Join-Path $PSScriptRoot 'signer-policy.json'), [Text.Encoding]::UTF8) | ConvertFrom-Json
+    if ($policy.certificateSha256 -notcontains $publicResult.signer.sha256) { throw 'SIGNER_NOT_ALLOWED' }
+    if ($policy.timestampRequired -ne $true -or $null -eq $publicResult.timestamp.certificate) { throw 'SIGNATURE_TIMESTAMP_MISSING' }
+    exit 0
+} catch { [Console]::Error.WriteLine('RELEASE_SIGNATURE_GATE_REJECTED'); exit 1 }

@@ -39,6 +39,32 @@ internal static partial class Program
                     result = WindowsAuthority.Platform(uint.Parse(args[1], System.Globalization.CultureInfo.InvariantCulture));
                 else if (args[0] == "--product-home" && args.Length is 3 or 4)
                     result = ProductHome.Resolve(args[1], args[2], args.Length == 4 ? args[3] : null);
+                else if (args[0] == "--select-product-control" && args.Length == 2)
+                    result = ProductControl.Select(args[1]);
+                else if (args[0] == "--protect-product-directory" && args.Length == 2)
+                    result = ProductControl.Protect(args[1]);
+                else if (args[0] == "--verify-product-tree" && args.Length == 2)
+                    result = ProductControl.VerifyTree(args[1]);
+                else if (args[0] == "--publish-upgrade-journal" && args.Length == 2)
+                    result = ProductControl.PublishJournal(args[1]);
+                else if (args[0] == "--inspect-authenticode" && args.Length == 2)
+                    result = Authenticode.Inspect(args[1]);
+                else if (args[0] == "--verify-installer" && args.Length == 3)
+                    result = Authenticode.VerifyInstaller(args[1], args[2]);
+                else if (args[0] == "--runtime-fence" && args.Length == 2)
+                    result = ProductControl.Fence(args[1]);
+                else if (args[0] == "--windows-system-path" && args.Length == 1)
+                    result = ProductControl.WindowsSystemPath();
+                else if (args[0] == "--assert-install-registration-clear" && args.Length == 1)
+                    result = ProductControl.AssertRegistrationClear();
+                else if (args[0] == "--validate-install-registration" && args.Length == 2)
+                    result = ProductControl.ValidateRegistration(args[1], false);
+                else if (args[0] == "--rollback-install-registration" && args.Length == 2)
+                    result = ProductControl.ValidateRegistration(args[1], true);
+                else if (args[0] == "--register-product-install" && args.Length == 2)
+                    result = ProductControl.Register(args[1]);
+                else if (args[0] == "--unregister-product-install" && args.Length == 1)
+                    result = ProductControl.Unregister();
                 else if (args[0] == "--inspect-product-home" && args.Length == 1)
                     result = ProductHome.Inspect();
                 else if (args[0] == "--runtime-processes" && args.Length == 2)
@@ -59,7 +85,7 @@ internal static partial class Program
             }
             catch (Exception error)
             {
-                string code = System.Text.RegularExpressions.Regex.IsMatch(error.Message, "^(DSH_HOME|KNOWN_FOLDER)_[A-Z_]+$")
+                string code = System.Text.RegularExpressions.Regex.IsMatch(error.Message, "^(DSH_HOME|KNOWN_FOLDER|SIGNATURE|SIGNED_ARTIFACT|SIGNER|RUNTIME_FENCE|CONTROL|PRODUCT)_[A-Z0-9_]+$")
                     ? error.Message : error.GetType().Name;
                 Console.Error.WriteLine(code);
                 return 1;

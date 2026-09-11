@@ -1,5 +1,6 @@
 // Privileged packaging utilities, separate from the frozen Carrier public API.
 import { createHash } from 'node:crypto'
+import { declaration, STEP1_ARTIFACT } from './compatibility.js'
 import { createReadStream } from 'node:fs'
 import { lstat, readFile, readdir, realpath } from 'node:fs/promises'
 import { isAbsolute, join, relative, resolve } from 'node:path'
@@ -85,8 +86,14 @@ export function validateRelease(manifest: ReleaseManifest): void {
     || manifest.PackagedRuntimeLayoutVersion !== 1 || !/^[a-f0-9]{40}$/.test(manifest.SourceCommit)
     || JSON.stringify(manifest.layout) !== JSON.stringify(RELEASE_LAYOUT)
     || !manifest.ProductVersion || manifest.DesktopVersion !== manifest.ProductVersion || manifest.WorkerVersion !== manifest.ProductVersion
-    || manifest.CarrierVersion !== 1 || manifest.ControlStoreSchemaVersion !== 'NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES') {
+    || manifest.CarrierVersion !== 1 || !['NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES', '1'].includes(manifest.ControlStoreSchemaVersion)) {
     throw new Error('RELEASE_INTEGRITY_FAILURE: release identity')
+  }
+  if (manifest.ControlStoreSchemaVersion === '1') {
+    if (JSON.stringify(manifest.Compatibility) !== JSON.stringify(declaration(manifest.ProductVersion, STEP1_ARTIFACT))) throw new Error('RELEASE_INTEGRITY_FAILURE: compatibility declaration')
+    const policy = manifest.ProductionSignerPolicy as { certificateSha256?: unknown; timestampRequired?: unknown } | undefined
+    if (!policy || policy.timestampRequired !== true || !Array.isArray(policy.certificateSha256)
+      || policy.certificateSha256.some(value => typeof value !== 'string' || !/^[a-f0-9]{64}$/.test(value))) throw new Error('RELEASE_INTEGRITY_FAILURE: signer policy')
   }
 }
 export async function verifyPackagedRuntime(root: string): Promise<ReleaseManifest> {

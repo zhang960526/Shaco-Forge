@@ -1,0 +1,247 @@
+[
+  {
+    "attempt": 1,
+    "command": "Pinned Node 22.19.0 tsc contracts then worker",
+    "result": "FAIL",
+    "exitCode": 1,
+    "diagnostic": "apps/worker/src/control-store.ts(34,18): TS2565 Property db used before assigned",
+    "corrective": "Definite assignment field; constructor catch safely closes only when initialized."
+  },
+  {
+    "attempt": 2,
+    "command": "Full unit regression test attempt 1",
+    "result": "FAIL",
+    "exitCode": 1,
+    "diagnostic": "Three temporary profile fixtures lacked upgrade-drain.mjs",
+    "corrective": "Added explicit harmless module fixture to three tests; full test attempt 2 passed 184/184."
+  },
+  {
+    "attempt": 3,
+    "command": "Standalone Windows PowerShell -File verify-authenticode.ps1 on already-signed public Node fixture",
+    "result": "FAIL",
+    "exitCode": 1,
+    "diagnostic": "System ExecutionPolicy rejected the unsigned script.",
+    "corrective": "Replaced script dependency with native WinVerifyTrust verification. No execution policy was changed. Native public fixture passed with signer, verified timestamp, digest and WinTrust status zero."
+  },
+  {
+    "attempt": 4,
+    "command": "Native isolated RuntimeFence test",
+    "result": "PASS",
+    "exitCode": 0,
+    "diagnostic": "Shared RuntimeFence implementation: original execution allowed; fenced and inherited replacement execution denied; backup reads allowed; release execution allowed. No production data writes."
+  },
+  {
+    "attempt": 5,
+    "command": "Development source edit script",
+    "result": "FAIL",
+    "exitCode": 1,
+    "diagnostic": "A guarded replacement expected CRLF in a new LF file; earlier independent substitutions completed. Follow-up used detected line endings and applied the remaining replacements.",
+    "corrective": "Worker tsc passed after completing the edits."
+  },
+  {
+    "attempt": 6,
+    "command": "Final source freeze under sandbox identity",
+    "result": "FAIL",
+    "exitCode": 1,
+    "diagnostic": "Read-only Frozen Harness Git inspection refused mismatched sandbox ownership.",
+    "corrective": "Reran as the actual current user; no global safe.directory configuration and no Harness changes. Final source digest 8b1fff63c4561c192da736f85e458c015c38fddb904a6d99380e74e5f178b4fe."
+  },
+  {
+    "attempt": 7,
+    "command": "Final smoke:slice2-step1 attempt 1",
+    "result": "FAIL",
+    "exitCode": 1,
+    "diagnostic": "Restricted tool PATH found only Windows PowerShell 5; frozen lifecycle fixture requires supported PowerShell API behavior.",
+    "corrective": "Selected pre-existing PowerShell 7 through SHACO_FORGE_POWERSHELL; final attempt 2 PASS, no source change."
+  },
+  {
+    "attempt": 8,
+    "command": "Final smoke:slice2-step3 attempts 1 and 2",
+    "result": "FAIL",
+    "exitCode": 1,
+    "diagnostic": "STEP3_CREDENTIAL_UNSET_TIMEOUT; UI displayed save incomplete. Both attempts cleaned authority and Desktop processes. Root cause not established by later diagnostics.",
+    "corrective": "Kept both original failures. Used isolated non-shipped IPC/Debugger diagnostics; direct public credentials/unset and original UI driver subsequently succeeded without source or Frozen Harness edits. Formal gate rerun required separately."
+  },
+  {
+    "attempt": 9,
+    "command": "Non-shipped credential diagnostics",
+    "result": "DIAGNOSED_WITHOUT_SOURCE_CHANGE",
+    "attempts": [
+      {
+        "command": "Direct public RPC diagnostic attempt 1",
+        "exitCode": 1,
+        "result": "DIAGNOSTIC_FAILED",
+        "detail": "RPC ran, but diagnostic output directory absent; ENOENT retained in credential-diagnostic/cumulative-e2e.json."
+      },
+      {
+        "command": "Direct public RPC diagnostic attempt 2",
+        "exitCode": 1,
+        "result": "CAPTURE_COMPLETE_INTENTIONAL_STOP",
+        "detail": "credentials/unset returned ok:true; diagnostic then intentionally stopped; cleanup PASS."
+      },
+      {
+        "command": "UI Debugger after set diagnostic attempt 1",
+        "exitCode": 1,
+        "result": "CAPTURE_COMPLETE_INTENTIONAL_STOP",
+        "detail": "No caught exceptions; capture in credential-ui-exceptions.json."
+      },
+      {
+        "command": "UI Debugger after set diagnostic attempt 2",
+        "exitCode": 1,
+        "result": "CAPTURE_COMPLETE_INTENTIONAL_STOP",
+        "detail": "Before configured/saved/buttons enabled; after unconfigured/saved; no exceptions."
+      },
+      {
+        "command": "Restricted PATH UI diagnostic",
+        "exitCode": 1,
+        "result": "CAPTURE_COMPLETE_INTENTIONAL_STOP",
+        "detail": "Same successful configured→unconfigured UI result under gate tool PATH."
+      },
+      {
+        "command": "UI Debugger before mutation diagnostic",
+        "exitCode": 1,
+        "result": "CAPTURE_COMPLETE_INTENTIONAL_STOP",
+        "detail": "Original click timing preserved; unconfigured/saved; no exceptions."
+      },
+      {
+        "command": "Original UI driver with completed IPC result observation under pnpm",
+        "exitCode": 0,
+        "result": "PASS_DIAGNOSTIC_ONLY",
+        "detail": "Full Slice2 cumulative chain passed; no orphan, authorityCount2, public unset ok:true; not substituted for final gate."
+      }
+    ],
+    "evidence": [
+      "credential-diagnostic/",
+      "credential-diagnostic-bounded-env/"
+    ],
+    "sourceDigest": "8b1fff63c4561c192da736f85e458c015c38fddb904a6d99380e74e5f178b4fe",
+    "providerRuns": 0,
+    "signingRuns": 0,
+    "productionDataWrites": 0
+  },
+  {
+    "attempt": 10,
+    "command": "smoke:slice2-step3 attempt 3 / diagnostic attempt 4 / final attempt 5",
+    "result": "FINAL_PASS_WITH_PRIOR_FAILURES_RETAINED",
+    "history": [
+      {
+        "attempt": 3,
+        "phase": "FINAL_REGRESSION",
+        "exitCode": 1,
+        "reason": "STEP3_CREDENTIAL_UNSET_TIMEOUT"
+      },
+      {
+        "attempt": 4,
+        "phase": "DEVELOPMENT",
+        "exitCode": 0,
+        "diagnostic": "Explicit non-shipped NODE_OPTIONS preload supplied. No unset IPC file emitted; do not claim hook coverage. Full chain and cleanup PASS; not final acceptance."
+      },
+      {
+        "attempt": 5,
+        "phase": "FINAL_REGRESSION",
+        "exitCode": 0,
+        "diagnostic": "Original gate, no NODE_OPTIONS or source changes, full chain/cleanup PASS."
+      }
+    ],
+    "rootCause": "NOT_ESTABLISHED",
+    "sourceDigest": "8b1fff63c4561c192da736f85e458c015c38fddb904a6d99380e74e5f178b4fe",
+    "providerRuns": 0,
+    "signingRuns": 0
+  },
+  {
+    "attempt": 11,
+    "command": "Final smoke:slice3-step2 attempt 3",
+    "exitCode": 1,
+    "result": "FAIL",
+    "diagnostic": "Fresh install COMMITTED and actual validation drain PASS. Strict isolatedProfileLinks found profiles/node_modules/typescript pointing to checkout node_modules/.pnpm/typescript@6.0.3, outside installed runtime. Fixture was incorrectly under checkout ancestry.",
+    "corrective": "Moved explicit non-shipped fixture root and native test-only ACL boundary to OS temp/shaco-forge-slice3-step2-runtime-tests; added ancestor node_modules absence assertion; retained strict per-link target validation. No production/Harness source change. Requires new full final source-bound regression.",
+    "sourceDigestBefore": "8b1fff63c4561c192da736f85e458c015c38fddb904a6d99380e74e5f178b4fe",
+    "providerRuns": 0,
+    "signingRuns": 0
+  },
+  {
+    "attempt": 12,
+    "command": "test:slice3-step2 attempt 8 + smoke:slice3-step2 attempt 4",
+    "phase": "DEVELOPMENT",
+    "result": "PASS",
+    "exitCode": 0,
+    "sourceDigest": "6d15c406a6846476111872d7a8272347b0d5e445e8388f58cbc3b9d78025663d",
+    "outcome": "External temp root with no ancestor node_modules: fresh cancel/install, real validation drain/no writes, exact Step1 pair restore/restart, Step1 happy upgrade, manifest-owned uninstall/data retention and cleanup all PASS. Full final same-source rebuild and regression required and started separately.",
+    "evidence": [
+      "runs/test-slice3-step2-8/",
+      "runs/smoke-slice3-step2-4/"
+    ],
+    "providerRuns": 0,
+    "signingRuns": 0,
+    "productionDataWrites": 0
+  },
+  {
+    "attempt": 13,
+    "id": "CREDENTIAL_RENAME_OBSERVED",
+    "command": "Final smoke:slice2-step3 attempt 6 + completed RPC diagnostics + external-root correction",
+    "formalFailure": {
+      "attempt": 6,
+      "phase": "FINAL_REGRESSION",
+      "exitCode": 1,
+      "reason": "STEP3_CREDENTIAL_SET_TIMEOUT",
+      "sourceDigest": "6d15c406a6846476111872d7a8272347b0d5e445e8388f58cbc3b9d78025663d"
+    },
+    "diagnostics": [
+      {
+        "path": "credential-diagnostic-v2-1789145476693",
+        "exitCode": 1,
+        "result": "FAIL_DIAGNOSTIC",
+        "confirmed": "credentials/unset ok:false credential-rejected Windows EPERM rename",
+        "targetAttributes": "Archive; not ReadOnly",
+        "providerRuns": 0,
+        "cleanup": "PASS"
+      },
+      {
+        "path": "credential-diagnostic-v2-1789145620575",
+        "exitCode": 0,
+        "result": "PASS_DIAGNOSTIC_ONLY",
+        "change": "Only mutable test root relocated from checkout/node_modules to OS temp; original UI timing and assertions retained",
+        "providerRuns": 0,
+        "cleanup": "PASS"
+      }
+    ],
+    "rootCause": "REJECTED_WINDOWS_RENAME_CONFIRMED; OCCUPYING_PROCESS_OR_FILESYSTEM_CONDITION_NOT_ESTABLISHED; EARLIER_UNOBSERVED_TIMEOUTS_NOT_ALL_ATTRIBUTED",
+    "corrective": "Non-shipped smoke-slice2-step2.mjs cumulative fixture moved to tmpdir()/shaco-forge-slice2-cumulative-*; Product/Frozen Harness/UI assertions unchanged",
+    "postChangeAttempts": [
+      {
+        "attempt": 7,
+        "phase": "DEVELOPMENT",
+        "exitCode": 1,
+        "reason": "SOURCE_OR_COMPOSITION_CHANGED_REGENERATE_BEFORE_RUNTIME",
+        "runtimeStarted": false
+      },
+      {
+        "attempt": 8,
+        "phase": "DEVELOPMENT",
+        "exitCode": 0,
+        "result": "PASS",
+        "sourceDigest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39",
+        "cleanup": "NO_ORPHAN"
+      }
+    ],
+    "compositionPreparation": "Regenerated frozen Slice2 composition manifest through existing composition gate; not Slice3 Step3",
+    "incident": "docs/04-development-records/incidents/BUG-S3S2-001-WINDOWS-CREDENTIAL-RENAME.md",
+    "incidentStatus": "OPEN",
+    "next": "Full same-source final regression required",
+    "providerRuns": 0,
+    "signingRuns": 0,
+    "productionDataWrites": 0
+  },
+  {
+    "attempt": 14,
+    "id": "STAGED_RAW_FORMATTING_INVENTORY",
+    "command": "dist/check-step2-stage.mjs initial delivery check",
+    "exitCode": 1,
+    "result": "FAIL_DELIVERY_CHECK",
+    "cause": "Raw-log exception inventory listed three trailing-space diagnostics but had not listed original command-output blank lines at EOF.",
+    "corrective": "Enumerated every actual Git whitespace diagnostic, verified all are original task logs, preserved their SHA-256/bytes, extended exact-file format inventory; strict source/document check retained.",
+    "formatEvidence": "raw-log-formatting.json",
+    "sourceChanged": false,
+    "requiredFinalGatesRemain": "PASS_ON_UNCHANGED_FINAL_SOURCE"
+  }
+]

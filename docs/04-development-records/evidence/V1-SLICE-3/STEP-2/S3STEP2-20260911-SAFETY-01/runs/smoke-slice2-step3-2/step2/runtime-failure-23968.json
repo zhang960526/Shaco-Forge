@@ -1,0 +1,7 @@
+{
+  "failure": "STEP3_CREDENTIAL_UNSET_TIMEOUT",
+  "body": "‹\nS\nShaco Forge\nAI 开发工作空间\n+ 新对话\n项目目录\n打开项目…\n▾\nworkspace\n▱\n新对话\n设置\nworkspace\nworkspace\nWorker · 已连接\n从一个想法开始\n\n描述需要完成的工作，或添加图片说明。\n\n＋\nread-only\nworkspace-write\ndanger-full-access\ndeepseek-official / deepseek-v4-flash\nDeepSeek · DeepSeek-V4-Flash\nDeepSeek · DeepSeek-V4-Pro\nDeepSeek · DeepSeek-V4-Flash-Vision-Exp\n默认强度\nOff\nLow\nHigh\nMax\n↑ 发送\n设置\n关闭\n通用 · 外观\n主题模板\nBraun\nFAMICOM\n显示模式\n浅色\n深色\n跟随系统\n\nProvider 与模型\n\n重新读取\nDeepSeek\namazon-bedrock\nant-ling\nanthropic\nazure-openai-responses\nbaseten\ncerebras\ncloudflare-ai-gateway\ncloudflare-workers-ai\ndeepseek\nfireworks\ngithub-copilot\ngoogle\ngoogle-vertex\ngroq\nhuggingface\nkimi-coding\nminimax\nminimax-cn\nmistral\nmoonshotai\nmoonshotai-cn\nnvidia\nopenai\nopenai-codex\nopencode\nopencode-go\nopenrouter\nqwen-token-plan\nqwen-token-plan-cn\nqwen-token-plan-individual\ntogether\nvercel-ai-gateway\nxai\nxiaomi\nxiaomi-token-plan-ams\nxiaomi-token-plan-cn\nxiaomi-token-plan-sgp\nzai\nzai-coding-cn\n+ 自定义 Provider\n添加自定义 Provider / 中转站\nRoute 名称\n显示名称\nAPI Endpoint / 中转地址\nProtocol\n使用 Provider 默认协议\nopenai-completions\nopenai-responses\nanthropic-messages\n模型\nlocal-fixture-model\n移除\n模型 ID\n添加模型\nCredential 引用名称\n保存配置\nCredential\n\n已配置\n\nAPI Key\n保存凭据移除凭据\n\n保存未完成，请重新读取并检查配置。",
+  "slots": [
+    "root"
+  ]
+}

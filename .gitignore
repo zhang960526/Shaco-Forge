@@ -9,3 +9,5 @@ docs/04-development-records/evidence/V1-SLICE-1B/runtime/
 docs/04-development-records/evidence/V1-SLICE-1C/runtime/
 apps/native-carrier/bin/
 apps/native-carrier/obj/
+apps/native-carrier-tests/bin/
+apps/native-carrier-tests/obj/

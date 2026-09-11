@@ -1,0 +1,20 @@
+{
+  "result": "FAIL",
+  "capturedAt": "2026-09-11T16:08:39.004Z",
+  "desktop": {
+    "mainPid": 46180,
+    "electronVersion": "35.7.5"
+  },
+  "startupFailure": "CONTROL_SCHEMA_UNSUPPORTED: Use the supported installer migration or restore the verified release/data pair.",
+  "bootstrapSupervisorChannel": {
+    "finalProductCarrier": false,
+    "businessTraffic": 0,
+    "events": []
+  },
+  "cleanup": {
+    "exited": true,
+    "delivery": "STOP_DELIVERED"
+  },
+  "secretRedacted": true,
+  "pipeEndpointRedacted": true
+}

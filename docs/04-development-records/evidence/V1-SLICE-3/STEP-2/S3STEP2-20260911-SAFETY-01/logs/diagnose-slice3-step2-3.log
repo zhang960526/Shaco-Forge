@@ -1,0 +1,16 @@
+$ node scripts/diagnose-slice3-step2.mjs
+(node:41548) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "result": "READY_OBSERVED",
+  "exitCode": 0,
+  "root": "D:\\Project\\Shaco-Forge\\dist\\slice3-step2-runtime-tests\\diagnostic-1789136475849-8bb12404-5e3a-4f28-a395-db065d5d09e0",
+  "errors": [
+    "{\"protocolVersion\":1,\"phase\":\"host-exited\",\"timestamp\":\"2026-09-11T14:21:32.420Z\",\"workerPid\":3548,\"parentPid\":41548,\"workerNodeVersion\":\"v22.19.0\",\"workerExecutable\":\"C:\\\\Users\\\\18902\\\\AppData\\\\Local\\\\Temp\\\\shaco-forge-s3s1-packages\\\\1789136373490\\\\output\\\\Shaco Forge-win32-x64\\\\runtime\\\\node.exe\",\"workerArgv\":[\"D:\\\\Project\\\\Shaco-Forge\\\\dist\\\\slice3-step2-runtime-tests\\\\diagnostic-1789136475849-8bb12404-5e3a-4f28-a395-db065d5d09e0\\\\adapters\\\\worker-942cdfa0-9e86-4db7-a9e7-c46c6b7eb257.mjs\",\"--validate-upgrade\"],\"harnessPackage\":\"@deepseek-ai/dsh@0.1.2-alpha.1\",\"harnessRelease\":\"dsh-v0.1.2-alpha.1\",\"harnessCommit\":\"cd5ef8148158c3a752a658978873241fdf8e2bbc\",\"hostPid\":33380,\"exitCode\":0,\"signal\":null}",
+    "{\"protocolVersion\":1,\"phase\":\"worker-stopped\",\"timestamp\":\"2026-09-11T14:21:32.442Z\",\"workerPid\":3548,\"parentPid\":41548,\"workerNodeVersion\":\"v22.19.0\",\"workerExecutable\":\"C:\\\\Users\\\\18902\\\\AppData\\\\Local\\\\Temp\\\\shaco-forge-s3s1-packages\\\\1789136373490\\\\output\\\\Shaco Forge-win32-x64\\\\runtime\\\\node.exe\",\"workerArgv\":[\"D:\\\\Project\\\\Shaco-Forge\\\\dist\\\\slice3-step2-runtime-tests\\\\diagnostic-1789136475849-8bb12404-5e3a-4f28-a395-db065d5d09e0\\\\adapters\\\\worker-942cdfa0-9e86-4db7-a9e7-c46c6b7eb257.mjs\",\"--validate-upgrade\"],\"harnessPackage\":\"@deepseek-ai/dsh@0.1.2-alpha.1\",\"harnessRelease\":\"dsh-v0.1.2-alpha.1\",\"harnessCommit\":\"cd5ef8148158c3a752a658978873241fdf8e2bbc\",\"hostPid\":33380,\"exitCode\":0}"
+  ],
+  "outputBytes": 6886,
+  "providerRuns": 0,
+  "signingRuns": 0
+}
+

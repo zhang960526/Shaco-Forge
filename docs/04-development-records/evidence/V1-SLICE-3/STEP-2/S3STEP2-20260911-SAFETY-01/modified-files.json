@@ -1,0 +1,2172 @@
+{
+  "total": 541,
+  "sourceAndConfig": 61,
+  "governanceAndRecord": 8,
+  "evidence": 472,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "change": "MODIFIED"
+    },
+    {
+      "path": ".gitignore",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/desktop/package.json",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/desktop/src/main/bootstrap.ts",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/desktop/src/main/lifecycle-client.ts",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/desktop/src/main/main.ts",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/desktop/src/main/recovery-coordinator.test.ts",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/desktop/src/main/recovery-coordinator.ts",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/desktop/src/main/worker-supervisor.ts",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step1-lifecycle-main.mjs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step2-recovery-main.mjs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step3-interactions-main.mjs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/installer/installer.nsi",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/installer/signer-policy.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/native-carrier-tests/IsolatedBoundary.cs",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/native-carrier-tests/Program.cs",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/native-carrier-tests/ShacoForge.Step2.Tests.csproj",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/native-carrier/Authenticode.cs",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/native-carrier/ControlFilePrimitives.cs",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/native-carrier/LifecycleAuthority.cs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/native-carrier/ProductControl.cs",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/native-carrier/ProductHome.cs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/native-carrier/Program.cs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/native-carrier/RuntimeFence.cs",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/worker/host-profile/carrier-gateway.mjs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/worker/host-profile/upgrade-drain.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/worker/src/control-preflight.ts",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/worker/src/control-store.ts",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/worker/src/durable-files.ts",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/worker/src/index.ts",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/worker/src/installer-entry.ts",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/worker/src/installer-operations.ts",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/worker/src/packaged-config.ts",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/worker/src/profile.test.ts",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/worker/src/profile.ts",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "apps/worker/src/signature-verification.ts",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/worker/src/uninstall.ts",
+      "change": "ADDED"
+    },
+    {
+      "path": "apps/worker/src/update-transaction.ts",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/00-governance/SHACO-FORGE-CURRENT-STATE.md",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "docs/04-development-records/DEVELOPMENT-LOG.md",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "docs/04-development-records/ISSUE-AND-BUG-INDEX.md",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-3-STEP2-IMPLEMENTATION-RECORD.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/F05-TECHNICAL-DISPOSITION-CANDIDATE.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/FINAL-COMMAND-MATRIX.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/FINAL-REPORT.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/FINAL-artifact-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/FINAL-installer-candidate.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/FINAL-packaged-files.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/FINAL-release-manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/MODIFIED-FILES.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/OWNER_SIGNING_HANDOFF.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/README.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/composition/composition-history.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/composition/composition-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-bounded-env/credential-ipc-unset.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-bounded-env/credential-ui-exceptions-2.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-bounded-env/credential-ui-exceptions-3.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-bounded-env/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-bounded-env/runtime-failure-45812.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-bounded-env/runtime-failure-45884.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-bounded-env/step3-ui-28508-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-bounded-env/step3-ui-34192-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-bounded-env/step3-ui-35772-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-bounded-env/step3-ui-35772-2.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/diagnostic-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/main.mjs.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/run.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/run.mjs.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/step2/credential-rpc-17684.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/step2/credential-rpc-34776.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/step2/credential-rpc-7184.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/step2/runtime-failure-7184.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/step2/step3-ui-17684-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/step2/step3-ui-34776-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145476693/step3-shell-driver.mjs.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/diagnostic-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/main.mjs.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/run.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/run.mjs.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/step2/credential-rpc-27124.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/step2/credential-rpc-28768.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/step2/credential-rpc-43104.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/step2/step3-ui-27124-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/step2/step3-ui-27124-2.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/step2/step3-ui-28768-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/step2/step3-ui-43104-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic-v2-1789145620575/step3-shell-driver.mjs.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic/credential-ipc-preload.cjs.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic/credential-ui-exceptions-2.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic/credential-ui-exceptions.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic/credential-unset-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic/prepare-diagnostic.mjs.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic/runtime-failure-42332.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic/runtime-failure-43272.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/credential-diagnostic/runtime-failure-46760.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/delivery-verification.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/development-attempts.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/electron-inspector-1789139563027.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/electron-inspector-1789139614777.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/encoding-verification.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/entry-baseline.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/final-gate-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/final-source-history.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/final-source-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/final-source-inventory.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/gate-classification-and-frozen-identities.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/governance-final-state.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-10.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-11.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-12.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-5.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-6.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-7.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-8.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/build-9.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/composition-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/composition-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/composition-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/composition-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/diagnose-slice3-step2-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/diagnose-slice3-step2-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/diagnose-slice3-step2-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-installer-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-installer-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-installer-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-installer-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-5.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-6.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-7.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-carrier-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-carrier-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-carrier-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-electron-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-electron-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-electron-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-failure-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-failure-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-failure-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-full-shaco-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-full-shaco-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-5.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-6.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-7.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-8.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-9.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step1-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step1-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step1-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step1-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step2-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step2-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step2-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step3-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step3-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step3-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step3-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step3-5.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step3-6.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step3-7.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step3-8.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step3-9.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step3-interactions-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice2-step3-interactions-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice3-step2-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice3-step2-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice3-step2-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice3-step2-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-slice3-step2-5.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-worker-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-worker-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-worker-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-5.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-6.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-full-shaco-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-full-shaco-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-full-shaco-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-installer-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-installer-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-installer-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-packaged-runtime-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-packaged-runtime-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-10.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-5.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-6.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-7.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-8.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-9.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/typecheck-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/typecheck-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/typecheck-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/typecheck-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-f05-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-f05-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-f05-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-f05-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-static-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-static-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-static-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-static-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-theme-1.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-theme-2.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-theme-3.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-theme-4.log",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/modified-files.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/raw-log-formatting.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/diagnose-slice3-step2-1/startup-diagnostic.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/diagnose-slice3-step2-2/startup-diagnostic.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/diagnose-slice3-step2-3/startup-diagnostic.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-installer-2/OWNER_SIGNING_HANDOFF.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-installer-2/installer-candidate.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-installer-3/OWNER_SIGNING_HANDOFF.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-installer-3/installer-candidate.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-installer-4/OWNER_SIGNING_HANDOFF.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-installer-4/installer-candidate.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-1/artifact-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-1/harness-production-closure.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-1/package-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-1/packaged-files.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-1/production-roots.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-1/release-manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-1/source-inventory.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-2/artifact-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-2/harness-production-closure.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-2/package-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-2/packaged-files.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-2/production-roots.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-2/release-manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-2/source-inventory.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-3/artifact-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-3/harness-production-closure.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-3/package-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-3/packaged-files.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-3/production-roots.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-3/release-manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-3/source-inventory.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-4/artifact-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-4/harness-production-closure.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-4/package-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-4/packaged-files.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-4/production-roots.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-4/release-manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-4/source-inventory.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-5/artifact-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-5/harness-production-closure.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-5/package-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-5/packaged-files.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-5/production-roots.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-5/release-manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-5/source-inventory.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-6/artifact-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-6/harness-production-closure.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-6/package-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-6/packaged-files.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-6/production-roots.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-6/release-manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-6/source-inventory.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-7/artifact-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-7/harness-production-closure.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-7/package-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-7/packaged-files.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-7/production-roots.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-7/release-manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/package-runtime-7/source-inventory.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-carrier-1/step1/security-negative-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-carrier-2/step1/security-negative-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-carrier-3/step1/security-negative-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-electron-1/step1/electron-regression.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-electron-2/step1/electron-regression.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-electron-3/step1/electron-regression.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-failure-1/step1/electron-regression.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-failure-2/step1/electron-regression.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-failure-3/step1/electron-regression.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/approval-cold-rebuild.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/approval-cold-rebuild.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/approval-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/approval-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/approval-real-host-lifecycle.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/bootstrap-loading.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/bootstrap-loading.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/braun-approval-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/braun-approval-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/braun-multi-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/braun-multi-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/braun-plan-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/braun-plan-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/braun-question-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/braun-question-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/braun-representative.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/braun-representative.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/conversation-error.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/conversation-error.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/conversation-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/conversation-result.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/conversation-streaming.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/conversation-streaming.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/conversation-tool.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/conversation-tool.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/famicom-approval-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/famicom-approval-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/famicom-multi-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/famicom-multi-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/famicom-plan-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/famicom-plan-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/famicom-question-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/famicom-question-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/famicom-representative.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/famicom-representative.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/full-shaco-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/history-cold-rebuild.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/history-cold-rebuild.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/multi-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/multi-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/narrow-window.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/narrow-window.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/no-project.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/no-project.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/plan-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/plan-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/project-blank-chat.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/project-blank-chat.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/question-cold-rebuild.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/question-cold-rebuild.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/question-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/question-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/question-real-host-lifecycle.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/shaco-root-error.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/shaco-root-error.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/shaco-settings.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/shaco-settings.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/step3-ui-37144-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/tool-result-detail.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-1/step2/tool-result-detail.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/approval-cold-rebuild.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/approval-cold-rebuild.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/approval-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/approval-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/approval-real-host-lifecycle.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/bootstrap-loading.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/bootstrap-loading.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/braun-approval-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/braun-approval-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/braun-multi-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/braun-multi-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/braun-plan-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/braun-plan-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/braun-question-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/braun-question-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/braun-representative.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/braun-representative.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/conversation-error.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/conversation-error.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/conversation-result.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/conversation-result.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/conversation-streaming.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/conversation-streaming.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/conversation-tool.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/conversation-tool.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/famicom-approval-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/famicom-approval-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/famicom-multi-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/famicom-multi-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/famicom-plan-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/famicom-plan-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/famicom-question-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/famicom-question-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/famicom-representative.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/famicom-representative.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/full-shaco-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/history-cold-rebuild.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/history-cold-rebuild.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/multi-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/multi-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/narrow-window.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/narrow-window.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/no-project.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/no-project.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/plan-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/plan-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/project-blank-chat.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/project-blank-chat.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/question-cold-rebuild.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/question-cold-rebuild.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/question-pending.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/question-pending.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/question-real-host-lifecycle.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/shaco-root-error.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/shaco-root-error.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/shaco-settings.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/shaco-settings.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/step3-ui-27196-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/tool-result-detail.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-full-shaco-2/step2/tool-result-detail.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-3/native-compatibility-prewrite.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-3/packaged-step2-summary.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-5/production-desktop-exit.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-6/production-desktop-exit.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-7/native-compatibility-prewrite.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-7/packaged-isolated-desktop.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-7/packaged-isolated-desktop.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-7/packaged-step2-summary.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-7/production-desktop-exit.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-7/production-desktop-prewrite-refusal.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-8/native-compatibility-prewrite.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-8/packaged-isolated-desktop.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-8/packaged-isolated-desktop.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-8/packaged-step2-summary.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-8/production-desktop-exit.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-8/production-desktop-prewrite-refusal.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-9/native-compatibility-prewrite.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-9/packaged-isolated-desktop.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-9/packaged-isolated-desktop.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-9/packaged-step2-summary.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-9/production-desktop-exit.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-packaged-runtime-9/production-desktop-prewrite-refusal.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-2/step1/attachment-sequence.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-2/step1/authority-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-2/step1/powershell-resolution.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-2/step1/security-negative-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-3/step1/attachment-sequence.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-3/step1/authority-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-3/step1/powershell-resolution.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-3/step1/security-negative-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-4/step1/attachment-sequence.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-4/step1/authority-identity.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-4/step1/powershell-resolution.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step1-4/step1/security-negative-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step2-1/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step2-2/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step2-3/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-1/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-1/step2/runtime-failure-37564.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-2/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-2/step2/runtime-failure-23968.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-3/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-3/step2/runtime-failure-43676.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-4/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-4/step2/step3-ui-24572-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-4/step2/step3-ui-39048-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-4/step2/step3-ui-46664-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-4/step2/step3-ui-46664-2.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-5/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-5/step2/step3-ui-12376-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-5/step2/step3-ui-34644-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-5/step2/step3-ui-34644-2.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-5/step2/step3-ui-8188-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-6/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-6/step2/runtime-failure-29896.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-6/step2/step3-ui-41968-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-8/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-8/step2/step3-ui-32568-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-8/step2/step3-ui-35660-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-8/step2/step3-ui-46508-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-8/step2/step3-ui-46508-2.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-9/step2/cumulative-e2e.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-9/step2/step3-ui-34880-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-9/step2/step3-ui-37384-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-9/step2/step3-ui-41472-1.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-9/step2/step3-ui-41472-2.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-interactions-1/step2/approval-real-host-lifecycle.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-interactions-1/step2/question-real-host-lifecycle.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-interactions-1/step2/s3g16-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-interactions-2/step2/approval-real-host-lifecycle.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-interactions-2/step2/question-real-host-lifecycle.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice2-step3-interactions-2/step2/s3g16-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice3-step2-1/step2-integration.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice3-step2-2/step2-integration.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice3-step2-3/step2-integration.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice3-step2-4/step1-backup-manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice3-step2-4/step2-integration.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice3-step2-5/step1-backup-manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/smoke-slice3-step2-5/step2-integration.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/test-installer-1/installer-verification.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/test-installer-2/installer-verification.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/test-installer-3/installer-verification.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/test-slice3-step2-10/native-and-signature-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/test-slice3-step2-3/native-and-signature-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/test-slice3-step2-5/native-and-signature-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/test-slice3-step2-6/native-and-signature-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/test-slice3-step2-7/native-and-signature-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/test-slice3-step2-8/native-and-signature-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/test-slice3-step2-9/native-and-signature-results.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/verify-f05-2/F05-TECHNICAL-DISPOSITION-CANDIDATE.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/verify-f05-3/F05-TECHNICAL-DISPOSITION-CANDIDATE.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/runs/verify-f05-4/F05-TECHNICAL-DISPOSITION-CANDIDATE.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/signature-gate.ps1.retired.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/staging-verification.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/step1-source-location.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/test-summary.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/toolchain.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/verify-authenticode.ps1.retired.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/visual-verification.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/04-development-records/incidents/BUG-S3S2-001-WINDOWS-CREDENTIAL-RENAME.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "docs/07-handover/CURRENT-CHECKPOINT.md",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "package.json",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "packages/contracts/package.json",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "packages/contracts/src/compatibility.ts",
+      "change": "ADDED"
+    },
+    {
+      "path": "packages/contracts/src/packaged-runtime.ts",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "scripts/diagnose-slice3-step2.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/electron-user-loop.mjs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "scripts/package-installer.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/package-runtime.mjs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "scripts/slice3-step2-command.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/slice3-step2-f05.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/slice3-step2-final-source.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/slice3-step2-fixtures.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/slice3-step2-gateway-fixture.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/slice3-step2-gateway.test.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/slice3-step2-native.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/slice3-step2.test.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/smoke-packaged-runtime.mjs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "scripts/smoke-packaged-step2.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/smoke-slice2-step2.mjs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "scripts/smoke-slice3-step2.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/step3-fixture-boundaries.test.mjs",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "scripts/test-installer.mjs",
+      "change": "ADDED"
+    },
+    {
+      "path": "scripts/user-loop-policy.test.mjs",
+      "change": "MODIFIED"
+    }
+  ]
+}

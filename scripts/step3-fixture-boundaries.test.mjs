@@ -20,6 +20,7 @@ test('default and singly enabled Host profiles cannot load test-only RPC; double
       const home=join(root,String(index)),overlay=join(home,'runtime/node_modules'),scope=join(overlay,'@deepseek-ai')
       const source=join(home,'module.mjs')
       await mkdir(scope,{recursive:true});await writeFile(source,'export {}\n','utf8')
+      await writeFile(join(home,'upgrade-drain.mjs'),'export {}\n','utf8')
       const profile=await materializeHarnessProfile(home,profileName,source,source,source,source,scope,overlay)
       const bundle=join(profile,'node_modules/@shaco-forge/harness-bootstrap')
       const manifest=JSON.parse(await readFile(join(bundle,'package.json'),'utf8'))

@@ -1,0 +1,14 @@
+$ node scripts/smoke-packaged-runtime.mjs
+(node:41768) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PRODUCTION_DESKTOP_PREWRITE_BEGIN
+PRODUCTION_DESKTOP_PREWRITE_REFUSAL: PASS
+NATIVE_COMPATIBILITY_PREWRITE: PASS
+{
+  "result": "PASS",
+  "packagedArtifactDigest": "344a17248add5b49c3617d4cf5e7f41520884b542f125135107b94a45bded616",
+  "explicitIsolatedAdapter": true,
+  "providerRuns": 0,
+  "signingRuns": 0
+}
+

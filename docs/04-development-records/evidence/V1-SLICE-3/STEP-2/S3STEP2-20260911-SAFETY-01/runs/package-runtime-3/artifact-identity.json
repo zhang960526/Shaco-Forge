@@ -1,0 +1,8 @@
+{
+  "format": "SHACO_FORGE_PACKAGED_ARTIFACT_V1",
+  "releaseManifestSha256": "e94354f920bf1026ce84aee1f2bd79b6d40bd32e0fb44519565407d3399dabcf",
+  "fileManifestSha256": "3f3e14ea10d33db7b989a7d1bcba37c327af78fbd3f63df8234fbdf51e5d2dfa",
+  "digest": "0d5815cb6fe0db1199c9397f2350d7542c9ea83e9c9ee8ab915758f255f0b3ee",
+  "scope": "PACKAGED_RUNTIME_BYTES_EXCLUDING_IDENTITY_ENVELOPES",
+  "signing": "NOT_PERFORMED"
+}

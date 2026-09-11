@@ -10,7 +10,7 @@ internal static class ProductHome
     [DllImport("shell32.dll", CharSet = CharSet.Unicode, PreserveSig = true)]
     private static extern int SHGetKnownFolderPath(in Guid id, uint flags, nint token, out nint path);
 
-    private static string KnownFolder(Guid id)
+    internal static string KnownFolder(Guid id)
     {
         int result = SHGetKnownFolderPath(in id, 0, 0, out nint pointer);
         if (result != 0) Marshal.ThrowExceptionForHR(result);
@@ -27,13 +27,13 @@ internal static class ProductHome
         source = "SHGetKnownFolderPath_CURRENT_USER"
     };
 
-    private static void CheckAncestors(string path)
+    internal static void CheckAncestors(string path)
     {
         for (DirectoryInfo? dir = new(path); dir is not null; dir = dir.Parent)
             if (dir.Exists && (dir.Attributes & FileAttributes.ReparsePoint) != 0) throw new IOException("DSH_HOME_REPARSE_REJECTED");
     }
 
-    private static void RequirePrivate(DirectoryInfo dir)
+    internal static void RequirePrivate(DirectoryInfo dir)
     {
         DirectorySecurity acl = dir.GetAccessControl();
         if (!WindowsAuthority.Sid.Equals(acl.GetOwner(typeof(SecurityIdentifier))) || !acl.AreAccessRulesProtected)
@@ -45,7 +45,7 @@ internal static class ProductHome
             throw new UnauthorizedAccessException("DSH_HOME_SHARED_ACL_REJECTED");
     }
 
-    private static void CreatePrivate(string path)
+    internal static void CreatePrivate(string path)
     {
         CheckAncestors(path);
         DirectoryInfo dir = new(path);

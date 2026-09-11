@@ -1,0 +1,25 @@
+$ node scripts/smoke-slice3-step2.mjs
+(node:40528) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+FRESH_INSTALL: FAIL
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: VALIDATION_WORKER_START_FAILED
++ actual - expected
+
++ 'RESTORED'
+- 'COMMITTED'
+
+    at file:///D:/Project/Shaco-Forge/scripts/smoke-slice3-step2.mjs:29:8 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'RESTORED',
+  expected: 'COMMITTED',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

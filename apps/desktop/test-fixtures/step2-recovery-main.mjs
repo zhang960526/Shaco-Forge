@@ -2,7 +2,8 @@
 import { app, BrowserWindow } from 'electron'
 import { createHash } from 'node:crypto'
 import { readFile, writeFile } from 'node:fs/promises'
-import { observeStep2Recovery, simulateStep2CarrierLoss } from '../dist/main/main.js'
+import { startDesktop, observeStep2Recovery, simulateStep2CarrierLoss } from '../dist/main/main.js'
+void startDesktop()
 const step3 = process.env.SHACO_FORGE_STEP3_MODE === '1' ? await import('./step3-shell-driver.mjs') : undefined
 
 const control = process.env.SHACO_FORGE_STEP2_CONTROL

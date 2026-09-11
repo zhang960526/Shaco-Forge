@@ -1,0 +1,45 @@
+{
+  "result": "PASS",
+  "unsignedProductionEntryExitCode": 1,
+  "unsignedDirectProductionEntryRejected": true,
+  "candidate": {
+    "result": "UNSIGNED_INSTALLER_CANDIDATE",
+    "releaseReady": false,
+    "productionSigned": false,
+    "path": "D:\\Project\\Shaco-Forge\\dist\\installers\\Shaco-Forge-1.0.0-dev.1-1789143003889-unsigned.exe",
+    "bytes": 163021638,
+    "sha256": "304dc5af591fdaf0fe6e09d8171212c950a70bfaef9595b4926099a11c047527",
+    "packagedArtifactDigest": "344a17248add5b49c3617d4cf5e7f41520884b542f125135107b94a45bded616",
+    "releaseManifestDigest": "5126af7f269083b97cb5f73bb7d7075bae22a6bea12821c02ad370fad6db6605",
+    "installerTool": {
+      "name": "NSIS",
+      "version": "3.12",
+      "archiveSha256": "56581f90db321581c5381193d796fffcf2d24b2f8fed2160a6c6a3baa67f2c4f"
+    },
+    "target": "WINDOWS_X64_PER_USER",
+    "signingRuns": 0,
+    "providerRuns": 0,
+    "evidence": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\STEP-2\\S3STEP2-20260911-SAFETY-01\\runs\\package-installer-3"
+  },
+  "signature": {
+    "status": "NotSigned",
+    "signatureType": "None",
+    "signer": null,
+    "timestamp": {
+      "certificate": null,
+      "signingTimes": [],
+      "source": "WINTRUST_VERIFIED_COUNTERSIGNER"
+    },
+    "fileSha256": "304dc5af591fdaf0fe6e09d8171212c950a70bfaef9595b4926099a11c047527",
+    "winTrustStatus": "NO_EMBEDDED_SIGNATURE"
+  },
+  "expectedPolicy": {
+    "certificateSha256": [],
+    "timestampRequired": true,
+    "state": "PENDING_ARCHITECTURE_OWNER_PUBLIC_SIGNER_IDENTITY"
+  },
+  "knownFolderCreation": false,
+  "workerAuthorityCreated": false,
+  "providerRuns": 0,
+  "signingRuns": 0
+}

@@ -1,0 +1,357 @@
+{
+  "rawBytesPreserved": true,
+  "policy": "Task explicitly requires complete original failure/diagnostic history",
+  "files": [
+    {
+      "path": "logs/test-slice3-step2-2.log",
+      "sha256": "ee6384cde9ee6e13ecdbea60f20f9b94c8bf726870465380f9ed6b66530a1852",
+      "reason": "Original diagnostic output trailing spaces retained under current task requirement to preserve actual failures and logs; no source/doc whitespace exception inferred.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 209,
+          "kind": "trailing whitespace"
+        },
+        {
+          "gitDiffLine": 215,
+          "kind": "trailing whitespace"
+        },
+        {
+          "gitDiffLine": 216,
+          "kind": "trailing whitespace"
+        }
+      ]
+    },
+    {
+      "path": "logs/test-slice3-step2-4.log",
+      "sha256": "bb0ad8fbf00e76a5ff86aab09b25b9b0d92ee06cd9160cb2c19c33ff2c81d06a",
+      "reason": "Original diagnostic output trailing spaces retained under current task requirement to preserve actual failures and logs; no source/doc whitespace exception inferred.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 12,
+          "kind": "trailing whitespace"
+        },
+        {
+          "gitDiffLine": 14,
+          "kind": "trailing whitespace"
+        }
+      ]
+    },
+    {
+      "path": "logs/diagnose-slice3-step2-1.log",
+      "sha256": "d097a46904759f5ad6f1ae727205a001dc8cb108751fdca3ebc1b6b4f88bcd1e",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 13,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/diagnose-slice3-step2-3.log",
+      "sha256": "429f646be1c06ab18a3d2136a0efdcf92eed9663db0421e97ddb5e30af513e62",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 16,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/package-installer-2.log",
+      "sha256": "99fc1fd6ae71ca98a4274d62f57f0a1eadbef43d69da65f8c7604466140b639b",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 45,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/package-installer-3.log",
+      "sha256": "c7fd121ff77c7ad2347331381e7c9830d75a185fcc6869837aab554ab6e6642f",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 45,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/package-installer-4.log",
+      "sha256": "7b8559dce831b7b38461dc3022f7e1af6a29e4193a02a3919f83e4d2fa07c0cd",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 45,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/package-runtime-1.log",
+      "sha256": "b926f594f699208115794c0dcef4923b631e80ba44872fba7b063959978679ad",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 11,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/package-runtime-2.log",
+      "sha256": "fd953dff6fc2895e41c85fa0df191ebb9a43d424a9b54debb5b9118ca343e160",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 11,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/package-runtime-3.log",
+      "sha256": "28c89542dca2578fadb0af0925beb2dabf3b7e50c10c0296a2de63a14da22732",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 11,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/package-runtime-4.log",
+      "sha256": "0df2f027f191aece53848cec173035adaa071edd3a2c8825d7c1a62d6c5a850b",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 11,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/package-runtime-5.log",
+      "sha256": "11d987c3306b94888c37ae2ed0fbf946a9633a2bb616e6d5d1c593f74a2e4178",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 11,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/package-runtime-6.log",
+      "sha256": "daaab6cdfa9e447301f362f6812578ae3abdbebf99804f130413fe58c1063454",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 11,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/package-runtime-7.log",
+      "sha256": "a4607cf68757ff3b3f8d70eb792f6ca73972eac4565014e9debb0fd1130f634c",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 11,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/smoke-packaged-runtime-7.log",
+      "sha256": "9c0a89848fd55261c2355822c29c390739ca5a01010b4c4aecbcf3c950035ba7",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 14,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/smoke-packaged-runtime-8.log",
+      "sha256": "152b411d03502c7e1bd4997987e2ae005a3d41c1742c3a92862c4801092b3d74",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 14,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/smoke-packaged-runtime-9.log",
+      "sha256": "e63aff2cc234eeb2198c428bddbc8c3a87348839f16166846a12010308a47217",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 14,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/test-installer-1.log",
+      "sha256": "c3904f983de08d9248440d56dc6171cf5bf309eb42d7e991324fdeffe1096f49",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 7,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/test-installer-2.log",
+      "sha256": "c3904f983de08d9248440d56dc6171cf5bf309eb42d7e991324fdeffe1096f49",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 7,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/test-installer-3.log",
+      "sha256": "c3904f983de08d9248440d56dc6171cf5bf309eb42d7e991324fdeffe1096f49",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 7,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/test-slice3-step2-10.log",
+      "sha256": "696af97f648498cab27fc4c99f465ebd8cd5050afd5f6ee5a1f7a6212213c970",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 237,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/test-slice3-step2-3.log",
+      "sha256": "4e26c9044569251add2db58075181c19a1b239cbaed38ff3c7f1051ca14db2f0",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 207,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/test-slice3-step2-5.log",
+      "sha256": "6fdaee8557ad7f426b78b6b5df764abf58bd324f9314cda407442168960c8b30",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 231,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/test-slice3-step2-6.log",
+      "sha256": "c5bd03ed8c46f7bd1bb17118ed04b07924ac4a10eee190a5a8dc71e14f958899",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 237,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/test-slice3-step2-7.log",
+      "sha256": "37a09121bafa19769d43aa190bf3b01309e143441a0367350aa0e773935446fb",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 237,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/test-slice3-step2-8.log",
+      "sha256": "ac20283be49ba28bdb995cec2851116799f207ba797d32c01097fc03e34736df",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 237,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/test-slice3-step2-9.log",
+      "sha256": "ca95975ffc8a5077dfd61ecf3cee571eb19e513c84495594ff6348341901e5dd",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 237,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/verify-f05-2.log",
+      "sha256": "472a2411b37e322237b4ad2a09591e60069fea55f30b344ab541c8df341f37d0",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 7,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/verify-f05-3.log",
+      "sha256": "472a2411b37e322237b4ad2a09591e60069fea55f30b344ab541c8df341f37d0",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 7,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    },
+    {
+      "path": "logs/verify-f05-4.log",
+      "sha256": "472a2411b37e322237b4ad2a09591e60069fea55f30b344ab541c8df341f37d0",
+      "reason": "Original command output blank line at EOF preserved; no source/document whitespace exception.",
+      "diagnostics": [
+        {
+          "gitDiffLine": 7,
+          "kind": "new blank line at EOF"
+        }
+      ]
+    }
+  ],
+  "initialFullStagedCheck": {
+    "command": "git -c core.whitespace=cr-at-eol diff --cached --check",
+    "exitCode": 2,
+    "stdout": "docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/diagnose-slice3-step2-1.log:13: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/diagnose-slice3-step2-3.log:16: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-installer-2.log:45: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-installer-3.log:45: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-installer-4.log:45: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-1.log:11: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-2.log:11: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-3.log:11: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-4.log:11: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-5.log:11: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-6.log:11: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/package-runtime-7.log:11: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-7.log:14: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-8.log:14: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/smoke-packaged-runtime-9.log:14: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-installer-1.log:7: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-installer-2.log:7: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-installer-3.log:7: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-10.log:237: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-2.log:209: trailing whitespace.\n+IOException\r\r\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-2.log:215: trailing whitespace.\n+  IOException\r\r\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-2.log:216: trailing whitespace.\n+  \r\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-3.log:207: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-4.log:12: trailing whitespace.\n+    \ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-4.log:14: trailing whitespace.\n+    \ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-5.log:231: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-6.log:237: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-7.log:237: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-8.log:237: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/test-slice3-step2-9.log:237: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-f05-2.log:7: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-f05-3.log:7: new blank line at EOF.\ndocs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/logs/verify-f05-4.log:7: new blank line at EOF.\n",
+    "stderr": ""
+  },
+  "trailingWhitespaceDiagnostics": 5,
+  "blankLineAtEofDiagnostics": 28,
+  "affectedRawLogs": 30
+}

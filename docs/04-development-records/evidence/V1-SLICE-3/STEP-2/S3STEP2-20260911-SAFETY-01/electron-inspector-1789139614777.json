@@ -1,0 +1,64 @@
+{
+  "phase": "DIAGNOSTIC_ONLY",
+  "pid": 46676,
+  "exitCode": null,
+  "probes": [
+    {
+      "id": 2,
+      "result": {
+        "result": {
+          "type": "object",
+          "value": {
+            "pid": 46676,
+            "resources": [
+              "FSReqCallback",
+              "FSReqCallback",
+              "FSReqCallback",
+              "FSReqCallback",
+              "FSReqCallback",
+              "FSReqCallback",
+              "FSReqCallback",
+              "FSReqCallback",
+              "FSReqCallback",
+              "PipeWrap"
+            ],
+            "handles": [
+              "Socket"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "result": {
+        "result": {
+          "type": "object",
+          "value": {
+            "appReady": true,
+            "packaged": true
+          }
+        }
+      }
+    },
+    {
+      "productScripts": [
+        "file:///C:/Users/18902/AppData/Local/Temp/shaco-forge-s3s1-packages/1789138914009/output/Shaco%20Forge-win32-x64/resources/app/desktop-launch.mjs",
+        "file:///C:/Users/18902/AppData/Local/Temp/shaco-forge-s3s1-packages/1789138914009/output/Shaco%20Forge-win32-x64/resources/app/node_modules/@shaco-forge/contracts/dist/packaged-runtime.js",
+        "file:///C:/Users/18902/AppData/Local/Temp/shaco-forge-s3s1-packages/1789138914009/output/Shaco%20Forge-win32-x64/resources/app/node_modules/@shaco-forge/contracts/dist/compatibility.js",
+        "file:///C:/Users/18902/AppData/Local/Temp/shaco-forge-s3s1-packages/1789138914009/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/main.js",
+        "file:///C:/Users/18902/AppData/Local/Temp/shaco-forge-s3s1-packages/1789138914009/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/recovery-coordinator.js",
+        "file:///C:/Users/18902/AppData/Local/Temp/shaco-forge-s3s1-packages/1789138914009/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/carrier-client.js",
+        "file:///C:/Users/18902/AppData/Local/Temp/shaco-forge-s3s1-packages/1789138914009/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/workspace-picker.js",
+        "file:///C:/Users/18902/AppData/Local/Temp/shaco-forge-s3s1-packages/1789138914009/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/security.js",
+        "file:///C:/Users/18902/AppData/Local/Temp/shaco-forge-s3s1-packages/1789138914009/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/window-lifecycle.js",
+        "file:///C:/Users/18902/AppData/Local/Temp/shaco-forge-s3s1-packages/1789138914009/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/worker-supervisor.js",
+        "file:///C:/Users/18902/AppData/Local/Temp/shaco-forge-s3s1-packages/1789138914009/output/Shaco%20Forge-win32-x64/resources/app/desktop/dist/main/lifecycle-client.js"
+      ]
+    }
+  ],
+  "diagnostic": "\r\nDebugger listening on [LOOPBACK_INSPECTOR_REDACTED]\r\nFor help, see: https://nodejs.org/en/docs/inspector\r\nDebugger attached.\r\n",
+  "productionDataWrites": 0,
+  "providerRuns": 0,
+  "signingRuns": 0
+}

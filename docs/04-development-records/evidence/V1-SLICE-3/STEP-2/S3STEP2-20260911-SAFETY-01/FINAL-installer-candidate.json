@@ -1,0 +1,18 @@
+{
+  "result": "UNSIGNED_INSTALLER_CANDIDATE",
+  "releaseReady": false,
+  "productionSigned": false,
+  "path": "D:\\Project\\Shaco-Forge\\dist\\installers\\Shaco-Forge-1.0.0-dev.1-1789146867101-unsigned.exe",
+  "bytes": 162976610,
+  "sha256": "91edf1658b734b3feca51abc082f366e0bf15442aba4e355c885a035b3f1c809",
+  "packagedArtifactDigest": "df35daad07b98e6a4bdb81501fcd33390b6c07f37dd7b813a18218d718bfde6f",
+  "releaseManifestDigest": "ce8b5714cd442b458db64a83bedfffdfd055fc9e07e2080bcd42f3fc81e3dd3d",
+  "installerTool": {
+    "name": "NSIS",
+    "version": "3.12",
+    "archiveSha256": "56581f90db321581c5381193d796fffcf2d24b2f8fed2160a6c6a3baa67f2c4f"
+  },
+  "target": "WINDOWS_X64_PER_USER",
+  "signingRuns": 0,
+  "providerRuns": 0
+}

@@ -1,0 +1,33 @@
+$ node scripts/smoke-slice3-step2.mjs
+(node:28968) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+FRESH_INSTALL: PASS
+ACTUAL_VALIDATION_DRAIN: PASS
+STEP1_PAIR_RESTORE: PASS
+RESTORED_RESTART: PASS
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
++   'harness/profiles/shaco-forge/.dsh-module-fallback/node_modules/',
+    'user-unowned.txt'
+  ]
+
+    at file:///D:/Project/Shaco-Forge/scripts/smoke-slice3-step2.mjs:61:8 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    'harness/profiles/shaco-forge/.dsh-module-fallback/node_modules/',
+    'user-unowned.txt'
+  ],
+  expected: [ 'user-unowned.txt' ],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

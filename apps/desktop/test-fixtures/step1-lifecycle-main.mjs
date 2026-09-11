@@ -1,7 +1,8 @@
 // Bounded non-Provider driver around the actual Product Electron Main entry.
 import { app, BrowserWindow } from 'electron'
 import { createHash } from 'node:crypto'
-import { observeStep1Lifecycle } from '../dist/main/main.js'
+import { startDesktop, observeStep1Lifecycle } from '../dist/main/main.js'
+void startDesktop()
 
 const deadline = Date.now() + 90_000
 const timer = setInterval(async () => {

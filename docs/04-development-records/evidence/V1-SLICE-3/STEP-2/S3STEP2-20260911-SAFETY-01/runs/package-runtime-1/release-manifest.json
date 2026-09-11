@@ -1,0 +1,91 @@
+{
+  "ProductVersion": "1.0.0-dev.1",
+  "DesktopVersion": "1.0.0-dev.1",
+  "WorkerVersion": "1.0.0-dev.1",
+  "CarrierVersion": 1,
+  "HarnessBaselineVersion": "0.1.2-alpha.1",
+  "ControlStoreSchemaVersion": "1",
+  "Compatibility": {
+    "allowedTuples": [
+      {
+        "ProductVersion": "1.0.0-dev.1",
+        "DesktopVersion": "1.0.0-dev.1",
+        "WorkerVersion": "1.0.0-dev.1",
+        "CarrierVersion": 1,
+        "HarnessBaselineVersion": "0.1.2-alpha.1",
+        "ControlStoreSchemaVersion": "1"
+      }
+    ],
+    "desktopCarrierVersions": [
+      1
+    ],
+    "workerCarrierVersions": [
+      1
+    ],
+    "workerSchemas": [
+      "1"
+    ],
+    "sourceRoutes": [
+      {
+        "kind": "STEP1_NO_STORE",
+        "sourceBaselineCommit": "99561f80629a8f9640af702fe322996bcc850906",
+        "artifactDigest": "b84beea0575404242b3979bd260cb3f98ed6c443ba9e71789e6f799c8f409b05",
+        "schema": "NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES",
+        "targetSchema": "1",
+        "restore": "EXACT_SOURCE_RUNTIME_AND_PRE_UPGRADE_BYTES"
+      }
+    ],
+    "freshInstall": "INSTALLER_EXPLICIT_BOOTSTRAP"
+  },
+  "ProductionSignerPolicy": {
+    "certificateSha256": [],
+    "timestampRequired": true,
+    "state": "PENDING_ARCHITECTURE_OWNER_PUBLIC_SIGNER_IDENTITY"
+  },
+  "ElectronVersion": "35.7.5",
+  "WorkerNodeVersion": "22.19.0",
+  "Platform": "win32",
+  "Architecture": "x64",
+  "HarnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+  "HarnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+  "ProductionProfileIdentity": "shaco-forge",
+  "SourceCommit": "514e1759b4991e950d5ad5169e3fc86dc3cc025f",
+  "SourceState": "WORKTREE_OVER_SOURCE_COMMIT_BOUND_BY_SOURCE_INVENTORY",
+  "FrozenContractIdentity": "35152ace7e1bb85ad6ecec801e20202d55ee960acb2137340ae932777da1bf76",
+  "PackagedRuntimeLayoutVersion": 1,
+  "PackagingTool": {
+    "name": "@electron/packager",
+    "version": "18.3.6"
+  },
+  "NativeRuntime": {
+    "target": "net10.0-windows",
+    "runtime": "win-x64",
+    "selfContained": true,
+    "workerNodeAbi": "127",
+    "includedFrameworks": [
+      {
+        "name": "Microsoft.NETCore.App",
+        "version": "10.0.10"
+      }
+    ]
+  },
+  "BuildProvenance": {
+    "sourceInventorySha256": "64d0badb08fad4b1bb0d663990cdfa70a278e71a16632a19bfb33ef197823670",
+    "lockfileSha256": "22c6b61a70c5c716d8b5914632af26dd593a90b78e07b9c2fc4a4a70420e758a",
+    "harnessLockfileSha256": "506ad1fc7c40f71ce8c6afe08724fdd55020c1a527d7a7a185c559d39ecfcaf1",
+    "clientCompositionSha256": "ea3085e80ac65bbbb439db49268eb20b84f0b8788560beb68026eb62600568dd",
+    "harnessProductionClosureSha256": "fcc3568aa29adf1982d05dfa2e76511f034e7f851c0173a8e38e796b396f834c"
+  },
+  "layout": {
+    "desktop": "Shaco Forge.exe",
+    "desktopEntry": "resources/app/desktop/dist/main/main.js",
+    "workerEntry": "resources/app/worker-launch.mjs",
+    "workerMain": "resources/app/worker/dist/index.js",
+    "node": "runtime/node.exe",
+    "harness": "harness/node_modules/@deepseek-ai/dsh/lib/bin.js",
+    "harnessManifest": "harness/node_modules/@deepseek-ai/dsh/package.json",
+    "profile": "harness/profiles/shaco-forge",
+    "nativeHelper": "native/ShacoForge.NativeCarrier.exe",
+    "client": "resources/app/desktop/dist/renderer/index.html"
+  }
+}

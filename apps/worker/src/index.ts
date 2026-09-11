@@ -1,6 +1,10 @@
 import { spawn, type ChildProcess } from 'node:child_process'
 import { randomUUID } from 'node:crypto'
-import { access } from 'node:fs/promises'
+import { readFileSync } from 'node:fs'
+import { sixIdentities } from '@shaco-forge/contracts/compatibility'
+import { verifyPackagedRuntime } from '@shaco-forge/contracts/packaged-runtime'
+import { assertControlReady, assertPackagedControl } from './control-preflight.js'
+import { access, writeFile } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
 import type { Readable, Writable } from 'node:stream'
 import { fileURLToPath } from 'node:url'
@@ -34,6 +38,9 @@ let host: ChildProcess | undefined
 let helper: ChildProcess | undefined
 let stopping = false
 let carrierReady = false
+let upgradeTransaction: string | undefined
+let upgradeDrained: Record<string, unknown> | undefined
+let upgradeProofAt = 0
 const workerInstanceId = randomUUID()
 
 function emit(phase: BootstrapPhase, extra: Partial<BootstrapEvent> = {}): void {
@@ -155,11 +162,16 @@ function validateHostFrame(value: unknown): Record<string, unknown> {
   return value
 }
 
-async function main(): Promise<void> {
+export async function startWorker(providedConfig?: import('./config.js').WorkerConfig): Promise<void> {
   if (process.version !== EXPECTED_WORKER_NODE_VERSION) {
     throw new Error(`Worker requires ${EXPECTED_WORKER_NODE_VERSION}; received ${process.version}`)
   }
-  const config = await readPackagedWorkerConfig(sourceDir) ?? readWorkerConfig(process.env)
+  const config = providedConfig ?? await readPackagedWorkerConfig(sourceDir) ?? readWorkerConfig(process.env)
+  if (providedConfig?.packagedRoot) {
+    const release = await verifyPackagedRuntime(providedConfig.packagedRoot)
+    assertPackagedControl(providedConfig.packagedRoot, release, join(dirname(config.dshHome), 'control'), config.dshHome, process.argv.includes('--validate-upgrade'))
+  }
+  if (process.argv.includes('--preflight')) { process.stdout.write(JSON.stringify({ result: 'PASS', writes: 0, dshHome: config.dshHome }) + '\n'); return }
   await access(config.nativeHelperPath)
   const runtime = config.packagedRoot === undefined
     ? await materializeFrozenHarnessRuntime(config.harnessRoot, config.dshHome)
@@ -200,6 +212,8 @@ async function main(): Promise<void> {
   helperStderr.on('data', (chunk: string) => process.stderr.write(`[native-carrier] ${chunk}`))
   const helperInitialized = readOneFrame(helperControl, 10_000)
   await writeFrame(helperSecret, { type: 'authority-bootstrap', workerInstanceId, workerPid: process.pid, dshHome: config.dshHome,
+    validationOnly: process.argv.includes('--validate-upgrade'),
+    compatibility: config.packagedRoot ? sixIdentities(JSON.parse(readFileSync(join(config.packagedRoot, 'release-manifest.json'), 'utf8'))) : undefined,
     workerRuntime: { nodeVersion: process.version, executable: process.execPath, argv: process.argv.slice(1), parentPid: process.ppid } })
   helperSecret.end()
   if ((await helperInitialized).type !== 'helper-initialized') throw new Error('Helper authority initialization failed')
@@ -289,6 +303,14 @@ async function main(): Promise<void> {
           incomingHostClient = raw.clientInstanceId
           continue
         }
+        if (isRecord(value) && value.type === 'upgrade-drained') {
+          upgradeDrained = value; upgradeProofAt = Date.now()
+          // Release the private input read after every queued frame settles.
+          // A blocked inherited pipe read must not prevent natural Host shutdown.
+          hostWrite = hostWrite.then(() => new Promise<void>(done => hostInput.end(done)))
+          continue
+        }
+        if (isRecord(value) && value.type === 'upgrade-drain-failed') { continue }
         if (isRecord(value) && value.type === 'authority-heartbeat') { lastHostHeartbeat = Date.now(); continue }
         if (isRecord(value) && value.type === 'attachment-reset') {
           helperWrite = helperWrite.then(() => writeFrame(helperInput, { type: 'attachment-reset' }))
@@ -329,6 +351,12 @@ async function main(): Promise<void> {
         }
         if (!isRecord(value)) throw new Error('Helper lifecycle envelope invalid')
         if (value.type === 'stop-authority') { void stop(0); continue }
+        if (value.type === 'upgrade-drain' && typeof value.transactionId === 'string') {
+          upgradeTransaction = value.transactionId
+          hostWrite = hostWrite.then(() => writeFrame(hostInput, { type: 'upgrade-drain' }))
+          continue
+        }
+        if (upgradeDrained) continue
         if (value.type === 'attachment-start' && typeof value.clientInstanceId === 'string') {
           currentClient = value.clientInstanceId
         } else if (value.type === 'attachment-end') {
@@ -338,7 +366,25 @@ async function main(): Promise<void> {
           if (value.clientInstanceId !== currentClient || currentClient === undefined) continue
           validateMainFrame(value.frame)
         } else throw new Error('Helper attachment envelope invalid')
-        hostWrite = hostWrite.then(() => writeFrame(hostInput, value))
+        hostWrite = hostWrite.then(async () => {
+          if (config.packagedRoot !== undefined && (value.type === 'attachment-start'
+            || value.type === 'attachment-frame' && isRecord(value.frame) && ['unary-request', 'stream-open'].includes(String(value.frame.type)))) {
+            const local = JSON.parse(readFileSync(join(config.packagedRoot, "release-manifest.json"), "utf8"))
+            try { assertControlReady(join(dirname(config.dshHome), "control"), local, config.dshHome) }
+            catch {
+              // Fence new Product operations while existing Host operations drain.
+              // Do not kill a possibly active Host to implement mutation refusal.
+              if (value.type === "attachment-frame" && isRecord(value.frame) && value.frame.type === "unary-request") {
+                const frame = value.frame
+                await writeFrame(helperInput, { type: "attachment-frame", clientInstanceId: value.clientInstanceId, frame: {
+                  type: "unary-response", requestId: frame.requestId, envelope: { type: "server-response", rpcId: isRecord(frame.envelope) ? frame.envelope.rpcId : undefined,
+                    result: { ok: false, error: { code: "transport", message: "UPGRADE_IN_PROGRESS", details: {} } } } } })
+              }
+              return
+            }
+          }
+          await writeFrame(hostInput, value)
+        }).catch(() => reportCarrierFailure("UPGRADE_IN_PROGRESS"))
       }
     } catch {
       void reportCarrierFailure('Native carrier relay validation failed')
@@ -351,6 +397,11 @@ async function main(): Promise<void> {
   host.once('exit', (exitCode, signal) => {
     emit('host-exited', { hostPid: host?.pid, exitCode, signal })
     if (!stopping) {
+      if (upgradeTransaction && upgradeDrained && exitCode === 0) {
+        const receipt = { transactionId: upgradeTransaction, workerInstanceId, hostExitCode: exitCode, hostGone: true, proof: upgradeDrained.proof }
+        void writeFile(join(dirname(config.dshHome), "control", "drain-receipt.json"), JSON.stringify(receipt), { encoding: "utf8", flush: true }).then(() => stop(0), () => stop(1))
+        return
+      }
       if (!hostWasReady) hostReadyReject(new Error('Host exited before readiness'))
       void reportCarrierFailure(`Harness Host exited (${exitCode ?? signal ?? 'unknown'})`)
     }
@@ -361,7 +412,9 @@ async function main(): Promise<void> {
   await writeFrame(helperInput, { type: 'authority-ready', hostPreflight })
   if ((await helperReady).type !== 'authority-ready') throw new Error('Native authority readiness failed')
   setInterval(() => {
-    if (Date.now() - lastHostHeartbeat > 2_500) { void reportCarrierFailure('WORKER_AUTHORITY_FAILURE: Host heartbeat lost'); return }
+    if (upgradeDrained) {
+      if (Date.now() - upgradeProofAt > 10_000) { void reportCarrierFailure('DRAIN_HOST_EXIT_TIMEOUT'); return }
+    } else if (Date.now() - lastHostHeartbeat > 2_500) { void reportCarrierFailure('WORKER_AUTHORITY_FAILURE: Host heartbeat lost'); return }
     helperWrite = helperWrite.then(() => writeFrame(helperInput, { type: 'authority-heartbeat' }))
     helperWrite.catch(() => void reportCarrierFailure('WORKER_AUTHORITY_FAILURE: Helper channel lost'))
   }, 500)
@@ -372,7 +425,7 @@ async function main(): Promise<void> {
 process.once('SIGTERM', () => void stop(0))
 process.once('SIGINT', () => void stop(0))
 
-void main().catch((error: unknown) => {
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) void startWorker().catch((error: unknown) => {
   const message = error instanceof Error ? error.stack ?? error.message : String(error)
   emit(carrierReady ? 'carrier-failed' : 'worker-failed', { error: message })
   void stop(1)

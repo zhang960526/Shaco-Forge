@@ -1,0 +1,31 @@
+{
+  "entry": "514e1759b4991e950d5ad5169e3fc86dc3cc025f",
+  "digest": "4d0c14740d3adc4216690d27b167397e13b6f7cf177d0419fc03de7db747dc39",
+  "fileCount": 175,
+  "required": [
+    "typecheck",
+    "build",
+    "test",
+    "verify:static",
+    "verify:theme",
+    "smoke:worker",
+    "smoke:carrier",
+    "smoke:electron",
+    "smoke:failure",
+    "smoke:slice2-step1",
+    "smoke:slice2-step2",
+    "smoke:slice2-step3",
+    "smoke:slice2-step3-interactions",
+    "test:full-shaco",
+    "smoke:full-shaco",
+    "package:runtime",
+    "test:packaged-runtime",
+    "smoke:packaged-runtime",
+    "test:slice3-step2",
+    "smoke:slice3-step2",
+    "package:installer",
+    "test:installer",
+    "verify:f05"
+  ],
+  "ownerGatesClosed": false
+}
