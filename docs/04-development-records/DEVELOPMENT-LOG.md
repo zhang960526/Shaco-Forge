@@ -2,7 +2,138 @@
 
 Status: ACTIVE
 
-## Current — Slice2 Owner Closure / Baseline Frozen (2026-09-11)
+## Current — Slice3 Contract Freeze / Step1 Authorization (2026-09-11)
+
+<!-- SLICE3_FREEZE_CURRENT_START -->
+- Architecture Owner 提供的 DeepSeek Harness `READ_ONLY` Targeted Independent
+  Corrective Re-Review 已独立持久化为
+  [REVIEW-028B PASS](../05-reviews/architecture/AUDIT-028B-V1-SLICE-3-S3-AR-001-TARGETED-CORRECTIVE-REREVIEW.md)；
+  Parent REVIEW-028 保持历史 `FAIL`，其它 REVIEW-028 PASS areas 保持。
+- [Owner Freeze / Step1 Authorization Decision](V1-SLICE-3-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md)
+  接受 REVIEW-028B、关闭 Contract Finding S3-AR-001，并冻结单一
+  [Slice3 Architecture Contract](../03-v1.0-plan/V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md)。
+  只授权未来 Step1 `PACKAGED_RUNTIME_FOUNDATION`；Step1 未开始且未 PASS。
+- REVIEW-012 F-05 与 S3-AR-001 严格区分：只关闭后者；F-05 继续
+  `OPEN_KNOWN_CONSTRAINT / PENDING_ARCHITECTURE_OWNER_ACCEPTANCE`，未来 Step2 Evidence
+  后才可由 Architecture Owner 作独立 Security Disposition。
+
+```text
+V1_SLICE_3 = IN_PROGRESS
+V1_SLICE_3_PLANNING = COMPLETED
+V1_SLICE_3_ARCHITECTURE_REVIEW = PASS_AFTER_S3_AR_001_TARGETED_REREVIEW
+V1_SLICE_3_ARCHITECTURE_REVIEW_BLOCKING_FINDINGS = NONE
+S3_AR_001 = CLOSED_BY_TARGETED_REREVIEW_AND_OWNER_ACCEPTANCE
+V1_SLICE_3_ARCHITECTURE_OWNER_FREEZE = ACCEPTED
+V1_SLICE_3_ARCHITECTURE_CONTRACT = FROZEN_FOR_IMPLEMENTATION
+V1_SLICE_3_IMPLEMENTATION = AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
+V1_SLICE_3_STEP1 = PACKAGED_RUNTIME_FOUNDATION / AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP2 = COMPATIBILITY_DISTRIBUTION_UPGRADE_SAFETY / NOT_AUTHORIZED
+V1_SLICE_3_STEP3 = PACKAGED_RUNTIME_CUMULATIVE_ACCEPTANCE / NOT_AUTHORIZED
+V1_SLICE_3_CLOSURE = NO
+REVIEW_012_F_05 = OPEN_KNOWN_CONSTRAINT
+F05_SECURITY_DISPOSITION = PENDING_ARCHITECTURE_OWNER_ACCEPTANCE
+PROVIDER_GATE_AUTHORIZATION = NO
+SIGNING_EXECUTION_AUTHORIZATION = NO
+V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
+V1_CURRENT_STEP = V1_SLICE_3_STEP1_AUTHORIZED_NOT_STARTED
+V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_3_STEP1_PACKAGED_RUNTIME_FOUNDATION
+```
+
+- Freeze 只更新 Review/Decision、Contract status/freeze metadata 与治理 mirrors；Targeted
+  Review 已确认的 §12.4、PATH A/B、三 Step、Runtime ownership、Compatibility、Artifact、
+  Installer/update/restore、Signing、NF 与 Slice4/Provider 技术语义不重设计。
+- Build、Typecheck、Unit、Electron、Worker、Harness Runtime、Packaging、Installer、Signing、
+  Backup/Restore Runtime、Migration、Provider、Fresh Windows、Step1 Implementation 全部
+  `NOT RUN`。Push `NO`。
+
+| Governance-freeze validation | Result |
+|---|---|
+| changed-file scope / pre-stage index | PASS；12 个允许的 Markdown paths；staged changes 0 |
+| UTF-8 / BOM / mojibake / trailing whitespace | PASS；12/12 UTF-8 without BOM；疑似乱码 0 |
+| Markdown local links / anchors / fence / details | PASS；242 个 file targets、10 个 anchors；broken 0；结构平衡 |
+| secret/redaction / `git diff --check` | PASS |
+| REVIEW-028 / REVIEW-028B | PASS；parent historical FAIL 保持；028B ID 唯一且 Targeted PASS 字段完整 |
+| S3-AR-001 / F-05 | PASS；S3-AR-001 Owner closure 一致；F-05 仍 OPEN，Owner-only gate 全字段保留 |
+| Contract / governance | PASS；Frozen Contract SHA-256 `35152ace7e1bb85ad6ecec801e20202d55ee960acb2137340ae932777da1bf76`；五个 current surfaces 一致 |
+| Product Source / Frozen Harness | PASS；Product Source zero-delta；Harness HEAD `cd5ef8148158c3a752a658978873241fdf8e2bbc`、clean/read-only |
+| Freeze baseline commit | 本文档批次的唯一 local commit；不 amend、不 push |
+<!-- SLICE3_FREEZE_CURRENT_END -->
+
+## Historical — Slice3 S3-AR-001 Owner-only Gate Corrective (2026-09-11)
+
+<!-- SLICE3_AR001_HISTORY_START -->
+- 将 Architecture Owner 提供的 DeepSeek Harness `READ_ONLY` inline transcript
+  持久化为 [REVIEW-028](../05-reviews/architecture/AUDIT-028-V1-SLICE-3-ARCHITECTURE-CONTRACT-INDEPENDENT-REVIEW.md)：
+  Verdict `FAIL`，唯一 Blocking Finding `S3-AR-001 / HIGH`，Direction Alignment
+  `MINOR_DRIFT`；Product Source defect/change required 均为 `NO`，其余 Architecture
+  areas `PASS`。没有虚构 run ID、artifact SHA、模型日志或外部本地路径。
+- 在单一 [Slice3 Candidate](../03-v1.0-plan/V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md)
+  的 §12.4、Step2 Acceptance 与 §15 完成最小 Corrective：Executor 只能收集 Evidence
+  和提出 `F05_TECHNICAL_DISPOSITION_CANDIDATE`；Reviewer 只能核验技术事实与风险边界；
+  最终 F-05 Security Disposition / residual-risk acceptance 仅 Architecture Owner 可作出。
+- PATH A 固定为 `EXCEPTION_REMOVED` 技术候选，PATH B 固定为
+  `RESIDUAL_EXCEPTION_REQUIRED` 技术候选；Owner 明确接受前 F-05 保持
+  `OPEN_KNOWN_CONSTRAINT`，Executor/Reviewer 无权关闭，Step2 不得关闭。需要 Frozen
+  Harness change 时必须 `STOPPED_FOR_ARCHITECTURE_OWNER / FROZEN_HARNESS_CHANGE_REQUIRED`。
+
+```text
+V1_SLICE_3_ARCHITECTURE_REVIEW = FAIL
+V1_SLICE_3_ARCHITECTURE_REVIEW_BLOCKING_FINDINGS = S3-AR-001
+S3_AR_001 = CORRECTIVE_APPLIED_WAITING_TARGETED_REREVIEW
+V1_SLICE_3_ARCHITECTURE_CONTRACT = CORRECTED_CANDIDATE_WAITING_TARGETED_REREVIEW
+V1_SLICE_3_IMPLEMENTATION = NOT_YET_AUTHORIZED
+V1_SLICE_3_STEP1 = NOT_STARTED / NOT_AUTHORIZED
+V1_SLICE_3_STEP2 = NOT_STARTED / NOT_AUTHORIZED
+V1_SLICE_3_STEP3 = NOT_STARTED / NOT_AUTHORIZED
+V1_SLICE_3_CLOSURE = NO
+PROVIDER_GATE_AUTHORIZATION = NO
+V1_CURRENT_NEXT_ACTION = TARGETED_INDEPENDENT_REREVIEW_SLICE3_S3_AR_001_CORRECTIVE
+```
+
+- 既有 Signing boundary 保持；本次不 Freeze Contract、不授权 Step1、不开始 Targeted
+  Re-Review。Product Source 与 Frozen Harness 均不修改。
+- Runtime、Build、Typecheck、Unit、Electron、Worker、Harness Runtime、Packaging、
+  Installer、Signing、Backup/Restore Runtime、Migration、Provider、Fresh Windows 全部
+  `NOT RUN`。Commit `NO`；Push `NO`。
+
+| Documentation-safe validation | Result |
+|---|---|
+| changed-file scope | PASS；10 paths，全部为允许的 Markdown 文档 |
+| Product Source / staging | PASS；Product Source diff 为空；staged changes 为空 |
+| Frozen Harness | PASS；HEAD `cd5ef8148158c3a752a658978873241fdf8e2bbc`；clean / read-only |
+| UTF-8 / BOM / mojibake / trailing whitespace | PASS；10/10 UTF-8 without BOM；疑似乱码 0 |
+| Markdown local links / fence / details | PASS；219 个 local targets；broken 0；结构平衡 |
+| secret/redaction sanity / `git diff --check` | PASS |
+| Candidate owner-only gate / governance consistency / REVIEW-028 identity | PASS |
+<!-- SLICE3_AR001_HISTORY_END -->
+
+## Historical — Slice3 Architecture / Contract Candidate Persistence (2026-09-11)
+
+<!-- SLICE3_PLANNING_HISTORY_START -->
+- Architecture Owner 已授权 Slice3 Architecture re-entry 与 Planning；未授权
+  Implementation、Packaging、Installer、Runtime、Provider 或 Signing。
+- 新增单一
+  [Slice3 Architecture / Contract Candidate](../03-v1.0-plan/V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md)，
+  状态为 `PLANNING_CANDIDATE / WAITING_INDEPENDENT_ARCHITECTURE_REVIEW`。
+- Candidate 定义 Windows x64 self-contained packaged runtime、bundled Worker Node、
+  bundled pinned Harness、controlled per-user `DSH_HOME`、六身份 compatibility、
+  release/artifact identity、integrity/signing boundary、installer-driven backup/update/
+  restore/uninstall、packaged cumulative acceptance 与 Slice4 boundary。
+- Implementation 固定为三个待审 Step：`PACKAGED_RUNTIME_FOUNDATION`、
+  `COMPATIBILITY_DISTRIBUTION_UPGRADE_SAFETY`、
+  `PACKAGED_RUNTIME_CUMULATIVE_ACCEPTANCE`；全部 `NOT_STARTED / NOT_AUTHORIZED`。
+- Carry-forward：NF-1 → Step1 evidence-mode observer；NF-3 → Step1 stable release
+  identity；NF-4 → Step3 packaged frame measurement only，保持 `262144`；F-05 基于
+  当前最终 source 仍适用，路由 Step2 先评估 Shaco-owned composition/packaging。
+- 同步 Current State、Development Map、Document Map、P0.5、P7 与 Current Checkpoint；
+  未创建第二套 current/compatibility/packaging authority。
+- 本轮只执行 documentation static validation。Runtime、Build、Unit、Electron、Worker、
+  Harness、Provider、Packaging、Installer、Signing、Migration、Backup/Restore、
+  Independent Review 均为 `NOT RUN`。Commit `NO`；Push `NO`。
+<!-- SLICE3_PLANNING_HISTORY_END -->
+
+## Historical — Slice2 Owner Closure / Baseline Frozen (2026-09-11)
 
 <!-- SLICE2_CLOSURE_CURRENT_START -->
 Architecture Owner 已接受 V1-SLICE-2-INDEPENDENT-CLOSURE-AUDIT PASS（OWNER_SUPPLIED_INLINE_REVIEW_TRANSCRIPT，Reviewer READ_ONLY），最终 Blocking Findings NONE，并正式关闭 Slice2、冻结基线。当前阶段与页首 checkpoint 一致；[Slice2 Owner Closure / Freeze Decision](V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) 保存 Audit 来源、最终 disposition 与累计证据依据。Current State 保持唯一阶段 authority。

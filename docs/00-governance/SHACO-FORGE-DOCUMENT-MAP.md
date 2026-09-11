@@ -2,7 +2,50 @@
 
 Status: ACTIVE
 
-## Current — Slice2 Owner Closure / Baseline Frozen (2026-09-11)
+## Current — Slice3 Contract Frozen / Step1 Authorized Not Started (2026-09-11)
+
+<!-- SLICE3_FREEZE_CURRENT_START -->
+[Current State](SHACO-FORGE-CURRENT-STATE.md) remains the single current-phase
+authority. [REVIEW-028B](../05-reviews/architecture/AUDIT-028B-V1-SLICE-3-S3-AR-001-TARGETED-CORRECTIVE-REREVIEW.md)
+returned `PASS`; Architecture Owner accepted it through the
+[Slice3 Contract Freeze / Step1 Authorization Decision](../04-development-records/V1-SLICE-3-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md),
+closed S3-AR-001 and froze the single [V1-SLICE-3 Packaging / Compatibility /
+Release Architecture Contract](../03-v1.0-plan/V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md).
+REVIEW-028 remains historical `FAIL`. Only future Step1 implementation is
+authorized and not started; Step2/Step3, Provider and Signing remain unauthorized.
+
+```text
+V1_SLICE_1 = PASS / CLOSED / FROZEN
+V1_SLICE_2 = PASS / CLOSED / FROZEN
+SLICE2_CLOSURE = YES
+V1_SLICE_3 = IN_PROGRESS
+V1_SLICE_3_ARCHITECTURE_REENTRY = AUTHORIZED
+V1_SLICE_3_PLANNING = COMPLETED
+REVIEW_028 = FAIL / HISTORICAL_PARENT_REVIEW
+REVIEW_028B = PASS
+V1_SLICE_3_ARCHITECTURE_CONTRACT = FROZEN_FOR_IMPLEMENTATION
+V1_SLICE_3_ARCHITECTURE_REVIEW = PASS_AFTER_S3_AR_001_TARGETED_REREVIEW
+V1_SLICE_3_ARCHITECTURE_REVIEW_BLOCKING_FINDINGS = NONE
+S3_AR_001 = CLOSED_BY_TARGETED_REREVIEW_AND_OWNER_ACCEPTANCE
+V1_SLICE_3_ARCHITECTURE_OWNER_FREEZE = ACCEPTED
+V1_SLICE_3_IMPLEMENTATION = AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
+V1_SLICE_3_STEP1 = PACKAGED_RUNTIME_FOUNDATION / AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP2 = COMPATIBILITY_DISTRIBUTION_UPGRADE_SAFETY / NOT_AUTHORIZED
+V1_SLICE_3_STEP3 = PACKAGED_RUNTIME_CUMULATIVE_ACCEPTANCE / NOT_AUTHORIZED
+V1_SLICE_3_CLOSURE = NO
+V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
+REVIEW_012_F_05 = OPEN_KNOWN_CONSTRAINT
+F05_SECURITY_DISPOSITION = PENDING_ARCHITECTURE_OWNER_ACCEPTANCE
+PROVIDER_GATE_AUTHORIZATION = NO
+SIGNING_EXECUTION_AUTHORIZATION = NO
+V1_CURRENT_STEP = V1_SLICE_3_STEP1_AUTHORIZED_NOT_STARTED
+V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_3_STEP1_PACKAGED_RUNTIME_FOUNDATION
+ACTIVE_CURRENT_AUTHORITY_COUNT = ONE
+```
+<!-- SLICE3_FREEZE_CURRENT_END -->
+
+## Historical — Slice2 Owner Closure / Baseline Frozen (2026-09-11)
 
 <!-- SLICE2_CLOSURE_CURRENT_START -->
 Architecture Owner 已接受 V1-SLICE-2-INDEPENDENT-CLOSURE-AUDIT PASS（OWNER_SUPPLIED_INLINE_REVIEW_TRANSCRIPT，Reviewer READ_ONLY），最终 Blocking Findings NONE，并正式关闭 Slice2、冻结基线。当前阶段与页首 checkpoint 一致；[Slice2 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) 保存 Audit 来源、最终 disposition 与累计证据依据。Current State 保持唯一阶段 authority。
@@ -460,6 +503,7 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 | Document | Role | Status |
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | Current four-Slice Harness-reuse implementation route plus need-driven P0.5/P1/P2-P8 taxonomy | ACTIVE |
+| [V1-SLICE-3 Architecture Contract](../03-v1.0-plan/V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md) | Single frozen Slice3 Packaging / Compatibility / Release Contract; three implementation Steps; F-05 Owner-only gate retained | FROZEN_FOR_IMPLEMENTATION; REVIEW-028 historical FAIL → REVIEW-028B PASS; Step1 AUTHORIZED_NOT_STARTED only |
 | `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md` | Re-frozen Architecture Contract for Worker authority, minimal trusted discovery, reconnect, cold projection, outer shell and Native integration | FROZEN |
 | `V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md` | Re-frozen local Slice 1B lifecycle/credential amendment preserving frozen wire/HMAC semantics | FROZEN |
 | [Full Shaco Presentation Corrective Contract Candidate](../03-v1.0-plan/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md) | REVIEW-027 / 027A PASS；BRAUN/FAMICOM Delta 已接受并实现；当前技术契约由 Step3 Owner Closure 接受 | FROZEN / IMPLEMENTED / OWNER_ACCEPTED |
@@ -471,7 +515,7 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 | `SHACO-FORGE-V1-PRODUCT-ARCHITECTURE-PLAN.md` | V1 Product Architecture Plan | `V1_ARCHITECTURE_PLAN_ONLY`; Final Gate external review supplied by Owner is PASS; P0.S-8 freeze not executed |
 | `P0S-6-MINIMAL-EXECUTION-CONTRACT.md` | Historical P0.S-6 bounded Runtime execution Contract | FROZEN / OWNER_APPROVED; `P0S6-MEC-20260903-01`; EXHAUSTED_INCONCLUSIVE after two physical attempts; grants no current execution authority |
 | `P0S-6-DEPENDENCY-READINESS-RECOVERY-CONTRACT.md` | Frozen P0.S-6 Dependency Readiness Recovery Contract | FROZEN / OWNER_APPROVED; `P0S6-DRRC-20260904-01`; execution authority is exhausted after one invocation; final readiness is INCONCLUSIVE at `NPM_CI / EINTEGRITY`; grants no retry, lockfile correction, Runtime, Global Physical Attempt #3, or P0.S-7 authority |
-| `P05-COMPATIBILITY-VERSION.md` | P0.5 Compatibility Contract 候选 | READY-FOR-FREEZE-AFTER-P0S |
+| `P05-COMPATIBILITY-VERSION.md` | P0.5 Compatibility Contract inputs；由 frozen Slice3 Contract 消费并细化 | CONSUMED_BY_FROZEN_SLICE3_CONTRACT |
 | `P1-SYSTEM-CONTRACT.md` | P1 骨架 | NOT-DETAILED |
 | `P2-HOST-WORKER.md` | P2 骨架 | NOT-DETAILED |
 | `P3-CONNECTION-CARRIER.md` | P3 骨架 | NOT-DETAILED |
@@ -479,7 +523,7 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 | `P5-FEATURE-PARITY.md` | P5 骨架 | NOT-DETAILED |
 | `P6A-DURABILITY-RECOVERY.md` | P6A 骨架 | NOT-DETAILED |
 | `P6B-PLUGIN-COMPATIBILITY.md` | P6B 骨架 | NOT-DETAILED |
-| `P7-PACKAGING-SECURITY-UPGRADE.md` | P7 骨架 | NOT-DETAILED |
+| `P7-PACKAGING-SECURITY-UPGRADE.md` | P7 roadmap authority；详细 Slice3 条款见单一 frozen Contract | FROZEN_FOR_IMPLEMENTATION / STEP1_AUTHORIZED_NOT_STARTED |
 | `P8-FINAL-ACCEPTANCE.md` | P8 骨架 | NOT-DETAILED |
 
 Historical P0.S-6 governance authority:
@@ -575,6 +619,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 | Document/Folder | Role |
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
+| [Slice3 Contract Freeze / Step1 Authorization Decision](../04-development-records/V1-SLICE-3-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md) | Current Owner authority: REVIEW-028B PASS accepted; S3-AR-001 closed; Contract frozen; Step1 only AUTHORIZED_NOT_STARTED; F-05 open; Provider/Signing NO |
 | [Full Shaco Presentation Direction Decision](../04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md) | Owner 已接受 REVIEW-027 / 027A 与 BRAUN/FAMICOM Delta；方向保持，实施授权已消费；Step3 已 Owner Closure / Frozen |
 | [Slice2 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) | Slice2 PASS / CLOSED / FROZEN；独立 Audit PASS；NF-6 最终关闭；Provider Gate NOT_TRIGGERED；Slice3 NOT_STARTED |
 | [Step3 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md) | Step3 PASS / CLOSED / FROZEN；原 Step3 Closure commit 为该 Step baseline authority；Slice2 最终状态见 Slice2 Owner Closure Decision |
@@ -612,6 +657,8 @@ Baseline candidate now gates that Slice behind Independent Review.
 
 ## 7. Reviews
 
+- [REVIEW-028](../05-reviews/architecture/AUDIT-028-V1-SLICE-3-ARCHITECTURE-CONTRACT-INDEPENDENT-REVIEW.md): historical FAIL; sole blocker S3-AR-001; verdict preserved.
+- [REVIEW-028B](../05-reviews/architecture/AUDIT-028B-V1-SLICE-3-S3-AR-001-TARGETED-CORRECTIVE-REREVIEW.md): PASS; S3-AR-001 corrective confirmed; final Blocking Findings NONE; ready for Owner freeze assessment.
 - [REVIEW-025](../05-reviews/architecture/AUDIT-025-V1-SLICE-2-STEP3-CONTRACT-GATE-INDEPENDENT-REVIEW.md): historical FAIL; sole blocker R25-01; corrective required.
 - [REVIEW-025B](../05-reviews/architecture/AUDIT-025B-V1-SLICE-2-STEP3-CONTRACT-GATE-CORRECTIVE-REREVIEW.md): PASS; R25-01 CLOSED_BY_CORRECTIVE_REREVIEW; final Contract Gate Blocking Findings NONE.
 

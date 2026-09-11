@@ -2,7 +2,53 @@
 
 Status: ACTIVE
 
-## Current — Slice2 Owner Closure / Baseline Frozen (2026-09-11)
+## Current — Slice3 Contract Frozen / Step1 Authorized Not Started (2026-09-11)
+
+<!-- SLICE3_FREEZE_CURRENT_START -->
+[REVIEW-028B PASS](../05-reviews/architecture/AUDIT-028B-V1-SLICE-3-S3-AR-001-TARGETED-CORRECTIVE-REREVIEW.md)
+确认 S3-AR-001 Corrective；Architecture Owner 已接受复审、关闭 S3-AR-001，并通过
+[Owner Freeze / Step1 Authorization Decision](../04-development-records/V1-SLICE-3-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md)
+冻结单一 [Slice3 Architecture Contract](V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md)。
+只授权 Step1 `PACKAGED_RUNTIME_FOUNDATION`，且尚未开始；Step2、Step3、Provider、Signing
+与 Slice4 均未授权/未开始。REVIEW-028 保持历史 `FAIL`，REVIEW-012 F-05 保持 open。
+
+```text
+CURRENT_IMPLEMENTATION_ROUTE = FOUR_SLICE_HARNESS_REUSE_ROUTE
+V1_SLICE_1 = PASS / CLOSED / FROZEN
+V1_SLICE_2 = PASS / CLOSED / FROZEN
+SLICE2_CLOSURE = YES
+V1_SLICE_3 = IN_PROGRESS
+V1_SLICE_3_ARCHITECTURE_REENTRY = AUTHORIZED
+V1_SLICE_3_PLANNING = COMPLETED
+REVIEW_028 = FAIL / HISTORICAL_PARENT_REVIEW
+REVIEW_028B = PASS
+V1_SLICE_3_ARCHITECTURE_CONTRACT = FROZEN_FOR_IMPLEMENTATION
+V1_SLICE_3_ARCHITECTURE_REVIEW = PASS_AFTER_S3_AR_001_TARGETED_REREVIEW
+V1_SLICE_3_ARCHITECTURE_REVIEW_BLOCKING_FINDINGS = NONE
+S3_AR_001 = CLOSED_BY_TARGETED_REREVIEW_AND_OWNER_ACCEPTANCE
+V1_SLICE_3_ARCHITECTURE_OWNER_FREEZE = ACCEPTED
+V1_SLICE_3_IMPLEMENTATION = AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
+V1_SLICE_3_STEP1 = PACKAGED_RUNTIME_FOUNDATION / AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP2 = COMPATIBILITY_DISTRIBUTION_UPGRADE_SAFETY / NOT_AUTHORIZED
+V1_SLICE_3_STEP3 = PACKAGED_RUNTIME_CUMULATIVE_ACCEPTANCE / NOT_AUTHORIZED
+V1_SLICE_3_CLOSURE = NO
+V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
+REVIEW_012_F_05 = OPEN_KNOWN_CONSTRAINT
+F05_SECURITY_DISPOSITION = PENDING_ARCHITECTURE_OWNER_ACCEPTANCE
+PROVIDER_GATE_AUTHORIZATION = NO
+SIGNING_EXECUTION_AUTHORIZATION = NO
+V1_CURRENT_STEP = V1_SLICE_3_STEP1_AUTHORIZED_NOT_STARTED
+V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_3_STEP1_PACKAGED_RUNTIME_FOUNDATION
+```
+
+Slice3 保持三个 implementation Step，不新增第四步。Frozen Cumulative Regression
+Closure Gate 继续要求 Slice3 Closure 在 packaged runtime 上执行累计 V1 chain；本次
+Freeze 不执行该 Gate。F-05 在未来 Step2 Evidence 后由 Architecture Owner 明确接受前
+保持 `OPEN_KNOWN_CONSTRAINT`，Executor 与 Reviewer 均无权关闭。
+<!-- SLICE3_FREEZE_CURRENT_END -->
+
+## Historical — Slice2 Owner Closure / Baseline Frozen (2026-09-11)
 
 <!-- SLICE2_CLOSURE_CURRENT_START -->
 Architecture Owner 已接受 V1-SLICE-2-INDEPENDENT-CLOSURE-AUDIT PASS（OWNER_SUPPLIED_INLINE_REVIEW_TRANSCRIPT，Reviewer READ_ONLY），最终 Blocking Findings NONE，并正式关闭 Slice2、冻结基线。当前阶段与页首 checkpoint 一致；[Slice2 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) 保存 Audit 来源、最终 disposition 与累计证据依据。Current State 保持唯一阶段 authority。
@@ -35,7 +81,7 @@ SOURCE_DRIFT = NONE
 VISUAL_ACCEPTANCE = PASS
 V1_VISUAL_POLISH = DEFERRED_NON_BLOCKING_TO_V1_FINAL_POLISH
 V1_SLICE_3 = NOT_STARTED
-V1_SLICE_4 = NOT_STARTED
+V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
 V1_CURRENT_STEP = V1_SLICE_2_CLOSED_PENDING_NEXT_PHASE_OWNER_AUTHORIZATION
 V1_CURRENT_NEXT_ACTION = WAIT_FOR_ARCHITECTURE_OWNER_NEXT_PHASE_AUTHORIZATION
 ACTIVE_CURRENT_AUTHORITY_COUNT = ONE
@@ -249,6 +295,44 @@ Status: ACTIVE
 
 ## Current Implementation Route
 
+V1-SLICE-3 当前处于 Frozen Contract / Step1 Authorized Not Started route。三个 frozen
+implementation Step 保持不变：
+
+1. `PACKAGED_RUNTIME_FOUNDATION`；
+2. `COMPATIBILITY_DISTRIBUTION_UPGRADE_SAFETY`；
+3. `PACKAGED_RUNTIME_CUMULATIVE_ACCEPTANCE`。
+
+```text
+V1_SLICE_1 = PASS / CLOSED / FROZEN
+V1_SLICE_2 = PASS / CLOSED / FROZEN
+SLICE2_CLOSURE = YES
+V1_SLICE_3 = IN_PROGRESS
+V1_SLICE_3_ARCHITECTURE_CONTRACT = FROZEN_FOR_IMPLEMENTATION
+V1_SLICE_3_ARCHITECTURE_REVIEW = PASS_AFTER_S3_AR_001_TARGETED_REREVIEW
+V1_SLICE_3_ARCHITECTURE_REVIEW_BLOCKING_FINDINGS = NONE
+S3_AR_001 = CLOSED_BY_TARGETED_REREVIEW_AND_OWNER_ACCEPTANCE
+V1_SLICE_3_IMPLEMENTATION = AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP1_IMPLEMENTATION_AUTHORIZATION = YES
+V1_SLICE_3_STEP1 = PACKAGED_RUNTIME_FOUNDATION / AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP2 = COMPATIBILITY_DISTRIBUTION_UPGRADE_SAFETY / NOT_AUTHORIZED
+V1_SLICE_3_STEP3 = PACKAGED_RUNTIME_CUMULATIVE_ACCEPTANCE / NOT_AUTHORIZED
+V1_SLICE_3_CLOSURE = NO
+REVIEW_012_F_05 = OPEN_KNOWN_CONSTRAINT
+F05_SECURITY_DISPOSITION = PENDING_ARCHITECTURE_OWNER_ACCEPTANCE
+PROVIDER_GATE_AUTHORIZATION = NO
+SIGNING_EXECUTION_AUTHORIZATION = NO
+V1_SLICE_4 = FRESH_WINDOWS_FINAL_ACCEPTANCE / NOT_STARTED
+V1_CURRENT_STEP = V1_SLICE_3_STEP1_AUTHORIZED_NOT_STARTED
+V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_3_STEP1_PACKAGED_RUNTIME_FOUNDATION
+```
+
+完整 Goal、scope、ownership、controlled `DSH_HOME`、compatibility、artifact identity、
+installer/update/restore、signing、carry-forward 与 Step acceptance 见
+[Slice3 Architecture Contract](V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md)。
+
+<details>
+<summary>Historical — Current Implementation Route before Slice3 planning authorization</summary>
+
 Architecture Owner 已接受 V1-SLICE-2-INDEPENDENT-CLOSURE-AUDIT PASS（OWNER_SUPPLIED_INLINE_REVIEW_TRANSCRIPT，Reviewer READ_ONLY），最终 Blocking Findings NONE，并正式关闭 Slice2、冻结基线。当前阶段与页首 checkpoint 一致；[Slice2 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) 保存 Audit 来源、最终 disposition 与累计证据依据。Current State 保持唯一阶段 authority。
 
 ```text
@@ -292,6 +376,8 @@ BRAUN / FAMICOM 与 Visual Acceptance PASS；polish 非阻断延后。Step3 原�
 当前仅等待 Architecture Owner 后续阶段授权。本轮未运行 Runtime / Provider、未重新生成 Composition、未进入 Slice3 或 Packaging；一个本地 Slice2 Closure commit 后停止，不 push。
 
 四 Slice 路线保持：Slice2 三步骤已闭合；Slice3 Packaging / Compatibility / Release、Slice4 Fresh Windows Final Acceptance 均 NOT_STARTED。P0.5 / P1 / P2–P8 仍为按需合同、能力与验收分类。
+
+</details>
 
 <details>
 <summary>Historical / Superseded — pre-Slice2-Closure governance view; original wording preserved</summary>
@@ -728,7 +814,8 @@ Harness Sessions.
 
 ## P0.5
 
-Status: READY_FOR_FREEZE_AFTER_P0S; retained and now eligible for need-driven refinement
+Status: READY_FOR_FREEZE_AFTER_P0S; inputs consumed by the frozen Slice3 Contract;
+this P0.5 document itself remains not frozen
 
 Current gate: P0.S prerequisite is satisfied. Freeze only the Compatibility contract required by the active Slice; do not block the first Slice on completing all P0.5 work.
 
@@ -787,9 +874,14 @@ Goal: limited in-box/explicitly approved plugin compatibility only. May remain o
 
 ## P7
 
-Status: NOT_DETAILED
+Status: FROZEN_FOR_IMPLEMENTATION / STEP1_AUTHORIZED_NOT_STARTED
 
 Goal: installer, security verification, update transaction, signing, diagnostics, uninstall, backup/restore.
+
+Detailed frozen Slice3 specialization:
+[V1-SLICE-3 Architecture Contract](V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md).
+Only Step1 implementation is authorized and not started; Step2/Step3 and signing
+execution remain unauthorized.
 
 ## P8
 

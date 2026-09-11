@@ -4,6 +4,14 @@ Status: READY_FOR_FREEZE_AFTER_P0S
 
 P0-7 recorded inputs only. This file is not frozen and is not redesigned here.
 
+Slice3 consumes and specializes these inputs through the
+[V1-SLICE-3 Architecture Contract](V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md).
+That specialization is now `FROZEN_FOR_IMPLEMENTATION` after historical
+`REVIEW-028 / FAIL`, `REVIEW-028B / PASS` and Architecture Owner acceptance. This
+P0.5 document itself remains not frozen. Only Slice3 Step1 is
+`AUTHORIZED_NOT_STARTED`; Step2/Step3 remain unauthorized, and REVIEW-012 F-05
+remains `OPEN_KNOWN_CONSTRAINT`.
+
 Authority: `docs/06-testing-acceptance/evidence/P0-7-RISK-REGISTER-AND-P0S-INPUT-FREEZE.md` section N.
 
 Pinned identities P0.5 must consume:

@@ -1,7 +1,7 @@
 # Shaco Forge Current Checkpoint
 
-<!-- FULL_SHACO_HISTORICAL_POINTER -->
-> 当前状态以 [Current State](../00-governance/SHACO-FORGE-CURRENT-STATE.md) 为准；Slice2 PASS / CLOSED / FROZEN，NF-6 CLOSED_BY_SLICE2_RECOVERY_IMPLEMENTATION，Provider Gate NOT_TRIGGERED / runs 0，见 [Slice2 Owner Closure Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md)。Step1/2/3 保持闭合，Slice3 NOT_STARTED；下一步仅等待 Architecture Owner 后续阶段授权。下方交接快照为历史，不构成当前授权。
+<!-- SLICE3_FREEZE_CURRENT_POINTER -->
+> 当前状态以 [Current State](../00-governance/SHACO-FORGE-CURRENT-STATE.md) 为准；Slice1 与 Slice2 保持 PASS / CLOSED / FROZEN。Slice3 Planning 已完成；[REVIEW-028B](../05-reviews/architecture/AUDIT-028B-V1-SLICE-3-S3-AR-001-TARGETED-CORRECTIVE-REREVIEW.md) 为 `PASS`，Parent [REVIEW-028](../05-reviews/architecture/AUDIT-028-V1-SLICE-3-ARCHITECTURE-CONTRACT-INDEPENDENT-REVIEW.md) 保持历史 `FAIL`。Architecture Owner 已通过 [Owner Freeze / Step1 Authorization Decision](../04-development-records/V1-SLICE-3-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md) 关闭 S3-AR-001，并将单一 [Slice3 Architecture Contract](../03-v1.0-plan/V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md) 冻结为 `FROZEN_FOR_IMPLEMENTATION`。仅 Step1 `PACKAGED_RUNTIME_FOUNDATION / AUTHORIZED_NOT_STARTED`；Step2/Step3、Provider、Signing execution 均未授权。REVIEW-012 F-05 仍为 `OPEN_KNOWN_CONSTRAINT`。下一步是后续独立批次 `EXECUTE_V1_SLICE_3_STEP1_PACKAGED_RUNTIME_FOUNDATION`；本 Freeze 批次不开始实现。下方交接快照为历史，不构成当前授权。
 
 <details>
 <summary>Historical — handover pointer before Slice2 Owner Closure</summary>
