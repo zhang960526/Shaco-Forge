@@ -1,5 +1,144 @@
 # Shaco Forge Document Map
 
+Status: ACTIVE
+
+## Current — Step3 Owner Closure / Baseline Frozen (2026-09-11)
+
+<!-- FULL_SHACO_CURRENT_START -->
+本节同步 Current State 的唯一 current checkpoint，不新增阶段 authority。Architecture Owner 已接受 F-IFR-01-TARGETED-REREVIEW PASS，并正式接受 Step3 Closure / Baseline Freeze。独立复审来源为 OWNER_SUPPLIED_INLINE_REVIEW_TRANSCRIPT；本执行者只持久化该事实，不虚构独立报告路径。历史 Independent Final Review FAIL 和旧 Finding 保留；当前最终 Blocking Findings 为 NONE。
+
+```text
+F_IFR_01 = CLOSED_BY_INDEPENDENT_REREVIEW
+F_IFR_01_STATUS = CLOSED_BY_INDEPENDENT_REREVIEW
+F_IFR_01_REREVIEW = PASS
+UI_G14 = CONFIRMED
+DIRECTION_ALIGNMENT = ALIGNED
+V1_SLICE_2_STEP3_TECHNICAL_ACCEPTANCE = PASS
+V1_SLICE_2_STEP3_FINAL_INDEPENDENT_REVIEW = PASS_AFTER_F_IFR_01_TARGETED_REREVIEW
+V1_SLICE_2_STEP3_FINAL_BLOCKING_FINDINGS = NONE
+V1_SLICE_2_STEP3_OWNER_CLOSURE = ACCEPTED
+V1_SLICE_2_STEP3_RESULT = PASS
+V1_SLICE_2_STEP3_BASELINE = FROZEN_BY_STEP3_CLOSURE_COMMIT
+V1_SLICE_2_STEP3_BASELINE_FREEZE_AUTHORITY = FROZEN_BY_THIS_CLOSURE_COMMIT
+V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP2 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP3 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP3_FULL_SHACO_PRESENTATION = PASS / CLOSED / FROZEN
+STEP3_CLOSURE = YES
+V1_SLICE_2 = IN_PROGRESS_PENDING_INDEPENDENT_CLOSURE_AUDIT
+SLICE2_CLOSURE = NO
+V1_SLICE_3 = NOT_STARTED
+VISUAL_ACCEPTANCE = PASS
+V1_VISUAL_POLISH = DEFERRED_NON_BLOCKING_TO_V1_FINAL_POLISH
+VISUAL_POLISH_BLOCKS_STEP3 = NO
+CUMULATIVE_STEP1_STEP2_STEP3_NON_PROVIDER_CHAIN = PASS
+FINAL_FULL_REGRESSION = PASS
+FROZEN_BASELINE_IDENTITY = VERIFIED
+FINAL_COMPOSITION_IDENTITY = ff48f2ec3cb4e618c734e8a189c1219169ca9ab83faa38ee1bfb57a0e29733f5
+PROVIDER_GATE_AUTHORIZATION = NO
+PROVIDER_RUN_COUNT = 0
+V1_CURRENT_STEP = V1_SLICE_2_ALL_STEPS_CLOSED_PENDING_SLICE_CLOSURE_AUDIT
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_CLOSURE_AUDIT_V1_SLICE_2
+NEXT_ACTION = INDEPENDENT_CLOSURE_AUDIT_V1_SLICE_2
+ACTIVE_CURRENT_AUTHORITY_COUNT = ONE
+```
+
+[Step3 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md) 是本次接受与 freeze 决策；其所在唯一 Closure commit 为 baseline authority。当前 Full-Shaco 最终审查链取代旧 source candidate 作为 Closure 技术依据，旧 FAIL 不改写。Step1/Step2/Step3 已全部闭合，Slice2 仍待独立 Closure Audit，未获 Slice2 Closure。
+
+按既有 Cumulative Regression Closure Gate carry forward 已复审接受的冻结后 15 项最终 non-Provider 回归；本次未重跑 runtime/build/tests、未生成 Composition。Step1 attempt 1 的 PowerShell 5 环境 FAIL 与 attempt 2 的已验证 PowerShell 7 PASS 均保留，源码无漂移。BRAUN/FAMICOM、mode 和绑定连续性已接受，Visual Polish 非阻断延后至 V1 final polish。
+
+[既有实施记录](../04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-DUAL-THEME-IMPLEMENTATION-RECORD.md) · [Finalization Evidence](../04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-FINALIZATION-01/README.md)。本次只变更治理文档并以一个本地 commit 收入累计 Step3 Candidate；Provider 0，Harness READ_ONLY，Push NO。完成后停止，不执行 Slice2 Audit。
+Owner 已批准仅三个确切 Historical Raw Evidence logs 的 whitespace exception，以保持接受时的原始字节。CR-aware 完整检查仍有 27 项，全部位于这三个日志；非豁免暂存内容检查 PASS，三个原始日志 SHA256 / staged blob / byte preservation PASS。KNOWN_RAW_EVIDENCE_FORMATTING_PRESERVED_BY_DESIGN；没有修正或规范化日志。
+
+<!-- FULL_SHACO_CURRENT_END -->
+
+<details>
+<summary>Historical — 双模板 Delta 待审 checkpoint，已被 Owner acceptance 取代</summary>
+
+本节索引 [Current State](SHACO-FORGE-CURRENT-STATE.md) 的唯一 current checkpoint；Decision 管方向，Candidate 管待审条款，旧 Frozen Contract 管历史边界。 [Owner Direction Decision](../04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md) 与 [Corrective Contract Candidate](../03-v1.0-plan/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md) 已持久化；REVIEW-027 单模板架构基线 PASS 按 Owner 输入保留；本次 BRAUN + FAMICOM scope Delta 待独立复审，真正 Full Shaco Implementation 暂停。
+
+```text
+FULL_SHACO_PRESENTATION = SELECTED
+ALL_VISIBLE_PRODUCT_UI_OWNER = SHACO_FORGE
+HARNESS_VISIBLE_PRODUCT_UI = NONE
+HARNESS_RUNTIME_TRUTH_REUSE = YES
+THEME_ARCHITECTURE = MODE_PLUS_TEMPLATE
+V1_THEME_MODE_SUPPORT = LIGHT_DARK_SYSTEM_CAPABLE
+FULL_APPEARANCE_SETTINGS_V1 = DEFERRED
+V1_REQUIRED_THEME_TEMPLATE_COUNT = 2
+V1_REQUIRED_THEME_TEMPLATES = BRAUN,FAMICOM
+V1_DEFAULT_THEME_TEMPLATE = BRAUN
+SHACO_DEFAULT_TEMPLATE_ALIAS = BRAUN
+MULTIPLE_THEME_TEMPLATES_REQUIRED_IN_V1 = YES
+V1_THEME_TEMPLATE_SWITCHING = REQUIRED
+REVIEW_027 = PASS
+REVIEW_027_THEME_SCOPE = SINGLE_REQUIRED_TEMPLATE_BASELINE
+POST_REVIEW_OWNER_THEME_SCOPE_DELTA = BRAUN_PLUS_FAMICOM_REQUIRED
+DUAL_TEMPLATE_DELTA_REVIEW_REQUIRED = YES
+FULL_SHACO_PRESENTATION_PUBLIC_API_FEASIBILITY = CONFIRMED
+FULL_SHACO_PRESENTATION_OPTION = OPTION_B_PUBLIC_LOWER_LEVEL_CLIENT_BOOTSTRAP
+HARNESS_BASELINE_CHANGE_REQUIRED = NO
+HARNESS_SOURCE_EXTENSION_REQUIRED = NO
+HARNESS_REBASELINE_REQUIRED = NO
+FULL_SHACO_PRESENTATION_CORRECTIVE_CONTRACT = DUAL_TEMPLATE_DELTA_WAITING_INDEPENDENT_REVIEW
+FULL_SHACO_PRESENTATION_IMPLEMENTATION_AUTHORIZATION = PAUSED_PENDING_DUAL_TEMPLATE_DELTA_REVIEW
+REVIEW_026 = FAIL
+F_026_01 = CLOSED_BY_REVIEW_026B
+F_026_02 = OPEN_PENDING_INDEPENDENT_REREVIEW
+REVIEW_026B = FAIL
+F_026B_01_CORRECTIVE = APPLIED_WAITING_INDEPENDENT_REREVIEW
+REVIEW_026C_EXECUTION = DEFERRED_NOT_EXECUTED
+REVIEW_026C = DEFERRED_PENDING_FULL_SHACO_PRESENTATION_CORRECTIVE
+V1_SLICE_2_STEP3 = BLOCKED_PENDING_DUAL_TEMPLATE_DELTA_REVIEW
+PROVIDER_GATE_AUTHORIZATION = NO
+V1_CURRENT_STEP = V1_SLICE_2_STEP3_DUAL_THEME_TEMPLATE_DELTA_REVIEW
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_REVIEW_V1_DUAL_THEME_TEMPLATE_SCOPE_DELTA
+NEXT_ACTION = INDEPENDENT_REVIEW_V1_DUAL_THEME_TEMPLATE_SCOPE_DELTA
+ACTIVE_CURRENT_AUTHORITY_COUNT = ONE
+```
+
+Owner 最新要求 V1 真正实现 BRAUN、FAMICOM 与低噪最小 Template selector；SHACO_DEFAULT 仅为 BRAUN alias。长期 Shell reference 与 Braun.png 当前字节相同，结构/布局 authority 保持；FAMICOM 只改同一组件树的 token/recipe。light/dark/system、Copy/Adapt First、Harness public truth 与样式归一化保持；完整 Appearance Settings/editor 延后，其他主题参考 FUTURE_ONLY。
+
+本轮 Architecture Owner 明确输入确认 REVIEW-027 为 PASS；本地仓库未定位到独立 REVIEW-027 报告，故本条以该 Owner 输入为结论来源，不虚构报告路径、审查执行记录或新的 Review PASS。其覆盖 Full Shaco Presentation、Option B、Copy/Adapt First、MODE_PLUS_TEMPLATE 的单个 required template 基线；Owner 在 Review 后新增 BRAUN + FAMICOM required scope，必须单独 Delta Review，不把 REVIEW-027 改为 FAIL，也不声称它已覆盖双模板。
+
+本次仅暂停新增 Theme Scope 下的真正 Full Shaco Implementation，不撤销已认可的架构方向/授权。THEME-G01–G05 保留，G06–G08 新增，全部 REQUIRED / NOT_RUN；未来两模板各一张真实 Electron representative full-shell 图，默认 BRAUN 可覆盖九状态主 Matrix，另需实际切换与绑定连续性证明。
+
+上述 UI ownership 是已选择的目标方向，当前 source 仍是 pre-UI-corrective candidate；不表示新的 Shaco UI 已实现。Step1/Step2 保持 PASS / CLOSED / FROZEN。历史 REVIEW-026/026B 及 finding 状态保留，REVIEW-026C 延后且未执行；旧 Real Host/S3G16 PASS 只证明历史 source，不是新 Shaco UI PASS。UI-G01–UI-G18 与九状态 Visual Matrix 均为 REQUIRED / NOT_RUN。
+
+当前 REVIEW026B corrective final composition identity 继续是当前 source 的 authority，本轮未 supersede 或 regenerate；未来 UI source change 后才按 Candidate 的 final source freeze → controlled composition → new identity → full regression → Independent Review 顺序处理。
+
+本轮仅修改七份既有文档：Owner Decision、Candidate、Current State、Development Log、UI Design Spec 的 reference/scope 局部补充、Document Map 的合同索引状态与当前入口、V1 Development Map 的当前 route。无新增架构文档；所有图片、旧 Frozen Contract/Freeze Decision、Reviews、Evidence、Implementation Record、Product source、tests/scripts 与 Frozen Harness 保持 entry 字节。build/typecheck/unit/Electron/Worker/smoke/Provider/Packaging/Composition generation/Independent Delta Review：NOT RUN。Stage/Commit/Push：NO。
+
+</details>
+
+<details>
+<summary>Historical checkpoints through 2026-09-10 — retained authority/status summaries, not current instructions</summary>
+
+> Current REVIEW-026B Corrective V2 checkpoint (2026-09-10): REVIEW-026 remains `FAIL`; F-026-01 is `CLOSED_BY_REVIEW_026B`; F-026-02 remains `OPEN_PENDING_INDEPENDENT_REREVIEW`.
+> REVIEW-026B remains `FAIL` with F-026B-01 `HIGH / OPEN_BLOCKING`.
+> Corrective V2 is `APPLIED_WAITING_INDEPENDENT_REREVIEW`; only REVIEW-026C may close the open findings.
+> S3G16 and the Real Host Approval/Question results remain `PASS_CONFIRMED`. `PRODUCT_DEFECT = NOT_ESTABLISHED`; Provider authorization remains `NO`.
+> [Corrective Implementation Record](../04-development-records/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md) · [Corrective V2 Evidence](../04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026B-CORRECTIVE-01/run-manifest.json).
+
+```text
+V1_SLICE_2_STEP3_IMPLEMENTATION_RESULT = PASS
+V1_SLICE_2_STEP3_REVIEW_026 = FAIL
+V1_SLICE_2_STEP3_REVIEW_026_F026_01 = CLOSED_BY_REVIEW_026B
+V1_SLICE_2_STEP3_REVIEW_026_F026_02 = OPEN_PENDING_INDEPENDENT_REREVIEW
+V1_SLICE_2_STEP3_REVIEW_026B = FAIL
+V1_SLICE_2_STEP3_REVIEW_026B_BLOCKING_FINDINGS = F-026B-01_CANONICAL_STEP3_SMOKE_EVIDENCE_ROOT_UNDEFINED
+V1_SLICE_2_STEP3_REVIEW_026B_CORRECTIVE = APPLIED_WAITING_INDEPENDENT_REREVIEW
+F_026B_01_CORRECTIVE = APPLIED_WAITING_INDEPENDENT_REREVIEW
+V1_SLICE_2_STEP3_FINAL_COMPOSITION_IDENTITY = REGENERATED_AFTER_REVIEW_026B_CORRECTIVE_SOURCE_CHANGE
+V1_SLICE_2_STEP3_S3G16_REAL_HOST_LIFECYCLE = PASS
+V1_SLICE_2_STEP3_COMPATIBLE_ENV_CUMULATIVE_E2E = PASS
+V1_SLICE_2_STEP3 = IMPLEMENTED_WAITING_INDEPENDENT_REREVIEW
+V1_SLICE_2_STEP3_IMPLEMENTATION_AUTHORIZATION = CONSUMED
+PROVIDER_GATE_AUTHORIZATION = NO
+V1_CURRENT_STEP = V1_SLICE_2_STEP3_REVIEW_026B_CORRECTIVE_APPLIED_WAITING_REREVIEW
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_REREVIEW_V1_SLICE_2_STEP3_REVIEW_026B_CORRECTIVE
+```
+
 > Latest authority (2026-09-10): [Step3 Contract Gate Freeze / Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP3-CONTRACT-GATE-FREEZE-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md).
 > Step1 and Step2 remain `PASS / CLOSED / FROZEN`; Step2 Owner Closure is `ACCEPTED` and implementation authorization is `CONSUMED`.
 > Historical [REVIEW-025](../05-reviews/architecture/AUDIT-025-V1-SLICE-2-STEP3-CONTRACT-GATE-INDEPENDENT-REVIEW.md) remains `FAIL`; its sole HIGH / BLOCKING finding was `R25-01_PUBLIC_INTERACTION_EVENT_ID_NOT_PUBLIC`.
@@ -8,10 +147,12 @@
 > Composition timing is accepted as `PASS_CLARIFICATION`; Contract amendment and Frozen Harness baseline change are `NO`.
 > V1 creates no Outer Approval/Question pending projection; Harness Main Workspace retains the complete primary Approval/Question UI.
 > Gateway internal `frame.eventId` and pending-local-key substitution remain forbidden Product API dependencies.
-> Step3 implementation authorization is `YES`; Step3 is `AUTHORIZED_NOT_STARTED`; authorization != implementation started.
-> Provider authorization remains `NO`; Slice2 remains `IN_PROGRESS`. This operation records governance only.
-> Current Step: `V1_SLICE_2_STEP3_AUTHORIZED_NOT_STARTED`.
-> Next: `EXECUTE_V1_SLICE_2_STEP3_LONG_RUNNING_IMPLEMENTATION_GOAL`.
+> Step3 implementation authorization is `CONSUMED`; Step3 is `IMPLEMENTED_WAITING_INDEPENDENT_REREVIEW`; implementation, dedicated gates and cumulative non-Provider E2E are `PASS`.
+> Provider authorization remains `NO`; Slice2 remains `IN_PROGRESS`. The implementation candidate awaits independent corrective re-review; it is not Step3 closure or Owner acceptance.
+> Current Step: `V1_SLICE_2_STEP3_REVIEW_026_CORRECTIVE_APPLIED_WAITING_REREVIEW`.
+> Next: `INDEPENDENT_REREVIEW_V1_SLICE_2_STEP3_REVIEW_026_CORRECTIVE`.
+> Implementation evidence: [Step3 Implementation Record](../04-development-records/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md); S3G01-S3G20 and all required regression commands PASS; Provider runs = 0.
+
 
 > Historical / Superseded pre-REVIEW-024C checkpoint: Final Validation Corrective (STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01): all required final-source
 > regression and S2G01-S2G20 PASS. Step2 is `IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`.
@@ -130,14 +271,24 @@ V1_SLICE_2_STEP3_REVIEW_025B = PASS
 V1_SLICE_2_STEP3_CONTRACT_GATE = FROZEN
 V1_SLICE_2_STEP3_CONTRACT_GATE_FINAL_REVIEW = REVIEW-025B_PASS
 V1_SLICE_2_STEP3_CONTRACT_GATE_BLOCKING_FINDINGS = NONE
-V1_SLICE_2_STEP3_IMPLEMENTATION_AUTHORIZATION = YES
-V1_SLICE_2_STEP3 = AUTHORIZED_NOT_STARTED
+V1_SLICE_2_STEP3_IMPLEMENTATION_AUTHORIZATION = CONSUMED
+V1_SLICE_2_STEP3_REVIEW_026 = FAIL
+V1_SLICE_2_STEP3_REVIEW_026_F026_01 = CLOSED_BY_REVIEW_026B
+V1_SLICE_2_STEP3_REVIEW_026_F026_02 = OPEN_PENDING_INDEPENDENT_REREVIEW
+V1_SLICE_2_STEP3_REVIEW_026B = FAIL
+V1_SLICE_2_STEP3_REVIEW_026B_BLOCKING_FINDINGS = F-026B-01_CANONICAL_STEP3_SMOKE_EVIDENCE_ROOT_UNDEFINED
+V1_SLICE_2_STEP3_REVIEW_026B_CORRECTIVE = APPLIED_WAITING_INDEPENDENT_REREVIEW
+F_026B_01_CORRECTIVE = APPLIED_WAITING_INDEPENDENT_REREVIEW
+V1_SLICE_2_STEP3_FINAL_COMPOSITION_IDENTITY = REGENERATED_AFTER_REVIEW_026B_CORRECTIVE_SOURCE_CHANGE
+V1_SLICE_2_STEP3_S3G16_REAL_HOST_LIFECYCLE = PASS
+V1_SLICE_2_STEP3_COMPATIBLE_ENV_CUMULATIVE_E2E = PASS
+V1_SLICE_2_STEP3 = IMPLEMENTED_WAITING_INDEPENDENT_REREVIEW
 PROVIDER_GATE_AUTHORIZATION = NO
 V1_SLICE_2 = IN_PROGRESS
 V1_0_MAINLINE = MINIMAL_HARNESS_DESKTOP_PRODUCTIZATION
 V1_1_TO_V1_3 = PRESERVE_SEAMS_ONLY
-V1_CURRENT_STEP = V1_SLICE_2_STEP3_AUTHORIZED_NOT_STARTED
-V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_2_STEP3_LONG_RUNNING_IMPLEMENTATION_GOAL
+V1_CURRENT_STEP = V1_SLICE_2_STEP3_REVIEW_026B_CORRECTIVE_APPLIED_WAITING_REREVIEW
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_REREVIEW_V1_SLICE_2_STEP3_REVIEW_026B_CORRECTIVE
 STEP1_REGRESSION = PASS
 V1_SLICE_2_STEP2_REVIEW_024C = PASS
 V1_SLICE_2_STEP2_REVIEW_024B_R24B_01 = CLOSED_BY_CORRECTIVE_REREVIEW
@@ -202,12 +353,15 @@ PREVIOUS_V1_CURRENT_NEXT_ACTION = IMPLEMENT_V1_SLICE_1C_EMBEDDED_REAL_HARNESS_US
 > Product implementation or Slice 1A. V1 Product implementation must read it
 > before implementation.
 
+
+</details>
+
 ## 1. Authority Order
 
 当文档之间出现冲突时，默认按以下顺序判断当前事实：
 
 1. `SHACO-FORGE-CURRENT-STATE.md`：当前真实阶段、Gate、阻塞、下一步。
-2. 当前 Phase 已冻结 Contract：当前阶段执行边界与验收规则。
+2. 当前 Phase 已冻结 Contract：当前阶段执行边界与验收规则。Full Shaco corrective 尚为 Candidate；current documentation-only 限制优先，候选不激活 UI implementation，旧 Frozen 原文保留。
 3. 已接受的 ADR：架构决策及 supersede 关系。
 4. `SHACO-FORGE-V1.0-MASTER-GOAL.md`：V1.0 产品完成定义。
 5. `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md`：全阶段地图与依赖。
@@ -233,7 +387,7 @@ PREVIOUS_V1_CURRENT_NEXT_ACTION = IMPLEMENT_V1_SLICE_1C_EMBEDDED_REAL_HARNESS_US
 | `SHACO-FORGE-PRODUCT-VISION.md` | 长期产品方向 | DRAFT-FROZEN-BASELINE |
 | `SHACO-FORGE-VERSION-ROADMAP.md` | 1.0/1.1/1.2/1.3 路线 | DRAFT-FROZEN-BASELINE |
 | `SHACO-FORGE-V1.0-MASTER-GOAL.md` | V1.0 完成定义 | ACTIVE |
-| `SHACO-FORGE-UI-DESIGN-SPEC.md` | Shaco Forge UI Single Source of Truth / V1.0 UI baseline and V1.1–V1.3 extension direction | ACTIVE |
+| `SHACO-FORGE-UI-DESIGN-SPEC.md` | Shaco Forge UI Single Source of Truth / 长期 Shell 结构与 BRAUN/FAMICOM V1 Template visual authority / future extension direction | ACTIVE |
 
 UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` when relevant.
 
@@ -257,7 +411,8 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | Current four-Slice Harness-reuse implementation route plus need-driven P0.5/P1/P2-P8 taxonomy | ACTIVE |
 | `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md` | Re-frozen Architecture Contract for Worker authority, minimal trusted discovery, reconnect, cold projection, outer shell and Native integration | FROZEN |
 | `V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md` | Re-frozen local Slice 1B lifecycle/credential amendment preserving frozen wire/HMAC semantics | FROZEN |
-| [Step3 Contract Gate](../03-v1.0-plan/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-CONTRACT-GATE.md) | Frozen Step3 public seams, scope, composition/interaction identity, security, S3G01-S3G20 and cumulative regression; REVIEW-025B PASS; implementation authorized by Owner Decision | FROZEN |
+| [Full Shaco Presentation Corrective Contract Candidate](../03-v1.0-plan/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md) | REVIEW-027 / 027A PASS；BRAUN/FAMICOM Delta 已接受并实现；当前技术契约由 Step3 Owner Closure 接受 | FROZEN / IMPLEMENTED / OWNER_ACCEPTED |
+| [Step3 Contract Gate](../03-v1.0-plan/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-CONTRACT-GATE.md) | Historical frozen Step3 seams and S3G01-S3G20; REVIEW-025B PASS; old authorization CONSUMED; UI ownership replacement only after corrective Review PASS + Owner Freeze | FROZEN |
 | `V1-SLICE-1B-AUTHENTICATED-PHYSICAL-CARRIER-CONTRACT.md` | Slice 1B authenticated physical carrier and real Client ↔ Host implementation Contract | CLOSED / BASELINE FROZEN |
 | `V1-SLICE-1C-EMBEDDED-REAL-HARNESS-USER-LOOP-CONTRACT.md` | Slice 1C embedded real AppWebEntry/Harness user-loop Architecture Contract | CLOSED / BASELINE FROZEN |
 | `P0-UPSTREAM-BASELINE.md` | P0 正式 Contract | CLOSED / PASS; Independent Closure Audit PASS (AUDIT-004B); `ALLOW_P0S = YES` |
@@ -369,7 +524,11 @@ Baseline candidate now gates that Slice behind Independent Review.
 | Document/Folder | Role |
 |---|---|
 | `DEVELOPMENT-LOG.md` | 时间线摘要 |
-| [Step3 Contract Gate Freeze / Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP3-CONTRACT-GATE-FREEZE-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md) | Current Owner authority: Contract Gate FROZEN; REVIEW-025B PASS; R25-01 CLOSED; Step3 AUTHORIZED_NOT_STARTED; Provider NO |
+| [Full Shaco Presentation Direction Decision](../04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md) | Owner 已接受 REVIEW-027 / 027A 与 BRAUN/FAMICOM Delta；方向保持，实施授权已消费；Step3 已 Owner Closure / Frozen |
+| [Step3 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md) | Step3 PASS / CLOSED / FROZEN；唯一 Closure commit 为 baseline authority；Slice2 待独立 Closure Audit |
+| [Full Shaco Implementation Record](../04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-DUAL-THEME-IMPLEMENTATION-RECORD.md) | 当前 Step3 Full Shaco 最终实现与累计六批 Evidence；F-IFR-01 已独立复审关闭；历史结果保留 |
+| [Step3 Implementation Record](../04-development-records/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md) | Pre-UI-corrective source record: historical PASS evidence retained; REVIEW-026/026B remain FAIL; REVIEW-026C deferred pending Full Shaco corrective |
+| [Step3 Contract Gate Freeze / Implementation Authorization Decision](../04-development-records/V1-SLICE-2-STEP3-CONTRACT-GATE-FREEZE-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md) | Historical frozen authorization: Contract Gate FROZEN; REVIEW-025B PASS; authorization CONSUMED; no new UI implementation authorization; Provider NO |
 | [Step2 Owner Closure Decision](../04-development-records/V1-SLICE-2-STEP2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) | Current Step2 closure authority: Owner ACCEPTED; PASS / CLOSED / FROZEN; REVIEW-024C PASS |
 | `V1-SLICE-2-STEP2-SHARED-SOURCE-EXTENSION-SCOPE-CLARIFICATION-DECISION.md` | Latest Architecture Owner clarification: Step 1 acceptance/history remains frozen and byte-immutable where historical, later authorized Steps may evolve shared Product source, and cumulative regression must prove prior capability remains intact |
 | `V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md` | Historical Step2 entry authority; implementation authorization is now CONSUMED by Owner Closure; Step3 and Provider were unauthorized at that checkpoint |
@@ -476,3 +635,18 @@ Baseline candidate now gates that Slice behind Independent Review.
 - 写明 `Superseded By`；
 - 新 ADR / Contract 必须反向引用旧文档；
 - Archive 仅用于历史整理，不得用 Archive 覆盖当前权威。
+
+## Historical 2026-09-10 - Original Step3 implementation candidate
+
+- `V1_SLICE_2_STEP3_IMPLEMENTATION_RESULT = PASS`
+- `V1_SLICE_2_STEP3_DEDICATED_GATES = PASS`
+- `V1_SLICE_2_STEP3_CUMULATIVE_NON_PROVIDER_E2E = PASS`
+- `V1_SLICE_2_STEP3 = IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`
+- `V1_SLICE_2_STEP3_IMPLEMENTATION_AUTHORIZATION = CONSUMED`
+- `PROVIDER_GATE_AUTHORIZATION = NO`
+- `V1_CURRENT_STEP = V1_SLICE_2_STEP3_IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`
+- `V1_CURRENT_NEXT_ACTION = INDEPENDENT_REVIEW_V1_SLICE_2_STEP3_IMPLEMENTATION`
+
+- [Implementation Record](../04-development-records/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md) and its durable evidence preserve all failed attempts, final composition identities, real Electron screenshots and test methods.
+- Approval/Question use frozen public-bundle structural/fixture proof under Contract section 15; Provider execution remains excluded.
+- Stage / Commit / Push: NO. Independent Review: NOT_PERFORMED. Step1/Step2 frozen evidence and authorities are unchanged.

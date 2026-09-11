@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "strictUtf8AndMojibakeScan": "PASS",
+  "originalEncodingPreserved": true,
+  "newFilesUtf8WithoutBom": true,
+  "rawCredentials": false,
+  "secretValues": false,
+  "privateWorkspacePaths": false,
+  "userChatContent": false,
+  "hmacProof": false,
+  "exactPrivateCarrierEndpoint": false,
+  "rawInternalEventId": false,
+  "sessionAndWorkspaceIdentity": "SHA-256 only",
+  "powerShellExecutable": "Explicitly required environment provenance; not a canonical Product identity",
+  "internalTransportEnvelopes": "IPC memory only; not persisted",
+  "providerRuns": 0
+}

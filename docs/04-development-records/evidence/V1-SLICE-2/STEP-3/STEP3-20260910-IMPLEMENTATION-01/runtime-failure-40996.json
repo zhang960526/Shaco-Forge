@@ -1,0 +1,26 @@
+{
+  "failure": "STEP3_SETTINGS_PUBLIC_READ_TIMEOUT",
+  "body": "Shaco Forge\nWorker · 已连接\n‹\nS\nShaco Forge\nAI 开发工作空间\n+ 新对话\n项目目录\n打开项目…\n▾\nworkspace\n▱\n新对话\n设置\n探索未至之境\n预览版\nworkspace\n描述你想要构建的内容… / 调用指令 @ 文件或对话\nWorkspace Write\nDeepSeek-V4-Flash\nHigh\n详情\n点击消息流中的工具行查看详情\n设置\n关闭\n\nProvider 与模型\n\nHARNESS_FAILURE：无法读取设置，请重新读取。\n\n重新读取\n\n正在读取设置…",
+  "slots": [
+    "root",
+    "sidebar",
+    "conversation",
+    "conversation.session.header",
+    "conversation.session",
+    "conversation.composer",
+    "conversation.hero.brand.mark",
+    "conversation.hero.workspace",
+    "conversation.hero.workspace.directoryFlow",
+    "conversation.hero.agentPreset",
+    "conversation.input.dock",
+    "conversation.composer.bar",
+    "conversation.input.overlay",
+    "conversation.input.attachments",
+    "conversation.input.plan",
+    "conversation.input.left",
+    "conversation.input.right",
+    "conversation.input.model",
+    "details",
+    "shell.overlay"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "at": "2026-09-11T02:11:58.488Z",
+  "result": "PASS_PENDING_INDEPENDENT_REREVIEW",
+  "sourceScan": {
+    "gate": "UI-G14",
+    "result": "PASS",
+    "roots": [
+      "apps/desktop/src/client",
+      "apps/desktop/src/renderer"
+    ],
+    "files": [
+      "apps/desktop/src/client/composer.mjs",
+      "apps/desktop/src/client/conversation.mjs",
+      "apps/desktop/src/client/interactions.mjs",
+      "apps/desktop/src/client/message.mjs",
+      "apps/desktop/src/client/presentation-actions.mjs",
+      "apps/desktop/src/client/presentation-hooks.mjs",
+      "apps/desktop/src/client/recovery.mjs",
+      "apps/desktop/src/client/settings.mjs",
+      "apps/desktop/src/client/shaco-root.mjs",
+      "apps/desktop/src/client/shell-state.mjs",
+      "apps/desktop/src/client/sidebar.mjs",
+      "apps/desktop/src/renderer/global.d.ts",
+      "apps/desktop/src/renderer/main.ts",
+      "apps/desktop/src/renderer/node-module-stub.ts",
+      "apps/desktop/src/renderer/presentation-lifecycle.mjs",
+      "apps/desktop/src/renderer/shaco-bootstrap.d.mts",
+      "apps/desktop/src/renderer/shaco-bootstrap.mjs",
+      "apps/desktop/src/renderer/shell-bootstrap.ts",
+      "apps/desktop/src/renderer/theme/theme.ts",
+      "apps/desktop/src/renderer/transport.ts",
+      "apps/desktop/src/renderer/user-loop-evidence.ts"
+    ],
+    "publicImports": [
+      "@deepseek-ai/cordis",
+      "@deepseek-ai/cordis-plugin-loader",
+      "@deepseek-ai/dsh-client-ui-primitives",
+      "@deepseek-ai/dsh-client-web"
+    ],
+    "findings": []
+  },
+  "builtTransport": {
+    "path": "apps/desktop/dist/renderer/static/shell-bootstrap.js",
+    "sha256": "1388b50730e36577f3fb3d71da36d6ebe08e25570150ff7d84a48cb1f6650729",
+    "privateIdentityOrSettlementFound": false,
+    "fixtureReachable": false
+  },
+  "productionInternalEventIdDependency": "NONE",
+  "productionEventsResultSettlementCorrelation": "NONE",
+  "productionPrivateWaterfallInteractionListener": "NONE",
+  "publicPendingAnswer": "UNCHANGED",
+  "scope": "Product-owned Client/Renderer source, bootstrap and transitive local imports. Frozen Harness public implementations retain their own protocol internals.",
+  "negativeCoverage": [
+    "field/destructuring/computed private ID",
+    "private settlement route",
+    "private waterfall listener/type",
+    "private Harness import",
+    "relative packages/**/src import",
+    "reachable test fixture import"
+  ],
+  "independentReview": "NOT_PERFORMED"
+}

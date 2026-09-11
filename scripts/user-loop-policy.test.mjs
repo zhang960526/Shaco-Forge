@@ -277,6 +277,15 @@ test('PASS needs correlated real read/result/final and rendered marker plus all 
   assert.equal(assessAttempt(evidence, 's', true, true), 'TOOL_PROOF_NOT_PROVEN')
 })
 
+test('current public transport diagnostics do not require historical interaction telemetry', () => {
+  const evidence = observedLoop()
+  delete evidence.interactions
+  assert.equal(assessAttempt(evidence, 's', true, true), 'PASS')
+  // This is a Tool/stream proof only, not Approval/Question settlement proof.
+  evidence.events.pop()
+  assert.equal(assessAttempt(evidence, 's', true, true), 'TURN_NOT_FINISHED')
+})
+
 test('healthy no-tool retry requires accepted prompt and complete semantic stream', () => {
   const evidence = observedLoop(false)
   assert.equal(assessAttempt(evidence, 's', false, true), 'MODEL_TOOL_SELECTION_NOT_OBSERVED')

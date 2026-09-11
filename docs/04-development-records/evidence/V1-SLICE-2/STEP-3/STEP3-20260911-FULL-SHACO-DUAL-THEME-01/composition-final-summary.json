@@ -1,0 +1,22 @@
+{
+  "frozenAt": "2026-09-10T19:39:27.138Z",
+  "graphRevision": "shaco-v1-slice-2-step3-full-shaco-dual-theme-cd5ef81",
+  "totalRows": 29,
+  "harnessRows": 28,
+  "shacoRows": 1,
+  "sourceCount": 127,
+  "identitySha256": "330340db5517f5521f5f96245501f06164264622fcef3de2ce2447d48fdc5774",
+  "sourceFingerprintSha256": "37fa23dc6a9f5cf24e829fb1424d7438f32c81e9182076dcadd97008b5568b0f",
+  "manifestSha256": "b1bb7d6b080b6b5eebe8578a810b231a28dc2624d464fa8100b8df273f8ded8d",
+  "bootstrapSha256": "4e5e67c4dd9f6c19c7470f5a4c97074fd9cf08eb89734e27111a2d80bc8dbe57",
+  "applicationSha256": "3b907282bbe13229bdcecbc93117be310fc558c9c853b1c425fdb3d6e866238e",
+  "shacoRow": {
+    "id": "@shaco-forge/desktop",
+    "publicExport": "@shaco-forge/desktop/client",
+    "bytes": 59036,
+    "sha256": "c5ca982077b5e48c4693340a6baf774779e781529386ef4eb51703902241850d"
+  },
+  "verification": "PASS",
+  "priorCompositions": "composition-history.json; supersession records retained",
+  "desktopMainSha256": "881dd2295a895a4ae02e1014698e183e742cdb05bfcf58c2d8a47ed8c5888bfc"
+}

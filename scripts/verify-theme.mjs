@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { readFile } from 'node:fs/promises'
+import { readFile, readdir } from 'node:fs/promises'
 import { join } from 'node:path'
 import { paths } from './runtime-paths.mjs'
 
@@ -15,6 +15,8 @@ const scannedHardcodeFiles = [
   join(rendererRoot, 'global.d.ts'),
   join(rendererRoot, 'node-module-stub.ts'),
 ]
+const clientRoot = join(paths.root, 'apps/desktop/src/client')
+scannedHardcodeFiles.push(...(await readdir(clientRoot)).filter(name => name.endsWith('.mjs') && !name.endsWith('.test.mjs')).map(name => join(clientRoot,name)))
 const requiredTokens = [
   'surface-app',
   'surface-sidebar',
@@ -46,10 +48,12 @@ const [tokens, themes, controller, ...hardcodeTexts] = await Promise.all([
 ])
 for (const token of requiredTokens) {
   assert.match(tokens, new RegExp(`@property\\s+--${token}\\b`), `Semantic token declaration is missing: ${token}`)
-  assert.equal((themes.match(new RegExp(`--${token}\\s*:`, 'g')) ?? []).length, 2, `Light/dark mapping count must be two: ${token}`)
+  assert.equal((themes.match(new RegExp(`--${token}\\s*:`, 'g')) ?? []).length, 4, `Both templates require light/dark mapping: ${token}`)
 }
 assert.match(controller, /export type ThemeMode = 'light' \| 'dark' \| 'system'/)
 assert.match(controller, /class RootThemeController/)
+assert.match(controller, /export type ThemeTemplate = 'BRAUN' \| 'FAMICOM'/)
+assert.match(controller, /root\.dataset\.themeTemplate = this\.#template/)
 assert.match(controller, /#mode: ThemeMode = 'light'/)
 assert.match(controller, /root\.dataset\.theme = this\.#resolvedTheme/)
 assert.match(await readFile(join(rendererRoot, 'main.ts'), 'utf8'), /matchMedia\('\(prefers-color-scheme: dark\)'\)/)

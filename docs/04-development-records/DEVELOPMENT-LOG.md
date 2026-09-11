@@ -1,5 +1,377 @@
 # Shaco Forge Development Log
 
+Status: ACTIVE
+
+## Current — Step3 Owner Closure / Baseline Frozen (2026-09-11)
+
+<!-- FULL_SHACO_CURRENT_START -->
+本节同步 Current State 的唯一 current checkpoint，不新增阶段 authority。Architecture Owner 已接受 F-IFR-01-TARGETED-REREVIEW PASS，并正式接受 Step3 Closure / Baseline Freeze。独立复审来源为 OWNER_SUPPLIED_INLINE_REVIEW_TRANSCRIPT；本执行者只持久化该事实，不虚构独立报告路径。历史 Independent Final Review FAIL 和旧 Finding 保留；当前最终 Blocking Findings 为 NONE。
+
+```text
+F_IFR_01 = CLOSED_BY_INDEPENDENT_REREVIEW
+F_IFR_01_STATUS = CLOSED_BY_INDEPENDENT_REREVIEW
+F_IFR_01_REREVIEW = PASS
+UI_G14 = CONFIRMED
+DIRECTION_ALIGNMENT = ALIGNED
+V1_SLICE_2_STEP3_TECHNICAL_ACCEPTANCE = PASS
+V1_SLICE_2_STEP3_FINAL_INDEPENDENT_REVIEW = PASS_AFTER_F_IFR_01_TARGETED_REREVIEW
+V1_SLICE_2_STEP3_FINAL_BLOCKING_FINDINGS = NONE
+V1_SLICE_2_STEP3_OWNER_CLOSURE = ACCEPTED
+V1_SLICE_2_STEP3_RESULT = PASS
+V1_SLICE_2_STEP3_BASELINE = FROZEN_BY_STEP3_CLOSURE_COMMIT
+V1_SLICE_2_STEP3_BASELINE_FREEZE_AUTHORITY = FROZEN_BY_THIS_CLOSURE_COMMIT
+V1_SLICE_2_STEP1 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP2 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP3 = PASS / CLOSED / FROZEN
+V1_SLICE_2_STEP3_FULL_SHACO_PRESENTATION = PASS / CLOSED / FROZEN
+STEP3_CLOSURE = YES
+V1_SLICE_2 = IN_PROGRESS_PENDING_INDEPENDENT_CLOSURE_AUDIT
+SLICE2_CLOSURE = NO
+V1_SLICE_3 = NOT_STARTED
+VISUAL_ACCEPTANCE = PASS
+V1_VISUAL_POLISH = DEFERRED_NON_BLOCKING_TO_V1_FINAL_POLISH
+VISUAL_POLISH_BLOCKS_STEP3 = NO
+CUMULATIVE_STEP1_STEP2_STEP3_NON_PROVIDER_CHAIN = PASS
+FINAL_FULL_REGRESSION = PASS
+FROZEN_BASELINE_IDENTITY = VERIFIED
+FINAL_COMPOSITION_IDENTITY = ff48f2ec3cb4e618c734e8a189c1219169ca9ab83faa38ee1bfb57a0e29733f5
+PROVIDER_GATE_AUTHORIZATION = NO
+PROVIDER_RUN_COUNT = 0
+V1_CURRENT_STEP = V1_SLICE_2_ALL_STEPS_CLOSED_PENDING_SLICE_CLOSURE_AUDIT
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_CLOSURE_AUDIT_V1_SLICE_2
+NEXT_ACTION = INDEPENDENT_CLOSURE_AUDIT_V1_SLICE_2
+ACTIVE_CURRENT_AUTHORITY_COUNT = ONE
+```
+
+[Step3 Owner Closure / Freeze Decision](V1-SLICE-2-STEP3-OWNER-CLOSURE-AND-FREEZE-DECISION.md) 是本次接受与 freeze 决策；其所在唯一 Closure commit 为 baseline authority。当前 Full-Shaco 最终审查链取代旧 source candidate 作为 Closure 技术依据，旧 FAIL 不改写。Step1/Step2/Step3 已全部闭合，Slice2 仍待独立 Closure Audit，未获 Slice2 Closure。
+
+按既有 Cumulative Regression Closure Gate carry forward 已复审接受的冻结后 15 项最终 non-Provider 回归；本次未重跑 runtime/build/tests、未生成 Composition。Step1 attempt 1 的 PowerShell 5 环境 FAIL 与 attempt 2 的已验证 PowerShell 7 PASS 均保留，源码无漂移。BRAUN/FAMICOM、mode 和绑定连续性已接受，Visual Polish 非阻断延后至 V1 final polish。
+
+[既有实施记录](V1-SLICE-2-STEP3-FULL-SHACO-DUAL-THEME-IMPLEMENTATION-RECORD.md) · [Finalization Evidence](evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-FINALIZATION-01/README.md)。本次只变更治理文档并以一个本地 commit 收入累计 Step3 Candidate；Provider 0，Harness READ_ONLY，Push NO。完成后停止，不执行 Slice2 Audit。
+Owner 已批准仅三个确切 Historical Raw Evidence logs 的 whitespace exception，以保持接受时的原始字节。CR-aware 完整检查仍有 27 项，全部位于这三个日志；非豁免暂存内容检查 PASS，三个原始日志 SHA256 / staged blob / byte preservation PASS。KNOWN_RAW_EVIDENCE_FORMATTING_PRESERVED_BY_DESIGN；没有修正或规范化日志。
+
+<!-- FULL_SHACO_CURRENT_END -->
+
+<details>
+<summary>Historical — 双模板 Delta 待审 checkpoint，已被 Owner acceptance 取代</summary>
+
+本节同步 [Current State](../00-governance/SHACO-FORGE-CURRENT-STATE.md) 的唯一 current checkpoint，不新增阶段 authority。 [Owner Direction Decision](V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md) 与 [Corrective Contract Candidate](../03-v1.0-plan/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md) 已持久化；REVIEW-027 单模板架构基线 PASS 按 Owner 输入保留；本次 BRAUN + FAMICOM scope Delta 待独立复审，真正 Full Shaco Implementation 暂停。
+
+```text
+FULL_SHACO_PRESENTATION = SELECTED
+ALL_VISIBLE_PRODUCT_UI_OWNER = SHACO_FORGE
+HARNESS_VISIBLE_PRODUCT_UI = NONE
+HARNESS_RUNTIME_TRUTH_REUSE = YES
+V1_PRESENTATION_IMPLEMENTATION_STRATEGY = HARNESS_UI_SOURCE_COPY_AND_ADAPT_FIRST
+HARNESS_PRESENTATION_SOURCE_REUSE = DEFAULT_FIRST_CHOICE_WITH_BOUNDARIES
+GREENFIELD_UI_REIMPLEMENTATION = FALLBACK_ONLY_WHEN_SOURCE_REUSE_IS_NOT_PRACTICAL
+THEME_ARCHITECTURE = MODE_PLUS_TEMPLATE
+V1_THEME_MODE_SUPPORT = LIGHT_DARK_SYSTEM_CAPABLE
+THEME_TEMPLATE_EXTENSION_SEAM = REQUIRED
+FULL_APPEARANCE_SETTINGS_V1 = DEFERRED
+HARNESS_COPIED_PRESENTATION_STYLE = NORMALIZE_TO_SHACO_THEME_TEMPLATE_SYSTEM
+COPY_ADAPT_THEME_NORMALIZATION = REQUIRED
+V1_REQUIRED_THEME_TEMPLATE_COUNT = 2
+V1_REQUIRED_THEME_TEMPLATES = BRAUN,FAMICOM
+V1_DEFAULT_THEME_TEMPLATE = BRAUN
+SHACO_DEFAULT_TEMPLATE_ALIAS = BRAUN
+MULTIPLE_THEME_TEMPLATES_REQUIRED_IN_V1 = YES
+V1_THEME_TEMPLATE_SWITCHING = REQUIRED
+REVIEW_027 = PASS
+REVIEW_027_THEME_SCOPE = SINGLE_REQUIRED_TEMPLATE_BASELINE
+POST_REVIEW_OWNER_THEME_SCOPE_DELTA = BRAUN_PLUS_FAMICOM_REQUIRED
+DUAL_TEMPLATE_DELTA_REVIEW_REQUIRED = YES
+FULL_SHACO_PRESENTATION_PUBLIC_API_FEASIBILITY = CONFIRMED
+FULL_SHACO_PRESENTATION_OPTION = OPTION_B_PUBLIC_LOWER_LEVEL_CLIENT_BOOTSTRAP
+HARNESS_BASELINE_CHANGE_REQUIRED = NO
+HARNESS_SOURCE_EXTENSION_REQUIRED = NO
+HARNESS_REBASELINE_REQUIRED = NO
+FULL_SHACO_PRESENTATION_CORRECTIVE_CONTRACT = DUAL_TEMPLATE_DELTA_WAITING_INDEPENDENT_REVIEW
+FULL_SHACO_PRESENTATION_IMPLEMENTATION_AUTHORIZATION = PAUSED_PENDING_DUAL_TEMPLATE_DELTA_REVIEW
+REVIEW_026 = FAIL
+F_026_01 = CLOSED_BY_REVIEW_026B
+F_026_02 = OPEN_PENDING_INDEPENDENT_REREVIEW
+REVIEW_026B = FAIL
+F_026B_01_CORRECTIVE = APPLIED_WAITING_INDEPENDENT_REREVIEW
+REVIEW_026C_EXECUTION = DEFERRED_NOT_EXECUTED
+REVIEW_026C = DEFERRED_PENDING_FULL_SHACO_PRESENTATION_CORRECTIVE
+V1_SLICE_2_STEP3 = BLOCKED_PENDING_DUAL_TEMPLATE_DELTA_REVIEW
+PROVIDER_GATE_AUTHORIZATION = NO
+V1_CURRENT_STEP = V1_SLICE_2_STEP3_DUAL_THEME_TEMPLATE_DELTA_REVIEW
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_REVIEW_V1_DUAL_THEME_TEMPLATE_SCOPE_DELTA
+NEXT_ACTION = INDEPENDENT_REVIEW_V1_DUAL_THEME_TEMPLATE_SCOPE_DELTA
+ACTIVE_CURRENT_AUTHORITY_COUNT = ONE
+```
+
+Owner 最新要求 V1 真正实现 BRAUN、FAMICOM 与低噪最小 Template selector；SHACO_DEFAULT 仅为 BRAUN alias。长期 Shell reference 与 Braun.png 当前字节相同，结构/布局 authority 保持；FAMICOM 只改同一组件树的 token/recipe。light/dark/system、Copy/Adapt First、Harness public truth 与样式归一化保持；完整 Appearance Settings/editor 延后，其他主题参考 FUTURE_ONLY。
+
+本轮 Architecture Owner 明确输入确认 REVIEW-027 为 PASS；本地仓库未定位到独立 REVIEW-027 报告，故本条以该 Owner 输入为结论来源，不虚构报告路径、审查执行记录或新的 Review PASS。其覆盖 Full Shaco Presentation、Option B、Copy/Adapt First、MODE_PLUS_TEMPLATE 的单个 required template 基线；Owner 在 Review 后新增 BRAUN + FAMICOM required scope，必须单独 Delta Review，不把 REVIEW-027 改为 FAIL，也不声称它已覆盖双模板。
+
+本次仅暂停新增 Theme Scope 下的真正 Full Shaco Implementation，不撤销已认可的架构方向/授权。THEME-G01–G05 保留，G06–G08 新增，全部 REQUIRED / NOT_RUN；未来两模板各一张真实 Electron representative full-shell 图，默认 BRAUN 可覆盖九状态主 Matrix，另需实际切换与绑定连续性证明。
+
+上述 UI ownership 是已选择的目标方向，当前 source 仍是 pre-UI-corrective candidate；不表示新的 Shaco UI 已实现。Step1/Step2 保持 PASS / CLOSED / FROZEN。历史 REVIEW-026/026B 及 finding 状态保留，REVIEW-026C 延后且未执行；旧 Real Host/S3G16 PASS 只证明历史 source，不是新 Shaco UI PASS。UI-G01–UI-G18 与九状态 Visual Matrix 均为 REQUIRED / NOT_RUN。
+
+当前 REVIEW026B corrective final composition identity 继续是当前 source 的 authority，本轮未 supersede 或 regenerate；未来 UI source change 后才按 Candidate 的 final source freeze → controlled composition → new identity → full regression → Independent Review 顺序处理。
+
+本轮仅修改七份既有文档：Owner Decision、Candidate、Current State、Development Log、UI Design Spec 的 reference/scope 局部补充、Document Map 的合同索引状态与当前入口、V1 Development Map 的当前 route。无新增架构文档；所有图片、旧 Frozen Contract/Freeze Decision、Reviews、Evidence、Implementation Record、Product source、tests/scripts 与 Frozen Harness 保持 entry 字节。build/typecheck/unit/Electron/Worker/smoke/Provider/Packaging/Composition generation/Independent Delta Review：NOT RUN。Stage/Commit/Push：NO。
+
+</details>
+
+## 2026-09-11 — V1 dual Theme Template scope corrective after REVIEW-027
+
+- 按 Architecture Owner 最新要求，将 V1 从一个 SHACO_DEFAULT required template 改为 BRAUN + FAMICOM，默认 BRAUN，SHACO_DEFAULT 为 alias，最小真实 Template Switching 必须实现；完整 Appearance Settings/editor 延后。
+- 本地核验正式长期 Shell reference 与 Braun.png 字节相同，三张 required authority 图片 dimensions / SHA256 与 Owner 输入一致；UI Design Spec §3.3 仅更新当前图片指纹，§3.4 局部补充 Template authority/scope，原结构设计保持。
+- Candidate §15 明确两模板覆盖面、同树/同布局/同 Harness truth、mode 兼容、最小 selector 与 future-only assets；§16 保留 THEME-G01–G05 并增加 G06–G08；§17 补充两模板各一张最终真实 Electron full-shell 图及实际切换证明，不要求九状态 × 两主题全部重复。
+- REVIEW-027 PASS 来源为本轮 Owner 明确输入；本地未定位到独立报告，不新增或虚构 Review 文件。其单模板基线结论保持，本次 dual-template Delta 必须复审；不撤销架构方向/授权，真正 Full Shaco Implementation 暂停。
+- 七份既有文档最小同步：Owner Decision、Candidate、Current State、Development Log、UI Design Spec 局部引用/范围，以及确有合同索引状态/当前入口变化的 Document Map 和当前 route 变化的 V1 Development Map。无新增平行 ADR/Contract；不修改 Product/Harness/Tests/Scripts/图片/历史 Evidence。
+
+<!-- DUAL_THEME_VALIDATION_START -->
+本次仅执行 documentation-safe validation；检查通过不构成 Dual Template Delta Review PASS、Theme/UI Gate PASS 或 Implementation/Runtime PASS。
+
+| Documentation-safe check | Result |
+|---|---|
+| git status / HEAD / index | entry 116 paths → final 117 paths；仅既有 UI Design Spec 新进入 modified 集合；无新增文件，原 candidate 状态、Product/Harness HEAD 与 index SHA256 保持 |
+| git diff --check / 七份文档 whitespace | PASS |
+| UTF-8 strict / BOM / LF / mojibake | PASS；七份文档 UTF-8 without BOM、LF 保持；疑似乱码 = 0 |
+| local Markdown links / anchors | PASS；七份文档共 241 个 file targets、9 个 heading anchors，broken = 0 |
+| authority consistency | PASS；七份文档 required dual scope 一致；四个 current checkpoint、live Step3/next-action 一致；Current State 仍是唯一阶段 authority |
+| REVIEW-027 provenance / scope | PASS；按本轮 Owner 输入保留 PASS 与 SINGLE_REQUIRED_TEMPLATE_BASELINE；本地未定位独立报告，未虚构报告或将其扩大为 dual-template PASS |
+| image existence / PNG dimensions / SHA256 | PASS；三张 authority 图片均与 Owner 输入及本轮 entry 字节一致；Long-term Shell 与 Braun.png 字节相同；七张其他风格参考保留 |
+| protected contract / history | PASS；Option B、Copy/Adapt First、business API/ownership、recovery、28 rows、composition 原文/文件保持；历史 details 和此前日志条目原文保持 |
+| UI Design Spec scope | 仅更新 Last Updated、§3.3 当前图片指纹/引用定位，并追加 §3.4 Template Authority / V1 scope；其余结构设计 section 原文保持 |
+| Theme/UI Gates | THEME-G01–G05 编号/Contract 保留，G06–G08 新增；八项均 REQUIRED / NOT_RUN；既有 18 项 UI Gate 和九状态 Matrix 表格不变 |
+| protected Product / Tests / Scripts / Evidence / Harness / generated | 逐文件 SHA256 PASS，见下表 |
+| code tests / build / typecheck / unit / React / CSS / theme.ts implementation | NOT RUN / NOT IMPLEMENTED |
+| Runtime / Electron / Worker / smoke / Provider / Packaging / Composition generation | NOT RUN |
+| Independent Dual Template Delta Review | NOT RUN |
+| Stage / Commit / Push | NO |
+
+本轮 entry Product inventory 为 670 份 tracked/nonignored 文件，排除七份修正文档后的 663 份文件逐一比较 entry/final SHA256；覆盖 Product source、Tests/Scripts、原 Evidence/Reviews/Contracts/Implementation Record、三份 theme foundation 和全部图片 assets。Generated 与 Frozen Harness 另行比较，集合可交叠，不相加。Inventory digest 仍使用路径排序后的 `relative_path + NUL + decimal_bytes + NUL + lowercase_sha256 + LF` UTF-8 字节。
+
+| Protected scope | Files | Before = After inventory SHA256 | Result |
+|---|---|---|---|
+| Existing Product except seven corrected documents | 663 | `f2dbb74eb002dc6a318f1b63995d1f85212d672711106efa825c19d87987c132` | UNCHANGED |
+| Frozen Harness | 8953 | `748c1d4232e578d41d13c83ea51b132c1464fe2a2fa2cc89aaf68d61c39bc1ba` | UNCHANGED |
+| Generated client / desktop dist | 133 | `8ed44f76c53549d540639ab340531f5db8c1842c16bf8b1bffbff9258aff89de` | UNCHANGED |
+
+本轮图片 authority 核验（均位于 `docs/01-product/assets/`；未修改图片）：
+
+| Image | Dimensions | Bytes | SHA256 |
+|---|---|---|---|
+| `SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png` | 1672 x 941 | 1293763 | `2f6852676262562b614f9427c83c451ca99c129b4ba770597fd07023e6e35326` |
+| `Braun.png` | 1672 x 941 | 1293763 | `2f6852676262562b614f9427c83c451ca99c129b4ba770597fd07023e6e35326` |
+| `FAMICOM.png` | 1672 x 941 | 1375052 | `3f43f6f1ab08efde8837aa55aa0fab10c8cd092bdd52aa76e2cb902c621f4dab` |
+
+本次修正后的核心文档 identity（前轮 identity 保留为历史，不作为当前双模板合同 identity）：
+
+| Existing document | Bytes | SHA256 |
+|---|---|---|
+| `V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md` | 81989 | `976e9cc8baabc0f7a1727dc6b49e0753c5090eb84366e6bd7b2f5e4a4fb24793` |
+| `V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md` | 16295 | `97b70a12cdce33c9928c14c65e0f70097ab4b042adc0ce18556a63c0a1841698` |
+| `SHACO-FORGE-UI-DESIGN-SPEC.md` | 64349 | `0f2d9764cc6a4493e8d3880c181861c692d0611025d559834e100930576cd1f5` |
+
+最终 Git：`117 changed paths / 20 tracked modified / 97 untracked / staged NONE`。本任务新增文件 = 0；相对 entry 仅增加既有 `docs/01-product/SHACO-FORGE-UI-DESIGN-SPEC.md` 的 modified path，因其是当前唯一 UI visual authority，按 Owner 要求补充引用/双模板 scope。Product `master @ 5118053f625d01faba6617cace481df3091ba5be`；Frozen Harness `cd5ef8148158c3a752a658978873241fdf8e2bbc / CLEAN / READ_ONLY`；index 不变。
+
+REVIEW-027 单模板基线 PASS 保留；双模板 Delta 待审，Full Shaco Implementation 为 `PAUSED_PENDING_DUAL_TEMPLATE_DELTA_REVIEW`，不是撤销架构方向/授权。下一步为 `INDEPENDENT_REVIEW_V1_DUAL_THEME_TEMPLATE_SCOPE_DELTA`；本轮不执行该 Review，完成后停止，不开始 Implementation。
+<!-- DUAL_THEME_VALIDATION_END -->
+
+以下 Theme Template / Copy-Adapt / 首次候选条目与 SHA 保留为历史轮次事实，不代表当前双模板 scope 或当前下一步。
+
+## 2026-09-11 — Theme Template / Style Preset constraint clarification
+
+- 持久化 Architecture Owner 已确认的 MODE_PLUS_TEMPLATE：mode 为 light/dark/system，template 为独立 Style Preset / Visual Recipe identity；V1 只完成 SHACO_DEFAULT、保留模式能力并提供模板 seam，完整 Appearance Settings 延后，不要求第二个完整模板。
+- Candidate §15.1–15.3 补充可控制的视觉维度、稳定 root attributes、semantic CSS tokens + limited recipes、business truth 不变与过度设计边界；§4.4 明确 Harness Copy/Adapt 样式必须归一化，既有 Copy/Adapt First、Greenfield 例外与 License/Notice 条款保持。
+- 只读核对既有 renderer/theme/tokens.css、themes.css、theme.ts，记录为 EXISTING_THEME_FOUNDATION；未修改源码、测试或脚本，未复制 Harness 文件。
+- §16.1 新增 THEME-G01–THEME-G05，全部 REQUIRED / NOT_RUN。是否需要最小 synthetic template override / test fixture 由未来 Independent Review 判断；本轮不新增 fixture、不实现第二模板、不开始 Independent Review / REVIEW-027。
+- 仅修改既有 Owner Decision、Contract Candidate、Current State 与 Development Log 四份文档；其他文档无真实同步需要，保持原字节。Full Shaco、Option B、28 Frozen rows、public API feasibility、UI-G01–UI-G18、Visual Matrix、业务 truth/recovery、Review history 和当前 composition 状态全部保持。
+
+<!-- THEME_TEMPLATE_VALIDATION_START -->
+本次 documentation-safe validation 已完成；检查通过不构成主题已实现、Theme/UI Gate PASS、Independent Review 或 Runtime PASS。
+
+| Documentation-safe check | Result |
+|---|---|
+| git status / HEAD / index | 既有 106-path candidate 状态、Product/Harness HEAD 与 index SHA256 不变；执行期间另出现一份非本任务创建的未跟踪图片，见下方单独记录；最终 107 paths |
+| git diff --check / 四份修改文档 whitespace | PASS |
+| UTF-8 strict / BOM / LF / 疑似乱码 | PASS；四份文档 UTF-8 without BOM；LF 保持；疑似乱码 = 0 |
+| Markdown local links / heading anchors | PASS；检查四份修改文档及两份既有 Map，222 个 file targets / 9 个 anchors / broken = 0 |
+| theme constraints / current authority | PASS；四份修正文档的八项主题约束一致；全部既有治理赋值保持，四个 current mirror 的既有状态一致，Current State 仍为唯一阶段 authority |
+| existing contract / history protection | PASS；Candidate 仅追加 §4.4、§15.1–15.3、§16.1，全部既有段落保持；Owner 既有方向/复用/历史原文保持；Current State 历史和此前 Development Log 条目保持 |
+| UI-G01–UI-G18 / Visual State Matrix | 原文不变，状态 REQUIRED / NOT_RUN |
+| THEME-G01–THEME-G05 | 五项条款已写入，全部 REQUIRED / NOT_RUN；未执行验收或创建 synthetic fixture |
+| existing theme foundation / Product / Tests / Scripts / Evidence / Harness | 逐文件 SHA256 与 entry 相同；详见保护表 |
+| Document Map / V1 Development Map / composition identity | 原字节不变；composition 未 regenerate / supersede |
+| build / typecheck / unit / Electron / Worker / smoke / Provider / Packaging / Composition generation | NOT RUN |
+| Independent Review / REVIEW-026C / REVIEW-027 | NOT RUN |
+| Stage / Commit / Push | NO |
+
+本次 entry inventory 为 661 份 Product tracked/nonignored 文件；逐一比较其中除四份修正文档外的 657 份文件，覆盖 Product source、Tests/Scripts、Evidence/Reviews/Contracts/Design/Implementation Record 与两份 Map。执行期间出现的额外图片没有 entry 字节，不计入此 before/after 保护集合；保留并单独记录，不声称其在 entry 已存在。Generated 与 Frozen Harness 另行比较，集合可交叠，不相加。Inventory digest 使用路径排序后的 `relative_path + NUL + decimal_bytes + NUL + lowercase_sha256 + LF` UTF-8 字节。
+
+| Protected scope | Files | Before = After inventory SHA256 | Result |
+|---|---|---|---|
+| Existing Product except four corrected documents | 657 | `6eb513023f466512a31858aeee05325bd646503658f173533cee3d9acca7732b` | UNCHANGED |
+| Frozen Harness | 8953 | `748c1d4232e578d41d13c83ea51b132c1464fe2a2fa2cc89aaf68d61c39bc1ba` | UNCHANGED |
+| Generated client / desktop dist | 133 | `8ed44f76c53549d540639ab340531f5db8c1842c16bf8b1bffbff9258aff89de` | UNCHANGED |
+
+既有 Theme foundation 单文件保护：
+
+| Existing Product file | Bytes | Before = After SHA256 |
+|---|---|---|
+| `apps/desktop/src/renderer/theme/tokens.css` | 2073 | `b15506249bc3542a5d4208c50e29dcca340418ed4fd7c5328f842d1a13dac309` |
+| `apps/desktop/src/renderer/theme/themes.css` | 1441 | `0383c9946cf61dbdcde6bfddf3aa53c28bb315826580dd73953f5a9c810a741b` |
+| `apps/desktop/src/renderer/theme/theme.ts` | 1333 | `11aa6798137e0e2bea3c04ead0fb30dd76c69cb21ab4c99ea47a259130ae360c` |
+
+本次主题约束修正后的核心文档 identity（此前轮次 identity 继续作为历史记录保留）：
+
+| Existing document | Bytes | SHA256 |
+|---|---|---|
+| `V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md` | 75266 | `83ec97d7463c02052e4199fe554012b59828b3559d2f84372baa0e117e02e78a` |
+| `V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md` | 14422 | `cb9a3a96a56855a33d62c8dc000b8a41dc5bcccf2afed339d9feee38e36e43e1` |
+
+工作区独立变化：验证期间观察到未跟踪图片 `docs/01-product/assets/SHACO-FORGE-LONG-TERM-SHELL-REFERENCE-FAMICOM.png`（1375052 bytes，SHA256 `3f43f6f1ab08efde8837aa55aa0fab10c8cd092bdd52aa76e2cb902c621f4dab`）。该图片由本任务之外的操作加入，本轮未创建、编辑、删除或采用为新的设计 authority，仅保留并记录；不计入四份文档修正产物。
+
+最终 Git：`107 changed paths / 18 tracked modified / 89 untracked / staged NONE`；相比 entry 的 106 paths，唯一新增 path 是上述独立图片，本任务新增文件 = 0，既有 candidate 集合状态保持。Product `master @ 5118053f625d01faba6617cace481df3091ba5be`；Frozen Harness `cd5ef8148158c3a752a658978873241fdf8e2bbc / CLEAN / READ_ONLY`；index 未变。
+
+Contract 仍 `CANDIDATE_WAITING_INDEPENDENT_REVIEW`，Implementation Authorization = `NO`，Step3 仍 `BLOCKED_PENDING_FULL_SHACO_PRESENTATION_CONTRACT_REVIEW`。下一步保持 `INDEPENDENT_REVIEW_FULL_SHACO_PRESENTATION_CORRECTIVE_CONTRACT`；本轮不执行该 Review，完成文档修正后停止。
+<!-- THEME_TEMPLATE_VALIDATION_END -->
+
+以下 Copy/Adapt First 与首次候选持久化条目及其文档 SHA 是对应轮次的历史记录；本次主题约束修正后的 Candidate / Decision identity 以本节验证记录为准，历史条目保留原文。
+
+## 2026-09-11 — Copy/Adapt First implementation strategy clarification
+
+- 对 Owner 已确认的 V1 源码复用方向作最小 Documentation Corrective：将“允许复用”明确为 `HARNESS_UI_SOURCE_COPY_AND_ADAPT_FIRST` / `DEFAULT_FIRST_CHOICE_WITH_BOUNDARIES`，局部 Greenfield 仅为源码复用不切实际时的 fallback。
+- Owner Decision 与 Contract Candidate 持久化七项策略、成熟 UI 的先行评估、五项复用条件、六类组件级例外及具体理由要求；Candidate 补充 `REUSE vs ADAPT vs GREENFIELD` 优先级与八项逐来源迁移记录。Tool 的表述同步默认顺序，BASIC rendering 要求不变。
+- 同步 Current State 与本日志；本次只修改上述四份既有文档。Document Map 与 V1 Development Map 的索引/路线没有冲突的策略表述，保持原字节；未新增第三份 Decision / ADR / Contract 或任何文件。
+- Option B、100% Shaco visible UI、Frozen Harness baseline / 28 rows、public API feasibility、UI-G01–UI-G18、Visual State Matrix、Approval/Question truth、recovery、Review history 和当前 composition status 全部保持；没有 Freeze、Review PASS 或 Implementation Authorization。
+- 本地 MIT / `LOCAL_BASE_TERMS_CONFIRMED_FILE_SELECTION_CHECK_REQUIRED` 结论保持，未扩大为 blanket clearance；本轮不复制 Presentation 源文件。
+
+<!-- COPY_ADAPT_FIRST_VALIDATION_START -->
+本次只执行 documentation-safe validation；以下检查通过不构成 Independent Review、UI acceptance 或 Runtime PASS。
+
+| Documentation-safe check | Result |
+|---|---|
+| git status / HEAD / index | PASS；entry 与 final 的完整 status、Product/Harness HEAD、index SHA256 均不变；无 staged changes |
+| git diff --check / 文档 whitespace | PASS |
+| 本次四份文档 UTF-8 strict / BOM / 疑似乱码 | PASS；UTF-8 without BOM；LF 保持；疑似乱码 = 0 |
+| Markdown local links / heading anchors | PASS；只读检查四份修改文档及两份现有 Map；219 个 file targets、9 个 anchors；broken = 0 |
+| current authority consistency | PASS；Current State 仍为唯一阶段 authority；四个 current mirror 的既有治理值一致；Owner/Candidate 七项策略一致 |
+| protected contract / history sections | PASS；Candidate 除 §4 和 Tool 策略句外所有 section 原文不变；Owner 方向/历史 section、Current State 既有历史、此前 Development Log 条目原文不变 |
+| Document Map / V1 Development Map | UNCHANGED；无须同步的策略表述，不机械修改 |
+| protected Product / Test / Script / Evidence / Harness | PASS；逐文件 SHA256 与本次 entry 相同，详见下表 |
+| UI-G01–UI-G18 / Visual State Matrix / composition | 原条款与 identity 文件不变；Gates 仍 REQUIRED / NOT_RUN；当前 composition 未 supersede / regenerate |
+| build / typecheck / unit / Electron / Worker / smoke / Provider / Packaging | NOT RUN |
+| Composition generation / Independent Review / REVIEW-026C | NOT RUN |
+| Stage / Commit / Push | NO |
+
+本次 entry Product inventory 为 661 个 tracked/nonignored 文件；排除四份本次修改文档后的 657 个文件逐一比较，覆盖 Product source、Tests/Scripts、旧 Evidence/Reviews/Contracts/Design/Implementation Record 和两份未修改 Map。Generated 与 Frozen Harness 另行比较；集合可交叠，不相加。Inventory digest 继续使用路径排序后的 `relative_path + NUL + decimal_bytes + NUL + lowercase_sha256 + LF` UTF-8 字节。
+
+| Protected scope | Files | Before = After inventory SHA256 | Result |
+|---|---|---|---|
+| Product except four corrected documents | 657 | `6eb513023f466512a31858aeee05325bd646503658f173533cee3d9acca7732b` | UNCHANGED |
+| Frozen Harness | 8953 | `748c1d4232e578d41d13c83ea51b132c1464fe2a2fa2cc89aaf68d61c39bc1ba` | UNCHANGED |
+| Generated client / desktop dist | 133 | `8ed44f76c53549d540639ab340531f5db8c1842c16bf8b1bffbff9258aff89de` | UNCHANGED |
+
+本次修正后的两份核心文档 identity（下方历史首次持久化 SHA 保留原文，不作为修正后的 identity）：
+
+| Existing document | Bytes | SHA256 |
+|---|---|---|
+| `V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md` | 67369 | `fb54292323384b35c75754214c24e8014e87c8ebddf837acb7eca4f2e41f6b21` |
+| `V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md` | 11785 | `e9ee18d4bdb9b44f68044297b887e0c0179cdb54148053fb6f89012c7866ad1e` |
+
+最终 Git：`106 changed paths / 18 tracked modified / 88 untracked / staged NONE`，changed-path 集合和数量与本次 entry 完全相同；本次新增文件 = 0。Product `master @ 5118053f625d01faba6617cace481df3091ba5be`；Frozen Harness `cd5ef8148158c3a752a658978873241fdf8e2bbc / CLEAN / READ_ONLY`。
+
+策略澄清已完成；Contract 仍 `CANDIDATE_WAITING_INDEPENDENT_REVIEW`，Implementation Authorization = `NO`，Step3 仍 `BLOCKED_PENDING_FULL_SHACO_PRESENTATION_CONTRACT_REVIEW`，REVIEW-026C 仍 `DEFERRED_PENDING_FULL_SHACO_PRESENTATION_CORRECTIVE`。下一步保持 `INDEPENDENT_REVIEW_FULL_SHACO_PRESENTATION_CORRECTIVE_CONTRACT`；本轮不执行该 Review，完成文档修正后停止。
+<!-- COPY_ADAPT_FIRST_VALIDATION_END -->
+
+以下 design and candidate persistence 条目及其 SHA256 是首次持久化的历史记录；本次修正后的 Candidate / Decision identity 以本节验证记录为准，历史记录保持原文。
+
+## 2026-09-11 — Full Shaco Presentation design and candidate persistence
+
+- 新增 Direction Decision 与 Corrective Contract Candidate；核对 public bootstrap、chat target、Session prompt/cancel、pending object answer、Model/Permission/Settings 等公开边界。
+- 本地只读检查 LICENSE / THIRD_PARTY_NOTICES / package metadata / UI source headers；记录 MIT 基础条款与实现前逐文件 notice/attribution 要求；未联网或复制源码。
+- 同步 Current State、Document Map、V1 Development Map；旧 Review history 与 pre-UI composition authority 保留。
+- 本轮仅文档修改；受保护文件进入执行前/后的 SHA256 比对。
+
+<!-- FULL_SHACO_VALIDATION_START -->
+本轮 validation 只执行文档安全检查；以下 PASS 不构成 Independent Review、UI acceptance 或 Runtime PASS。
+
+| Documentation-safe check | Result |
+|---|---|
+| Product branch / HEAD、Frozen Harness HEAD / CLEAN | PASS；与 entry baseline 一致 |
+| git diff --check（existing candidate）与六份文档 whitespace | PASS；未 stage |
+| 六份文档 UTF-8 strict decode / BOM / 疑似乱码 | PASS；UTF-8 without BOM；既有四份 LF 保持 |
+| Markdown local file links / heading anchors | PASS；219 个 file targets、9 个 anchors；broken = 0 |
+| Document Map / current authority uniqueness | PASS；4 个同步 current block；Current State 唯一阶段 authority；所有 live Step3/next-action 值一致；历史块明确标记 |
+| Exact new document roster | PASS；仅 Direction Decision + Contract Candidate 两份新增 |
+| UI-G01–UI-G18 / nine visual states | REQUIRED / NOT_RUN；无提前 PASS |
+| Composition current source identity | PASS；原 identity 的 110 项 source SHA256 全匹配；未 regenerate / supersede |
+| Protected inventory hashes | PASS；见下表；changed = 0 |
+| build / typecheck / unit | NOT RUN |
+| Electron / Worker / smoke / Provider / Packaging | NOT RUN |
+| Composition generation / REVIEW-026C | NOT RUN |
+| Stage / Commit / Push | NO；index SHA256 未变化 |
+
+Protected inventory：逐文件读取 SHA256 后比较 entry 与 final 字节；以下分组存在交集，不把分组数相加。Inventory digest 输入为按路径字典序排序的 UTF-8 行：`relative_path + NUL + decimal_bytes + NUL + lowercase_sha256 + LF`。Product 集合来自 `git ls-files --cached --others --exclude-standard`，以 entry 的 659 个文件为基集，排除本轮四份治理文档；final 计算同一组 655 个既有文件，另行排除并检查两份新增文档。Generated 范围额外覆盖当前 `apps/desktop/.generated-client` 与 `apps/desktop/dist`。Frozen Harness 集合为全部 tracked/nonignored 文件；未触及 git config。
+
+| Protected scope | Files | Before = After inventory SHA256 | Result |
+|---|---|---|---|
+| all_existing_product_except_four_governance | 655 | `5dcc39cccbfcf1d389428219a0a8bef0fb67e941b44f08e2e9315650d529c021` | UNCHANGED |
+| product_apps_packages_and_root_metadata | 86 | `834f0d067b949a7b519150f2e94c757a5eba1725d8470305926909ef222a1b32` | UNCHANGED |
+| tests_scripts_fixtures | 61 | `110227bace6a672f5cc68ac64b50bda1a60107da7d532a7d604b87958eaa10fc` | UNCHANGED |
+| old_evidence | 306 | `f85906f79ad9b855fa34d7f04e7bc5ad55f5ecdd6e2f1613d49a0f2e182d71f9` | UNCHANGED |
+| reviews | 39 | `d5e7b37b9385f5778101a61a2bfec34ec9a66ea52fead7f13b20c1681d6ebbfc` | UNCHANGED |
+| protected_design_contract_freeze_records | 95 | `24e875e568a0d327ed8d6e3f5adbdc9628114d30edd18dfb11cb6e5a9f439fd5` | UNCHANGED |
+| frozen_harness | 8953 | `748c1d4232e578d41d13c83ea51b132c1464fe2a2fa2cc89aaf68d61c39bc1ba` | UNCHANGED |
+| generated_client_and_desktop_dist | 133 | `8ed44f76c53549d540639ab340531f5db8c1842c16bf8b1bffbff9258aff89de` | UNCHANGED |
+
+New document identity（各文档自身不包含自己的 SHA，避免 self-reference）：
+
+| Document | Bytes | SHA256 | Status |
+|---|---|---|---|
+| [V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md](../03-v1.0-plan/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md) | 62644 | `ec58b3a9c477fba820af1d164b307501caf5d0c94f0b85f6b090beab7c438efc` | CANDIDATE_WAITING_INDEPENDENT_REVIEW |
+| [V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md](V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md) | 8784 | `4a4c5ff306b7bf58fdaecbd756bbdf0576ec3ad1c669f85bbd270e4a537e361b` | OWNER_DIRECTION_CONFIRMED_CONTRACT_CANDIDATE_WAITING_INDEPENDENT_REVIEW |
+
+最终 Git candidate：`106 changed paths / 18 tracked modified / 88 untracked / staged NONE`；Product `master @ 5118053f625d01faba6617cace481df3091ba5be`，Frozen Harness `cd5ef8148158c3a752a658978873241fdf8e2bbc / CLEAN / READ_ONLY`。
+
+NEXT_ACTION = `INDEPENDENT_REVIEW_FULL_SHACO_PRESENTATION_CORRECTIVE_CONTRACT`。持久化完成后停止。
+<!-- FULL_SHACO_VALIDATION_END -->
+
+<details>
+<summary>Historical development entries through 2026-09-10 — original claims and next actions apply only to their recording checkpoint</summary>
+
+> Current REVIEW-026B Corrective V2 checkpoint (2026-09-10): REVIEW-026 remains `FAIL`; F-026-01 is `CLOSED_BY_REVIEW_026B`; F-026-02 remains `OPEN_PENDING_INDEPENDENT_REREVIEW`.
+> REVIEW-026B remains `FAIL` with F-026B-01 `HIGH / OPEN_BLOCKING`.
+> Corrective V2 is `APPLIED_WAITING_INDEPENDENT_REREVIEW`; only REVIEW-026C may close the open findings.
+> S3G16 and the Real Host Approval/Question results remain `PASS_CONFIRMED`. `PRODUCT_DEFECT = NOT_ESTABLISHED`; Provider authorization remains `NO`.
+> [Corrective Implementation Record](V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md) · [Corrective V2 Evidence](evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026B-CORRECTIVE-01/run-manifest.json).
+
+```text
+V1_SLICE_2_STEP3_IMPLEMENTATION_RESULT = PASS
+V1_SLICE_2_STEP3_REVIEW_026 = FAIL
+V1_SLICE_2_STEP3_REVIEW_026_F026_01 = CLOSED_BY_REVIEW_026B
+V1_SLICE_2_STEP3_REVIEW_026_F026_02 = OPEN_PENDING_INDEPENDENT_REREVIEW
+V1_SLICE_2_STEP3_REVIEW_026B = FAIL
+V1_SLICE_2_STEP3_REVIEW_026B_BLOCKING_FINDINGS = F-026B-01_CANONICAL_STEP3_SMOKE_EVIDENCE_ROOT_UNDEFINED
+V1_SLICE_2_STEP3_REVIEW_026B_CORRECTIVE = APPLIED_WAITING_INDEPENDENT_REREVIEW
+F_026B_01_CORRECTIVE = APPLIED_WAITING_INDEPENDENT_REREVIEW
+V1_SLICE_2_STEP3_FINAL_COMPOSITION_IDENTITY = REGENERATED_AFTER_REVIEW_026B_CORRECTIVE_SOURCE_CHANGE
+V1_SLICE_2_STEP3_S3G16_REAL_HOST_LIFECYCLE = PASS
+V1_SLICE_2_STEP3_COMPATIBLE_ENV_CUMULATIVE_E2E = PASS
+V1_SLICE_2_STEP3 = IMPLEMENTED_WAITING_INDEPENDENT_REREVIEW
+V1_SLICE_2_STEP3_IMPLEMENTATION_AUTHORIZATION = CONSUMED
+PROVIDER_GATE_AUTHORIZATION = NO
+V1_CURRENT_STEP = V1_SLICE_2_STEP3_REVIEW_026B_CORRECTIVE_APPLIED_WAITING_REREVIEW
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_REREVIEW_V1_SLICE_2_STEP3_REVIEW_026B_CORRECTIVE
+```
+
+## 2026-09-10 - REVIEW-026B F-026B-01 Corrective V2
+
+- REVIEW-026B remains FAIL. F-026B-01 remains open pending independent REVIEW-026C.
+- Made the canonical Step3 smoke self-contained for absent and caller-provided Step2 evidence roots.
+- Regenerated and froze the complete 29-row final composition identity before Runtime acceptance.
+- Both focused smoke modes and all 12 non-Provider regression commands passed; unit tests 163/163.
+- Preserved 36/36 original Evidence, 22/22 REVIEW026 Corrective Evidence, and 74/74 Frozen authorities.
+- Provider runs 0. Stage, commit and push remain NO. Slice3 was not started.
+- Next: INDEPENDENT_REREVIEW_V1_SLICE_2_STEP3_REVIEW_026B_CORRECTIVE.
 > Latest authority (2026-09-10): [Step3 Contract Gate Freeze / Implementation Authorization Decision](V1-SLICE-2-STEP3-CONTRACT-GATE-FREEZE-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md).
 > Step1 and Step2 remain `PASS / CLOSED / FROZEN`; Step2 Owner Closure is `ACCEPTED` and implementation authorization is `CONSUMED`.
 > Historical [REVIEW-025](../05-reviews/architecture/AUDIT-025-V1-SLICE-2-STEP3-CONTRACT-GATE-INDEPENDENT-REVIEW.md) remains `FAIL`; its sole HIGH / BLOCKING finding was `R25-01_PUBLIC_INTERACTION_EVENT_ID_NOT_PUBLIC`.
@@ -8,10 +380,12 @@
 > Composition timing is accepted as `PASS_CLARIFICATION`; Contract amendment and Frozen Harness baseline change are `NO`.
 > V1 creates no Outer Approval/Question pending projection; Harness Main Workspace retains the complete primary Approval/Question UI.
 > Gateway internal `frame.eventId` and pending-local-key substitution remain forbidden Product API dependencies.
-> Step3 implementation authorization is `YES`; Step3 is `AUTHORIZED_NOT_STARTED`; authorization != implementation started.
-> Provider authorization remains `NO`; Slice2 remains `IN_PROGRESS`. This operation records governance only.
-> Current Step: `V1_SLICE_2_STEP3_AUTHORIZED_NOT_STARTED`.
-> Next: `EXECUTE_V1_SLICE_2_STEP3_LONG_RUNNING_IMPLEMENTATION_GOAL`.
+> Step3 implementation authorization is `CONSUMED`; Step3 is `IMPLEMENTED_WAITING_INDEPENDENT_REREVIEW`; implementation, dedicated gates and cumulative non-Provider E2E are `PASS`.
+> Provider authorization remains `NO`; Slice2 remains `IN_PROGRESS`. The implementation candidate awaits independent corrective re-review; it is not Step3 closure or Owner acceptance.
+> Current Step: `V1_SLICE_2_STEP3_REVIEW_026_CORRECTIVE_APPLIED_WAITING_REREVIEW`.
+> Next: `INDEPENDENT_REREVIEW_V1_SLICE_2_STEP3_REVIEW_026_CORRECTIVE`.
+> Implementation evidence: [Step3 Implementation Record](V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md); S3G01-S3G20 and all required regression commands PASS; Provider runs = 0.
+
 
 > Historical / Superseded pre-REVIEW-024C checkpoint: Final Validation Corrective (STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01): all required final-source
 > regression and S2G01-S2G20 PASS. Step2 is `IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`.
@@ -25,6 +399,21 @@
 > Next: `INDEPENDENT_REREVIEW_V1_SLICE_2_STEP2_REVIEW_024B_CORRECTIVE`.
 
 Status: ACTIVE
+
+## Historical 2026-09-10 - Original Step3 implementation candidate
+
+- `V1_SLICE_2_STEP3_IMPLEMENTATION_RESULT = PASS`
+- `V1_SLICE_2_STEP3_DEDICATED_GATES = PASS`
+- `V1_SLICE_2_STEP3_CUMULATIVE_NON_PROVIDER_E2E = PASS`
+- `V1_SLICE_2_STEP3 = IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`
+- `V1_SLICE_2_STEP3_IMPLEMENTATION_AUTHORIZATION = CONSUMED`
+- `PROVIDER_GATE_AUTHORIZATION = NO`
+- `V1_CURRENT_STEP = V1_SLICE_2_STEP3_IMPLEMENTED_WAITING_INDEPENDENT_REVIEW`
+- `V1_CURRENT_NEXT_ACTION = INDEPENDENT_REVIEW_V1_SLICE_2_STEP3_IMPLEMENTATION`
+
+- [Implementation Record](V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md) and its durable evidence preserve all failed attempts, final composition identities, real Electron screenshots and test methods.
+- Approval/Question use frozen public-bundle structural/fixture proof under Contract section 15; Provider execution remains excluded.
+- Stage / Commit / Push: NO. Independent Review: NOT_PERFORMED. Step1/Step2 frozen evidence and authorities are unchanged.
 
 ## 2026-09-10 - V1-SLICE-2 Step3 Contract Gate Freeze / Implementation Authorization
 
@@ -1610,3 +1999,5 @@ Earlier the same day:
 - P0 / P0.S / P0.5 detailed design completed and audited PASS_WITH_REQUIRED_CORRECTIONS.
 - Architecture Owner accepted P0-stage corrections.
 - Documentation system initialized.
+
+</details>

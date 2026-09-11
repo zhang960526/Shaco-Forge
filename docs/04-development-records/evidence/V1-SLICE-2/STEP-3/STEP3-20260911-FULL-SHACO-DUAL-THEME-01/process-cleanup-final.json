@@ -1,0 +1,8 @@
+{
+  "capturedAt": "2026-09-10T19:49:19.5823551Z",
+  "result": "PASS",
+  "method": "Read-only Win32_Process query after complete final regression; Product Worker/Carrier/Desktop/test-entry patterns, combined with each smoke owned-process cleanup proof.",
+  "remainingMatchingProcesses": [],
+  "count": 0,
+  "stoppedDuringThisCheck": 0
+}

@@ -1,0 +1,518 @@
+{
+  "result": "PASS",
+  "nonProviderResult": "PASS",
+  "capturedAt": "2026-09-11T02:12:47.840Z",
+  "desktop": {
+    "electronVersion": "35.7.5",
+    "mainPid": 24880,
+    "loadingUrl": "shaco-forge://client/?theme-smoke=1",
+    "buildArtifactPath": "D:\\Project\\Shaco-Forge\\apps\\desktop\\dist\\renderer",
+    "security": {
+      "nodeIntegration": false,
+      "contextIsolation": true,
+      "sandbox": true,
+      "webSecurity": true,
+      "allowRunningInsecureContent": false
+    },
+    "secureConfiguration": true
+  },
+  "topology": {
+    "mainPid": 24880,
+    "workerPid": 20056,
+    "hostPid": 15928,
+    "nativeHelperPid": 24872,
+    "independentProcesses": true
+  },
+  "bootstrapSupervisorChannel": {
+    "finalProductCarrier": false,
+    "businessTraffic": 0,
+    "events": [
+      {
+        "protocolVersion": 1,
+        "phase": "host-ready",
+        "timestamp": "2026-09-11T02:12:46.047Z",
+        "workerPid": 20056,
+        "hostPid": 15928,
+        "parentPid": 24880,
+        "workerNodeVersion": "v22.19.0",
+        "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+        "workerArgv": [
+          "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+        ]
+      },
+      {
+        "protocolVersion": 1,
+        "phase": "carrier-ready",
+        "timestamp": "2026-09-11T02:12:46.057Z",
+        "workerPid": 20056,
+        "hostPid": 15928,
+        "parentPid": 24880,
+        "workerNodeVersion": "v22.19.0",
+        "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+        "workerArgv": [
+          "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+        ]
+      }
+    ]
+  },
+  "carrier": {
+    "helperPid": 24872,
+    "pipeEndpointRedacted": true,
+    "pipeEndpointHashPrefix": "31f0258fd2410476",
+    "security": {
+      "aclProtected": true,
+      "inheritanceDisabled": true,
+      "currentUserAllowRule": true,
+      "unintendedBroadAllowRule": false,
+      "firstPipeInstance": true,
+      "randomEntropyBits": 128,
+      "postCreateInspection": true
+    },
+    "hostPreflight": {
+      "type": "host-carrier-preflight",
+      "profilePluginLoaded": true,
+      "fetchHandlerReady": true,
+      "wireStreamReady": true,
+      "eventsRouteReady": true,
+      "eventsRouteProbe": {
+        "endpoint": "$events",
+        "opened": true,
+        "readyObserved": true,
+        "readyShapeValid": true,
+        "cancelled": true,
+        "iteratorClosed": true,
+        "activeStreamsAfterCleanup": 0,
+        "eventSubscriptionRetained": false,
+        "clientRuntimeMetricCounted": false,
+        "businessOperationsPerformed": 0
+      },
+      "stockWebStarted": false
+    },
+    "metrics": {
+      "mainAuthenticatedCarrier": true,
+      "serverAuthenticatedToMain": true,
+      "businessFramesSent": 11,
+      "unaryRequests": 5,
+      "streamOpens": 3,
+      "streamPulls": 6,
+      "streamCancels": 0,
+      "eventsReadyObserved": 1,
+      "maxRendererInflightPullPerStream": 1,
+      "unsolicitedRendererStreamPushes": 0,
+      "activeStreams": 0,
+      "pendingUnary": 0,
+      "finalActiveStreams": 0,
+      "finalPendingUnary": 0,
+      "maxObservedJsonFrameBytes": 20243,
+      "oversizeFrames": 0,
+      "maxActiveStreams": 3,
+      "maxQueueDepth": 1,
+      "creditViolations": 0,
+      "duplicateStreamTerminals": 0,
+      "itemsAfterTerminal": 0
+    },
+    "secretRedacted": true
+  },
+  "failureTruthfulness": {
+    "injectedCarrierFailure": true,
+    "method": "EVIDENCE_ONLY_FENCE_THEN_PHYSICAL_HELPER_TERMINATION",
+    "failureUI": {
+      "rootInert": true,
+      "rootHidden": true,
+      "shacoError": true,
+      "noHarnessBrand": true
+    },
+    "failurePhaseBeforeCleanup": "failed",
+    "carrierFailedObserved": true,
+    "finalProjectionPhase": "disconnected",
+    "automaticWorkerRestart": false,
+    "automaticCarrierRecreation": false,
+    "implicitAgentCancel": false,
+    "shacoRecovery": false
+  },
+  "renderer": {
+    "ok": true,
+    "harnessClient": {
+      "package": "@deepseek-ai/dsh-client-web@0.1.2-alpha.1",
+      "export": "OPTION_B_PUBLIC_LOWER_LEVEL_CLIENT_BOOTSTRAP",
+      "reactResolution": "18.3.1",
+      "mountRoot": "#harness-client-root",
+      "runResolved": true,
+      "renderedClientIdentity": true,
+      "rootChildCount": 1,
+      "bootPagePresent": false,
+      "renderedTextPresent": true,
+      "appWebEntryCount": 0,
+      "optionB": {
+        "clientModuleSystems": 1,
+        "contexts": 1,
+        "reactRoots": 1,
+        "mountCalls": 1,
+        "harnessActive": 28,
+        "productActive": true,
+        "rootOwner": "SHACO",
+        "failed": false,
+        "disposed": false
+      },
+      "fixtureOrMockPresent": false,
+      "connectionState": "AUTHENTICATED_CARRIER_EVENTS_READY"
+    },
+    "loading": {
+      "url": "shaco-forge://client/?theme-smoke=1",
+      "protocol": "shaco-forge:",
+      "origin": "shaco-forge://client"
+    },
+    "security": {
+      "rendererRequireType": "undefined",
+      "rendererProcessType": "undefined",
+      "exposedBridgeKeys": [
+        "bootstrap",
+        "reportRuntimeEvidence",
+        "transport",
+        "workspace"
+      ],
+      "pipeAccess": false,
+      "pipeNamePresent": false,
+      "reusableSecretPresent": false,
+      "directWorkerTransport": false
+    },
+    "theme": {
+      "architecture": "MODE_PLUS_TEMPLATE",
+      "supportedModes": [
+        "light",
+        "dark",
+        "system"
+      ],
+      "initial": {
+        "mode": "light",
+        "resolved": "light",
+        "rootTheme": "light",
+        "values": {
+          "appSurface": "rgb(244, 244, 242)",
+          "sidebarSurface": "rgb(235, 235, 232)",
+          "primaryText": "rgb(36, 38, 36)",
+          "border": "rgb(210, 211, 205)",
+          "selectedRow": "rgb(216, 219, 212)",
+          "composerSurface": "rgb(250, 250, 248)"
+        }
+      },
+      "systemPreferenceQuery": "(prefers-color-scheme: dark)",
+      "rootSwitchSmoke": {
+        "requested": true,
+        "pass": true,
+        "lightValues": {
+          "appSurface": "rgb(244, 244, 242)",
+          "sidebarSurface": "rgb(235, 235, 232)",
+          "primaryText": "rgb(36, 38, 36)",
+          "border": "rgb(210, 211, 205)",
+          "selectedRow": "rgb(216, 219, 212)",
+          "composerSurface": "rgb(250, 250, 248)"
+        },
+        "darkValues": {
+          "appSurface": "rgb(23, 27, 24)",
+          "sidebarSurface": "rgb(29, 34, 30)",
+          "primaryText": "rgb(237, 241, 233)",
+          "border": "rgb(68, 77, 63)",
+          "selectedRow": "rgb(57, 72, 49)",
+          "composerSurface": "rgb(43, 49, 43)"
+        },
+        "changedSemanticTokens": [
+          "appSurface",
+          "sidebarSurface",
+          "primaryText",
+          "border",
+          "selectedRow",
+          "composerSurface"
+        ],
+        "finalMode": "light",
+        "finalResolved": "light",
+        "finalRootTheme": "light"
+      },
+      "visibleAppearanceSettings": false,
+      "harnessClientThemeUnification": "SHACO_TEMPLATE_AUTHORITY"
+    },
+    "reducedView": {
+      "shellMode": "FULL_SHACO_PRESENTATION",
+      "singleSidebar": true,
+      "outerActionsEnabled": true,
+      "newChatVisible": true,
+      "projectDirectoryVisible": true,
+      "settingsVisible": true,
+      "automationAbsent": true,
+      "agentCollaborationAbsent": true,
+      "knowledgeBaseAbsent": true,
+      "centeredChatLayout": true,
+      "noPermanentInspector": true,
+      "truthfulConnectionState": true
+    },
+    "transport": {
+      "ownsHost": true,
+      "fetchUsed": true,
+      "fetchEndpoints": [
+        "settings/describe",
+        "session/modelCatalog",
+        "session/list"
+      ],
+      "openStreamUsed": true,
+      "streamEndpoints": [
+        "session/control",
+        "workspace/follow",
+        "$events"
+      ],
+      "realEventsStream": true,
+      "realEventsReady": true,
+      "abortCancels": 0,
+      "iteratorCancels": 0
+    },
+    "fatalEvents": []
+  },
+  "harnessClientManifest": {
+    "schemaVersion": 1,
+    "productSlice": "V1-SLICE-2-STEP3",
+    "graphRevision": "shaco-v1-slice-2-step3-full-shaco-dual-theme-cd5ef81",
+    "frozenHarness": {
+      "commit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "release": "dsh-v0.1.2-alpha.1",
+      "packageVersion": "0.1.2-alpha.1"
+    },
+    "composition": {
+      "package": "@deepseek-ai/dsh-client-web",
+      "export": "OPTION_B_PUBLIC_LOWER_LEVEL_CLIENT_BOOTSTRAP",
+      "publicExportOnly": true
+    },
+    "reactResolution": {
+      "react": "18.3.1",
+      "reactDom": "18.3.1"
+    },
+    "graph": {
+      "requiredCount": 24,
+      "supportCount": 4,
+      "frozenHarnessCount": 28,
+      "productCount": 1,
+      "totalCount": 29,
+      "orderedIds": [
+        "@deepseek-ai/dsh-client-modules",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-general",
+        "@deepseek-ai/dsh-client-ui-settings-models",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-approval",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-tool",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-directory-picker-browse",
+        "@deepseek-ai/dsh-client-ui-input-trigger",
+        "@deepseek-ai/dsh-client-ui-commands",
+        "@deepseek-ai/dsh-client-ui-subagent",
+        "@deepseek-ai/dsh-client-ui-model-selection",
+        "@deepseek-ai/dsh-client-ui-permission-presets",
+        "@deepseek-ai/dsh-client-ui-user-questions",
+        "@deepseek-ai/dsh-typert-registry",
+        "@deepseek-ai/dsh-api-gateway",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-api-workspace-controller",
+        "@shaco-forge/desktop"
+      ]
+    },
+    "artifacts": [
+      {
+        "id": "@deepseek-ai/dsh-client-modules",
+        "publicExport": "@deepseek-ai/dsh-client-modules/client",
+        "bytes": 18621,
+        "sha256": "9361241bfbe8a02864df5df9fabf9fbbfa0f5a1914025badab36bdf1b9481751"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-connection",
+        "publicExport": "@deepseek-ai/dsh-client-connection/client",
+        "bytes": 155447,
+        "sha256": "d90ac3ecd5a1fa6eda2ad19639b739daca4b3b5c988c544fc4bffcff6b3c030e"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-remotes",
+        "publicExport": "@deepseek-ai/dsh-api-remotes/client",
+        "bytes": 303878,
+        "sha256": "7eb837812f3bd9978e9f20e0bef6cdb8c1d47f1e288912fab9b930827290cb3a"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-theme",
+        "publicExport": "@deepseek-ai/dsh-client-ui-theme/client",
+        "bytes": 90122,
+        "sha256": "8d8e115c5fb3ba1fcb1f857eea860a0cf02d1c25d3bd779be20a622477c0605a"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-locale",
+        "publicExport": "@deepseek-ai/dsh-client-locale/client",
+        "bytes": 55693,
+        "sha256": "6eff57ca0085b7946344e99208a47d5794812dcd72e518ec7637565efec9cb50"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-layout",
+        "publicExport": "@deepseek-ai/dsh-client-ui-layout/client",
+        "bytes": 20729,
+        "sha256": "5a9e93ec65359683fe660e91831e2299ff28483b67bdd06b8a7c6cdfdf3d8607"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-renderer",
+        "publicExport": "@deepseek-ai/dsh-client-ui-renderer/client",
+        "bytes": 56834,
+        "sha256": "57cc5d86f23565ffe7909746fdcf5e84098ade4aaf3e8744e33654f1aac91144"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-session",
+        "publicExport": "@deepseek-ai/dsh-client-ui-session/client",
+        "bytes": 12529,
+        "sha256": "a794b82a58f6e7740041456fc3690596db98db6619749b97c49cd2443a89d5ae"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-sidebar",
+        "publicExport": "@deepseek-ai/dsh-client-ui-sidebar/client",
+        "bytes": 18472,
+        "sha256": "bde2fc86868432f804fbbc687ca5ef0890698e4d27522620ec997d6d15153816"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings",
+        "publicExport": "@deepseek-ai/dsh-client-ui-settings/client",
+        "bytes": 51645,
+        "sha256": "0cb26d506adcf6a5ec51e62fea537c1d5afe19d7be41b4cccaaa40fc33d9e486"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings-general",
+        "publicExport": "@deepseek-ai/dsh-client-ui-settings-general/client",
+        "bytes": 26589,
+        "sha256": "4faf105332b2e3beca646fa4c458d481faa06a7e9539c35c8f54a185b443189b"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings-models",
+        "publicExport": "@deepseek-ai/dsh-client-ui-settings-models/client",
+        "bytes": 134352,
+        "sha256": "c4e99652b3f49cc4e36756381c49266c4bde1c2379848fbd6dbd8cd0c5cccc07"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-conversation",
+        "publicExport": "@deepseek-ai/dsh-client-ui-conversation/client",
+        "bytes": 603240,
+        "sha256": "08444b1f96e3e3e1046d1c4769b61cf6c09d8d839f057a607915514d5d123827"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-approval",
+        "publicExport": "@deepseek-ai/dsh-client-ui-approval/client",
+        "bytes": 11588,
+        "sha256": "1cb6c0afad99e3a61f16da5078cbba2d6e8e33ce5a162947ac876674e7e74f54"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-chat",
+        "publicExport": "@deepseek-ai/dsh-client-ui-chat/client",
+        "bytes": 331443,
+        "sha256": "2d94875cb2e9d04d4d6392d1e0e4dfea392c88029d53a35ee4a28359865c82e1"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-tool",
+        "publicExport": "@deepseek-ai/dsh-client-ui-tool/client",
+        "bytes": 93027,
+        "sha256": "899647a2aae079137b37a7e171e46b0394e8000e796f74e52b9045496fbe7f17"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-workspace",
+        "publicExport": "@deepseek-ai/dsh-client-ui-workspace/client",
+        "bytes": 124648,
+        "sha256": "8c9836211951ec926134b50b0c0791e065a4e7c959cac289f13ec3d3753528af"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-directory-picker-browse",
+        "publicExport": "@deepseek-ai/dsh-client-ui-directory-picker-browse/client",
+        "bytes": 49256,
+        "sha256": "502ea0a442005b271e08af2b82db1b82820dae374997a3c9bc24b3cd812dbee4"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-input-trigger",
+        "publicExport": "@deepseek-ai/dsh-client-ui-input-trigger/client",
+        "bytes": 47222,
+        "sha256": "cc782452a703a1106499bcc1c54bbdd68bc939c99e3a399541d59a04391bc282"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-commands",
+        "publicExport": "@deepseek-ai/dsh-client-ui-commands/client",
+        "bytes": 46095,
+        "sha256": "3fb21f2f0ffc4c7e7bec57ab8029d3454a0f7f9d8990d274c4e20dcace051dc0"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-subagent",
+        "publicExport": "@deepseek-ai/dsh-client-ui-subagent/client",
+        "bytes": 42308,
+        "sha256": "590b9224d3e5a99cce88ba1e72d4b96f40fb328ac7ed69ad0e869f5c2d2bd9fb"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-model-selection",
+        "publicExport": "@deepseek-ai/dsh-client-ui-model-selection/client",
+        "bytes": 39908,
+        "sha256": "7c1c4aeb06f5b057ba484fd6b4729f866cecc5c558dda7870adca8a3beea28fb"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-permission-presets",
+        "publicExport": "@deepseek-ai/dsh-client-ui-permission-presets/client",
+        "bytes": 19660,
+        "sha256": "9a4279ba5fc1ca4e0b86175e88cd33a269294dd4cffbfd0f3a8badeb10de9ba8"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-user-questions",
+        "publicExport": "@deepseek-ai/dsh-client-ui-user-questions/client",
+        "bytes": 42862,
+        "sha256": "271fa5bae4a54fd92e217dd98b1286aaddde267ff31d3d93ed13dc8c0c60dbd5"
+      },
+      {
+        "id": "@deepseek-ai/dsh-typert-registry",
+        "publicExport": "@deepseek-ai/dsh-typert-registry/client",
+        "bytes": 52652,
+        "sha256": "116a1d5ac12355d0713444368158c889cb0e926c7f89d4d35487d648fe30fd0a"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-gateway",
+        "publicExport": "@deepseek-ai/dsh-api-gateway/client",
+        "bytes": 66752,
+        "sha256": "fe28e214b4bcc7fa35236e44ed541944e16bbf1ec003fc860e4d4bb09ec218b3"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-session-controller",
+        "publicExport": "@deepseek-ai/dsh-api-session-controller/client",
+        "bytes": 108523,
+        "sha256": "52c8210e144d570c88f436da9434984d01ecbf141075ea766427fae85bc70ddb"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-workspace-controller",
+        "publicExport": "@deepseek-ai/dsh-api-workspace-controller/client",
+        "bytes": 16224,
+        "sha256": "6142956344e24492f88649d52c66618d99580738d6c4b7c6f4d1a5394c3e5e5a"
+      },
+      {
+        "id": "@shaco-forge/desktop",
+        "publicExport": "@shaco-forge/desktop/client",
+        "bytes": 59036,
+        "sha256": "c5ca982077b5e48c4693340a6baf774779e781529386ef4eb51703902241850d"
+      }
+    ],
+    "generated": {
+      "bootstrapBytes": 18624,
+      "bootstrapSha256": "4e5e67c4dd9f6c19c7470f5a4c97074fd9cf08eb89734e27111a2d80bc8dbe57",
+      "applicationBytes": 2680818,
+      "applicationSha256": "3b907282bbe13229bdcecbc93117be310fc558c9c853b1c425fdb3d6e866238e"
+    },
+    "fixtureOrMockIncluded": false,
+    "productionDeepSourceImportIncluded": false
+  },
+  "tcpListenersOwnedByObservedProductProcesses": [],
+  "cleanup": {
+    "workerPid": 20056,
+    "exited": true,
+    "delivery": "STOP_DELIVERY_FAILED",
+    "reason": "WORKER_NOT_FOUND"
+  },
+  "screenshotPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-electron-regression\\carrier-failure-runtime.png"
+}

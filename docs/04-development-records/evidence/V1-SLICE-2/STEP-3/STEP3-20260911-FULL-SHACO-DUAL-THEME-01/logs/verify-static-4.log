@@ -1,0 +1,2 @@
+$ node scripts/verify-static.mjs
+{"result":"PASS","scannedFiles":139}

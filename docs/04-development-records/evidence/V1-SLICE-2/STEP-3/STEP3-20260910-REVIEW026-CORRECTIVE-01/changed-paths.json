@@ -1,0 +1,386 @@
+{
+  "changedPaths": 94,
+  "tracked": 18,
+  "untracked": 76,
+  "staged": "NONE",
+  "commit": false,
+  "push": false,
+  "paths": [
+    {
+      "status": " M",
+      "path": "apps/desktop/index.html"
+    },
+    {
+      "status": " M",
+      "path": "apps/desktop/scripts/prepare-harness-client.mjs"
+    },
+    {
+      "status": " M",
+      "path": "apps/desktop/src/client/recovery.mjs"
+    },
+    {
+      "status": " M",
+      "path": "apps/desktop/src/main/main.ts"
+    },
+    {
+      "status": " M",
+      "path": "apps/desktop/src/preload/preload.cts"
+    },
+    {
+      "status": " M",
+      "path": "apps/desktop/src/renderer/global.d.ts"
+    },
+    {
+      "status": " M",
+      "path": "apps/desktop/src/renderer/main.ts"
+    },
+    {
+      "status": " M",
+      "path": "apps/desktop/src/renderer/styles.css"
+    },
+    {
+      "status": " M",
+      "path": "apps/desktop/test-fixtures/step2-recovery-main.mjs"
+    },
+    {
+      "status": " M",
+      "path": "apps/desktop/tests/user-loop-evidence.test.ts"
+    },
+    {
+      "status": " M",
+      "path": "apps/worker/src/profile.ts"
+    },
+    {
+      "status": " M",
+      "path": "docs/00-governance/SHACO-FORGE-CURRENT-STATE.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/04-development-records/DEVELOPMENT-LOG.md"
+    },
+    {
+      "status": " M",
+      "path": "package.json"
+    },
+    {
+      "status": " M",
+      "path": "scripts/smoke-slice2-step2.mjs"
+    },
+    {
+      "status": " M",
+      "path": "scripts/step2-command.mjs"
+    },
+    {
+      "status": "??",
+      "path": "apps/desktop/scripts/composition-identity.mjs"
+    },
+    {
+      "status": "??",
+      "path": "apps/desktop/src/client/settings.mjs"
+    },
+    {
+      "status": "??",
+      "path": "apps/desktop/src/client/shell-state.mjs"
+    },
+    {
+      "status": "??",
+      "path": "apps/desktop/src/client/shell-state.test.mjs"
+    },
+    {
+      "status": "??",
+      "path": "apps/desktop/src/client/sidebar.mjs"
+    },
+    {
+      "status": "??",
+      "path": "apps/desktop/src/main/workspace-picker.test.ts"
+    },
+    {
+      "status": "??",
+      "path": "apps/desktop/src/main/workspace-picker.ts"
+    },
+    {
+      "status": "??",
+      "path": "apps/desktop/test-fixtures/step3-interactions-main.mjs"
+    },
+    {
+      "status": "??",
+      "path": "apps/desktop/test-fixtures/step3-shell-driver.mjs"
+    },
+    {
+      "status": "??",
+      "path": "apps/worker/test-fixtures/step3-interactions.mjs"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/assemble-evidence.mjs"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/baseline.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/changed-files.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/composition-history.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/composition-identity.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/corrective-history.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/cumulative-e2e.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/deliverable-identity.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/evidence-manifest.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/gate-results.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/interaction-security.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/process-cleanup.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/redaction-summary.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/attachment-sequence.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/authority-identity.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/electron-regression.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/powershell-resolution.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/security-negative-results.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/unit.log"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/run-manifest.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/runtime-failure-40996.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/shell-settings.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-15540-1.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-27348-1.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37352-1.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37472-1.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37472-2.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37596-1.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-39776-1.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-39776-2.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-40844-1.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-49760-1.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-60456-1.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-60456-2.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/test-summary.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/ui-evidence.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/approval-real-host-lifecycle.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/assemble-evidence.mjs"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/baseline-preservation.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/changed-paths.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/composition-history.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/composition-identity.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/cumulative-e2e.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/environment-classification.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/environment-preflight-cleanup.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/focused-attempt-01.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/focused-attempt-02.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/focused-attempt-03.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/host-interaction-fixture-identity.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/preservation-and-changes.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/question-real-host-lifecycle.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/redaction-summary.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/regression-summary.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/review026-findings.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/run-manifest.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/s3g16-results.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/step3-ui-39444-1.png"
+    },
+    {
+      "status": "??",
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/test-summary.json"
+    },
+    {
+      "status": "??",
+      "path": "scripts/smoke-slice2-step3-interactions.mjs"
+    },
+    {
+      "status": "??",
+      "path": "scripts/smoke-slice2-step3.mjs"
+    },
+    {
+      "status": "??",
+      "path": "scripts/step3-baseline.mjs"
+    },
+    {
+      "status": "??",
+      "path": "scripts/step3-composition.test.mjs"
+    },
+    {
+      "status": "??",
+      "path": "scripts/step3-final-composition.mjs"
+    },
+    {
+      "status": "??",
+      "path": "scripts/step3-fixture-boundaries.test.mjs"
+    },
+    {
+      "status": "??",
+      "path": "scripts/step3-interaction.test.mjs"
+    }
+  ]
+}

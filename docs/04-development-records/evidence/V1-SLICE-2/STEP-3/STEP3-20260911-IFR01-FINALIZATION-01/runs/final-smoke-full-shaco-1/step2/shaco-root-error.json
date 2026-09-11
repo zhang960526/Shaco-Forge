@@ -1,0 +1,39 @@
+{
+  "name": "shaco-root-error",
+  "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\shaco-root-error.png",
+  "width": 1149,
+  "height": 956,
+  "sha256": "af7d243fd1cec2baef96415708040e7f43c8d55a02d0685f19f0389aa13d0491",
+  "ui": {
+    "rootCount": 0,
+    "sidebarCount": 0,
+    "forbiddenBrand": false,
+    "harnessSeats": 0,
+    "template": "BRAUN",
+    "mode": "light",
+    "rootVisible": false,
+    "horizontalOverflow": false,
+    "composer": false,
+    "approval": false,
+    "question": false,
+    "kinds": [],
+    "tools": [],
+    "geometry": {
+      "conversation": null,
+      "composer": null,
+      "tool": null
+    },
+    "lowNoiseWorkbar": true,
+    "bootstrapVisible": true,
+    "plan": false,
+    "tokens": {
+      "--surface-primary": "rgb(248, 248, 246)",
+      "--surface-sidebar": "rgb(235, 235, 232)",
+      "--accent-primary": "rgb(55, 59, 54)",
+      "--control-radius": "6px",
+      "--template-decoration-height": "0px",
+      "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+    }
+  },
+  "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+}

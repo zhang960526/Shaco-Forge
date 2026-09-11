@@ -1,0 +1,1140 @@
+{
+  "attempts": [
+    {
+      "results": [
+        {
+          "scenario": "BUSY_CREDENTIAL_ISSUED",
+          "result": "PASS"
+        },
+        {
+          "scenario": "BUSY_AUTHENTICATING",
+          "result": "PASS"
+        },
+        {
+          "scenario": "wrong-proof",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 553
+        },
+        {
+          "scenario": "unauthenticated-business",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 462
+        },
+        {
+          "scenario": "malformed",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 461
+        },
+        {
+          "scenario": "oversize",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 479
+        },
+        {
+          "scenario": "timeout",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 5416
+        },
+        {
+          "scenario": "partial-frame-timeout",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 5456
+        },
+        {
+          "scenario": "second-auth",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 454
+        },
+        {
+          "scenario": "consumed-secret",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "replayed-auth",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "expired-credential",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "carrier-peer-pid-start-mismatch",
+          "result": "PASS",
+          "actualPeerPid": 40244,
+          "reservationPid": 15448,
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "MAX_JSON_FRAME_real_gateway",
+          "result": "PASS",
+          "jsonBytes": 262144,
+          "dispatchDelta": 1
+        },
+        {
+          "scenario": "cross-user-access",
+          "result": "PASS",
+          "classification": "ACCESS_CONTROL_PROOF",
+          "method": "deterministic evaluation of actual kernel pipe ACL for a different non-admin SID with standard broad groups",
+          "realSecondUserLogin": false,
+          "acl": {
+            "verified": true,
+            "protected": true,
+            "currentUserOnly": true,
+            "inheritanceDisabled": true,
+            "otherUserGrantedAccess": false
+          }
+        },
+        {
+          "scenario": "protocol-version",
+          "result": "PASS",
+          "reason": "WORKER_VERSION_INCOMPATIBLE",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "lifecycle-pid",
+          "result": "PASS",
+          "reason": "LIFECYCLE_PEER_MISMATCH",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "lifecycle-start",
+          "result": "PASS",
+          "reason": "LIFECYCLE_PEER_MISMATCH",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "BUSY_ATTACHED_AND_OLD_CLIENT_FENCE",
+          "result": "PASS",
+          "oldMetrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 6,
+            "unaryRequests": 4,
+            "streamOpens": 1,
+            "streamPulls": 2,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 1,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rejectedPendingCallbacks": 5,
+          "queuedOldFrameDispatchDelta": 0
+        },
+        {
+          "scenario": "SEQUENTIAL_REAL_EVENTS_RESET",
+          "result": "PASS"
+        }
+      ],
+      "stopped": {
+        "workerPid": 47384,
+        "exited": true,
+        "delivery": "STOP_DELIVERY_FAILED",
+        "reason": "WORKER_NOT_FOUND"
+      },
+      "workerEvents": [
+        {
+          "protocolVersion": 1,
+          "phase": "worker-starting",
+          "timestamp": "2026-09-09T17:21:00.643Z",
+          "workerPid": 47384,
+          "parentPid": 15448,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-S4UKBb",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-S4UKBb\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "profileName": "shaco-forge-v1-slice-1b"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-starting",
+          "timestamp": "2026-09-09T17:21:00.802Z",
+          "workerPid": 47384,
+          "parentPid": 15448,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 59068,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-S4UKBb\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-S4UKBb\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-S4UKBb",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-S4UKBb\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-ready",
+          "timestamp": "2026-09-09T17:21:02.846Z",
+          "workerPid": 47384,
+          "parentPid": 15448,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 59068,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-S4UKBb\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-S4UKBb\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-S4UKBb",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-S4UKBb\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "readiness": {
+            "gatewayPresetCount": 4,
+            "standardPresetPresent": true
+          }
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "carrier-ready",
+          "timestamp": "2026-09-09T17:21:02.862Z",
+          "workerPid": 47384,
+          "parentPid": 15448,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 59068
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-exited",
+          "timestamp": "2026-09-09T17:21:43.992Z",
+          "workerPid": 47384,
+          "parentPid": 15448,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 59068,
+          "exitCode": null,
+          "signal": "SIGTERM"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "worker-stopped",
+          "timestamp": "2026-09-09T17:21:43.993Z",
+          "workerPid": 47384,
+          "parentPid": 15448,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 59068,
+          "exitCode": 0
+        }
+      ],
+      "workerErrors": ""
+    },
+    {
+      "results": [
+        {
+          "scenario": "BUSY_CREDENTIAL_ISSUED",
+          "result": "PASS"
+        },
+        {
+          "scenario": "BUSY_AUTHENTICATING",
+          "result": "PASS"
+        },
+        {
+          "scenario": "wrong-proof",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 555
+        },
+        {
+          "scenario": "unauthenticated-business",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 454
+        },
+        {
+          "scenario": "malformed",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 459
+        },
+        {
+          "scenario": "oversize",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 444
+        },
+        {
+          "scenario": "timeout",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 5473
+        },
+        {
+          "scenario": "partial-frame-timeout",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 5454
+        },
+        {
+          "scenario": "second-auth",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 447
+        },
+        {
+          "scenario": "consumed-secret",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "replayed-auth",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "expired-credential",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "carrier-peer-pid-start-mismatch",
+          "result": "PASS",
+          "actualPeerPid": 60336,
+          "reservationPid": 56420,
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "MAX_JSON_FRAME_real_gateway",
+          "result": "PASS",
+          "jsonBytes": 262144,
+          "dispatchDelta": 1
+        },
+        {
+          "scenario": "cross-user-access",
+          "result": "PASS",
+          "classification": "ACCESS_CONTROL_PROOF",
+          "method": "deterministic evaluation of actual kernel pipe ACL for a different non-admin SID with standard broad groups",
+          "realSecondUserLogin": false,
+          "acl": {
+            "verified": true,
+            "protected": true,
+            "currentUserOnly": true,
+            "inheritanceDisabled": true,
+            "otherUserGrantedAccess": false
+          }
+        },
+        {
+          "scenario": "protocol-version",
+          "result": "PASS",
+          "reason": "WORKER_VERSION_INCOMPATIBLE",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "lifecycle-pid",
+          "result": "PASS",
+          "reason": "LIFECYCLE_PEER_MISMATCH",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "lifecycle-start",
+          "result": "PASS",
+          "reason": "LIFECYCLE_PEER_MISMATCH",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "BUSY_ATTACHED_AND_OLD_CLIENT_FENCE",
+          "result": "PASS",
+          "oldMetrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 6,
+            "unaryRequests": 4,
+            "streamOpens": 1,
+            "streamPulls": 2,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 1,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rejectedPendingCallbacks": 5,
+          "queuedOldFrameDispatchDelta": 0
+        },
+        {
+          "scenario": "SEQUENTIAL_REAL_EVENTS_RESET",
+          "result": "PASS"
+        }
+      ],
+      "stopped": {
+        "workerPid": 63232,
+        "exited": true,
+        "delivery": "STOP_DELIVERY_FAILED",
+        "reason": "WORKER_NOT_FOUND"
+      },
+      "workerEvents": [
+        {
+          "protocolVersion": 1,
+          "phase": "worker-starting",
+          "timestamp": "2026-09-09T17:23:20.250Z",
+          "workerPid": 63232,
+          "parentPid": 56420,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-r1D49v",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-r1D49v\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "profileName": "shaco-forge-v1-slice-1b"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-starting",
+          "timestamp": "2026-09-09T17:23:20.408Z",
+          "workerPid": 63232,
+          "parentPid": 56420,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 40788,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-r1D49v\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-r1D49v\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-r1D49v",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-r1D49v\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-ready",
+          "timestamp": "2026-09-09T17:23:22.560Z",
+          "workerPid": 63232,
+          "parentPid": 56420,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 40788,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-r1D49v\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-r1D49v\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-r1D49v",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-r1D49v\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "readiness": {
+            "gatewayPresetCount": 4,
+            "standardPresetPresent": true
+          }
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "carrier-ready",
+          "timestamp": "2026-09-09T17:23:22.577Z",
+          "workerPid": 63232,
+          "parentPid": 56420,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 40788
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-exited",
+          "timestamp": "2026-09-09T17:24:03.566Z",
+          "workerPid": 63232,
+          "parentPid": 56420,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 40788,
+          "exitCode": null,
+          "signal": "SIGTERM"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "worker-stopped",
+          "timestamp": "2026-09-09T17:24:03.566Z",
+          "workerPid": 63232,
+          "parentPid": 56420,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 40788,
+          "exitCode": 0
+        }
+      ],
+      "workerErrors": ""
+    },
+    {
+      "results": [
+        {
+          "scenario": "BUSY_CREDENTIAL_ISSUED",
+          "result": "PASS"
+        },
+        {
+          "scenario": "BUSY_AUTHENTICATING",
+          "result": "PASS"
+        },
+        {
+          "scenario": "wrong-proof",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 561
+        },
+        {
+          "scenario": "unauthenticated-business",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 449
+        },
+        {
+          "scenario": "malformed",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 454
+        },
+        {
+          "scenario": "oversize",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 463
+        },
+        {
+          "scenario": "timeout",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 5444
+        },
+        {
+          "scenario": "partial-frame-timeout",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 5418
+        },
+        {
+          "scenario": "second-auth",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 449
+        },
+        {
+          "scenario": "consumed-secret",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "replayed-auth",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "expired-credential",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "carrier-peer-pid-start-mismatch",
+          "result": "PASS",
+          "actualPeerPid": 40036,
+          "reservationPid": 16248,
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "MAX_JSON_FRAME_real_gateway",
+          "result": "PASS",
+          "jsonBytes": 262144,
+          "dispatchDelta": 1
+        },
+        {
+          "scenario": "cross-user-access",
+          "result": "PASS",
+          "classification": "ACCESS_CONTROL_PROOF",
+          "method": "deterministic evaluation of actual kernel pipe ACL for a different non-admin SID with standard broad groups",
+          "realSecondUserLogin": false,
+          "acl": {
+            "verified": true,
+            "protected": true,
+            "currentUserOnly": true,
+            "inheritanceDisabled": true,
+            "otherUserGrantedAccess": false
+          }
+        },
+        {
+          "scenario": "protocol-version",
+          "result": "PASS",
+          "reason": "WORKER_VERSION_INCOMPATIBLE",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "lifecycle-pid",
+          "result": "PASS",
+          "reason": "LIFECYCLE_PEER_MISMATCH",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "lifecycle-start",
+          "result": "PASS",
+          "reason": "LIFECYCLE_PEER_MISMATCH",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "BUSY_ATTACHED_AND_OLD_CLIENT_FENCE",
+          "result": "PASS",
+          "oldMetrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 6,
+            "unaryRequests": 4,
+            "streamOpens": 1,
+            "streamPulls": 2,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 1,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rejectedPendingCallbacks": 5,
+          "queuedOldFrameDispatchDelta": 0
+        },
+        {
+          "scenario": "SEQUENTIAL_REAL_EVENTS_RESET",
+          "result": "PASS"
+        }
+      ],
+      "stopped": {
+        "workerPid": 43028,
+        "exited": true,
+        "delivery": "STOP_DELIVERY_FAILED",
+        "reason": "WORKER_NOT_FOUND"
+      },
+      "workerEvents": [
+        {
+          "protocolVersion": 1,
+          "phase": "worker-starting",
+          "timestamp": "2026-09-10T10:44:04.890Z",
+          "workerPid": 43028,
+          "parentPid": 16248,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-TQ6NBx",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-TQ6NBx\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "profileName": "shaco-forge-v1-slice-1b"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-starting",
+          "timestamp": "2026-09-10T10:44:05.059Z",
+          "workerPid": 43028,
+          "parentPid": 16248,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 51532,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-TQ6NBx\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-TQ6NBx\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-TQ6NBx",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-TQ6NBx\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-ready",
+          "timestamp": "2026-09-10T10:44:07.030Z",
+          "workerPid": 43028,
+          "parentPid": 16248,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 51532,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-TQ6NBx\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-TQ6NBx\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-TQ6NBx",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-TQ6NBx\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "readiness": {
+            "gatewayPresetCount": 4,
+            "standardPresetPresent": true
+          }
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "carrier-ready",
+          "timestamp": "2026-09-10T10:44:07.047Z",
+          "workerPid": 43028,
+          "parentPid": 16248,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 51532
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-exited",
+          "timestamp": "2026-09-10T10:44:48.442Z",
+          "workerPid": 43028,
+          "parentPid": 16248,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 51532,
+          "exitCode": null,
+          "signal": "SIGTERM"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "worker-stopped",
+          "timestamp": "2026-09-10T10:44:48.443Z",
+          "workerPid": 43028,
+          "parentPid": 16248,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 51532,
+          "exitCode": 0
+        }
+      ],
+      "workerErrors": ""
+    },
+    {
+      "results": [
+        {
+          "scenario": "BUSY_CREDENTIAL_ISSUED",
+          "result": "PASS"
+        },
+        {
+          "scenario": "BUSY_AUTHENTICATING",
+          "result": "PASS"
+        },
+        {
+          "scenario": "wrong-proof",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 601
+        },
+        {
+          "scenario": "unauthenticated-business",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 470
+        },
+        {
+          "scenario": "malformed",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 481
+        },
+        {
+          "scenario": "oversize",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 467
+        },
+        {
+          "scenario": "timeout",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 5427
+        },
+        {
+          "scenario": "partial-frame-timeout",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 5491
+        },
+        {
+          "scenario": "second-auth",
+          "result": "PASS",
+          "dispatchDelta": 0,
+          "elapsedMs": 479
+        },
+        {
+          "scenario": "consumed-secret",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "replayed-auth",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "expired-credential",
+          "result": "PASS",
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "carrier-peer-pid-start-mismatch",
+          "result": "PASS",
+          "actualPeerPid": 14084,
+          "reservationPid": 33300,
+          "dispatchDelta": 0
+        },
+        {
+          "scenario": "MAX_JSON_FRAME_real_gateway",
+          "result": "PASS",
+          "jsonBytes": 262144,
+          "dispatchDelta": 1
+        },
+        {
+          "scenario": "cross-user-access",
+          "result": "PASS",
+          "classification": "ACCESS_CONTROL_PROOF",
+          "method": "deterministic evaluation of actual kernel pipe ACL for a different non-admin SID with standard broad groups",
+          "realSecondUserLogin": false,
+          "acl": {
+            "verified": true,
+            "protected": true,
+            "currentUserOnly": true,
+            "inheritanceDisabled": true,
+            "otherUserGrantedAccess": false
+          }
+        },
+        {
+          "scenario": "protocol-version",
+          "result": "PASS",
+          "reason": "WORKER_VERSION_INCOMPATIBLE",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "lifecycle-pid",
+          "result": "PASS",
+          "reason": "LIFECYCLE_PEER_MISMATCH",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "lifecycle-start",
+          "result": "PASS",
+          "reason": "LIFECYCLE_PEER_MISMATCH",
+          "credentialIssued": false
+        },
+        {
+          "scenario": "BUSY_ATTACHED_AND_OLD_CLIENT_FENCE",
+          "result": "PASS",
+          "oldMetrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 6,
+            "unaryRequests": 4,
+            "streamOpens": 1,
+            "streamPulls": 2,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 0,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 374,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 1,
+            "maxQueueDepth": 0,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "rejectedPendingCallbacks": 5,
+          "queuedOldFrameDispatchDelta": 0
+        },
+        {
+          "scenario": "SEQUENTIAL_REAL_EVENTS_RESET",
+          "result": "PASS"
+        }
+      ],
+      "stopped": {
+        "workerPid": 63372,
+        "exited": true,
+        "delivery": "STOP_DELIVERY_FAILED",
+        "reason": "WORKER_NOT_FOUND"
+      },
+      "workerEvents": [
+        {
+          "protocolVersion": 1,
+          "phase": "worker-starting",
+          "timestamp": "2026-09-10T10:47:18.386Z",
+          "workerPid": 63372,
+          "parentPid": 33300,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-eC3vpn",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-eC3vpn\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "profileName": "shaco-forge-v1-slice-1b"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-starting",
+          "timestamp": "2026-09-10T10:47:18.566Z",
+          "workerPid": 63372,
+          "parentPid": 33300,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 32836,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-eC3vpn\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-eC3vpn\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-eC3vpn",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-eC3vpn\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-ready",
+          "timestamp": "2026-09-10T10:47:20.595Z",
+          "workerPid": 63372,
+          "parentPid": 33300,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 32836,
+          "hostLaunchArgv": [
+            "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+            "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-eC3vpn\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+            "--profile",
+            "shaco-forge-v1-slice-1b"
+          ],
+          "profileName": "shaco-forge-v1-slice-1b",
+          "profilePath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-eC3vpn\\profiles\\shaco-forge-v1-slice-1b",
+          "dshHome": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-eC3vpn",
+          "harnessCliPath": "D:\\Project\\Shaco-Forge\\node_modules\\.step1-runtime-eC3vpn\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh\\lib\\bin.js",
+          "harnessSourceRoot": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness",
+          "readiness": {
+            "gatewayPresetCount": 4,
+            "standardPresetPresent": true
+          }
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "carrier-ready",
+          "timestamp": "2026-09-10T10:47:20.614Z",
+          "workerPid": 63372,
+          "parentPid": 33300,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 32836
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "host-exited",
+          "timestamp": "2026-09-10T10:48:02.558Z",
+          "workerPid": 63372,
+          "parentPid": 33300,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 32836,
+          "exitCode": null,
+          "signal": "SIGTERM"
+        },
+        {
+          "protocolVersion": 1,
+          "phase": "worker-stopped",
+          "timestamp": "2026-09-10T10:48:02.558Z",
+          "workerPid": 63372,
+          "parentPid": 33300,
+          "workerNodeVersion": "v22.19.0",
+          "workerExecutable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+          "workerArgv": [
+            "D:\\Project\\Shaco-Forge\\apps\\worker\\dist\\index.js"
+          ],
+          "harnessPackage": "@deepseek-ai/dsh@0.1.2-alpha.1",
+          "harnessRelease": "dsh-v0.1.2-alpha.1",
+          "harnessCommit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+          "hostPid": 32836,
+          "exitCode": 0
+        }
+      ],
+      "workerErrors": ""
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "result": "PASS",
+  "files": [
+    {
+      "source": "node_modules/.step1-electron-regression/electron-runtime.json",
+      "archive": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/production-electron/electron-runtime.json",
+      "sha256": "501bb5a05e8302c5d7a91f0eecb41bd6ba7d87e6bc3a80d2c8e42c5db060dbe7",
+      "producedAt": "2026-09-10T19:41:22.774Z",
+      "command": "smoke:electron",
+      "attempt": 6
+    },
+    {
+      "source": "node_modules/.step1-electron-regression/electron-runtime.png",
+      "archive": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/production-electron/electron-runtime.png",
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1",
+      "producedAt": "2026-09-10T19:41:22.221Z",
+      "command": "smoke:electron",
+      "attempt": 6
+    },
+    {
+      "source": "node_modules/.step1-electron-regression/carrier-failure-runtime.json",
+      "archive": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/production-electron/carrier-failure-runtime.json",
+      "sha256": "f509d6210748732055e2286622cb81d2f560a91fbabce5a20f149f0fef3140a7",
+      "producedAt": "2026-09-10T19:41:39.702Z",
+      "command": "smoke:failure",
+      "attempt": 5
+    },
+    {
+      "source": "node_modules/.step1-electron-regression/carrier-failure-runtime.png",
+      "archive": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/production-electron/carrier-failure-runtime.png",
+      "sha256": "9755efcfe30033ddc6f381184e1153cf4c8d92b77b4cfc32c56d0286faeb0d9f",
+      "producedAt": "2026-09-10T19:41:39.372Z",
+      "command": "smoke:failure",
+      "attempt": 5
+    }
+  ]
+}

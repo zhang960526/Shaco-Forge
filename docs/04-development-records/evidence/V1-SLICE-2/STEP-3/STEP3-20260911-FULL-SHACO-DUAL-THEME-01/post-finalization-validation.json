@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-10T19:51:09.949Z",
+  "result": "PASS",
+  "implementationReportAndEvidenceIndex": {
+    "checkedLocalLinks": 104,
+    "missing": []
+  },
+  "gitDiffCheck": {
+    "command": "git diff --check",
+    "exitCode": 0,
+    "whitespaceErrors": [],
+    "note": "Git emitted only existing autocrlf conversion notices; no configuration changed."
+  },
+  "encoding": {
+    "frozenSourceFiles": 127,
+    "invalidUtf8": [],
+    "bom": [],
+    "mojibake": []
+  },
+  "sourceMutationAfterFinalRegression": false
+}

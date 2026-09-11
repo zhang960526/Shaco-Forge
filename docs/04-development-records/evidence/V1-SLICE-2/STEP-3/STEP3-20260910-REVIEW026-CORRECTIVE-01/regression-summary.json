@@ -1,0 +1,263 @@
+{
+  "result": "PASS",
+  "commands": [
+    {
+      "command": "pnpm run typecheck",
+      "startedAt": "2026-09-10T12:21:11.019Z",
+      "endedAt": "2026-09-10T12:21:15.399Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-10T12:21:15.975Z",
+      "endedAt": "2026-09-10T12:21:36.905Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-10T12:21:37.493Z",
+      "endedAt": "2026-09-10T12:22:14.291Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:static",
+      "startedAt": "2026-09-10T12:22:14.955Z",
+      "endedAt": "2026-09-10T12:22:15.569Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:theme",
+      "startedAt": "2026-09-10T12:22:16.236Z",
+      "endedAt": "2026-09-10T12:22:16.855Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:worker",
+      "startedAt": "2026-09-10T12:22:17.528Z",
+      "endedAt": "2026-09-10T12:22:36.613Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:carrier",
+      "startedAt": "2026-09-10T12:22:37.255Z",
+      "endedAt": "2026-09-10T12:23:38.406Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "startedAt": "2026-09-10T12:23:39.099Z",
+      "endedAt": "2026-09-10T12:24:09.431Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-10T12:24:10.081Z",
+      "endedAt": "2026-09-10T12:27:44.277Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-10T12:27:44.907Z",
+      "endedAt": "2026-09-10T12:28:41.109Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "startedAt": "2026-09-10T12:28:41.767Z",
+      "endedAt": "2026-09-10T12:29:45.533Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3-interactions",
+      "startedAt": "2026-09-10T12:29:46.213Z",
+      "endedAt": "2026-09-10T12:30:18.290Z",
+      "exitCode": 0,
+      "result": "PASS"
+    }
+  ],
+  "unit": {
+    "tests": 163,
+    "pass": 163,
+    "fail": 0
+  },
+  "sourceIdentity": {
+    "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/composition-identity.json",
+    "bytes": 25225,
+    "sha256": "4191dfdf5366acab814260cd64fd664acf0116a9720bfad6d539db74d9bcb484"
+  },
+  "attachment-sequence.json": {
+    "outcomes": [
+      {
+        "result": "PASS"
+      },
+      {
+        "result": "PASS",
+        "mode": "graceful"
+      },
+      {
+        "result": "PASS",
+        "mode": "crash"
+      }
+    ],
+    "redacted": true,
+    "selection": "Latest appended attempt for each history array; earlier cached attempts excluded"
+  },
+  "authority-identity.json": {
+    "outcomes": [
+      {
+        "result": "PASS",
+        "scenario": "helper"
+      },
+      {
+        "result": "PASS",
+        "scenario": "host"
+      },
+      {
+        "result": "PASS",
+        "scenario": "worker"
+      },
+      {
+        "result": "PASS",
+        "scenario": "explicit-stop"
+      },
+      {
+        "result": "PASS",
+        "scenario": "helper"
+      },
+      {
+        "result": "PASS",
+        "scenario": "host"
+      },
+      {
+        "result": "PASS",
+        "scenario": "worker"
+      },
+      {
+        "result": "PASS",
+        "scenario": "explicit-stop"
+      },
+      {
+        "result": "PASS",
+        "scenario": "held"
+      },
+      {
+        "result": "PASS",
+        "scenario": "hung"
+      },
+      {
+        "result": "PASS",
+        "scenario": "abandoned"
+      },
+      {
+        "result": "PASS"
+      }
+    ],
+    "redacted": true,
+    "selection": "Latest appended attempt for each history array; earlier cached attempts excluded"
+  },
+  "security-negative-results.json": {
+    "outcomes": [
+      {
+        "result": "PASS",
+        "scenario": "BUSY_CREDENTIAL_ISSUED"
+      },
+      {
+        "result": "PASS",
+        "scenario": "BUSY_AUTHENTICATING"
+      },
+      {
+        "result": "PASS",
+        "scenario": "wrong-proof"
+      },
+      {
+        "result": "PASS",
+        "scenario": "unauthenticated-business"
+      },
+      {
+        "result": "PASS",
+        "scenario": "malformed"
+      },
+      {
+        "result": "PASS",
+        "scenario": "oversize"
+      },
+      {
+        "result": "PASS",
+        "scenario": "timeout"
+      },
+      {
+        "result": "PASS",
+        "scenario": "partial-frame-timeout"
+      },
+      {
+        "result": "PASS",
+        "scenario": "second-auth"
+      },
+      {
+        "result": "PASS",
+        "scenario": "consumed-secret"
+      },
+      {
+        "result": "PASS",
+        "scenario": "replayed-auth"
+      },
+      {
+        "result": "PASS",
+        "scenario": "expired-credential"
+      },
+      {
+        "result": "PASS",
+        "scenario": "carrier-peer-pid-start-mismatch"
+      },
+      {
+        "result": "PASS",
+        "scenario": "MAX_JSON_FRAME_real_gateway"
+      },
+      {
+        "result": "PASS",
+        "scenario": "cross-user-access"
+      },
+      {
+        "result": "PASS",
+        "scenario": "protocol-version"
+      },
+      {
+        "result": "PASS",
+        "scenario": "lifecycle-pid"
+      },
+      {
+        "result": "PASS",
+        "scenario": "lifecycle-start"
+      },
+      {
+        "result": "PASS",
+        "scenario": "BUSY_ATTACHED_AND_OLD_CLIENT_FENCE"
+      },
+      {
+        "result": "PASS",
+        "scenario": "SEQUENTIAL_REAL_EVENTS_RESET"
+      }
+    ],
+    "redacted": true,
+    "selection": "Latest appended attempt for each history array; earlier cached attempts excluded"
+  },
+  "electron": {
+    "result": "PASS",
+    "version": "35.7.5",
+    "cleanup": true,
+    "appWebEntryCount": 1,
+    "eventsReady": true,
+    "productOwnedTcpListeners": 0
+  }
+}

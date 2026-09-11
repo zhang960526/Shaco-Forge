@@ -7,10 +7,11 @@ import { evidence, evidenceRoot } from './step2-evidence.mjs'
 
 assert.equal(process.version, 'v22.19.0')
 const command = process.argv[2]
-assert.ok(['typecheck', 'build', 'test', 'verify:static', 'smoke:worker', 'smoke:carrier', 'smoke:electron', 'smoke:slice2-step1', 'smoke:slice2-step2'].includes(command))
+assert.ok(['typecheck', 'build', 'test', 'verify:static', 'verify:theme', 'smoke:worker', 'smoke:carrier', 'smoke:electron', 'smoke:slice2-step1', 'smoke:slice2-step2', 'smoke:slice2-step3', 'smoke:slice2-step3-interactions'].includes(command))
 const pnpm = process.env.SHACO_FORGE_PNPM_ENTRY
 assert.equal(execFileSync(process.execPath, [pnpm, '--version'], { encoding: 'utf8' }).trim(), '11.7.0')
 const env = { ...process.env, SHACO_FORGE_WORKER_NODE: process.execPath }
+env.SHACO_FORGE_GIT = execFileSync('where.exe', ['git.exe'], { encoding: 'utf8' }).trim().split(/\r?\n/)[0]
 for (const key of Object.keys(env)) if (key.toLowerCase() === 'path') delete env[key]
 env.PATH = `${dirname(process.execPath)};${join(env.ProgramFiles, 'dotnet')};${join(env.SystemRoot, 'System32')};${env.SystemRoot}`
 env.PATHEXT = '.COM;.EXE;.BAT;.CMD'

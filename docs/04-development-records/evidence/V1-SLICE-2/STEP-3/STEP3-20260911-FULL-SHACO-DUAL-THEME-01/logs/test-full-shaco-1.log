@@ -1,0 +1,83 @@
+$ node --test apps/desktop/tests/presentation-lifecycle.test.mjs apps/desktop/tests/presentation-actions.test.mjs
+TAP version 13
+# Subtest: prompt admission uses queue once and cancel never clears queued work
+ok 1 - prompt admission uses queue once and cancel never clears queued work
+  ---
+  duration_ms: 1.078
+  type: 'test'
+  ...
+# Subtest: unknown outcome is not replayed
+ok 2 - unknown outcome is not replayed
+  ---
+  duration_ms: 0.816
+  type: 'test'
+  ...
+# Subtest: old generation and another selected session cannot mutate any captured object
+ok 3 - old generation and another selected session cannot mutate any captured object
+  ---
+  duration_ms: 0.3391
+  type: 'test'
+  ...
+# Subtest: approval/question settles the exact current pending object, never a replaced carrier
+ok 4 - approval/question settles the exact current pending object, never a replaced carrier
+  ---
+  duration_ms: 0.2559
+  type: 'test'
+  ...
+# Subtest: permission choices are Host-owned; custom and unknown choices cannot be submitted
+ok 5 - permission choices are Host-owned; custom and unknown choices cannot be submitted
+  ---
+  duration_ms: 0.2825
+  type: 'test'
+  ...
+# Subtest: all 28 Harness rows active before Product/root; single facade, context and mount
+ok 6 - all 28 Harness rows active before Product/root; single facade, context and mount
+  ---
+  duration_ms: 2.4937
+  type: 'test'
+  ...
+# Subtest: quiescence does not authorize an inactive required row
+ok 7 - quiescence does not authorize an inactive required row
+  ---
+  duration_ms: 0.3282
+  type: 'test'
+  ...
+# Subtest: required business service absence prevents Product/root activation
+ok 8 - required business service absence prevents Product/root activation
+  ---
+  duration_ms: 0.2298
+  type: 'test'
+  ...
+# Subtest: rootError synchronously conceals before async root teardown
+ok 9 - rootError synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.2899
+  type: 'test'
+  ...
+# Subtest: loseRoot synchronously conceals before async root teardown
+ok 10 - loseRoot synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.7877
+  type: 'test'
+  ...
+# Subtest: loseService synchronously conceals before async root teardown
+ok 11 - loseService synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.2294
+  type: 'test'
+  ...
+# Subtest: slot error during synchronous React mount fails closed and disposes root
+ok 12 - slot error during synchronous React mount fails closed and disposes root
+  ---
+  duration_ms: 0.2535
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 117.4503

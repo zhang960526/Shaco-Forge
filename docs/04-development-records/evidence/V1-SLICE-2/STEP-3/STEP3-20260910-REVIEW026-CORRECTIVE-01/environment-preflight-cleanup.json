@@ -1,0 +1,10 @@
+{
+  "classification": "EXISTING_CANONICAL_SMOKE_ORPHAN",
+  "sameProductEntry": true,
+  "temporarySmokeHome": true,
+  "parentAlreadyExited": true,
+  "gracefulStopUsed": true,
+  "exactPidAndStartTimeVerified": true,
+  "oldAuthorityGone": true,
+  "providerRuns": 0
+}

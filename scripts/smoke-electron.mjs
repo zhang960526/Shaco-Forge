@@ -6,11 +6,15 @@ import { join } from 'node:path'
 import electron from 'electron'
 import { paths } from './runtime-paths.mjs'
 import { evidence as writeStep1Evidence } from './smoke-slice2-step1.mjs'
+import { inspectLocalPlatform } from '../apps/desktop/dist/main/lifecycle-client.js'
 
 const workerNode = process.env.SHACO_FORGE_WORKER_NODE
 if (!workerNode) throw new Error('SHACO_FORGE_WORKER_NODE is required')
 const harnessRoot = process.env.SHACO_FORGE_HARNESS_ROOT
 if (!harnessRoot) throw new Error('SHACO_FORGE_HARNESS_ROOT is required')
+const platform = await inspectLocalPlatform(paths.nativeHelper)
+assert.equal(platform.mutexExists, false, 'ISOLATED_SMOKE_REQUIRES_NO_PREEXISTING_AUTHORITY')
+assert.equal(platform.lifecycleBusy, false)
 const dshHome = await mkdtemp(join(tmpdir(), 'shaco-forge-v1-1b-electron-'))
 const evidenceRoot = join(paths.root, 'node_modules/.step1-electron-regression')
 await mkdir(evidenceRoot, { recursive: true })
@@ -71,7 +75,11 @@ assert.equal(evidence.carrier.metrics.finalActiveStreams, 0)
 assert.equal(evidence.carrier.metrics.finalPendingUnary, 0)
 assert.equal(evidence.renderer.security.pipeAccess, false)
 assert.equal(evidence.bootstrapSupervisorChannel.businessTraffic, 0)
-assert.equal(evidence.renderer.theme.architecture, 'SEMANTIC_DESIGN_TOKENS')
+assert.equal(evidence.renderer.theme.architecture, 'MODE_PLUS_TEMPLATE')
+assert.equal(evidence.renderer.harnessClient.appWebEntryCount, 0)
+assert.equal(evidence.renderer.harnessClient.optionB.rootOwner, 'SHACO')
+assert.equal(evidence.renderer.harnessClient.optionB.harnessActive, 28)
+assert.equal(evidence.renderer.harnessClient.optionB.reactRoots, 1)
 assert.deepEqual(evidence.renderer.theme.supportedModes, ['light', 'dark', 'system'])
 assert.equal(evidence.renderer.theme.initial.mode, 'light')
 assert.equal(evidence.renderer.theme.initial.resolved, 'light')
@@ -98,7 +106,10 @@ assert.ok(hostReadyIndex >= 0 && carrierReadyIndex > hostReadyIndex, 'CARRIER_RE
 if (injectCarrierFailure) {
   assert.equal(evidence.failureTruthfulness.injectedCarrierFailure, true)
   assert.equal(evidence.failureTruthfulness.carrierFailedObserved, true)
-  assert.equal(evidence.failureTruthfulness.finalProjectionPhase, 'carrier-failed')
+  assert.equal(evidence.failureTruthfulness.finalProjectionPhase, 'disconnected')
+  assert.equal(evidence.failureTruthfulness.failurePhaseBeforeCleanup, 'failed')
+  assert.equal(evidence.failureTruthfulness.method, 'EVIDENCE_ONLY_FENCE_THEN_PHYSICAL_HELPER_TERMINATION')
+  assert.ok(Object.values(evidence.failureTruthfulness.failureUI).every(Boolean))
   assert.equal(evidence.failureTruthfulness.automaticWorkerRestart, false)
   assert.equal(evidence.failureTruthfulness.automaticCarrierRecreation, false)
   assert.equal(evidence.failureTruthfulness.implicitAgentCancel, false)

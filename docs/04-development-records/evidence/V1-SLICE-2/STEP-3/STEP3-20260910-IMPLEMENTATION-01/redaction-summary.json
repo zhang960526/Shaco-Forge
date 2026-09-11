@@ -1,0 +1,286 @@
+{
+  "result": "PASS",
+  "providerRuns": 0,
+  "credentialValuesRecorded": false,
+  "credentialMetadataOnly": true,
+  "uiContainsPrivateUserContent": false,
+  "encoding": [
+    {
+      "path": "apps/desktop/index.html",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/scripts/prepare-harness-client.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/client/recovery.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/main/main.ts",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/preload/preload.cts",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/global.d.ts",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/main.ts",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/renderer/styles.css",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step2-recovery-main.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/tests/user-loop-evidence.test.ts",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/00-governance/SHACO-FORGE-CURRENT-STATE.md",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/DEVELOPMENT-LOG.md",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "package.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "scripts/smoke-slice2-step2.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "scripts/step2-command.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/scripts/composition-identity.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/client/settings.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/client/shell-state.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/client/shell-state.test.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/client/sidebar.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/main/workspace-picker.test.ts",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/src/main/workspace-picker.ts",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step3-shell-driver.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/assemble-evidence.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/baseline.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/changed-files.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/composition-history.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/composition-identity.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/corrective-history.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/cumulative-e2e.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/deliverable-identity.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/evidence-manifest.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/gate-results.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/interaction-security.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/process-cleanup.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/redaction-summary.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/attachment-sequence.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/authority-identity.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/electron-regression.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/powershell-resolution.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/security-negative-results.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/unit.log",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/run-manifest.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/runtime-failure-40996.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/shell-settings.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/test-summary.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/ui-evidence.json",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "scripts/smoke-slice2-step3.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "scripts/step3-baseline.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "scripts/step3-composition.test.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "scripts/step3-final-composition.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    },
+    {
+      "path": "scripts/step3-interaction.test.mjs",
+      "encoding": "UTF-8",
+      "mojibake": false
+    }
+  ],
+  "immutableAuthoritiesUnchanged": true,
+  "frozenHarnessClean": true
+}

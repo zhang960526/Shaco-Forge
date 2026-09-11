@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-10T19:29:39.042Z",
+  "supersededFreeze": "2026-09-10T19:22:40.860Z",
+  "reason": "smoke:slice2-step3 attempt 1 could not write its first PNG because the caller supplied a new evidence directory that did not yet exist. Cleanup reported no orphan. Product runtime assertions did not fail.",
+  "correction": "Named-command runner creates both per-attempt evidence directories before spawning child. Also correct inherited successPath wording to identify actual Shaco UI with Harness public pending.answer, without changing behavior.",
+  "previousEvidencePreserved": true,
+  "sourceChanged": [
+    "scripts/full-shaco-command.mjs",
+    "scripts/smoke-full-shaco.mjs",
+    "scripts/smoke-slice2-step3-interactions.mjs"
+  ],
+  "requiredNext": "Freeze current source and rerun complete final non-Provider regression."
+}

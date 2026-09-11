@@ -1,0 +1,2547 @@
+{
+  "goalId": "V1_SLICE2_STEP3_FULL_SHACO_DUAL_THEME_PRESENTATION_IMPLEMENTATION_001",
+  "at": "2026-09-10T19:51:11.310Z",
+  "result": "FULL_GOAL_VERIFIED",
+  "state": "IMPLEMENTED_WAITING_INDEPENDENT_FINAL_REVIEW",
+  "nextAction": "INDEPENDENT_FINAL_REVIEW_FULL_SHACO_DUAL_THEME_STEP3",
+  "frozenAt": "2026-09-10T19:39:27.138Z",
+  "finalRuntimeRoot": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/runs/smoke-full-shaco-2/step2",
+  "providerRuns": 0,
+  "finalRequiredCommands": 15,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1913,
+      "sha256": "67b41c2c31211ce2b08221804543f30ed075c34757f4133d38ea13c5bbc405f7"
+    },
+    {
+      "path": "baseline.json",
+      "bytes": 146682,
+      "sha256": "c37dc9d1ddc862e10bfb6573d206624183573442901c36571b8978a97283589b"
+    },
+    {
+      "path": "bootstrap-lifetime.json",
+      "bytes": 747,
+      "sha256": "cd789b223f993542b12537c3a4b6ea0c51a53e09a9ba7d85902d84c6a8a465d1"
+    },
+    {
+      "path": "changed-paths-pre-doc-finalization.json",
+      "bytes": 2271,
+      "sha256": "86e61763350f5818c73f61c0c9aab9868180ed0fcf87f25dfc3670e6e27603e1"
+    },
+    {
+      "path": "changed-paths.json",
+      "bytes": 87943,
+      "sha256": "13a52491d6e192f443209aa0a0938c1d8483496cec35bc731dfd8341a8973fbd"
+    },
+    {
+      "path": "composition-command-presentation-supersession.json",
+      "bytes": 613,
+      "sha256": "68ce30dc8a0f744e01ee0fd65681dbfae2bae1d06ed42153a46deb9ff93903e0"
+    },
+    {
+      "path": "composition-corrective-supersession.json",
+      "bytes": 990,
+      "sha256": "c37b865c1f57d43de7fbe32a09d504ab79288be25b45f1111d97c044cfff6ce7"
+    },
+    {
+      "path": "composition-evidence-path-supersession.json",
+      "bytes": 832,
+      "sha256": "b7d5128fa45ca778671dab3b82955c8821ae3dfd673053146328a3993e532d18"
+    },
+    {
+      "path": "composition-final-summary.json",
+      "bytes": 1059,
+      "sha256": "5bb8206e512de68161ec60904a307d0b948dc14db47cbcc7dcadccce85fa11cf"
+    },
+    {
+      "path": "composition-history.json",
+      "bytes": 117755,
+      "sha256": "a778ba3bb17dc5a8c9d70ea61f2a0665587b55db6d5a02acabdaad1d46d02e1f"
+    },
+    {
+      "path": "composition-identity.json",
+      "bytes": 28043,
+      "sha256": "28c9f67d1c62790db7a00b423f4f27369ebe1565ca9909b4d91f8ff49f6123a8"
+    },
+    {
+      "path": "composition-supersession.json",
+      "bytes": 560,
+      "sha256": "9d5dd3f6445a9432577333c7e2a22f5922ed9e420b063b44f1eeb2fee67c588c"
+    },
+    {
+      "path": "documentation-finalization-attempts.json",
+      "bytes": 499,
+      "sha256": "ffbdff1043f06e027b2fa0de0cd7cacfe9e9589c60e5709cff2b36a2d5e4378d"
+    },
+    {
+      "path": "encoding-check.json",
+      "bytes": 330,
+      "sha256": "a8127602669e66b4954d3efc25a2ca724eec4bef015fa48e4aa8c848ba8b608f"
+    },
+    {
+      "path": "final-audit.json",
+      "bytes": 1872,
+      "sha256": "99d76915e9f1ba7be945b6b02cb47d085f8200da758f06c3c9c63662a281e0c2"
+    },
+    {
+      "path": "final-tests.json",
+      "bytes": 43447,
+      "sha256": "07d1ebea07385b5fae81e92fc8ac19dcfc24ed6d131f53510ff39ddf158554d6"
+    },
+    {
+      "path": "finalize-evidence.mjs",
+      "bytes": 40443,
+      "sha256": "c2c30f097ae9cef64cffbfd26f9a3496328853a24f95e52b95b05ec928295caa"
+    },
+    {
+      "path": "freeze-persistence.json",
+      "bytes": 968,
+      "sha256": "a5eb0808b82e2cb304db78ac29be74ab770af72cf2c777ddca0a81ce803a4a98"
+    },
+    {
+      "path": "gate-results.json",
+      "bytes": 6079,
+      "sha256": "71e6d822f3b5a771f78dc881e0b07c4eca03096594a8e31db0360e015a6e71eb"
+    },
+    {
+      "path": "license-file-selection.json",
+      "bytes": 21561,
+      "sha256": "4b279649063bf765a5f7fc4ceac36655a4e8c52cbd6048bb3bd32db7fa6ccfe0"
+    },
+    {
+      "path": "logs/build-1.log",
+      "bytes": 3743,
+      "sha256": "33bf52ececd2c217f8925ced402094c8f6a9a24c1f581d03532846df6748f59e"
+    },
+    {
+      "path": "logs/build-10.log",
+      "bytes": 8335,
+      "sha256": "8286da416c0ca839048c0b5587519c68c8fb4abcdc20c83b556bc898eb963630"
+    },
+    {
+      "path": "logs/build-11.log",
+      "bytes": 8335,
+      "sha256": "e10a529ef276e43cf94eb64d226a14e6909bbe206f1834ed536ec7c6fdbcbbbe"
+    },
+    {
+      "path": "logs/build-12.log",
+      "bytes": 8335,
+      "sha256": "df1c6ffb3fc8ccad538e5b792930c66d1ff6631f3b546145fb976ad49dacae05"
+    },
+    {
+      "path": "logs/build-13.log",
+      "bytes": 8335,
+      "sha256": "727d75c37e9d397110fa5d38eeecaa4ab78a3dae42c6c796d9579208b18f0741"
+    },
+    {
+      "path": "logs/build-14.log",
+      "bytes": 8335,
+      "sha256": "b0b3e13ea134583b46df12814acd4ea431f95092dd15be07daccbd845e940e5c"
+    },
+    {
+      "path": "logs/build-2.log",
+      "bytes": 8335,
+      "sha256": "beb915d430f06f964a54cc3a0f05d0aaeb18ac0d33d9789d4f222674a6176e33"
+    },
+    {
+      "path": "logs/build-3.log",
+      "bytes": 8335,
+      "sha256": "63e58476df6529ba7d4fd4f23dc739c63aead320f3dbe4a300f824f45e5973dd"
+    },
+    {
+      "path": "logs/build-4.log",
+      "bytes": 8335,
+      "sha256": "d00b0e1d5cf5e956a7bef67269ba205adf6176e218a65dc9789d214f556ddf23"
+    },
+    {
+      "path": "logs/build-5.log",
+      "bytes": 8335,
+      "sha256": "43a062f5cbf86a027fb13a6f92a75bec800836e16f8a329f3a4d234e9d4515e3"
+    },
+    {
+      "path": "logs/build-6.log",
+      "bytes": 8335,
+      "sha256": "8b0452f81708e68876c7482fe7368864345710d31a1adb64e6046c008755afe8"
+    },
+    {
+      "path": "logs/build-7.log",
+      "bytes": 8335,
+      "sha256": "ab1ede01c02bfacaa01d6afda9187c891073d55d2bc0f4d0f3b7c5587d0ddb04"
+    },
+    {
+      "path": "logs/build-8.log",
+      "bytes": 8335,
+      "sha256": "ad09991c1aed378721883e7147127578bc7729b906cb8df9675571995253899a"
+    },
+    {
+      "path": "logs/build-9.log",
+      "bytes": 8335,
+      "sha256": "362043191c73cb77c082e6813ad8e2fd457cae8a40142778bc676b2e32cd8ae4"
+    },
+    {
+      "path": "logs/focused-bootstrap-1.log",
+      "bytes": 1498,
+      "sha256": "d5e4ff385e670496cf782da10bc5c1500587d6813fb4df62a229eb1e914611f1"
+    },
+    {
+      "path": "logs/smoke-carrier-1.log",
+      "bytes": 2612,
+      "sha256": "a86ded10d8f97dc548620801d7bdf13b04ba26e237449f258439df3f16e869a5"
+    },
+    {
+      "path": "logs/smoke-carrier-2.log",
+      "bytes": 2612,
+      "sha256": "beb0844fec6eeb4b491137b68d55db371dd836cdf05273c40619414364855a28"
+    },
+    {
+      "path": "logs/smoke-carrier-3.log",
+      "bytes": 2612,
+      "sha256": "2b479dc1314e2d34d0d507a84f7bc8f9695fe02be2b378d435cf36fad5a7d89c"
+    },
+    {
+      "path": "logs/smoke-carrier-4.log",
+      "bytes": 2612,
+      "sha256": "9915b1d5aef3ebcf21d5aa3371f69e97d4f4f0a1c3c7c6b6fc8a5155ad91ad3f"
+    },
+    {
+      "path": "logs/smoke-electron-1.log",
+      "bytes": 1679,
+      "sha256": "4b33e37e2e32cee3dccadbfdf490973e24bb1550fe1d21ecfe300498b9e195f5"
+    },
+    {
+      "path": "logs/smoke-electron-2.log",
+      "bytes": 4478,
+      "sha256": "09dd2d1b872a1305dba503ecd76dd48c5787f4fbcfbb2ab0994efa726e74f804"
+    },
+    {
+      "path": "logs/smoke-electron-3.log",
+      "bytes": 4481,
+      "sha256": "112cd3b9b531d37a911d0e95eabf6183951b26247841be1020051c960b5c3a02"
+    },
+    {
+      "path": "logs/smoke-electron-4.log",
+      "bytes": 4481,
+      "sha256": "65488080ca116506e87b550413be8e53a6b2b23c5854d2aaf90f844e1546de01"
+    },
+    {
+      "path": "logs/smoke-electron-5.log",
+      "bytes": 4481,
+      "sha256": "e7690ba504f1ca7ccdb8da6470dcc7748a94c9948b57825dc01d8cafd199f707"
+    },
+    {
+      "path": "logs/smoke-electron-6.log",
+      "bytes": 4481,
+      "sha256": "cc7502472ac17dc2f9eefa581049b15cce33c738420d6dd52d601094066f4e60"
+    },
+    {
+      "path": "logs/smoke-failure-1.log",
+      "bytes": 72960,
+      "sha256": "76fa1f7d7d76954818d923e96e97903bcb146dcd41eaa79f72a9202d74b7c923"
+    },
+    {
+      "path": "logs/smoke-failure-2.log",
+      "bytes": 8294,
+      "sha256": "075401fb6b4d029c2bff98ed5226c95780d62d9ec6790d9d2670f2d9d3d69e7b"
+    },
+    {
+      "path": "logs/smoke-failure-3.log",
+      "bytes": 8294,
+      "sha256": "a527c19537bc13021bf3d3d463e0c48d378e61b31f703748533e16a1b7e26f9f"
+    },
+    {
+      "path": "logs/smoke-failure-4.log",
+      "bytes": 8292,
+      "sha256": "6510973bd5d71c60981452769315e0bb2d4ac20e86105230956142b1a9aaa44c"
+    },
+    {
+      "path": "logs/smoke-failure-5.log",
+      "bytes": 8294,
+      "sha256": "1a06dd27591f85222901bf0253e43e8e644a61923a3b26214d02e40015ea572e"
+    },
+    {
+      "path": "logs/smoke-full-shaco-1.log",
+      "bytes": 744,
+      "sha256": "6c974c6c0b88e4939c92e9fff2b4dc6032585ea2528877711177cce0a0361ec1"
+    },
+    {
+      "path": "logs/smoke-full-shaco-2.log",
+      "bytes": 744,
+      "sha256": "6c974c6c0b88e4939c92e9fff2b4dc6032585ea2528877711177cce0a0361ec1"
+    },
+    {
+      "path": "logs/smoke-full-shaco-development-1.log",
+      "bytes": 665,
+      "sha256": "dd2750836367228472e5c7ae658ae88fc72f60b7d7ad472099408cbd096f54b0"
+    },
+    {
+      "path": "logs/smoke-full-shaco-development-2.log",
+      "bytes": 665,
+      "sha256": "dd2750836367228472e5c7ae658ae88fc72f60b7d7ad472099408cbd096f54b0"
+    },
+    {
+      "path": "logs/smoke-full-shaco-development-3.log",
+      "bytes": 665,
+      "sha256": "dd2750836367228472e5c7ae658ae88fc72f60b7d7ad472099408cbd096f54b0"
+    },
+    {
+      "path": "logs/smoke-full-shaco-development-4.log",
+      "bytes": 665,
+      "sha256": "dd2750836367228472e5c7ae658ae88fc72f60b7d7ad472099408cbd096f54b0"
+    },
+    {
+      "path": "logs/smoke-full-shaco-development-5.log",
+      "bytes": 935,
+      "sha256": "229e929689273eb11ef1e8877a9a5a1b12b6ed2259b503e0984afa7269b1a94e"
+    },
+    {
+      "path": "logs/smoke-full-shaco-development-6.log",
+      "bytes": 655,
+      "sha256": "5f2efb09c76f16bd919f74668bffb4bc98f8b1ff08af14b54c7992c7642b7fc0"
+    },
+    {
+      "path": "logs/smoke-full-shaco-development-7.log",
+      "bytes": 677,
+      "sha256": "c9f61968e884dd121d2d19504b7e790227e2042b417058a541948cd646b2893a"
+    },
+    {
+      "path": "logs/smoke-full-shaco-development-8.log",
+      "bytes": 677,
+      "sha256": "c9f61968e884dd121d2d19504b7e790227e2042b417058a541948cd646b2893a"
+    },
+    {
+      "path": "logs/smoke-full-shaco-development-9.log",
+      "bytes": 758,
+      "sha256": "75649e435a884f13c6bbcb46d403e89e7063f72657bf925c34b238c06514bfde"
+    },
+    {
+      "path": "logs/smoke-slice2-step1-1.log",
+      "bytes": 3836,
+      "sha256": "c622785ce038580f2d933331c47106e801e86195aa5510ba903da99e85120a36"
+    },
+    {
+      "path": "logs/smoke-slice2-step1-2.log",
+      "bytes": 3836,
+      "sha256": "798dad6bde10eacf557908cf56638c95a74f08fa8e211ead417e444590756178"
+    },
+    {
+      "path": "logs/smoke-slice2-step1-3.log",
+      "bytes": 3837,
+      "sha256": "0a75223cf99f16a3b7efd0a292d61e89bfcc80932d9aeea09bf7a4c368eea097"
+    },
+    {
+      "path": "logs/smoke-slice2-step2-1.log",
+      "bytes": 711,
+      "sha256": "98ed5a75b957bd9f38a685413f3af91d74cc8c583cb8702fe8137f45459e9222"
+    },
+    {
+      "path": "logs/smoke-slice2-step2-2.log",
+      "bytes": 711,
+      "sha256": "98ed5a75b957bd9f38a685413f3af91d74cc8c583cb8702fe8137f45459e9222"
+    },
+    {
+      "path": "logs/smoke-slice2-step2-3.log",
+      "bytes": 711,
+      "sha256": "98ed5a75b957bd9f38a685413f3af91d74cc8c583cb8702fe8137f45459e9222"
+    },
+    {
+      "path": "logs/smoke-slice2-step2-4.log",
+      "bytes": 711,
+      "sha256": "98ed5a75b957bd9f38a685413f3af91d74cc8c583cb8702fe8137f45459e9222"
+    },
+    {
+      "path": "logs/smoke-slice2-step3-1.log",
+      "bytes": 594,
+      "sha256": "1e2fde51b05ec9e124951111ba7ff71012e30ab973925f1368ba75990f42e78b"
+    },
+    {
+      "path": "logs/smoke-slice2-step3-2.log",
+      "bytes": 711,
+      "sha256": "812a0af0852f1ca2e822c714f8e0e349b3cd52522b2c4cffd70e50f422a99a1d"
+    },
+    {
+      "path": "logs/smoke-slice2-step3-3.log",
+      "bytes": 711,
+      "sha256": "812a0af0852f1ca2e822c714f8e0e349b3cd52522b2c4cffd70e50f422a99a1d"
+    },
+    {
+      "path": "logs/smoke-slice2-step3-interactions-1.log",
+      "bytes": 678,
+      "sha256": "0713b278a1efb76b2eefdfed0e528f8de27a7bc873cade335bf2b9beed31e59f"
+    },
+    {
+      "path": "logs/smoke-slice2-step3-interactions-2.log",
+      "bytes": 678,
+      "sha256": "0713b278a1efb76b2eefdfed0e528f8de27a7bc873cade335bf2b9beed31e59f"
+    },
+    {
+      "path": "logs/smoke-worker-1.log",
+      "bytes": 1504,
+      "sha256": "519669f1554a8d918c1d0e009333cd02ba7a8621b2f7fd5d1642b8f4ff12acec"
+    },
+    {
+      "path": "logs/smoke-worker-2.log",
+      "bytes": 1505,
+      "sha256": "7b648d01718c551824a001388039851178e8dec226b667a3deed652f619324a3"
+    },
+    {
+      "path": "logs/smoke-worker-3.log",
+      "bytes": 1504,
+      "sha256": "fe81d6d6309d29d8f83c20e5bdd99603f50e34e7155c2de9488707446c39cf3f"
+    },
+    {
+      "path": "logs/smoke-worker-4.log",
+      "bytes": 1505,
+      "sha256": "59594109f969431950eeef6271426a65e6312e088e390e1933873da9093357bf"
+    },
+    {
+      "path": "logs/test-1.log",
+      "bytes": 85111,
+      "sha256": "60ad976d2e0ce353ea425637eed3dadbc75700a628eccf799104bd2ddaf1d014"
+    },
+    {
+      "path": "logs/test-2.log",
+      "bytes": 46768,
+      "sha256": "0049fa78ca4f37fc4de765595167921a432b6a381d09c3f05c74396d3fd7799b"
+    },
+    {
+      "path": "logs/test-3.log",
+      "bytes": 46760,
+      "sha256": "775927ceb427e9af906d2639f11770ec774c5d5c041d8bd21e143abcda26d54e"
+    },
+    {
+      "path": "logs/test-4.log",
+      "bytes": 46757,
+      "sha256": "698a4ce07e8a654e9c1f7a0e3246705833289b5aac33d308fbf730bb74d92209"
+    },
+    {
+      "path": "logs/test-5.log",
+      "bytes": 46769,
+      "sha256": "91c7c23eb97b50dc2b5be11f34aa8b70567d4319ef2bb59990d6a28d855e033d"
+    },
+    {
+      "path": "logs/test-6.log",
+      "bytes": 46767,
+      "sha256": "22fc9604ff91b0485fcf8142074385fd0c7579453c539e379a3df846f75ff659"
+    },
+    {
+      "path": "logs/test-7.log",
+      "bytes": 46768,
+      "sha256": "86f92fcaed42786c0834977ea5977c6a6b46c21732b09b2e6bd50b32bf0cecb8"
+    },
+    {
+      "path": "logs/test-full-shaco-1.log",
+      "bytes": 2645,
+      "sha256": "94c180024d298c4398e092c01e8c4ccac598b8d2de9cb08a630369140b7a1523"
+    },
+    {
+      "path": "logs/test-full-shaco-2.log",
+      "bytes": 3948,
+      "sha256": "360e7d0e0e0730eb69dee2e29d44cb2e81104386beadce14576b9c2551ad1d14"
+    },
+    {
+      "path": "logs/test-full-shaco-3.log",
+      "bytes": 3194,
+      "sha256": "d874c53987f84391e0a7699e477ad1b6b5311116544a730f11072ded5a718ca1"
+    },
+    {
+      "path": "logs/test-full-shaco-4.log",
+      "bytes": 3190,
+      "sha256": "b2f69fb94648ee007eb36c74b47ce31faf348388a8202564854a25a8fbb395db"
+    },
+    {
+      "path": "logs/test-full-shaco-5.log",
+      "bytes": 3191,
+      "sha256": "be036653cfd5a1168939af3f1ef431b39654d7974a9f82af4e77fbd121434300"
+    },
+    {
+      "path": "logs/test-full-shaco-6.log",
+      "bytes": 3191,
+      "sha256": "4cb0d516bd9d09349ac8c166805d2579b692a06eef8d4b1491eecd80cad97e66"
+    },
+    {
+      "path": "logs/test-full-shaco-7.log",
+      "bytes": 3192,
+      "sha256": "2770e8516e4588941818b9f1aa865d1ba986b6ceec62e1d8eb71e6818e56627a"
+    },
+    {
+      "path": "logs/typecheck-1.log",
+      "bytes": 363,
+      "sha256": "912733ed02ffae26685d76c80541fd3a8519a8b6bd3040269357e62083105385"
+    },
+    {
+      "path": "logs/typecheck-1.original-utf8.b64",
+      "bytes": 277,
+      "sha256": "3f5c1f57ce14c87a9d3630b47df825b50c4741286bc8f900dec7e25147a4e364"
+    },
+    {
+      "path": "logs/typecheck-2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/typecheck-3.log",
+      "bytes": 29,
+      "sha256": "c9fb96e5ca149db7c634cfa23e702fcceffc5738dcd972e7d45d6ff933413b55"
+    },
+    {
+      "path": "logs/typecheck-4.log",
+      "bytes": 29,
+      "sha256": "c9fb96e5ca149db7c634cfa23e702fcceffc5738dcd972e7d45d6ff933413b55"
+    },
+    {
+      "path": "logs/typecheck-5.log",
+      "bytes": 29,
+      "sha256": "c9fb96e5ca149db7c634cfa23e702fcceffc5738dcd972e7d45d6ff933413b55"
+    },
+    {
+      "path": "logs/typecheck-6.log",
+      "bytes": 29,
+      "sha256": "c9fb96e5ca149db7c634cfa23e702fcceffc5738dcd972e7d45d6ff933413b55"
+    },
+    {
+      "path": "logs/typecheck-7.log",
+      "bytes": 29,
+      "sha256": "c9fb96e5ca149db7c634cfa23e702fcceffc5738dcd972e7d45d6ff933413b55"
+    },
+    {
+      "path": "logs/typecheck-8.log",
+      "bytes": 29,
+      "sha256": "c9fb96e5ca149db7c634cfa23e702fcceffc5738dcd972e7d45d6ff933413b55"
+    },
+    {
+      "path": "logs/typecheck-9.log",
+      "bytes": 29,
+      "sha256": "c9fb96e5ca149db7c634cfa23e702fcceffc5738dcd972e7d45d6ff933413b55"
+    },
+    {
+      "path": "logs/verify-static-1.log",
+      "bytes": 70,
+      "sha256": "fcb7a3e80433a204244f51d232dffb66f514728d6cd404614b5f05a6e4e89338"
+    },
+    {
+      "path": "logs/verify-static-2.log",
+      "bytes": 70,
+      "sha256": "fcb7a3e80433a204244f51d232dffb66f514728d6cd404614b5f05a6e4e89338"
+    },
+    {
+      "path": "logs/verify-static-3.log",
+      "bytes": 70,
+      "sha256": "fcb7a3e80433a204244f51d232dffb66f514728d6cd404614b5f05a6e4e89338"
+    },
+    {
+      "path": "logs/verify-static-4.log",
+      "bytes": 70,
+      "sha256": "fcb7a3e80433a204244f51d232dffb66f514728d6cd404614b5f05a6e4e89338"
+    },
+    {
+      "path": "logs/verify-static-5.log",
+      "bytes": 70,
+      "sha256": "fcb7a3e80433a204244f51d232dffb66f514728d6cd404614b5f05a6e4e89338"
+    },
+    {
+      "path": "logs/verify-theme-1.log",
+      "bytes": 1043,
+      "sha256": "ded51c34f2a161e394f34cd83a1937380b2f1e2e3da7c57669a28e6fe03b6669"
+    },
+    {
+      "path": "logs/verify-theme-2.log",
+      "bytes": 1043,
+      "sha256": "ded51c34f2a161e394f34cd83a1937380b2f1e2e3da7c57669a28e6fe03b6669"
+    },
+    {
+      "path": "logs/verify-theme-3.log",
+      "bytes": 1043,
+      "sha256": "ded51c34f2a161e394f34cd83a1937380b2f1e2e3da7c57669a28e6fe03b6669"
+    },
+    {
+      "path": "logs/verify-theme-4.log",
+      "bytes": 1043,
+      "sha256": "ded51c34f2a161e394f34cd83a1937380b2f1e2e3da7c57669a28e6fe03b6669"
+    },
+    {
+      "path": "logs/verify-theme-5.log",
+      "bytes": 1043,
+      "sha256": "ded51c34f2a161e394f34cd83a1937380b2f1e2e3da7c57669a28e6fe03b6669"
+    },
+    {
+      "path": "owner-instruction.txt",
+      "bytes": 37691,
+      "sha256": "9f0c947e6828ccdb1c60584de701fc907130d6dbc16fe96bc63a4f0d5dd6c4ac"
+    },
+    {
+      "path": "post-finalization-validation.json",
+      "bytes": 513,
+      "sha256": "93f74adf1f3edb769ee884f0d7b435586da59de2959c4f6467bc546d267f2ff7"
+    },
+    {
+      "path": "process-cleanup-final.json",
+      "bytes": 344,
+      "sha256": "a566657095b9c0004ce892527455cbd53a2373516ba2fd2825409aded9f2c36f"
+    },
+    {
+      "path": "production-electron-archive.json",
+      "bytes": 1810,
+      "sha256": "0a6eb15da11c6232241b0888887ee8dfb3bbdbb070c2928ec1436fe854890d24"
+    },
+    {
+      "path": "production-electron/carrier-failure-runtime.json",
+      "bytes": 18179,
+      "sha256": "f509d6210748732055e2286622cb81d2f560a91fbabce5a20f149f0fef3140a7"
+    },
+    {
+      "path": "production-electron/carrier-failure-runtime.png",
+      "bytes": 17594,
+      "sha256": "9755efcfe30033ddc6f381184e1153cf4c8d92b77b4cfc32c56d0286faeb0d9f"
+    },
+    {
+      "path": "production-electron/electron-runtime.json",
+      "bytes": 17939,
+      "sha256": "501bb5a05e8302c5d7a91f0eecb41bd6ba7d87e6bc3a80d2c8e42c5db060dbe7"
+    },
+    {
+      "path": "production-electron/electron-runtime.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "recovery-summary.json",
+      "bytes": 1000,
+      "sha256": "b493f214595aceb0f1825c55e6e4b56545c52e8be653dfceb740608cb51480aa"
+    },
+    {
+      "path": "redaction-summary.json",
+      "bytes": 1051,
+      "sha256": "171e3c3ccc609e23c7bb2fbbdd1891db9c78f8ee832ddee4b26f67fc32da2d01"
+    },
+    {
+      "path": "runs/smoke-carrier-1/step1/security-negative-results.json",
+      "bytes": 10888,
+      "sha256": "87dedd627cc5acd5e6c9dd96896874d86a982c8a92fbde5f0c5e7227772cf29f"
+    },
+    {
+      "path": "runs/smoke-carrier-2/step1/security-negative-results.json",
+      "bytes": 10888,
+      "sha256": "028e6c89cbbbdad1c654fd6494a139cb8e25381263f3f5d4b116d9bcce89d109"
+    },
+    {
+      "path": "runs/smoke-carrier-3/step1/security-negative-results.json",
+      "bytes": 10888,
+      "sha256": "5c5a120baee4f0012e380686780cbe507a17cd1e7164c317eab6af5773567e10"
+    },
+    {
+      "path": "runs/smoke-carrier-4/step1/security-negative-results.json",
+      "bytes": 10888,
+      "sha256": "9d0e17b738a52ef43947edec6dfe5c2aa001e1ee1ff60058b9b55a3a965d7200"
+    },
+    {
+      "path": "runs/smoke-electron-2/step1/electron-regression.json",
+      "bytes": 17863,
+      "sha256": "fc67ad6cd8e02bdaddff820ad3513e7a5ebf859949be995c3fe6ca813d2169a0"
+    },
+    {
+      "path": "runs/smoke-electron-3/step1/electron-regression.json",
+      "bytes": 17889,
+      "sha256": "e6474cfe4bffdd6caf9eac956e538af948317af591f13f0ba816b2bb907c906d"
+    },
+    {
+      "path": "runs/smoke-electron-4/step1/electron-regression.json",
+      "bytes": 17939,
+      "sha256": "c0f0df33e656ae96c919f591e6b59207c38f3dbace7d6a558a98a2b79f47c896"
+    },
+    {
+      "path": "runs/smoke-electron-5/step1/electron-regression.json",
+      "bytes": 17939,
+      "sha256": "75e22d305d7d471dd4c030f3351069493ab33a1e8aa796ab9d5f4850604cf959"
+    },
+    {
+      "path": "runs/smoke-electron-6/step1/electron-regression.json",
+      "bytes": 17939,
+      "sha256": "501bb5a05e8302c5d7a91f0eecb41bd6ba7d87e6bc3a80d2c8e42c5db060dbe7"
+    },
+    {
+      "path": "runs/smoke-failure-2/step1/electron-regression.json",
+      "bytes": 18179,
+      "sha256": "3060fd7ebd066760c3c7baacd72b2ffd48678f8eafe5840fd6c2315ce2e637bc"
+    },
+    {
+      "path": "runs/smoke-failure-3/step1/electron-regression.json",
+      "bytes": 18179,
+      "sha256": "9c5c590175f654dcdaf9e81df0519c0b041998be72d0e578043fc6580ac82acc"
+    },
+    {
+      "path": "runs/smoke-failure-4/step1/electron-regression.json",
+      "bytes": 18176,
+      "sha256": "52631290493f2dcb1ef044d9909e42dce8e37500b16a8af3db5a1579f7bd037b"
+    },
+    {
+      "path": "runs/smoke-failure-5/step1/electron-regression.json",
+      "bytes": 18179,
+      "sha256": "f509d6210748732055e2286622cb81d2f560a91fbabce5a20f149f0fef3140a7"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/approval-cold-rebuild.json",
+      "bytes": 1440,
+      "sha256": "36d84d1cdde836d746cc08f968c98f624932e03610b26083f70b20bd9116909d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/approval-cold-rebuild.png",
+      "bytes": 103507,
+      "sha256": "1c24af33e05387112889801104a6ee80940b30bdb50aed655164a335807806d3"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/approval-pending.json",
+      "bytes": 1430,
+      "sha256": "b71a7ee9e5cb8a46c013b61b03327bfb222c4b50ca077010c759033838044304"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/approval-pending.png",
+      "bytes": 104469,
+      "sha256": "27abe537d45f13ba011220420c900797d771fad0b014e2ca9ed678585f335c4c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/approval-real-host-lifecycle.json",
+      "bytes": 6870,
+      "sha256": "23cf477cd6e057a569ec14c3dcecd213ff8629ac3156b427b21ab625834b2299"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/bootstrap-loading.json",
+      "bytes": 1236,
+      "sha256": "25a1aae08c122e7b99f1d442015e1a910a560eb126f041f03661444cc8f4d92f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/bootstrap-loading.png",
+      "bytes": 16416,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/braun-approval-pending.json",
+      "bytes": 1442,
+      "sha256": "62e2d691033da2af069e3e5b637ac7c65a509ec651e5aa198aa1a018d89c3cfa"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/braun-approval-pending.png",
+      "bytes": 102635,
+      "sha256": "265802ceaa0c9f77c2eadb8124694d6975fd914e43dddfb62f10a09e3e80a21a"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/braun-multi-pending.json",
+      "bytes": 1436,
+      "sha256": "8de71f2fc6fe7d43a2a6240440cc932eb61145ed6dd41c3048d1a748767abe39"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/braun-multi-pending.png",
+      "bytes": 93734,
+      "sha256": "08661a8df27c959aba1cf439b66b8ad5dd70660ae15469cdfc0a18be27b3d7b3"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/braun-plan-pending.json",
+      "bytes": 1433,
+      "sha256": "ef181fa5ef9c0805ef629ef745db9ca2e2ae911ce22575b9bb5e1a1334ee65ea"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/braun-plan-pending.png",
+      "bytes": 103649,
+      "sha256": "e1c95e64ce7c67c3231de38f901b61b90608868a1a9568e079e0b3f7bdf2ee89"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/braun-question-pending.json",
+      "bytes": 1442,
+      "sha256": "bb60d7e8a8ff5bd74d2aec8efd823822305f4151a027b8d9780e8569fd82302a"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/braun-question-pending.png",
+      "bytes": 95333,
+      "sha256": "969e5dc878848679bfbbbc362ffe3e118a2f5120efb534e55acdf8e75c9bd46c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/braun-representative.json",
+      "bytes": 1596,
+      "sha256": "ba95bd22af4555d2653cb7147e1fe4470b93960c5e52d848cd425f990765726f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/braun-representative.png",
+      "bytes": 101859,
+      "sha256": "2c11da84d48f89f851ac3171650302f837e44a19c8a7d9062a6110eb2e0acd4c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/conversation-error.json",
+      "bytes": 1592,
+      "sha256": "f8b48019d66ea65ebcc91d45862028c8afd1e660590aa85c79ff0e70c365c69e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/conversation-error.png",
+      "bytes": 101859,
+      "sha256": "2c11da84d48f89f851ac3171650302f837e44a19c8a7d9062a6110eb2e0acd4c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/conversation-result.json",
+      "bytes": 1574,
+      "sha256": "c72f34b4b148e8a73990ff9ea155594e361b0863a9b4195e59a30a11458c7b35"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/conversation-result.png",
+      "bytes": 101870,
+      "sha256": "2460df811a5e5bd3b030d2120df1d250eaed138903d6f83dc3f5f3dde92034c6"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/conversation-streaming.json",
+      "bytes": 1481,
+      "sha256": "bd7fa895cb00c5e39588095b7e526df2cbffd35fc2a8725eb2bc5d3e84b7b3e2"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/conversation-streaming.png",
+      "bytes": 101852,
+      "sha256": "6aa010affca77cc38bcd0a5ea1c21f45773a1c116f83289de02cab4462b973ad"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/conversation-tool.json",
+      "bytes": 1570,
+      "sha256": "71598af554d604ecca01cd6b4e8cc92d15dee543e0821e4d15e8bb504c7b65e3"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/conversation-tool.png",
+      "bytes": 101870,
+      "sha256": "2460df811a5e5bd3b030d2120df1d250eaed138903d6f83dc3f5f3dde92034c6"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/famicom-approval-pending.json",
+      "bytes": 1449,
+      "sha256": "d0cb947214bad56be66981140a2fc94cd4a5a3b749043a4fb63c2d0122f5bc56"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/famicom-approval-pending.png",
+      "bytes": 104174,
+      "sha256": "76c932be554113216d886c7f1f6a0196071e79f035a35691b7449aa6d8db0efd"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/famicom-multi-pending.json",
+      "bytes": 1443,
+      "sha256": "c2d11acf0646bf455e69ac12aa930d9b0ee25e27f2f7de95196495088fab4c70"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/famicom-multi-pending.png",
+      "bytes": 96006,
+      "sha256": "461454778bcec365ab8b78d096a6f42153e246ff372f06714216a875fbafbc5b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/famicom-plan-pending.json",
+      "bytes": 1440,
+      "sha256": "892fe929a44488da4cd0479f6d08d69d3a1e1194601e2c1e00079d8847dc61b0"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/famicom-plan-pending.png",
+      "bytes": 105654,
+      "sha256": "1554cd75053946e4c84bebf4bffba61eab27542fb6897832ddfd004e5dc74eed"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/famicom-question-pending.json",
+      "bytes": 1449,
+      "sha256": "5f071640e62aea727ae51d0f6814a2c8a29fc4ce5dc51116c101693a1a1f3edc"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/famicom-question-pending.png",
+      "bytes": 99853,
+      "sha256": "a8598426dc50957e677b6d4b71ee41562f6463fd94bc9bb348719e16bbed586c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/famicom-representative.json",
+      "bytes": 1603,
+      "sha256": "3e6109ca654c600c1e3f2e92fd4003007816e390fd3e9b6220a1d8e83276c7ee"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/famicom-representative.png",
+      "bytes": 104870,
+      "sha256": "a7f72b39b30cf316e7693ee791c590b9a6657696d76b1ee54d4456099add93df"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/full-shaco-results.json",
+      "bytes": 129773,
+      "sha256": "eb9e3db4c6cad95228fad60ab0ddf07669608cf154f658a86c999d44b99d17ef"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/history-cold-rebuild.json",
+      "bytes": 2436,
+      "sha256": "7bf6e880db09cd7573a3fe021b967eaf147f76edf29b2c2c8c45eb5cd020ee94"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/history-cold-rebuild.png",
+      "bytes": 90735,
+      "sha256": "718e9e9b34a7efc880601af28f8e10ffa3dd84419f14942d2294b4b897a70769"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/multi-pending.json",
+      "bytes": 1424,
+      "sha256": "f2379cc620c88a97de4f48d315309bc55bdb029335c478a0876b5c7418962039"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/multi-pending.png",
+      "bytes": 93734,
+      "sha256": "08661a8df27c959aba1cf439b66b8ad5dd70660ae15469cdfc0a18be27b3d7b3"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/narrow-window.json",
+      "bytes": 1578,
+      "sha256": "0cf70408191c0e93fbdf5b64847fe5f3c8b857875d32ab68e161388df53555ac"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/narrow-window.png",
+      "bytes": 75829,
+      "sha256": "63d777d8abc9378fc4228be1d0f838609d71f2278af5daffb75c97befbcbeb5b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/no-project.json",
+      "bytes": 1222,
+      "sha256": "6c9a7b6af2418d96923679718327f73ed5d5977f25349f9a90ce37652baa7b1c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/no-project.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/plan-pending.json",
+      "bytes": 1421,
+      "sha256": "46fc6cb1cff355ea47cab76445dfac5c7fa3c03ed7cfe8b3151ec5eacafd7094"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/plan-pending.png",
+      "bytes": 105491,
+      "sha256": "3980b7a40d975103aedd1f8e43076c99ae7f7d02890acc5c70299eb7735f4e95"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/project-blank-chat.json",
+      "bytes": 1397,
+      "sha256": "9ac8ef63e6b29d1f1a7c45b2898633f047aab6b0791d40c5ea6608c5b9c19d30"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/project-blank-chat.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/question-cold-rebuild.json",
+      "bytes": 1440,
+      "sha256": "a498aa8b759eba64560b756931c6b2f6f5b555ebb3475a55298057d89a6983ae"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/question-cold-rebuild.png",
+      "bytes": 99525,
+      "sha256": "6f87d06ea30cd19ccf0a01ab6769d985da3dae525a7a751cd68fa7b53610b459"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/question-pending.json",
+      "bytes": 1430,
+      "sha256": "b29255d3395af8e4ec924fc51d466ebf6356ac18bdeda8743a249e10afce8c26"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/question-pending.png",
+      "bytes": 97474,
+      "sha256": "3d906f0fd4cbd5eac267204b6467b6043499b595beffe01f6c9034c2900d380b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/question-real-host-lifecycle.json",
+      "bytes": 7398,
+      "sha256": "68844a4e57a34f6e7bf49f97010cf4d60607c2ca57cdcdebb32aced12147013a"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/shaco-root-error.json",
+      "bytes": 1233,
+      "sha256": "9119e6485f597f4365ca9e2ae16b703c4db7c320bc5011ec0a6e39b59e5a4601"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/shaco-root-error.png",
+      "bytes": 11950,
+      "sha256": "af7d243fd1cec2baef96415708040e7f43c8d55a02d0685f19f0389aa13d0491"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/shaco-settings.json",
+      "bytes": 1584,
+      "sha256": "5fd72f6eb1cb572470d9df198b425276c91112a5b8efd11e560a55ab0b9608ce"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/shaco-settings.png",
+      "bytes": 100681,
+      "sha256": "4ba2cea2e44828f578a94c20e23e7facf1fdb444d1fef9930a39fd5762e593c7"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/step3-ui-53912-1.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/tool-result-detail.json",
+      "bytes": 1572,
+      "sha256": "e260c0a855d64a681a6be225d53231349da576fea31b726374f92339a272393c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-1/step2/tool-result-detail.png",
+      "bytes": 101849,
+      "sha256": "9437a1caed9b6f9244140c6090590da70e03d49affa0f46e1dfb48b20001162b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/approval-cold-rebuild.json",
+      "bytes": 1440,
+      "sha256": "22ed3336c049d5d114e9af71d2da819bdcb9746ed085f3296a0f4a7ab73b035b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/approval-cold-rebuild.png",
+      "bytes": 96565,
+      "sha256": "c52ee2b22ce8c097085759c615889eb3b1689382682fde57a5c585311334d359"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/approval-pending.json",
+      "bytes": 1430,
+      "sha256": "3c12bdd9e8f630c8ecdefba057199d65fce3b1eaf877dbaeae225cf1639bafbe"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/approval-pending.png",
+      "bytes": 96553,
+      "sha256": "d16d8db54d3c09fa33857a19f33a8f356f4ec16ac05b9daf67028afcfe836391"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/approval-real-host-lifecycle.json",
+      "bytes": 6867,
+      "sha256": "ec2a4a1284557e40a8bfb6b4f71d08ac6d49d91f657dc0e66b05684fa6865238"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/bootstrap-loading.json",
+      "bytes": 1236,
+      "sha256": "317d304354d133e5a9969ae69e9b74c1770ed9a19449df166810a4e2e8aa5bf4"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/bootstrap-loading.png",
+      "bytes": 16416,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/braun-approval-pending.json",
+      "bytes": 1442,
+      "sha256": "366eb4fe53d5d820a77b1cc734cfcbb809f31f1e11d4bba71986b420a050db64"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/braun-approval-pending.png",
+      "bytes": 94811,
+      "sha256": "05378bcb9a62e8056b74634d25991218f172bb3ddf49213e7ec6ef4dac460458"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/braun-multi-pending.json",
+      "bytes": 1436,
+      "sha256": "243ff3f24d8da597a5a177ac5d44bd0ef6dc24466951d9062f7bde126c05380e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/braun-multi-pending.png",
+      "bytes": 90426,
+      "sha256": "f999cbaf1156bcdd6281be3c65c74981e59269655d3b8eda1ea50107b4c02266"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/braun-plan-pending.json",
+      "bytes": 1433,
+      "sha256": "05088eb20fc49186453d44172864f134d409ee2e67eb7c37a4fda6643cb49285"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/braun-plan-pending.png",
+      "bytes": 100242,
+      "sha256": "809f17837d958d14a32ee252dc8ce0fe6d71687cb8811424341f7c81f718e410"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/braun-question-pending.json",
+      "bytes": 1442,
+      "sha256": "ceae1b248d61ee346df0ec8bfc337ea24ebd2e96b7522ef0235495fca95559a0"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/braun-question-pending.png",
+      "bytes": 93835,
+      "sha256": "b929a931aad48d0f84902f21eaaf8a180ccf0e2f03ffc80273953955d5db03a8"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/braun-representative.json",
+      "bytes": 1596,
+      "sha256": "4dda2aa23d092cc363332459f43ed45e57f50f9b482d2abff3254292099916e1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/braun-representative.png",
+      "bytes": 112297,
+      "sha256": "b4067d74d78c737f86677370b2a619471b233efd45579ecccb00411f29370e6c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/conversation-error.json",
+      "bytes": 1592,
+      "sha256": "97e9debe320e9749bbfcfaddd15615a9651d6e27af3a88ec7fb18d67b256cf61"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/conversation-error.png",
+      "bytes": 112297,
+      "sha256": "b4067d74d78c737f86677370b2a619471b233efd45579ecccb00411f29370e6c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/conversation-result.json",
+      "bytes": 1574,
+      "sha256": "0afb83099af7623a901ee888262a98329d7482b0f93b12a9a562ba54ecf69d33"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/conversation-result.png",
+      "bytes": 116386,
+      "sha256": "1272691355a436b0c7f5ced0dfca47dce4db4cf02099a256a4e8f8da3e49a2f4"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/conversation-streaming.json",
+      "bytes": 1481,
+      "sha256": "3f84395e475576a5d3eae127b579d39de19acdcfa715e5257a2d5f95af09ac1d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/conversation-streaming.png",
+      "bytes": 114968,
+      "sha256": "428774928aea9e4767cad571cd1e6d4ec00d3480000368efeb9dc6721e08639e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/conversation-tool.json",
+      "bytes": 1570,
+      "sha256": "88f13f00c176fe096a1c7d5fdedf031462ba77664f73bd94a9beba154f1a8407"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/conversation-tool.png",
+      "bytes": 115766,
+      "sha256": "6bf8e8983d28fa5ce2256151c4f7c192b40a50baa06ebd22e898af6b1941d005"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/famicom-approval-pending.json",
+      "bytes": 1449,
+      "sha256": "92cbf3aaf4ea3b8fae38f2b010e91b236fd4b3582193ef7af1c67138d2013dd5"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/famicom-approval-pending.png",
+      "bytes": 99267,
+      "sha256": "99c5c8a7e53a53b47a0a01c43d5e766437e1ae8e9cb7f7e1c6f5bdde28af5dca"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/famicom-multi-pending.json",
+      "bytes": 1443,
+      "sha256": "e67112687d11914927da4a425e2014113460f1afc0a5dddbe78feaf7426c1d46"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/famicom-multi-pending.png",
+      "bytes": 92677,
+      "sha256": "77df793ef00c863218b5def128be658582606cfc68acea2ae3177c56f341108d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/famicom-plan-pending.json",
+      "bytes": 1440,
+      "sha256": "1e72430b9759be00d9943fe9bda6c06c9f482c29a6ea1fe666ecfc44352e8b06"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/famicom-plan-pending.png",
+      "bytes": 102207,
+      "sha256": "2f08883438e7e533c1f6f70c43b77ab4df277ccadfc8117d6c80a2a6029c8c36"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/famicom-question-pending.json",
+      "bytes": 1449,
+      "sha256": "55964d7b48e3a3b3c8abe7abaca9820b7d8310ea76067c3b2ce756e8c42ece68"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/famicom-question-pending.png",
+      "bytes": 96297,
+      "sha256": "3ed8c69944055679155b69c3884936ea28bde2d388ede1c06bafd185a95050d6"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/famicom-representative.json",
+      "bytes": 1603,
+      "sha256": "97ec1658e4b72de6b705502343967e74a8e4a81aeba1990bb2d87f626ff9d58c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/famicom-representative.png",
+      "bytes": 113358,
+      "sha256": "e5b359a258d02221414b5b4352a66e09f24664340168acc648e68763e31a65db"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/full-shaco-results.json",
+      "bytes": 129769,
+      "sha256": "6a6564b3ec22c203d2f09d6b89698a53cbd7c4ec8cfb89e3a12dcc5d86c7eb54"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/history-cold-rebuild.json",
+      "bytes": 2436,
+      "sha256": "c6c5668a9f22b873ed751f8370f613a1f0d5e8fd8b48941aff918b31d7ef0137"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/history-cold-rebuild.png",
+      "bytes": 90957,
+      "sha256": "4ee2c42ea99a221eadce7650b9a87a6c237137c6c70a2bc1cce9919b85037611"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/multi-pending.json",
+      "bytes": 1424,
+      "sha256": "a6e5a876018f89ee6274501ee7b6b02d1ca5057ab614b1c31925b221467fcac5"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/multi-pending.png",
+      "bytes": 90426,
+      "sha256": "f999cbaf1156bcdd6281be3c65c74981e59269655d3b8eda1ea50107b4c02266"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/narrow-window.json",
+      "bytes": 1578,
+      "sha256": "f6752d0d6001dea74e4ddb446b8e2d199582531d58659356aff82d6564b14586"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/narrow-window.png",
+      "bytes": 78920,
+      "sha256": "b3071726d0cd025789bbadc16023ad62d6af5f604b38d39748ba38ab7c9477c9"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/no-project.json",
+      "bytes": 1222,
+      "sha256": "5a8279e4defb0a17011cd3a168f4dc23c13a5568c42f3aef4821c0347fe07bae"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/no-project.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/plan-pending.json",
+      "bytes": 1421,
+      "sha256": "604e4bc92e236aa318c64bcf2bd6cde24a4dcef279e794ddd6ca596269af5230"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/plan-pending.png",
+      "bytes": 101983,
+      "sha256": "d0a18e4507537c612d6ce550f5f673a6fee66af65e9d6c8680580b982f64ab0b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/project-blank-chat.json",
+      "bytes": 1397,
+      "sha256": "7799a904282b0c7ed6a7f96afe40cce48abf9299fed5aadf728f57af83d82ca1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/project-blank-chat.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/question-cold-rebuild.json",
+      "bytes": 1440,
+      "sha256": "c08ee45895dc3635bb56f50b7991e8cc24ca2c893124ef35ed355f9f6a16a043"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/question-cold-rebuild.png",
+      "bytes": 100743,
+      "sha256": "aaadecb494fcb972863b8c60b2b21906d167a40e55b111c4603ca9bc6d6e4a6e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/question-pending.json",
+      "bytes": 1430,
+      "sha256": "43a84270436e40f7bcb54d8fd676560c65f8ff1c6953bf0471aa17d8af84dbf6"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/question-pending.png",
+      "bytes": 95951,
+      "sha256": "8cdeda4f4bfecec40fd4dc46b1d6dbcc8c5f3754d2091b5147e94ccc961aecd9"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/question-real-host-lifecycle.json",
+      "bytes": 7397,
+      "sha256": "83f8a4f8e4a90eab7edafc75e88f84def0e033fb29a3dc621cca2ffd93bf3ebe"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/shaco-root-error.json",
+      "bytes": 1233,
+      "sha256": "9d30ec9f37f2ceadc33ee1ab8b9477e1f134c028ca5fa14df05cd07bc4e43482"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/shaco-root-error.png",
+      "bytes": 11950,
+      "sha256": "af7d243fd1cec2baef96415708040e7f43c8d55a02d0685f19f0389aa13d0491"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/shaco-settings.json",
+      "bytes": 1584,
+      "sha256": "dbb708ec49901fbb73474b07cd9837926beaa1b65f7d9ac2494b782b7ffd2222"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/shaco-settings.png",
+      "bytes": 100681,
+      "sha256": "4ba2cea2e44828f578a94c20e23e7facf1fdb444d1fef9930a39fd5762e593c7"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/step3-ui-54356-1.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/tool-result-detail.json",
+      "bytes": 1572,
+      "sha256": "355c190286d6194938a84b51bf6b5fa46ad270dc12ba7d93e86d67545be1cdbe"
+    },
+    {
+      "path": "runs/smoke-full-shaco-2/step2/tool-result-detail.png",
+      "bytes": 107770,
+      "sha256": "ada7ba0e9e74af83cb5036d0f9b7e1517dffbe12a3aee9b46bfce2451687bfc7"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-1/step2/bootstrap-loading.json",
+      "bytes": 1074,
+      "sha256": "8fa527d3440c6776d2c19a14fe45487e00a37919807ee6098e333ed6ecc5a207"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-1/step2/bootstrap-loading.png",
+      "bytes": 16416,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-1/step2/full-shaco-results.json",
+      "bytes": 29796,
+      "sha256": "0b11d9755bc8945c8f0c71a1ee2c637aa2394a40c8f4eda31a2a22eb523ab9d5"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-1/step2/no-project.json",
+      "bytes": 1059,
+      "sha256": "250cb5abbb2659c9929f8141fcedf9860946b530b9d7df213d68883573c531b0"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-1/step2/no-project.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-2/step2/bootstrap-loading.json",
+      "bytes": 1074,
+      "sha256": "cfa7428583b7e35d7af419ffc48432e7e55c937f2072707d9f2fcf3c5a4271a9"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-2/step2/bootstrap-loading.png",
+      "bytes": 16416,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-2/step2/failed-seed.json",
+      "bytes": 1062,
+      "sha256": "1e8c100bebffbae43b1a487004102ded4d76d6b5ab685971a016b2e8eb6db56f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-2/step2/failed-seed.png",
+      "bytes": 17594,
+      "sha256": "9755efcfe30033ddc6f381184e1153cf4c8d92b77b4cfc32c56d0286faeb0d9f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-2/step2/full-shaco-results.json",
+      "bytes": 29848,
+      "sha256": "e3fd234c5e53d8c5b0783df9597c57cd1ff48595d4cb60139617b1a406b0baac"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-2/step2/no-project.json",
+      "bytes": 1059,
+      "sha256": "083dc9ec64da9d71b4fea718cb983f0af5c8b25c735cfb60ea4eb5928fa13af0"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-2/step2/no-project.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-2/step2/runtime-failure-46680.json",
+      "bytes": 167,
+      "sha256": "5502720840d1b25744b90e48e2dba62d81fa62c56b66177a4d12fcbe9f9e7eec"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-3/step2/bootstrap-loading.json",
+      "bytes": 1074,
+      "sha256": "972914a9d4f52e9b729b04d6949916a207f7891248f39084b12bd865ac2768f7"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-3/step2/bootstrap-loading.png",
+      "bytes": 16416,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-3/step2/failed-seed.json",
+      "bytes": 1062,
+      "sha256": "3926da7231c4b20795861a727dab2a9fe3fbf679172625c3c01a0e70a7bbb6b5"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-3/step2/failed-seed.png",
+      "bytes": 17594,
+      "sha256": "9755efcfe30033ddc6f381184e1153cf4c8d92b77b4cfc32c56d0286faeb0d9f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-3/step2/full-shaco-results.json",
+      "bytes": 29922,
+      "sha256": "45b3c1fba07b6e8573f678c854d7a4139c543a0cac16116eec887b434bbb35e4"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-3/step2/no-project.json",
+      "bytes": 1059,
+      "sha256": "5da811f4ba70d34b9ca990efdd4c7854a116da43e2ce71ff5bfd6f0bb376b536"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-3/step2/no-project.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-3/step2/runtime-failure-30212.json",
+      "bytes": 167,
+      "sha256": "5502720840d1b25744b90e48e2dba62d81fa62c56b66177a4d12fcbe9f9e7eec"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-4/step2/bootstrap-loading.json",
+      "bytes": 1074,
+      "sha256": "828abe598f0bce4b5d111cb5989bef19727b7471598903839204d28c0a84b31b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-4/step2/bootstrap-loading.png",
+      "bytes": 16416,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-4/step2/failed-seed.json",
+      "bytes": 1062,
+      "sha256": "4b05be1f630401d6f70509b4d842ed1d1abe144812d2b3504fd9a099779ad6e2"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-4/step2/failed-seed.png",
+      "bytes": 17594,
+      "sha256": "9755efcfe30033ddc6f381184e1153cf4c8d92b77b4cfc32c56d0286faeb0d9f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-4/step2/full-shaco-results.json",
+      "bytes": 29922,
+      "sha256": "922ca9ce961826756b682d277d4270dc3577e0b946f7231f2de13b7b2458ad9c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-4/step2/no-project.json",
+      "bytes": 1059,
+      "sha256": "b97d16c256e166572733c82ffe967ed8fbd8c21b0e4481385d0b3ac00c6f6560"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-4/step2/no-project.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-4/step2/runtime-failure-16696.json",
+      "bytes": 167,
+      "sha256": "5502720840d1b25744b90e48e2dba62d81fa62c56b66177a4d12fcbe9f9e7eec"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/approval-pending.json",
+      "bytes": 1069,
+      "sha256": "88ebe5074d1ecddbdf18c002efd8f65afd603bc2ba70b3fc08a160c2fd180bbf"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/approval-pending.png",
+      "bytes": 85104,
+      "sha256": "818477e50a8f6ba4228ca32c881fd88425972e1e068a17473faa92b9d8eb892c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/bootstrap-loading.json",
+      "bytes": 1074,
+      "sha256": "10847157c6c1a9428ccfe1cec40bc59a091954b253e494b579826171f8cec69c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/bootstrap-loading.png",
+      "bytes": 16416,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/failed-theme-switch.json",
+      "bytes": 1078,
+      "sha256": "3d41effbed7a77823de37b3495dd421a8bb0445618aa79024be67e736996d06a"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/failed-theme-switch.png",
+      "bytes": 95903,
+      "sha256": "ca4936c95f9fc9f2ec48237bedcb778b192fbd9f864dd9a593e97cba7a061110"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/full-shaco-results.json",
+      "bytes": 32511,
+      "sha256": "92330b3a97e10dc49c63fb541a039d02b947ba894a10fad3ea3e3f243c951fec"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/no-project.json",
+      "bytes": 1059,
+      "sha256": "013c1f0c4959c5126f58c6e19122650350e442bfc34a5fc4afe19d10fdcb3660"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/no-project.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/project-blank-chat.json",
+      "bytes": 1074,
+      "sha256": "223d830ca90dcfb0f30ff46cdee3208f3d4691fe89accbd2fc350ddafa54313c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/project-blank-chat.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-5/step2/runtime-failure-44812.json",
+      "bytes": 1773,
+      "sha256": "594f9c02b374a466629b245828f9a5c54298f5b1c993d4d389c3ad868a8805c9"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/approval-pending.json",
+      "bytes": 1069,
+      "sha256": "b7d23d23a35c6c0139582750f4091d7bfc0a68cdb699e4db4f56ef4d9b610aa7"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/approval-pending.png",
+      "bytes": 85104,
+      "sha256": "818477e50a8f6ba4228ca32c881fd88425972e1e068a17473faa92b9d8eb892c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/bootstrap-loading.json",
+      "bytes": 1074,
+      "sha256": "9ae11bd79a60e36aa9802f297affe3998d88c947e4292ceda8fea65ca874162e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/bootstrap-loading.png",
+      "bytes": 16416,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/failed-theme-switch.json",
+      "bytes": 1075,
+      "sha256": "2ea40825575813387f268568585547cbf6f27cc06e69cdf58608c0c97784b5be"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/failed-theme-switch.png",
+      "bytes": 97201,
+      "sha256": "bb1d33b42e90155f6988fb2c65dc5378745bacfe57e38f07bce05a2a7a71e90b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/full-shaco-results.json",
+      "bytes": 32231,
+      "sha256": "add54493ccd15c29c69cbbef2caf95912af7ffdc689a49a3cbf2e1f74cd4bc2c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/no-project.json",
+      "bytes": 1059,
+      "sha256": "2a403e15b6d6fc5bfa2cffe267fbae4484d59f774df52f52bec404ae1f11e535"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/no-project.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/project-blank-chat.json",
+      "bytes": 1074,
+      "sha256": "921d81af7a0d6ce8de554ac3102f1b2bd7f63a7530362070d866291ddd4a7d9f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/project-blank-chat.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-6/step2/runtime-failure-32716.json",
+      "bytes": 1493,
+      "sha256": "5e36d9d6df3c9d361cace7e3e95ed147f2fe83112cb233a28edd04d7554e50ee"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/approval-cold-rebuild.json",
+      "bytes": 1079,
+      "sha256": "40a095f3501d67bacadaa32a861b866823e33554f7a0fa963fae949a2f33d91d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/approval-cold-rebuild.png",
+      "bytes": 85151,
+      "sha256": "63e196be51d71f995af6025d5ab159c6c49e30558ddbf7ab02e028358a6a4110"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/approval-pending.json",
+      "bytes": 1069,
+      "sha256": "32e373d1a8350a9c9946eee765ae98c438ab2f8b950da34ac78a0274d445c6e7"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/approval-pending.png",
+      "bytes": 85104,
+      "sha256": "818477e50a8f6ba4228ca32c881fd88425972e1e068a17473faa92b9d8eb892c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/approval-real-host-lifecycle.json",
+      "bytes": 6840,
+      "sha256": "dd5fd47e4dcc3e7b0dc6725a8385a8354587411ce106a686d49200de84dac363"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/bootstrap-loading.json",
+      "bytes": 1074,
+      "sha256": "695e5a5890f57cd29362dae5e9ee9d3f1204d0ded0b384e73c10113bb2e62c87"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/bootstrap-loading.png",
+      "bytes": 16416,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/braun-approval-pending.json",
+      "bytes": 1081,
+      "sha256": "bfadf753ae987e8ebfc8b7d4addb8a46c49cd8a07946cfa13826de29364febbd"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/braun-approval-pending.png",
+      "bytes": 83378,
+      "sha256": "80f154b8d8e5b79bdc19daea11de3feccd4a1d26fbda71b7ca871454831f07e0"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/braun-question-pending.json",
+      "bytes": 1081,
+      "sha256": "dd7042c1e0d4d31783e09fc815ed4f5d54ac24d7ad5bc5e43f53624e8136925d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/braun-question-pending.png",
+      "bytes": 79794,
+      "sha256": "0bca4c0b8ceb20bc0f3cb28631ae3d5e4550b9c44931f31f12b64de3d06b178e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/braun-representative.json",
+      "bytes": 1161,
+      "sha256": "b15bd010fa83b0bdeddeec5578807b0c9f4f063f94e5c88b6d0ffc886748e3d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/braun-representative.png",
+      "bytes": 105317,
+      "sha256": "fdb123fb41cbedd31ce43edd134e3c5e23885c7d9e9b34cc42848267400a5d5f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/conversation-error.json",
+      "bytes": 1157,
+      "sha256": "305a3c9094ac7817bd90c631bc4a86131b4fa85f42e0a87cf5daca97a2f2177e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/conversation-error.png",
+      "bytes": 107363,
+      "sha256": "5b0e6ff5c8b317466323fc12977e94cab43bd78058e087a94c63f94127a8dceb"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/conversation-result.json",
+      "bytes": 1139,
+      "sha256": "5373fab81fc7cd51a07d932cea8679757753d0b9550d1aa5354da09ca681351d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/conversation-result.png",
+      "bytes": 99580,
+      "sha256": "3ec5abc5d042c1a4c7102f587f7f2075620da69e11288890a108e2258963d97c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/conversation-streaming.json",
+      "bytes": 1124,
+      "sha256": "1d8d8710386a393c11c7cd364af9fb5cdc3a1459ec6f6d3f8a8772c4044735db"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/conversation-streaming.png",
+      "bytes": 95196,
+      "sha256": "30578c20c4b1e466478876bd0ed3d3a7bb3eed3d854cc70f00adf84929281eb9"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/conversation-tool.json",
+      "bytes": 1135,
+      "sha256": "a32acf94ce2635600be80da65dd6bd43d45598c3375f7e358629bd457a480e2f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/conversation-tool.png",
+      "bytes": 99590,
+      "sha256": "0203a63272081c7ba5256930528b3e61f3af0afb09f91d22a577b761b4a80eaa"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/famicom-approval-pending.json",
+      "bytes": 1088,
+      "sha256": "8a2b698e50ff82f429cc6cff2bd08e315f9adf984a28ffb1a327abc06f2f2519"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/famicom-approval-pending.png",
+      "bytes": 87767,
+      "sha256": "f33bb0775b661166b0ffef4fc55635dc9458c96f3ace2eb905556ea13fe0ae9e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/famicom-question-pending.json",
+      "bytes": 1088,
+      "sha256": "908280a4e65b3525ae4edfb0c1799dc6570a24229acd1cd333efacea46853042"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/famicom-question-pending.png",
+      "bytes": 83654,
+      "sha256": "b97682e1f3ef7bdc665e3437036d9edbccd4e5c521a67e5038eec2229186d553"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/famicom-representative.json",
+      "bytes": 1168,
+      "sha256": "45632db8d6a2b0b66b773a89636e7dc13a297c6a9c4d217d561a77ade04ac27f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/famicom-representative.png",
+      "bytes": 114258,
+      "sha256": "55304b94ee75deafe38c7b3ed4de180eade1e8041a01e46bf50aed72815f861c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/full-shaco-results.json",
+      "bytes": 88290,
+      "sha256": "ccfc5da58669bf3acfcbc26c44be8c306c59d8cd338cd5e19a8af622b3e78b87"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/narrow-window.json",
+      "bytes": 1146,
+      "sha256": "af018afa7dd61b5d94bd53a0dbb6ce85016df2b5f4f155954f6208dd5d67f529"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/narrow-window.png",
+      "bytes": 82970,
+      "sha256": "9906c95ad672d9418694a80a8fe8cafe538d24d7ac11846d310b365e2ef410d7"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/no-project.json",
+      "bytes": 1059,
+      "sha256": "ac7b073f88450b15a0ca38d3d778c7c80b9a004b2bea09bce20a1ba3ed395999"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/no-project.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/project-blank-chat.json",
+      "bytes": 1074,
+      "sha256": "4f26a07106f6e7d277bc103c9979090be3bb258e833ba47149b3b5f50899b0cf"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/project-blank-chat.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/question-cold-rebuild.json",
+      "bytes": 1079,
+      "sha256": "2e07c38ca6f89dbb4f569f4f79fec14f2a77ab47f1bdcdcdc64e0e8c51adb241"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/question-cold-rebuild.png",
+      "bytes": 81519,
+      "sha256": "6757e9731940fab6123e738b2437e2b38588a7a98e1bd38ba49178a522ce1fc2"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/question-pending.json",
+      "bytes": 1069,
+      "sha256": "90ab24c64b25feeeb3639f0c50da20b12ce9e6de75f6cc151fb513e41d57b8a8"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/question-pending.png",
+      "bytes": 81510,
+      "sha256": "94ec8b296cbb6a276d417581a4f7e5a632781c6034e653ac17929ba4d8691ddd"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/question-real-host-lifecycle.json",
+      "bytes": 7372,
+      "sha256": "7d30c01813428e27751924fdd0851a5e1bce4f8591583c37c2d51cffe8bac198"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/shaco-root-error.json",
+      "bytes": 1153,
+      "sha256": "22fb3c3c9bfe78a570c3e269258ad0380a8967deafa55ba13ab86464e3a62941"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/shaco-root-error.png",
+      "bytes": 11950,
+      "sha256": "af7d243fd1cec2baef96415708040e7f43c8d55a02d0685f19f0389aa13d0491"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/shaco-settings.json",
+      "bytes": 1149,
+      "sha256": "95bafc63978ddee529a92428da32d81b4c257fde8af845634db149a674de6046"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-7/step2/shaco-settings.png",
+      "bytes": 100692,
+      "sha256": "8a2aa46edb8e116eea89309f49e82583162e48694becfe2307f44f1d3fbcb47c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/approval-cold-rebuild.json",
+      "bytes": 1452,
+      "sha256": "36e3d50e50fb4e2d96b7f3914e787d97eb9e157a353b3fc67fb98f0a241176ab"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/approval-cold-rebuild.png",
+      "bytes": 103307,
+      "sha256": "2c7be2717a88c8a08785eb05945434d830bf41d08eaa74ed7d1e0bb7c4ebf987"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/approval-pending.json",
+      "bytes": 1442,
+      "sha256": "d8f1de6b6375024e57920a778a5198608dc493484cd7448c76e4e46440afad95"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/approval-pending.png",
+      "bytes": 104208,
+      "sha256": "9ff3a98e3e01d5a615ac1b5618419cee92c882b0d544ca66ef6a8896740858cb"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/approval-real-host-lifecycle.json",
+      "bytes": 6846,
+      "sha256": "858afee3c845d461943fb581ab2bdfe0458f4996656d5c9d6e65ce17e0a0124b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/bootstrap-loading.json",
+      "bytes": 1248,
+      "sha256": "965ff2152fae4584c9915787332027529c1de2f9fc609ff8b277cd4852d07b5d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/bootstrap-loading.png",
+      "bytes": 16416,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/braun-approval-pending.json",
+      "bytes": 1454,
+      "sha256": "4c76f416e8254a5bb97a6735b1440c9c1ffcc598531a5f04bbb4e15f9a7349e4"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/braun-approval-pending.png",
+      "bytes": 102403,
+      "sha256": "ab738faab371d838d102409d43acfd01d3677c232cd6cd7230142d09e3d6bcad"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/braun-multi-pending.json",
+      "bytes": 1448,
+      "sha256": "d9e1db9a0c77fe38f3a00245e2728cc098867483224bed8a5da1b01f6cc2165c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/braun-multi-pending.png",
+      "bytes": 93645,
+      "sha256": "5cd3aa34b64d9399a66610a4218ecb3ff647e791608417b8a14f5af93fd6d576"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/braun-plan-pending.json",
+      "bytes": 1445,
+      "sha256": "3a2aa1e24b6b65309a2ab4987cd9f23e477d0a3e2c75f35076ccae975b19148e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/braun-plan-pending.png",
+      "bytes": 103543,
+      "sha256": "65b5e8ebd079dba5db3a125926dfea185a871a50b622a7be44a6afe9aa5b1a35"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/braun-question-pending.json",
+      "bytes": 1454,
+      "sha256": "79019a7f0cf7759defd1abf3bcdd29a8afdd4bd26196c3514f2cf68300c6a1d7"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/braun-question-pending.png",
+      "bytes": 95225,
+      "sha256": "bb9fa52a1f020e533dc0e9c30df229c790a92c5f2e2ea1c676f0651a2226c0ab"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/braun-representative.json",
+      "bytes": 1608,
+      "sha256": "c065b80b308916480f589eeda9fe7e89b409576e96582900d41a239d8430aeab"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/braun-representative.png",
+      "bytes": 101468,
+      "sha256": "dcb35046b04e29e64907ac0e8a1190ec11792263fed03757adb5d8a5d1a28e0d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/conversation-error.json",
+      "bytes": 1604,
+      "sha256": "334b7533f49b17157150e14acd59be134025e8784d55a8dbe4c5f58b3f517b60"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/conversation-error.png",
+      "bytes": 101468,
+      "sha256": "dcb35046b04e29e64907ac0e8a1190ec11792263fed03757adb5d8a5d1a28e0d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/conversation-result.json",
+      "bytes": 1586,
+      "sha256": "a70543f1807c5659ecb4d6f11723caaf9af2f39a0659e9e9ae05f5c0edc25f2e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/conversation-result.png",
+      "bytes": 101478,
+      "sha256": "08b1d38ac715883cb8fa0dbbb990a8a4fd489684fcbafa9e2b4a7db03640e310"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/conversation-streaming.json",
+      "bytes": 1493,
+      "sha256": "bd04fd05943e96c48bbc44130fad4fcd2e8b279618a346217da328bc5d5b25c4"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/conversation-streaming.png",
+      "bytes": 101462,
+      "sha256": "dcf5545e54e6aebe59f32b65a50ea75e00798e01ccabd38b867ba96c2c6048c9"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/conversation-tool.json",
+      "bytes": 1582,
+      "sha256": "511eac30f4660d102c52a69a09465f6c23cf4b6143f1ae1ceab8d1758216edfd"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/conversation-tool.png",
+      "bytes": 101478,
+      "sha256": "08b1d38ac715883cb8fa0dbbb990a8a4fd489684fcbafa9e2b4a7db03640e310"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/famicom-approval-pending.json",
+      "bytes": 1461,
+      "sha256": "a68e141587677ec27b2f9c609174fa5691dbbb2566f04bef5b63c212991d99a2"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/famicom-approval-pending.png",
+      "bytes": 104036,
+      "sha256": "068b5dd23f1a7d9f4eb59205d393fdc479a6bbe03a79812cf6a596f0ad2c2a4f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/famicom-multi-pending.json",
+      "bytes": 1455,
+      "sha256": "f2e3407aa600cd020ddb8309db863a8ba47feb6a010740facbf8771dd09f2146"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/famicom-multi-pending.png",
+      "bytes": 95861,
+      "sha256": "06df4e82fcdc6283bb07fd680ccf5fbb06841e2e519f312ef081760612e1c51e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/famicom-plan-pending.json",
+      "bytes": 1452,
+      "sha256": "35f0f74224985b3b1a73ddb3988b86ad9c02411e48fbf0c323f23689bac8a661"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/famicom-plan-pending.png",
+      "bytes": 105525,
+      "sha256": "50d61a5a413e4f1889bbb8055fff0fd678b40b7910c386eafd889eaa4b6fd775"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/famicom-question-pending.json",
+      "bytes": 1461,
+      "sha256": "36ebb8304c8955859a74682fcc5686b34d59727d6e015791e50ee2e9782d6eaf"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/famicom-question-pending.png",
+      "bytes": 99752,
+      "sha256": "b9c6584eaea870d4ad204dabbf44d09d9ba6040d16f03a9842ac4c1a3cdc7c68"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/famicom-representative.json",
+      "bytes": 1615,
+      "sha256": "e6b7841cf7605046c5fad16ad2d6d4c0e528af0b05b603254cadaeb6983202ae"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/famicom-representative.png",
+      "bytes": 104376,
+      "sha256": "57db79ea5ba905af1e0880158e5d91cafb30771db418c1fd4eda35ebe65bf925"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/full-shaco-results.json",
+      "bytes": 125845,
+      "sha256": "c0d34e88025ddfdc4097327b084275d2b2a5898b970f7e398cab12e9c1059fe2"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/multi-pending.json",
+      "bytes": 1436,
+      "sha256": "daa5e47e077fb791c04c809e77996d680457a30bd6dd8ca8527f079da16e856d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/multi-pending.png",
+      "bytes": 93645,
+      "sha256": "5cd3aa34b64d9399a66610a4218ecb3ff647e791608417b8a14f5af93fd6d576"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/narrow-window.json",
+      "bytes": 1590,
+      "sha256": "8a6dca5b416b32c487b50a2dae104d907414d59e12204595a61f1f3c37be2768"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/narrow-window.png",
+      "bytes": 75679,
+      "sha256": "bf06bcda1026fb29ecf7ef4ac2fad3a3fef421001fbbf3a5ac0add4b819a38da"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/no-project.json",
+      "bytes": 1234,
+      "sha256": "fd1c638190d4740843cb8ee93a7324e1be103e7d9b0f6eb3220b0a43e2c1673a"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/no-project.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/plan-pending.json",
+      "bytes": 1433,
+      "sha256": "8ab5c1e5a0adff4f5abe697a705f1bc082e6e093c4356535aed1ee08990723a1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/plan-pending.png",
+      "bytes": 105384,
+      "sha256": "1be6c1dd017cc03c3b0988efccb7ea62b5908bccf05274413817e88a2bedf63a"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/project-blank-chat.json",
+      "bytes": 1409,
+      "sha256": "ca746d22521793ab9d13d83ae8594d0787a36b412f225a0ae6b8ddf925ead38e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/project-blank-chat.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/question-cold-rebuild.json",
+      "bytes": 1452,
+      "sha256": "1c87b3e79209ea47aba5f517738567569c4bd8e64d5afcecee7fd36db3557e12"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/question-cold-rebuild.png",
+      "bytes": 99429,
+      "sha256": "2c99e8f917c2cbb14ee95fb5cdab19c686904c5f41655aa76f4a593e4224c43e"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/question-pending.json",
+      "bytes": 1442,
+      "sha256": "6aa71a1ce06cff6131640c7df633b5643a8f65ca0f419eea658f603e82f6b5a1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/question-pending.png",
+      "bytes": 97366,
+      "sha256": "1543846a779c04ee9c39fa0085aa9a28c62112e1c3ccffe523c52f1e8d99bf89"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/question-real-host-lifecycle.json",
+      "bytes": 7378,
+      "sha256": "70fa08b391a179f8f6035913c6cac24f192dfa879c69789718be887bd8b190df"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/shaco-root-error.json",
+      "bytes": 1584,
+      "sha256": "6f86568cb225bf388e7be61deca5ef25581952db00183ec936fe0dee06d456e1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/shaco-root-error.png",
+      "bytes": 11950,
+      "sha256": "af7d243fd1cec2baef96415708040e7f43c8d55a02d0685f19f0389aa13d0491"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/shaco-settings.json",
+      "bytes": 1596,
+      "sha256": "8d684b4e37e7d219ed3a7fb56ff4efa9288d4ed6503453ae4333155a5acb2590"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/shaco-settings.png",
+      "bytes": 100692,
+      "sha256": "8a2aa46edb8e116eea89309f49e82583162e48694becfe2307f44f1d3fbcb47c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/tool-result-detail.json",
+      "bytes": 1584,
+      "sha256": "abd4b7a6ce6e3e223692693462e9225572b2e42825a2185bb6e89d3cde1f5583"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-8/step2/tool-result-detail.png",
+      "bytes": 101458,
+      "sha256": "b900b3b505c9bd962cd26e59631a1c9757a6bec5654370c047f91e4d4aea0c48"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/approval-cold-rebuild.json",
+      "bytes": 1452,
+      "sha256": "e841ea6b1bedc2bc59adc73c10133e8723ea952ad2d0ff2df3e7f2703d1bab3b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/approval-cold-rebuild.png",
+      "bytes": 103328,
+      "sha256": "0e914360997721df3ce6d01a223d97fa1eae23eca69b72123755b1264a52f67d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/approval-pending.json",
+      "bytes": 1442,
+      "sha256": "01d8383546778ef0c8817f91af497fa5aaad3cc36a71e0671b2a38ebdb51a8f1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/approval-pending.png",
+      "bytes": 104247,
+      "sha256": "f4357ed9de65420427031bd7cf3ce60994151dafa2714d170b1cd099062782d5"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/approval-real-host-lifecycle.json",
+      "bytes": 6846,
+      "sha256": "ba691e3aa8ac8ee1af18bcffc39e8ecb5660af4438587733bd43c2a59987da64"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/bootstrap-loading.json",
+      "bytes": 1248,
+      "sha256": "a8dab9340d7eb093cf43940146c4825fd6658a4e6996c0e9277f4cc98dd428ea"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/bootstrap-loading.png",
+      "bytes": 16416,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/braun-approval-pending.json",
+      "bytes": 1454,
+      "sha256": "aed5f907221841f62895e0fb2e51427648e5a9961c0d670f975604f9fb16967d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/braun-approval-pending.png",
+      "bytes": 102437,
+      "sha256": "7ad69010acf4e97e9a1ee26d6e7ed92f906412ddeac03606d7d88511f99cfb1a"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/braun-multi-pending.json",
+      "bytes": 1448,
+      "sha256": "7d14a81c9bbd9d426168269b8d2645d33b851ec936229b6883d07a0f032ebccb"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/braun-multi-pending.png",
+      "bytes": 93612,
+      "sha256": "f5fe9ae15734481509b624a96b59692af2fb45435207951e0a3fdd3f1fe7f6c4"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/braun-plan-pending.json",
+      "bytes": 1445,
+      "sha256": "9f4ef4152845c48a8e57af1999ac0e47d2966523fd7c6fd8c9a39c434921b584"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/braun-plan-pending.png",
+      "bytes": 103503,
+      "sha256": "70d4a2dd045be8b89e65c86d672eb20261fa8ded3aea466190484172f0ed903a"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/braun-question-pending.json",
+      "bytes": 1454,
+      "sha256": "c4ad17f091b1b261e781a5caba955d827d2e10c2876328bfff883fd638abcc8f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/braun-question-pending.png",
+      "bytes": 95199,
+      "sha256": "0cde6f74b97eaa46d4a8b25b01d3995b7e1186ceeedfccb3c8f291966bcf60f3"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/braun-representative.json",
+      "bytes": 1608,
+      "sha256": "395c911bebbf011c4bb3468eaece2deba27aa3e8d3e0b2ea01d641e42a4655ea"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/braun-representative.png",
+      "bytes": 101617,
+      "sha256": "4458f9256523bf620fb408105a2f785f6047ac7c5192ee8dc35b53749a0c6fac"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/conversation-error.json",
+      "bytes": 1604,
+      "sha256": "3471812c03bcc78ef6b6172ec9f51c9cf3ff2f8d8fb9843f45aa714c8ebb236b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/conversation-error.png",
+      "bytes": 101617,
+      "sha256": "4458f9256523bf620fb408105a2f785f6047ac7c5192ee8dc35b53749a0c6fac"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/conversation-result.json",
+      "bytes": 1586,
+      "sha256": "64b8830c922e328e8fe49d707601c80798d0e6d7227ba76438e3b009183d0491"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/conversation-result.png",
+      "bytes": 101628,
+      "sha256": "ea6b4485eb95cdb59fdfc5a56b48c02dc4f6d280e694551cf4749e6ff0580f76"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/conversation-streaming.json",
+      "bytes": 1493,
+      "sha256": "d13098dca60bd6998116b0b05f21bd0f5f6eba9a95e5c608814ff8ecca6d7c8c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/conversation-streaming.png",
+      "bytes": 101611,
+      "sha256": "af978a9e9951371a558ba98dba9af340ce5e2fb41420ea957ae11602abe50932"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/conversation-tool.json",
+      "bytes": 1582,
+      "sha256": "f1da57638844ba1730d91feb6cf3f85e3731b56a50fda099d72c484f02e3efbd"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/conversation-tool.png",
+      "bytes": 101628,
+      "sha256": "ea6b4485eb95cdb59fdfc5a56b48c02dc4f6d280e694551cf4749e6ff0580f76"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/famicom-approval-pending.json",
+      "bytes": 1461,
+      "sha256": "f21f14c77345c015ff3fea339d95b8cb2eecd31ec296b6adff85e08206a35ddd"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/famicom-approval-pending.png",
+      "bytes": 104052,
+      "sha256": "48e48f26b9ea5a41a220e01e389bc27a44cb760a0fad883e1ca05e698f0c9568"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/famicom-multi-pending.json",
+      "bytes": 1455,
+      "sha256": "50112a44a2fe69cabadfff19b32bcca104a439ad15eb3031f3b7fc81d6cc4451"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/famicom-multi-pending.png",
+      "bytes": 95848,
+      "sha256": "721423b33b43f57938a9654d0238ed86d2ba19b3248e9b9963e971198d43465f"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/famicom-plan-pending.json",
+      "bytes": 1452,
+      "sha256": "76d5141e9c660ab9eff940eaf0266855b421417b59d0a883f1a37874af514665"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/famicom-plan-pending.png",
+      "bytes": 105512,
+      "sha256": "504cb8dc1dd2a1ea340e248672b4ebbb5556e48b4a3a18cac22307db66eefda6"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/famicom-question-pending.json",
+      "bytes": 1461,
+      "sha256": "4557050e54661705484db7eb5cc4a089dc8343c664cc6c83e34c5642cc5ee70b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/famicom-question-pending.png",
+      "bytes": 99713,
+      "sha256": "ed1eaa371a4a37f812d0f258bcbfa63dcf4710002286829b0f7ee229e3b8b505"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/famicom-representative.json",
+      "bytes": 1615,
+      "sha256": "42fd2b3120d94f4de5986ac0441603e8a57223278506ecdd1374502aaa787832"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/famicom-representative.png",
+      "bytes": 104642,
+      "sha256": "d65911fa281d6eedfe72db9068961fc24c2c37166a62114cd789ba919accf70c"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/full-shaco-results.json",
+      "bytes": 130044,
+      "sha256": "ecd731025fccce8b8d8980d70b8120d85bd8fdd4587907bf0dee2499a5d8c928"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/history-cold-rebuild.json",
+      "bytes": 2448,
+      "sha256": "95e93afdc04d049cf41b4b114243058ab26b549f578e0d7d9baf1dc62bd36dc6"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/history-cold-rebuild.png",
+      "bytes": 90857,
+      "sha256": "4987c7e612332db24f3c8b789d77d086182d242061a3bc60f277c34a3cdc14ca"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/multi-pending.json",
+      "bytes": 1436,
+      "sha256": "3b4b3a6f8241fadf7bfd9b7ef1d9e8dac53a22d8e37b34e589bac3545ebf5ea8"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/multi-pending.png",
+      "bytes": 93612,
+      "sha256": "f5fe9ae15734481509b624a96b59692af2fb45435207951e0a3fdd3f1fe7f6c4"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/narrow-window.json",
+      "bytes": 1590,
+      "sha256": "30ea83488f80fbc49dd5a19032969d0458d61625763ebcedead4d088d8f222a5"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/narrow-window.png",
+      "bytes": 75685,
+      "sha256": "d06e480e98e507d4535b6c25d93c3c43139d44abbc372e6e8f81de74bc6c2a57"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/no-project.json",
+      "bytes": 1234,
+      "sha256": "31d48014fae0ad50f606048843ebb02d28a849f88961650a5d17dcc1d3b449a5"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/no-project.png",
+      "bytes": 45842,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/plan-pending.json",
+      "bytes": 1433,
+      "sha256": "82ad98e4f4ed2f3d7c88fecc39bf8e601ead96663b6c67a0119135adfbeb21f3"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/plan-pending.png",
+      "bytes": 105344,
+      "sha256": "063f967c5dce065e6326007cebd6733dedb0f81f3fc6cb4499924d710fb3fbfc"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/project-blank-chat.json",
+      "bytes": 1409,
+      "sha256": "504447df6f367e1e5edc83d1f477a2bbde8d42071232e163adf7d9d32309d9f4"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/project-blank-chat.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/question-cold-rebuild.json",
+      "bytes": 1452,
+      "sha256": "d18314f16f8b78ec2876d5bdf63af1ce663569fdfb7905de909f48d7786fa065"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/question-cold-rebuild.png",
+      "bytes": 99394,
+      "sha256": "062ffbcfda0c94078dbd57270339a2f9f1ed48f37031cd4da0743d1296f5c5f9"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/question-pending.json",
+      "bytes": 1442,
+      "sha256": "305ba9459b515963ad08a2c7e511a25338e18276050c3d6f43d417305f80d7fd"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/question-pending.png",
+      "bytes": 97322,
+      "sha256": "a17157a5b1c7b79c4d58c9ecd424b286a10389cb781a8c00385e0d3c8e93e43d"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/question-real-host-lifecycle.json",
+      "bytes": 7378,
+      "sha256": "35ca3c9a36a4dc1bc7f80be0a7927a7294429b00f9bf57da2810b932983ef981"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/shaco-root-error.json",
+      "bytes": 1245,
+      "sha256": "557149b49778bbb793f2cd21d9eccb530e7ed55a9ec6e520493323bfb6d69f76"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/shaco-root-error.png",
+      "bytes": 11950,
+      "sha256": "af7d243fd1cec2baef96415708040e7f43c8d55a02d0685f19f0389aa13d0491"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/shaco-settings.json",
+      "bytes": 1596,
+      "sha256": "d6bb02081a9b74d74262ce920e59e0f4325858f61ba2ae5f2143c3d84bc7f5f3"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/shaco-settings.png",
+      "bytes": 100681,
+      "sha256": "4ba2cea2e44828f578a94c20e23e7facf1fdb444d1fef9930a39fd5762e593c7"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/step3-ui-46316-1.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/tool-result-detail.json",
+      "bytes": 1584,
+      "sha256": "02b21f14ff08d848ea59b46e2b0e8343832ce1aac3dd38e88cea6c99dada45b3"
+    },
+    {
+      "path": "runs/smoke-full-shaco-development-9/step2/tool-result-detail.png",
+      "bytes": 101609,
+      "sha256": "286743bea6279b9366bcfef1d87bc8d52f60230bb2f546673e6e8fb87f744d83"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-1/step1/attachment-sequence.json",
+      "bytes": 21469,
+      "sha256": "3759437d5112c08d1cd7dbf7901542151a2f35bdd2ba0a81e03893537d907a2a"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-1/step1/authority-identity.json",
+      "bytes": 23780,
+      "sha256": "5f61a4afc7029b5aa93c832b042f6e7c6c1de2651f0ccf537b3678df9bacb7b6"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-1/step1/powershell-resolution.json",
+      "bytes": 208,
+      "sha256": "480e47858c01026a8addb7d76052011b2cf6fa33e92e0dc92c31dff0a95ceac9"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-1/step1/security-negative-results.json",
+      "bytes": 10888,
+      "sha256": "c68d95d406480d472d4720513be29700f1404d2f63230b6becbb76c9ea9472e9"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-2/step1/attachment-sequence.json",
+      "bytes": 21469,
+      "sha256": "36af2ddadd598eb84284f9370dc298ac2fe4fb5d7e64537e32c09abaaf5728cd"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-2/step1/authority-identity.json",
+      "bytes": 23779,
+      "sha256": "13781c226810a816af6be26acca8ce99102848e02a98b0ef76d812a4cfab0df8"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-2/step1/powershell-resolution.json",
+      "bytes": 208,
+      "sha256": "480e47858c01026a8addb7d76052011b2cf6fa33e92e0dc92c31dff0a95ceac9"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-2/step1/security-negative-results.json",
+      "bytes": 10883,
+      "sha256": "891e73628ad2ea8094f4c8caa9ee319e63774c0f46b048e7064d37227460054b"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-3/step1/attachment-sequence.json",
+      "bytes": 21460,
+      "sha256": "b0218cc3d23aee8ac321f0d52e23b2c2a2bf1a2057f299262f89fe5153c8037d"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-3/step1/authority-identity.json",
+      "bytes": 23788,
+      "sha256": "6420ea16c15f53ab01bff6690f264d1969d290e2eb7f92d1b5ec53d954276a94"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-3/step1/powershell-resolution.json",
+      "bytes": 208,
+      "sha256": "480e47858c01026a8addb7d76052011b2cf6fa33e92e0dc92c31dff0a95ceac9"
+    },
+    {
+      "path": "runs/smoke-slice2-step1-3/step1/security-negative-results.json",
+      "bytes": 10888,
+      "sha256": "9c34deb8c02fd5e85c5ff3623579563ccf86c3623d9a7663b8e346f3c2d50578"
+    },
+    {
+      "path": "runs/smoke-slice2-step2-1/step2/cumulative-e2e.json",
+      "bytes": 44325,
+      "sha256": "34e2b72f250c64daceffbd8d3c22f38eb1e5c08fce81ac24dfad08ce6f4dc86a"
+    },
+    {
+      "path": "runs/smoke-slice2-step2-2/step2/cumulative-e2e.json",
+      "bytes": 44607,
+      "sha256": "98a2d26508b706596182114167e1b5712716c2894bcccbc20e45a5da2ef9a320"
+    },
+    {
+      "path": "runs/smoke-slice2-step2-3/step2/cumulative-e2e.json",
+      "bytes": 44323,
+      "sha256": "0e2e7f738145a805635a5d3b1118a1c137503eedfa71cad791870912872f6c3c"
+    },
+    {
+      "path": "runs/smoke-slice2-step2-4/step2/cumulative-e2e.json",
+      "bytes": 44323,
+      "sha256": "9ae1ae8f2ee1e7c073ae367ebb40ae8a1ba33be84796dcc9ab57bd806741f833"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-1/step2/cumulative-e2e.json",
+      "bytes": 12699,
+      "sha256": "43393c9c0f3704a77264855ddd077915ca9ce067c785cb2ff56d86443927425f"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-2/step2/cumulative-e2e.json",
+      "bytes": 52885,
+      "sha256": "c0f848ac7956fcb40934068ad19d219c6c42a3fe48ad710ee2a2033af2af8b2d"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-2/step2/step3-ui-14268-1.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-2/step2/step3-ui-20296-1.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-2/step2/step3-ui-20296-2.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-2/step2/step3-ui-60264-1.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-3/step2/cumulative-e2e.json",
+      "bytes": 52879,
+      "sha256": "6e22e2b551131ca82b31122cdebdcaa02add6f2d2cc1b463fe957a9c84057ea0"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-3/step2/step3-ui-3352-1.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-3/step2/step3-ui-3352-2.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-3/step2/step3-ui-41664-1.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-3/step2/step3-ui-61176-1.png",
+      "bytes": 65143,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-interactions-1/step2/approval-real-host-lifecycle.json",
+      "bytes": 6868,
+      "sha256": "41e473e1b40f61d412b3a269f59f4333b7c8015147d124701952bd7f4fedb592"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-interactions-1/step2/question-real-host-lifecycle.json",
+      "bytes": 7399,
+      "sha256": "1535a0df763641aa3ce2994ca053875d9f0f0d8f3b56e9daf446d98f1ab7a22e"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-interactions-1/step2/s3g16-results.json",
+      "bytes": 849,
+      "sha256": "5437d9bc91745ec5b8c106c8873022ebe7139969d26cc47eb90a60b59a7286eb"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-interactions-2/step2/approval-real-host-lifecycle.json",
+      "bytes": 6868,
+      "sha256": "ea5dd537f473507956e5f451a53065f8f7520c5702ac3786f77d24bc9e0a375f"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-interactions-2/step2/question-real-host-lifecycle.json",
+      "bytes": 7399,
+      "sha256": "e8d8e59c9b5df5042a7cdd5b58a80ca0c17d7413e1dd79ab3b2cb57408d00e0a"
+    },
+    {
+      "path": "runs/smoke-slice2-step3-interactions-2/step2/s3g16-results.json",
+      "bytes": 849,
+      "sha256": "5437d9bc91745ec5b8c106c8873022ebe7139969d26cc47eb90a60b59a7286eb"
+    },
+    {
+      "path": "runtime-continuity.json",
+      "bytes": 51853,
+      "sha256": "c6929d15d60d97d3c6d767e6f5bfc2f664d72fa865fe0a9330636003236476e1"
+    },
+    {
+      "path": "security-summary.json",
+      "bytes": 569,
+      "sha256": "653858e4be485cb6188b1520aac8cccfb677590c5a17c4a0ad9d544924ec678c"
+    },
+    {
+      "path": "source-migration-inventory.json",
+      "bytes": 20234,
+      "sha256": "a0937dea0f2f0534cbe40a669d91aa155ccd77431b82d3f22df0106c6abda797"
+    },
+    {
+      "path": "test-summary.json",
+      "bytes": 56324,
+      "sha256": "991335be879f7faf18c2e1f085fb8d79002d6e71f1888fe083d3c61a16a88658"
+    },
+    {
+      "path": "visual-inspection.json",
+      "bytes": 3128,
+      "sha256": "9b14ff1e502cfde10b97f839132ed05d094a09ebce25b85482c697563f5dfd5b"
+    },
+    {
+      "path": "visual-matrix.json",
+      "bytes": 70837,
+      "sha256": "c03874c259949e2d82f390bd062cc16156d6aa74bc961f54ea0ff1f03c52fd54"
+    }
+  ],
+  "implementationRecord": {
+    "path": "docs/04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-DUAL-THEME-IMPLEMENTATION-RECORD.md",
+    "sha256": "2d0a57c4376dfd15cd5b2df55c25c344f91fe18faff99e2bf4cef974ae1b1291"
+  }
+}

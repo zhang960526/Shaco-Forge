@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "focusedTestLog": "logs/test-full-shaco-7.log",
+  "runtimeSource": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/runs/smoke-full-shaco-2/step2/full-shaco-results.json",
+  "publicBootstrap": "facade.create + Context + Loader + getStaticModules + slots + uiRenderer",
+  "harnessRows": 28,
+  "shacoRows": 1,
+  "activeRequiredServicesBarrier": true,
+  "singleFacadeContextReactRoot": true,
+  "rootRevocation": "Synchronous hidden/inert before unmount; required-service loss and slot error tested; no Harness fallback",
+  "testFiles": [
+    "apps/desktop/tests/presentation-lifecycle.test.mjs",
+    "apps/desktop/tests/full-shaco-boundaries.test.mjs"
+  ],
+  "providerRuns": 0
+}

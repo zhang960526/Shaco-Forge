@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-11T02:06:35.357Z",
+  "branch": "master",
+  "head": "5118053f625d01faba6617cace481df3091ba5be",
+  "trackedModified": 33,
+  "expandedUntracked": 639,
+  "staged": 0,
+  "entryFiles": 1212,
+  "priorCorrectiveDrift": [],
+  "externalChangeConflict": false,
+  "harness": {
+    "head": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "status": "CLEAN",
+    "mode": "READ_ONLY"
+  },
+  "ownerInput": {
+    "independentFinalReview": "FAIL",
+    "finding": "F-IFR-01",
+    "visualAcceptance": "PASS_FROM_FAILED_FINAL_REVIEW",
+    "visualPolish": "DEFERRED_NON_BLOCKING",
+    "providerAuthorization": "NO"
+  },
+  "ownerRequestSha256": "2d12515cf7dab2cc777c31947cdea738ac2717cbcd3ca1d689a599da4af59294"
+}

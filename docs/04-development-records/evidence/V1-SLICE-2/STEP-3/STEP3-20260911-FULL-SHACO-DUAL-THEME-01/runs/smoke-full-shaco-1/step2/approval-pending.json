@@ -1,0 +1,50 @@
+{
+  "name": "approval-pending",
+  "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-1\\step2\\approval-pending.png",
+  "width": 2139,
+  "height": 1256,
+  "sha256": "27abe537d45f13ba011220420c900797d771fad0b014e2ca9ed678585f335c4c",
+  "ui": {
+    "rootCount": 1,
+    "sidebarCount": 1,
+    "forbiddenBrand": false,
+    "harnessSeats": 0,
+    "template": "BRAUN",
+    "mode": "light",
+    "rootVisible": true,
+    "horizontalOverflow": false,
+    "composer": true,
+    "approval": true,
+    "question": false,
+    "kinds": [
+      "command",
+      "command"
+    ],
+    "tools": [],
+    "geometry": {
+      "conversation": {
+        "width": 1100,
+        "center": 845,
+        "maxWidth": "1100px"
+      },
+      "composer": {
+        "width": 1100,
+        "center": 845,
+        "maxWidth": "1100px"
+      },
+      "tool": null
+    },
+    "lowNoiseWorkbar": true,
+    "bootstrapVisible": false,
+    "plan": false,
+    "tokens": {
+      "--surface-primary": "rgb(248, 248, 246)",
+      "--surface-sidebar": "rgb(235, 235, 232)",
+      "--accent-primary": "rgb(55, 59, 54)",
+      "--control-radius": "6px",
+      "--template-decoration-height": "0px",
+      "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+    }
+  },
+  "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+}

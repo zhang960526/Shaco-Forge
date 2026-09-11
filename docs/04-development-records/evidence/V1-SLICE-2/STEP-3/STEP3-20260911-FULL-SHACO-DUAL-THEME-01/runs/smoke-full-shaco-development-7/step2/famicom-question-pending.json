@@ -1,0 +1,31 @@
+{
+  "name": "famicom-question-pending",
+  "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-development-7\\step2\\famicom-question-pending.png",
+  "width": 2139,
+  "height": 1256,
+  "sha256": "b97682e1f3ef7bdc665e3437036d9edbccd4e5c521a67e5038eec2229186d553",
+  "ui": {
+    "rootCount": 1,
+    "sidebarCount": 1,
+    "forbiddenBrand": false,
+    "harnessSeats": 0,
+    "template": "FAMICOM",
+    "mode": "light",
+    "rootVisible": true,
+    "horizontalOverflow": false,
+    "composer": true,
+    "approval": false,
+    "question": true,
+    "kinds": [],
+    "tools": [],
+    "tokens": {
+      "--surface-primary": "rgb(251, 245, 233)",
+      "--surface-sidebar": "rgb(241, 234, 217)",
+      "--accent-primary": "rgb(146, 37, 41)",
+      "--control-radius": "4px",
+      "--template-decoration-height": "28px",
+      "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+    }
+  },
+  "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+}

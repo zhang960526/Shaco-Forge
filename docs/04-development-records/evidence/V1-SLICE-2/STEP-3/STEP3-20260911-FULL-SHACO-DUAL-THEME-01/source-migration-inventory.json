@@ -1,0 +1,330 @@
+{
+  "status": "SOURCE_STABLE_SELECTED_MIGRATION_COMPLETE",
+  "rows": [
+    {
+      "source": "packages/client/web/src/boot.ts",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "52ccdd98d949b6384f0dd1e532e29a391195d63c3ff53cb128648f7aa0a87a51",
+      "target": "apps/desktop/src/renderer/shaco-bootstrap.mjs; apps/desktop/src/renderer/presentation-lifecycle.mjs",
+      "strategy": "ADAPT",
+      "reusedScope": "Ordered public facade/Loader activation and renderer handoff",
+      "adaptationScope": "Remove AppWebEntry, BootPage, internal/status and private context; Shaco root barrier/fail-closed supervision",
+      "privateDependencyRemoved": "Remove AppWebEntry, BootPage, internal/status and private context; Shaco root barrier/fail-closed supervision",
+      "publicBinding": "public facade, Context, Loader, uiRenderer, slots",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "PRESENTATION_ADAPTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/renderer/shaco-bootstrap.mjs",
+          "sha256": "ea6154ce6b7d55085c1acbe1dd868d998dd077b3d3e36daf18f97dc82df6027d"
+        },
+        {
+          "path": "apps/desktop/src/renderer/presentation-lifecycle.mjs",
+          "sha256": "5644f977294404a8e9502dcd3f990101263aa979c08ededb496f05ab8e6dd1ab"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-chat/src/client/chat/ChatView.tsx",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "5c0f6e8e36e776444202a9f7bd650a4e04af596a60857d59e483c333badbbc18",
+      "target": "apps/desktop/src/client/conversation.mjs",
+      "strategy": "ADAPT",
+      "reusedScope": "Ordered target nodes; follow-scroll threshold and history anchor intent",
+      "adaptationScope": "Remove private slot/chatScroll/turn inspector dependencies, use local scroll ref and public target publication",
+      "privateDependencyRemoved": "Remove private slot/chatScroll/turn inspector dependencies, use local scroll ref and public target publication",
+      "publicBinding": "sessions.binding; uiConversation.binding.target",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "PRESENTATION_ADAPTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/conversation.mjs",
+          "sha256": "5b084a11ba6a6f2d00f89502c076f93a8bc86503cd83948735cd9c14834b617e"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-chat/src/client/chat/MessageItem.tsx",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "20de6aba14a943548862685fd6b4668df59d47dc010df84bda0ab22e1f9769b5",
+      "target": "apps/desktop/src/client/message.mjs",
+      "strategy": "ADAPT",
+      "reusedScope": "contentParts extraction and user/steering alignment, terminal error display",
+      "adaptationScope": "Remove slot store, locale and private message actions; semantic skin",
+      "privateDependencyRemoved": "Remove slot store, locale and private message actions; semantic skin",
+      "publicBinding": "ChatNode.data",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "PRESENTATION_ADAPTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/message.mjs",
+          "sha256": "30c89f50c432b0a1f6caf569b64fe6d917b6ee9facec5ce4e8f3474844d7c3a0"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-chat/src/client/chat/AssistantMarkdown.tsx",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "18d8e4d9b1f7a61f0f7f9e6f02245643314f782f4d6563e663640c41e380af99",
+      "target": "apps/desktop/src/client/message.mjs",
+      "strategy": "ADAPT",
+      "reusedScope": "block iteration, text/reasoning/image/unknown branches, interrupted marker",
+      "adaptationScope": "Remove ProcessReasoning/private search and turn props; public MarkdownText and native details",
+      "privateDependencyRemoved": "Remove ProcessReasoning/private search and turn props; public MarkdownText and native details",
+      "publicBinding": "ChatNode.data.blocks; public MarkdownText",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "PRESENTATION_ADAPTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/message.mjs",
+          "sha256": "30c89f50c432b0a1f6caf569b64fe6d917b6ee9facec5ce4e8f3474844d7c3a0"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-tool/src/client/tool/models/tool-call-model.ts",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "a11b7dc0469ecd549c44031e635ec88532a33c1deeebe116077b64d4cab5b45c",
+      "target": "apps/desktop/src/client/message.mjs",
+      "strategy": "ADAPT",
+      "reusedScope": "resultText pure helper and running/result/error source distinction",
+      "adaptationScope": "Basic Tool only; omit path/terminal/diff classification closure; bounded expandable output",
+      "privateDependencyRemoved": "Basic Tool only; omit path/terminal/diff classification closure; bounded expandable output",
+      "publicBinding": "ToolChatData.root",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "PRESENTATION_ADAPTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/message.mjs",
+          "sha256": "30c89f50c432b0a1f6caf569b64fe6d917b6ee9facec5ce4e8f3474844d7c3a0"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-tool/src/client/tool/toolviews/GenericToolCard.tsx",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "3adb609aba0bd3d84823c0db9b32caeb805093b59f100d8535aec1ca4d115bde",
+      "target": "apps/desktop/src/client/message.mjs",
+      "strategy": "GREENFIELD",
+      "reusedScope": "Assessed mature Tool card; thin presentation fallback",
+      "adaptationScope": "NOT_PRACTICAL for whole component: six specialized card model closures, file opening and inspector exceed V1 BASIC; extracted pure helper above",
+      "privateDependencyRemoved": "NOT_PRACTICAL for whole component: six specialized card model closures, file opening and inspector exceed V1 BASIC; extracted pure helper above",
+      "publicBinding": "ToolChatData.root",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "ASSESSED_NOT_PRACTICAL_THIN_FALLBACK_IMPLEMENTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/message.mjs",
+          "sha256": "30c89f50c432b0a1f6caf569b64fe6d917b6ee9facec5ce4e8f3474844d7c3a0"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-conversation/src/client/skeleton/InputBar.tsx",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "4e18fa41c949752c0030bfcc2c6e6fe3f85198ad8cb02db0b3549f0466f5d76c",
+      "target": "apps/desktop/src/client/composer.mjs",
+      "strategy": "GREENFIELD",
+      "reusedScope": "Assessed keyboard/input/attachments/control placement",
+      "adaptationScope": "NOT_PRACTICAL for full source migration: tightly bound Lexical editor, private input machine/hub, draft image registry and slot props; thin native textarea and image preview over public prompt/cancel sufficient",
+      "privateDependencyRemoved": "NOT_PRACTICAL for full source migration: tightly bound Lexical editor, private input machine/hub, draft image registry and slot props; thin native textarea and image preview over public prompt/cancel sufficient",
+      "publicBinding": "Session.prompt/cancel; conversation.blocks.storeFor",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "ASSESSED_NOT_PRACTICAL_THIN_FALLBACK_IMPLEMENTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/composer.mjs",
+          "sha256": "03773d6697c9650727d7ca4caa68dd5bff778bf2d46180bcf66bd8a80e0247f2"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-approval/src/client/ApprovalPanel.tsx",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "e108d9a196672dc99613d5789569c6bd3f49ef689aa1e33817bc6cecfa03e6aa",
+      "target": "apps/desktop/src/client/interactions.mjs",
+      "strategy": "ADAPT",
+      "reusedScope": "Pending reason/detail and allow/reject explicit actions",
+      "adaptationScope": "Native Shaco controls, current pending reference/generation checks and local click lock; no PendingApproval class copied",
+      "privateDependencyRemoved": "Native Shaco controls, current pending reference/generation checks and local click lock; no PendingApproval class copied",
+      "publicBinding": "uiSession.pendingInteractions; pending.answer",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "PRESENTATION_ADAPTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/interactions.mjs",
+          "sha256": "040bc4be461ec4fe59bcdfc4d9b0e400a6de512965d7eb5a2a93f20928aca912"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-user-questions/src/client/QuestionComposer.tsx",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "9a3f529576191c8424544273c562e6f84741bd667b2a8efefac9c26dbaf82a02",
+      "target": "apps/desktop/src/client/interactions.mjs",
+      "strategy": "ADAPT",
+      "reusedScope": "Question options/multiselect/custom UI and original answer labels; parseRecommendedLabel helper",
+      "adaptationScope": "Remove private session draft-store, slot actions and pagination; local form per pending object",
+      "privateDependencyRemoved": "Remove private session draft-store, slot actions and pagination; local form per pending object",
+      "publicBinding": "uiSession.pendingInteractions; pending.answer",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "PRESENTATION_ADAPTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/interactions.mjs",
+          "sha256": "040bc4be461ec4fe59bcdfc4d9b0e400a6de512965d7eb5a2a93f20928aca912"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-user-questions/src/client/PlanReviewPanel.tsx",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "feaf8afe3d5e6bdc5176563a47fbeb374cf5a40ff52d57def97c885cbff7c8ab",
+      "target": "apps/desktop/src/client/interactions.mjs",
+      "strategy": "ADAPT",
+      "reusedScope": "Caller-declared plan details/approve label and explicit settlement",
+      "adaptationScope": "Preserve full generic batch for multiple questions; no option order inference/private planReviewOf import",
+      "privateDependencyRemoved": "Preserve full generic batch for multiple questions; no option order inference/private planReviewOf import",
+      "publicBinding": "question.intent; pending.answer",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "PRESENTATION_ADAPTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/interactions.mjs",
+          "sha256": "040bc4be461ec4fe59bcdfc4d9b0e400a6de512965d7eb5a2a93f20928aca912"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-model-selection/src/client/ModelSelect.tsx",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "e30d79db9ae2f190810b272712724d654d5a6b4b91f2312f9f08e2d1d0a76fc9",
+      "target": "apps/desktop/src/client/composer.mjs",
+      "strategy": "ADAPT",
+      "reusedScope": "Host groups to choices and exact reasoning metadata mapping",
+      "adaptationScope": "Native select; omit private locale/toast/two-level popup; directory object reused",
+      "privateDependencyRemoved": "Native select; omit private locale/toast/two-level popup; directory object reused",
+      "publicBinding": "modelDirectories.directoryFor; directory.store/load/select",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "PRESENTATION_ADAPTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/composer.mjs",
+          "sha256": "03773d6697c9650727d7ca4caa68dd5bff778bf2d46180bcf66bd8a80e0247f2"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-conversation/src/client/skeleton/PermissionSelect.tsx",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "f74b89ab53a8ecfa6133d51911f2f0a20c0ced3aa09fea6d6b9cc39cc9f95344",
+      "target": "apps/desktop/src/client/composer.mjs",
+      "strategy": "ADAPT",
+      "reusedScope": "current-only custom and explicit Full Access acknowledgment",
+      "adaptationScope": "No copied glyph assets/menu/private command hooks; Host projection options and public command",
+      "privateDependencyRemoved": "No copied glyph assets/menu/private command hooks; Host projection options and public command",
+      "publicBinding": "session.projections.faceOf permissions; session.command",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "PRESENTATION_ADAPTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/composer.mjs",
+          "sha256": "03773d6697c9650727d7ca4caa68dd5bff778bf2d46180bcf66bd8a80e0247f2"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/ui-primitives/src/markdown/MarkdownText.tsx",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "d717c1627f5e249874a385115793802c1052733b5e48ac288a8055676c8651e2",
+      "target": "apps/desktop/src/client/message.mjs",
+      "strategy": "REUSE",
+      "reusedScope": "Existing public pure Markdown renderer through platform singleton",
+      "adaptationScope": "No source copy, no new dependency; Shaco wrapper/token normalization; no Harness product chrome",
+      "privateDependencyRemoved": "No source copy, no new dependency; Shaco wrapper/token normalization; no Harness product chrome",
+      "publicBinding": "@deepseek-ai/dsh-client-ui-primitives",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "MIT, DeepSeek root notice; no copied third-party glyph/material; existing public primitive closure retained",
+      "specialHeaders": [],
+      "status": "PUBLIC_PRIMITIVE_REUSED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/client/message.mjs",
+          "sha256": "30c89f50c432b0a1f6caf569b64fe6d917b6ee9facec5ce4e8f3474844d7c3a0"
+        }
+      ],
+      "themeNormalization": "Existing Shaco themes.css recipe; styles.css semantic aliases. No copied fixed product skin, glyph, inspector, or business runtime."
+    },
+    {
+      "source": "packages/client/web/src/loader-status.ts",
+      "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "sha256": "030f657975cefa65ad44a735170c2894a9d1a8f545a867e84af22eb8cf442a8c",
+      "target": "apps/desktop/src/renderer/shaco-bootstrap.mjs",
+      "strategy": "ADAPT",
+      "reusedScope": "Pinned public const-enum ACTIVE literal pattern (2)",
+      "adaptationScope": "Only ACTIVE value with public type annotation; no internal/status import or loader state reducer",
+      "privateDependencyRemoved": "No loader-status runtime import; no internal/status subscription",
+      "publicBinding": "@deepseek-ai/cordis FiberState type; public Loader.resolve entry fiber.state",
+      "notice": "apps/desktop/THIRD_PARTY_NOTICES.md",
+      "license": "DeepSeek MIT",
+      "status": "PRESENTATION_ADAPTED",
+      "targetHashes": [
+        {
+          "path": "apps/desktop/src/renderer/shaco-bootstrap.mjs",
+          "sha256": "ea6154ce6b7d55085c1acbe1dd868d998dd077b3d3e36daf18f97dc82df6027d"
+        }
+      ]
+    }
+  ],
+  "finalizedAt": "2026-09-10T19:38:51.907Z",
+  "licenseEvidence": "license-file-selection.json",
+  "noticeSha256": "e94466be34da418f5358945857faecea05e329b8a1df39083788d0ab3337bcaa",
+  "validation": [
+    "pnpm test: 178/178 PASS before final freeze",
+    "smoke:full-shaco:development attempt 9 PASS",
+    "smoke:slice2-step2 attempt 1 PASS",
+    "verify:static and verify:theme PASS"
+  ],
+  "postStabilizationCorrection": [
+    "Evidence-only terminal Carrier fault driver fenced normal recovery before physical Helper termination; measured Helper exit and Shaco fail-closed UI.",
+    "FAILED/INCOMPATIBLE bootstrap projections render Shaco error instead of loading.",
+    "smoke:electron now requires an empty local authority before its isolated run.",
+    "Command presentation shows public name/args/outcome without raw seq/time/commandId metadata; no runtime/state change."
+  ]
+}

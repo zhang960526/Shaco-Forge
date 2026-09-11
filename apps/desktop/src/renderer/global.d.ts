@@ -10,7 +10,9 @@ interface BootstrapProjection {
 }
 
 interface Window {
+  __SHACO_PRESENTATION__: import('./shaco-bootstrap.mjs').ShacoPresentationBridge & { theme: import('./theme/theme.js').RootThemeController }
   shacoForge: {
+    workspace: { pickDirectory(): Promise<string | null> }
     bootstrap: {
       getState(): Promise<BootstrapProjection>
       reportProjection(report: Record<string, boolean>): Promise<void>
@@ -38,14 +40,6 @@ interface Window {
     ownsHost: true
     fetch(input: RequestInfo | URL, init?: RequestInit): Promise<Response>
     openStream(endpoint: string, payload: Record<string, unknown>, signal?: AbortSignal): AsyncIterable<unknown>
-  }
-}
-
-declare module '@deepseek-ai/dsh-client-web' {
-  export class AppWebEntry {
-    constructor(container: HTMLElement)
-    run(): Promise<void>
-    dispose(): Promise<void>
   }
 }
 

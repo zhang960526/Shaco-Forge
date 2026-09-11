@@ -1,0 +1,59 @@
+{
+  "name": "famicom-representative",
+  "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-development-8\\step2\\famicom-representative.png",
+  "width": 2139,
+  "height": 1256,
+  "sha256": "57db79ea5ba905af1e0880158e5d91cafb30771db418c1fd4eda35ebe65bf925",
+  "ui": {
+    "rootCount": 1,
+    "sidebarCount": 1,
+    "forbiddenBrand": false,
+    "harnessSeats": 0,
+    "template": "FAMICOM",
+    "mode": "light",
+    "rootVisible": true,
+    "horizontalOverflow": false,
+    "composer": true,
+    "approval": false,
+    "question": false,
+    "kinds": [
+      "command",
+      "command",
+      "user",
+      "assistant-step",
+      "turn-error"
+    ],
+    "tools": [
+      "settled"
+    ],
+    "geometry": {
+      "conversation": {
+        "width": 1100,
+        "center": 845,
+        "maxWidth": "1100px"
+      },
+      "composer": {
+        "width": 1100,
+        "center": 845,
+        "maxWidth": "1100px"
+      },
+      "tool": {
+        "width": 1044,
+        "center": 845,
+        "maxWidth": "none"
+      }
+    },
+    "lowNoiseWorkbar": true,
+    "bootstrapVisible": false,
+    "plan": false,
+    "tokens": {
+      "--surface-primary": "rgb(251, 245, 233)",
+      "--surface-sidebar": "rgb(241, 234, 217)",
+      "--accent-primary": "rgb(146, 37, 41)",
+      "--control-radius": "4px",
+      "--template-decoration-height": "28px",
+      "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+    }
+  },
+  "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+}

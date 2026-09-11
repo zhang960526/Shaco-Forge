@@ -20,11 +20,13 @@ async function scenario() {
   return { observer, event }
 }
 
-test('passive outer wrapper disables unwired actions and delegates without fake state', async () => {
+test('outer wrapper yields the single sidebar to the same-context public Product row', async () => {
   const html = await readFile('apps/desktop/index.html', 'utf8')
   assert.doesNotMatch(html, /No Project|No Session|当前没有已连接的项目/)
-  for (const id of ['new-chat', 'settings']) assert.match(html, new RegExp(`data-testid="${id}"[^>]+disabled`))
-  assert.match(html, /项目与会话由内嵌 Harness 管理/)
+  assert.doesNotMatch(html, /<aside|data-testid="new-chat"|data-testid="settings"/)
+  const client = await readFile('apps/desktop/src/client/recovery.mjs', 'utf8')
+  assert.match(client, /name: 'root', id: 'shaco-forge-root', priority: -1/)
+  assert.doesNotMatch(client, /slots\.inject\('sidebar'/)
 })
 
 test('production bootstrap bundles the tested adapter; no second Client or direct business requests', async () => {
@@ -35,7 +37,8 @@ test('production bootstrap bundles the tested adapter; no second Client or direc
   assert.match(prepare, /src\/renderer\/shell-bootstrap.ts/)
   assert.doesNotMatch(source, /new (AppWebEntry|Remote|Client)|bridge\.|\.fetch\(|\.openStream\(/)
   const main = await readFile('apps/desktop/src/renderer/main.ts', 'utf8')
-  assert.equal(main.match(/new AppWebEntry\(/g)?.length, 1)
+  assert.doesNotMatch(main, /new AppWebEntry\(/)
+  assert.equal(main.match(/entry = startShaco\(/g)?.length, 1)
   assert.doesNotMatch(main, /entry\.ctx/)
 })
 
@@ -188,17 +191,20 @@ test('snapshot history and unprompted Sessions cannot prove live gate', () => {
   assert.equal(observer.evidence.events.length, 0)
 })
 
-for (const kind of ['approval/request', 'user-questions/ask']) test(`${kind} waterfall observes exactly one settlement without keeping request/answer`, () => {
+for (const kind of ['approval/request', 'user-questions/request']) test(`${kind} private interaction traffic is ignored by production diagnostics`, () => {
   const observer = createUserLoopObserver()
-  observer.item('events', '$events', { type: 'waterfall', event: kind, eventId: 'id', request: { secret: 'private' } })
+  const before = JSON.stringify(observer.evidence)
+  let privateReads = 0
+  observer.item('events', '$events', { type: 'waterfall', event: kind,
+    get eventId() { privateReads++; throw new Error('PRIVATE_ID_READ') }, request: { secret: 'private' } })
   const body = envelope({ eventId: 'id', outcome: { kind: 'result', value: 'private-answer' } })
   const request = observer.request('$events/result', body)
   observer.response('$events/result', response({}), request)
-  assert.equal(observer.evidence.interactions[0]?.settlements, 1)
-  assert.equal(observer.evidence.interactions[0]?.accepted, true)
+  assert.equal(request, undefined)
   observer.request('$events/result', body)
-  assert.equal(observer.evidence.interactions[0]?.settlements, 2)
-  assert.doesNotMatch(JSON.stringify(observer.evidence), /private/)
+  assert.equal(privateReads, 0)
+  assert.equal(JSON.stringify(observer.evidence), before)
+  assert.equal(Object.hasOwn(observer.evidence, 'interactions'), false)
 })
 
 test('background stream coexistence and iterator cleanup are measured on unchanged values', async () => {

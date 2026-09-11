@@ -1,11 +1,11 @@
-import { AppWebEntry } from '@deepseek-ai/dsh-client-web'
+import { startShaco, type ShacoPresentation } from './shaco-bootstrap.mjs'
 import './theme/tokens.css'
 import './theme/themes.css'
 import './styles.css'
 import { RootThemeController } from './theme/theme.js'
 
 const HARNESS_PACKAGE = '@deepseek-ai/dsh-client-web@0.1.2-alpha.1'
-const HARNESS_EXPORT = '@deepseek-ai/dsh-client-web.AppWebEntry'
+const HARNESS_EXPORT = 'OPTION_B_PUBLIC_LOWER_LEVEL_CLIENT_BOOTSTRAP'
 const systemThemeMedia = window.matchMedia('(prefers-color-scheme: dark)')
 const themeController = new RootThemeController(document.documentElement, {
   matchesDark: () => systemThemeMedia.matches,
@@ -14,61 +14,68 @@ const themeController = new RootThemeController(document.documentElement, {
     return () => systemThemeMedia.removeEventListener('change', listener)
   },
 })
-window.addEventListener('pagehide', () => themeController.dispose(), { once: true })
-
-
 function requiredElement<T extends Element>(selector: string): T {
   const element = document.querySelector<T>(selector)
-  if (element === null) throw new Error(`Shaco Shell required node is missing: ${selector}`)
+  if (element === null) throw new Error('Shaco Forge mount is missing')
   return element
 }
-
-const status = requiredElement<HTMLOutputElement>('[data-testid="connection-status"]')
 const truthfulState = requiredElement<HTMLElement>('[data-testid="truthful-state"]')
 const mountRoot = requiredElement<HTMLElement>('#harness-client-root')
-let entry: AppWebEntry | undefined
-
-function projectBootstrap(state: BootstrapProjection): void {
-  status.textContent = state.message
-  status.dataset.phase = state.phase
-  if (state.connectionState !== undefined) {
-    const heading = document.createElement('strong')
-    const detail = document.createElement('span')
-    heading.textContent = state.connectionState === 'CONNECTED' ? 'Harness 已连接' : 'Harness 连接恢复中'
-    detail.textContent = state.connectionState === 'CONNECTED' ? 'Physical Carrier 已认证，当前 Client 与冷投影已就绪。' : state.message
-    truthfulState.replaceChildren(heading, detail)
-    mountRoot.inert = state.connectionState !== 'CONNECTED'
-    mountRoot.style.visibility = state.connectionState === 'CONNECTED' ? 'visible' : 'hidden'
-    if (['CONNECTION_LOST', 'RECONNECTING', 'FAILED', 'INCOMPATIBLE', 'DISCONNECTED'].includes(state.connectionState)) {
-      const old = entry
-      entry = undefined
-      void old?.dispose()
-    }
-  } else if (state.phase === 'host-ready') {
-    truthfulState.innerHTML = '<strong>Harness Host 已就绪</strong><span>正在完成 Physical Carrier mutual authentication。</span>'
-  } else if (state.phase === 'carrier-ready') {
-    truthfulState.innerHTML = '<strong>Authenticated Physical Carrier 已连接</strong><span>Harness Client 正通过本地受保护载体连接 Host。</span>'
-  } else if (state.phase === 'worker-failed' || state.phase === 'host-exited' || state.phase === 'carrier-failed') {
-    truthfulState.innerHTML = `<strong>Harness 未连接</strong><span>${state.message}</span>`
-  }
-}
-
-projectBootstrap(await window.shacoForge.bootstrap.getState())
-window.shacoForge.bootstrap.subscribe(projectBootstrap)
-
-const fatalEvents: Array<{ kind: string; message: string }> = []
-window.addEventListener('error', event => fatalEvents.push({ kind: 'error', message: String(event.message).slice(0, 800) }))
-window.addEventListener('unhandledrejection', event => fatalEvents.push({ kind: 'unhandledrejection', message: String(event.reason).slice(0, 800) }))
-
-entry = new AppWebEntry(mountRoot)
+let entry: ShacoPresentation | undefined
 let runResolved = false
 let runFailure: string | undefined
+let projection: BootstrapProjection | undefined
+let failed = false
+function displayState(): void {
+  const connected = runResolved && !failed && projection?.connectionState === 'CONNECTED'
+  mountRoot.hidden = !connected
+  mountRoot.inert = !connected
+  mountRoot.style.visibility = connected ? 'visible' : 'hidden'
+  truthfulState.hidden = connected
+  if (!connected) {
+    const heading = document.createElement('strong')
+    const detail = document.createElement('span')
+    heading.textContent = 'Shaco Forge'
+    detail.textContent = failed ? '工作空间暂不可用，请重新打开窗口。' : projection?.connectionState === 'RECONNECTING' || projection?.connectionState === 'CONNECTION_LOST' ? '连接已断开，正在重新连接…' : '正在准备工作空间…'
+    truthfulState.replaceChildren(heading, detail)
+  }
+}
+const presentation = {
+  harnessReady: false,
+  theme: themeController,
+  failClosed: (_reason: string): void => {
+    failed = true; displayState()
+    queueMicrotask(() => { const old = entry; entry = undefined; void old?.dispose().catch(() => {}) })
+  },
+  beforeRootRevoke: (): void => {},
+}
+window.__SHACO_PRESENTATION__ = presentation
+function projectBootstrap(state: BootstrapProjection): void {
+  projection = state
+  if (['CONNECTION_LOST', 'RECONNECTING', 'FAILED', 'INCOMPATIBLE', 'DISCONNECTED'].includes(state.connectionState ?? '')) {
+    const old = entry; entry = undefined
+    void old?.dispose()
+  }
+  if (['worker-failed', 'host-exited', 'carrier-failed'].includes(state.phase) || ['FAILED', 'INCOMPATIBLE'].includes(state.connectionState ?? '')) failed = true
+  displayState()
+}
+projectBootstrap(await window.shacoForge.bootstrap.getState())
+const unsubscribeBootstrap = window.shacoForge.bootstrap.subscribe(projectBootstrap)
+window.addEventListener('pagehide', () => {
+  unsubscribeBootstrap(); themeController.dispose(); void entry?.dispose()
+}, { once: true })
+const fatalEvents: Array<{ kind: string; message: string }> = []
+window.addEventListener('error', () => fatalEvents.push({ kind: 'error', message: 'RENDERER_ERROR' }))
+window.addEventListener('unhandledrejection', () => fatalEvents.push({ kind: 'unhandledrejection', message: 'RENDERER_PROMISE_REJECTED' }))
+entry = startShaco(mountRoot, presentation)
 try {
   await entry.run()
   runResolved = true
-} catch (error) {
-  runFailure = error instanceof Error ? error.stack ?? error.message : String(error)
+} catch {
+  runFailure = 'SHACO_BOOTSTRAP_FAILED'
+  failed = true
 }
+displayState()
 
 const afterRender = (): Promise<void> => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve())))
 await afterRender()
@@ -134,7 +141,8 @@ const evidence = {
     rootChildCount: mountRoot.children.length,
     bootPagePresent: mountRoot.querySelector('[data-dsh-boot]') !== null,
     renderedTextPresent: rootText.trim().length > 0,
-    appWebEntryCount: 1,
+    appWebEntryCount: 0,
+    optionB: entry?.diagnostics(),
     fixtureOrMockPresent: false,
     connectionState: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__.eventsReady > 0 ? 'AUTHENTICATED_CARRIER_EVENTS_READY' : 'CARRIER_NOT_READY',
     failure: runFailure,
@@ -154,19 +162,18 @@ const evidence = {
     directWorkerTransport: false,
   },
   theme: {
-    architecture: 'SEMANTIC_DESIGN_TOKENS',
+    architecture: 'MODE_PLUS_TEMPLATE',
     supportedModes: ['light', 'dark', 'system'],
     initial: initialTheme,
     systemPreferenceQuery: systemThemeMedia.media,
     rootSwitchSmoke,
     visibleAppearanceSettings: false,
-    harnessClientThemeUnification: 'FUTURE_INTEGRATION_SEAM',
+    harnessClientThemeUnification: 'SHACO_TEMPLATE_AUTHORITY',
   },
   reducedView: {
-    shellMode: 'PASSIVE_TRUTHFUL_WRAPPER',
-    outerActionsDisabled: ['new-chat', 'settings'].every(id => requiredElement<HTMLButtonElement>(`[data-testid="${id}"]`).disabled),
-    navigationDelegated: requiredElement<HTMLElement>('[data-testid="project-directory"]').textContent?.includes('内嵌 Harness') === true,
-    fakeProjectOrSessionStateAbsent: !requiredElement<HTMLElement>('[data-shaco-shell] > .sidebar').textContent?.match(/No Project|No Session/),
+    shellMode: 'FULL_SHACO_PRESENTATION',
+    singleSidebar: document.querySelectorAll('[data-testid="shaco-sidebar"]').length === 1 && document.querySelector('[data-shaco-shell] > .sidebar') === null,
+    outerActionsEnabled: ['new-chat', 'settings'].every(id => document.querySelector<HTMLButtonElement>(`[data-testid="${id}"]`)?.disabled === false),
     newChatVisible: document.querySelector('[data-testid="new-chat"]') !== null,
     projectDirectoryVisible: document.querySelector('[data-testid="project-directory"]') !== null,
     settingsVisible: document.querySelector('[data-testid="settings"]') !== null,
@@ -175,8 +182,8 @@ const evidence = {
     knowledgeBaseAbsent: !shellText.includes('Knowledge Base') && !shellText.includes('知识库'),
     centeredChatLayout: getComputedStyle(document.querySelector('.centered-content') as Element).maxWidth === '1100px',
     noPermanentInspector: document.querySelector('[data-inspector]') === null,
-    truthfulConnectionState: truthfulState.textContent?.includes('Physical Carrier') === true
-      || truthfulState.textContent?.includes('正在启动') === true,
+    truthfulConnectionState: projection?.connectionState === 'CONNECTED'
+      || truthfulState.textContent?.includes('正在准备') === true,
   },
   transport: {
     ownsHost: true,

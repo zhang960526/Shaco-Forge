@@ -1,0 +1,165 @@
+{
+  "assessment": "IMPLEMENTER_VERIFICATION_NOT_INDEPENDENT_FINAL_REVIEW",
+  "result": "PASS",
+  "ui": [
+    {
+      "id": "UI-G01",
+      "gate": "ONE_VISIBLE_PRODUCT_SHELL",
+      "result": "PASS",
+      "evidence": "九状态真实 Electron；运行态 rootCount=1，失败时隐藏/撤销业务 root。"
+    },
+    {
+      "id": "UI-G02",
+      "gate": "ONE_VISIBLE_SIDEBAR",
+      "result": "PASS",
+      "evidence": "所有正常状态 sidebarCount=1，Harness sidebar seats=0。"
+    },
+    {
+      "id": "UI-G03",
+      "gate": "VISIBLE_HARNESS_BRANDING_NONE",
+      "result": "PASS",
+      "evidence": "最终截图与 DOM forbiddenBrand=false。"
+    },
+    {
+      "id": "UI-G04",
+      "gate": "VISIBLE_HARNESS_PRODUCT_SHELL_NONE",
+      "result": "PASS",
+      "evidence": "不用 AppWebEntry/AppFrame；所有 root/error 状态无 Harness fallback。"
+    },
+    {
+      "id": "UI-G05",
+      "gate": "SHACO_CHAT_WORKSPACE_DIRECT_PRESENTATION",
+      "result": "PASS",
+      "evidence": "直接消费 sessions.binding 与 uiConversation.binding(binding).target(chat)。"
+    },
+    {
+      "id": "UI-G06",
+      "gate": "CONVERSATION_COMPOSER_TOOL_CENTER_AXIS",
+      "result": "PASS",
+      "evidence": "宽窗三者中心 845 CSS px；窄窗三者中心 492 CSS px。"
+    },
+    {
+      "id": "UI-G07",
+      "gate": "CHAT_CONTENT_APPROX_1100PX",
+      "result": "PASS",
+      "evidence": "宽窗 Conversation/Composer 均 1100px；窄窗收缩且无横向溢出。"
+    },
+    {
+      "id": "UI-G08",
+      "gate": "SHACO_BOOT_LOADING_ERROR_OWNERSHIP",
+      "result": "PASS",
+      "evidence": "真实 bootstrap-loading、root-error 截图；物理 Carrier 故障时 root hidden/inert 且 Shaco error。"
+    },
+    {
+      "id": "UI-G09",
+      "gate": "HARNESS_CONVERSATION_STREAMING_TRUTH_PRESERVED",
+      "result": "PASS",
+      "evidence": "真实 Host session 记录经 public target 呈现 streaming/tool/result/error；冷读历史 loadOlder 50→65。"
+    },
+    {
+      "id": "UI-G10",
+      "gate": "SHACO_APPROVAL_REAL_HARNESS_SETTLEMENT",
+      "result": "PASS",
+      "evidence": "真实 Host pending 跨 Desktop 冷重建；Shaco 按钮仅显式结算一次。"
+    },
+    {
+      "id": "UI-G11",
+      "gate": "SHACO_QUESTION_REAL_HARNESS_SETTLEMENT",
+      "result": "PASS",
+      "evidence": "真实 Question 冷重建与一次结算；plan、multi/custom 完整答案。"
+    },
+    {
+      "id": "UI-G12",
+      "gate": "MODEL_PERMISSION_PUBLIC_TRUTH",
+      "result": "PASS",
+      "evidence": "实际 catalog model 往返变更，permission 往返与 Full Access 确认；无 Provider discovery。"
+    },
+    {
+      "id": "UI-G13",
+      "gate": "NO_SECOND_RUNTIME_OR_TRUTH",
+      "result": "PASS",
+      "evidence": "focused lifecycle + runtime 同一 Context/binding/target/public stores；无第二 reducer/registry。"
+    },
+    {
+      "id": "UI-G14",
+      "gate": "PUBLIC_RUNTIME_APIS_ONLY",
+      "result": "PASS",
+      "evidence": "public import/fixture boundary tests、static verification；生产 presentation 不读取 private event ID。"
+    },
+    {
+      "id": "UI-G15",
+      "gate": "RECOVERY_AND_COLD_REBUILD_PRESERVED",
+      "result": "PASS",
+      "evidence": "Step1/2/3 正式回归覆盖 same-Host reattach、Carrier 重连、Worker replacement、stale fence。"
+    },
+    {
+      "id": "UI-G16",
+      "gate": "NO_PERMANENT_INSPECTOR",
+      "result": "PASS",
+      "evidence": "最终全 Shell 截图无常驻右侧 Inspector；Tool details 按需展开。"
+    },
+    {
+      "id": "UI-G17",
+      "gate": "LOW_NOISE_WORKER_STATE",
+      "result": "PASS",
+      "evidence": "真实连接状态；lowNoiseWorkbar=true；常态不呈现诊断墙。"
+    },
+    {
+      "id": "UI-G18",
+      "gate": "VISUAL_STATE_MATRIX",
+      "result": "PASS",
+      "evidence": "九状态 PNG、尺寸、SHA 与最终 composition 关联，另有双模板与 pending 补充截图。"
+    }
+  ],
+  "theme": [
+    {
+      "id": "THEME-G01",
+      "gate": "NO_COMPONENT_SKIN_BYPASSES_THEME_TEMPLATE_AUTHORITY",
+      "result": "PASS",
+      "evidence": "verify:theme 扫描全部自有/迁移展示；固定外观集中 themes.css；Markdown aliases 归一。"
+    },
+    {
+      "id": "THEME-G02",
+      "gate": "DEFAULT_TEMPLATE_COMPLETE",
+      "result": "PASS",
+      "evidence": "BRAUN 默认覆盖 Shell/Sidebar/Workbar/Message/Composer/Tool/Approval/Question/Settings。"
+    },
+    {
+      "id": "THEME-G03",
+      "gate": "LIGHT_DARK_MODE_PRESERVED",
+      "result": "PASS",
+      "evidence": "两个模板均真实切换 dark/system/light；系统变化由现有 controller 订阅及单元测试覆盖。"
+    },
+    {
+      "id": "THEME-G04",
+      "gate": "TEMPLATE_SWITCH_SEAM_PRESENT",
+      "result": "PASS",
+      "evidence": "同一 root 的稳定 template identity；颜色、字体、边框、密度、圆角、阴影和装饰 recipe。"
+    },
+    {
+      "id": "THEME-G05",
+      "gate": "THEME_CHANGE_DOES_NOT_CHANGE_BUSINESS_TRUTH",
+      "result": "PASS",
+      "evidence": "五个场景逐一比较 root/session/composer/draft 及 14 项公开业务对象/快照相等；prompt/connection unchanged。"
+    },
+    {
+      "id": "THEME-G06",
+      "gate": "BRAUN_TEMPLATE_VISUAL_CONFORMANCE",
+      "result": "PASS",
+      "evidence": "最终 Electron BRAUN 对照只读 Braun.png；灰白工具面板、克制边界、长期 Shell 结构一致。"
+    },
+    {
+      "id": "THEME-G07",
+      "gate": "FAMICOM_TEMPLATE_VISUAL_CONFORMANCE",
+      "result": "PASS",
+      "evidence": "最终 Electron FAMICOM 对照只读 FAMICOM.png；奶油面板、暗红强调/条带、方形控件、等宽标题。"
+    },
+    {
+      "id": "THEME-G08",
+      "gate": "BRAUN_FAMICOM_RUNTIME_SWITCH",
+      "result": "PASS",
+      "evidence": "真实 Settings selector 执行 BRAUN→FAMICOM→BRAUN，五场景全部 PASS。"
+    }
+  ],
+  "runtimeEvidence": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/runs/smoke-full-shaco-2/step2/full-shaco-results.json"
+}

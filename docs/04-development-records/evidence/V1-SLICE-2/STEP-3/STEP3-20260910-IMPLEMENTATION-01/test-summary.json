@@ -1,0 +1,261 @@
+{
+  "commands": [
+    {
+      "command": "pnpm run typecheck",
+      "startedAt": "2026-09-10T10:16:27.936Z",
+      "endedAt": "2026-09-10T10:16:33.363Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-10T10:18:53.143Z",
+      "endedAt": "2026-09-10T10:19:21.512Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-10T10:29:01.983Z",
+      "endedAt": "2026-09-10T10:29:25.636Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-10T10:30:54.736Z",
+      "endedAt": "2026-09-10T10:31:18.433Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:static",
+      "startedAt": "2026-09-10T10:31:20.381Z",
+      "endedAt": "2026-09-10T10:31:21.052Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:theme",
+      "startedAt": "2026-09-10T10:31:23.049Z",
+      "endedAt": "2026-09-10T10:31:23.697Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "startedAt": "2026-09-10T10:31:47.997Z",
+      "endedAt": "2026-09-10T10:31:48.721Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "startedAt": "2026-09-10T10:32:28.093Z",
+      "endedAt": "2026-09-10T10:32:58.511Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-10T10:34:07.068Z",
+      "endedAt": "2026-09-10T10:34:29.239Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-10T10:34:49.596Z",
+      "endedAt": "2026-09-10T10:35:12.631Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "startedAt": "2026-09-10T10:35:29.200Z",
+      "endedAt": "2026-09-10T10:36:00.320Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-10T10:37:48.350Z",
+      "endedAt": "2026-09-10T10:38:08.342Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "startedAt": "2026-09-10T10:38:30.286Z",
+      "endedAt": "2026-09-10T10:39:14.073Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-10T10:39:59.302Z",
+      "endedAt": "2026-09-10T10:40:18.473Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "startedAt": "2026-09-10T10:41:05.885Z",
+      "endedAt": "2026-09-10T10:41:50.144Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run typecheck",
+      "startedAt": "2026-09-10T10:42:38.767Z",
+      "endedAt": "2026-09-10T10:42:42.906Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:worker",
+      "startedAt": "2026-09-10T10:43:00.447Z",
+      "endedAt": "2026-09-10T10:43:13.160Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:carrier",
+      "startedAt": "2026-09-10T10:43:55.224Z",
+      "endedAt": "2026-09-10T10:44:48.699Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "startedAt": "2026-09-10T10:45:10.397Z",
+      "endedAt": "2026-09-10T10:45:59.736Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "startedAt": "2026-09-10T10:46:29.287Z",
+      "endedAt": "2026-09-10T10:46:51.692Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-10T10:47:07.838Z",
+      "endedAt": "2026-09-10T10:50:02.822Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-10T10:53:23.978Z",
+      "endedAt": "2026-09-10T10:54:08.663Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-10T10:54:44.020Z",
+      "endedAt": "2026-09-10T10:55:02.896Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:static",
+      "startedAt": "2026-09-10T10:55:40.126Z",
+      "endedAt": "2026-09-10T10:55:40.709Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:theme",
+      "startedAt": "2026-09-10T10:55:42.564Z",
+      "endedAt": "2026-09-10T10:55:43.137Z",
+      "exitCode": 0,
+      "result": "PASS"
+    }
+  ],
+  "correctiveHistory": [],
+  "correctiveHistoryFile": "corrective-history.json",
+  "finalUnitTests": 162,
+  "finalRequiredCommands": [
+    {
+      "command": "pnpm run typecheck",
+      "startedAt": "2026-09-10T10:42:38.767Z",
+      "endedAt": "2026-09-10T10:42:42.906Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-10T10:39:59.302Z",
+      "endedAt": "2026-09-10T10:40:18.473Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-10T10:54:44.020Z",
+      "endedAt": "2026-09-10T10:55:02.896Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:static",
+      "startedAt": "2026-09-10T10:55:40.126Z",
+      "endedAt": "2026-09-10T10:55:40.709Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:theme",
+      "startedAt": "2026-09-10T10:55:42.564Z",
+      "endedAt": "2026-09-10T10:55:43.137Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:worker",
+      "startedAt": "2026-09-10T10:43:00.447Z",
+      "endedAt": "2026-09-10T10:43:13.160Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:carrier",
+      "startedAt": "2026-09-10T10:43:55.224Z",
+      "endedAt": "2026-09-10T10:44:48.699Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "startedAt": "2026-09-10T10:46:29.287Z",
+      "endedAt": "2026-09-10T10:46:51.692Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-10T10:47:07.838Z",
+      "endedAt": "2026-09-10T10:50:02.822Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-10T10:53:23.978Z",
+      "endedAt": "2026-09-10T10:54:08.663Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "startedAt": "2026-09-10T10:45:10.397Z",
+      "endedAt": "2026-09-10T10:45:59.736Z",
+      "exitCode": 0,
+      "result": "PASS"
+    }
+  ]
+}

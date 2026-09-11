@@ -1,0 +1,2834 @@
+{
+  "attempts": [
+    {
+      "runId": "STEP2-REGRESSION-2026-09-10T12-27-45.464Z",
+      "scenario": "STEP2_REGRESSION",
+      "result": "PASS",
+      "chain": [
+        "PRODUCT_STARTUP_AUTHORITY_HOST_HELPER_AUTHENTICATED_CARRIER_CLIENT_CONNECTED",
+        "CURRENT_SESSION_FROM_PUBLIC_HARNESS_TRUTH",
+        "DESKTOP_GRACEFUL_CLOSE_AUTHORITY_SURVIVES",
+        "FRESH_DESKTOP_SAME_WORKER_COLD_PROJECTION",
+        "DESKTOP_CRASH_AUTHORITY_SURVIVES",
+        "FRESH_DESKTOP_AFTER_CRASH_SAME_WORKER_REATTACH",
+        "CARRIER_LOSS_REDISCOVERY_FRESH_AUTH_GENERATION_COLD_PROJECTION_CONNECTED",
+        "WORKER_CRASH_JOB_CLEANUP_REPLACEMENT_COLD_PROJECTION_CONNECTED",
+        "BOUNDED_CLEANUP_NO_ORPHAN"
+      ],
+      "snapshots": [
+        {
+          "label": "PRODUCT_STARTUP_AUTHORITY_HOST_HELPER_AUTHENTICATED_CARRIER_CLIENT_CONNECTED",
+          "commandId": 0,
+          "mainPid": 34280,
+          "authority": {
+            "worker": {
+              "pid": 30788,
+              "startTime": "134335168659561822"
+            },
+            "host": {
+              "pid": 28796,
+              "startTime": "134335168806783306"
+            },
+            "helper": {
+              "pid": 9728,
+              "startTime": "134335168805497681"
+            },
+            "workerInstanceIdHash": "eb203795bd182ae72be3eda2d882d7daeda59724429142d226ba02f13d198666"
+          },
+          "credentialEpochHash": "6f011a247c8e75e3ec0778bc9fd222f2a79f6a1474a2dd28e4bf235d5e720807",
+          "clientInstanceIdHash": "927bf3994ee95b8d5bc94b731fae64065a5db701d227509906bf4c7ef3dd8666",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 1,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "INITIAL"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 11,
+            "unaryRequests": 5,
+            "streamOpens": 3,
+            "streamPulls": 6,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 3,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 20243,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 3,
+            "maxQueueDepth": 1,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": false,
+            "workspaceCount": 0,
+            "sessionCount": 0,
+            "historyCount": 0,
+            "sessionHash": "",
+            "workspaceHashes": []
+          },
+          "retiredGenerations": [],
+          "recoveryMetrics": {
+            "staleRejected": 0,
+            "recoveries": 0,
+            "replacements": 0,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": false,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        },
+        {
+          "label": "CURRENT_SESSION_FROM_PUBLIC_HARNESS_TRUTH",
+          "commandId": 1,
+          "response": {
+            "workspaceHash": "f5b80cc5a983fcc382766db0b15757623f11d9912e8dfe4dfdfe83d6017d0435",
+            "sessionHash": "04bc6b2606741c34c1d5662db5cea8b6910e1a0c63e8e267e9a493a826f6c643",
+            "publicMutations": [
+              "workspace/create",
+              "session/create",
+              "session/rename"
+            ],
+            "promptRuns": 0
+          },
+          "mainPid": 34280,
+          "authority": {
+            "worker": {
+              "pid": 30788,
+              "startTime": "134335168659561822"
+            },
+            "host": {
+              "pid": 28796,
+              "startTime": "134335168806783306"
+            },
+            "helper": {
+              "pid": 9728,
+              "startTime": "134335168805497681"
+            },
+            "workerInstanceIdHash": "eb203795bd182ae72be3eda2d882d7daeda59724429142d226ba02f13d198666"
+          },
+          "credentialEpochHash": "6f011a247c8e75e3ec0778bc9fd222f2a79f6a1474a2dd28e4bf235d5e720807",
+          "clientInstanceIdHash": "927bf3994ee95b8d5bc94b731fae64065a5db701d227509906bf4c7ef3dd8666",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 1,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "INITIAL"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 29,
+            "unaryRequests": 10,
+            "streamOpens": 4,
+            "streamPulls": 19,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 4,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 20243,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 4,
+            "maxQueueDepth": 2,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": true,
+            "workspaceCount": 0,
+            "sessionCount": 0,
+            "historyCount": 4,
+            "sessionHash": "04bc6b2606741c34c1d5662db5cea8b6910e1a0c63e8e267e9a493a826f6c643",
+            "workspaceHashes": []
+          },
+          "retiredGenerations": [],
+          "recoveryMetrics": {
+            "staleRejected": 0,
+            "recoveries": 0,
+            "replacements": 0,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": true,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        },
+        {
+          "label": "FRESH_DESKTOP_SAME_WORKER_COLD_PROJECTION",
+          "commandId": 0,
+          "mainPid": 48000,
+          "authority": {
+            "worker": {
+              "pid": 30788,
+              "startTime": "134335168659561822"
+            },
+            "host": {
+              "pid": 28796,
+              "startTime": "134335168806783306"
+            },
+            "helper": {
+              "pid": 9728,
+              "startTime": "134335168805497681"
+            },
+            "workerInstanceIdHash": "eb203795bd182ae72be3eda2d882d7daeda59724429142d226ba02f13d198666"
+          },
+          "credentialEpochHash": "169742cd3d90e0f678e1280320f0387c00e4eaa67336e74975ad161fcdf9c874",
+          "clientInstanceIdHash": "661efe57fde8a09546ab8ff4aa18a23576ee3444fdf4b83f4468e5cd57b21ac4",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 1,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "INITIAL"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 15,
+            "unaryRequests": 7,
+            "streamOpens": 4,
+            "streamPulls": 8,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 4,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 20243,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 4,
+            "maxQueueDepth": 1,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": true,
+            "workspaceCount": 1,
+            "sessionCount": 1,
+            "historyCount": 4,
+            "sessionHash": "04bc6b2606741c34c1d5662db5cea8b6910e1a0c63e8e267e9a493a826f6c643",
+            "workspaceHashes": [
+              "f5b80cc5a983fcc382766db0b15757623f11d9912e8dfe4dfdfe83d6017d0435"
+            ]
+          },
+          "retiredGenerations": [],
+          "recoveryMetrics": {
+            "staleRejected": 0,
+            "recoveries": 0,
+            "replacements": 0,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": true,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        },
+        {
+          "label": "FRESH_DESKTOP_AFTER_CRASH_SAME_WORKER_REATTACH",
+          "commandId": 0,
+          "mainPid": 5524,
+          "authority": {
+            "worker": {
+              "pid": 30788,
+              "startTime": "134335168659561822"
+            },
+            "host": {
+              "pid": 28796,
+              "startTime": "134335168806783306"
+            },
+            "helper": {
+              "pid": 9728,
+              "startTime": "134335168805497681"
+            },
+            "workerInstanceIdHash": "eb203795bd182ae72be3eda2d882d7daeda59724429142d226ba02f13d198666"
+          },
+          "credentialEpochHash": "fbcc3ad9d6ca905fa39d42b4e60b20ee077c57258deb94065b9a0bbd34117b23",
+          "clientInstanceIdHash": "d4907ca6a4a328ca9af159d7d12f472f9bceb056afc091221ffb0ed0d08e6183",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 1,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "INITIAL"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 15,
+            "unaryRequests": 7,
+            "streamOpens": 4,
+            "streamPulls": 8,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 4,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 20243,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 4,
+            "maxQueueDepth": 1,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": true,
+            "workspaceCount": 1,
+            "sessionCount": 1,
+            "historyCount": 4,
+            "sessionHash": "04bc6b2606741c34c1d5662db5cea8b6910e1a0c63e8e267e9a493a826f6c643",
+            "workspaceHashes": [
+              "f5b80cc5a983fcc382766db0b15757623f11d9912e8dfe4dfdfe83d6017d0435"
+            ]
+          },
+          "retiredGenerations": [],
+          "recoveryMetrics": {
+            "staleRejected": 0,
+            "recoveries": 0,
+            "replacements": 0,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": true,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        },
+        {
+          "label": "CARRIER_LOSS_REDISCOVERY_FRESH_AUTH_GENERATION_COLD_PROJECTION_CONNECTED",
+          "commandId": 1,
+          "response": {
+            "before": {
+              "pendingUnary": 1,
+              "activeStreams": 5
+            },
+            "after": {
+              "pendingUnary": 0,
+              "activeStreams": 0
+            },
+            "unary": "TERMINATED",
+            "stream": "TERMINATED",
+            "staleCallbackRejected": true
+          },
+          "mainPid": 5524,
+          "authority": {
+            "worker": {
+              "pid": 30788,
+              "startTime": "134335168659561822"
+            },
+            "host": {
+              "pid": 28796,
+              "startTime": "134335168806783306"
+            },
+            "helper": {
+              "pid": 9728,
+              "startTime": "134335168805497681"
+            },
+            "workerInstanceIdHash": "eb203795bd182ae72be3eda2d882d7daeda59724429142d226ba02f13d198666"
+          },
+          "credentialEpochHash": "d8074c34c750b0f36764052a9f048bee9b58ce0ca9596230022da679a9773d86",
+          "clientInstanceIdHash": "19aabc1d1bb829d53c5fc8c6d3419dcd85ae804fddf59b01644a2860fb9951cd",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 2,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "SAME_WORKER"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL",
+              "failure": "CARRIER_LOST"
+            },
+            {
+              "connectionState": "RECONNECTING",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "SAME_WORKER"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 16,
+            "unaryRequests": 8,
+            "streamOpens": 4,
+            "streamPulls": 8,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 4,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 20243,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 4,
+            "maxQueueDepth": 1,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": true,
+            "workspaceCount": 1,
+            "sessionCount": 1,
+            "historyCount": 4,
+            "sessionHash": "04bc6b2606741c34c1d5662db5cea8b6910e1a0c63e8e267e9a493a826f6c643",
+            "workspaceHashes": [
+              "f5b80cc5a983fcc382766db0b15757623f11d9912e8dfe4dfdfe83d6017d0435"
+            ]
+          },
+          "retiredGenerations": [
+            {
+              "generation": 1,
+              "pendingUnary": 0,
+              "activeStreams": 0
+            }
+          ],
+          "recoveryMetrics": {
+            "staleRejected": 9,
+            "recoveries": 1,
+            "replacements": 0,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": true,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        },
+        {
+          "label": "WORKER_CRASH_JOB_CLEANUP_REPLACEMENT_COLD_PROJECTION_CONNECTED",
+          "commandId": 1,
+          "response": {
+            "before": {
+              "pendingUnary": 1,
+              "activeStreams": 5
+            },
+            "after": {
+              "pendingUnary": 0,
+              "activeStreams": 0
+            },
+            "unary": "TERMINATED",
+            "stream": "TERMINATED",
+            "staleCallbackRejected": true
+          },
+          "mainPid": 5524,
+          "authority": {
+            "worker": {
+              "pid": 22644,
+              "startTime": "134335168944930586"
+            },
+            "host": {
+              "pid": 63376,
+              "startTime": "134335169141629029"
+            },
+            "helper": {
+              "pid": 49896,
+              "startTime": "134335169140331857"
+            },
+            "workerInstanceIdHash": "78da290b0c5d57fb5dd19212709dea35f27d8afedd37a9d083058b537fcb447a"
+          },
+          "credentialEpochHash": "45db6a1e5452730435b2ab9bcb9554cb62ce36252275628a55edbc4eb6152ef6",
+          "clientInstanceIdHash": "a4e4766be740e8a95a11d22701c46fd30e56640bacf0c07185b6195ae072f8bf",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 3,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL",
+              "failure": "CARRIER_LOST"
+            },
+            {
+              "connectionState": "RECONNECTING",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER",
+              "failure": "CARRIER_LOST"
+            },
+            {
+              "connectionState": "RECONNECTING",
+              "generation": 3,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 16,
+            "unaryRequests": 8,
+            "streamOpens": 4,
+            "streamPulls": 8,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 4,
+            "pendingUnary": 1,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 20243,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 4,
+            "maxQueueDepth": 1,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": true,
+            "workspaceCount": 1,
+            "sessionCount": 1,
+            "historyCount": 4,
+            "sessionHash": "04bc6b2606741c34c1d5662db5cea8b6910e1a0c63e8e267e9a493a826f6c643",
+            "workspaceHashes": [
+              "f5b80cc5a983fcc382766db0b15757623f11d9912e8dfe4dfdfe83d6017d0435"
+            ]
+          },
+          "retiredGenerations": [
+            {
+              "generation": 1,
+              "pendingUnary": 0,
+              "activeStreams": 0
+            },
+            {
+              "generation": 2,
+              "pendingUnary": 0,
+              "activeStreams": 0
+            }
+          ],
+          "recoveryMetrics": {
+            "staleRejected": 17,
+            "recoveries": 2,
+            "replacements": 1,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": true,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        }
+      ],
+      "seeded": {
+        "workspaceHash": "f5b80cc5a983fcc382766db0b15757623f11d9912e8dfe4dfdfe83d6017d0435",
+        "sessionHash": "04bc6b2606741c34c1d5662db5cea8b6910e1a0c63e8e267e9a493a826f6c643",
+        "publicMutations": [
+          "workspace/create",
+          "session/create",
+          "session/rename"
+        ],
+        "promptRuns": 0
+      },
+      "loss": {
+        "before": {
+          "pendingUnary": 1,
+          "activeStreams": 5
+        },
+        "after": {
+          "pendingUnary": 0,
+          "activeStreams": 0
+        },
+        "unary": "TERMINATED",
+        "stream": "TERMINATED",
+        "staleCallbackRejected": true
+      },
+      "replacement": {
+        "oldAuthorityGone": true,
+        "overlap": 0,
+        "oldChildAdoption": false,
+        "old": {
+          "worker": {
+            "pid": 30788,
+            "startTime": "134335168659561822"
+          },
+          "host": {
+            "pid": 28796,
+            "startTime": "134335168806783306"
+          },
+          "helper": {
+            "pid": 9728,
+            "startTime": "134335168805497681"
+          },
+          "workerInstanceIdHash": "eb203795bd182ae72be3eda2d882d7daeda59724429142d226ba02f13d198666"
+        },
+        "fresh": {
+          "worker": {
+            "pid": 22644,
+            "startTime": "134335168944930586"
+          },
+          "host": {
+            "pid": 63376,
+            "startTime": "134335169141629029"
+          },
+          "helper": {
+            "pid": 49896,
+            "startTime": "134335169140331857"
+          },
+          "workerInstanceIdHash": "78da290b0c5d57fb5dd19212709dea35f27d8afedd37a9d083058b537fcb447a"
+        }
+      },
+      "cleanup": {
+        "noOrphan": true,
+        "authorityCount": 2,
+        "desktopProcessesExited": true
+      },
+      "shellEvidence": [],
+      "providerRuns": 0
+    },
+    {
+      "runId": "STEP2-REGRESSION-2026-09-10T12-28-42.503Z",
+      "scenario": "STEP3_CUMULATIVE",
+      "result": "PASS",
+      "chain": [
+        "PRODUCT_STARTUP_AUTHORITY_HOST_HELPER_AUTHENTICATED_CARRIER_CLIENT_CONNECTED",
+        "CURRENT_SESSION_FROM_PUBLIC_HARNESS_TRUTH",
+        "DESKTOP_GRACEFUL_CLOSE_AUTHORITY_SURVIVES",
+        "FRESH_DESKTOP_SAME_WORKER_COLD_PROJECTION",
+        "DESKTOP_CRASH_AUTHORITY_SURVIVES",
+        "FRESH_DESKTOP_AFTER_CRASH_SAME_WORKER_REATTACH",
+        "CARRIER_LOSS_REDISCOVERY_FRESH_AUTH_GENERATION_COLD_PROJECTION_CONNECTED",
+        "WORKER_CRASH_JOB_CLEANUP_REPLACEMENT_COLD_PROJECTION_CONNECTED",
+        "BOUNDED_CLEANUP_NO_ORPHAN"
+      ],
+      "snapshots": [
+        {
+          "label": "PRODUCT_STARTUP_AUTHORITY_HOST_HELPER_AUTHENTICATED_CARRIER_CLIENT_CONNECTED",
+          "commandId": 0,
+          "mainPid": 49532,
+          "authority": {
+            "worker": {
+              "pid": 43028,
+              "startTime": "134335169230473838"
+            },
+            "host": {
+              "pid": 30768,
+              "startTime": "134335169383089673"
+            },
+            "helper": {
+              "pid": 36648,
+              "startTime": "134335169381835050"
+            },
+            "workerInstanceIdHash": "b9b67a11ea90dcf586df7bb77a1ebf52f13de0fae91f82a41f2050e66d7ac96e"
+          },
+          "credentialEpochHash": "62bb06141811d4fb904f8d26e57f0771cbbdfe411247218b56e42297456bb801",
+          "clientInstanceIdHash": "be2e3e9f8b8c98ed2fddba888e20b125e055e1b632a86518af7a270289c93157",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 1,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "INITIAL"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 11,
+            "unaryRequests": 5,
+            "streamOpens": 3,
+            "streamPulls": 6,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 3,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 20243,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 3,
+            "maxQueueDepth": 1,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": false,
+            "workspaceCount": 0,
+            "sessionCount": 0,
+            "historyCount": 0,
+            "sessionHash": "",
+            "workspaceHashes": []
+          },
+          "retiredGenerations": [],
+          "recoveryMetrics": {
+            "staleRejected": 0,
+            "recoveries": 0,
+            "replacements": 0,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": false,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        },
+        {
+          "label": "CURRENT_SESSION_FROM_PUBLIC_HARNESS_TRUTH",
+          "commandId": 1,
+          "response": {
+            "workspaceHash": "682bd918a8631c6d7ece96ec6cacde2fd8391ea3969e11bef309e9353528d44b",
+            "sessionHash": "015d8ec045c6529a2adc9a80be192c4a0904a365ca5301c3d7fb7c442a05db23",
+            "publicMutations": [
+              "workspace/create",
+              "session/create via uiWorkspace.connectWorkspace",
+              "sessions.open"
+            ],
+            "nativePicker": [
+              "cancel",
+              "failure",
+              "success"
+            ],
+            "noWorkspace": true,
+            "cancelNoMutation": true,
+            "failureNoMutation": true,
+            "blankReuse": true,
+            "promptRuns": 0,
+            "nativeMethod": "REAL_IPC_MAIN_GUARD_WITH_TEST_ONLY_DIALOG_RESULT_INJECTION"
+          },
+          "mainPid": 49532,
+          "authority": {
+            "worker": {
+              "pid": 43028,
+              "startTime": "134335169230473838"
+            },
+            "host": {
+              "pid": 30768,
+              "startTime": "134335169383089673"
+            },
+            "helper": {
+              "pid": 36648,
+              "startTime": "134335169381835050"
+            },
+            "workerInstanceIdHash": "b9b67a11ea90dcf586df7bb77a1ebf52f13de0fae91f82a41f2050e66d7ac96e"
+          },
+          "credentialEpochHash": "62bb06141811d4fb904f8d26e57f0771cbbdfe411247218b56e42297456bb801",
+          "clientInstanceIdHash": "be2e3e9f8b8c98ed2fddba888e20b125e055e1b632a86518af7a270289c93157",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 1,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "INITIAL"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 48,
+            "unaryRequests": 15,
+            "streamOpens": 9,
+            "streamPulls": 23,
+            "streamCancels": 5,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 4,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 20243,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 5,
+            "maxQueueDepth": 1,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": true,
+            "workspaceCount": 1,
+            "sessionCount": 1,
+            "historyCount": 3,
+            "sessionHash": "015d8ec045c6529a2adc9a80be192c4a0904a365ca5301c3d7fb7c442a05db23",
+            "workspaceHashes": [
+              "682bd918a8631c6d7ece96ec6cacde2fd8391ea3969e11bef309e9353528d44b"
+            ]
+          },
+          "retiredGenerations": [],
+          "recoveryMetrics": {
+            "staleRejected": 0,
+            "recoveries": 0,
+            "replacements": 0,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": true,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        },
+        {
+          "label": "FRESH_DESKTOP_SAME_WORKER_COLD_PROJECTION",
+          "commandId": 0,
+          "mainPid": 41528,
+          "authority": {
+            "worker": {
+              "pid": 43028,
+              "startTime": "134335169230473838"
+            },
+            "host": {
+              "pid": 30768,
+              "startTime": "134335169383089673"
+            },
+            "helper": {
+              "pid": 36648,
+              "startTime": "134335169381835050"
+            },
+            "workerInstanceIdHash": "b9b67a11ea90dcf586df7bb77a1ebf52f13de0fae91f82a41f2050e66d7ac96e"
+          },
+          "credentialEpochHash": "83885f1491dc2b4a1b4123d87f05147b1ef5df1fb4b597bbafb081be3fe887ee",
+          "clientInstanceIdHash": "722e12f6ae75c448aa23378b818ae931787680e115286354ca593dc25525cee2",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 1,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "INITIAL"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 15,
+            "unaryRequests": 7,
+            "streamOpens": 4,
+            "streamPulls": 8,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 4,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 20989,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 4,
+            "maxQueueDepth": 1,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": true,
+            "workspaceCount": 1,
+            "sessionCount": 1,
+            "historyCount": 3,
+            "sessionHash": "015d8ec045c6529a2adc9a80be192c4a0904a365ca5301c3d7fb7c442a05db23",
+            "workspaceHashes": [
+              "682bd918a8631c6d7ece96ec6cacde2fd8391ea3969e11bef309e9353528d44b"
+            ]
+          },
+          "retiredGenerations": [],
+          "recoveryMetrics": {
+            "staleRejected": 0,
+            "recoveries": 0,
+            "replacements": 0,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": true,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        },
+        {
+          "label": "FRESH_DESKTOP_AFTER_CRASH_SAME_WORKER_REATTACH",
+          "commandId": 0,
+          "mainPid": 39444,
+          "authority": {
+            "worker": {
+              "pid": 43028,
+              "startTime": "134335169230473838"
+            },
+            "host": {
+              "pid": 30768,
+              "startTime": "134335169383089673"
+            },
+            "helper": {
+              "pid": 36648,
+              "startTime": "134335169381835050"
+            },
+            "workerInstanceIdHash": "b9b67a11ea90dcf586df7bb77a1ebf52f13de0fae91f82a41f2050e66d7ac96e"
+          },
+          "credentialEpochHash": "e6e81007e6cf4e5bf06a0a9b365d3e3a3a9ac77e9da8394cdc25e9be2f03eb7f",
+          "clientInstanceIdHash": "f3a45fb01db73d57b9ab229e1845b5a649e4541e246f84f699e949b9e0fd3f66",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 1,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "INITIAL"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 15,
+            "unaryRequests": 7,
+            "streamOpens": 4,
+            "streamPulls": 8,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 4,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 21713,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 4,
+            "maxQueueDepth": 1,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": true,
+            "workspaceCount": 1,
+            "sessionCount": 1,
+            "historyCount": 3,
+            "sessionHash": "015d8ec045c6529a2adc9a80be192c4a0904a365ca5301c3d7fb7c442a05db23",
+            "workspaceHashes": [
+              "682bd918a8631c6d7ece96ec6cacde2fd8391ea3969e11bef309e9353528d44b"
+            ]
+          },
+          "retiredGenerations": [],
+          "recoveryMetrics": {
+            "staleRejected": 0,
+            "recoveries": 0,
+            "replacements": 0,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": true,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        },
+        {
+          "label": "CARRIER_LOSS_REDISCOVERY_FRESH_AUTH_GENERATION_COLD_PROJECTION_CONNECTED",
+          "commandId": 1,
+          "response": {
+            "before": {
+              "pendingUnary": 1,
+              "activeStreams": 5
+            },
+            "after": {
+              "pendingUnary": 0,
+              "activeStreams": 0
+            },
+            "unary": "TERMINATED",
+            "stream": "TERMINATED",
+            "staleCallbackRejected": true
+          },
+          "mainPid": 39444,
+          "authority": {
+            "worker": {
+              "pid": 43028,
+              "startTime": "134335169230473838"
+            },
+            "host": {
+              "pid": 30768,
+              "startTime": "134335169383089673"
+            },
+            "helper": {
+              "pid": 36648,
+              "startTime": "134335169381835050"
+            },
+            "workerInstanceIdHash": "b9b67a11ea90dcf586df7bb77a1ebf52f13de0fae91f82a41f2050e66d7ac96e"
+          },
+          "credentialEpochHash": "c8dcc4c3bca4ddd3c0a8249d4021399946f33609a98fa8e09fb16b5a6b387528",
+          "clientInstanceIdHash": "57ae7dd92a279a239729a88035e812880462274f95802fcf03a5a340c93ec22b",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 2,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "SAME_WORKER"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL",
+              "failure": "CARRIER_LOST"
+            },
+            {
+              "connectionState": "RECONNECTING",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "SAME_WORKER"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 16,
+            "unaryRequests": 8,
+            "streamOpens": 4,
+            "streamPulls": 8,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 4,
+            "pendingUnary": 0,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 21713,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 4,
+            "maxQueueDepth": 1,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": true,
+            "workspaceCount": 1,
+            "sessionCount": 1,
+            "historyCount": 3,
+            "sessionHash": "015d8ec045c6529a2adc9a80be192c4a0904a365ca5301c3d7fb7c442a05db23",
+            "workspaceHashes": [
+              "682bd918a8631c6d7ece96ec6cacde2fd8391ea3969e11bef309e9353528d44b"
+            ]
+          },
+          "retiredGenerations": [
+            {
+              "generation": 1,
+              "pendingUnary": 0,
+              "activeStreams": 0
+            }
+          ],
+          "recoveryMetrics": {
+            "staleRejected": 9,
+            "recoveries": 1,
+            "replacements": 0,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": true,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        },
+        {
+          "label": "WORKER_CRASH_JOB_CLEANUP_REPLACEMENT_COLD_PROJECTION_CONNECTED",
+          "commandId": 2,
+          "response": {
+            "sidebarCount": 1,
+            "sidebarSeats": 1,
+            "brand": true,
+            "newChat": true,
+            "directory": true,
+            "currentSession": true,
+            "settingsAtBottom": true,
+            "forbiddenNavigation": false,
+            "conversation": true,
+            "conversationWidth": 1100,
+            "conversationHeight": 797.3333740234375,
+            "detailsCollapsed": true,
+            "requireAvailable": false,
+            "processAvailable": false,
+            "workspaceCapabilities": [
+              "pickDirectory"
+            ],
+            "promptRuns": 0,
+            "settings": {
+              "editor": true,
+              "fields": [
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "password": "password",
+              "protocolOptions": 4,
+              "error": false,
+              "localMutation": {
+                "localProfileWritten": true,
+                "modelEndpointProtocol": true,
+                "credentialSetUnset": true,
+                "secretInputCleared": true,
+                "providerCalls": 0,
+                "proof": "Frozen PiAiAdapter.listModels reads its local snapshot; no discoverModels or prompt invoked"
+              }
+            },
+            "screenshot": {
+              "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/step3-ui-39444-1.png",
+              "bytes": 129047,
+              "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+            },
+            "providerRuns": 0
+          },
+          "mainPid": 39444,
+          "authority": {
+            "worker": {
+              "pid": 62296,
+              "startTime": "134335169556715354"
+            },
+            "host": {
+              "pid": 46568,
+              "startTime": "134335169776234181"
+            },
+            "helper": {
+              "pid": 49568,
+              "startTime": "134335169774783004"
+            },
+            "workerInstanceIdHash": "e389a9cccf5f9a6847e0ebfd9588016bba2628596aac9d155cff3e24b5a9cb82"
+          },
+          "credentialEpochHash": "4852bfd64a79792b5fed835ff0534736ffcac57b6fdde77cae2d9b2723136e37",
+          "clientInstanceIdHash": "4b9a1245dd0bbbd46814910736bbf178a1a6b63b608ac430acdbd317b1889f1c",
+          "recovery": {
+            "connectionState": "CONNECTED",
+            "generation": 3,
+            "authenticatedCarrier": true,
+            "clientGenerationReady": true,
+            "projectionRebuildComplete": true,
+            "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+          },
+          "transitions": [
+            {
+              "connectionState": "DISCOVERING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 1,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 1,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL",
+              "failure": "CARRIER_LOST"
+            },
+            {
+              "connectionState": "RECONNECTING",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "INITIAL"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 2,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "CONNECTION_LOST",
+              "generation": 2,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER",
+              "failure": "CARRIER_LOST"
+            },
+            {
+              "connectionState": "RECONNECTING",
+              "generation": 3,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "SAME_WORKER"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": false,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": false,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "AUTHENTICATING",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": false,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            },
+            {
+              "connectionState": "CONNECTED",
+              "generation": 3,
+              "authenticatedCarrier": true,
+              "clientGenerationReady": true,
+              "projectionRebuildComplete": true,
+              "continuity": "REPLACEMENT_CONTINUITY_UNPROVEN"
+            }
+          ],
+          "metrics": {
+            "mainAuthenticatedCarrier": true,
+            "serverAuthenticatedToMain": true,
+            "businessFramesSent": 16,
+            "unaryRequests": 8,
+            "streamOpens": 4,
+            "streamPulls": 8,
+            "streamCancels": 0,
+            "eventsReadyObserved": 1,
+            "maxRendererInflightPullPerStream": 1,
+            "unsolicitedRendererStreamPushes": 0,
+            "activeStreams": 4,
+            "pendingUnary": 1,
+            "finalActiveStreams": 0,
+            "finalPendingUnary": 0,
+            "maxObservedJsonFrameBytes": 22437,
+            "oversizeFrames": 0,
+            "maxActiveStreams": 4,
+            "maxQueueDepth": 1,
+            "creditViolations": 0,
+            "duplicateStreamTerminals": 0,
+            "itemsAfterTerminal": 0
+          },
+          "readProof": {
+            "eventsReady": true,
+            "workspaceBaseline": true,
+            "sessionRoster": true,
+            "sessionSnapshot": true,
+            "workspaceCount": 1,
+            "sessionCount": 1,
+            "historyCount": 3,
+            "sessionHash": "015d8ec045c6529a2adc9a80be192c4a0904a365ca5301c3d7fb7c442a05db23",
+            "workspaceHashes": [
+              "682bd918a8631c6d7ece96ec6cacde2fd8391ea3969e11bef309e9353528d44b"
+            ]
+          },
+          "retiredGenerations": [
+            {
+              "generation": 1,
+              "pendingUnary": 0,
+              "activeStreams": 0
+            },
+            {
+              "generation": 2,
+              "pendingUnary": 0,
+              "activeStreams": 0
+            }
+          ],
+          "recoveryMetrics": {
+            "staleRejected": 17,
+            "recoveries": 2,
+            "replacements": 1,
+            "businessReplays": 0
+          },
+          "renderer": {
+            "requireAvailable": false,
+            "processAvailable": false,
+            "rootPresent": true,
+            "projectionVisible": true,
+            "currentSessionSelected": true,
+            "eventsReady": 1,
+            "promptRuns": 0
+          }
+        }
+      ],
+      "seeded": {
+        "workspaceHash": "682bd918a8631c6d7ece96ec6cacde2fd8391ea3969e11bef309e9353528d44b",
+        "sessionHash": "015d8ec045c6529a2adc9a80be192c4a0904a365ca5301c3d7fb7c442a05db23",
+        "publicMutations": [
+          "workspace/create",
+          "session/create via uiWorkspace.connectWorkspace",
+          "sessions.open"
+        ],
+        "nativePicker": [
+          "cancel",
+          "failure",
+          "success"
+        ],
+        "noWorkspace": true,
+        "cancelNoMutation": true,
+        "failureNoMutation": true,
+        "blankReuse": true,
+        "promptRuns": 0,
+        "nativeMethod": "REAL_IPC_MAIN_GUARD_WITH_TEST_ONLY_DIALOG_RESULT_INJECTION"
+      },
+      "loss": {
+        "before": {
+          "pendingUnary": 1,
+          "activeStreams": 5
+        },
+        "after": {
+          "pendingUnary": 0,
+          "activeStreams": 0
+        },
+        "unary": "TERMINATED",
+        "stream": "TERMINATED",
+        "staleCallbackRejected": true
+      },
+      "replacement": {
+        "oldAuthorityGone": true,
+        "overlap": 0,
+        "oldChildAdoption": false,
+        "old": {
+          "worker": {
+            "pid": 43028,
+            "startTime": "134335169230473838"
+          },
+          "host": {
+            "pid": 30768,
+            "startTime": "134335169383089673"
+          },
+          "helper": {
+            "pid": 36648,
+            "startTime": "134335169381835050"
+          },
+          "workerInstanceIdHash": "b9b67a11ea90dcf586df7bb77a1ebf52f13de0fae91f82a41f2050e66d7ac96e"
+        },
+        "fresh": {
+          "worker": {
+            "pid": 62296,
+            "startTime": "134335169556715354"
+          },
+          "host": {
+            "pid": 46568,
+            "startTime": "134335169776234181"
+          },
+          "helper": {
+            "pid": 49568,
+            "startTime": "134335169774783004"
+          },
+          "workerInstanceIdHash": "e389a9cccf5f9a6847e0ebfd9588016bba2628596aac9d155cff3e24b5a9cb82"
+        }
+      },
+      "cleanup": {
+        "noOrphan": true,
+        "authorityCount": 2,
+        "desktopProcessesExited": true
+      },
+      "shellEvidence": [
+        {
+          "sidebarCount": 1,
+          "sidebarSeats": 1,
+          "brand": true,
+          "newChat": true,
+          "directory": true,
+          "currentSession": true,
+          "settingsAtBottom": true,
+          "forbiddenNavigation": false,
+          "conversation": true,
+          "conversationWidth": 1100,
+          "conversationHeight": 797.3333740234375,
+          "detailsCollapsed": true,
+          "requireAvailable": false,
+          "processAvailable": false,
+          "workspaceCapabilities": [
+            "pickDirectory"
+          ],
+          "promptRuns": 0,
+          "settings": {
+            "editor": true,
+            "fields": [
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "password": "password",
+            "protocolOptions": 4,
+            "error": false,
+            "localMutation": {
+              "localProfileWritten": true,
+              "modelEndpointProtocol": true,
+              "credentialSetUnset": true,
+              "secretInputCleared": true,
+              "providerCalls": 0,
+              "proof": "Frozen PiAiAdapter.listModels reads its local snapshot; no discoverModels or prompt invoked"
+            }
+          },
+          "screenshot": {
+            "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/step3-ui-39444-1.png",
+            "bytes": 129047,
+            "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835",
+            "originalCaptureName": "step3-ui-49532-1.png",
+            "deduplicatedBySha256": true
+          },
+          "providerRuns": 0
+        },
+        {
+          "sidebarCount": 1,
+          "sidebarSeats": 1,
+          "brand": true,
+          "newChat": true,
+          "directory": true,
+          "currentSession": true,
+          "settingsAtBottom": true,
+          "forbiddenNavigation": false,
+          "conversation": true,
+          "conversationWidth": 1100,
+          "conversationHeight": 797.3333740234375,
+          "detailsCollapsed": true,
+          "requireAvailable": false,
+          "processAvailable": false,
+          "workspaceCapabilities": [
+            "pickDirectory"
+          ],
+          "promptRuns": 0,
+          "settings": {
+            "editor": true,
+            "fields": [
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "password": "password",
+            "protocolOptions": 4,
+            "error": false,
+            "localMutation": {
+              "localProfileWritten": true,
+              "modelEndpointProtocol": true,
+              "credentialSetUnset": true,
+              "secretInputCleared": true,
+              "providerCalls": 0,
+              "proof": "Frozen PiAiAdapter.listModels reads its local snapshot; no discoverModels or prompt invoked"
+            }
+          },
+          "screenshot": {
+            "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/step3-ui-39444-1.png",
+            "bytes": 129047,
+            "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835",
+            "originalCaptureName": "step3-ui-41528-1.png",
+            "deduplicatedBySha256": true
+          },
+          "providerRuns": 0
+        },
+        {
+          "sidebarCount": 1,
+          "sidebarSeats": 1,
+          "brand": true,
+          "newChat": true,
+          "directory": true,
+          "currentSession": true,
+          "settingsAtBottom": true,
+          "forbiddenNavigation": false,
+          "conversation": true,
+          "conversationWidth": 1100,
+          "conversationHeight": 797.3333740234375,
+          "detailsCollapsed": true,
+          "requireAvailable": false,
+          "processAvailable": false,
+          "workspaceCapabilities": [
+            "pickDirectory"
+          ],
+          "promptRuns": 0,
+          "settings": {
+            "editor": true,
+            "fields": [
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "password": "password",
+            "protocolOptions": 4,
+            "error": false,
+            "localMutation": {
+              "localProfileWritten": true,
+              "modelEndpointProtocol": true,
+              "credentialSetUnset": true,
+              "secretInputCleared": true,
+              "providerCalls": 0,
+              "proof": "Frozen PiAiAdapter.listModels reads its local snapshot; no discoverModels or prompt invoked"
+            }
+          },
+          "screenshot": {
+            "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/step3-ui-39444-1.png",
+            "bytes": 129047,
+            "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835",
+            "originalCaptureName": "step3-ui-39444-1.png",
+            "deduplicatedBySha256": true
+          },
+          "providerRuns": 0
+        },
+        {
+          "sidebarCount": 1,
+          "sidebarSeats": 1,
+          "brand": true,
+          "newChat": true,
+          "directory": true,
+          "currentSession": true,
+          "settingsAtBottom": true,
+          "forbiddenNavigation": false,
+          "conversation": true,
+          "conversationWidth": 1100,
+          "conversationHeight": 797.3333740234375,
+          "detailsCollapsed": true,
+          "requireAvailable": false,
+          "processAvailable": false,
+          "workspaceCapabilities": [
+            "pickDirectory"
+          ],
+          "promptRuns": 0,
+          "settings": {
+            "editor": true,
+            "fields": [
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "password": "password",
+            "protocolOptions": 4,
+            "error": false
+          },
+          "screenshot": {
+            "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/step3-ui-39444-1.png",
+            "bytes": 129047,
+            "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835",
+            "originalCaptureName": "step3-ui-39444-2.png",
+            "deduplicatedBySha256": true
+          },
+          "providerRuns": 0
+        }
+      ],
+      "providerRuns": 0
+    }
+  ],
+  "screenshotDeduplication": {
+    "captured": 4,
+    "retained": 1,
+    "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835",
+    "removedDuplicateFiles": [
+      "step3-ui-39444-2.png",
+      "step3-ui-41528-1.png",
+      "step3-ui-49532-1.png"
+    ]
+  },
+  "result": "PASS",
+  "finalSourceIdentity": {
+    "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/composition-identity.json",
+    "bytes": 25225,
+    "sha256": "4191dfdf5366acab814260cd64fd664acf0116a9720bfad6d539db74d9bcb484"
+  },
+  "adjacentRealHostSuite": {
+    "result": "PASS",
+    "approval": "approval-real-host-lifecycle.json",
+    "question": "question-real-host-lifecycle.json",
+    "gates": "s3g16-results.json",
+    "sameFinalSource": true,
+    "sameFinalComposition": true,
+    "realProductWorkerHostCarrierDesktop": true,
+    "providerRuns": 0
+  },
+  "completeCoverage": [
+    "startup",
+    "Worker authority",
+    "Carrier",
+    "CONNECTED",
+    "composition",
+    "Sidebar",
+    "Project Directory",
+    "Native Picker",
+    "Workspace create/open",
+    "New Chat",
+    "Session open",
+    "Settings",
+    "real Approval pending",
+    "Desktop disconnect",
+    "same Worker reconnect",
+    "cold projection",
+    "Session open/binding",
+    "Approval restored",
+    "single UI settlement",
+    "real Question pending",
+    "Desktop disconnect",
+    "same Worker reconnect",
+    "Question restored",
+    "single UI settlement",
+    "stale and duplicate rejection/no-op",
+    "no auto answer/replay/cancel",
+    "graceful close",
+    "crash survival",
+    "Carrier recovery",
+    "Worker replacement",
+    "bounded cleanup"
+  ]
+}

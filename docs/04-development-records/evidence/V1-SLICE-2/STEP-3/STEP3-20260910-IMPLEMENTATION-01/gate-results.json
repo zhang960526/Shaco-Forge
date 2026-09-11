@@ -1,0 +1,139 @@
+{
+  "result": "PASS",
+  "gates": [
+    {
+      "id": "S3G01",
+      "name": "Exact current entry 29-row baseline",
+      "result": "PASS",
+      "evidence": "baseline.json"
+    },
+    {
+      "id": "S3G02",
+      "name": "Final composition generated and frozen before acceptance",
+      "result": "PASS",
+      "evidence": "composition-identity.json"
+    },
+    {
+      "id": "S3G03",
+      "name": "Composition fail-closed negatives",
+      "result": "PASS",
+      "evidence": "regression/unit.log"
+    },
+    {
+      "id": "S3G04",
+      "name": "Sidebar seat and public shadow semantics",
+      "result": "PASS",
+      "evidence": "ui-evidence.json"
+    },
+    {
+      "id": "S3G05",
+      "name": "Single Context and Harness truth ownership",
+      "result": "PASS",
+      "evidence": "interaction-security.json"
+    },
+    {
+      "id": "S3G06",
+      "name": "Selected Workspace New Chat",
+      "result": "PASS",
+      "evidence": "shell-settings.json"
+    },
+    {
+      "id": "S3G07",
+      "name": "No Workspace native Open Project",
+      "result": "PASS",
+      "evidence": "shell-settings.json"
+    },
+    {
+      "id": "S3G08",
+      "name": "Harness Project Directory",
+      "result": "PASS",
+      "evidence": "shell-settings.json"
+    },
+    {
+      "id": "S3G09",
+      "name": "Session navigation and generation rebuild",
+      "result": "PASS",
+      "evidence": "cumulative-e2e.json"
+    },
+    {
+      "id": "S3G10",
+      "name": "Provider and Custom Provider Settings",
+      "result": "PASS",
+      "evidence": "shell-settings.json"
+    },
+    {
+      "id": "S3G11",
+      "name": "Model Endpoint Relay Settings",
+      "result": "PASS",
+      "evidence": "shell-settings.json"
+    },
+    {
+      "id": "S3G12",
+      "name": "Credential and secret hygiene",
+      "result": "PASS",
+      "evidence": "shell-settings.json"
+    },
+    {
+      "id": "S3G13",
+      "name": "Native Picker success",
+      "result": "PASS",
+      "evidence": "shell-settings.json"
+    },
+    {
+      "id": "S3G14",
+      "name": "Native Picker cancel",
+      "result": "PASS",
+      "evidence": "shell-settings.json"
+    },
+    {
+      "id": "S3G15",
+      "name": "Native failure stale security boundary",
+      "result": "PASS",
+      "evidence": "interaction-security.json"
+    },
+    {
+      "id": "S3G16",
+      "name": "Harness Approval Question preservation",
+      "result": "PASS",
+      "evidence": "interaction-security.json",
+      "method": "STRUCTURAL_FIXTURE",
+      "limits": "S3G16 uses unmodified frozen public Client bundles, deterministic public-service fixtures, SSR rendering and Harness-owned pending objects; real Host pending replay after a Provider turn is not exercised. Contract section 15 permits this structural/fixture method; Provider proof is separately required if requested."
+    },
+    {
+      "id": "S3G17",
+      "name": "Public interaction identity boundary",
+      "result": "PASS",
+      "evidence": "interaction-security.json"
+    },
+    {
+      "id": "S3G18",
+      "name": "Cancel distinct from disconnect",
+      "result": "PASS",
+      "evidence": "interaction-security.json"
+    },
+    {
+      "id": "S3G19",
+      "name": "Renderer security and truthful failures",
+      "result": "PASS",
+      "evidence": "interaction-security.json"
+    },
+    {
+      "id": "S3G20",
+      "name": "Cumulative non-Provider E2E",
+      "result": "PASS",
+      "evidence": "cumulative-e2e.json"
+    }
+  ],
+  "compositionNegatives": [
+    "DUPLICATE_ROW",
+    "DUPLICATE_FACTORY",
+    "MISSING_REQUIRED_FROZEN_ROW",
+    "WRONG_ROW_ORDER",
+    "GRAPH_BATCH_INCONSISTENCY",
+    "TOTAL_ROWS_NOT_29",
+    "WRONG_PUBLIC_EXPORT",
+    "WRONG_FROZEN_HASH",
+    "WRONG_GRAPH_REVISION"
+  ],
+  "providerRuns": 0
+}

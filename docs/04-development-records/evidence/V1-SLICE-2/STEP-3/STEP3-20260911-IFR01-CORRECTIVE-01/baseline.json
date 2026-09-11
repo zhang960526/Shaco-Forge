@@ -1,0 +1,21 @@
+{
+  "capturedAt": "2026-09-11T01:18:45.059Z",
+  "branch": "master",
+  "head": "5118053f625d01faba6617cace481df3091ba5be",
+  "trackedModified": 26,
+  "expandedUntracked": 622,
+  "staged": 0,
+  "entryFileCount": 1195,
+  "harness": {
+    "head": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "status": "CLEAN",
+    "mode": "READ_ONLY"
+  },
+  "findingProvenance": "OWNER_INPUT_ONLY",
+  "independentFinalReview": "FAIL",
+  "finding": "F-IFR-01",
+  "severity": "HIGH_BLOCKING",
+  "visualAcceptance": "PASS",
+  "directionAlignment": "ALIGNED",
+  "reviewArtifactPath": null
+}

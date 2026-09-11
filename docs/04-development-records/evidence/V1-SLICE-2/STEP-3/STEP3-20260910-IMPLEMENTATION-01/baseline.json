@@ -1,0 +1,1159 @@
+{
+  "result": "PASS",
+  "gate": "S3G01",
+  "startingBranch": "master",
+  "startingHead": "5118053f625d01faba6617cace481df3091ba5be",
+  "frozenHarnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+  "contractSha256": "6cad09319e8793c4cebf95c4dfae4cd04f644adbed1b0c51647e93901e42721b",
+  "entryManifestSha256": "3c84efd8417a8925fd8fb649e64f8b5b96a3f36eb6a371f78be169db8a183eff",
+  "entryManifest": {
+    "schemaVersion": 1,
+    "productSlice": "V1-SLICE-2-STEP2",
+    "frozenHarness": {
+      "commit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+      "release": "dsh-v0.1.2-alpha.1",
+      "packageVersion": "0.1.2-alpha.1"
+    },
+    "composition": {
+      "package": "@deepseek-ai/dsh-client-web",
+      "export": "AppWebEntry",
+      "publicExportOnly": true
+    },
+    "reactResolution": {
+      "react": "18.3.1",
+      "reactDom": "18.3.1"
+    },
+    "graph": {
+      "requiredCount": 24,
+      "supportCount": 4,
+      "frozenHarnessCount": 28,
+      "productCount": 1,
+      "totalCount": 29,
+      "orderedIds": [
+        "@deepseek-ai/dsh-client-modules",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-general",
+        "@deepseek-ai/dsh-client-ui-settings-models",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-approval",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-tool",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-directory-picker-browse",
+        "@deepseek-ai/dsh-client-ui-input-trigger",
+        "@deepseek-ai/dsh-client-ui-commands",
+        "@deepseek-ai/dsh-client-ui-subagent",
+        "@deepseek-ai/dsh-client-ui-model-selection",
+        "@deepseek-ai/dsh-client-ui-permission-presets",
+        "@deepseek-ai/dsh-client-ui-user-questions",
+        "@deepseek-ai/dsh-typert-registry",
+        "@deepseek-ai/dsh-api-gateway",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-api-workspace-controller",
+        "@shaco-forge/desktop"
+      ]
+    },
+    "artifacts": [
+      {
+        "id": "@deepseek-ai/dsh-client-modules",
+        "publicExport": "@deepseek-ai/dsh-client-modules/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/modules/lib/client.js",
+        "bytes": 18621,
+        "sha256": "9361241bfbe8a02864df5df9fabf9fbbfa0f5a1914025badab36bdf1b9481751"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-connection",
+        "publicExport": "@deepseek-ai/dsh-client-connection/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/connection/lib/client.js",
+        "bytes": 155447,
+        "sha256": "d90ac3ecd5a1fa6eda2ad19639b739daca4b3b5c988c544fc4bffcff6b3c030e"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-remotes",
+        "publicExport": "@deepseek-ai/dsh-api-remotes/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/api/remotes/lib/client.js",
+        "bytes": 303878,
+        "sha256": "7eb837812f3bd9978e9f20e0bef6cdb8c1d47f1e288912fab9b930827290cb3a"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-theme",
+        "publicExport": "@deepseek-ai/dsh-client-ui-theme/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-theme/lib/client.js",
+        "bytes": 90122,
+        "sha256": "8d8e115c5fb3ba1fcb1f857eea860a0cf02d1c25d3bd779be20a622477c0605a"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-locale",
+        "publicExport": "@deepseek-ai/dsh-client-locale/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/locale/lib/client.js",
+        "bytes": 55693,
+        "sha256": "6eff57ca0085b7946344e99208a47d5794812dcd72e518ec7637565efec9cb50"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-layout",
+        "publicExport": "@deepseek-ai/dsh-client-ui-layout/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-layout/lib/client.js",
+        "bytes": 20729,
+        "sha256": "5a9e93ec65359683fe660e91831e2299ff28483b67bdd06b8a7c6cdfdf3d8607"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-renderer",
+        "publicExport": "@deepseek-ai/dsh-client-ui-renderer/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-renderer/lib/client.js",
+        "bytes": 56834,
+        "sha256": "57cc5d86f23565ffe7909746fdcf5e84098ade4aaf3e8744e33654f1aac91144"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-session",
+        "publicExport": "@deepseek-ai/dsh-client-ui-session/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-session/lib/client.js",
+        "bytes": 12529,
+        "sha256": "a794b82a58f6e7740041456fc3690596db98db6619749b97c49cd2443a89d5ae"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-sidebar",
+        "publicExport": "@deepseek-ai/dsh-client-ui-sidebar/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-sidebar/lib/client.js",
+        "bytes": 18472,
+        "sha256": "bde2fc86868432f804fbbc687ca5ef0890698e4d27522620ec997d6d15153816"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings",
+        "publicExport": "@deepseek-ai/dsh-client-ui-settings/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-settings/lib/client.js",
+        "bytes": 51645,
+        "sha256": "0cb26d506adcf6a5ec51e62fea537c1d5afe19d7be41b4cccaaa40fc33d9e486"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings-general",
+        "publicExport": "@deepseek-ai/dsh-client-ui-settings-general/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-settings-general/lib/client.js",
+        "bytes": 26589,
+        "sha256": "4faf105332b2e3beca646fa4c458d481faa06a7e9539c35c8f54a185b443189b"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings-models",
+        "publicExport": "@deepseek-ai/dsh-client-ui-settings-models/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-settings-models/lib/client.js",
+        "bytes": 134352,
+        "sha256": "c4e99652b3f49cc4e36756381c49266c4bde1c2379848fbd6dbd8cd0c5cccc07"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-conversation",
+        "publicExport": "@deepseek-ai/dsh-client-ui-conversation/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-conversation/lib/client.js",
+        "bytes": 603240,
+        "sha256": "08444b1f96e3e3e1046d1c4769b61cf6c09d8d839f057a607915514d5d123827"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-approval",
+        "publicExport": "@deepseek-ai/dsh-client-ui-approval/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-approval/lib/client.js",
+        "bytes": 11588,
+        "sha256": "1cb6c0afad99e3a61f16da5078cbba2d6e8e33ce5a162947ac876674e7e74f54"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-chat",
+        "publicExport": "@deepseek-ai/dsh-client-ui-chat/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-chat/lib/client.js",
+        "bytes": 331443,
+        "sha256": "2d94875cb2e9d04d4d6392d1e0e4dfea392c88029d53a35ee4a28359865c82e1"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-tool",
+        "publicExport": "@deepseek-ai/dsh-client-ui-tool/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-tool/lib/client.js",
+        "bytes": 93027,
+        "sha256": "899647a2aae079137b37a7e171e46b0394e8000e796f74e52b9045496fbe7f17"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-workspace",
+        "publicExport": "@deepseek-ai/dsh-client-ui-workspace/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-workspace/lib/client.js",
+        "bytes": 124648,
+        "sha256": "8c9836211951ec926134b50b0c0791e065a4e7c959cac289f13ec3d3753528af"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-directory-picker-browse",
+        "publicExport": "@deepseek-ai/dsh-client-ui-directory-picker-browse/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-directory-picker-browse/lib/client.js",
+        "bytes": 49256,
+        "sha256": "502ea0a442005b271e08af2b82db1b82820dae374997a3c9bc24b3cd812dbee4"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-input-trigger",
+        "publicExport": "@deepseek-ai/dsh-client-ui-input-trigger/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-input-trigger/lib/client.js",
+        "bytes": 47222,
+        "sha256": "cc782452a703a1106499bcc1c54bbdd68bc939c99e3a399541d59a04391bc282"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-commands",
+        "publicExport": "@deepseek-ai/dsh-client-ui-commands/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-commands/lib/client.js",
+        "bytes": 46095,
+        "sha256": "3fb21f2f0ffc4c7e7bec57ab8029d3454a0f7f9d8990d274c4e20dcace051dc0"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-subagent",
+        "publicExport": "@deepseek-ai/dsh-client-ui-subagent/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-subagent/lib/client.js",
+        "bytes": 42308,
+        "sha256": "590b9224d3e5a99cce88ba1e72d4b96f40fb328ac7ed69ad0e869f5c2d2bd9fb"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-model-selection",
+        "publicExport": "@deepseek-ai/dsh-client-ui-model-selection/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-model-selection/lib/client.js",
+        "bytes": 39908,
+        "sha256": "7c1c4aeb06f5b057ba484fd6b4729f866cecc5c558dda7870adca8a3beea28fb"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-permission-presets",
+        "publicExport": "@deepseek-ai/dsh-client-ui-permission-presets/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-permission-presets/lib/client.js",
+        "bytes": 19660,
+        "sha256": "9a4279ba5fc1ca4e0b86175e88cd33a269294dd4cffbfd0f3a8badeb10de9ba8"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-user-questions",
+        "publicExport": "@deepseek-ai/dsh-client-ui-user-questions/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/client/ui-user-questions/lib/client.js",
+        "bytes": 42862,
+        "sha256": "271fa5bae4a54fd92e217dd98b1286aaddde267ff31d3d93ed13dc8c0c60dbd5"
+      },
+      {
+        "id": "@deepseek-ai/dsh-typert-registry",
+        "publicExport": "@deepseek-ai/dsh-typert-registry/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/typert/registry/lib/client.js",
+        "bytes": 52652,
+        "sha256": "116a1d5ac12355d0713444368158c889cb0e926c7f89d4d35487d648fe30fd0a"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-gateway",
+        "publicExport": "@deepseek-ai/dsh-api-gateway/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/api/gateway/lib/client.js",
+        "bytes": 66752,
+        "sha256": "fe28e214b4bcc7fa35236e44ed541944e16bbf1ec003fc860e4d4bb09ec218b3"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-session-controller",
+        "publicExport": "@deepseek-ai/dsh-api-session-controller/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/api/session-controller/lib/client.js",
+        "bytes": 108523,
+        "sha256": "52c8210e144d570c88f436da9434984d01ecbf141075ea766427fae85bc70ddb"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-workspace-controller",
+        "publicExport": "@deepseek-ai/dsh-api-workspace-controller/client",
+        "sourcePackagePath": "../../../Shaco-Forge-Upstream/deepseek-harness/packages/api/workspace-controller/lib/client.js",
+        "bytes": 16224,
+        "sha256": "6142956344e24492f88649d52c66618d99580738d6c4b7c6f4d1a5394c3e5e5a"
+      },
+      {
+        "id": "@shaco-forge/desktop",
+        "publicExport": "@shaco-forge/desktop/client",
+        "sourcePackagePath": "dist/client/recovery.js",
+        "bytes": 2134,
+        "sha256": "f6a1c0730d5793aa910fd9ad9d4300acf5657c9eb4ab00a88a0457f1faaa105d"
+      }
+    ],
+    "generated": {
+      "bootstrapBytes": 18624,
+      "bootstrapSha256": "4e5e67c4dd9f6c19c7470f5a4c97074fd9cf08eb89734e27111a2d80bc8dbe57",
+      "applicationBytes": 2623916,
+      "applicationSha256": "ec432b347b336ba20821293edce65b6e8a1990ff30f23f4a68d98112f687beed"
+    },
+    "fixtureOrMockIncluded": false,
+    "productionDeepSourceImportIncluded": false
+  },
+  "roster": [
+    {
+      "order": 1,
+      "id": "@deepseek-ai/dsh-client-modules",
+      "publicExport": "@deepseek-ai/dsh-client-modules/client",
+      "sha256": "9361241bfbe8a02864df5df9fabf9fbbfa0f5a1914025badab36bdf1b9481751"
+    },
+    {
+      "order": 2,
+      "id": "@deepseek-ai/dsh-client-connection",
+      "publicExport": "@deepseek-ai/dsh-client-connection/client",
+      "sha256": "d90ac3ecd5a1fa6eda2ad19639b739daca4b3b5c988c544fc4bffcff6b3c030e"
+    },
+    {
+      "order": 3,
+      "id": "@deepseek-ai/dsh-api-remotes",
+      "publicExport": "@deepseek-ai/dsh-api-remotes/client",
+      "sha256": "7eb837812f3bd9978e9f20e0bef6cdb8c1d47f1e288912fab9b930827290cb3a"
+    },
+    {
+      "order": 4,
+      "id": "@deepseek-ai/dsh-client-ui-theme",
+      "publicExport": "@deepseek-ai/dsh-client-ui-theme/client",
+      "sha256": "8d8e115c5fb3ba1fcb1f857eea860a0cf02d1c25d3bd779be20a622477c0605a"
+    },
+    {
+      "order": 5,
+      "id": "@deepseek-ai/dsh-client-locale",
+      "publicExport": "@deepseek-ai/dsh-client-locale/client",
+      "sha256": "6eff57ca0085b7946344e99208a47d5794812dcd72e518ec7637565efec9cb50"
+    },
+    {
+      "order": 6,
+      "id": "@deepseek-ai/dsh-client-ui-layout",
+      "publicExport": "@deepseek-ai/dsh-client-ui-layout/client",
+      "sha256": "5a9e93ec65359683fe660e91831e2299ff28483b67bdd06b8a7c6cdfdf3d8607"
+    },
+    {
+      "order": 7,
+      "id": "@deepseek-ai/dsh-client-ui-renderer",
+      "publicExport": "@deepseek-ai/dsh-client-ui-renderer/client",
+      "sha256": "57cc5d86f23565ffe7909746fdcf5e84098ade4aaf3e8744e33654f1aac91144"
+    },
+    {
+      "order": 8,
+      "id": "@deepseek-ai/dsh-client-ui-session",
+      "publicExport": "@deepseek-ai/dsh-client-ui-session/client",
+      "sha256": "a794b82a58f6e7740041456fc3690596db98db6619749b97c49cd2443a89d5ae"
+    },
+    {
+      "order": 9,
+      "id": "@deepseek-ai/dsh-client-ui-sidebar",
+      "publicExport": "@deepseek-ai/dsh-client-ui-sidebar/client",
+      "sha256": "bde2fc86868432f804fbbc687ca5ef0890698e4d27522620ec997d6d15153816"
+    },
+    {
+      "order": 10,
+      "id": "@deepseek-ai/dsh-client-ui-settings",
+      "publicExport": "@deepseek-ai/dsh-client-ui-settings/client",
+      "sha256": "0cb26d506adcf6a5ec51e62fea537c1d5afe19d7be41b4cccaaa40fc33d9e486"
+    },
+    {
+      "order": 11,
+      "id": "@deepseek-ai/dsh-client-ui-settings-general",
+      "publicExport": "@deepseek-ai/dsh-client-ui-settings-general/client",
+      "sha256": "4faf105332b2e3beca646fa4c458d481faa06a7e9539c35c8f54a185b443189b"
+    },
+    {
+      "order": 12,
+      "id": "@deepseek-ai/dsh-client-ui-settings-models",
+      "publicExport": "@deepseek-ai/dsh-client-ui-settings-models/client",
+      "sha256": "c4e99652b3f49cc4e36756381c49266c4bde1c2379848fbd6dbd8cd0c5cccc07"
+    },
+    {
+      "order": 13,
+      "id": "@deepseek-ai/dsh-client-ui-conversation",
+      "publicExport": "@deepseek-ai/dsh-client-ui-conversation/client",
+      "sha256": "08444b1f96e3e3e1046d1c4769b61cf6c09d8d839f057a607915514d5d123827"
+    },
+    {
+      "order": 14,
+      "id": "@deepseek-ai/dsh-client-ui-approval",
+      "publicExport": "@deepseek-ai/dsh-client-ui-approval/client",
+      "sha256": "1cb6c0afad99e3a61f16da5078cbba2d6e8e33ce5a162947ac876674e7e74f54"
+    },
+    {
+      "order": 15,
+      "id": "@deepseek-ai/dsh-client-ui-chat",
+      "publicExport": "@deepseek-ai/dsh-client-ui-chat/client",
+      "sha256": "2d94875cb2e9d04d4d6392d1e0e4dfea392c88029d53a35ee4a28359865c82e1"
+    },
+    {
+      "order": 16,
+      "id": "@deepseek-ai/dsh-client-ui-tool",
+      "publicExport": "@deepseek-ai/dsh-client-ui-tool/client",
+      "sha256": "899647a2aae079137b37a7e171e46b0394e8000e796f74e52b9045496fbe7f17"
+    },
+    {
+      "order": 17,
+      "id": "@deepseek-ai/dsh-client-ui-workspace",
+      "publicExport": "@deepseek-ai/dsh-client-ui-workspace/client",
+      "sha256": "8c9836211951ec926134b50b0c0791e065a4e7c959cac289f13ec3d3753528af"
+    },
+    {
+      "order": 18,
+      "id": "@deepseek-ai/dsh-client-ui-directory-picker-browse",
+      "publicExport": "@deepseek-ai/dsh-client-ui-directory-picker-browse/client",
+      "sha256": "502ea0a442005b271e08af2b82db1b82820dae374997a3c9bc24b3cd812dbee4"
+    },
+    {
+      "order": 19,
+      "id": "@deepseek-ai/dsh-client-ui-input-trigger",
+      "publicExport": "@deepseek-ai/dsh-client-ui-input-trigger/client",
+      "sha256": "cc782452a703a1106499bcc1c54bbdd68bc939c99e3a399541d59a04391bc282"
+    },
+    {
+      "order": 20,
+      "id": "@deepseek-ai/dsh-client-ui-commands",
+      "publicExport": "@deepseek-ai/dsh-client-ui-commands/client",
+      "sha256": "3fb21f2f0ffc4c7e7bec57ab8029d3454a0f7f9d8990d274c4e20dcace051dc0"
+    },
+    {
+      "order": 21,
+      "id": "@deepseek-ai/dsh-client-ui-subagent",
+      "publicExport": "@deepseek-ai/dsh-client-ui-subagent/client",
+      "sha256": "590b9224d3e5a99cce88ba1e72d4b96f40fb328ac7ed69ad0e869f5c2d2bd9fb"
+    },
+    {
+      "order": 22,
+      "id": "@deepseek-ai/dsh-client-ui-model-selection",
+      "publicExport": "@deepseek-ai/dsh-client-ui-model-selection/client",
+      "sha256": "7c1c4aeb06f5b057ba484fd6b4729f866cecc5c558dda7870adca8a3beea28fb"
+    },
+    {
+      "order": 23,
+      "id": "@deepseek-ai/dsh-client-ui-permission-presets",
+      "publicExport": "@deepseek-ai/dsh-client-ui-permission-presets/client",
+      "sha256": "9a4279ba5fc1ca4e0b86175e88cd33a269294dd4cffbfd0f3a8badeb10de9ba8"
+    },
+    {
+      "order": 24,
+      "id": "@deepseek-ai/dsh-client-ui-user-questions",
+      "publicExport": "@deepseek-ai/dsh-client-ui-user-questions/client",
+      "sha256": "271fa5bae4a54fd92e217dd98b1286aaddde267ff31d3d93ed13dc8c0c60dbd5"
+    },
+    {
+      "order": 25,
+      "id": "@deepseek-ai/dsh-typert-registry",
+      "publicExport": "@deepseek-ai/dsh-typert-registry/client",
+      "sha256": "116a1d5ac12355d0713444368158c889cb0e926c7f89d4d35487d648fe30fd0a"
+    },
+    {
+      "order": 26,
+      "id": "@deepseek-ai/dsh-api-gateway",
+      "publicExport": "@deepseek-ai/dsh-api-gateway/client",
+      "sha256": "fe28e214b4bcc7fa35236e44ed541944e16bbf1ec003fc860e4d4bb09ec218b3"
+    },
+    {
+      "order": 27,
+      "id": "@deepseek-ai/dsh-api-session-controller",
+      "publicExport": "@deepseek-ai/dsh-api-session-controller/client",
+      "sha256": "52c8210e144d570c88f436da9434984d01ecbf141075ea766427fae85bc70ddb"
+    },
+    {
+      "order": 28,
+      "id": "@deepseek-ai/dsh-api-workspace-controller",
+      "publicExport": "@deepseek-ai/dsh-api-workspace-controller/client",
+      "sha256": "6142956344e24492f88649d52c66618d99580738d6c4b7c6f4d1a5394c3e5e5a"
+    }
+  ],
+  "immutable": [
+    {
+      "path": "docs/00-governance/SHACO-FORGE-V1-CUMULATIVE-REGRESSION-CLOSURE-GATE.md",
+      "bytes": 7381,
+      "sha256": "16775da48208e3de47bcf2a6811143ab78df20c410fb31c0f5021d55e9b16a1f"
+    },
+    {
+      "path": "docs/02-architecture/SHACO-FORGE-SECURITY-MODEL.md",
+      "bytes": 2924,
+      "sha256": "cfaa0dfa14c57d32f2c8b34547df82b49ead5b46bbea2844cab0cc6b3ef5bfd3"
+    },
+    {
+      "path": "docs/03-v1.0-plan/V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md",
+      "bytes": 12573,
+      "sha256": "68db86b526f3e046ac5168f154823817337dab37eea74c8f128f923a81df3c3f"
+    },
+    {
+      "path": "docs/03-v1.0-plan/V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md",
+      "bytes": 21972,
+      "sha256": "ad1d0ac21cab8c5e0794b02152bc1dc2cf27a090c50ec9338b47b7b9f9600cbb"
+    },
+    {
+      "path": "docs/03-v1.0-plan/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-CONTRACT-GATE.md",
+      "bytes": 33863,
+      "sha256": "6cad09319e8793c4cebf95c4dfae4cd04f644adbed1b0c51647e93901e42721b"
+    },
+    {
+      "path": "docs/04-development-records/V1-0-MAINLINE-AND-STEP1-SCOPE-RECONCILIATION-DECISION.md",
+      "bytes": 8975,
+      "sha256": "72c04fdd18e712a80b71335290bc1365f8d6e53a7325c39f4f798565477ef1fc"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-CONTRACT-FREEZE-AND-STEP1-AUTHORIZATION-DECISION.md",
+      "bytes": 4876,
+      "sha256": "a3995a64763a22f301dab536dfeabc4e118d069d52180bcc2fdfafb414f000e9"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-CONTROL-SERVER-ATTESTATION-SOURCE-CONFIRMATION.md",
+      "bytes": 3848,
+      "sha256": "40d6969cc1a175a5e2f68a237ea8c40a5725af8fedcc80083aa427f114c16c14"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-DESKTOP-ATTESTATION-BLOCKED-RECORD.md",
+      "bytes": 13346,
+      "sha256": "316aced5037634bb5acf41d9780f8f9db8185543fc2839eed970462102f1fd11"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-DECISION.md",
+      "bytes": 8134,
+      "sha256": "4bcc39c92498845eed3dc4e632b9e278341333cd12ea731829da5c41228e3202"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-REFREEZE-AND-REAUTHORIZATION-DECISION.md",
+      "bytes": 4748,
+      "sha256": "1561985fd51e3175ebce0e33c41812d7b62f166c96b37fa3f0f6c460835ba469"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-OWNER-CLOSURE-AND-FREEZE-DECISION.md",
+      "bytes": 12828,
+      "sha256": "2f2b57bdb695445f9ecfb235cc12e20ac823a881d003e6df33ab88cfb31ab869"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP1-WORKER-AUTHORITY-TRUSTED-DISCOVERY-IMPLEMENTATION-RECORD.md",
+      "bytes": 31178,
+      "sha256": "0cbfee1a9200b3f91772bd833bcf4774fc1e2d608669aebfb641137cab528089"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP2-CONNECTION-RECOVERY-COLD-PROJECTION-IMPLEMENTATION-RECORD.md",
+      "bytes": 40114,
+      "sha256": "06cf5c5628b78da256bf7ad32cf31402b92b97ddb338db86154c7cfb2672cca2"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP2-ENTRY-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md",
+      "bytes": 5822,
+      "sha256": "ce430440291098f5f5dd6ef024ae268711e7a60896596aac9192152358cd4b7f"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP2-OWNER-CLOSURE-AND-FREEZE-DECISION.md",
+      "bytes": 19003,
+      "sha256": "912d7a31c303ef33981668196357f6eb3e05c0cc3c2137673c1ce707abc4fb5d"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP2-SHARED-SOURCE-EXTENSION-SCOPE-CLARIFICATION-DECISION.md",
+      "bytes": 7257,
+      "sha256": "90e4f45a3cf5237cf7161fe5ecf21060df014c72bc85f75729ba79af6c3bc493"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP3-CONTRACT-GATE-FREEZE-AND-IMPLEMENTATION-AUTHORIZATION-DECISION.md",
+      "bytes": 8618,
+      "sha256": "acd1e8f0ea1a985edcbe7029731b918a4c2c5952b9b99bd227558c047e44ef70"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-G15-CORRECTIVE-01/attachment-sequence.json",
+      "bytes": 24253,
+      "sha256": "b8a30ed7b776a7c954a3be7e83d4394e146ad474ebe44667619f59619de55009"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-G15-CORRECTIVE-01/authority-identity.json",
+      "bytes": 44360,
+      "sha256": "25947dc165a6bbcd3da4e5512aa9c19e03fba10db33a2826c469052ba663b723"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-G15-CORRECTIVE-01/electron-regression.json",
+      "bytes": 20642,
+      "sha256": "aa17a2350ac4e6609d8a58f6f8fc6f804d21a658a212e101820cee1a9ca52978"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-G15-CORRECTIVE-01/g15-root-cause.json",
+      "bytes": 3248,
+      "sha256": "7b4f9b6aa69fea5a785610fb5adcc9d777dbe75812a7a270aaefa7996a42809f"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-G15-CORRECTIVE-01/g15-stop-delivery.json",
+      "bytes": 2100,
+      "sha256": "14d54c2d06802b58f1307a321b9ac65c4fa2f69c6324f9e4de616dce4990c376"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-G15-CORRECTIVE-01/redaction-summary.json",
+      "bytes": 1007,
+      "sha256": "cb9efa84f4363201000f26d6ca0a231a9cef454fc123c6b8643ef16cce4e4f44"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-G15-CORRECTIVE-01/remaining-gates.json",
+      "bytes": 1774,
+      "sha256": "fc131159435a6e40c5ad2f3677ed313163227a149de279670ef5abc31f6e38af"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-G15-CORRECTIVE-01/run-manifest.json",
+      "bytes": 3363,
+      "sha256": "d9ea39c0600558c9d19da9269700f115ff57cf3a1566a0d55b1842ac010b6316"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-G15-CORRECTIVE-01/security-negative-results.json",
+      "bytes": 43469,
+      "sha256": "a4eb6cc1f488a2b515284873644cdd41413e9136bee5baf361304050ac3234cf"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-G15-CORRECTIVE-01/test-summary.json",
+      "bytes": 1494,
+      "sha256": "48b50c554d37d311f482b144875dc2097ef715a5f1f9df3a31f2c9bd326b4d78"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/identity-probe-attempt-1.json",
+      "bytes": 439,
+      "sha256": "5387fd5ccccbc709b59610dbccd1b29e10c0061e6d1ad385d4fe2d4b0dad16b9"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/identity-probe-attempt-2.json",
+      "bytes": 982,
+      "sha256": "e25af8ee54167fd9060df923ca886070b55d97e446060f049ae681a8556cf4a9"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/process-lifecycle.json",
+      "bytes": 726,
+      "sha256": "7e0d843601060481caa36bb1463131b4c1d9759aae9c77eabe5a0b833309a2cb"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/redaction-summary.json",
+      "bytes": 3031,
+      "sha256": "2c247d6b213e62771fd155b39e6e4610b5bc4425df978fe2b4291d819668c7ff"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/run-manifest.json",
+      "bytes": 2296,
+      "sha256": "056eb1baa850b4f6c42f487e146ef7a565e8596f14e68a8acbdd5afca80acdf5"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/scenario-results.json",
+      "bytes": 4889,
+      "sha256": "2bd7b3ffc65be2ec54399ac1df6c591141294a47ed7e72351bdba5b6453de17d"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/security-negative-results.json",
+      "bytes": 1558,
+      "sha256": "d6e997c7c5fac9169f474d12ba18a2f20d6d8ea201aab5eddee9fbce95e934a9"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IDENTITY-01/test-summary.json",
+      "bytes": 2775,
+      "sha256": "720f27277e85f35f4cfe6bd2c878c0cd22de52f5bf1c802cf2c3f75664e3deea"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/attachment-sequence.json",
+      "bytes": 29867,
+      "sha256": "127648c48794c33812a068c93df12c86183bedd3f43723fe00e7418c793688be"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/authority-identity.json",
+      "bytes": 8461,
+      "sha256": "a8e294365dacddc199117b6725318a3cc33c8559be90af4d441ef54ddbdf48d7"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/electron-regression.json",
+      "bytes": 20607,
+      "sha256": "42c208eb44146a08266097baf88e8945ccfcc11d5cfefefda5da129ae8a5aba9"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/gate-results.json",
+      "bytes": 4449,
+      "sha256": "290863742c1ae754a0ad00565d9df7a45605c0f04d83bc73a0e3a5b5cc5a951c"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/process-lifecycle.json",
+      "bytes": 42542,
+      "sha256": "be707adcfe6f8d1a4b26255759f06cc92f057eb02d3b297f9236344aa4fc958d"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/redaction-summary.json",
+      "bytes": 5210,
+      "sha256": "6335495ebbaeb8b82fb0d261a0542c967db9fc61a11a53d1e6242c2250544403"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/run-manifest.json",
+      "bytes": 34775,
+      "sha256": "795e09f5a8ed0b612f53398ce508edaf45b58172bb910e7cfe0115174a357165"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/security-negative-results.json",
+      "bytes": 28255,
+      "sha256": "e1e0e6932c0bcb26611227295f6bf49fde7585da49747553c264080af55b1933"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-IMPLEMENTATION-01/test-summary.json",
+      "bytes": 6296,
+      "sha256": "0ff47bc8b36099058c09b09db3acfd46d87c12d6f7be1d1738f690af857d2db9"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/redaction-summary.json",
+      "bytes": 497,
+      "sha256": "9ccb64c87b05159098b1e843e277c0f92f17ea31b0c9702cf6a8bf5c129fa6ad"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/run-manifest.json",
+      "bytes": 763,
+      "sha256": "56f30936f867f03113a8ec610a116f5e3e503e12cabdc45a785bb5a01758281a"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/server-attestation-result.json",
+      "bytes": 1588,
+      "sha256": "b17eeb0753fe10f3a95ea13350715468a23390fed045396859bf24669ae19cbf"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-1/STEP1-20260909-SERVER-ATTESTATION-01/test-summary.json",
+      "bytes": 802,
+      "sha256": "51540ac82311b62d5076a51ea9ff2c33279798d78baee50118049a992dca662e"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01/gate-results.json",
+      "bytes": 9688,
+      "sha256": "64801631a0a1c1fbfe3d3bd11a471329d1980bd5ca5312cc4adfdb47a3265010"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01/powershell-resolution.json",
+      "bytes": 5559,
+      "sha256": "2f53b6272fe1eff5676dee571a1a58c64d8d17282e36fa434ffece6cedd3048d"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01/redaction-summary.json",
+      "bytes": 966,
+      "sha256": "dcf9767947a70c2ebde8ae1e12ffa3a7af112c4ca123eee0bf06baf07f47db7e"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01/run-manifest.json",
+      "bytes": 92260,
+      "sha256": "1688a5e192ff35b0eabcd10eae20bb95aa4a0ec0e6de3d9388f08c1dd6fd4822"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01/step1-regression.json",
+      "bytes": 151311,
+      "sha256": "6e16c36e355872c58f0aa9565462a9a08ead919daf9e9eade7645af6b54581b0"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01/step2-cumulative-e2e.json",
+      "bytes": 90778,
+      "sha256": "74abc2c105757125cfc0f8c686739ef10dcfb16926f30906e20d9542ca95c951"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-FINAL-VALIDATION-CORRECTIVE-01/test-summary.json",
+      "bytes": 12252,
+      "sha256": "2583f32d84f6e4c22035d8549c527fc8b679c0d163b4b9d3045c940d748297b9"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-IMPLEMENTATION-01/cold-projection.json",
+      "bytes": 9948,
+      "sha256": "0d4ff627a18dd77f505e20a10e569cb3d6fad60f9490659597a59e4d5deb842f"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-IMPLEMENTATION-01/cumulative-e2e.json",
+      "bytes": 94071,
+      "sha256": "c6197a8dcb51a2c3edbbe933aeda572139470431c3ac08ad7983d16b96585088"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-IMPLEMENTATION-01/gate-results.json",
+      "bytes": 9574,
+      "sha256": "2dc462ae7e796959529666be053cb287eac1cd55fadb77701b50d0d606c0383b"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-IMPLEMENTATION-01/generation-fencing.json",
+      "bytes": 3946,
+      "sha256": "876a2e438e6fc397620817e6ca614677542681ccb85614b76462482e45549c07"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-IMPLEMENTATION-01/mutation-outcome.json",
+      "bytes": 772,
+      "sha256": "461e37f698ae670a5d8a2dc6b832410b77e49fb6d41b7f594b10264b2d49d666"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-IMPLEMENTATION-01/recovery-state-machine.json",
+      "bytes": 22017,
+      "sha256": "9495140a8218b2f57b3d1c66419371a71b4442000b02f9561c008729086534b0"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-IMPLEMENTATION-01/redaction-summary.json",
+      "bytes": 958,
+      "sha256": "2f67491e83aa2512939e4ba2deaa40ecde9563862d138eba5285a849978ce382"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-IMPLEMENTATION-01/run-manifest.json",
+      "bytes": 59619,
+      "sha256": "3c98a749e2ad547796269be00fd12c23b0d4cd641f7ef1af3894cf309b8dc166"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-IMPLEMENTATION-01/test-summary.json",
+      "bytes": 17291,
+      "sha256": "653de7654a8cc996cfb5c74c8a1df92377fc0c1dceef9b904c449d03bc3787ba"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-2/STEP2-20260910-IMPLEMENTATION-01/worker-replacement.json",
+      "bytes": 2794,
+      "sha256": "513b3ee1817ad471327f2c9bf9f2884eb3d0bfd7a07dd3ad8e89426f62783ed1"
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-021-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-CORRECTIVE-REVIEW.md",
+      "bytes": 5707,
+      "sha256": "bc6a8eb711c6b4967092223ab6e98759cfd12f9b65c0e87312d8a45b752ce201"
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-022-V1-SLICE-2-STEP1-MINIMAL-TRUSTED-DISCOVERY-PERSISTED-DELTA-REVIEW.md",
+      "bytes": 3844,
+      "sha256": "95c4b76b7f33352a68a48b619712bf327e08d70fb00dcc367ad3edc927f19e14"
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-023-V1-SLICE-2-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md",
+      "bytes": 5367,
+      "sha256": "93a8f3f75cbd03cb0c017e0709c031441e8c533ec8c98f871d0a4cdb403893c3"
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-024-V1-SLICE-2-STEP2-INDEPENDENT-IMPLEMENTATION-REVIEW.md",
+      "bytes": 2874,
+      "sha256": "038d99caecd4cb53a098d844fb4edcc36e779fda54da9d78682608fa8df651c3"
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-024B-V1-SLICE-2-STEP2-GOVERNANCE-CORRECTIVE-REREVIEW.md",
+      "bytes": 1925,
+      "sha256": "e296f2d2366af8f953fc8b093c60647c68dc749890c6162bf621f3058ea31036"
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-024C-V1-SLICE-2-STEP2-CROSS-DOCUMENT-GOVERNANCE-CORRECTIVE-REREVIEW.md",
+      "bytes": 2108,
+      "sha256": "07ba2dee34cb12dc08e6c5ab9d30e5239bc18c0d3609cca1c5c0be4aad5233f6"
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-025-V1-SLICE-2-STEP3-CONTRACT-GATE-INDEPENDENT-REVIEW.md",
+      "bytes": 3282,
+      "sha256": "444a3c75d4d62e73dbc52d8c697c5266da79879eb41b36c9ad33d8ef84802d5f"
+    },
+    {
+      "path": "docs/05-reviews/architecture/AUDIT-025B-V1-SLICE-2-STEP3-CONTRACT-GATE-CORRECTIVE-REREVIEW.md",
+      "bytes": 3851,
+      "sha256": "1ec1848411cc585f25008be9ae9b26132bd03015f4b71b34c26087399f16efa3"
+    }
+  ],
+  "encodings": [
+    {
+      "path": "apps/desktop/index.html",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/package.json",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/scripts/frozen-harness-packages.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/scripts/prepare-harness-client.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/client/recovery.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/carrier-client.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/carrier-client.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/frame-observation.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/lifecycle-client.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/main.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/recovery-coordinator.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/recovery-coordinator.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/security.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/security.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/window-lifecycle.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/window-lifecycle.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/worker-supervisor.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/main/worker-supervisor.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/preload/preload.cts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/renderer/global.d.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/renderer/main.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/renderer/node-module-stub.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/renderer/shell-bootstrap.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/renderer/styles.css",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/renderer/theme/theme.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/renderer/theme/themes.css",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/renderer/theme/tokens.css",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/renderer/transport.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/src/renderer/user-loop-evidence.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step1-lifecycle-main.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step2-recovery-main.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/test-fixtures/supervisor-native-wait-worker.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/test-fixtures/supervisor-worker.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/tests/theme.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/tests/transport.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/tests/user-loop-evidence.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/tsconfig.node.json",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/tsconfig.renderer.json",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/tsconfig.test.json",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/desktop/vite.config.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/host-profile/carrier-gateway.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/host-profile/connection-compatibility.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/host-profile/events-route-preflight.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/host-profile/events-route-preflight.test.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/package.json",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/src/config.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/src/config.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/src/harness-readiness.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/src/harness-runtime.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/src/host-carrier-preflight.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/src/host-carrier-preflight.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/src/host-readiness-marker.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/src/host-readiness-marker.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/src/index.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/src/profile.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/src/profile.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "apps/worker/tsconfig.json",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "packages/contracts/package.json",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "packages/contracts/src/carrier.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "packages/contracts/src/carrier.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "packages/contracts/src/index.test.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "packages/contracts/src/index.ts",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "packages/contracts/tsconfig.json",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/build.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/electron-user-loop.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/runtime-paths.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/smoke-carrier.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/smoke-electron.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/smoke-slice2-step1.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/smoke-slice2-step2.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/smoke-user-loop.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/smoke-worker.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/step2-command.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/step2-evidence.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/step2-replacement-probe.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/tool-runner.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/typecheck.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/user-loop-policy.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/user-loop-policy.test.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/user-loop-revalidation-preflight.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/user-loop-revalidation.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/verify-static.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/verify-theme.mjs",
+      "encoding": "UTF-8"
+    },
+    {
+      "path": "scripts/verify-user-loop-hygiene.mjs",
+      "encoding": "UTF-8"
+    }
+  ],
+  "providerRuns": 0
+}

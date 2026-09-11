@@ -1,0 +1,3862 @@
+{
+  "result": "PASS",
+  "gates": {
+    "S3G16_APPROVAL": "PASS",
+    "S3G16_QUESTION": "PASS",
+    "S3G16_SESSION_BINDING": "PASS",
+    "S3G16_SINGLE_SETTLEMENT": "PASS",
+    "S3G16_DUPLICATE_PREVENTION": "PASS",
+    "S3G16_NO_AUTO_ANSWER": "PASS",
+    "S3G16_NO_AUTO_REPLAY": "PASS",
+    "S3G16_DISCONNECT_NOT_CANCEL": "PASS"
+  },
+  "cleanup": {
+    "noOrphan": true,
+    "authorityCount": 1,
+    "desktopProcessesExited": true
+  },
+  "desktopExits": [
+    {
+      "code": 0,
+      "gpuDiagnostic": false,
+      "sandboxDiagnostic": false,
+      "ipcDiagnostic": false
+    },
+    {
+      "code": 0,
+      "gpuDiagnostic": false,
+      "sandboxDiagnostic": false,
+      "ipcDiagnostic": false
+    },
+    {
+      "code": 0,
+      "gpuDiagnostic": false,
+      "sandboxDiagnostic": false,
+      "ipcDiagnostic": false
+    },
+    {
+      "code": 0,
+      "gpuDiagnostic": false,
+      "sandboxDiagnostic": false,
+      "ipcDiagnostic": false
+    }
+  ],
+  "providerRuns": 0,
+  "scenarios": {
+    "settings": {
+      "sidebarCount": 1,
+      "sidebarSeats": 0,
+      "brand": true,
+      "newChat": true,
+      "directory": true,
+      "currentSession": true,
+      "settingsAtBottom": true,
+      "forbiddenNavigation": false,
+      "conversation": true,
+      "conversationWidth": 1100,
+      "conversationHeight": 260,
+      "detailsCollapsed": true,
+      "requireAvailable": false,
+      "processAvailable": false,
+      "workspaceCapabilities": [
+        "pickDirectory"
+      ],
+      "promptRuns": 0,
+      "settings": {
+        "editor": true,
+        "fields": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "password": "password",
+        "protocolOptions": 4,
+        "error": false,
+        "localMutation": {
+          "localProfileWritten": true,
+          "modelEndpointProtocol": true,
+          "credentialSetUnset": true,
+          "secretInputCleared": true,
+          "providerCalls": 0,
+          "proof": "Frozen PiAiAdapter.listModels reads its local snapshot; no discoverModels or prompt invoked"
+        }
+      },
+      "screenshot": {
+        "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-FINALIZATION-01/runs/final-smoke-full-shaco-1/step2/step3-ui-11364-1.png",
+        "bytes": 65143,
+        "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b"
+      },
+      "providerRuns": 0
+    },
+    "controls": {
+      "result": "PASS",
+      "permissionRoundTrip": true,
+      "explicitFullAccessConfirmation": {
+        "visible": true,
+        "confirmDisabled": true,
+        "current": "read-only"
+      },
+      "modelSelectionRoundTrip": true,
+      "modelChanged": true,
+      "providerRuns": 0
+    },
+    "approval": {
+      "result": "PASS",
+      "kind": "approval",
+      "firstDesktop": {
+        "desktopPid": 11364,
+        "authority": {
+          "worker": {
+            "pid": 6196,
+            "startTime": "134335667721208633"
+          },
+          "host": {
+            "pid": 15508,
+            "startTime": "134335667797409625"
+          },
+          "helper": {
+            "pid": 3336,
+            "startTime": "134335667796376165"
+          },
+          "workerInstanceIdHash": "7fe0381e823738edb6831f22432a7188543c4b9524efe8818c6845f9d2703cac"
+        },
+        "clientInstanceIdHash": "f073790dd0ed439fd462bd7587f46b25e07da9d3f980373d523b2d41f526d816",
+        "gatewayClientHash": "77515019507d38bbeae61faa8260b6eabcf148fe056bbc8e2cfa99dd6c729506",
+        "recovery": {
+          "connectionState": "CONNECTED",
+          "generation": 1,
+          "authenticatedCarrier": true,
+          "clientGenerationReady": true,
+          "projectionRebuildComplete": true,
+          "continuity": "INITIAL"
+        },
+        "readProof": {
+          "eventsReady": true,
+          "workspaceBaseline": true,
+          "sessionRoster": true,
+          "sessionSnapshot": true,
+          "workspaceCount": 1,
+          "sessionCount": 1,
+          "historyCount": 3,
+          "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+          "workspaceHashes": [
+            "70fc645df24e86a877207e3c83496bb2636693ffb8cefdc21b360e2a8a4908c4"
+          ]
+        },
+        "ui": {
+          "projectionVisible": true,
+          "selected": true,
+          "approval": true,
+          "question": false,
+          "requireAvailable": false,
+          "processAvailable": false
+        },
+        "uiResults": 0,
+        "forbiddenCalls": 0,
+        "eventHash": "31aa5071fbf4e2f83709676ab674bdb0052a2249a753f187959c41c07d1b4ed7"
+      },
+      "hostBefore": {
+        "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+        "hostPid": 15508,
+        "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+        "exactLiveAgent": true,
+        "rootAgent": true,
+        "agentStatus": "idle",
+        "cancelCalls": 0,
+        "agentExecutionCalls": 0,
+        "stepStarts": 0,
+        "approvalAsked": 1,
+        "approvalDecided": 0,
+        "states": {
+          "approval": {
+            "calls": 1,
+            "pending": 1,
+            "settlements": 0,
+            "failures": 0,
+            "cancelled": 0
+          }
+        }
+      },
+      "disconnectedAuthoritySurvived": true,
+      "freshDesktop": {
+        "desktopPid": 20252,
+        "authority": {
+          "worker": {
+            "pid": 6196,
+            "startTime": "134335667721208633"
+          },
+          "host": {
+            "pid": 15508,
+            "startTime": "134335667797409625"
+          },
+          "helper": {
+            "pid": 3336,
+            "startTime": "134335667796376165"
+          },
+          "workerInstanceIdHash": "7fe0381e823738edb6831f22432a7188543c4b9524efe8818c6845f9d2703cac"
+        },
+        "clientInstanceIdHash": "7afe142f1f4a6827e960d3819c90a4c27b334cad4d7676681ca649c14f3122ba",
+        "gatewayClientHash": "4633763370f39ab31362ff16a9218a8f6a34707500b2f15cd6bc6e340d9a593d",
+        "recovery": {
+          "connectionState": "CONNECTED",
+          "generation": 1,
+          "authenticatedCarrier": true,
+          "clientGenerationReady": true,
+          "projectionRebuildComplete": true,
+          "continuity": "INITIAL"
+        },
+        "readProof": {
+          "eventsReady": true,
+          "workspaceBaseline": true,
+          "sessionRoster": true,
+          "sessionSnapshot": true,
+          "workspaceCount": 1,
+          "sessionCount": 1,
+          "historyCount": 15,
+          "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+          "workspaceHashes": [
+            "70fc645df24e86a877207e3c83496bb2636693ffb8cefdc21b360e2a8a4908c4"
+          ]
+        },
+        "ui": {
+          "projectionVisible": true,
+          "selected": true,
+          "approval": true,
+          "question": false,
+          "requireAvailable": false,
+          "processAvailable": false
+        },
+        "uiResults": 0,
+        "forbiddenCalls": 0,
+        "eventHash": "31aa5071fbf4e2f83709676ab674bdb0052a2249a753f187959c41c07d1b4ed7"
+      },
+      "hostRestored": {
+        "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+        "hostPid": 15508,
+        "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+        "exactLiveAgent": true,
+        "rootAgent": true,
+        "agentStatus": "idle",
+        "cancelCalls": 0,
+        "agentExecutionCalls": 0,
+        "stepStarts": 0,
+        "approvalAsked": 1,
+        "approvalDecided": 0,
+        "states": {
+          "approval": {
+            "calls": 1,
+            "pending": 1,
+            "settlements": 0,
+            "failures": 0,
+            "cancelled": 0
+          }
+        }
+      },
+      "finalHost": {
+        "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+        "hostPid": 15508,
+        "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+        "exactLiveAgent": true,
+        "rootAgent": true,
+        "agentStatus": "idle",
+        "cancelCalls": 0,
+        "agentExecutionCalls": 0,
+        "stepStarts": 0,
+        "approvalAsked": 1,
+        "approvalDecided": 1,
+        "states": {
+          "approval": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "outcome": "allowed-once"
+          }
+        }
+      },
+      "finalDesktop": {
+        "desktopPid": 20252,
+        "authority": {
+          "worker": {
+            "pid": 6196,
+            "startTime": "134335667721208633"
+          },
+          "host": {
+            "pid": 15508,
+            "startTime": "134335667797409625"
+          },
+          "helper": {
+            "pid": 3336,
+            "startTime": "134335667796376165"
+          },
+          "workerInstanceIdHash": "7fe0381e823738edb6831f22432a7188543c4b9524efe8818c6845f9d2703cac"
+        },
+        "clientInstanceIdHash": "7afe142f1f4a6827e960d3819c90a4c27b334cad4d7676681ca649c14f3122ba",
+        "gatewayClientHash": "4633763370f39ab31362ff16a9218a8f6a34707500b2f15cd6bc6e340d9a593d",
+        "recovery": {
+          "connectionState": "CONNECTED",
+          "generation": 1,
+          "authenticatedCarrier": true,
+          "clientGenerationReady": true,
+          "projectionRebuildComplete": true,
+          "continuity": "INITIAL"
+        },
+        "readProof": {
+          "eventsReady": true,
+          "workspaceBaseline": true,
+          "sessionRoster": true,
+          "sessionSnapshot": true,
+          "workspaceCount": 1,
+          "sessionCount": 1,
+          "historyCount": 15,
+          "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+          "workspaceHashes": [
+            "70fc645df24e86a877207e3c83496bb2636693ffb8cefdc21b360e2a8a4908c4"
+          ]
+        },
+        "ui": {
+          "projectionVisible": true,
+          "selected": true,
+          "approval": false,
+          "question": false,
+          "requireAvailable": false,
+          "processAvailable": false
+        },
+        "uiResults": 1,
+        "forbiddenCalls": 0
+      },
+      "staleRejected": true,
+      "staleReason": "NO_ACTIVE_EVENT_STREAM",
+      "duplicateSafeNoop": true,
+      "duplicateDelta": 0,
+      "implicitCancelDelta": 0,
+      "automaticAnswerDelta": 0,
+      "replayDelta": 0,
+      "successPath": "REAL_SHACO_UI_CONTROL_WITH_FROZEN_HARNESS_PUBLIC_PENDING_ANSWER",
+      "providerRuns": 0
+    },
+    "question": {
+      "result": "PASS",
+      "kind": "question",
+      "firstDesktop": {
+        "desktopPid": 20252,
+        "authority": {
+          "worker": {
+            "pid": 6196,
+            "startTime": "134335667721208633"
+          },
+          "host": {
+            "pid": 15508,
+            "startTime": "134335667797409625"
+          },
+          "helper": {
+            "pid": 3336,
+            "startTime": "134335667796376165"
+          },
+          "workerInstanceIdHash": "7fe0381e823738edb6831f22432a7188543c4b9524efe8818c6845f9d2703cac"
+        },
+        "clientInstanceIdHash": "7afe142f1f4a6827e960d3819c90a4c27b334cad4d7676681ca649c14f3122ba",
+        "gatewayClientHash": "4633763370f39ab31362ff16a9218a8f6a34707500b2f15cd6bc6e340d9a593d",
+        "recovery": {
+          "connectionState": "CONNECTED",
+          "generation": 1,
+          "authenticatedCarrier": true,
+          "clientGenerationReady": true,
+          "projectionRebuildComplete": true,
+          "continuity": "INITIAL"
+        },
+        "readProof": {
+          "eventsReady": true,
+          "workspaceBaseline": true,
+          "sessionRoster": true,
+          "sessionSnapshot": true,
+          "workspaceCount": 1,
+          "sessionCount": 1,
+          "historyCount": 15,
+          "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+          "workspaceHashes": [
+            "70fc645df24e86a877207e3c83496bb2636693ffb8cefdc21b360e2a8a4908c4"
+          ]
+        },
+        "ui": {
+          "projectionVisible": true,
+          "selected": true,
+          "approval": false,
+          "question": true,
+          "requireAvailable": false,
+          "processAvailable": false
+        },
+        "uiResults": 1,
+        "forbiddenCalls": 0,
+        "eventHash": "e03fcf70cbaf17e600f5cd6fac9fedb418f35aa5c08f9c3653e87d2cb57bcce4"
+      },
+      "hostBefore": {
+        "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+        "hostPid": 15508,
+        "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+        "exactLiveAgent": true,
+        "rootAgent": true,
+        "agentStatus": "idle",
+        "cancelCalls": 0,
+        "agentExecutionCalls": 0,
+        "stepStarts": 0,
+        "approvalAsked": 1,
+        "approvalDecided": 1,
+        "states": {
+          "approval": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "outcome": "allowed-once"
+          },
+          "question": {
+            "calls": 1,
+            "pending": 1,
+            "settlements": 0,
+            "failures": 0,
+            "cancelled": 0
+          }
+        }
+      },
+      "disconnectedAuthoritySurvived": true,
+      "freshDesktop": {
+        "desktopPid": 15904,
+        "authority": {
+          "worker": {
+            "pid": 6196,
+            "startTime": "134335667721208633"
+          },
+          "host": {
+            "pid": 15508,
+            "startTime": "134335667797409625"
+          },
+          "helper": {
+            "pid": 3336,
+            "startTime": "134335667796376165"
+          },
+          "workerInstanceIdHash": "7fe0381e823738edb6831f22432a7188543c4b9524efe8818c6845f9d2703cac"
+        },
+        "clientInstanceIdHash": "dcdc03b968a3b077857cb36c5fe7d4932bf38d252afe1b6b4ee04e53771bc623",
+        "gatewayClientHash": "a179a100f7044b632ccbb9d9c6cfe2f1c17820495ea1846fd0b3f9b14313604b",
+        "recovery": {
+          "connectionState": "CONNECTED",
+          "generation": 1,
+          "authenticatedCarrier": true,
+          "clientGenerationReady": true,
+          "projectionRebuildComplete": true,
+          "continuity": "INITIAL"
+        },
+        "readProof": {
+          "eventsReady": true,
+          "workspaceBaseline": true,
+          "sessionRoster": true,
+          "sessionSnapshot": true,
+          "workspaceCount": 1,
+          "sessionCount": 1,
+          "historyCount": 17,
+          "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+          "workspaceHashes": [
+            "70fc645df24e86a877207e3c83496bb2636693ffb8cefdc21b360e2a8a4908c4"
+          ]
+        },
+        "ui": {
+          "projectionVisible": true,
+          "selected": true,
+          "approval": false,
+          "question": true,
+          "requireAvailable": false,
+          "processAvailable": false
+        },
+        "uiResults": 0,
+        "forbiddenCalls": 0,
+        "eventHash": "e03fcf70cbaf17e600f5cd6fac9fedb418f35aa5c08f9c3653e87d2cb57bcce4"
+      },
+      "hostRestored": {
+        "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+        "hostPid": 15508,
+        "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+        "exactLiveAgent": true,
+        "rootAgent": true,
+        "agentStatus": "idle",
+        "cancelCalls": 0,
+        "agentExecutionCalls": 0,
+        "stepStarts": 0,
+        "approvalAsked": 1,
+        "approvalDecided": 1,
+        "states": {
+          "approval": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "outcome": "allowed-once"
+          },
+          "question": {
+            "calls": 1,
+            "pending": 1,
+            "settlements": 0,
+            "failures": 0,
+            "cancelled": 0
+          }
+        }
+      },
+      "finalHost": {
+        "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+        "hostPid": 15508,
+        "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+        "exactLiveAgent": true,
+        "rootAgent": true,
+        "agentStatus": "idle",
+        "cancelCalls": 0,
+        "agentExecutionCalls": 0,
+        "stepStarts": 0,
+        "approvalAsked": 1,
+        "approvalDecided": 1,
+        "states": {
+          "approval": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "outcome": "allowed-once"
+          },
+          "question": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "expectedAnswer": true
+          }
+        }
+      },
+      "finalDesktop": {
+        "desktopPid": 15904,
+        "authority": {
+          "worker": {
+            "pid": 6196,
+            "startTime": "134335667721208633"
+          },
+          "host": {
+            "pid": 15508,
+            "startTime": "134335667797409625"
+          },
+          "helper": {
+            "pid": 3336,
+            "startTime": "134335667796376165"
+          },
+          "workerInstanceIdHash": "7fe0381e823738edb6831f22432a7188543c4b9524efe8818c6845f9d2703cac"
+        },
+        "clientInstanceIdHash": "dcdc03b968a3b077857cb36c5fe7d4932bf38d252afe1b6b4ee04e53771bc623",
+        "gatewayClientHash": "a179a100f7044b632ccbb9d9c6cfe2f1c17820495ea1846fd0b3f9b14313604b",
+        "recovery": {
+          "connectionState": "CONNECTED",
+          "generation": 1,
+          "authenticatedCarrier": true,
+          "clientGenerationReady": true,
+          "projectionRebuildComplete": true,
+          "continuity": "INITIAL"
+        },
+        "readProof": {
+          "eventsReady": true,
+          "workspaceBaseline": true,
+          "sessionRoster": true,
+          "sessionSnapshot": true,
+          "workspaceCount": 1,
+          "sessionCount": 1,
+          "historyCount": 17,
+          "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+          "workspaceHashes": [
+            "70fc645df24e86a877207e3c83496bb2636693ffb8cefdc21b360e2a8a4908c4"
+          ]
+        },
+        "ui": {
+          "projectionVisible": true,
+          "selected": true,
+          "approval": false,
+          "question": false,
+          "requireAvailable": false,
+          "processAvailable": false
+        },
+        "uiResults": 1,
+        "forbiddenCalls": 0
+      },
+      "staleRejected": true,
+      "staleReason": "NO_ACTIVE_EVENT_STREAM",
+      "duplicateSafeNoop": true,
+      "duplicateDelta": 0,
+      "implicitCancelDelta": 0,
+      "automaticAnswerDelta": 0,
+      "replayDelta": 0,
+      "successPath": "REAL_SHACO_UI_CONTROL_WITH_FROZEN_HARNESS_PUBLIC_PENDING_ANSWER",
+      "providerRuns": 0
+    },
+    "plan": {
+      "result": "PASS",
+      "host": {
+        "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+        "hostPid": 15508,
+        "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+        "exactLiveAgent": true,
+        "rootAgent": true,
+        "agentStatus": "idle",
+        "cancelCalls": 0,
+        "agentExecutionCalls": 0,
+        "stepStarts": 0,
+        "approvalAsked": 1,
+        "approvalDecided": 1,
+        "states": {
+          "approval": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "outcome": "allowed-once"
+          },
+          "question": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "expectedAnswer": true
+          },
+          "plan": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "expectedAnswer": true
+          }
+        }
+      },
+      "completeAnswers": true,
+      "automaticAnswer": 0
+    },
+    "multi": {
+      "result": "PASS",
+      "host": {
+        "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+        "hostPid": 15508,
+        "sessionHash": "56c8d1c1c90e9f7b4484571dd03b290ba0d7de240608ea230790083a695a91f1",
+        "exactLiveAgent": true,
+        "rootAgent": true,
+        "agentStatus": "idle",
+        "cancelCalls": 0,
+        "agentExecutionCalls": 0,
+        "stepStarts": 0,
+        "approvalAsked": 1,
+        "approvalDecided": 1,
+        "states": {
+          "approval": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "outcome": "allowed-once"
+          },
+          "question": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "expectedAnswer": true
+          },
+          "plan": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "expectedAnswer": true
+          },
+          "multi": {
+            "calls": 1,
+            "pending": 0,
+            "settlements": 1,
+            "failures": 0,
+            "cancelled": 0,
+            "expectedAnswer": true
+          }
+        }
+      },
+      "completeAnswers": true,
+      "automaticAnswer": 0
+    },
+    "history": {
+      "result": "PASS",
+      "before": 50,
+      "after": 65,
+      "readFromRealSession": true
+    }
+  },
+  "visuals": [
+    {
+      "name": "no-project",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\no-project.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": false,
+        "approval": false,
+        "question": false,
+        "kinds": [],
+        "tools": [],
+        "geometry": {
+          "conversation": null,
+          "composer": null,
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "project-blank-chat",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\project-blank-chat.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "approval-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\approval-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "d9c91717de9f223b02ed200555dde533e9fdd98436189f23f418b00f0d4b4e2e",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": true,
+        "question": false,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "approval-cold-rebuild",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\approval-cold-rebuild.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "4f7c133e64d917fdf10c1679f18d7e9d6bc18e906c63a586357bdf843be57210",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": true,
+        "question": false,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "question-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\question-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "cc4093f7bf1a117f96f0fa5503f848e90a44b2592b1dba03f63a53f3f1800d86",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "question-cold-rebuild",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\question-cold-rebuild.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "7e36ab70ae21ae1e0bb4835a4d7b9dafe33b1f62aa3bad9ac5bbcd1b6abb163c",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "plan-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\plan-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "3f710bc712a31685cb2de73ab2e090d8ce1006387cde32d0c2433627c815ac94",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": true,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "multi-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\multi-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "f4b6b57b6026b843c4c71dd1684a56a38b5771244a25a31dcbe21e5bfd9de2b6",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "conversation-streaming",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\conversation-streaming.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "a51a156568537f31c3daf5b0c5b2944bd7906357a286cf7d4399db73598d1af3",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "conversation-tool",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\conversation-tool.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "ccf745ff1dc6b0a18bc4f92d471f292befebe45907a46e4c2367bb20e2f03718",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step"
+        ],
+        "tools": [
+          "running"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "conversation-result",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\conversation-result.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "91f54e6a7d26f4cd89d38c53b9a4db43986ddebb1a9b693d0e9df3dd0f832ada",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "tool-result-detail",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\tool-result-detail.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "136a038abc9e11ee536aa5199783e973df4e4d8ddd2737e26a51a738cb8dd221",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "conversation-error",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\conversation-error.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "8ff26fe71e8a5e7ddc1c7da686718a3cea1a7032492fb2a7970629ebccb7655d",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step",
+          "turn-error"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "shaco-settings",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\shaco-settings.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "4ba2cea2e44828f578a94c20e23e7facf1fdb444d1fef9930a39fd5762e593c7",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step",
+          "turn-error"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "narrow-window",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\narrow-window.png",
+      "width": 1149,
+      "height": 956,
+      "sha256": "b5d8ab31b7e6a70238f52061c7339671cecc9b90b3e96c3acdf34692121709c8",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step",
+          "turn-error"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 532,
+            "center": 492,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 548,
+            "center": 492,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 496,
+            "center": 492,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "shaco-root-error",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\shaco-root-error.png",
+      "width": 1149,
+      "height": 956,
+      "sha256": "af7d243fd1cec2baef96415708040e7f43c8d55a02d0685f19f0389aa13d0491",
+      "ui": {
+        "rootCount": 0,
+        "sidebarCount": 0,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": false,
+        "horizontalOverflow": false,
+        "composer": false,
+        "approval": false,
+        "question": false,
+        "kinds": [],
+        "tools": [],
+        "geometry": {
+          "conversation": null,
+          "composer": null,
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": true,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "history-cold-rebuild",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\history-cold-rebuild.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "c707f1a97dc6d65233dbce4586c3f8e2162637c7eed6fe2c9aec18755855f21a",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step",
+          "turn-error",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    }
+  ],
+  "themeSwitches": [
+    {
+      "result": "PASS",
+      "steps": [
+        {
+          "template": "FAMICOM",
+          "sameRoot": true,
+          "sameSessionTree": true,
+          "sameComposer": true,
+          "sameDraft": true,
+          "truth": {
+            "context": true,
+            "generation": true,
+            "workspaceSource": true,
+            "sessionSource": true,
+            "binding": true,
+            "chatTarget": true,
+            "pendingSource": true,
+            "pending": true,
+            "modelDirectory": true,
+            "modelSnapshot": true,
+            "permissionSource": true,
+            "permissionValue": true,
+            "settingsSource": true,
+            "settingsSnapshot": true
+          },
+          "promptsUnchanged": true,
+          "connectionUnchanged": true
+        },
+        {
+          "template": "FAMICOM",
+          "modes": [
+            {
+              "mode": "dark",
+              "resolved": "dark",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(48, 36, 32)"
+            },
+            {
+              "mode": "system",
+              "resolved": "light",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(251, 245, 233)"
+            },
+            {
+              "mode": "light",
+              "resolved": "light",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(251, 245, 233)"
+            }
+          ]
+        },
+        {
+          "name": "famicom-approval-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\famicom-approval-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "ce95521d44cceb295fcc66d9b4f16611e0e871fb0a5c1d0b290423119d7bdbb1",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "FAMICOM",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": true,
+            "question": false,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(251, 245, 233)",
+              "--surface-sidebar": "rgb(241, 234, 217)",
+              "--accent-primary": "rgb(146, 37, 41)",
+              "--control-radius": "4px",
+              "--template-decoration-height": "28px",
+              "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        },
+        {
+          "template": "BRAUN",
+          "sameRoot": true,
+          "sameSessionTree": true,
+          "sameComposer": true,
+          "sameDraft": true,
+          "truth": {
+            "context": true,
+            "generation": true,
+            "workspaceSource": true,
+            "sessionSource": true,
+            "binding": true,
+            "chatTarget": true,
+            "pendingSource": true,
+            "pending": true,
+            "modelDirectory": true,
+            "modelSnapshot": true,
+            "permissionSource": true,
+            "permissionValue": true,
+            "settingsSource": true,
+            "settingsSnapshot": true
+          },
+          "promptsUnchanged": true,
+          "connectionUnchanged": true
+        },
+        {
+          "template": "BRAUN",
+          "modes": [
+            {
+              "mode": "dark",
+              "resolved": "dark",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(32, 37, 32)"
+            },
+            {
+              "mode": "system",
+              "resolved": "light",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(248, 248, 246)"
+            },
+            {
+              "mode": "light",
+              "resolved": "light",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(248, 248, 246)"
+            }
+          ]
+        },
+        {
+          "name": "braun-approval-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\braun-approval-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "bae1ba04a694f1e1ac3e10a7d272a37dbce852326bb44325bc2e862f9473b40f",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": true,
+            "question": false,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ],
+      "providerRuns": 0
+    },
+    {
+      "result": "PASS",
+      "steps": [
+        {
+          "template": "FAMICOM",
+          "sameRoot": true,
+          "sameSessionTree": true,
+          "sameComposer": true,
+          "sameDraft": true,
+          "truth": {
+            "context": true,
+            "generation": true,
+            "workspaceSource": true,
+            "sessionSource": true,
+            "binding": true,
+            "chatTarget": true,
+            "pendingSource": true,
+            "pending": true,
+            "modelDirectory": true,
+            "modelSnapshot": true,
+            "permissionSource": true,
+            "permissionValue": true,
+            "settingsSource": true,
+            "settingsSnapshot": true
+          },
+          "promptsUnchanged": true,
+          "connectionUnchanged": true
+        },
+        {
+          "template": "FAMICOM",
+          "modes": [
+            {
+              "mode": "dark",
+              "resolved": "dark",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(48, 36, 32)"
+            },
+            {
+              "mode": "system",
+              "resolved": "light",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(251, 245, 233)"
+            },
+            {
+              "mode": "light",
+              "resolved": "light",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(251, 245, 233)"
+            }
+          ]
+        },
+        {
+          "name": "famicom-question-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\famicom-question-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "4e3024acb514248072a3d22a7f628589d14a5aa4072f45f07366360bcef9e695",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "FAMICOM",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": true,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(251, 245, 233)",
+              "--surface-sidebar": "rgb(241, 234, 217)",
+              "--accent-primary": "rgb(146, 37, 41)",
+              "--control-radius": "4px",
+              "--template-decoration-height": "28px",
+              "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        },
+        {
+          "template": "BRAUN",
+          "sameRoot": true,
+          "sameSessionTree": true,
+          "sameComposer": true,
+          "sameDraft": true,
+          "truth": {
+            "context": true,
+            "generation": true,
+            "workspaceSource": true,
+            "sessionSource": true,
+            "binding": true,
+            "chatTarget": true,
+            "pendingSource": true,
+            "pending": true,
+            "modelDirectory": true,
+            "modelSnapshot": true,
+            "permissionSource": true,
+            "permissionValue": true,
+            "settingsSource": true,
+            "settingsSnapshot": true
+          },
+          "promptsUnchanged": true,
+          "connectionUnchanged": true
+        },
+        {
+          "template": "BRAUN",
+          "modes": [
+            {
+              "mode": "dark",
+              "resolved": "dark",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(32, 37, 32)"
+            },
+            {
+              "mode": "system",
+              "resolved": "light",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(248, 248, 246)"
+            },
+            {
+              "mode": "light",
+              "resolved": "light",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(248, 248, 246)"
+            }
+          ]
+        },
+        {
+          "name": "braun-question-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\braun-question-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "62c9005906d8396c49132c3f78852860f80007bf410b57bd7d04e6f403a2bbda",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": true,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ],
+      "providerRuns": 0
+    },
+    {
+      "result": "PASS",
+      "steps": [
+        {
+          "template": "FAMICOM",
+          "sameRoot": true,
+          "sameSessionTree": true,
+          "sameComposer": true,
+          "sameDraft": true,
+          "truth": {
+            "context": true,
+            "generation": true,
+            "workspaceSource": true,
+            "sessionSource": true,
+            "binding": true,
+            "chatTarget": true,
+            "pendingSource": true,
+            "pending": true,
+            "modelDirectory": true,
+            "modelSnapshot": true,
+            "permissionSource": true,
+            "permissionValue": true,
+            "settingsSource": true,
+            "settingsSnapshot": true
+          },
+          "promptsUnchanged": true,
+          "connectionUnchanged": true
+        },
+        {
+          "template": "FAMICOM",
+          "modes": [
+            {
+              "mode": "dark",
+              "resolved": "dark",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(48, 36, 32)"
+            },
+            {
+              "mode": "system",
+              "resolved": "light",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(251, 245, 233)"
+            },
+            {
+              "mode": "light",
+              "resolved": "light",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(251, 245, 233)"
+            }
+          ]
+        },
+        {
+          "name": "famicom-plan-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\famicom-plan-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "ba52874dcc4f71664f595cbfe1371150e230a0e4d863c5473450fca9d752ceca",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "FAMICOM",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": true,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": true,
+            "tokens": {
+              "--surface-primary": "rgb(251, 245, 233)",
+              "--surface-sidebar": "rgb(241, 234, 217)",
+              "--accent-primary": "rgb(146, 37, 41)",
+              "--control-radius": "4px",
+              "--template-decoration-height": "28px",
+              "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        },
+        {
+          "template": "BRAUN",
+          "sameRoot": true,
+          "sameSessionTree": true,
+          "sameComposer": true,
+          "sameDraft": true,
+          "truth": {
+            "context": true,
+            "generation": true,
+            "workspaceSource": true,
+            "sessionSource": true,
+            "binding": true,
+            "chatTarget": true,
+            "pendingSource": true,
+            "pending": true,
+            "modelDirectory": true,
+            "modelSnapshot": true,
+            "permissionSource": true,
+            "permissionValue": true,
+            "settingsSource": true,
+            "settingsSnapshot": true
+          },
+          "promptsUnchanged": true,
+          "connectionUnchanged": true
+        },
+        {
+          "template": "BRAUN",
+          "modes": [
+            {
+              "mode": "dark",
+              "resolved": "dark",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(32, 37, 32)"
+            },
+            {
+              "mode": "system",
+              "resolved": "light",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(248, 248, 246)"
+            },
+            {
+              "mode": "light",
+              "resolved": "light",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(248, 248, 246)"
+            }
+          ]
+        },
+        {
+          "name": "braun-plan-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\braun-plan-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "0def62ff70ba0a297d0b8bd56dfd2e38c8289fad338713bcd4050a5c18810082",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": true,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": true,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ],
+      "providerRuns": 0
+    },
+    {
+      "result": "PASS",
+      "steps": [
+        {
+          "template": "FAMICOM",
+          "sameRoot": true,
+          "sameSessionTree": true,
+          "sameComposer": true,
+          "sameDraft": true,
+          "truth": {
+            "context": true,
+            "generation": true,
+            "workspaceSource": true,
+            "sessionSource": true,
+            "binding": true,
+            "chatTarget": true,
+            "pendingSource": true,
+            "pending": true,
+            "modelDirectory": true,
+            "modelSnapshot": true,
+            "permissionSource": true,
+            "permissionValue": true,
+            "settingsSource": true,
+            "settingsSnapshot": true
+          },
+          "promptsUnchanged": true,
+          "connectionUnchanged": true
+        },
+        {
+          "template": "FAMICOM",
+          "modes": [
+            {
+              "mode": "dark",
+              "resolved": "dark",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(48, 36, 32)"
+            },
+            {
+              "mode": "system",
+              "resolved": "light",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(251, 245, 233)"
+            },
+            {
+              "mode": "light",
+              "resolved": "light",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(251, 245, 233)"
+            }
+          ]
+        },
+        {
+          "name": "famicom-multi-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\famicom-multi-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "cce9fc3739aeee3ddddc83e55f98aa63462169931028e2cad09fea8cb4d26d6c",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "FAMICOM",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": true,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(251, 245, 233)",
+              "--surface-sidebar": "rgb(241, 234, 217)",
+              "--accent-primary": "rgb(146, 37, 41)",
+              "--control-radius": "4px",
+              "--template-decoration-height": "28px",
+              "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        },
+        {
+          "template": "BRAUN",
+          "sameRoot": true,
+          "sameSessionTree": true,
+          "sameComposer": true,
+          "sameDraft": true,
+          "truth": {
+            "context": true,
+            "generation": true,
+            "workspaceSource": true,
+            "sessionSource": true,
+            "binding": true,
+            "chatTarget": true,
+            "pendingSource": true,
+            "pending": true,
+            "modelDirectory": true,
+            "modelSnapshot": true,
+            "permissionSource": true,
+            "permissionValue": true,
+            "settingsSource": true,
+            "settingsSnapshot": true
+          },
+          "promptsUnchanged": true,
+          "connectionUnchanged": true
+        },
+        {
+          "template": "BRAUN",
+          "modes": [
+            {
+              "mode": "dark",
+              "resolved": "dark",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(32, 37, 32)"
+            },
+            {
+              "mode": "system",
+              "resolved": "light",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(248, 248, 246)"
+            },
+            {
+              "mode": "light",
+              "resolved": "light",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(248, 248, 246)"
+            }
+          ]
+        },
+        {
+          "name": "braun-multi-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\braun-multi-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "f4b6b57b6026b843c4c71dd1684a56a38b5771244a25a31dcbe21e5bfd9de2b6",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": true,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ],
+      "providerRuns": 0
+    },
+    {
+      "result": "PASS",
+      "steps": [
+        {
+          "template": "FAMICOM",
+          "sameRoot": true,
+          "sameSessionTree": true,
+          "sameComposer": true,
+          "sameDraft": true,
+          "truth": {
+            "context": true,
+            "generation": true,
+            "workspaceSource": true,
+            "sessionSource": true,
+            "binding": true,
+            "chatTarget": true,
+            "pendingSource": true,
+            "pending": true,
+            "modelDirectory": true,
+            "modelSnapshot": true,
+            "permissionSource": true,
+            "permissionValue": true,
+            "settingsSource": true,
+            "settingsSnapshot": true
+          },
+          "promptsUnchanged": true,
+          "connectionUnchanged": true
+        },
+        {
+          "template": "FAMICOM",
+          "modes": [
+            {
+              "mode": "dark",
+              "resolved": "dark",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(48, 36, 32)"
+            },
+            {
+              "mode": "system",
+              "resolved": "light",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(251, 245, 233)"
+            },
+            {
+              "mode": "light",
+              "resolved": "light",
+              "template": "FAMICOM",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(251, 245, 233)"
+            }
+          ]
+        },
+        {
+          "name": "famicom-representative",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\famicom-representative.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "d28d1310ff5e88f81ed2e0cfeb762578fda205cf635b3dc72e36dce79b777222",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "FAMICOM",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": false,
+            "kinds": [
+              "command",
+              "command",
+              "user",
+              "assistant-step",
+              "turn-error"
+            ],
+            "tools": [
+              "settled"
+            ],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": {
+                "width": 1044,
+                "center": 845,
+                "maxWidth": "none"
+              }
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(251, 245, 233)",
+              "--surface-sidebar": "rgb(241, 234, 217)",
+              "--accent-primary": "rgb(146, 37, 41)",
+              "--control-radius": "4px",
+              "--template-decoration-height": "28px",
+              "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        },
+        {
+          "template": "BRAUN",
+          "sameRoot": true,
+          "sameSessionTree": true,
+          "sameComposer": true,
+          "sameDraft": true,
+          "truth": {
+            "context": true,
+            "generation": true,
+            "workspaceSource": true,
+            "sessionSource": true,
+            "binding": true,
+            "chatTarget": true,
+            "pendingSource": true,
+            "pending": true,
+            "modelDirectory": true,
+            "modelSnapshot": true,
+            "permissionSource": true,
+            "permissionValue": true,
+            "settingsSource": true,
+            "settingsSnapshot": true
+          },
+          "promptsUnchanged": true,
+          "connectionUnchanged": true
+        },
+        {
+          "template": "BRAUN",
+          "modes": [
+            {
+              "mode": "dark",
+              "resolved": "dark",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(32, 37, 32)"
+            },
+            {
+              "mode": "system",
+              "resolved": "light",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(248, 248, 246)"
+            },
+            {
+              "mode": "light",
+              "resolved": "light",
+              "template": "BRAUN",
+              "truth": {
+                "context": true,
+                "generation": true,
+                "workspaceSource": true,
+                "sessionSource": true,
+                "binding": true,
+                "chatTarget": true,
+                "pendingSource": true,
+                "pending": true,
+                "modelDirectory": true,
+                "modelSnapshot": true,
+                "permissionSource": true,
+                "permissionValue": true,
+                "settingsSource": true,
+                "settingsSnapshot": true
+              },
+              "surface": "rgb(248, 248, 246)"
+            }
+          ]
+        },
+        {
+          "name": "braun-representative",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-IFR01-FINALIZATION-01\\runs\\final-smoke-full-shaco-1\\step2\\braun-representative.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "8ff26fe71e8a5e7ddc1c7da686718a3cea1a7032492fb2a7970629ebccb7655d",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": false,
+            "kinds": [
+              "command",
+              "command",
+              "user",
+              "assistant-step",
+              "turn-error"
+            ],
+            "tools": [
+              "settled"
+            ],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": {
+                "width": 1044,
+                "center": 845,
+                "maxWidth": "none"
+              }
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ],
+      "providerRuns": 0
+    }
+  ],
+  "composition": {
+    "state": "FROZEN",
+    "graphRevision": "shaco-v1-slice-2-step3-full-shaco-dual-theme-cd5ef81",
+    "totalRows": 29,
+    "rows": [
+      {
+        "id": "@deepseek-ai/dsh-client-modules",
+        "publicExport": "@deepseek-ai/dsh-client-modules/client",
+        "bytes": 18621,
+        "sha256": "9361241bfbe8a02864df5df9fabf9fbbfa0f5a1914025badab36bdf1b9481751"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-connection",
+        "publicExport": "@deepseek-ai/dsh-client-connection/client",
+        "bytes": 155447,
+        "sha256": "d90ac3ecd5a1fa6eda2ad19639b739daca4b3b5c988c544fc4bffcff6b3c030e"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-remotes",
+        "publicExport": "@deepseek-ai/dsh-api-remotes/client",
+        "bytes": 303878,
+        "sha256": "7eb837812f3bd9978e9f20e0bef6cdb8c1d47f1e288912fab9b930827290cb3a"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-theme",
+        "publicExport": "@deepseek-ai/dsh-client-ui-theme/client",
+        "bytes": 90122,
+        "sha256": "8d8e115c5fb3ba1fcb1f857eea860a0cf02d1c25d3bd779be20a622477c0605a"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-locale",
+        "publicExport": "@deepseek-ai/dsh-client-locale/client",
+        "bytes": 55693,
+        "sha256": "6eff57ca0085b7946344e99208a47d5794812dcd72e518ec7637565efec9cb50"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-layout",
+        "publicExport": "@deepseek-ai/dsh-client-ui-layout/client",
+        "bytes": 20729,
+        "sha256": "5a9e93ec65359683fe660e91831e2299ff28483b67bdd06b8a7c6cdfdf3d8607"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-renderer",
+        "publicExport": "@deepseek-ai/dsh-client-ui-renderer/client",
+        "bytes": 56834,
+        "sha256": "57cc5d86f23565ffe7909746fdcf5e84098ade4aaf3e8744e33654f1aac91144"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-session",
+        "publicExport": "@deepseek-ai/dsh-client-ui-session/client",
+        "bytes": 12529,
+        "sha256": "a794b82a58f6e7740041456fc3690596db98db6619749b97c49cd2443a89d5ae"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-sidebar",
+        "publicExport": "@deepseek-ai/dsh-client-ui-sidebar/client",
+        "bytes": 18472,
+        "sha256": "bde2fc86868432f804fbbc687ca5ef0890698e4d27522620ec997d6d15153816"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings",
+        "publicExport": "@deepseek-ai/dsh-client-ui-settings/client",
+        "bytes": 51645,
+        "sha256": "0cb26d506adcf6a5ec51e62fea537c1d5afe19d7be41b4cccaaa40fc33d9e486"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings-general",
+        "publicExport": "@deepseek-ai/dsh-client-ui-settings-general/client",
+        "bytes": 26589,
+        "sha256": "4faf105332b2e3beca646fa4c458d481faa06a7e9539c35c8f54a185b443189b"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-settings-models",
+        "publicExport": "@deepseek-ai/dsh-client-ui-settings-models/client",
+        "bytes": 134352,
+        "sha256": "c4e99652b3f49cc4e36756381c49266c4bde1c2379848fbd6dbd8cd0c5cccc07"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-conversation",
+        "publicExport": "@deepseek-ai/dsh-client-ui-conversation/client",
+        "bytes": 603240,
+        "sha256": "08444b1f96e3e3e1046d1c4769b61cf6c09d8d839f057a607915514d5d123827"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-approval",
+        "publicExport": "@deepseek-ai/dsh-client-ui-approval/client",
+        "bytes": 11588,
+        "sha256": "1cb6c0afad99e3a61f16da5078cbba2d6e8e33ce5a162947ac876674e7e74f54"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-chat",
+        "publicExport": "@deepseek-ai/dsh-client-ui-chat/client",
+        "bytes": 331443,
+        "sha256": "2d94875cb2e9d04d4d6392d1e0e4dfea392c88029d53a35ee4a28359865c82e1"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-tool",
+        "publicExport": "@deepseek-ai/dsh-client-ui-tool/client",
+        "bytes": 93027,
+        "sha256": "899647a2aae079137b37a7e171e46b0394e8000e796f74e52b9045496fbe7f17"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-workspace",
+        "publicExport": "@deepseek-ai/dsh-client-ui-workspace/client",
+        "bytes": 124648,
+        "sha256": "8c9836211951ec926134b50b0c0791e065a4e7c959cac289f13ec3d3753528af"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-directory-picker-browse",
+        "publicExport": "@deepseek-ai/dsh-client-ui-directory-picker-browse/client",
+        "bytes": 49256,
+        "sha256": "502ea0a442005b271e08af2b82db1b82820dae374997a3c9bc24b3cd812dbee4"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-input-trigger",
+        "publicExport": "@deepseek-ai/dsh-client-ui-input-trigger/client",
+        "bytes": 47222,
+        "sha256": "cc782452a703a1106499bcc1c54bbdd68bc939c99e3a399541d59a04391bc282"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-commands",
+        "publicExport": "@deepseek-ai/dsh-client-ui-commands/client",
+        "bytes": 46095,
+        "sha256": "3fb21f2f0ffc4c7e7bec57ab8029d3454a0f7f9d8990d274c4e20dcace051dc0"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-subagent",
+        "publicExport": "@deepseek-ai/dsh-client-ui-subagent/client",
+        "bytes": 42308,
+        "sha256": "590b9224d3e5a99cce88ba1e72d4b96f40fb328ac7ed69ad0e869f5c2d2bd9fb"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-model-selection",
+        "publicExport": "@deepseek-ai/dsh-client-ui-model-selection/client",
+        "bytes": 39908,
+        "sha256": "7c1c4aeb06f5b057ba484fd6b4729f866cecc5c558dda7870adca8a3beea28fb"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-permission-presets",
+        "publicExport": "@deepseek-ai/dsh-client-ui-permission-presets/client",
+        "bytes": 19660,
+        "sha256": "9a4279ba5fc1ca4e0b86175e88cd33a269294dd4cffbfd0f3a8badeb10de9ba8"
+      },
+      {
+        "id": "@deepseek-ai/dsh-client-ui-user-questions",
+        "publicExport": "@deepseek-ai/dsh-client-ui-user-questions/client",
+        "bytes": 42862,
+        "sha256": "271fa5bae4a54fd92e217dd98b1286aaddde267ff31d3d93ed13dc8c0c60dbd5"
+      },
+      {
+        "id": "@deepseek-ai/dsh-typert-registry",
+        "publicExport": "@deepseek-ai/dsh-typert-registry/client",
+        "bytes": 52652,
+        "sha256": "116a1d5ac12355d0713444368158c889cb0e926c7f89d4d35487d648fe30fd0a"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-gateway",
+        "publicExport": "@deepseek-ai/dsh-api-gateway/client",
+        "bytes": 66752,
+        "sha256": "fe28e214b4bcc7fa35236e44ed541944e16bbf1ec003fc860e4d4bb09ec218b3"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-session-controller",
+        "publicExport": "@deepseek-ai/dsh-api-session-controller/client",
+        "bytes": 108523,
+        "sha256": "52c8210e144d570c88f436da9434984d01ecbf141075ea766427fae85bc70ddb"
+      },
+      {
+        "id": "@deepseek-ai/dsh-api-workspace-controller",
+        "publicExport": "@deepseek-ai/dsh-api-workspace-controller/client",
+        "bytes": 16224,
+        "sha256": "6142956344e24492f88649d52c66618d99580738d6c4b7c6f4d1a5394c3e5e5a"
+      },
+      {
+        "id": "@shaco-forge/desktop",
+        "publicExport": "@shaco-forge/desktop/client",
+        "bytes": 59036,
+        "sha256": "c5ca982077b5e48c4693340a6baf774779e781529386ef4eb51703902241850d"
+      }
+    ],
+    "manifestSha256": "b1bb7d6b080b6b5eebe8578a810b231a28dc2624d464fa8100b8df273f8ded8d",
+    "bootstrapSha256": "4e5e67c4dd9f6c19c7470f5a4c97074fd9cf08eb89734e27111a2d80bc8dbe57",
+    "applicationSha256": "3b907282bbe13229bdcecbc93117be310fc558c9c853b1c425fdb3d6e866238e",
+    "source": [
+      {
+        "path": "apps/desktop/THIRD_PARTY_NOTICES.md",
+        "sha256": "e94466be34da418f5358945857faecea05e329b8a1df39083788d0ab3337bcaa"
+      },
+      {
+        "path": "apps/desktop/index.html",
+        "sha256": "7450bbfdf26a55474b156a76e203f1cbc0453c9d0b1141e21e9f7add1386df43"
+      },
+      {
+        "path": "apps/desktop/package.json",
+        "sha256": "98a36a15ac220a2e6c129e418e7aaf6f681f1f0968b433f78b909f75a7ff5834"
+      },
+      {
+        "path": "apps/desktop/scripts/composition-identity.mjs",
+        "sha256": "a594fa58f61827f409afaa4ea4ecd1350b568d6a1314fc8c18fe28c32f2f60d4"
+      },
+      {
+        "path": "apps/desktop/scripts/frozen-harness-packages.mjs",
+        "sha256": "1928c33d5a6cf07512ee836f8cf13385e3f28b7f0cba78bd5a549885579f9284"
+      },
+      {
+        "path": "apps/desktop/scripts/prepare-harness-client.mjs",
+        "sha256": "9ca71236fe9a18c581e6116f32d3ff0820fe64da0ebde53f9fa74b6ec6c38aff"
+      },
+      {
+        "path": "apps/desktop/src/client/composer.mjs",
+        "sha256": "03773d6697c9650727d7ca4caa68dd5bff778bf2d46180bcf66bd8a80e0247f2"
+      },
+      {
+        "path": "apps/desktop/src/client/conversation.mjs",
+        "sha256": "5b084a11ba6a6f2d00f89502c076f93a8bc86503cd83948735cd9c14834b617e"
+      },
+      {
+        "path": "apps/desktop/src/client/interactions.mjs",
+        "sha256": "040bc4be461ec4fe59bcdfc4d9b0e400a6de512965d7eb5a2a93f20928aca912"
+      },
+      {
+        "path": "apps/desktop/src/client/message.mjs",
+        "sha256": "30c89f50c432b0a1f6caf569b64fe6d917b6ee9facec5ce4e8f3474844d7c3a0"
+      },
+      {
+        "path": "apps/desktop/src/client/presentation-actions.mjs",
+        "sha256": "8c30c7133f959f1891d8cb5be6718e6278b6b400a47f8d8bdde52601cb5f3d7a"
+      },
+      {
+        "path": "apps/desktop/src/client/presentation-hooks.mjs",
+        "sha256": "9f89a1302683416a2aaa60e3c2ec91bb1d4aaafb370b13fc35836cfb168ac181"
+      },
+      {
+        "path": "apps/desktop/src/client/recovery.mjs",
+        "sha256": "7a18dc3d17fbcbfb97df207bccf25f0f9b9069af837648e960ba89bf7724476f"
+      },
+      {
+        "path": "apps/desktop/src/client/settings.mjs",
+        "sha256": "b60b2e3d0d585daec61270c7deabfd37f3ed8a110d56a0deb30a8b6337a206f6"
+      },
+      {
+        "path": "apps/desktop/src/client/shaco-root.mjs",
+        "sha256": "89dfcf5c63474f7c11318a19aac6b5be462c1b59cbe9147cc6737dfb467d0ecf"
+      },
+      {
+        "path": "apps/desktop/src/client/shell-state.mjs",
+        "sha256": "cb58eb8ccf61ed5eeb52af7838c2771bf9e44a3e911bc3aeb2380617c1895926"
+      },
+      {
+        "path": "apps/desktop/src/client/shell-state.test.mjs",
+        "sha256": "f46248b17f8af20587ef4b047811e8548e63eb33267e605161e4d62a25ab520e"
+      },
+      {
+        "path": "apps/desktop/src/client/sidebar.mjs",
+        "sha256": "84314ffea63bad2f211720c2f227163a82bc9374a3b35ad44d4326737e31f7c7"
+      },
+      {
+        "path": "apps/desktop/src/main/carrier-client.test.ts",
+        "sha256": "44d562c90c72b6c300beb2d7b7a9fbb8d6cd5ae10da638a82806993396b0e0a8"
+      },
+      {
+        "path": "apps/desktop/src/main/carrier-client.ts",
+        "sha256": "a91bc29704af2f665bc78016fec8fef79a098966c6f13dfc61e20505e6f8e6aa"
+      },
+      {
+        "path": "apps/desktop/src/main/frame-observation.test.ts",
+        "sha256": "393b30af30486f71cee48ef1e82a042b1bd5969f0ef5051716266cbf400fd12b"
+      },
+      {
+        "path": "apps/desktop/src/main/lifecycle-client.ts",
+        "sha256": "d780f11a0a554875d68804d550d5b23f7d9eac2a26d8da80073141bc11ec1f88"
+      },
+      {
+        "path": "apps/desktop/src/main/main.ts",
+        "sha256": "a5d8c5be37f8fd3703d0009d5767e86c6d37c43e8b452adaa7b5005da12b58bf"
+      },
+      {
+        "path": "apps/desktop/src/main/recovery-coordinator.test.ts",
+        "sha256": "9bf18ae36eaa4ae0f4a9a5a43c04deed486518a70777c69482f1c8e9ea0ddee2"
+      },
+      {
+        "path": "apps/desktop/src/main/recovery-coordinator.ts",
+        "sha256": "5c64b02f7b657703683973501d18f629e404fe4c30a67ea518eb6a712db35ead"
+      },
+      {
+        "path": "apps/desktop/src/main/security.test.ts",
+        "sha256": "1f4163436926e3de67baa2dda15139dfceefc866992f29912675ed2c8d9d80de"
+      },
+      {
+        "path": "apps/desktop/src/main/security.ts",
+        "sha256": "6bf43e273e9a75c49d74be1c0828f09505f941e16cb0288ecc30463598d8ec6c"
+      },
+      {
+        "path": "apps/desktop/src/main/window-lifecycle.test.ts",
+        "sha256": "830dc7190cd9fc578513d58eb5ecbc5000eac6b143161b1cf154c04a96e46178"
+      },
+      {
+        "path": "apps/desktop/src/main/window-lifecycle.ts",
+        "sha256": "f6d1eecc199ba33ba2209f4035123fe4cf8951d897684ebce6744759f01757e2"
+      },
+      {
+        "path": "apps/desktop/src/main/worker-supervisor.test.ts",
+        "sha256": "1f474d0248de211d0a725f9861af7da3fe655d484ca28e6edb5108c56a2da52e"
+      },
+      {
+        "path": "apps/desktop/src/main/worker-supervisor.ts",
+        "sha256": "f4bb08dd5557956c8d444248fb4d0263df523de643decfee27058e2f467e7bd5"
+      },
+      {
+        "path": "apps/desktop/src/main/workspace-picker.test.ts",
+        "sha256": "26aebc8d565c52d916bdc20314977988a01a487b28541e32bd6788bc13718980"
+      },
+      {
+        "path": "apps/desktop/src/main/workspace-picker.ts",
+        "sha256": "e2443e4f1503497db0c60649839188ad8d169b011572470a4fdc00abd5c3493c"
+      },
+      {
+        "path": "apps/desktop/src/preload/preload.cts",
+        "sha256": "00dc5ffceaf121e8138e216842f5966500676a0bc47ea9b9ecf85abeb9edf30a"
+      },
+      {
+        "path": "apps/desktop/src/renderer/global.d.ts",
+        "sha256": "2c1cf34054e78e59ff8010be470d67e8eb5ffb08ad309ee4e099ff54d04fb967"
+      },
+      {
+        "path": "apps/desktop/src/renderer/main.ts",
+        "sha256": "eeaff47c09de00a1ff113bd4d78433a5ff35cf0562460ce2955b5124b48f2e62"
+      },
+      {
+        "path": "apps/desktop/src/renderer/node-module-stub.ts",
+        "sha256": "db7d34fe138bbc53bd94cee1c95c32b28164101087b8718058be6b6c6f4687e0"
+      },
+      {
+        "path": "apps/desktop/src/renderer/presentation-lifecycle.mjs",
+        "sha256": "5644f977294404a8e9502dcd3f990101263aa979c08ededb496f05ab8e6dd1ab"
+      },
+      {
+        "path": "apps/desktop/src/renderer/shaco-bootstrap.d.mts",
+        "sha256": "05601a92bd5271ab45272273705129291183be733f1dafadbd5f25c128b536d9"
+      },
+      {
+        "path": "apps/desktop/src/renderer/shaco-bootstrap.mjs",
+        "sha256": "ea6154ce6b7d55085c1acbe1dd868d998dd077b3d3e36daf18f97dc82df6027d"
+      },
+      {
+        "path": "apps/desktop/src/renderer/shell-bootstrap.ts",
+        "sha256": "a986a3399cba1df949ff52e43a2758aa25cd80ced629ec91239a45ddb0829d1a"
+      },
+      {
+        "path": "apps/desktop/src/renderer/styles.css",
+        "sha256": "6360c102672b08d73dda1161d3769bdadcbdb9b3c0660f455cefac02ad407789"
+      },
+      {
+        "path": "apps/desktop/src/renderer/theme/theme.ts",
+        "sha256": "71cabdc3f358b3a7fd8e0e0ee20876505eec5b2306502ef2b9cef537f47ba402"
+      },
+      {
+        "path": "apps/desktop/src/renderer/theme/themes.css",
+        "sha256": "3b084c851e12ce7f420d564c947c5d231639d44b9a44550ba05ba396c3548216"
+      },
+      {
+        "path": "apps/desktop/src/renderer/theme/tokens.css",
+        "sha256": "b15506249bc3542a5d4208c50e29dcca340418ed4fd7c5328f842d1a13dac309"
+      },
+      {
+        "path": "apps/desktop/src/renderer/transport.ts",
+        "sha256": "85ed7d92ec5be5f2d7fa9be57b69eafece1e34328f9444b67d2bdc61da6c4747"
+      },
+      {
+        "path": "apps/desktop/src/renderer/user-loop-evidence.ts",
+        "sha256": "05f3552e0ab03e621b34b1dd655f0782cfcef4a8794c9f93f0dd0084c5e65ad0"
+      },
+      {
+        "path": "apps/desktop/test-fixtures/full-shaco-visual-driver.mjs",
+        "sha256": "ed951319dda10c442238769a6660955746c4ba2fe76720475b8c262fa69ad8a9"
+      },
+      {
+        "path": "apps/desktop/test-fixtures/step1-authority-negative.ps1",
+        "sha256": "d049073f20c0bef41649556ce3b91f7ac753a4f4baae32ccda0b71dae349a61a"
+      },
+      {
+        "path": "apps/desktop/test-fixtures/step1-lifecycle-main.mjs",
+        "sha256": "a607d46ed8df4063acb9259ab5f2f9ce3f988d89138f56650c4da892922143c0"
+      },
+      {
+        "path": "apps/desktop/test-fixtures/step1-non-product-peer.cjs",
+        "sha256": "ae8eaaffca1ebadc19f7d975a5751abc464c3eef2905a761da3aabca64002295"
+      },
+      {
+        "path": "apps/desktop/test-fixtures/step2-recovery-main.mjs",
+        "sha256": "6b7f1d62559200a34aeec46710c2b295ac4ec2d74e7766cdedd5e251128c147e"
+      },
+      {
+        "path": "apps/desktop/test-fixtures/step3-interactions-main.mjs",
+        "sha256": "afd0e567c9c4ddac6fc52127197cce1a8707fa2c1dbd64856e548825ec1aa4da"
+      },
+      {
+        "path": "apps/desktop/test-fixtures/step3-shell-driver.mjs",
+        "sha256": "31c2e278e38b0037df6c61e568b1020dcc576b2021e4bbbdf4a07fccb9001571"
+      },
+      {
+        "path": "apps/desktop/test-fixtures/supervisor-native-wait-worker.mjs",
+        "sha256": "f47e167daca7a5be7046c03e746ef14139e023c15f9de4f5598f6b7e4f1d39e5"
+      },
+      {
+        "path": "apps/desktop/test-fixtures/supervisor-worker.mjs",
+        "sha256": "55f4668236b1bca5e9cb631967b46490f798f3ac2386ba57c5b5e9f4cc7fe547"
+      },
+      {
+        "path": "apps/desktop/tests/full-shaco-boundaries.test.mjs",
+        "sha256": "0e52d414b4d15ee791113ca1472f5446c5ac6bdd3893ccdfebce539ae9db22d1"
+      },
+      {
+        "path": "apps/desktop/tests/presentation-actions.test.mjs",
+        "sha256": "94e7d93718b3ae903129b593e257d3814f96d18df55dbc21ed7a3aae324645ab"
+      },
+      {
+        "path": "apps/desktop/tests/presentation-lifecycle.test.mjs",
+        "sha256": "949046d7c45fd7133dd6ca445a08fa78b5f5cf9eb00cf6a5dcdcd433c2c9817b"
+      },
+      {
+        "path": "apps/desktop/tests/theme.test.ts",
+        "sha256": "bdc279fcf453062640019c5ba1f95ede698577e8c7f8edecfd9f8a5d38f646a5"
+      },
+      {
+        "path": "apps/desktop/tests/transport.test.ts",
+        "sha256": "d6e1249adfc4ba644841797b92e3447bcd934fee4cbb5b44500abf18d78baecb"
+      },
+      {
+        "path": "apps/desktop/tests/user-loop-evidence.test.ts",
+        "sha256": "be75cdd867a696ef1c46c4753a14b4d3c22debddb297a11627e8c7d518ff5ddd"
+      },
+      {
+        "path": "apps/desktop/tsconfig.node.json",
+        "sha256": "2f8667a2e9c65d532f192cc30b680d885f1f1ad22a15d255ed045c3d8fb636fe"
+      },
+      {
+        "path": "apps/desktop/tsconfig.renderer.json",
+        "sha256": "c94935cb42adaee8e1cb85a607eef6b3ca80bbf3663f9388f78b0ca70aa43aa0"
+      },
+      {
+        "path": "apps/desktop/tsconfig.test.json",
+        "sha256": "b3dba2b152dc14ee9dcd0d044f7d1bb4f750eb977f15a1d64306685ba4061b67"
+      },
+      {
+        "path": "apps/desktop/vite.config.ts",
+        "sha256": "eafb74965312538cde71e4e68be50e09ee9f15d9cc2f94ea21e008af29c5a6f0"
+      },
+      {
+        "path": "apps/native-carrier/LifecycleAuthority.cs",
+        "sha256": "f775cb6e31e84a33b4cb05a6ae8e6ca371ed5bc1154a3c2199a48ab4ccf577d1"
+      },
+      {
+        "path": "apps/native-carrier/Program.cs",
+        "sha256": "336719a63dc932600904f0d5da3029cb6d7b260c12b8a9d1b5b30941d5da01c7"
+      },
+      {
+        "path": "apps/native-carrier/ShacoForge.NativeCarrier.csproj",
+        "sha256": "0dc1acd2408df4d259d37e4c5d6c17a666a3d5a9fee4910ca15f37f998bae684"
+      },
+      {
+        "path": "apps/native-carrier/WindowsAuthority.cs",
+        "sha256": "330b4ee0e99daf359f7db32aac269c173d71e3f7e77821b8040b0a5a33b97b64"
+      },
+      {
+        "path": "apps/worker/host-profile/carrier-gateway.mjs",
+        "sha256": "9594ded08ec7dd6042dd6fce9c2f974b14d09fa45206a482f6aef769e16ffbb3"
+      },
+      {
+        "path": "apps/worker/host-profile/connection-compatibility.mjs",
+        "sha256": "1d765b237400cc81261f76988f88caf6f9920d1a5fc4d09a3151491028796748"
+      },
+      {
+        "path": "apps/worker/host-profile/events-route-preflight.mjs",
+        "sha256": "0c696585b96b979a1302ae0fda46d9a6b9428ffb30bebaa55494b302ad8bf3a0"
+      },
+      {
+        "path": "apps/worker/host-profile/events-route-preflight.test.mjs",
+        "sha256": "13d950ebeaaec0d620aeef82a19071b8bf496af1a8e67c4ad2ec69d60bde0dce"
+      },
+      {
+        "path": "apps/worker/package.json",
+        "sha256": "773ebfdafb4e3630f697e26448ade7e821f569847ceb48813a21501e1e45fec4"
+      },
+      {
+        "path": "apps/worker/src/config.test.ts",
+        "sha256": "5cce94e53a5341b0780f5224ad659bd6e3284ec378d606b0fd0bef509970a486"
+      },
+      {
+        "path": "apps/worker/src/config.ts",
+        "sha256": "1faa40981a6855b0f846e31fedded78a0e7451d1be25ab221d7089d4decbf44e"
+      },
+      {
+        "path": "apps/worker/src/harness-readiness.ts",
+        "sha256": "2bc37adef53796d7665fe91043bc872d424851f0206d4d5b9ef60110c3e1f28d"
+      },
+      {
+        "path": "apps/worker/src/harness-runtime.ts",
+        "sha256": "a9b1562763cfa2c05d6fc27026299313ab8ee0f4048b0319929a59a7805da2a5"
+      },
+      {
+        "path": "apps/worker/src/host-carrier-preflight.test.ts",
+        "sha256": "de7ca0b5ce1b8ca0c228e6a029b7f9e8ebc7b1aec93e1ac92c17a77d7ab02519"
+      },
+      {
+        "path": "apps/worker/src/host-carrier-preflight.ts",
+        "sha256": "1e2912d9b7148d69683aa81a9ceb331dec56abf046b9b3a4021493ed336800f6"
+      },
+      {
+        "path": "apps/worker/src/host-readiness-marker.test.ts",
+        "sha256": "cb9ad9d1e6ad1168bc7c41a3b721170fa081a7b253eab5f42745a1da97203edc"
+      },
+      {
+        "path": "apps/worker/src/host-readiness-marker.ts",
+        "sha256": "f25c0859488a7ed936dced333bc6e0cb6298d3f6f5e4577af5b1c2a2ac737487"
+      },
+      {
+        "path": "apps/worker/src/index.ts",
+        "sha256": "a83e09fac149dd26d4dd2f7d660d944810c9132cbef57638642c7af49acd9112"
+      },
+      {
+        "path": "apps/worker/src/profile.test.ts",
+        "sha256": "cc8e8bdb6126bab851e71e6e8463583b5f27996d0a3e8c26e8b66abe07ecc096"
+      },
+      {
+        "path": "apps/worker/src/profile.ts",
+        "sha256": "25885934647ca7fe670e613b17cc9b5db25df49c06b51554010a874b4f1df211"
+      },
+      {
+        "path": "apps/worker/test-fixtures/step3-interactions.mjs",
+        "sha256": "eec5113415ad03a5436dec1c8e8b08b27254d5c16dced26a6f804531b6a3177b"
+      },
+      {
+        "path": "apps/worker/tsconfig.json",
+        "sha256": "c120dcf9982d59a1a348e982bf5666b4f86b1d3e21a2f49f93bc73b7dc06579e"
+      },
+      {
+        "path": "package.json",
+        "sha256": "f8022878e2f275d63ad4e3c0c03ae8ffc75652ffb4e1996f618ae214367677ac"
+      },
+      {
+        "path": "packages/contracts/package.json",
+        "sha256": "ee68757f05123740a286a5aaf5892e7b347932919447b29dbd0058ae67fa99fc"
+      },
+      {
+        "path": "packages/contracts/src/carrier.test.ts",
+        "sha256": "06bf8a848acb3047ff5d652be35a510b8f6383a90a30af5b158021dc50d18c34"
+      },
+      {
+        "path": "packages/contracts/src/carrier.ts",
+        "sha256": "1c61df395e9cf4f54795958ffbe3419f49872366216f36a77b82d0772cb4a1ac"
+      },
+      {
+        "path": "packages/contracts/src/index.test.ts",
+        "sha256": "5aa50a38e45f3404763754ae08b191b02f1618b8c1813af610ffded24c9d26d1"
+      },
+      {
+        "path": "packages/contracts/src/index.ts",
+        "sha256": "60581367cb36c2c6cfda7d93cd2259ba9480d9eaf4ce8b313eb85bdf11da8dac"
+      },
+      {
+        "path": "packages/contracts/tsconfig.json",
+        "sha256": "337c4a8b967d337cc7227448678b4fc9a30d43c08e6227e208d71b4d44a9011f"
+      },
+      {
+        "path": "scripts/build.mjs",
+        "sha256": "6422985b7d63babcb17e557593a77f6fefd18f34ab0ddfdba6419dd4bb44a024"
+      },
+      {
+        "path": "scripts/electron-user-loop.mjs",
+        "sha256": "e2867ea0af0ba4dc9ee1b74ffcecf7b97ea4807297b083957bb1378600e6bf22"
+      },
+      {
+        "path": "scripts/full-shaco-command.mjs",
+        "sha256": "3ffc4a21f846255bf95059955a9dacd7ad9b912b9e156d3aaa028bb65dcf8e61"
+      },
+      {
+        "path": "scripts/production-boundary.mjs",
+        "sha256": "7a7a57e310fb6cc012614f3dec262e262b9740c9bdebb8c9d192dea375945593"
+      },
+      {
+        "path": "scripts/runtime-paths.mjs",
+        "sha256": "ce6ff6e813bc51d96add74624d1eb75f3ae923003b89c09f98dccfb87695096a"
+      },
+      {
+        "path": "scripts/smoke-carrier.mjs",
+        "sha256": "c7eaabd412fb4be96aefaf70b3c5e3c044cc87b871b751a34edf32ea839b682c"
+      },
+      {
+        "path": "scripts/smoke-electron.mjs",
+        "sha256": "6412b251205bc16ecbe06918f2dd0d6ffc65826733a074882a4af9f2ff2563c2"
+      },
+      {
+        "path": "scripts/smoke-full-shaco.mjs",
+        "sha256": "45db64839cd2698e77b0df71c1d6906dbfd233a96371acda4f591c9b9741118b"
+      },
+      {
+        "path": "scripts/smoke-slice2-step1.mjs",
+        "sha256": "784cd39b2201d69cc711bd7dda6f067d03a44d42ce537a548624e950209a9f47"
+      },
+      {
+        "path": "scripts/smoke-slice2-step2.mjs",
+        "sha256": "1de4110927dfc61f7ac209848dd06db07375d5eae583816eb5e69bae945a3a86"
+      },
+      {
+        "path": "scripts/smoke-slice2-step3-interactions.mjs",
+        "sha256": "6ce165beece32b22a4b0e604d2b2d83272c95a3a5497b64388e8ffd553dee559"
+      },
+      {
+        "path": "scripts/smoke-slice2-step3.mjs",
+        "sha256": "72a1f13561f4859165b2543d94ebf637cd80b6b34d1d38a51bc643918d4c91b1"
+      },
+      {
+        "path": "scripts/smoke-user-loop.mjs",
+        "sha256": "f0504c6f9f9c3142d488804a694e27e2e42fe110c0e09745bf3124376f55799c"
+      },
+      {
+        "path": "scripts/smoke-worker.mjs",
+        "sha256": "e39099bf048d8e984adf1d938704359f4c9f89b751014b73f9c4e3480462a8ac"
+      },
+      {
+        "path": "scripts/step1-identity-probe.ps1",
+        "sha256": "32306f6944b107dc016cff6aad5ff8677e7d8459dcdb136f61cf473ae1eb37d1"
+      },
+      {
+        "path": "scripts/step1-server-attestation-probe.ps1",
+        "sha256": "7c3344827cd82833924ec14108c918aa8cb378f45d20355dddc66e9dca71be39"
+      },
+      {
+        "path": "scripts/step2-command.mjs",
+        "sha256": "86fd9df793f82b68ec4068deb550096544a199d59cbb06114a9b03fb114e1853"
+      },
+      {
+        "path": "scripts/step2-evidence.mjs",
+        "sha256": "0b2584206a79f75fdf194635f5bb421ec63149eea42bd570970ba112f333e9d8"
+      },
+      {
+        "path": "scripts/step2-replacement-probe.mjs",
+        "sha256": "3141b77609024833b26d95b8a02c0fdfe6e87ecc122d4f57e379debaa9a3e446"
+      },
+      {
+        "path": "scripts/step3-baseline.mjs",
+        "sha256": "dfab7b88f13663649825cc27f3017eeb7e293ee58538c146d5e5eb3e4f32c3e6"
+      },
+      {
+        "path": "scripts/step3-composition.test.mjs",
+        "sha256": "755c0feebb729e0e97c675bc0f8896181b72fa6b8659bff8126c4fc3cd182834"
+      },
+      {
+        "path": "scripts/step3-final-composition.mjs",
+        "sha256": "9dc8201f940f80832a5743922a246a92b68cef376929a072202a4553cc086b16"
+      },
+      {
+        "path": "scripts/step3-fixture-boundaries.test.mjs",
+        "sha256": "fef92745b3cb08312bb57861b7aae8acff994dda75657775ddca927f517836ea"
+      },
+      {
+        "path": "scripts/step3-interaction.test.mjs",
+        "sha256": "e6c05e601ffb482eb5368b024fdfe1a035aafb41810b7b4216bca6049f48c5e1"
+      },
+      {
+        "path": "scripts/tool-runner.mjs",
+        "sha256": "1b0727c4d2e38fdd100cd8930210cae3032b38d4222ffd66689611bfd8997063"
+      },
+      {
+        "path": "scripts/typecheck.mjs",
+        "sha256": "af3f552138b2006719a5c56ca1d38a35804f1fdbc96393c0a486e81670513d69"
+      },
+      {
+        "path": "scripts/user-loop-policy.mjs",
+        "sha256": "418184aa184a762890f0802fbd5a8c50be2c23a41b0ba2f93d7911328b59f1c2"
+      },
+      {
+        "path": "scripts/user-loop-policy.test.mjs",
+        "sha256": "5c67a334327c10eec2817bada160737f1ac082894f9452735c32231397d69172"
+      },
+      {
+        "path": "scripts/user-loop-revalidation-preflight.mjs",
+        "sha256": "3bad895dc5ed2a17fcc12a9b4ffe45f43d3336f73180496d578d3dd2729c9993"
+      },
+      {
+        "path": "scripts/user-loop-revalidation.mjs",
+        "sha256": "605022f4baf5b2bf8b617b0d5b301db1c23502f14438439aa72826651635cc58"
+      },
+      {
+        "path": "scripts/verify-static.mjs",
+        "sha256": "cb9f6d1f664f9f66ef775998f0f9c7dcaa691f21985d4c6403b7f7e73673bb30"
+      },
+      {
+        "path": "scripts/verify-theme.mjs",
+        "sha256": "7680fa5d7d3ad99688afb9da6b857d4bbf39169aca34418cc3f093873e27fb36"
+      },
+      {
+        "path": "scripts/verify-user-loop-hygiene.mjs",
+        "sha256": "5c79256a4d7b4015022a215cd1009ba1d7fdad73baf1fd5c72a7e9212e55ea06"
+      }
+    ]
+  },
+  "finalFrozenComposition": true
+}

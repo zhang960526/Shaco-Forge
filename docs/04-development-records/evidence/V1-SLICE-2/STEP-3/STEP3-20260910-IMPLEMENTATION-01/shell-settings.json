@@ -1,0 +1,108 @@
+{
+  "result": "PASS",
+  "sidebar": "public single/root sidebar priority -1; original priority 0 registration retained",
+  "singleContext": true,
+  "newChat": {
+    "workspaceHash": "87f67603872fd9b387a51536f5d91ffbc3da140430847a376e457ba2c0ba7d1d",
+    "sessionHash": "fe3dc0dc7c114bc971bddac1ad350ab675f1f16a8cedddc3b1b4bf9b3c3684b3",
+    "publicMutations": [
+      "workspace/create",
+      "session/create via uiWorkspace.connectWorkspace",
+      "sessions.open"
+    ],
+    "nativePicker": [
+      "cancel",
+      "failure",
+      "success"
+    ],
+    "noWorkspace": true,
+    "cancelNoMutation": true,
+    "failureNoMutation": true,
+    "blankReuse": true,
+    "promptRuns": 0,
+    "nativeMethod": "REAL_IPC_MAIN_GUARD_WITH_TEST_ONLY_DIALOG_RESULT_INJECTION"
+  },
+  "projectDirectory": "Harness workspaces.list and sessions.list; ephemeral navigation discarded per generation",
+  "settings": [
+    {
+      "editor": true,
+      "fields": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "password": "password",
+      "protocolOptions": 4,
+      "error": false,
+      "localMutation": {
+        "localProfileWritten": true,
+        "modelEndpointProtocol": true,
+        "credentialSetUnset": true,
+        "secretInputCleared": true,
+        "providerCalls": 0,
+        "proof": "Frozen PiAiAdapter.listModels reads its local snapshot; no discoverModels or prompt invoked"
+      }
+    },
+    {
+      "editor": true,
+      "fields": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "password": "password",
+      "protocolOptions": 4,
+      "error": false,
+      "localMutation": {
+        "localProfileWritten": true,
+        "modelEndpointProtocol": true,
+        "credentialSetUnset": true,
+        "secretInputCleared": true,
+        "providerCalls": 0,
+        "proof": "Frozen PiAiAdapter.listModels reads its local snapshot; no discoverModels or prompt invoked"
+      }
+    },
+    {
+      "editor": true,
+      "fields": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "password": "password",
+      "protocolOptions": 4,
+      "error": false,
+      "localMutation": {
+        "localProfileWritten": true,
+        "modelEndpointProtocol": true,
+        "credentialSetUnset": true,
+        "secretInputCleared": true,
+        "providerCalls": 0,
+        "proof": "Frozen PiAiAdapter.listModels reads its local snapshot; no discoverModels or prompt invoked"
+      }
+    },
+    {
+      "editor": true,
+      "fields": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "password": "password",
+      "protocolOptions": 4,
+      "error": false
+    }
+  ],
+  "revision": "Explicit integer namespace revision; missing revision refused because undefined is unconditional in Harness",
+  "credential": "Metadata describe only; set input immediately cleared; unset verified; unknown reread without replay",
+  "minimalGeneral": "No additional General control is required by this frozen workflow; full Appearance and advanced General remain deferred",
+  "providerRuns": 0
+}

@@ -1,0 +1,260 @@
+{
+  "result": "PASS",
+  "kind": "question",
+  "firstDesktop": {
+    "desktopPid": 30452,
+    "authority": {
+      "worker": {
+        "pid": 53136,
+        "startTime": "134335169874726821"
+      },
+      "host": {
+        "pid": 47036,
+        "startTime": "134335170035342612"
+      },
+      "helper": {
+        "pid": 52276,
+        "startTime": "134335170033974559"
+      },
+      "workerInstanceIdHash": "121aff64d16559f0ff9cdb993eb34cc79510b5b2b79b263336a35ca48f9b2e68"
+    },
+    "clientInstanceIdHash": "16d58d346be71fe94a9e219436c173154b6186c3784a6e1644aec3dfbe12f1da",
+    "gatewayClientHash": "f9c952043d1e7801c728ec4fff12f92741e131d625945578d10c2dc6d6fe08bb",
+    "recovery": {
+      "connectionState": "CONNECTED",
+      "generation": 1,
+      "authenticatedCarrier": true,
+      "clientGenerationReady": true,
+      "projectionRebuildComplete": true,
+      "continuity": "INITIAL"
+    },
+    "readProof": {
+      "eventsReady": true,
+      "workspaceBaseline": true,
+      "sessionRoster": true,
+      "sessionSnapshot": true,
+      "workspaceCount": 1,
+      "sessionCount": 1,
+      "historyCount": 5,
+      "sessionHash": "e49d1ee1c9ee2fb2e5ef4f4e03c595e825079d8aa690ccb11396a4360e0bfd8f",
+      "workspaceHashes": [
+        "cddd5113f23bdcd3af158b3ea748c3e268fe3a90572ef2625cdf552fb73b4317"
+      ]
+    },
+    "ui": {
+      "projectionVisible": true,
+      "selected": true,
+      "approval": false,
+      "question": true,
+      "requireAvailable": false,
+      "processAvailable": false
+    },
+    "uiResults": 1,
+    "forbiddenCalls": 0,
+    "eventHash": "1fb20b2b8d1601c42c148d1ce63fcf55e1abaa9e63955c399adeeff259bd2df8"
+  },
+  "hostBefore": {
+    "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+    "hostPid": 47036,
+    "sessionHash": "e49d1ee1c9ee2fb2e5ef4f4e03c595e825079d8aa690ccb11396a4360e0bfd8f",
+    "exactLiveAgent": true,
+    "rootAgent": true,
+    "agentStatus": "idle",
+    "cancelCalls": 0,
+    "agentExecutionCalls": 0,
+    "stepStarts": 0,
+    "approvalAsked": 1,
+    "approvalDecided": 1,
+    "states": {
+      "approval": {
+        "calls": 1,
+        "pending": 0,
+        "settlements": 1,
+        "failures": 0,
+        "cancelled": 0,
+        "outcome": "allowed-once"
+      },
+      "question": {
+        "calls": 1,
+        "pending": 1,
+        "settlements": 0,
+        "failures": 0,
+        "cancelled": 0
+      }
+    }
+  },
+  "disconnectedAuthoritySurvived": true,
+  "freshDesktop": {
+    "desktopPid": 59908,
+    "authority": {
+      "worker": {
+        "pid": 53136,
+        "startTime": "134335169874726821"
+      },
+      "host": {
+        "pid": 47036,
+        "startTime": "134335170035342612"
+      },
+      "helper": {
+        "pid": 52276,
+        "startTime": "134335170033974559"
+      },
+      "workerInstanceIdHash": "121aff64d16559f0ff9cdb993eb34cc79510b5b2b79b263336a35ca48f9b2e68"
+    },
+    "clientInstanceIdHash": "3fe39bbb6bea7e0232a1a5ff91e724d3b5a0a8aee7e0fdc0ff198538139c7fe0",
+    "gatewayClientHash": "418f6f894e91c7a9c56867fd10b56e83f081c6441b0e81788e4ad70411d05e92",
+    "recovery": {
+      "connectionState": "CONNECTED",
+      "generation": 1,
+      "authenticatedCarrier": true,
+      "clientGenerationReady": true,
+      "projectionRebuildComplete": true,
+      "continuity": "INITIAL"
+    },
+    "readProof": {
+      "eventsReady": true,
+      "workspaceBaseline": true,
+      "sessionRoster": true,
+      "sessionSnapshot": true,
+      "workspaceCount": 1,
+      "sessionCount": 1,
+      "historyCount": 7,
+      "sessionHash": "e49d1ee1c9ee2fb2e5ef4f4e03c595e825079d8aa690ccb11396a4360e0bfd8f",
+      "workspaceHashes": [
+        "cddd5113f23bdcd3af158b3ea748c3e268fe3a90572ef2625cdf552fb73b4317"
+      ]
+    },
+    "ui": {
+      "projectionVisible": true,
+      "selected": true,
+      "approval": false,
+      "question": true,
+      "requireAvailable": false,
+      "processAvailable": false
+    },
+    "uiResults": 0,
+    "forbiddenCalls": 0,
+    "eventHash": "1fb20b2b8d1601c42c148d1ce63fcf55e1abaa9e63955c399adeeff259bd2df8"
+  },
+  "hostRestored": {
+    "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+    "hostPid": 47036,
+    "sessionHash": "e49d1ee1c9ee2fb2e5ef4f4e03c595e825079d8aa690ccb11396a4360e0bfd8f",
+    "exactLiveAgent": true,
+    "rootAgent": true,
+    "agentStatus": "idle",
+    "cancelCalls": 0,
+    "agentExecutionCalls": 0,
+    "stepStarts": 0,
+    "approvalAsked": 1,
+    "approvalDecided": 1,
+    "states": {
+      "approval": {
+        "calls": 1,
+        "pending": 0,
+        "settlements": 1,
+        "failures": 0,
+        "cancelled": 0,
+        "outcome": "allowed-once"
+      },
+      "question": {
+        "calls": 1,
+        "pending": 1,
+        "settlements": 0,
+        "failures": 0,
+        "cancelled": 0
+      }
+    }
+  },
+  "finalHost": {
+    "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+    "hostPid": 47036,
+    "sessionHash": "e49d1ee1c9ee2fb2e5ef4f4e03c595e825079d8aa690ccb11396a4360e0bfd8f",
+    "exactLiveAgent": true,
+    "rootAgent": true,
+    "agentStatus": "idle",
+    "cancelCalls": 0,
+    "agentExecutionCalls": 0,
+    "stepStarts": 0,
+    "approvalAsked": 1,
+    "approvalDecided": 1,
+    "states": {
+      "approval": {
+        "calls": 1,
+        "pending": 0,
+        "settlements": 1,
+        "failures": 0,
+        "cancelled": 0,
+        "outcome": "allowed-once"
+      },
+      "question": {
+        "calls": 1,
+        "pending": 0,
+        "settlements": 1,
+        "failures": 0,
+        "cancelled": 0,
+        "expectedAnswer": true
+      }
+    }
+  },
+  "finalDesktop": {
+    "desktopPid": 59908,
+    "authority": {
+      "worker": {
+        "pid": 53136,
+        "startTime": "134335169874726821"
+      },
+      "host": {
+        "pid": 47036,
+        "startTime": "134335170035342612"
+      },
+      "helper": {
+        "pid": 52276,
+        "startTime": "134335170033974559"
+      },
+      "workerInstanceIdHash": "121aff64d16559f0ff9cdb993eb34cc79510b5b2b79b263336a35ca48f9b2e68"
+    },
+    "clientInstanceIdHash": "3fe39bbb6bea7e0232a1a5ff91e724d3b5a0a8aee7e0fdc0ff198538139c7fe0",
+    "gatewayClientHash": "418f6f894e91c7a9c56867fd10b56e83f081c6441b0e81788e4ad70411d05e92",
+    "recovery": {
+      "connectionState": "CONNECTED",
+      "generation": 1,
+      "authenticatedCarrier": true,
+      "clientGenerationReady": true,
+      "projectionRebuildComplete": true,
+      "continuity": "INITIAL"
+    },
+    "readProof": {
+      "eventsReady": true,
+      "workspaceBaseline": true,
+      "sessionRoster": true,
+      "sessionSnapshot": true,
+      "workspaceCount": 1,
+      "sessionCount": 1,
+      "historyCount": 7,
+      "sessionHash": "e49d1ee1c9ee2fb2e5ef4f4e03c595e825079d8aa690ccb11396a4360e0bfd8f",
+      "workspaceHashes": [
+        "cddd5113f23bdcd3af158b3ea748c3e268fe3a90572ef2625cdf552fb73b4317"
+      ]
+    },
+    "ui": {
+      "projectionVisible": true,
+      "selected": true,
+      "approval": false,
+      "question": false,
+      "requireAvailable": false,
+      "processAvailable": false
+    },
+    "uiResults": 1,
+    "forbiddenCalls": 0
+  },
+  "staleRejected": true,
+  "staleReason": "NO_ACTIVE_EVENT_STREAM",
+  "duplicateSafeNoop": true,
+  "duplicateDelta": 0,
+  "implicitCancelDelta": 0,
+  "automaticAnswerDelta": 0,
+  "replayDelta": 0,
+  "successPath": "REAL_FROZEN_HARNESS_UI_RENDERED_CONTROL",
+  "providerRuns": 0
+}

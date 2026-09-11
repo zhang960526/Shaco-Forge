@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "protectedOriginalCandidate": "88/88 EXACT_MATCH",
+  "implementationEvidence": "36/36 EXACT_MATCH",
+  "review026CorrectiveEvidence": "22/22 EXACT_MATCH",
+  "frozenAuthorities": "74/74 EXACT_MATCH",
+  "frozenHarness": {
+    "head": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "state": "CLEAN"
+  },
+  "sourceFreezeOrdering": {
+    "wrapperFinalSha256": "72a1f13561f4859165b2543d94ebf637cd80b6b34d1d38a51bc643918d4c91b1",
+    "compositionGeneratedAt": "2026-09-10T13:44:02.673Z",
+    "runtimeAcceptanceStartedAt": "2026-09-10T13:55:06.232Z",
+    "sourceChangedAfterFreeze": false
+  },
+  "previousCompositionIdentity": "HISTORICAL_SUPERSEDED_BY_SOURCE_CHANGE",
+  "newCompositionIdentity": "FROZEN_FOR_REVIEW026B_CORRECTIVE_RUNTIME_ACCEPTANCE"
+}

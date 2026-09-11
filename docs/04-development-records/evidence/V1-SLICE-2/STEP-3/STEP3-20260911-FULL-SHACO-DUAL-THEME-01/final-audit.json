@@ -1,0 +1,56 @@
+{
+  "at": "2026-09-10T19:51:10.937Z",
+  "result": "PASS",
+  "branch": "master",
+  "head": "5118053f625d01faba6617cace481df3091ba5be",
+  "trackedModified": 26,
+  "expandedUntracked": 622,
+  "changedPathsInGoalExcludingEvidence": 48,
+  "newEvidenceFiles": 507,
+  "staged": [],
+  "commit": "NOT_RUN",
+  "push": "NOT_RUN",
+  "removed": [],
+  "preservedBaselineFileCount": 670,
+  "oldEvidenceChanged": [],
+  "assetsChanged": [],
+  "harness": {
+    "head": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "status": "",
+    "readOnly": true
+  },
+  "images": [
+    {
+      "path": "docs/01-product/assets/SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png",
+      "sha256": "2f6852676262562b614f9427c83c451ca99c129b4ba770597fd07023e6e35326",
+      "width": 1672,
+      "height": 941,
+      "actualSha256": "2f6852676262562b614f9427c83c451ca99c129b4ba770597fd07023e6e35326",
+      "unchanged": true
+    },
+    {
+      "path": "docs/01-product/assets/Braun.png",
+      "sha256": "2f6852676262562b614f9427c83c451ca99c129b4ba770597fd07023e6e35326",
+      "width": 1672,
+      "height": 941,
+      "actualSha256": "2f6852676262562b614f9427c83c451ca99c129b4ba770597fd07023e6e35326",
+      "unchanged": true
+    },
+    {
+      "path": "docs/01-product/assets/FAMICOM.png",
+      "sha256": "3f43f6f1ab08efde8837aa55aa0fab10c8cd092bdd52aa76e2cb902c621f4dab",
+      "width": 1672,
+      "height": 941,
+      "actualSha256": "3f43f6f1ab08efde8837aa55aa0fab10c8cd092bdd52aa76e2cb902c621f4dab",
+      "unchanged": true
+    }
+  ],
+  "processCleanup": {
+    "capturedAt": "2026-09-10T19:49:19.5823551Z",
+    "result": "PASS",
+    "method": "Read-only Win32_Process query after complete final regression; Product Worker/Carrier/Desktop/test-entry patterns, combined with each smoke owned-process cleanup proof.",
+    "remainingMatchingProcesses": [],
+    "count": 0,
+    "stoppedDuringThisCheck": 0
+  }
+}

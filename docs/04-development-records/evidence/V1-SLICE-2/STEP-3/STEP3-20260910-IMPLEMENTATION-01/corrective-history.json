@@ -1,0 +1,86 @@
+{
+  "providerRuns": 0,
+  "policy": "No unchanged blind retry; regenerate frozen composition after source corrections.",
+  "issues": [
+    {
+      "id": "C01",
+      "severity": "MINOR",
+      "failure": "Settings unit fixture syntax error",
+      "rootCause": "Missing closing object brace in newly authored fixture",
+      "cycles": 1,
+      "approaches": 1,
+      "fix": "Corrected brace",
+      "verification": "Pinned Node focused tests passed; subsequent full unit passed"
+    },
+    {
+      "id": "C02",
+      "severity": "MINOR",
+      "failure": "Interaction fixture could not resolve React from repository root",
+      "rootCause": "React is provided through desktop package dependencies",
+      "cycles": 1,
+      "approaches": 1,
+      "fix": "createRequire anchored to desktop package.json",
+      "verification": "Actual frozen public Approval/Question bundles rendered and settled successfully"
+    },
+    {
+      "id": "C03",
+      "severity": "MINOR",
+      "failure": "Renderer security source assertion failed",
+      "rootCause": "Test checked main.ts instead of existing security.ts preferences owner",
+      "cycles": 1,
+      "approaches": 1,
+      "fix": "Assert existing preferences owner",
+      "verification": "Interaction/security fixture 5 of 5 passed"
+    },
+    {
+      "id": "C04",
+      "severity": "MINOR",
+      "failure": "Full unit 160 PASS, 1 FAIL",
+      "rootCause": "Historical test required disabled passive sidebar removed by authorized Step3 scope",
+      "cycles": 1,
+      "approaches": 1,
+      "fix": "Check removal of HTML sidebar and public same-context slot registration",
+      "verification": "161 of 161 passed; later receiver regression added, 162 of 162 passed"
+    },
+    {
+      "id": "C05",
+      "severity": "MINOR",
+      "failure": "First canonical smoke failed before Electron launch: Git ENOENT",
+      "rootCause": "Pinned command wrapper intentionally shortened PATH and omitted Git",
+      "cycles": 1,
+      "approaches": 1,
+      "fix": "Resolve Git before shortening PATH; pass explicit executable to composition verification",
+      "verification": "Subsequent canonical smoke verified composition and launched Electron"
+    },
+    {
+      "id": "C06",
+      "severity": "MAJOR",
+      "failure": "STEP3_SIDEBAR_TIMEOUT",
+      "rootCause": "Unbound public Harness model methods lost their this receiver in React useSyncExternalStore, triggering slot fallback",
+      "cycles": 1,
+      "approaches": 1,
+      "fix": "Call subscribe/getSnapshot through their public source object; add method-receiver regression",
+      "verification": "Actual sidebar, native cancel/failure/success, Workspace creation, Session open and blank reuse subsequently passed"
+    },
+    {
+      "id": "C07",
+      "severity": "MINOR",
+      "failure": "STEP3_SETTINGS_PUBLIC_READ_TIMEOUT",
+      "rootCause": "Cordis consumer declared nested remote services but omitted the required remote root service",
+      "cycles": 1,
+      "approaches": 1,
+      "fix": "Declare remote root and guard declaration in tests",
+      "verification": "Real Settings local reads and custom Provider fields subsequently passed"
+    },
+    {
+      "id": "C08",
+      "severity": "MINOR",
+      "failure": "Lifecycle smoke reported PASS but visual evidence was not acceptable",
+      "rootCause": "Width assertion measured display:contents slot anchor (zero width); screenshot NativeImage was empty",
+      "cycles": 1,
+      "approaches": 1,
+      "fix": "Constrain/measure actual Conversation content child; require positive dimensions and nonempty screenshot; explicitly restore/show/wake window for capture",
+      "verification": "Final real Electron captures are nonempty; Conversation 1100px, positive height, details collapsed; full cumulative chain PASS"
+    }
+  ]
+}

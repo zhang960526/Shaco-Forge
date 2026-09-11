@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-09-10T19:22:22.723Z",
+  "supersededGeneration": "2026-09-10T19:11:16.130Z",
+  "sourceCorrection": [
+    "Evidence-only terminal Carrier fault driver fenced normal recovery before physical Helper termination; measured Helper exit and Shaco fail-closed UI.",
+    "FAILED/INCOMPATIBLE bootstrap projections render Shaco error instead of loading.",
+    "smoke:electron now requires an empty local authority before its isolated run."
+  ],
+  "actualRegression": "smoke:failure attempt 1 stalled on legacy event assumption; explicitly terminated and kept FAIL. Corrected development attempt 2 PASS. pnpm test attempt 4: 178/178 PASS.",
+  "productionRecoveryPolicyChanged": false,
+  "apiSchemaProtocolChanged": false,
+  "earlyGpuOrphanCleanup": {
+    "workerPid": 17844,
+    "parentPid": 12956,
+    "createdAt": "2026-09-11T02:29:44+08:00",
+    "ownershipEvidence": "logs/smoke-electron-1.log",
+    "action": "Stopped verified Goal-owned Worker; Job children exited."
+  }
+}

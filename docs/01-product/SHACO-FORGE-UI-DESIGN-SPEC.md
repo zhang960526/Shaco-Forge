@@ -6,15 +6,19 @@
 | UI Spec Status | `ACTIVE` |
 | Version | `V1.0-FIRST-FORMAL-BASELINE` |
 | Scope | V1.0 UI contract and V1.1–V1.3 extension direction |
-| Product Implementation | `NOT_STARTED_BY_THIS_DOCUMENT` |
+| Product Implementation | `IMPLEMENTED_WAITING_INDEPENDENT_FINAL_REVIEW` |
 | Owner Review | `PASS` |
 | UI Design Baseline Ready | `YES` |
 | UI Direction Ready for Slice 1A | `YES` |
-| Current Post-1C Allocation | `SLICE_1_PASSIVE_WRAPPER_ACCEPTED / REMAINING_V1_UI_ALLOCATED_TO_SLICE_2` |
+| Current Post-1C Allocation | `SLICE_2_STEP3_FULL_SHACO_BRAUN_FAMICOM_IMPLEMENTED_WAITING_REVIEW` |
 | Initial Primary Theme | `LIGHT` |
-| Last Updated | `2026-09-08` |
+| Last Updated | `2026-09-11` |
 
 > 本文是 Shaco Forge 正式 UI 决策的唯一真相来源。聊天中讨论但未写入本文的内容，不构成冻结决定。若本文与更高优先级的产品、架构或治理 Authority 冲突，以 [Document Map](../00-governance/SHACO-FORGE-DOCUMENT-MAP.md) 定义的 Authority Order 为准，并必须在本文中完成显式同步，禁止依靠聊天记忆静默覆盖。
+
+## Current implementation evidence — 2026-09-11
+
+本轮实现 BRAUN 默认模板、FAMICOM 模板、真实 Settings selector 与独立 light/dark/system mode。Shell/Conversation/Composer/Tool/Approval/Question/Model/Permission/Settings 均由同一 Shaco 组件树呈现。最终视觉与运行切换证据见 [实施记录](../04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-DUAL-THEME-IMPLEMENTATION-RECORD.md) 和 [九状态 Matrix](../04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/visual-matrix.json)。§3.4 模板角色、长期结构 authority、三张只读参考图与未来模板 scope 不变。实现验证不代表 Owner 最终验收；状态/下一步以 Current State 为准。
 
 ## 1. Document Status
 
@@ -129,13 +133,13 @@ MULTI_AGENT_ORCHESTRATION = FUTURE_SHACO_DOMAIN
 
 **Status: `DIRECTION_ACCEPTED`**
 
-唯一正式长期 Shell 视觉参考为 [SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png](assets/SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png)。
+唯一正式长期 Shell 结构参考及默认 BRAUN 视觉参考为 [SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png](assets/SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png)。
 
 ```text
 REFERENCE_PATH = assets/SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png
-REFERENCE_DIMENSIONS = 1660 x 948
-REFERENCE_BYTES = 1467362
-REFERENCE_SHA256 = 17874257C520533D65E0ACA1B45001F74C372178371BDE51EBB60AEB90F77BC0
+REFERENCE_DIMENSIONS = 1672 x 941
+REFERENCE_BYTES = 1293763
+REFERENCE_SHA256 = 2f6852676262562b614f9427c83c451ca99c129b4ba770597fd07023e6e35326
 REFERENCE_OWNER_ACCEPTANCE_DATE = 2026-09-07
 REFERENCE_ROLE = LONG_TERM_PRODUCT_SHELL_VISUAL_NORTH_STAR
 UI_LONG_TERM_SHELL_OWNER_DECISION = ACCEPTED
@@ -144,6 +148,47 @@ FURTHER_VISUAL_ADJUSTMENT = NOT_REQUIRED
 ```
 
 该图是长期产品 Shell 的结构、视觉语言、主要比例和信息层级的权威参考，不是 pixel-perfect executable contract，也不是 `V1.0 release screenshot`。它不表示图中的全部未来功能已经在 V1.0 实现；实现时必须同时遵守本文的 V1.0 Reduced Release View。该参考保持 Owner 已接受的 Light、Low Saturation、Modern Developer Workbench、Flat First、Structural Border、临时抬升 Surface 才使用 Soft Shadow、Small / Medium Radius、Outline Type Icons、右侧用户内容、左侧 Assistant 内容、顶部右侧低噪音 Worker 状态、左下 Settings 与无常驻右侧 Inspector 的视觉语言，不再要求替代视觉稿或进一步重绘。
+
+### 3.4 V1 BRAUN / FAMICOM Template Authority (2026-09-11 Owner scope delta)
+
+本节仅补充 Theme reference 与 V1 required scope，不重写原 Shell 结构设计。原长期参考路径保持；上次登记的 1660 x 948 / 1467362 bytes / SHA256 `17874257C520533D65E0ACA1B45001F74C372178371BDE51EBB60AEB90F77BC0` 为历史图片 identity，2026-09-07 为原结构 Owner acceptance 日期。本轮按 Owner 最新输入与实际文件核验更新当前图片指纹，不声称新图片在旧日期已被核验。
+
+```text
+LONG_TERM_SHELL_STRUCTURE_REFERENCE = SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png
+BRAUN_VISUAL_REFERENCE = Braun.png
+BRAUN_IS_CURRENT_LONG_TERM_REFERENCE_VISUAL = YES
+FAMICOM_VISUAL_REFERENCE = FAMICOM.png
+SAME_COMPONENT_TREE = YES
+SAME_LAYOUT_AUTHORITY = YES
+SAME_HARNESS_TRUTH = YES
+DIFFERENT_THEME_TEMPLATE = YES
+V1_REQUIRED_THEME_TEMPLATE_COUNT = 2
+V1_REQUIRED_THEME_TEMPLATES = BRAUN,FAMICOM
+V1_DEFAULT_THEME_TEMPLATE = BRAUN
+SHACO_DEFAULT_TEMPLATE_ALIAS = BRAUN
+MULTIPLE_THEME_TEMPLATES_REQUIRED_IN_V1 = YES
+V1_THEME_TEMPLATE_SWITCHING = REQUIRED
+THEME_ARCHITECTURE = MODE_PLUS_TEMPLATE
+V1_THEME_MODE_SUPPORT = LIGHT_DARK_SYSTEM_CAPABLE
+FULL_APPEARANCE_SETTINGS_V1 = DEFERRED
+THEME_TEMPLATE_SELECTOR = V1_REQUIRED_MINIMAL_UI
+FULL_THEME_EDITOR = DEFERRED
+THEME_MARKETPLACE = FORBIDDEN_V1
+CUSTOM_CSS = FORBIDDEN_V1
+OTHER_THEME_REFERENCES = FUTURE_ONLY
+```
+
+| Visual authority | Dimensions | Bytes | SHA256 | V1 role |
+|---|---|---|---|---|
+| [Long-term Shell](assets/SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png) | 1672 x 941 | 1293763 | `2f6852676262562b614f9427c83c451ca99c129b4ba770597fd07023e6e35326` | 唯一长期结构/布局/IA authority；与 Braun.png 字节完全相同 |
+| [Braun.png](assets/Braun.png) | 1672 x 941 | 1293763 | `2f6852676262562b614f9427c83c451ca99c129b4ba770597fd07023e6e35326` | BRAUN 默认 Template visual authority |
+| [FAMICOM.png](assets/FAMICOM.png) | 1672 x 941 | 1375052 | `3f43f6f1ab08efde8837aa55aa0fab10c8cd092bdd52aa76e2cb902c621f4dab` | FAMICOM required Template visual authority |
+
+两模板使用相同 Shell、Sidebar/Workbar 位置、Project Directory 层级、Chat Workspace、约 1100px 中心轴、Composer 位置与无永久 Inspector 规则，V1 reduced exposure 不变。原低饱和、flat-first 等默认外观描述用于 BRAUN；FAMICOM 在相同结构与业务组件树上按自身 reference 表达 palette、surface hierarchy、typography、accent、border、radius、shadow/elevation、spacing/density、control styling、Sidebar/top-workbar/Chat/Composer/Tool/Approval/Question/temporary recipes 和可行的 icon treatment。模板差异只影响 presentation，不改变布局 authority 或业务 truth。
+
+BRAUN 与 FAMICOM 都是 V1 required implementation，覆盖 Sidebar、Workbar、Project Directory、Conversation/Message、Composer、Tool Result、Approval/Question、Model Selector、Permission、Settings 与 temporary surfaces。提供最小真实 Braun/FAMICOM selector；完整 Appearance Settings/editor 继续延后。mode 仍 light/dark/system，独立于 template；不要求额外 Pixel Perfect dark reference，但两模板不得破坏 mode 能力。其他参考 Cyberdeck、Game Boy、IBM Terminal、Macintosh 1984、NASA、Sony Walkman、Windows 98 均保留为 FUTURE_ONLY，不实现或预建专用代码。
+
+本 scope 由 [Owner Direction Decision](../04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md) 持久化；精确 runtime switching、样式归一化与 THEME-G01–G08 验收见 [Corrective Contract](../03-v1.0-plan/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md) §15–17。REVIEW-027 的单模板架构基线 PASS 不覆盖本次双模板 Delta；当前 Implementation 暂停等待 Delta Review，本节不授权代码或 Runtime。
 
 ## 4. Product UI Principles
 

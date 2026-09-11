@@ -1,0 +1,28 @@
+[
+  {
+    "rootCause": "UI_G14_RELATIVE_PRIVATE_PACKAGE_SOURCE_IMPORT_COVERAGE",
+    "effectiveCorrections": 1,
+    "scope": [
+      "scripts/production-boundary.mjs",
+      "apps/desktop/tests/full-shaco-boundaries.test.mjs"
+    ],
+    "phase": "PRE_FREEZE",
+    "result": "PASS"
+  },
+  {
+    "rootCause": "RUNNER_SELECTED_WINDOWS_POWERSHELL_5_WITHOUT_NAMED_PIPE_ACL_FIXTURE_API",
+    "effectiveCorrections": 1,
+    "scope": [
+      "Evidence runner environment only"
+    ],
+    "failedCommand": "pnpm run smoke:slice2-step1",
+    "failedPhase": "final",
+    "failedAttempt": 1,
+    "failedExit": 1,
+    "executedRuntime": false,
+    "correction": "Select verified PowerShell 7 executable through SHACO_FORGE_POWERSHELL",
+    "fixtureApiProbeExit": 0,
+    "sourceChanged": false,
+    "compositionSuperseded": false
+  }
+]

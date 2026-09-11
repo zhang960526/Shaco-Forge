@@ -1,0 +1,298 @@
+{
+  "at": "2026-09-11T01:33:03.036Z",
+  "result": "PASS",
+  "correctiveResult": "APPLIED_FOCUSED_VERIFIED",
+  "finalGit": {
+    "branch": "master",
+    "head": "5118053f625d01faba6617cace481df3091ba5be",
+    "trackedModified": 33,
+    "expandedUntracked": 639,
+    "staged": 0,
+    "stage": "NOT_RUN",
+    "commit": "NOT_RUN",
+    "push": "NOT_RUN"
+  },
+  "harness": {
+    "head": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "status": "CLEAN",
+    "mode": "READ_ONLY"
+  },
+  "actualChanges": [
+    {
+      "path": "apps/desktop/tests/full-shaco-boundaries.test.mjs",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "484257bda2d17bff003b572eb786f7538d501cf4f5524ebb7c9eaf77c8968204",
+      "afterSha256": "f2ac51b2895b0a9c62e49605bb64179eaec9334146be319915f30acd3bdeedfa"
+    },
+    {
+      "path": "docs/03-v1.0-plan/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "d6ce66aa30661b4cf686afba274522f0e19eb32ec891f222ffbf719de82d7360",
+      "afterSha256": "8c387d9c5f62baa06571f357c7e356d3cfeb905ebff28df19a6005356c830c05"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-DUAL-THEME-IMPLEMENTATION-RECORD.md",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "2d0a57c4376dfd15cd5b2df55c25c344f91fe18faff99e2bf4cef974ae1b1291",
+      "afterSha256": "73ccf564f9ac4a9a5b728f9ac31dcbd4eee4e95212f1ec1bccc6cd188e42ef90"
+    },
+    {
+      "path": "docs/04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "2e5373c1d71a5918db8cdf7058520556f1b5675aa89bd28f462a23ade00c2417",
+      "afterSha256": "f50c4fb89457c632ba49799526e4586b72f4559e68ef77d9e52290adcc5baf64"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/README.md",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "9bee253af6804fd7c7fc3136599cfd600fcd1d4960e57ede8eef43d5cb3cf01c"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/baseline.json",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "1b808ffe60219e797d9303255779434eb3144df20f6dad8f912126b8de7dea44"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/final-audit.json",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "SELF_NOT_HASHED"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/focused-tests.json",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "dcdb7c9bf3c3cb4a7d50d8a76f5d09b4eb7533c58db1947ae133ebfb4e09b2e7"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/logs/build-1.log",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "075f984f3eb9bf0ddd825252fb89f59cbbc05b2acf454b368d004b5eb61d4af8"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/logs/focused-1.log",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "7d9055803f6208522450c54a6378220c1f382245762e53eddea3ae24a503a0bf"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/logs/focused-2.log",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "015080e4b91c10e97ec9866b6b53111a0a93fb00f0cff0be624ba2ca5c2ce304"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/logs/focused-compile-1.log",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/logs/test-1.log",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "7919d8ab47bfd9898e0d027be5341247c8f277346f7e7c69ae7c3e22c264d953"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/logs/test-2.log",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "7c69b63111960339a666f1f48ae5367b50ce63b5e065872b808e23497103e0bd"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/logs/test-full-shaco-1.log",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "c06ce9aa5fc942ddf22b97f2f075b8783a548d6df7d8683f3e507be690604199"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/logs/typecheck-1.log",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "c9fb96e5ca149db7c634cfa23e702fcceffc5738dcd972e7d45d6ff933413b55"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/logs/verify-static-1.log",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "68e4ccbc4e891a7e5ac15d8200a9ab67232efaed78a04ad2873d3bb9c719a465"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/logs/verify-static-2.log",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "68e4ccbc4e891a7e5ac15d8200a9ab67232efaed78a04ad2873d3bb9c719a465"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/production-reachability.json",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "46e2c9b9b7b54649e87f1f01ea0ac375905349fe3f09711a7dd86e147239a7cf"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-IFR01-CORRECTIVE-01/run-focused.mjs",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "73b7d0129e3c0fd852a31eb3111326c56cca79242a5cd262ddfd65fc2d218b19"
+    },
+    {
+      "path": "scripts/production-boundary.mjs",
+      "change": "ADDED",
+      "beforeSha256": null,
+      "afterSha256": "1a7e6cc6a08ccdd0c77cee1bed52bf194d126db1790eea9ac2b99f780aca6c2e"
+    },
+    {
+      "path": "apps/desktop/src/renderer/transport.ts",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "48bbe706ce8be47238bb7819759569de213547d05e547cb8add4a805049b5c37",
+      "afterSha256": "85ed7d92ec5be5f2d7fa9be57b69eafece1e34328f9444b67d2bdc61da6c4747"
+    },
+    {
+      "path": "apps/desktop/src/renderer/user-loop-evidence.ts",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "f3d19e653c2971ffb5a130de14d15774dc83529d175747b53932f50d3c4c44fd",
+      "afterSha256": "05f3552e0ab03e621b34b1dd655f0782cfcef4a8794c9f93f0dd0084c5e65ad0"
+    },
+    {
+      "path": "apps/desktop/tests/transport.test.ts",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "651f278331fafb88c9018edbf59583ce21e75fb66ec53051d67b000e76552e6a",
+      "afterSha256": "d6e1249adfc4ba644841797b92e3447bcd934fee4cbb5b44500abf18d78baecb"
+    },
+    {
+      "path": "apps/desktop/tests/user-loop-evidence.test.ts",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "0ec4c6abd109ffb24c5381a8d58bc153b58bc6dcb127a2a370663a1ec320bb34",
+      "afterSha256": "be75cdd867a696ef1c46c4753a14b4d3c22debddb297a11627e8c7d518ff5ddd"
+    },
+    {
+      "path": "docs/00-governance/SHACO-FORGE-CURRENT-STATE.md",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "e4cf3325d2f60a92c2b2ce5fa2854338b744705ad1af055294d5e6dadb263476",
+      "afterSha256": "4fd9b0c4ff257e3807118dbec84402557e79897a0b8e2da98af29294ee841d66"
+    },
+    {
+      "path": "docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "10c76e1e63ce0305edcdcb32bf04527539463fecd69a681a88be3602c44f97aa",
+      "afterSha256": "c781075e3b4c0dd9f446fae37d9ad9662311123bfa8e56b75768f71ee6ec63dd"
+    },
+    {
+      "path": "docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "2a14a0cea7a5bea71d856d8dd320cda2567543685542d4139cde898f15f8036a",
+      "afterSha256": "b4481a5d43f332c3c66ecc6fd1979b211dd03b45208dd39a5723d647bcb1c6fa"
+    },
+    {
+      "path": "docs/04-development-records/DEVELOPMENT-LOG.md",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "94fc3eac07be002da4f8df16d4b96a92f2c3165afe0b894a2b729b2fe0a3068b",
+      "afterSha256": "f445d0119f1427a7ba0ee8d91a4356c5f641e3761ae031f6879bc662e5feee33"
+    },
+    {
+      "path": "docs/07-handover/CURRENT-CHECKPOINT.md",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "f35c06ef25f3b28359e37fc42d4e167cbe5a1e1600cb6e051f79c7be2e054530",
+      "afterSha256": "e42c1058b8a85aedb66af5f93b14d68100144eddd35e4d3dbd75810028b434c9"
+    },
+    {
+      "path": "scripts/electron-user-loop.mjs",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "0320d56ad14946632cf6a5bc63d8b4f7a04bf28161bb1dc7dfda47faf0f0c275",
+      "afterSha256": "e2867ea0af0ba4dc9ee1b74ffcecf7b97ea4807297b083957bb1378600e6bf22"
+    },
+    {
+      "path": "scripts/user-loop-policy.mjs",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "a64fe56159d34b5fa3fb3f6e93d10eb15ff35ef09d0d7db3304ff7e6f6c47501",
+      "afterSha256": "418184aa184a762890f0802fbd5a8c50be2c23a41b0ba2f93d7911328b59f1c2"
+    },
+    {
+      "path": "scripts/user-loop-policy.test.mjs",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "226a63bc66b2d8d62e8abcbb8176d6a15d0de98609737f3eafd6cfca0ed80e37",
+      "afterSha256": "5c67a334327c10eec2817bada160737f1ac082894f9452735c32231397d69172"
+    },
+    {
+      "path": "scripts/verify-static.mjs",
+      "change": "MODIFIED_FROM_ENTRY",
+      "beforeSha256": "ad516ec8c894eefce40a29d9b104aa6805f82e52bed356cfb53f832c9896e149",
+      "afterSha256": "cb9f6d1f664f9f66ef775998f0f9c7dcaa691f21985d4c6403b7f7e73673bb30"
+    }
+  ],
+  "sourceTestsScriptsDocsCount": 18,
+  "newEvidenceFiles": 16,
+  "protected": {
+    "allOtherEntryFiles": {
+      "result": "UNCHANGED",
+      "fileCount": 1178,
+      "entryAndFinalInventorySha256": "776cf3078c9e9b6b807d5e9550f275b8708d3684a4a6cd335aa0df5e13ca2be3"
+    },
+    "historicalEvidence": {
+      "result": "UNCHANGED",
+      "fileCount": 674,
+      "entryAndFinalInventorySha256": "75612ee5ec40fe31c20a04877edcab66ae08b7baf7686a61762f11e6e3ab6927"
+    },
+    "visualAssets": {
+      "result": "UNCHANGED",
+      "fileCount": 10,
+      "entryAndFinalInventorySha256": "1466dfe2c849536735d6b932654977f1b00f8294079297c7a85b8d99bb0ca74e"
+    },
+    "productionClientUI": {
+      "result": "UNCHANGED",
+      "fileCount": 12,
+      "entryAndFinalInventorySha256": "d54a79dac491a9e4823fd5b471c35af299f06a67d8a582cad3669b0eb0cb4709"
+    },
+    "productionTheme": {
+      "result": "UNCHANGED",
+      "fileCount": 3,
+      "entryAndFinalInventorySha256": "7e755d2717ff0179a4bf9aabc8c6edc4c2773aed30d55f7958ce51f17d0b7616"
+    },
+    "realHostFixtures": {
+      "result": "UNCHANGED",
+      "fileCount": 2,
+      "entryAndFinalInventorySha256": "96789782f8b4d3628bb9fd73001fff198c55905db7abb713844d12f53554dbee"
+    }
+  },
+  "encoding": {
+    "result": "PASS",
+    "checkedFiles": 34,
+    "encoding": "UTF-8 without BOM",
+    "strictDecode": true,
+    "mojibakeMarkersFound": 0
+  },
+  "redaction": {
+    "providerRuns": 0,
+    "actualCredentialValuesRecorded": false,
+    "rawPrivateRuntimeIdsRecorded": false,
+    "testValues": "SYNTHETIC_ONLY"
+  },
+  "diffCheck": {
+    "exitCode": 0,
+    "result": "PASS"
+  },
+  "validationAttempts": 10,
+  "allAttemptsPassed": true,
+  "notRun": [
+    "smoke:worker",
+    "smoke:carrier",
+    "smoke:electron",
+    "smoke:failure",
+    "smoke:slice2-step1",
+    "smoke:slice2-step2",
+    "smoke:slice2-step3",
+    "smoke:slice2-step3-interactions",
+    "smoke:full-shaco",
+    "Controlled Composition Generation",
+    "final source freeze",
+    "Provider",
+    "Packaging",
+    "Independent re-review",
+    "UI Polish"
+  ],
+  "preIfr01Composition": "HISTORICAL_SUPERSEDED_BY_IFR01_SOURCE_CORRECTIVE",
+  "finalReplacementComposition": "PENDING_FINAL_SOURCE_STABILIZATION"
+}

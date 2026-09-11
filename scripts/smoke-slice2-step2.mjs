@@ -17,6 +17,7 @@ const children = []
 const chain = []
 const snapshots = []
 const authorities = []
+const shellEvidence = []
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 const alive = pid => { try { process.kill(pid, 0); return true } catch (error) { if (error.code === 'ESRCH') return false; throw error } }
 async function until(predicate, label, timeout = 90_000) {
@@ -92,6 +93,7 @@ try {
   const current = await first.connected(1, true)
   capture('CURRENT_SESSION_FROM_PUBLIC_HARNESS_TRUTH', current)
   assert.equal(current.readProof.sessionHash, seeded.sessionHash)
+  if (process.env.SHACO_FORGE_STEP3_MODE === '1') shellEvidence.push(await first.command('verify-shell'))
   await first.command('close')
   await until(() => first.child.exitCode !== null, 'graceful Desktop close', 15_000)
   await delay(700)
@@ -105,6 +107,7 @@ try {
   assert.notEqual(cold.credentialEpochHash, current.credentialEpochHash)
   assert.notEqual(cold.clientInstanceIdHash, current.clientInstanceIdHash)
   assert.equal(cold.readProof.sessionHash, seeded.sessionHash)
+  if (process.env.SHACO_FORGE_STEP3_MODE === '1') shellEvidence.push(await second.command('verify-shell'))
   second.child.kill('SIGKILL')
   await until(() => second.child.exitCode !== null || second.child.signalCode !== null, 'Desktop crash', 15_000)
   await delay(700)
@@ -129,6 +132,7 @@ try {
   assert.equal(recovered.readProof.sessionHash, seeded.sessionHash)
   assert.ok(recovered.readProof.workspaceHashes.includes(seeded.workspaceHash))
   assert.equal(recovered.recovery.continuity, 'SAME_WORKER')
+  if (process.env.SHACO_FORGE_STEP3_MODE === '1') shellEvidence.push(await third.command('verify-shell'))
   assert.ok(recovered.transitions.some(state => state.connectionState === 'CONNECTION_LOST'))
   process.kill(recovered.authority.worker.pid, 'SIGKILL')
   await until(() => ['worker', 'host', 'helper'].every(role => !alive(recovered.authority[role].pid)), 'old authority Job gone', 10_000)
@@ -137,6 +141,7 @@ try {
   assert.notEqual(afterReplacement.authority.workerInstanceIdHash, recovered.authority.workerInstanceIdHash)
   assert.equal(afterReplacement.recovery.continuity, 'REPLACEMENT_CONTINUITY_UNPROVEN')
   assert.equal(afterReplacement.readProof.sessionHash, seeded.sessionHash)
+  if (process.env.SHACO_FORGE_STEP3_MODE === '1') shellEvidence.push(await third.command('verify-shell'))
   replacement = { oldAuthorityGone: true, overlap: 0, oldChildAdoption: false, old: recovered.authority, fresh: afterReplacement.authority }
   await third.command('close')
   await until(() => third.child.exitCode !== null, 'last Desktop close', 15_000)
@@ -158,7 +163,7 @@ finally {
   cleanup = { noOrphan: true, authorityCount: authorities.length, desktopProcessesExited: children.every(child => child.exitCode !== null || child.signalCode !== null) }
   chain.push('BOUNDED_CLEANUP_NO_ORPHAN')
   const previous = await readFile(join(evidenceRoot, 'cumulative-e2e.json'), 'utf8').then(JSON.parse).catch(() => ({ attempts: [] }))
-  previous.attempts.push({ runId, result, failure, chain, snapshots, seeded, loss, replacement, cleanup, providerRuns: 0 })
+  previous.attempts.push({ runId, scenario: process.env.SHACO_FORGE_STEP3_MODE === '1' ? 'STEP3_CUMULATIVE' : 'STEP2_REGRESSION', result, failure, chain, snapshots, seeded, loss, replacement, cleanup, shellEvidence, providerRuns: 0 })
   await evidence('cumulative-e2e.json', previous)
   console.log(JSON.stringify({ result, failure, chain, cleanup, providerRuns: 0 }))
 }

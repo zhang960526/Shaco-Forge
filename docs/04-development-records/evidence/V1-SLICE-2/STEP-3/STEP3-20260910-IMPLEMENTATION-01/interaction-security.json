@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "outerInteractionProjection": "NONE",
+  "pendingModel": "DO_NOT_CREATE_FOR_V1_0",
+  "publicEventId": "NOT_AVAILABLE_IN_CURRENT_FROZEN_PUBLIC_CLIENT_SURFACE",
+  "gatewayIdentityDependency": false,
+  "pendingLocalKeyAsEventId": false,
+  "secondSettlementTruth": false,
+  "agentCancelOnDisconnect": false,
+  "proof": "S3G16 uses unmodified frozen public Client bundles, deterministic public-service fixtures, SSR rendering and Harness-owned pending objects; real Host pending replay after a Provider turn is not exercised. Contract section 15 permits this structural/fixture method; Provider proof is separately required if requested.",
+  "nativePicker": {
+    "method": "REAL_IPC_MAIN_GUARD_WITH_TEST_ONLY_DIALOG_RESULT_INJECTION",
+    "scenarios": [
+      "cancel",
+      "failure",
+      "success"
+    ],
+    "staleAndUntrustedUnit": "apps/desktop/src/main/workspace-picker.test.ts",
+    "rendererCapability": "workspace.pickDirectory only"
+  },
+  "renderer": {
+    "nodeIntegration": false,
+    "contextIsolation": true,
+    "sandbox": true,
+    "requireAvailable": false,
+    "processAvailable": false
+  },
+  "failureProjection": {
+    "connectedRequires": [
+      "authenticatedCarrier",
+      "clientGenerationReady",
+      "projectionRebuildComplete"
+    ],
+    "unknown": "REREAD_NO_REPLAY",
+    "harnessFailureNotProviderFailure": true
+  },
+  "providerRuns": 0
+}

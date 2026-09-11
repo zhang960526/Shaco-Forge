@@ -1,0 +1,9 @@
+[
+  {
+    "ProcessId": 1220,
+    "ParentProcessId": 5936,
+    "Name": "node.exe",
+    "CreationDate": "2026-09-11T10:08:23.389662+08:00",
+    "ExecutablePath": "D:\\Development\\nodejs\\node.exe"
+  }
+]

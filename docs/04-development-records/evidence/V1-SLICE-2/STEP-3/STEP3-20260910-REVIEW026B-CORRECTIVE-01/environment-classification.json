@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "toolchain": {
+    "node": "22.19.0",
+    "pnpm": "11.7.0",
+    "dotnet": "10.0.302",
+    "electron": "35.7.5",
+    "powershell": "7.6.5.0"
+  },
+  "injection": {
+    "powershell": "EXPLICIT_DYNAMIC_RESOLUTION",
+    "harnessRoot": "EXPLICIT_ENV",
+    "workerNode": "EXPLICIT_ENV"
+  },
+  "sandboxDesktopAttempt": {
+    "exit": 2147483651,
+    "classification": "REVIEW_ENVIRONMENT_SPECIFIC",
+    "cleanup": "PASS",
+    "supersededByCompatibleDesktopRun": true
+  },
+  "compatibleDesktopEnvironment": {
+    "result": "PASS",
+    "productDefect": "NOT_ESTABLISHED"
+  },
+  "providerRuns": 0
+}

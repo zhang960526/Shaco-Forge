@@ -1,0 +1,2167 @@
+{
+  "frozenAt": "2026-09-10T19:39:27.138Z",
+  "manifestSha256": "b1bb7d6b080b6b5eebe8578a810b231a28dc2624d464fa8100b8df273f8ded8d",
+  "result": "PASS",
+  "matrix": [
+    {
+      "id": 1,
+      "state": "Bootstrap / Loading",
+      "result": "PASS",
+      "screenshots": [
+        {
+          "name": "bootstrap-loading",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\bootstrap-loading.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f",
+          "ui": {
+            "rootCount": 0,
+            "sidebarCount": 0,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": false,
+            "horizontalOverflow": false,
+            "composer": false,
+            "approval": false,
+            "question": false,
+            "kinds": [],
+            "tools": [],
+            "geometry": {
+              "conversation": null,
+              "composer": null,
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": true,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "state": "No Project",
+      "result": "PASS",
+      "screenshots": [
+        {
+          "name": "no-project",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\no-project.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": false,
+            "approval": false,
+            "question": false,
+            "kinds": [],
+            "tools": [],
+            "geometry": {
+              "conversation": null,
+              "composer": null,
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "state": "Project selected + blank Chat",
+      "result": "PASS",
+      "screenshots": [
+        {
+          "name": "project-blank-chat",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\project-blank-chat.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": false,
+            "kinds": [],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "state": "Active Conversation",
+      "result": "PASS",
+      "screenshots": [
+        {
+          "name": "conversation-streaming",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\conversation-streaming.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "428774928aea9e4767cad571cd1e6d4ec00d3480000368efeb9dc6721e08639e",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": false,
+            "kinds": [
+              "command",
+              "command",
+              "user",
+              "assistant-step"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "state": "Tool running / result",
+      "result": "PASS",
+      "screenshots": [
+        {
+          "name": "conversation-tool",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\conversation-tool.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "6bf8e8983d28fa5ce2256151c4f7c192b40a50baa06ebd22e898af6b1941d005",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": false,
+            "kinds": [
+              "command",
+              "command",
+              "user",
+              "assistant-step"
+            ],
+            "tools": [
+              "running"
+            ],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": {
+                "width": 1044,
+                "center": 845,
+                "maxWidth": "none"
+              }
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        },
+        {
+          "name": "tool-result-detail",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\tool-result-detail.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "ada7ba0e9e74af83cb5036d0f9b7e1517dffbe12a3aee9b46bfce2451687bfc7",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": false,
+            "kinds": [
+              "command",
+              "command",
+              "user",
+              "assistant-step"
+            ],
+            "tools": [
+              "settled"
+            ],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": {
+                "width": 1044,
+                "center": 845,
+                "maxWidth": "none"
+              }
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "state": "Approval pending",
+      "result": "PASS",
+      "screenshots": [
+        {
+          "name": "approval-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\approval-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "d16d8db54d3c09fa33857a19f33a8f356f4ec16ac05b9daf67028afcfe836391",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": true,
+            "question": false,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "state": "Question pending",
+      "result": "PASS",
+      "screenshots": [
+        {
+          "name": "question-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\question-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "8cdeda4f4bfecec40fd4dc46b1d6dbcc8c5f3754d2091b5147e94ccc961aecd9",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": true,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        },
+        {
+          "name": "plan-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\plan-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "d0a18e4507537c612d6ce550f5f673a6fee66af65e9d6c8680580b982f64ab0b",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": true,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": true,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        },
+        {
+          "name": "multi-pending",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\multi-pending.png",
+          "width": 2139,
+          "height": 1256,
+          "sha256": "f999cbaf1156bcdd6281be3c65c74981e59269655d3b8eda1ea50107b4c02266",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": true,
+            "kinds": [
+              "command",
+              "command"
+            ],
+            "tools": [],
+            "geometry": {
+              "conversation": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 1100,
+                "center": 845,
+                "maxWidth": "1100px"
+              },
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "state": "Error / Reconnecting",
+      "result": "PASS",
+      "screenshots": [
+        {
+          "name": "shaco-root-error",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\shaco-root-error.png",
+          "width": 1149,
+          "height": 956,
+          "sha256": "af7d243fd1cec2baef96415708040e7f43c8d55a02d0685f19f0389aa13d0491",
+          "ui": {
+            "rootCount": 0,
+            "sidebarCount": 0,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": false,
+            "horizontalOverflow": false,
+            "composer": false,
+            "approval": false,
+            "question": false,
+            "kinds": [],
+            "tools": [],
+            "geometry": {
+              "conversation": null,
+              "composer": null,
+              "tool": null
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": true,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "state": "Narrow window",
+      "result": "PASS",
+      "screenshots": [
+        {
+          "name": "narrow-window",
+          "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\narrow-window.png",
+          "width": 1149,
+          "height": 956,
+          "sha256": "b3071726d0cd025789bbadc16023ad62d6af5f604b38d39748ba38ab7c9477c9",
+          "ui": {
+            "rootCount": 1,
+            "sidebarCount": 1,
+            "forbiddenBrand": false,
+            "harnessSeats": 0,
+            "template": "BRAUN",
+            "mode": "light",
+            "rootVisible": true,
+            "horizontalOverflow": false,
+            "composer": true,
+            "approval": false,
+            "question": false,
+            "kinds": [
+              "command",
+              "command",
+              "user",
+              "assistant-step",
+              "turn-error"
+            ],
+            "tools": [
+              "settled"
+            ],
+            "geometry": {
+              "conversation": {
+                "width": 532,
+                "center": 492,
+                "maxWidth": "1100px"
+              },
+              "composer": {
+                "width": 548,
+                "center": 492,
+                "maxWidth": "1100px"
+              },
+              "tool": {
+                "width": 496,
+                "center": 492,
+                "maxWidth": "none"
+              }
+            },
+            "lowNoiseWorkbar": true,
+            "bootstrapVisible": false,
+            "plan": false,
+            "tokens": {
+              "--surface-primary": "rgb(248, 248, 246)",
+              "--surface-sidebar": "rgb(235, 235, 232)",
+              "--accent-primary": "rgb(55, 59, 54)",
+              "--control-radius": "6px",
+              "--template-decoration-height": "0px",
+              "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+            }
+          },
+          "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "approval-cold-rebuild",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\approval-cold-rebuild.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "c52ee2b22ce8c097085759c615889eb3b1689382682fde57a5c585311334d359",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": true,
+        "question": false,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "approval-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\approval-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "d16d8db54d3c09fa33857a19f33a8f356f4ec16ac05b9daf67028afcfe836391",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": true,
+        "question": false,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "bootstrap-loading",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\bootstrap-loading.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "88f5a654017d0db1268119dbca732569886a81374ed504e4f460b2505f87b48f",
+      "ui": {
+        "rootCount": 0,
+        "sidebarCount": 0,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": false,
+        "horizontalOverflow": false,
+        "composer": false,
+        "approval": false,
+        "question": false,
+        "kinds": [],
+        "tools": [],
+        "geometry": {
+          "conversation": null,
+          "composer": null,
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": true,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "braun-approval-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\braun-approval-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "05378bcb9a62e8056b74634d25991218f172bb3ddf49213e7ec6ef4dac460458",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": true,
+        "question": false,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "braun-multi-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\braun-multi-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "f999cbaf1156bcdd6281be3c65c74981e59269655d3b8eda1ea50107b4c02266",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "braun-plan-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\braun-plan-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "809f17837d958d14a32ee252dc8ce0fe6d71687cb8811424341f7c81f718e410",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": true,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "braun-question-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\braun-question-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "b929a931aad48d0f84902f21eaaf8a180ccf0e2f03ffc80273953955d5db03a8",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "braun-representative",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\braun-representative.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "b4067d74d78c737f86677370b2a619471b233efd45579ecccb00411f29370e6c",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step",
+          "turn-error"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "conversation-error",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\conversation-error.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "b4067d74d78c737f86677370b2a619471b233efd45579ecccb00411f29370e6c",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step",
+          "turn-error"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "conversation-result",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\conversation-result.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "1272691355a436b0c7f5ced0dfca47dce4db4cf02099a256a4e8f8da3e49a2f4",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "conversation-streaming",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\conversation-streaming.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "428774928aea9e4767cad571cd1e6d4ec00d3480000368efeb9dc6721e08639e",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "conversation-tool",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\conversation-tool.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "6bf8e8983d28fa5ce2256151c4f7c192b40a50baa06ebd22e898af6b1941d005",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step"
+        ],
+        "tools": [
+          "running"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "famicom-approval-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\famicom-approval-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "99c5c8a7e53a53b47a0a01c43d5e766437e1ae8e9cb7f7e1c6f5bdde28af5dca",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "FAMICOM",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": true,
+        "question": false,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(251, 245, 233)",
+          "--surface-sidebar": "rgb(241, 234, 217)",
+          "--accent-primary": "rgb(146, 37, 41)",
+          "--control-radius": "4px",
+          "--template-decoration-height": "28px",
+          "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "famicom-multi-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\famicom-multi-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "77df793ef00c863218b5def128be658582606cfc68acea2ae3177c56f341108d",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "FAMICOM",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(251, 245, 233)",
+          "--surface-sidebar": "rgb(241, 234, 217)",
+          "--accent-primary": "rgb(146, 37, 41)",
+          "--control-radius": "4px",
+          "--template-decoration-height": "28px",
+          "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "famicom-plan-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\famicom-plan-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "2f08883438e7e533c1f6f70c43b77ab4df277ccadfc8117d6c80a2a6029c8c36",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "FAMICOM",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": true,
+        "tokens": {
+          "--surface-primary": "rgb(251, 245, 233)",
+          "--surface-sidebar": "rgb(241, 234, 217)",
+          "--accent-primary": "rgb(146, 37, 41)",
+          "--control-radius": "4px",
+          "--template-decoration-height": "28px",
+          "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "famicom-question-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\famicom-question-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "3ed8c69944055679155b69c3884936ea28bde2d388ede1c06bafd185a95050d6",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "FAMICOM",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(251, 245, 233)",
+          "--surface-sidebar": "rgb(241, 234, 217)",
+          "--accent-primary": "rgb(146, 37, 41)",
+          "--control-radius": "4px",
+          "--template-decoration-height": "28px",
+          "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "famicom-representative",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\famicom-representative.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "e5b359a258d02221414b5b4352a66e09f24664340168acc648e68763e31a65db",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "FAMICOM",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step",
+          "turn-error"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(251, 245, 233)",
+          "--surface-sidebar": "rgb(241, 234, 217)",
+          "--accent-primary": "rgb(146, 37, 41)",
+          "--control-radius": "4px",
+          "--template-decoration-height": "28px",
+          "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "history-cold-rebuild",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\history-cold-rebuild.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "4ee2c42ea99a221eadce7650b9a87a6c237137c6c70a2bc1cce9919b85037611",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step",
+          "turn-error",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user",
+          "user"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "multi-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\multi-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "f999cbaf1156bcdd6281be3c65c74981e59269655d3b8eda1ea50107b4c02266",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "narrow-window",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\narrow-window.png",
+      "width": 1149,
+      "height": 956,
+      "sha256": "b3071726d0cd025789bbadc16023ad62d6af5f604b38d39748ba38ab7c9477c9",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step",
+          "turn-error"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 532,
+            "center": 492,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 548,
+            "center": 492,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 496,
+            "center": 492,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "no-project",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\no-project.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "4fd7722056309e8f6f6798ef2667ede34fe71cf112f9c9e40aac2d4c3021c1d1",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": false,
+        "approval": false,
+        "question": false,
+        "kinds": [],
+        "tools": [],
+        "geometry": {
+          "conversation": null,
+          "composer": null,
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "plan-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\plan-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "d0a18e4507537c612d6ce550f5f673a6fee66af65e9d6c8680580b982f64ab0b",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": true,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "project-blank-chat",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\project-blank-chat.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "550f94e23591a5d5158619eacf76809d6b7d8e00f170f7d1a9b499ddb896f21b",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "question-cold-rebuild",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\question-cold-rebuild.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "aaadecb494fcb972863b8c60b2b21906d167a40e55b111c4603ca9bc6d6e4a6e",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "question-pending",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\question-pending.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "8cdeda4f4bfecec40fd4dc46b1d6dbcc8c5f3754d2091b5147e94ccc961aecd9",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": true,
+        "kinds": [
+          "command",
+          "command"
+        ],
+        "tools": [],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "shaco-root-error",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\shaco-root-error.png",
+      "width": 1149,
+      "height": 956,
+      "sha256": "af7d243fd1cec2baef96415708040e7f43c8d55a02d0685f19f0389aa13d0491",
+      "ui": {
+        "rootCount": 0,
+        "sidebarCount": 0,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": false,
+        "horizontalOverflow": false,
+        "composer": false,
+        "approval": false,
+        "question": false,
+        "kinds": [],
+        "tools": [],
+        "geometry": {
+          "conversation": null,
+          "composer": null,
+          "tool": null
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": true,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "shaco-settings",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\shaco-settings.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "4ba2cea2e44828f578a94c20e23e7facf1fdb444d1fef9930a39fd5762e593c7",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step",
+          "turn-error"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    },
+    {
+      "name": "tool-result-detail",
+      "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-2\\step2\\tool-result-detail.png",
+      "width": 2139,
+      "height": 1256,
+      "sha256": "ada7ba0e9e74af83cb5036d0f9b7e1517dffbe12a3aee9b46bfce2451687bfc7",
+      "ui": {
+        "rootCount": 1,
+        "sidebarCount": 1,
+        "forbiddenBrand": false,
+        "harnessSeats": 0,
+        "template": "BRAUN",
+        "mode": "light",
+        "rootVisible": true,
+        "horizontalOverflow": false,
+        "composer": true,
+        "approval": false,
+        "question": false,
+        "kinds": [
+          "command",
+          "command",
+          "user",
+          "assistant-step"
+        ],
+        "tools": [
+          "settled"
+        ],
+        "geometry": {
+          "conversation": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "composer": {
+            "width": 1100,
+            "center": 845,
+            "maxWidth": "1100px"
+          },
+          "tool": {
+            "width": 1044,
+            "center": 845,
+            "maxWidth": "none"
+          }
+        },
+        "lowNoiseWorkbar": true,
+        "bootstrapVisible": false,
+        "plan": false,
+        "tokens": {
+          "--surface-primary": "rgb(248, 248, 246)",
+          "--surface-sidebar": "rgb(235, 235, 232)",
+          "--accent-primary": "rgb(55, 59, 54)",
+          "--control-radius": "6px",
+          "--template-decoration-height": "0px",
+          "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+        }
+      },
+      "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+    }
+  ]
+}

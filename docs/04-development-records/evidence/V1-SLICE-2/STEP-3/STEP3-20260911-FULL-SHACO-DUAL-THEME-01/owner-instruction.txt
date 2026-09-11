@@ -1,0 +1,2063 @@
+你现在执行 Shaco Forge 的长时间、有界自治 Implementation Goal。
+
+GOAL ID：
+
+V1_SLICE2_STEP3_FULL_SHACO_DUAL_THEME_PRESENTATION_IMPLEMENTATION_001
+
+==================================================
+0. 执行模式
+==================================================
+
+执行环境：
+
+Product：
+D:\Project\Shaco-Forge
+
+Frozen Harness：
+D:\Project\Shaco-Forge-Upstream\deepseek-harness
+
+模型 / 模式：
+
+GPT-6 Astra
+HIGH / HIGHEST REASONABLE REASONING
+GOAL MODE
+LONG-RUNNING BOUNDED AUTONOMY
+
+本任务允许长时间连续执行。
+
+目标：
+
+最大化 VERIFIED COMPLETION。
+
+不是最大化修改量。
+
+不要等待用户处理中间的普通实现细节；
+在本Contract范围内自行分析、修改、测试、修复和继续。
+
+遇到 Stop Condition 才停止相应边界。
+
+==================================================
+1. Architecture Owner 最终授权
+==================================================
+
+已有独立Review：
+
+REVIEW_027 = PASS
+
+其覆盖：
+
+- Full Shaco Presentation；
+- 100% Shaco visible UI；
+- Option B public lower-level Client bootstrap；
+- Harness runtime/business truth reuse；
+- Harness UI Source Copy/Adapt First；
+- MODE_PLUS_TEMPLATE；
+- Harness baseline unchanged；
+- no second business truth。
+
+随后 Owner 增加：
+
+BRAUN + FAMICOM
+
+双模板Required Delta。
+
+独立Reviewer返回：
+
+REVIEW_027A = PASS
+
+NEW_BLOCKING_FINDINGS = NONE
+
+REVIEW_027_BASELINE_FINDINGS_REOPENED = NONE
+
+FINAL_STATE =
+PASS_READY_FOR_OWNER_DUAL_THEME_DELTA_ACCEPTANCE
+
+Architecture Owner现在接受：
+
+DUAL_THEME_DELTA =
+ACCEPTED
+
+V1_REQUIRED_THEME_TEMPLATE_COUNT =
+2
+
+V1_REQUIRED_THEME_TEMPLATES =
+BRAUN,FAMICOM
+
+V1_DEFAULT_THEME_TEMPLATE =
+BRAUN
+
+FULL_SHACO_PRESENTATION_CORRECTIVE_CONTRACT =
+APPROVED_FOR_FREEZE_AND_IMPLEMENTATION
+
+FULL_SHACO_PRESENTATION_IMPLEMENTATION_AUTHORIZATION =
+YES
+
+ASTRA_LONG_GOAL_AUTHORIZATION =
+YES
+
+STEP3_CLOSURE =
+NO
+
+SLICE2_CLOSURE =
+NO
+
+PROVIDER_GATE_AUTHORIZATION =
+NO
+
+Reviewer是只读执行。
+
+仓库中可能不存在完整REVIEW-027或027A报告。
+
+不得虚构Reviewer transcript、Finding或不存在的Evidence。
+
+==================================================
+2. Baseline Gate
+==================================================
+
+Expected Product：
+
+branch =
+master
+
+HEAD =
+5118053f625d01faba6617cace481df3091ba5be
+
+当前工作区已经是大型Step3 dirty candidate。
+
+Expected expanded baseline约：
+
+117 changed paths
+20 tracked modified
+97 untracked
+staged NONE
+
+注意：
+
+普通 git status porcelain 可能把untracked目录折叠，
+因此可能显示约30个 ?? entries。
+
+不要仅凭顶层 ?? 数量判断数据丢失。
+
+必须检查实际文件身份与已有candidate。
+
+Frozen Harness：
+
+HEAD =
+cd5ef8148158c3a752a658978873241fdf8e2bbc
+
+必须：
+
+CLEAN
+READ_ONLY
+
+Current Full Shaco Contract expected：
+
+docs/03-v1.0-plan/
+V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md
+
+SHA256 =
+976e9cc8baabc0f7a1727dc6b49e0753c5090eb84366e6bd7b2f5e4a4fb24793
+
+如果以上核心Contract / HEAD / Frozen Harness不匹配：
+
+GOAL_RESULT =
+BLOCKED_BASELINE_MISMATCH
+
+停止。
+
+不得猜测或reset。
+
+==================================================
+3. Visual Authority
+==================================================
+
+Long-Term Structure Authority：
+
+docs/01-product/assets/
+SHACO-FORGE-LONG-TERM-SHELL-REFERENCE.png
+
+Expected：
+
+1672 x 941
+
+SHA256 =
+2f6852676262562b614f9427c83c451ca99c129b4ba770597fd07023e6e35326
+
+BRAUN Visual Authority：
+
+docs/01-product/assets/Braun.png
+
+Expected：
+
+1672 x 941
+
+SHA256 =
+2f6852676262562b614f9427c83c451ca99c129b4ba770597fd07023e6e35326
+
+Long-Term Shell 与 Braun 当前字节相同。
+
+FAMICOM Visual Authority：
+
+docs/01-product/assets/FAMICOM.png
+
+Expected：
+
+1672 x 941
+
+SHA256 =
+3f43f6f1ab08efde8837aa55aa0fab10c8cd092bdd52aa76e2cb902c621f4dab
+
+这些图片：
+
+READ_ONLY VISUAL AUTHORITIES。
+
+不得修改图片本身。
+
+==================================================
+4. Future Theme Assets
+==================================================
+
+以下仅为 FUTURE_ONLY：
+
+Cyberdeck
+Game Boy
+IBM Terminal
+Macintosh 1984
+NASA
+Sony Walkman
+Windows 98
+
+禁止：
+
+实现
+预建专用CSS
+加入selector
+建立专用component
+Theme marketplace化。
+
+V1只实现：
+
+BRAUN
+FAMICOM。
+
+==================================================
+5. 第一步：持久化 Owner Acceptance / Freeze
+==================================================
+
+在修改新的 Full Shaco source 之前：
+
+根据现有Document Map和治理方式，
+最小同步当前Authority：
+
+REVIEW_027A =
+PASS
+
+DUAL_THEME_DELTA =
+ACCEPTED
+
+FULL_SHACO_PRESENTATION_CORRECTIVE_CONTRACT =
+FROZEN_FOR_IMPLEMENTATION
+
+FULL_SHACO_PRESENTATION_IMPLEMENTATION_AUTHORIZATION =
+YES
+
+V1_CURRENT_STEP =
+V1_SLICE_2_STEP3_FULL_SHACO_DUAL_THEME_PRESENTATION_IMPLEMENTATION
+
+PROVIDER_GATE_AUTHORIZATION =
+NO
+
+不要创建第二套平行Authority。
+
+不要伪造不存在的完整Review文档。
+
+如当前项目已有Owner Decision可以合法承载Freeze/Acceptance，
+优先更新现有Authority。
+
+不要因为文件名仍包含“CANDIDATE”就进行大规模rename；
+Status/Authority关系优先。
+
+==================================================
+6. 唯一实现目标
+==================================================
+
+把当前：
+
+Shaco Shell
++
+Visible Harness Product UI
+
+彻底改成：
+
+100% Shaco Forge Visible Presentation
++
+DeepSeek Harness Runtime / Business Truth Reuse。
+
+最终用户不能看到：
+
+Harness AppFrame
+Harness Sidebar
+Harness Hero/Home
+Harness Logo
+“探索未至之境”
+Preview badge
+Harness Workspace product chrome
+Harness Settings page
+Harness Composer product shell
+Harness Boot branding
+Harness Error branding
+任何第二产品Shell。
+
+==================================================
+7. 最终产品结构
+==================================================
+
+最终结构：
+
+Shaco Forge Desktop
+├─ ShacoSidebar
+│  ├─ New Chat
+│  ├─ Project Directory
+│  └─ Settings
+├─ ShacoWorkbar
+└─ ShacoChatWorkspace
+   ├─ Shaco Bootstrap / Loading / Error
+   ├─ ShacoConversation
+   ├─ ShacoMessage
+   ├─ ShacoToolResult
+   ├─ ShacoApproval
+   ├─ ShacoQuestion
+   ├─ ShacoComposer
+   ├─ ShacoModelSelector
+   └─ ShacoPermission
+
+Settings仍属于同一个ShacoRoot。
+
+这些是职责边界。
+
+不要求机械创建14个独立文件。
+
+MINIMAL_SUFFICIENT_STRUCTURE =
+REQUIRED
+
+==================================================
+8. Truth Ownership
+==================================================
+
+Harness继续唯一拥有：
+
+Workspace
+Session
+Session History
+Conversation truth
+Streaming runtime
+Tool runtime
+Approval pending/settlement
+Question pending/settlement
+Model truth
+Permission truth
+Provider truth
+Settings
+Credentials
+Agent Runtime
+Persistence。
+
+禁止：
+
+SECOND_WORKSPACE_TRUTH
+SECOND_SESSION_TRUTH
+SECOND_CONVERSATION_STORE
+SECOND_CHAT_REDUCER
+SECOND_TOOL_RUNTIME
+SECOND_PENDING_REGISTRY
+SECOND_SETTLEMENT_STATE_MACHINE
+SECOND_MODEL_REGISTRY
+SECOND_CREDENTIAL_STORE
+SECOND_AGENT_RUNTIME。
+
+Shaco只拥有Presentation和必要ephemeral UI state。
+
+==================================================
+9. Option B Bootstrap
+==================================================
+
+实现已通过Review的：
+
+FULL_SHACO_PRESENTATION_OPTION =
+OPTION_B_PUBLIC_LOWER_LEVEL_CLIENT_BOOTSTRAP
+
+不再使用AppWebEntry作为最终visible product bootstrap。
+
+使用当前Frozen Harness public exports完成：
+
+- static client module graph；
+- ClientModuleLoaderTarget；
+- Cordis Context；
+- public Loader；
+- Harness Client plugins；
+- UI Renderer；
+- root slot；
+- existing connection/carrier integration。
+
+必须实现：
+
+ONE_CLIENT_MODULE_SYSTEM = YES
+
+ONE_CORDIS_CONTEXT = YES
+
+ONE_REACT_RUNTIME = YES
+
+ONE_REACT_ROOT = YES
+
+ONE_VISIBLE_ROOT = SHACO
+
+FROZEN_HARNESS_CLIENT_ROWS =
+28 retained
+
+PRODUCT_ROW =
+one @shaco-forge/desktop row
+
+只有Required Harness plugins确认ACTIVE后，
+Shaco root才能mount。
+
+==================================================
+10. Bootstrap禁止项
+==================================================
+
+禁止：
+
+第二AppWebEntry
+第二Client Context
+第二React copy
+iframe
+DOM scraping
+CSS blind-hide已挂载Harness Shell
+private AppWebEntry ctx
+private gateway types
+private eventId
+packages/**/src runtime imports
+直接runtime import undocumented lib implementation。
+
+如果Option B实际必须依赖Review未批准的private API：
+
+ARCHITECTURE_CHANGE_REQUIRED =
+YES
+
+停止该边界。
+
+不要偷偷绕过。
+
+==================================================
+11. Loading / Error
+==================================================
+
+Bootstrap前：
+
+只能出现Shaco-owned Loading。
+
+Bootstrap失败：
+
+只能出现Shaco-owned Error。
+
+不得出现：
+
+HARNESS
+Harness BootPage
+Harness AppFrame fallback。
+
+root ownership丢失时：
+
+fail closed。
+
+避免在teardown/root撤销期间短暂暴露Harness winner。
+
+==================================================
+12. Harness UI Source Copy/Adapt First
+==================================================
+
+正式策略：
+
+V1_PRESENTATION_IMPLEMENTATION_STRATEGY =
+HARNESS_UI_SOURCE_COPY_AND_ADAPT_FIRST
+
+针对成熟：
+
+Conversation
+Message / Chat Nodes
+Markdown/content
+Tool Result
+Composer
+Approval
+Question
+Model Selector
+Permission
+必要pure UI helpers/styles/icons
+
+必须先检查Frozen Harness现有源码。
+
+优先级：
+
+1.
+COPY / EXTRACT / ADAPT Harness Presentation source
+
+2.
+Thin Shaco component consuming Harness public data
+
+3.
+GREENFIELD complex component only when 1+2确实不充分
+
+不得仅因为：
+
+“自己写更干净”
+“我更喜欢”
+“架构更统一”
+
+就跳过源码复用。
+
+==================================================
+13. Copy/Adapt 边界
+==================================================
+
+实际迁移时只复制：
+
+Presentation。
+
+不得复制：
+
+Conversation reducer
+ClientSessions
+business event consumer
+pending registry
+PendingApproval/PendingQuestion business implementation
+settlement logic
+Tool execution
+Provider registry
+Credential storage
+Agent runtime。
+
+如果原组件Presentation和business implementation耦合：
+
+抽取pure rendering。
+
+如果不实际：
+
+SOURCE_REUSE_ASSESSMENT =
+NOT_PRACTICAL
+
+记录事实理由，
+实现最薄的Shaco组件。
+
+==================================================
+14. Migration Inventory
+==================================================
+
+每个实际复制/改造来源必须记录：
+
+upstream source path
+Frozen Harness HEAD
+source SHA256
+target Shaco path
+REUSE / ADAPT / GREENFIELD
+reused scope
+adaptation scope
+License / Notice handling
+private dependency removed
+public runtime binding used。
+
+使用现有开发/Evidence文档结构记录。
+
+不要新建无必要平行体系。
+
+==================================================
+15. License / Notice
+==================================================
+
+当前本地结论：
+
+LOCAL_HARNESS_LICENSE =
+MIT
+
+COMPLIANCE_STATUS =
+LOCAL_BASE_TERMS_CONFIRMED_FILE_SELECTION_CHECK_REQUIRED
+
+实际复制每个文件前：
+
+检查该文件及直接所需素材/helper/icon的适用License/Notice。
+
+不得把MIT root结论扩大到所有第三方。
+
+需要保留的notice/attribution必须保留。
+
+如具体文件存在无明确合规路径的blocking问题：
+
+停止该文件迁移，
+使用允许的thin Shaco fallback或返回Owner Required。
+
+==================================================
+16. Sidebar
+==================================================
+
+保留已验证功能：
+
+New Chat
+Project Directory
+Settings
+Native Picker
+Workspace create/connect
+blank Session reuse
+Session create/open。
+
+数据继续来自：
+
+ctx.workspaces.list
+ctx.sessions.list
+
+以及现有public navigation services。
+
+Sidebar不得建立第二Project/Session model。
+
+最终只有一个visible Sidebar。
+
+==================================================
+17. Workbar
+==================================================
+
+按长期Shell Reference实现低噪Workbar。
+
+左侧：
+
+current Project / Workspace / Session context。
+
+右侧：
+
+truthful Worker / Connection state。
+
+常态不得显示：
+
+PID
+Port
+Carrier hash
+generation id
+diagnostic wall。
+
+Sidebar保留主要Shaco品牌。
+
+Main顶部不要重复形成第二Shaco品牌Header。
+
+==================================================
+18. Conversation
+==================================================
+
+优先使用既有Harness assembled truth：
+
+ctx.sessions.binding(sessionId)
+→ ctx.uiConversation.binding(binding).target('chat')
+→ getSnapshot()
+→ subscribe()
+
+不得重新折叠raw events。
+
+必须支持真实：
+
+history
+user
+assistant
+streaming
+command
+tool call/result
+error
+settled
+interrupted
+load older。
+
+不得把：
+
+running=false
+
+等价为成功。
+
+==================================================
+19. Conversation Presentation
+==================================================
+
+Conversation / Message实现优先Copy/Adapt Harness成熟presentation。
+
+按照BRAUN默认结构：
+
+- Main content约1100px；
+- Conversation / Tool / Composer共用中心轴；
+- 留白但不巨大；
+- 无Main Area最外层大卡片；
+- 不出现Harness shell；
+- no permanent inspector；
+- 窄窗口响应式。
+
+不要为了Pixel Perfect扩大任务。
+
+目标：
+
+STRUCTURAL_PRODUCT_UI_CORRECTNESS
++
+CLEAR VISUAL CONFORMANCE。
+
+==================================================
+20. Composer
+==================================================
+
+ShacoComposer负责：
+
+draft
+text input
+attachments presentation
+send
+stop
+Model Selector
+Permission
+local UI validation
+busy/error。
+
+实际业务：
+
+prompt →
+Harness public Session prompt()
+
+stop →
+Harness public Session cancel()
+
+保持：
+
+admission != completion
+
+disconnect != cancel
+
+cancel != clear queued work
+
+unknown outcome不得自动replay
+
+old generation禁止mutation。
+
+==================================================
+21. Tool
+==================================================
+
+V1：
+
+TOOL_PRESENTATION =
+BASIC
+
+至少支持：
+
+tool name
+running
+input summary
+result
+failure
+basic expandable detail。
+
+执行归Harness。
+
+不要为了复刻Harness全部高级Tool UI而扩大Scope。
+
+==================================================
+22. Approval
+==================================================
+
+Primary visible surface：
+
+ShacoApproval。
+
+source：
+
+ctx.uiSession.pendingInteractions
+
+消费真实PendingApproval。
+
+调用真实：
+
+pending.answer(...)
+
+禁止：
+
+second pending state
+copy pending consumer
+internal eventId
+timing correlation
+automatic answer
+disconnect answer
+replay。
+
+==================================================
+23. Question
+==================================================
+
+Primary visible：
+
+ShacoQuestion。
+
+消费真实PendingQuestion。
+
+至少覆盖：
+
+question
+header/detail
+options
+multiSelect
+custom answer
+plan-review。
+
+settlement：
+
+真实pending.answer(...)
+
+不建立第二runtime。
+
+==================================================
+24. Model
+==================================================
+
+ShacoModelSelector使用现有公开：
+
+ModelDirectory
+catalog
+selection projection
+select()
+
+禁止：
+
+Shaco model registry
+selector初始化自动Provider network discovery
+把“目录存在”误判为Provider可用。
+
+==================================================
+25. Permission
+==================================================
+
+使用：
+
+public permission projection
+Harness command/admission。
+
+custom如实显示。
+
+API不允许选择时：
+
+不能伪造。
+
+高权限选择保持显式用户确认。
+
+==================================================
+26. Settings
+==================================================
+
+继续支持V1范围：
+
+Provider
+Custom Provider
+Endpoint
+Relay
+Model config
+Credential
+minimal General
+Theme Template selector。
+
+实际truth继续：
+
+settingsScope
+settingsSchema
+remote.settings
+remote.credentials。
+
+保持：
+
+revision fencing
+unknown outcome reread
+no automatic replay
+secret hygiene
+no credential readback。
+
+不得显示Harness Settings product page。
+
+==================================================
+27. Theme Architecture
+==================================================
+
+必须实现：
+
+THEME_ARCHITECTURE =
+MODE_PLUS_TEMPLATE
+
+两个维度：
+
+THEME_MODE =
+light | dark | system
+
+THEME_TEMPLATE =
+BRAUN | FAMICOM
+
+Mode和Template独立。
+
+不能把light/dark当两个Template。
+
+==================================================
+28. Theme 基础
+==================================================
+
+优先扩展现有：
+
+apps/desktop/src/renderer/theme/tokens.css
+apps/desktop/src/renderer/theme/themes.css
+apps/desktop/src/renderer/theme/theme.ts
+
+不要创建第二套Theme Framework。
+
+建立稳定root identity，
+等价表达：
+
+data-theme-mode
+data-theme
+data-theme-template
+
+具体命名以兼容现有代码为准。
+
+==================================================
+29. Template实现原则
+==================================================
+
+必须保持：
+
+SAME_COMPONENT_TREE =
+YES
+
+SAME_LAYOUT_AUTHORITY =
+YES
+
+SAME_HARNESS_TRUTH =
+YES
+
+DIFFERENT_THEME_TEMPLATE =
+YES
+
+禁止：
+
+BraunConversation
+FamicomConversation
+BraunComposer
+FamicomComposer
+两套Sidebar tree
+两套业务组件。
+
+Template只能控制Presentation recipe。
+
+==================================================
+30. BRAUN
+==================================================
+
+BRAUN：
+
+V1_DEFAULT_THEME_TEMPLATE。
+
+Visual Authority：
+
+Braun.png
+=
+Long-Term Shell Reference。
+
+需要覆盖：
+
+Sidebar
+Workbar
+Project Directory
+Conversation
+Message
+Composer
+Tool Result
+Approval
+Question
+Model Selector
+Permission
+Settings
+temporary surfaces。
+
+视觉方向：
+
+Light
+neutral
+low saturation
+modern Developer Workbench
+restrained borders
+small/medium radius
+flat-first
+comfortable reading density。
+
+不要求Pixel Perfect逐像素复制。
+
+==================================================
+31. FAMICOM
+==================================================
+
+FAMICOM：
+
+第二个V1 Required Template。
+
+必须在完全相同组件树上表现参考图的视觉语言。
+
+至少覆盖：
+
+red/cream palette
+surface hierarchy
+typography treatment
+accent
+borders
+radius
+shadow/elevation
+spacing/density
+control style
+Sidebar recipe
+top/workbar decoration
+message/chat recipe
+Composer recipe
+Tool result
+Approval/Question
+temporary surfaces
+reasonable icon treatment。
+
+不能只是：
+
+把accent改红色。
+
+需要明显达到FAMICOM.png的整体视觉方向。
+
+==================================================
+32. Copy/Adapt Theme Normalization
+==================================================
+
+正式要求：
+
+HARNESS_COPIED_PRESENTATION_STYLE =
+NORMALIZE_TO_SHACO_THEME_TEMPLATE_SYSTEM
+
+COPY_ADAPT_THEME_NORMALIZATION =
+REQUIRED
+
+Harness来源中的固定：
+
+color
+radius
+shadow
+font skin
+spacing skin
+control styling
+
+不得长期散落在组件中。
+
+必须映射到：
+
+semantic tokens
++
+limited template recipes / variants。
+
+纯结构布局CSS可以合理复用。
+
+==================================================
+33. Template Selector
+==================================================
+
+V1必须实现最小真实Template Selector。
+
+至少：
+
+Braun
+FAMICOM
+
+建议优先放：
+
+Shaco Settings中的低噪Appearance/Theme区域。
+
+不要扩成Full Appearance Settings。
+
+禁止：
+
+Theme editor
+Theme marketplace
+Theme package system
+custom CSS。
+
+切换：
+
+BRAUN → FAMICOM → BRAUN
+
+必须无需：
+
+重启Desktop
+重建Client Context
+重建Session
+重建Conversation。
+
+==================================================
+34. Theme Runtime Continuity
+==================================================
+
+切换Template必须保持：
+
+same React/component tree
+same Client runtime
+same Cordis Context
+same Workspace truth
+same Session truth
+same Conversation truth
+same Harness binding
+Composer draft
+pending Approval/Question
+Model selection
+Permission truth
+Settings truth。
+
+切换不得触发：
+
+Prompt
+Tool
+answer
+replay
+cancel
+Session rebuild
+Client reconnect。
+
+==================================================
+35. Mode兼容
+==================================================
+
+BRAUN和FAMICOM都必须继续兼容：
+
+light
+dark
+system
+
+不要求为每个Template再制作独立Pixel Perfect dark visual reference。
+
+重点验证：
+
+mode变化不会重置template；
+
+template变化不会重置mode；
+
+business truth不受影响。
+
+==================================================
+36. Theme禁止过度设计
+==================================================
+
+禁止：
+
+Theme marketplace
+Theme plugin framework
+Theme downloads
+Theme package manager
+Theme editor
+Custom CSS system
+复杂Theme schema engine
+未来7个Template专用实现。
+
+==================================================
+37. Recovery
+==================================================
+
+保持：
+
+Worker authority
+Carrier authentication
+generation fencing
+Desktop restart
+cold projection
+Worker replacement
+stale callback rejection。
+
+新generation必须重新resolve：
+
+Workspace
+Session binding
+Chat target
+pendingInteractions
+Model
+Permission
+Settings sources。
+
+旧对象不得跨generation mutation。
+
+==================================================
+38. Real Host Approval / Question
+==================================================
+
+旧Evidence只证明历史Harness visible UI。
+
+新Full Shaco UI必须尽最大可能重新证明：
+
+Desktop A
+→ Real Host pending
+→ ShacoApproval / ShacoQuestion visible
+→ disconnect
+→ same Host remains pending
+→ Desktop B new generation
+→ Shaco UI cold rebuild
+→ pending visible again
+→ explicit settlement
+→ duplicate 0
+→ stale mutation rejected
+→ auto answer/replay/cancel 0。
+
+Provider runs =
+0
+
+==================================================
+39. Security
+==================================================
+
+保持：
+
+nodeIntegration =
+NO
+
+contextIsolation =
+ON
+
+sandbox =
+ON
+
+不得扩大Preload。
+
+Renderer不得获得generic：
+
+filesystem
+process
+shell
+IPC
+dialog
+Node API。
+
+Native Picker继续保持现有受限API与：
+
+window/frame/document/generation
+
+检查。
+
+==================================================
+40. UI Gates
+==================================================
+
+必须验证当前Contract：
+
+UI-G01 ~ UI-G18。
+
+逐项只能：
+
+PASS
+FAIL
+BLOCKED
+NOT RUN。
+
+禁止因为：
+
+页面启动
+build通过
+Sidebar存在
+Harness functional
+
+就自动PASS。
+
+只要Main仍是Harness visible product page：
+
+UI-G01/G03/G04必须FAIL。
+
+==================================================
+41. Theme Gates
+==================================================
+
+必须验证：
+
+THEME-G01
+NO_COMPONENT_SKIN_BYPASSES_THEME_TEMPLATE_AUTHORITY
+
+THEME-G02
+DEFAULT_TEMPLATE_COMPLETE
+
+THEME-G03
+LIGHT_DARK_MODE_PRESERVED
+
+THEME-G04
+TEMPLATE_SWITCH_SEAM_PRESENT
+
+THEME-G05
+THEME_CHANGE_DOES_NOT_CHANGE_BUSINESS_TRUTH
+
+THEME-G06
+BRAUN_TEMPLATE_VISUAL_CONFORMANCE
+
+THEME-G07
+FAMICOM_TEMPLATE_VISUAL_CONFORMANCE
+
+THEME-G08
+BRAUN_FAMICOM_RUNTIME_SWITCH
+
+全部需要真实Evidence。
+
+==================================================
+42. Visual State Matrix
+==================================================
+
+尽最大可能用最终真实Electron source采集：
+
+1.
+Bootstrap / Loading
+
+2.
+No Project
+
+3.
+Project selected + blank Chat
+
+4.
+Active Conversation
+
+5.
+Tool running/result
+
+6.
+Approval pending
+
+7.
+Question pending
+
+8.
+Error / Reconnecting
+
+9.
+Narrow window
+
+主Matrix允许BRAUN完成。
+
+另外必须至少：
+
+1张 BRAUN representative full-shell
+
+1张 FAMICOM representative full-shell
+
+以及真实：
+
+BRAUN → FAMICOM → BRAUN
+
+runtime switch continuity proof。
+
+不需要9 × 2。
+
+==================================================
+43. Visual Acceptance
+==================================================
+
+Screenshot不能只证明“有颜色”。
+
+BRAUN必须能识别为参考图的整体方向。
+
+FAMICOM必须能识别为参考图的整体方向。
+
+需要检查：
+
+Shell
+Sidebar
+Workbar
+Chat
+Message
+Composer
+controls
+Tool
+temporary surfaces
+
+是否一致使用对应Template。
+
+不得存在明显Harness fixed skin残留。
+
+==================================================
+44. Focused Tests优先
+==================================================
+
+随着实施推进：
+
+先写/调整focused tests。
+
+优先快速验证：
+
+Option B bootstrap
+root winner
+business services without Harness AppFrame
+Conversation source
+prompt/cancel
+pending interactions
+Theme Controller
+Template switch
+same tree/context continuity
+no private runtime imports
+source migration rules。
+
+不要每次小改都跑全量Electron regression。
+
+==================================================
+45. Corrective Loop
+==================================================
+
+允许在本Goal内自行处理：
+
+TypeScript错误
+Vite配置问题
+React composition问题
+public import问题
+CSS/theme问题
+test fixture问题
+bootstrap adapter问题
+runtime lifecycle问题
+Evidence assembler问题
+文档同步问题。
+
+但同一个失败根因最多：
+
+3个有实质差异的Corrective attempts。
+
+禁止机械重复同一命令。
+
+3次仍未关闭：
+
+记录UNRESOLVED_BLOCKER。
+
+如果其他区域独立且安全，
+继续完成其他可验证工作。
+
+最后返回Partial。
+
+==================================================
+46. Dependencies
+==================================================
+
+优先使用当前已有：
+
+React/ReactDOM platform modules
+TypeScript
+Vite
+Electron
+Harness public packages
+现有Shaco基础。
+
+不要新增核心framework。
+
+如必须引入新的核心runtime dependency：
+
+NEW_CORE_DEPENDENCY_REQUIRED =
+YES
+
+停止并返回Owner。
+
+==================================================
+47. Frozen Harness
+==================================================
+
+Harness工作区：
+
+READ_ONLY。
+
+允许：
+
+read
+search
+hash
+读取源码
+将允许的selected Presentation source复制到Product。
+
+禁止：
+
+修改Harness
+写入Harness生成物
+改变Harness lockfile
+改变Harness HEAD
+commit Harness
+rebaseline Harness。
+
+如果必须修改：
+
+HARNESS_CHANGE_REQUIRED =
+YES
+
+停止该边界。
+
+==================================================
+48. Provider
+==================================================
+
+PROVIDER_GATE_AUTHORIZATION =
+NO
+
+本任务必须：
+
+PROVIDER_RUN_COUNT =
+0
+
+禁止：
+
+真实Provider Prompt
+真实外部模型调用
+Provider network discovery
+真实Agent provider turn。
+
+使用既有local/non-provider fixtures完成验证。
+
+==================================================
+49. Final Source Stabilization
+==================================================
+
+不要过早生成最终Composition。
+
+顺序：
+
+Implementation
+→ focused tests
+→ runtime/UI corrections
+→ source stable
+→ source migration inventory final
+→ old composition marked Historical Superseded
+→ Controlled Composition Generation
+→ freeze new Composition identity
+→ final full regression。
+
+如果新Composition生成后又修改source fingerprint：
+
+该identity必须重新supersede和重新生成。
+
+==================================================
+50. Controlled Composition
+==================================================
+
+最终source稳定后：
+
+保留：
+
+28 Frozen Harness rows
+1 Shaco Product row
+
+总数：
+
+29。
+
+Harness row identity/hash不得变化。
+
+Shaco row/source/bootstrap hash按最终source重新生成。
+
+不得沿用旧REVIEW026B identity假装代表新UI。
+
+==================================================
+51. Final Regression
+==================================================
+
+最终source稳定且新Composition冻结后，
+至少执行项目实际存在的：
+
+pnpm run typecheck
+
+pnpm run build
+
+pnpm test
+
+verify static
+
+verify theme
+
+worker smoke
+
+carrier smoke
+
+electron smoke
+
+Slice2 Step1 smoke
+
+Slice2 Step2 smoke
+
+Slice2 Step3 smoke
+
+Step3 interaction smoke
+
+以及本Goal新增：
+
+Full Shaco Presentation
+Braun/FAMICOM Theme
+Theme runtime switch
+
+相关tests/smokes。
+
+只能执行真实存在的script。
+
+如果名称不同：
+
+读取package.json使用实际名称。
+
+==================================================
+52. Regression Preserve
+==================================================
+
+不能为了新UI让旧Step1/Step2能力回归。
+
+特别保护：
+
+Worker
+Carrier
+Reconnect
+Native Picker
+Settings/Credential
+Session
+Workspace
+security
+stale fencing
+Approval/Question semantics。
+
+任何回归：
+
+必须真实标FAIL并尝试Corrective。
+
+==================================================
+53. Evidence
+==================================================
+
+建立新的本Goal Evidence范围。
+
+不要覆盖旧Evidence。
+
+至少包含真实：
+
+baseline
+changed paths
+review/owner acceptance provenance
+source migration inventory
+license/notice handling
+bootstrap
+single runtime/root
+service lifetime
+UI gates
+Theme gates
+visual matrix
+Braun screenshot
+FAMICOM screenshot
+runtime theme switch
+Approval/Question
+recovery
+security
+Provider run count
+process cleanup
+composition identity
+regression summary
+redaction summary
+run manifest。
+
+NOT RUN不得写PASS。
+
+==================================================
+54. Documentation
+==================================================
+
+DOCUMENTATION_REQUIRED。
+
+按Document Map同步必要：
+
+Current State / Phase
+Development Map
+Development Log
+Implementation Record
+Testing/Evidence
+Theme implementation status
+Source migration status
+Composition status。
+
+不要创建第二套parallel authority。
+
+如果Level A：
+
+最多写：
+
+V1_SLICE_2_STEP3_FULL_SHACO_PRESENTATION =
+IMPLEMENTED_WAITING_INDEPENDENT_FINAL_REVIEW
+
+V1_SLICE_2_STEP3 =
+IMPLEMENTED_WAITING_INDEPENDENT_FINAL_REVIEW
+
+不得写：
+
+CLOSED
+OWNER_ACCEPTED_FINAL
+SLICE2_CLOSED
+V1_COMPLETE。
+
+==================================================
+55. Git Safety
+==================================================
+
+当前已有大量dirty candidate。
+
+禁止：
+
+git reset
+git clean
+git checkout覆盖
+stash外部修改
+删除未知untracked路径
+改写历史。
+
+特别保护全部UI visual authority images。
+
+执行期间如发现用户/其他Agent对相同文件产生外部修改：
+
+不要覆盖。
+
+返回：
+
+EXTERNAL_CHANGE_CONFLICT =
+YES
+
+对该区域停止。
+
+==================================================
+56. Git
+==================================================
+
+Stage =
+NO
+
+Commit =
+NO
+
+Push =
+NO
+
+最终必须返回：
+
+branch
+HEAD
+tracked modified
+untracked expanded files
+staged
+actual changed paths
+Commit
+Push。
+
+==================================================
+57. 非本Goal
+==================================================
+
+禁止：
+
+Slice3 Packaging
+Installer
+Upgrade/Rollback
+Fresh Windows Acceptance
+V1.1 Automation
+V1.2 Multi-Agent
+V1.3
+Theme Marketplace
+未来7Theme实现
+Harness module pruning
+Harness rebaseline
+Provider测试
+Phase Closure
+Step3 Closure
+Commit
+Push。
+
+==================================================
+58. Stop Conditions
+==================================================
+
+遇到以下必须停止相关边界：
+
+1. 必须修改Frozen Harness；
+2. 必须改变Option B architecture；
+3. 必须依赖新的private Harness runtime API；
+4. 必须改变Carrier/API/Schema/Protocol/Public Contract；
+5. 必须引入第二business truth；
+6. 必须改变Workspace/Session/Conversation语义；
+7. 必须新增核心runtime dependency；
+8. License/Notice存在无合规路径的blocking；
+9. 必须使用Provider/外网；
+10. 必须进入Packaging；
+11. 必须执行不可逆Git操作；
+12. Owner Contract与UI Authority发生真实冲突；
+13. 同一根因3次有效Corrective仍未关闭；
+14. 必须覆盖外部用户修改；
+15. 必须扩大到Future Themes / V1.1+。
+
+返回：
+
+ARCHITECTURE_OWNER_REQUIRED
+
+并给出第一个blocking boundary。
+
+==================================================
+59. 长任务优先级
+==================================================
+
+如果时间不足，优先：
+
+P1
+Option B bootstrap + ShacoRoot + zero visible Harness shell
+
+P2
+Conversation + Message + Composer
+
+P3
+Tool + Approval + Question
+
+P4
+Model + Permission + Settings
+
+P5
+BRAUN full template
+
+P6
+FAMICOM full template + real selector/runtime switch
+
+P7
+Recovery + Real Host interaction
+
+P8
+UI-G / THEME-G + Visual Evidence
+
+P9
+Controlled Composition
+
+P10
+Full regression
+
+P11
+Evidence / Documentation finalization
+
+不要留下大量半完成组件。
+
+优先完成一个能真实验证的纵向Slice后再向后推进。
+
+==================================================
+60. 成功等级
+==================================================
+
+LEVEL A：
+
+GOAL_RESULT =
+FULL_GOAL_VERIFIED
+
+要求至少：
+
+Option B working
+only Shaco visible shell
+Conversation/Composer core working
+Tool working
+Approval/Question working
+Model/Permission/Settings required scope working
+BRAUN implemented
+FAMICOM implemented
+template selector working
+runtime switch working
+Recovery preserved
+UI-G01~18 PASS
+THEME-G01~08 PASS
+Visual Matrix sufficient
+Real Host interaction sufficient
+new Controlled Composition frozen
+full non-Provider regression PASS
+Provider 0
+Evidence/docs complete。
+
+项目状态：
+
+IMPLEMENTED_WAITING_INDEPENDENT_FINAL_REVIEW
+
+LEVEL B：
+
+GOAL_RESULT =
+SUBSTANTIAL_VERIFIED_PROGRESS
+
+如果无法完成全部：
+
+必须逐milestone真实列：
+
+PASS
+FAIL
+BLOCKED
+NOT RUN。
+
+不得把Partial写成Full。
+
+LEVEL C：
+
+GOAL_RESULT =
+BLOCKED
+
+首个Architecture/Contract/Environment blocker无法安全绕过。
+
+==================================================
+61. 最终不要自行做
+==================================================
+
+即使LEVEL A：
+
+不要：
+
+执行Independent Final Review
+关闭Step3
+关闭Slice2
+进入Slice3
+Commit
+Push。
+
+必须停止在：
+
+WAITING_INDEPENDENT_FINAL_REVIEW。
+
+==================================================
+62. 必须返回
+==================================================
+
+## A. GOAL VERDICT
+
+FULL_GOAL_VERIFIED
+SUBSTANTIAL_VERIFIED_PROGRESS
+或
+BLOCKED
+
+## B. BASELINE
+
+## C. OWNER ACCEPTANCE / FREEZE PERSISTENCE
+
+实际更新了什么。
+
+## D. ACTUAL IMPLEMENTATION
+
+## E. ACTUAL FILES MODIFIED / ADDED
+
+## F. OPTION B BOOTSTRAP
+
+## G. SINGLE CLIENT / CONTEXT / REACT ROOT
+
+## H. HARNESS VISIBLE UI ELIMINATION
+
+## I. HARNESS SOURCE REUSE ASSESSMENT
+
+逐主要组件：
+
+REUSE
+ADAPT
+GREENFIELD
+以及原因。
+
+## J. MIGRATION INVENTORY
+
+## K. LICENSE / NOTICE
+
+## L. SHACO SHELL
+
+## M. CONVERSATION / STREAMING
+
+## N. COMPOSER / PROMPT / CANCEL
+
+## O. TOOL
+
+## P. APPROVAL
+
+## Q. QUESTION
+
+## R. MODEL / PERMISSION / SETTINGS
+
+## S. RECOVERY
+
+## T. BRAUN TEMPLATE
+
+## U. FAMICOM TEMPLATE
+
+## V. TEMPLATE SELECTOR / RUNTIME SWITCH
+
+## W. THEME MODE
+
+## X. UI-G01 ~ UI-G18
+
+每项：
+
+PASS
+FAIL
+BLOCKED
+NOT RUN
+
+## Y. THEME-G01 ~ THEME-G08
+
+## Z. VISUAL STATE MATRIX
+
+九项逐项。
+
+## AA. BRAUN / FAMICOM VISUAL EVIDENCE
+
+图片路径
+dimensions
+SHA
+capture source/state
+
+## AB. REAL HOST APPROVAL / QUESTION
+
+## AC. SECURITY
+
+## AD. PROVIDER RUN COUNT
+
+必须真实。
+
+Expected：
+
+0
+
+## AE. CONTROLLED COMPOSITION
+
+新identity
+row count
+重要hash。
+
+## AF. TESTS
+
+每条：
+
+exact command
+attempt count
+exit code/result
+PASS / FAIL / NOT RUN
+
+## AG. EVIDENCE
+
+## AH. DOCUMENTATION
+
+## AI. UNRESOLVED BLOCKERS
+
+## AJ. DEFERRED FINDINGS
+
+## AK. FINAL GIT STATE
+
+branch
+HEAD
+tracked
+untracked
+staged
+Commit
+Push
+
+## AL. FINAL PROJECT STATE
+
+不得自行CLOSE。
+
+## AM. NEXT ACTION
+
+如果FULL：
+
+INDEPENDENT_FINAL_REVIEW_FULL_SHACO_DUAL_THEME_STEP3
+
+如果PARTIAL：
+
+ARCHITECTURE_OWNER_ASSESS_PARTIAL_FULL_SHACO_DUAL_THEME_RESULT
+
+如果BLOCKED：
+
+ARCHITECTURE_OWNER_DECIDE_FIRST_BLOCKING_BOUNDARY
+
+完成后停止。

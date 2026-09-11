@@ -178,7 +178,8 @@ async function drive(window) {
       let terminalObservedAt
       while (Date.now() < deadline) {
         report.observation = await observe()
-        if (report.observation.interactions.some(row => row.settlements === 0)) { outcome = 'HUMAN_REQUIRED_INTERACTION'; break }
+        // Legacy input only; current production diagnostics contain no interaction telemetry.
+        if (report.observation.interactions?.some(row => row.settlements === 0)) { outcome = 'HUMAN_REQUIRED_INTERACTION'; break }
         // Read only assistant-rendered message content, never user Composer text.
         const renderedMatch = await js(`Array.from(document.querySelectorAll('#harness-client-root [data-chat-flow-kind="assistant-step"]')).filter(el => el.getClientRects().length).at(-1)?.textContent.includes(${JSON.stringify(marker)}) === true`)
         report.renderedAssistantMarkerMatch = renderedMatch

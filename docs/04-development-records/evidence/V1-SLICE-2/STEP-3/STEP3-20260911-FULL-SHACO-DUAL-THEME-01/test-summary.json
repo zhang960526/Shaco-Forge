@@ -1,0 +1,1499 @@
+{
+  "commands": [
+    {
+      "command": "focused-bootstrap",
+      "exactCommand": "node --test apps/desktop/tests/presentation-lifecycle.test.mjs",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "--test",
+        "apps/desktop/tests/presentation-lifecycle.test.mjs"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:30.707Z",
+      "endedAt": "2026-09-10T18:11:30.900Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/focused-bootstrap-1.log"
+    },
+    {
+      "command": "typecheck",
+      "exactCommand": "pnpm run typecheck",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "typecheck"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:48.324Z",
+      "endedAt": "2026-09-10T18:11:49.268Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/typecheck-1.log"
+    },
+    {
+      "command": "typecheck",
+      "exactCommand": "pnpm run typecheck",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "typecheck"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T18:12:22.186Z",
+      "endedAt": "2026-09-10T18:12:22.252Z",
+      "exitCode": 3221225495,
+      "result": "FAIL",
+      "log": "logs/typecheck-2.log"
+    },
+    {
+      "command": "typecheck",
+      "exactCommand": "pnpm run typecheck",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "typecheck"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T18:14:03.257Z",
+      "endedAt": "2026-09-10T18:14:07.266Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/typecheck-3.log"
+    },
+    {
+      "command": "build",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:27:14.533Z",
+      "endedAt": "2026-09-10T18:27:34.301Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/build-1.log"
+    },
+    {
+      "command": "build",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T18:28:22.294Z",
+      "endedAt": "2026-09-10T18:28:40.259Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-2.log"
+    },
+    {
+      "command": "smoke:electron",
+      "exactCommand": "pnpm run smoke:electron",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:electron"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:29:43.056Z",
+      "endedAt": "2026-09-10T18:29:44.507Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/smoke-electron-1.log"
+    },
+    {
+      "command": "smoke:electron",
+      "exactCommand": "pnpm run smoke:electron",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:electron"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T18:30:54.844Z",
+      "endedAt": "2026-09-10T18:31:14.301Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-electron-2.log"
+    },
+    {
+      "command": "test:full-shaco",
+      "exactCommand": "pnpm run test:full-shaco",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "test:full-shaco"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:44:28.701Z",
+      "endedAt": "2026-09-10T18:44:29.340Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-full-shaco-1.log"
+    },
+    {
+      "command": "build",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T18:44:37.658Z",
+      "endedAt": "2026-09-10T18:44:52.898Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-3.log"
+    },
+    {
+      "command": "smoke:full-shaco:development",
+      "exactCommand": "pnpm run smoke:full-shaco:development",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:full-shaco:development"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:45:13.066Z",
+      "endedAt": "2026-09-10T18:45:38.938Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/smoke-full-shaco-development-1.log"
+    },
+    {
+      "command": "smoke:full-shaco:development",
+      "exactCommand": "pnpm run smoke:full-shaco:development",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:full-shaco:development"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T18:46:57.353Z",
+      "endedAt": "2026-09-10T18:47:23.605Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/smoke-full-shaco-development-2.log"
+    },
+    {
+      "command": "smoke:full-shaco:development",
+      "exactCommand": "pnpm run smoke:full-shaco:development",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:full-shaco:development"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T18:48:43.532Z",
+      "endedAt": "2026-09-10T18:49:09.829Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/smoke-full-shaco-development-3.log"
+    },
+    {
+      "command": "build",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T18:49:35.814Z",
+      "endedAt": "2026-09-10T18:49:50.660Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-4.log"
+    },
+    {
+      "command": "smoke:full-shaco:development",
+      "exactCommand": "pnpm run smoke:full-shaco:development",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:full-shaco:development"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T18:50:11.533Z",
+      "endedAt": "2026-09-10T18:50:37.888Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/smoke-full-shaco-development-4.log"
+    },
+    {
+      "command": "build",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 5,
+      "startedAt": "2026-09-10T18:51:20.090Z",
+      "endedAt": "2026-09-10T18:51:35.173Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-5.log"
+    },
+    {
+      "command": "smoke:full-shaco:development",
+      "exactCommand": "pnpm run smoke:full-shaco:development",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:full-shaco:development"
+      ],
+      "attempt": 5,
+      "startedAt": "2026-09-10T18:51:51.523Z",
+      "endedAt": "2026-09-10T18:52:09.896Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/smoke-full-shaco-development-5.log"
+    },
+    {
+      "command": "test",
+      "exactCommand": "pnpm test",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "test"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:53:36.349Z",
+      "endedAt": "2026-09-10T18:53:52.016Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/test-1.log"
+    },
+    {
+      "command": "smoke:full-shaco:development",
+      "exactCommand": "pnpm run smoke:full-shaco:development",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:full-shaco:development"
+      ],
+      "attempt": 6,
+      "startedAt": "2026-09-10T18:54:23.911Z",
+      "endedAt": "2026-09-10T18:54:41.987Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/smoke-full-shaco-development-6.log"
+    },
+    {
+      "command": "smoke:full-shaco:development",
+      "exactCommand": "pnpm run smoke:full-shaco:development",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:full-shaco:development"
+      ],
+      "attempt": 7,
+      "startedAt": "2026-09-10T18:55:20.399Z",
+      "endedAt": "2026-09-10T18:55:56.812Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-full-shaco-development-7.log"
+    },
+    {
+      "command": "test:full-shaco",
+      "exactCommand": "pnpm run test:full-shaco",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "test:full-shaco"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T18:59:24.272Z",
+      "endedAt": "2026-09-10T18:59:24.965Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/test-full-shaco-2.log"
+    },
+    {
+      "command": "test:full-shaco",
+      "exactCommand": "pnpm run test:full-shaco",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "test:full-shaco"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T18:59:49.129Z",
+      "endedAt": "2026-09-10T18:59:49.760Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-full-shaco-3.log"
+    },
+    {
+      "command": "build",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 6,
+      "startedAt": "2026-09-10T19:01:00.622Z",
+      "endedAt": "2026-09-10T19:01:15.466Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-6.log"
+    },
+    {
+      "command": "smoke:full-shaco:development",
+      "exactCommand": "pnpm run smoke:full-shaco:development",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:full-shaco:development"
+      ],
+      "attempt": 8,
+      "startedAt": "2026-09-10T19:01:51.767Z",
+      "endedAt": "2026-09-10T19:02:34.110Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-full-shaco-development-8.log"
+    },
+    {
+      "command": "smoke:slice2-step2",
+      "exactCommand": "pnpm run smoke:slice2-step2",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step2"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T19:03:09.243Z",
+      "endedAt": "2026-09-10T19:03:43.256Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-slice2-step2-1.log"
+    },
+    {
+      "command": "test",
+      "exactCommand": "pnpm test",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "test"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T19:05:46.364Z",
+      "endedAt": "2026-09-10T19:06:01.792Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-2.log"
+    },
+    {
+      "command": "smoke:full-shaco:development",
+      "exactCommand": "pnpm run smoke:full-shaco:development",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:full-shaco:development"
+      ],
+      "attempt": 9,
+      "startedAt": "2026-09-10T19:06:31.179Z",
+      "endedAt": "2026-09-10T19:07:17.103Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-full-shaco-development-9.log"
+    },
+    {
+      "command": "typecheck",
+      "phase": "DEVELOPMENT",
+      "exactCommand": "pnpm run typecheck",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "typecheck"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T19:09:32.377Z",
+      "endedAt": "2026-09-10T19:09:36.054Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/typecheck-4.log"
+    },
+    {
+      "command": "verify:static",
+      "phase": "DEVELOPMENT",
+      "exactCommand": "pnpm run verify:static",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:static"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T19:09:36.121Z",
+      "endedAt": "2026-09-10T19:09:36.627Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-static-1.log"
+    },
+    {
+      "command": "verify:theme",
+      "phase": "DEVELOPMENT",
+      "exactCommand": "pnpm run verify:theme",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:theme"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T19:09:36.692Z",
+      "endedAt": "2026-09-10T19:09:37.185Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-theme-1.log"
+    },
+    {
+      "command": "build",
+      "phase": "DEVELOPMENT",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 7,
+      "startedAt": "2026-09-10T19:09:37.252Z",
+      "endedAt": "2026-09-10T19:09:51.665Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-7.log"
+    },
+    {
+      "command": "build",
+      "phase": "DEVELOPMENT",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 8,
+      "startedAt": "2026-09-10T19:11:01.470Z",
+      "endedAt": "2026-09-10T19:11:15.935Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-8.log"
+    },
+    {
+      "command": "typecheck",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run typecheck",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "typecheck"
+      ],
+      "attempt": 5,
+      "startedAt": "2026-09-10T19:11:38.691Z",
+      "endedAt": "2026-09-10T19:11:42.356Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/typecheck-5.log"
+    },
+    {
+      "command": "build",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 9,
+      "startedAt": "2026-09-10T19:11:42.425Z",
+      "endedAt": "2026-09-10T19:11:56.769Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-9.log"
+    },
+    {
+      "command": "test",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm test",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "test"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T19:11:56.834Z",
+      "endedAt": "2026-09-10T19:12:12.510Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-3.log"
+    },
+    {
+      "command": "verify:static",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run verify:static",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:static"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T19:12:12.578Z",
+      "endedAt": "2026-09-10T19:12:13.093Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-static-2.log"
+    },
+    {
+      "command": "verify:theme",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run verify:theme",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:theme"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T19:12:13.161Z",
+      "endedAt": "2026-09-10T19:12:13.655Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-theme-2.log"
+    },
+    {
+      "command": "test:full-shaco",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run test:full-shaco",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "test:full-shaco"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T19:12:13.719Z",
+      "endedAt": "2026-09-10T19:12:14.342Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-full-shaco-4.log"
+    },
+    {
+      "command": "smoke:worker",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:worker",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:worker"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T19:12:51.138Z",
+      "endedAt": "2026-09-10T19:13:01.160Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-worker-1.log"
+    },
+    {
+      "command": "smoke:carrier",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:carrier",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:carrier"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T19:13:01.412Z",
+      "endedAt": "2026-09-10T19:13:50.381Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-carrier-1.log"
+    },
+    {
+      "command": "smoke:electron",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:electron",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:electron"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T19:13:50.636Z",
+      "endedAt": "2026-09-10T19:14:06.096Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-electron-3.log"
+    },
+    {
+      "command": "smoke:failure",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:failure",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:failure"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T19:14:06.344Z",
+      "endedAt": "2026-09-10T19:18:17.820Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/smoke-failure-1.log"
+    },
+    {
+      "command": "test",
+      "phase": "DEVELOPMENT",
+      "exactCommand": "pnpm test",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "test"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T19:20:35.781Z",
+      "endedAt": "2026-09-10T19:20:51.137Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-4.log"
+    },
+    {
+      "command": "smoke:failure",
+      "phase": "DEVELOPMENT",
+      "exactCommand": "pnpm run smoke:failure",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:failure"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T19:21:11.148Z",
+      "endedAt": "2026-09-10T19:21:14.010Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-failure-2.log"
+    },
+    {
+      "command": "typecheck",
+      "phase": "DEVELOPMENT",
+      "exactCommand": "pnpm run typecheck",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "typecheck"
+      ],
+      "attempt": 6,
+      "startedAt": "2026-09-10T19:22:22.812Z",
+      "endedAt": "2026-09-10T19:22:26.477Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/typecheck-6.log"
+    },
+    {
+      "command": "build",
+      "phase": "DEVELOPMENT",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 10,
+      "startedAt": "2026-09-10T19:22:26.550Z",
+      "endedAt": "2026-09-10T19:22:40.671Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-10.log"
+    },
+    {
+      "command": "typecheck",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run typecheck",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "typecheck"
+      ],
+      "attempt": 7,
+      "startedAt": "2026-09-10T19:23:12.428Z",
+      "endedAt": "2026-09-10T19:23:16.069Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/typecheck-7.log"
+    },
+    {
+      "command": "build",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 11,
+      "startedAt": "2026-09-10T19:23:16.312Z",
+      "endedAt": "2026-09-10T19:23:30.357Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-11.log"
+    },
+    {
+      "command": "test",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm test",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "test"
+      ],
+      "attempt": 5,
+      "startedAt": "2026-09-10T19:23:30.613Z",
+      "endedAt": "2026-09-10T19:23:45.838Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-5.log"
+    },
+    {
+      "command": "verify:static",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run verify:static",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:static"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T19:23:46.092Z",
+      "endedAt": "2026-09-10T19:23:46.608Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-static-3.log"
+    },
+    {
+      "command": "verify:theme",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run verify:theme",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:theme"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T19:23:46.861Z",
+      "endedAt": "2026-09-10T19:23:47.369Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-theme-3.log"
+    },
+    {
+      "command": "test:full-shaco",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run test:full-shaco",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "test:full-shaco"
+      ],
+      "attempt": 5,
+      "startedAt": "2026-09-10T19:23:47.616Z",
+      "endedAt": "2026-09-10T19:23:48.243Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-full-shaco-5.log"
+    },
+    {
+      "command": "smoke:worker",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:worker",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:worker"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T19:23:48.506Z",
+      "endedAt": "2026-09-10T19:23:58.527Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-worker-2.log"
+    },
+    {
+      "command": "smoke:carrier",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:carrier",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:carrier"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T19:23:58.791Z",
+      "endedAt": "2026-09-10T19:24:47.546Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-carrier-2.log"
+    },
+    {
+      "command": "smoke:electron",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:electron",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:electron"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T19:24:47.801Z",
+      "endedAt": "2026-09-10T19:25:03.019Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-electron-4.log"
+    },
+    {
+      "command": "smoke:failure",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:failure",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:failure"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T19:25:03.275Z",
+      "endedAt": "2026-09-10T19:25:18.269Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-failure-3.log"
+    },
+    {
+      "command": "smoke:slice2-step1",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:slice2-step1",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step1"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T19:25:18.517Z",
+      "endedAt": "2026-09-10T19:27:38.571Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-slice2-step1-1.log"
+    },
+    {
+      "command": "smoke:slice2-step2",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:slice2-step2",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step2"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T19:27:38.833Z",
+      "endedAt": "2026-09-10T19:28:14.607Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-slice2-step2-2.log"
+    },
+    {
+      "command": "smoke:slice2-step3",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:slice2-step3",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step3"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T19:28:14.858Z",
+      "endedAt": "2026-09-10T19:28:30.275Z",
+      "exitCode": 1,
+      "result": "FAIL",
+      "log": "logs/smoke-slice2-step3-1.log"
+    },
+    {
+      "command": "typecheck",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run typecheck",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "typecheck"
+      ],
+      "attempt": 8,
+      "startedAt": "2026-09-10T19:30:03.395Z",
+      "endedAt": "2026-09-10T19:30:07.190Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/typecheck-8.log"
+    },
+    {
+      "command": "build",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 12,
+      "startedAt": "2026-09-10T19:30:07.463Z",
+      "endedAt": "2026-09-10T19:30:22.372Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-12.log"
+    },
+    {
+      "command": "test",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm test",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "test"
+      ],
+      "attempt": 6,
+      "startedAt": "2026-09-10T19:30:22.636Z",
+      "endedAt": "2026-09-10T19:30:38.578Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-6.log"
+    },
+    {
+      "command": "verify:static",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run verify:static",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:static"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T19:30:38.832Z",
+      "endedAt": "2026-09-10T19:30:39.355Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-static-4.log"
+    },
+    {
+      "command": "verify:theme",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run verify:theme",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:theme"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T19:30:39.627Z",
+      "endedAt": "2026-09-10T19:30:40.127Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-theme-4.log"
+    },
+    {
+      "command": "test:full-shaco",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run test:full-shaco",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "test:full-shaco"
+      ],
+      "attempt": 6,
+      "startedAt": "2026-09-10T19:30:40.387Z",
+      "endedAt": "2026-09-10T19:30:41.016Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-full-shaco-6.log"
+    },
+    {
+      "command": "smoke:worker",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:worker",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:worker"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T19:30:41.293Z",
+      "endedAt": "2026-09-10T19:30:51.621Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-worker-3.log"
+    },
+    {
+      "command": "smoke:carrier",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:carrier",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:carrier"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T19:30:51.896Z",
+      "endedAt": "2026-09-10T19:31:41.421Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-carrier-3.log"
+    },
+    {
+      "command": "smoke:electron",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:electron",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:electron"
+      ],
+      "attempt": 5,
+      "startedAt": "2026-09-10T19:31:41.689Z",
+      "endedAt": "2026-09-10T19:31:57.596Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-electron-5.log"
+    },
+    {
+      "command": "smoke:failure",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:failure",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:failure"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T19:31:57.864Z",
+      "endedAt": "2026-09-10T19:32:13.457Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-failure-4.log"
+    },
+    {
+      "command": "smoke:slice2-step1",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:slice2-step1",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step1"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T19:32:13.729Z",
+      "endedAt": "2026-09-10T19:34:37.451Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-slice2-step1-2.log"
+    },
+    {
+      "command": "smoke:slice2-step2",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:slice2-step2",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step2"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T19:34:37.722Z",
+      "endedAt": "2026-09-10T19:35:13.887Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-slice2-step2-3.log"
+    },
+    {
+      "command": "smoke:slice2-step3",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:slice2-step3",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step3"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T19:35:14.152Z",
+      "endedAt": "2026-09-10T19:35:55.878Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-slice2-step3-2.log"
+    },
+    {
+      "command": "smoke:slice2-step3-interactions",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:slice2-step3-interactions",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step3-interactions"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T19:35:56.138Z",
+      "endedAt": "2026-09-10T19:36:17.820Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-slice2-step3-interactions-1.log"
+    },
+    {
+      "command": "smoke:full-shaco",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:full-shaco",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:full-shaco"
+      ],
+      "attempt": 1,
+      "startedAt": "2026-09-10T19:36:18.093Z",
+      "endedAt": "2026-09-10T19:37:05.852Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-full-shaco-1.log"
+    },
+    {
+      "command": "build",
+      "phase": "DEVELOPMENT",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 13,
+      "startedAt": "2026-09-10T19:38:16.549Z",
+      "endedAt": "2026-09-10T19:38:32.592Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-13.log"
+    },
+    {
+      "command": "typecheck",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run typecheck",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "typecheck"
+      ],
+      "attempt": 9,
+      "startedAt": "2026-09-10T19:39:27.217Z",
+      "endedAt": "2026-09-10T19:39:30.970Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/typecheck-9.log"
+    },
+    {
+      "command": "build",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run build",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "attempt": 14,
+      "startedAt": "2026-09-10T19:39:31.239Z",
+      "endedAt": "2026-09-10T19:39:47.101Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-14.log"
+    },
+    {
+      "command": "test",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm test",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "test"
+      ],
+      "attempt": 7,
+      "startedAt": "2026-09-10T19:39:47.393Z",
+      "endedAt": "2026-09-10T19:40:04.405Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-7.log"
+    },
+    {
+      "command": "verify:static",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run verify:static",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:static"
+      ],
+      "attempt": 5,
+      "startedAt": "2026-09-10T19:40:04.674Z",
+      "endedAt": "2026-09-10T19:40:05.191Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-static-5.log"
+    },
+    {
+      "command": "verify:theme",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run verify:theme",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:theme"
+      ],
+      "attempt": 5,
+      "startedAt": "2026-09-10T19:40:05.469Z",
+      "endedAt": "2026-09-10T19:40:05.959Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-theme-5.log"
+    },
+    {
+      "command": "test:full-shaco",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run test:full-shaco",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "test:full-shaco"
+      ],
+      "attempt": 7,
+      "startedAt": "2026-09-10T19:40:06.220Z",
+      "endedAt": "2026-09-10T19:40:06.861Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-full-shaco-7.log"
+    },
+    {
+      "command": "smoke:worker",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:worker",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:worker"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T19:40:07.143Z",
+      "endedAt": "2026-09-10T19:40:18.025Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-worker-4.log"
+    },
+    {
+      "command": "smoke:carrier",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:carrier",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:carrier"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T19:40:18.294Z",
+      "endedAt": "2026-09-10T19:41:08.520Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-carrier-4.log"
+    },
+    {
+      "command": "smoke:electron",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:electron",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:electron"
+      ],
+      "attempt": 6,
+      "startedAt": "2026-09-10T19:41:08.794Z",
+      "endedAt": "2026-09-10T19:41:25.406Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-electron-6.log"
+    },
+    {
+      "command": "smoke:failure",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:failure",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:failure"
+      ],
+      "attempt": 5,
+      "startedAt": "2026-09-10T19:41:25.711Z",
+      "endedAt": "2026-09-10T19:41:42.631Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-failure-5.log"
+    },
+    {
+      "command": "smoke:slice2-step1",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:slice2-step1",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step1"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T19:41:42.907Z",
+      "endedAt": "2026-09-10T19:44:14.412Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-slice2-step1-3.log"
+    },
+    {
+      "command": "smoke:slice2-step2",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:slice2-step2",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step2"
+      ],
+      "attempt": 4,
+      "startedAt": "2026-09-10T19:44:14.695Z",
+      "endedAt": "2026-09-10T19:44:53.494Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-slice2-step2-4.log"
+    },
+    {
+      "command": "smoke:slice2-step3",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:slice2-step3",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step3"
+      ],
+      "attempt": 3,
+      "startedAt": "2026-09-10T19:44:53.769Z",
+      "endedAt": "2026-09-10T19:45:38.741Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-slice2-step3-3.log"
+    },
+    {
+      "command": "smoke:slice2-step3-interactions",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:slice2-step3-interactions",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:slice2-step3-interactions"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T19:45:39.018Z",
+      "endedAt": "2026-09-10T19:46:01.058Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-slice2-step3-interactions-2.log"
+    },
+    {
+      "command": "smoke:full-shaco",
+      "phase": "FINAL_REGRESSION",
+      "exactCommand": "pnpm run smoke:full-shaco",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "smoke:full-shaco"
+      ],
+      "attempt": 2,
+      "startedAt": "2026-09-10T19:46:01.341Z",
+      "endedAt": "2026-09-10T19:46:50.205Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/smoke-full-shaco-2.log"
+    }
+  ]
+}

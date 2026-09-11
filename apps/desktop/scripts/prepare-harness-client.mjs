@@ -4,10 +4,11 @@ import { createRequire } from 'node:module'
 import { dirname, join, relative } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { indexFrozenHarnessPackages, resolvePublicExport } from './frozen-harness-packages.mjs'
+import { frozenRoster, validateComposition } from './composition-identity.mjs'
 
 const EXPECTED_VERSION = '0.1.2-alpha.1'
 const EXPECTED_COMMIT = 'cd5ef8148158c3a752a658978873241fdf8e2bbc'
-const REVISION = 'shaco-v1-slice-2-step2-cd5ef81'
+const REVISION = 'shaco-v1-slice-2-step3-full-shaco-dual-theme-cd5ef81'
 const REQUIRED = [
   '@deepseek-ai/dsh-client-modules',
   '@deepseek-ai/dsh-client-connection',
@@ -55,7 +56,7 @@ function assertPinnedClientGraph(ordered) {
   const expected = [...REQUIRED, ...SUPPORT]
   if (expected.length !== 28 || new Set(expected).size !== 28
     || ordered.length !== 28 || new Set(ordered.map(row => row.id)).size !== 28
-    || ordered.some(row => !expected.includes(row.id))
+    || ordered.some((row, i) => row.id !== expected[i])
     || ordered[0]?.id !== '@deepseek-ai/dsh-client-modules') {
     throw new Error('Pinned Harness Client graph ordering failed closed')
   }
@@ -120,6 +121,7 @@ const { build } = await import(pathToFileURL(await realpath(require.resolve('vit
 const observerBuild = await build({ configFile: false, publicDir: false, build: {
   lib: { entry: join(desktopRoot, 'src/client/recovery.mjs'), formats: ['cjs'], fileName: () => 'recovery.cjs' },
   write: false, target: 'es2022', minify: false,
+  rollupOptions: { external: ['react', 'react/jsx-runtime', '@deepseek-ai/dsh-client-ui-primitives'] },
 } })
 const observerCode = observerBuild[0].output.find(item => item.type === 'chunk').code
 const observerBytes = Buffer.from(`window.__ModuleLoader__.load({id: '@shaco-forge/desktop', factory: (require) => { const module = {exports: {}}; const exports = module.exports;\n${observerCode}\nreturn module.exports; }});\n`, 'utf8')
@@ -128,7 +130,7 @@ await mkdir(dirname(observerPath), { recursive: true })
 await writeFile(observerPath, observerBytes)
 ordered.push({ id: '@shaco-forge/desktop', url: `shaco-forge://client/static/application.js?rev=${REVISION}`, rev: REVISION,
   inject: ['@deepseek-ai/dsh-client-connection', '@deepseek-ai/dsh-api-workspace-controller', '@deepseek-ai/dsh-api-session-controller', '@deepseek-ai/dsh-client-ui-workspace'],
-  external: [], immediately: false, bundlePath: observerPath, bundleBytes: observerBytes.length, bundleSha256: sha256(observerBytes) })
+  external: ['react', '@deepseek-ai/dsh-client-ui-primitives'], immediately: false, bundlePath: observerPath, bundleBytes: observerBytes.length, bundleSha256: sha256(observerBytes) })
 
 const bootstrap = ordered.slice(0, 1)
 const application = ordered.slice(1)
@@ -150,6 +152,9 @@ const graph = {
   ],
 }
 const injections = modules.bootInjections(graph)
+const pins = frozenRoster(await readFile(join(desktopRoot, '../../docs/03-v1.0-plan/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-CONTRACT-GATE.md')))
+validateComposition(ordered, graph, pins, [bootstrapBytes, applicationBytes])
+await writeFile(join(outRoot, 'composition-graph.json'), `${JSON.stringify(graph, null, 2)}\n`, 'utf8')
 const facade = injections.find(row => row.kind === 'script')
 const graphGlobal = injections.find(row => row.kind === 'global')
 if (facade?.kind !== 'script' || graphGlobal?.kind !== 'global') {
@@ -171,15 +176,15 @@ await build({
 
 const manifest = {
   schemaVersion: 1,
-  productSlice: 'V1-SLICE-2-STEP2',
+  productSlice: 'V1-SLICE-2-STEP3',
+  graphRevision: REVISION,
   frozenHarness: { commit: EXPECTED_COMMIT, release: `dsh-v${EXPECTED_VERSION}`, packageVersion: EXPECTED_VERSION },
-  composition: { package: '@deepseek-ai/dsh-client-web', export: 'AppWebEntry', publicExportOnly: true },
+  composition: { package: '@deepseek-ai/dsh-client-web', export: 'OPTION_B_PUBLIC_LOWER_LEVEL_CLIENT_BOOTSTRAP', publicExportOnly: true },
   reactResolution: { react: require('react/package.json').version, reactDom: require('react-dom/package.json').version },
   graph: { requiredCount: REQUIRED.length, supportCount: SUPPORT.length, frozenHarnessCount: 28, productCount: 1, totalCount: ordered.length, orderedIds: ordered.map(row => row.id) },
   artifacts: ordered.map(row => ({
     id: row.id,
     publicExport: `${row.id}/client`,
-    sourcePackagePath: relative(desktopRoot, row.bundlePath).replaceAll('\\', '/'),
     bytes: row.bundleBytes,
     sha256: row.bundleSha256,
   })),

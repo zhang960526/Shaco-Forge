@@ -1,0 +1,4 @@
+# Preserve the exact bytes of the three Owner-approved historical raw logs.
+docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/logs/smoke-electron-1.log -text
+docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/logs/smoke-failure-1.log -text
+docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/logs/test-1.log -text

@@ -61,7 +61,7 @@ export async function materializeHarnessProfile(
       },
     },
   }
-  const patch = [
+  let patch = [
     '- insert:',
     '    - id: shaco-forge-connection-compatibility',
     "      name: '@shaco-forge/harness-bootstrap/connection-compatibility'",
@@ -112,6 +112,17 @@ export async function materializeHarnessProfile(
     "      name: '@shaco-forge/harness-bootstrap/carrier-gateway'",
     '',
   ].join('\n')
+
+  // NOT_PRODUCTION_TEST_ONLY: two explicit gates; the default Host never
+  // imports or advertises this fixture. No Product Agent RPC is added.
+  if (profileName === 'shaco-forge-step3-lifecycle-proof'
+    && process.env.SHACO_FORGE_STEP3_LIFECYCLE_PROOF === '1') {
+    const fixtureName = './step3-interactions.mjs'
+    Object.assign(bundlePackage.exports, { './step3-interactions': fixtureName })
+    patch += '\n- insert:\n    - id: shaco-step3-test-only-interactions\n'
+      + "      name: '@shaco-forge/harness-bootstrap/step3-interactions'\n"
+    await copyFile(new URL('../test-fixtures/step3-interactions.mjs', import.meta.url), join(bundlePath, fixtureName))
+  }
 
   await writeFile(join(profilePath, 'package.json'), `${JSON.stringify(profilePackage, null, 2)}\n`, utf8)
   await writeFile(join(profilePath, 'cordis.patch.yml'), '[]\n', utf8)

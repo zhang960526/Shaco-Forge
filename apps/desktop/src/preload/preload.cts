@@ -13,6 +13,9 @@ interface BootstrapProjection {
 const generation = ipcRenderer.invoke('bootstrap:get-state').then((state: BootstrapProjection) => state.generation)
 
 const api = Object.freeze({
+  workspace: Object.freeze({
+    pickDirectory: async (): Promise<string | null> => ipcRenderer.invoke('workspace:pick-directory', await generation),
+  }),
   bootstrap: Object.freeze({
     getState: (): Promise<BootstrapProjection> => ipcRenderer.invoke('bootstrap:get-state'),
     reportProjection: async (report: Record<string, boolean>): Promise<void> => ipcRenderer.invoke('bootstrap:projection-ready', await generation, report),

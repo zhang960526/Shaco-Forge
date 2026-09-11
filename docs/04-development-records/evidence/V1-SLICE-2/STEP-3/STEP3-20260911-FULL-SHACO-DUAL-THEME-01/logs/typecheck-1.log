@@ -1,0 +1,4 @@
+FAILED: pnpm run typecheck
+The Windows console diagnostic was decoded lossily by the initial runner. Node could not be found on PATH.
+Original captured log SHA256: 3d9175f8d0db65189135eb2e8959656475433204c82bf1724f9978fa826f0e21
+Original captured bytes are retained as typecheck-1.original-utf8.b64. This readable normalization does not change the failed result.

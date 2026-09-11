@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-10T19:38:51.903Z",
+  "supersededFreeze": "2026-09-10T19:29:39.253Z",
+  "previousFinalRegression": "15/15 PASS; smoke:full-shaco attempt 1",
+  "reason": "Visual implementation QA found raw command lifecycle metadata in permission command messages. Replace it with command name, user arguments, and authoritative outcome text.",
+  "sourceChanged": [
+    "apps/desktop/src/client/message.mjs"
+  ],
+  "businessSemanticsChanged": false,
+  "requiredNext": "Build, regenerate Shaco row and freeze, then rerun all final commands and capture new visual evidence.",
+  "previousEvidencePreserved": true
+}

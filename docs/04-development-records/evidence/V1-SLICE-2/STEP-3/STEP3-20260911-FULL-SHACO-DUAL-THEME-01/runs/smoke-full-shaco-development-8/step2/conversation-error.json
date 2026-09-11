@@ -1,0 +1,59 @@
+{
+  "name": "conversation-error",
+  "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-development-8\\step2\\conversation-error.png",
+  "width": 2139,
+  "height": 1256,
+  "sha256": "dcb35046b04e29e64907ac0e8a1190ec11792263fed03757adb5d8a5d1a28e0d",
+  "ui": {
+    "rootCount": 1,
+    "sidebarCount": 1,
+    "forbiddenBrand": false,
+    "harnessSeats": 0,
+    "template": "BRAUN",
+    "mode": "light",
+    "rootVisible": true,
+    "horizontalOverflow": false,
+    "composer": true,
+    "approval": false,
+    "question": false,
+    "kinds": [
+      "command",
+      "command",
+      "user",
+      "assistant-step",
+      "turn-error"
+    ],
+    "tools": [
+      "settled"
+    ],
+    "geometry": {
+      "conversation": {
+        "width": 1100,
+        "center": 845,
+        "maxWidth": "1100px"
+      },
+      "composer": {
+        "width": 1100,
+        "center": 845,
+        "maxWidth": "1100px"
+      },
+      "tool": {
+        "width": 1044,
+        "center": 845,
+        "maxWidth": "none"
+      }
+    },
+    "lowNoiseWorkbar": true,
+    "bootstrapVisible": false,
+    "plan": false,
+    "tokens": {
+      "--surface-primary": "rgb(248, 248, 246)",
+      "--surface-sidebar": "rgb(235, 235, 232)",
+      "--accent-primary": "rgb(55, 59, 54)",
+      "--control-radius": "6px",
+      "--template-decoration-height": "0px",
+      "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+    }
+  },
+  "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+}

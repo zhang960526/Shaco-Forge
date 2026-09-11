@@ -1,0 +1,151 @@
+{
+  "runId": "STEP3-20260910-REVIEW026B-CORRECTIVE-01",
+  "result": "PASS",
+  "correctiveResult": "PASS",
+  "completedAt": "2026-09-10T14:31:51.603Z",
+  "baseline": {
+    "branch": "master",
+    "head": "5118053f625d01faba6617cace481df3091ba5be",
+    "initialCandidate": {
+      "total": 94,
+      "tracked": 18,
+      "untracked": 76,
+      "staged": 0
+    },
+    "frozenHarnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "contractSha256": "6cad09319e8793c4cebf95c4dfae4cd04f644adbed1b0c51647e93901e42721b"
+  },
+  "reviewHistory": {
+    "review026": "FAIL",
+    "f02601": "CLOSED_BY_CORRECTIVE_REREVIEW",
+    "f02602": "OPEN_PENDING_INDEPENDENT_REREVIEW",
+    "review026b": "FAIL",
+    "f026b01": "HIGH / OPEN_BLOCKING",
+    "previousAttempt": "ROOT_CAUSE_ASSUMPTION_INVALID"
+  },
+  "corrective": {
+    "status": "APPLIED_WAITING_INDEPENDENT_REREVIEW",
+    "canonicalStep3SmokeSelfContained": "PASS",
+    "productDefect": "NOT_ESTABLISHED"
+  },
+  "composition": {
+    "previousIdentity": "HISTORICAL_SUPERSEDED_BY_SOURCE_CHANGE",
+    "newIdentity": "FROZEN_FOR_REVIEW026B_CORRECTIVE_RUNTIME_ACCEPTANCE",
+    "generatedAt": "2026-09-10T13:44:02.673Z",
+    "totalRows": 29,
+    "shacoSha256": "90596c5a746f288cc185577485c0de33a5de67ae1c0403ee4121ac0560256f14",
+    "graphRevision": "shaco-v1-slice-2-step3-cd5ef81",
+    "manifestSha256": "d861000ea0e1dbe923e9f5603f8da2865d3c62f22c0284e99e86411b428604ba",
+    "bootstrapSha256": "4e5e67c4dd9f6c19c7470f5a4c97074fd9cf08eb89734e27111a2d80bc8dbe57",
+    "applicationSha256": "8450a5ddf4a08a9a83e31cb9db6445dfac5460ddfb698fe36af06d605a6448d2",
+    "wrapperSha256": "72a1f13561f4859165b2543d94ebf637cd80b6b34d1d38a51bc643918d4c91b1"
+  },
+  "focusedNoRoot": "PASS",
+  "callerRootCompatibility": "PASS",
+  "fullRegression": "PASS",
+  "unitTests": "163/163 PASS",
+  "implementationRecord": {
+    "path": "docs/04-development-records/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md",
+    "bytes": 19837,
+    "sha256": "9d7623d8683840dfedcf10efe91a6a367a0b6e2b720c4b1153d0e17e45f77098"
+  },
+  "governance": [
+    {
+      "path": "docs/00-governance/SHACO-FORGE-CURRENT-STATE.md",
+      "bytes": 71418,
+      "sha256": "aa9fc07e077b6ab22e2baedb7dac19992bd99a840824bdf0a7107a0f354c32a8"
+    },
+    {
+      "path": "docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md",
+      "bytes": 41740,
+      "sha256": "6d66b150c813c0d82bfdcf4e8f7b1cefd02e8a458f853cda8120a92e7cf4bad0"
+    },
+    {
+      "path": "docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md",
+      "bytes": 37348,
+      "sha256": "51b9169f31bc9add75bc5a7904b1e2792946aeeacadc708ee6558703b2501c3a"
+    },
+    {
+      "path": "docs/04-development-records/DEVELOPMENT-LOG.md",
+      "bytes": 110658,
+      "sha256": "9d0eff59a7d2eef9cbeccdbd6bf62e911b251b51f828a5d37a58cc67feeb73b8"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026B-CORRECTIVE-01/composition-history.json",
+      "bytes": 26487,
+      "sha256": "8c8c108404b59fd89716ccc67a67fe1a64f583a4f8292f11b8c1730ab2ac54f8"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026B-CORRECTIVE-01/composition-identity.json",
+      "bytes": 25225,
+      "sha256": "3a7723681518196540d9d2e5d3af04c580f243606006c1c0e3c59af9d6a98547"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026B-CORRECTIVE-01/review026b-finding.json",
+      "bytes": 667,
+      "sha256": "0da1eadcf3e8ab64e1d713402c089941abfdfa27d97004136fba9ffbb35d1579"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026B-CORRECTIVE-01/focused-self-contained-smoke.json",
+      "bytes": 746,
+      "sha256": "9755ba69b7db6acbf8e55fc27489643a8227fa9a15032a3e766cf4670284c4e9"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026B-CORRECTIVE-01/caller-root-compatibility.json",
+      "bytes": 523,
+      "sha256": "7c2901a420f287ccc79da56875df02f1548fd7bb247c6a297dc6b8a23224b9b9"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026B-CORRECTIVE-01/regression-summary.json",
+      "bytes": 2402,
+      "sha256": "c6ce2bb596677f82ce824250f5826292568789a980470485a0937ec3e2c14a2d"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026B-CORRECTIVE-01/environment-classification.json",
+      "bytes": 611,
+      "sha256": "34f30673f0857b454414355119201c37972686b3201a13f0d111995e34a620ec"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026B-CORRECTIVE-01/preservation.json",
+      "bytes": 769,
+      "sha256": "1db557575bce04c373c4c83b7214305805f4ab74b94ff1030be99979054bf221"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026B-CORRECTIVE-01/redaction-summary.json",
+      "bytes": 193,
+      "sha256": "71d70f2a3a0f8745e4dea91228c161f73d71abe5a637cebcb476d0992301674f"
+    }
+  ],
+  "preservation": {
+    "protectedOriginalCandidate": "88/88 EXACT_MATCH",
+    "implementationEvidence": "36/36 EXACT_MATCH",
+    "review026CorrectiveEvidence": "22/22 EXACT_MATCH",
+    "frozenAuthorities": "74/74 EXACT_MATCH"
+  },
+  "providerRuns": 0,
+  "promptRuns": 0,
+  "toolRuns": 0,
+  "agentTurnRuns": 0,
+  "cleanup": {
+    "wrapperOwnedTempRoots": 0,
+    "callerOwnedReviewerRoots": 0,
+    "desktopProcessesExited": true,
+    "workerHostHelperOrphans": false,
+    "mutex": false,
+    "lifecycleBusy": false
+  },
+  "git": {
+    "changedPaths": 104,
+    "trackedModified": 18,
+    "untracked": 86,
+    "staged": "NONE",
+    "commit": false,
+    "push": false
+  },
+  "nextAction": "INDEPENDENT_REREVIEW_V1_SLICE_2_STEP3_REVIEW_026B_CORRECTIVE",
+  "selfIdentity": {
+    "exclusion": "run-manifest.json excludes its own recursive hash; final bytes and SHA-256 are reported externally."
+  }
+}

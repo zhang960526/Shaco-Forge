@@ -1,0 +1,181 @@
+{
+  "commands": [
+    {
+      "command": "focused-compile",
+      "exactCommand": "node node_modules/typescript/bin/tsc -p apps/desktop/tsconfig.test.json",
+      "attempt": 1,
+      "phase": "FOCUSED_CORRECTIVE",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "apps/desktop/tsconfig.test.json"
+      ],
+      "startedAt": "2026-09-11T01:22:20.224Z",
+      "endedAt": "2026-09-11T01:22:21.076Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/focused-compile-1.log"
+    },
+    {
+      "command": "focused",
+      "exactCommand": "node --test apps/desktop/dist-tests/tests/user-loop-evidence.test.js apps/desktop/dist-tests/tests/transport.test.js apps/desktop/tests/full-shaco-boundaries.test.mjs apps/desktop/tests/presentation-actions.test.mjs scripts/step3-interaction.test.mjs scripts/step3-fixture-boundaries.test.mjs",
+      "attempt": 1,
+      "phase": "FOCUSED_CORRECTIVE",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "--test",
+        "apps/desktop/dist-tests/tests/user-loop-evidence.test.js",
+        "apps/desktop/dist-tests/tests/transport.test.js",
+        "apps/desktop/tests/full-shaco-boundaries.test.mjs",
+        "apps/desktop/tests/presentation-actions.test.mjs",
+        "scripts/step3-interaction.test.mjs",
+        "scripts/step3-fixture-boundaries.test.mjs"
+      ],
+      "startedAt": "2026-09-11T01:22:33.195Z",
+      "endedAt": "2026-09-11T01:22:33.780Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/focused-1.log"
+    },
+    {
+      "command": "typecheck",
+      "exactCommand": "pnpm run typecheck",
+      "attempt": 1,
+      "phase": "FOCUSED_CORRECTIVE",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "typecheck"
+      ],
+      "startedAt": "2026-09-11T01:22:43.871Z",
+      "endedAt": "2026-09-11T01:22:47.736Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/typecheck-1.log"
+    },
+    {
+      "command": "build",
+      "exactCommand": "pnpm run build",
+      "attempt": 1,
+      "phase": "FOCUSED_CORRECTIVE",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-09-11T01:23:01.238Z",
+      "endedAt": "2026-09-11T01:23:19.031Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/build-1.log"
+    },
+    {
+      "command": "test",
+      "exactCommand": "pnpm test",
+      "attempt": 1,
+      "phase": "FOCUSED_CORRECTIVE",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "test"
+      ],
+      "startedAt": "2026-09-11T01:24:12.796Z",
+      "endedAt": "2026-09-11T01:24:32.163Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-1.log"
+    },
+    {
+      "command": "verify:static",
+      "exactCommand": "pnpm run verify:static",
+      "attempt": 1,
+      "phase": "FOCUSED_CORRECTIVE",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:static"
+      ],
+      "startedAt": "2026-09-11T01:24:40.338Z",
+      "endedAt": "2026-09-11T01:24:41.284Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-static-1.log"
+    },
+    {
+      "command": "test:full-shaco",
+      "exactCommand": "pnpm run test:full-shaco",
+      "attempt": 1,
+      "phase": "FOCUSED_CORRECTIVE",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "test:full-shaco"
+      ],
+      "startedAt": "2026-09-11T01:24:57.687Z",
+      "endedAt": "2026-09-11T01:24:58.676Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-full-shaco-1.log"
+    },
+    {
+      "command": "focused",
+      "exactCommand": "node --test apps/desktop/dist-tests/tests/user-loop-evidence.test.js apps/desktop/dist-tests/tests/transport.test.js apps/desktop/tests/full-shaco-boundaries.test.mjs apps/desktop/tests/presentation-actions.test.mjs scripts/step3-interaction.test.mjs scripts/step3-fixture-boundaries.test.mjs scripts/user-loop-policy.test.mjs",
+      "attempt": 2,
+      "phase": "FOCUSED_CORRECTIVE",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "--test",
+        "apps/desktop/dist-tests/tests/user-loop-evidence.test.js",
+        "apps/desktop/dist-tests/tests/transport.test.js",
+        "apps/desktop/tests/full-shaco-boundaries.test.mjs",
+        "apps/desktop/tests/presentation-actions.test.mjs",
+        "scripts/step3-interaction.test.mjs",
+        "scripts/step3-fixture-boundaries.test.mjs",
+        "scripts/user-loop-policy.test.mjs"
+      ],
+      "startedAt": "2026-09-11T01:26:41.741Z",
+      "endedAt": "2026-09-11T01:26:42.389Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/focused-2.log"
+    },
+    {
+      "command": "test",
+      "exactCommand": "pnpm test",
+      "attempt": 2,
+      "phase": "FOCUSED_CORRECTIVE",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "test"
+      ],
+      "startedAt": "2026-09-11T01:26:43.541Z",
+      "endedAt": "2026-09-11T01:27:02.911Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/test-2.log"
+    },
+    {
+      "command": "verify:static",
+      "exactCommand": "pnpm run verify:static",
+      "attempt": 2,
+      "phase": "FOCUSED_CORRECTIVE",
+      "executable": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-v1-slice-1a-toolchain\\node-v22.19.0-win-x64\\node.exe",
+      "args": [
+        "C:/Users/18902/AppData/Local/Temp/shaco-forge-v1-slice-1a-toolchain/corepack/v1/pnpm/11.7.0/bin/pnpm.cjs",
+        "run",
+        "verify:static"
+      ],
+      "startedAt": "2026-09-11T01:29:23.456Z",
+      "endedAt": "2026-09-11T01:29:24.308Z",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "logs/verify-static-2.log"
+    }
+  ]
+}

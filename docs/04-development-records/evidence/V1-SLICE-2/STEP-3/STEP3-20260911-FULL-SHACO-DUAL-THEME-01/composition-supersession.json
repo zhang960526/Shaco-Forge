@@ -1,0 +1,8 @@
+{
+  "recordedAt": "2026-09-10T19:10:42.821Z",
+  "state": "HISTORICAL_SUPERSEDED_FOR_FULL_SHACO_PRESENTATION",
+  "predecessor": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/composition-identity.json",
+  "predecessorFileSha256": "4191dfdf5366acab814260cd64fd664acf0116a9720bfad6d539db74d9bcb484",
+  "reason": "Former visible Harness product composition does not identify Full Shaco Option B and dual templates. New controlled generation follows the finalized source inventory.",
+  "oldEvidenceModified": false
+}

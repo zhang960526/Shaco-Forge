@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: all 28 Harness rows active before Product/root; single facade, context and mount
+ok 1 - all 28 Harness rows active before Product/root; single facade, context and mount
+  ---
+  duration_ms: 2.8463
+  type: 'test'
+  ...
+# Subtest: quiescence does not authorize an inactive required row
+ok 2 - quiescence does not authorize an inactive required row
+  ---
+  duration_ms: 0.3073
+  type: 'test'
+  ...
+# Subtest: required business service absence prevents Product/root activation
+ok 3 - required business service absence prevents Product/root activation
+  ---
+  duration_ms: 0.2163
+  type: 'test'
+  ...
+# Subtest: rootError synchronously conceals before async root teardown
+ok 4 - rootError synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.2766
+  type: 'test'
+  ...
+# Subtest: loseRoot synchronously conceals before async root teardown
+ok 5 - loseRoot synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.3356
+  type: 'test'
+  ...
+# Subtest: loseService synchronously conceals before async root teardown
+ok 6 - loseService synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.6868
+  type: 'test'
+  ...
+# Subtest: slot error during synchronous React mount fails closed and disposes root
+ok 7 - slot error during synchronous React mount fails closed and disposes root
+  ---
+  duration_ms: 0.335
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 99.3618

@@ -1,0 +1,19 @@
+{
+  "result": "PASS_WAITING_INDEPENDENT_REREVIEW",
+  "review": {
+    "id": "REVIEW-026B",
+    "verdict": "FAIL"
+  },
+  "finding": {
+    "id": "F-026B-01",
+    "severity": "HIGH",
+    "status": "OPEN_BLOCKING"
+  },
+  "rootCause": "The canonical Step3 smoke did not ensure SHACO_FORGE_STEP2_EVIDENCE_ROOT existed before importing the Step2 smoke.",
+  "previousAttempt": "ROOT_CAUSE_ASSUMPTION_INVALID",
+  "ownerDecision": "WRAPPER_CHANGE_PLUS_CONTROLLED_COMPOSITION_REFREEZE",
+  "compositionValidationScopeChange": false,
+  "contractAmendmentRequired": false,
+  "correctiveStatus": "APPLIED_WAITING_INDEPENDENT_REREVIEW",
+  "canonicalStep3SmokeSelfContained": "PASS"
+}

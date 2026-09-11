@@ -26,7 +26,6 @@ export function createUserLoopObserver() {
     droppedMetadata: 0, observerErrors: 0, pendingHashes: 0,
     childAgentSpawnsObserved: 0,
     expectedMarkerSha256: undefined as string | undefined,
-    interactions: [] as Row[],
   }
   let marker = ''
   let markerHash = ''
@@ -35,7 +34,6 @@ export function createUserLoopObserver() {
   const streams = new Map<string, { sessionId?: string; lastSeq?: number; active: boolean; step: boolean; chunkSeen: boolean; calls: Map<string, string | undefined> }>()
   const prompted = new Set<string>()
   const observedChildren = new Set<string>()
-  const interactions = new Map<string, Row>()
   function observeChild(parent: unknown, child: unknown): void {
     if (typeof parent !== 'string' || !prompted.has(parent) || typeof child !== 'string' || observedChildren.has(child)) return
     if (observedChildren.size >= 8) { evidence.droppedMetadata++; return }
@@ -81,11 +79,11 @@ export function createUserLoopObserver() {
     request(endpoint: string, body: string): Row | undefined {
       let metadata: Row | undefined
       observe(() => {
-        if (!['session/prompt', 'session/create', 'workspace/create', 'directoryPicker/list', '$events/result'].includes(endpoint)) return
+        if (!['session/prompt', 'session/create', 'workspace/create', 'directoryPicker/list'].includes(endpoint)) return
         const envelope = record(JSON.parse(body))
         const wireArgs = record(record(envelope.payload).args)
-        // These public methods each take one named `request` object; list and
-        // the reserved events route instead use their direct named arguments.
+        // These public methods each take one named `request` object;
+        // directory listing instead uses its direct named arguments.
         const args = ['session/prompt', 'session/create', 'workspace/create'].includes(endpoint) ? record(wireArgs.request) : wireArgs
         metadata = { endpoint, timestamp: Date.now(), accepted: false }
         correlate(metadata, 'requestHash', args.requestId ?? envelope.rpcId)
@@ -102,16 +100,13 @@ export function createUserLoopObserver() {
         } else if (endpoint === 'directoryPicker/list') {
           correlate(metadata, 'pathHash', args.path)
           append(evidence.directoryLists, metadata, 8)
-        } else if (endpoint === '$events/result') {
-          const pending = interactions.get(String(args.eventId))
-          if (pending) { pending.settlements = Number(pending.settlements) + 1; metadata.interaction = pending }
         }
       })
       return metadata
     },
     response(endpoint: string, body: string, metadata?: Row): void {
       observe(() => {
-        if (!['session/prompt', 'session/create', 'workspace/create', 'directoryPicker/list', '$events/result', 'session/modelCatalog', 'session/list', 'credentials/describe'].includes(endpoint)) return
+        if (!['session/prompt', 'session/create', 'workspace/create', 'directoryPicker/list', 'session/modelCatalog', 'session/list', 'credentials/describe'].includes(endpoint)) return
         const result = record(record(JSON.parse(body)).result)
         const value = record(result.value)
         if (metadata) {
@@ -135,7 +130,6 @@ export function createUserLoopObserver() {
                 : /loader entries failed to apply/.test(reason) ? 'ROW_ACTIVATION_ERROR' : 'UNCLASSIFIED_PRESET_MOUNT_FAILURE'
             }
           }
-          if (metadata.interaction) { record(metadata.interaction).accepted = metadata.accepted; delete metadata.interaction }
         }
         if (result.ok !== true) return
         if (endpoint === 'workspace/create') {
@@ -179,18 +173,9 @@ export function createUserLoopObserver() {
     },
     item(streamId: string, endpoint: string, input: unknown): void {
       observe(() => {
-        const item = record(input)
-        if (endpoint === '$events' && item.type === 'waterfall') {
-          const name = safeName(item.event)
-          if (name && /approval|question/i.test(name)) {
-            const row: Row = { name, timestamp: Date.now(), settlements: 0, accepted: false }
-            correlate(row, 'eventHash', item.eventId)
-            if (interactions.size < 8) { interactions.set(String(item.eventId), row); append(evidence.interactions, row, 8) }
-            else evidence.droppedMetadata++
-          }
-        }
         const stream = streams.get(streamId)
         if (endpoint !== 'session/follow' || !stream?.sessionId || !prompted.has(stream.sessionId)) return
+        const item = record(input)
         // A history snapshot cannot stand in for a new live turn.
         if (item.type !== 'event') return
         const event = record(item.event)

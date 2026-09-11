@@ -1,0 +1,40 @@
+{
+  "result": "PASS",
+  "gates": {
+    "S3G16_APPROVAL": "PASS",
+    "S3G16_QUESTION": "PASS",
+    "S3G16_SESSION_BINDING": "PASS",
+    "S3G16_SINGLE_SETTLEMENT": "PASS",
+    "S3G16_DUPLICATE_PREVENTION": "PASS",
+    "S3G16_NO_AUTO_ANSWER": "PASS",
+    "S3G16_NO_AUTO_REPLAY": "PASS",
+    "S3G16_DISCONNECT_NOT_CANCEL": "PASS"
+  },
+  "cleanup": {
+    "noOrphan": true,
+    "authorityCount": 1,
+    "desktopProcessesExited": true
+  },
+  "desktopExits": [
+    {
+      "code": 0,
+      "gpuDiagnostic": false,
+      "sandboxDiagnostic": false,
+      "ipcDiagnostic": false
+    },
+    {
+      "code": 0,
+      "gpuDiagnostic": false,
+      "sandboxDiagnostic": false,
+      "ipcDiagnostic": false
+    },
+    {
+      "code": 0,
+      "gpuDiagnostic": false,
+      "sandboxDiagnostic": false,
+      "ipcDiagnostic": false
+    }
+  ],
+  "providerRuns": 0,
+  "acceptance": "SUPERSEDED_VALID_ENVELOPE_STALE_REASON_ASSERTION_REQUIRED"
+}

@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "node": "22.19.0",
+  "pnpm": "11.7.0",
+  "dotnet": "10.0.302",
+  "electron": "35.7.5",
+  "powerShell": {
+    "path": "C:\\Users\\18902\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "version": "7.6.5.0",
+    "resolutionSource": "Get-Command pwsh -> SHACO_FORGE_POWERSHELL explicit environment; no source hardcoding",
+    "fixtureApiProbe": "PASS"
+  },
+  "initialCommandEnvironment": {
+    "node": "24.18.0",
+    "pnpm": "11.19.0",
+    "acceptedForRuntime": false
+  },
+  "environmentCycles": [
+    {
+      "id": "E01",
+      "problem": "pnpm child did not resolve pinned node",
+      "rootCause": "Windows PATH key normalization in ad-hoc launch environment",
+      "correction": "Use existing step2-command.mjs case-normalized pinned environment",
+      "sourceGpuChange": false
+    },
+    {
+      "id": "E02",
+      "problem": "Sandbox Electron early exit 2147483651 before pending",
+      "rootCause": "Desktop execution environment difference supported by normal-GPU compatible-environment success; GPU-specific root cause not established from the retained first-exit diagnostic",
+      "correction": "Run canonical Electron entry on compatible desktop outside execution sandbox",
+      "sourceGpuChange": false
+    }
+  ],
+  "preexistingSmokeOrphan": "Exact Product identity and dead parent verified; gracefully stopped before proof",
+  "PRODUCT_DEFECT": "NOT_ESTABLISHED",
+  "providerRuns": 0,
+  "REVIEW_026_GPU_FAILURE": "REVIEW_ENVIRONMENT_SPECIFIC_NOT_REPRODUCED",
+  "REVIEW_026_POWERSHELL_FAILURE": "REVIEW_ENVIRONMENT_SPECIFIC_NOT_REPRODUCED",
+  "normalGpuArguments": true,
+  "productDefaultGpuUnchanged": true,
+  "runtimeCommands": [
+    {
+      "command": "pnpm run smoke:worker",
+      "startedAt": "2026-09-10T12:22:17.528Z",
+      "endedAt": "2026-09-10T12:22:36.613Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:carrier",
+      "startedAt": "2026-09-10T12:22:37.255Z",
+      "endedAt": "2026-09-10T12:23:38.406Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "startedAt": "2026-09-10T12:23:39.099Z",
+      "endedAt": "2026-09-10T12:24:09.431Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-10T12:24:10.081Z",
+      "endedAt": "2026-09-10T12:27:44.277Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-10T12:27:44.907Z",
+      "endedAt": "2026-09-10T12:28:41.109Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "startedAt": "2026-09-10T12:28:41.767Z",
+      "endedAt": "2026-09-10T12:29:45.533Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3-interactions",
+      "startedAt": "2026-09-10T12:29:46.213Z",
+      "endedAt": "2026-09-10T12:30:18.290Z",
+      "exitCode": 0,
+      "result": "PASS"
+    }
+  ]
+}

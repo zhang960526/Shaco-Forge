@@ -1,0 +1,31 @@
+{
+  "name": "failed-seed",
+  "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-development-3\\step2\\failed-seed.png",
+  "width": 2139,
+  "height": 1256,
+  "sha256": "9755efcfe30033ddc6f381184e1153cf4c8d92b77b4cfc32c56d0286faeb0d9f",
+  "ui": {
+    "rootCount": 0,
+    "sidebarCount": 0,
+    "forbiddenBrand": false,
+    "harnessSeats": 0,
+    "template": "BRAUN",
+    "mode": "light",
+    "rootVisible": false,
+    "horizontalOverflow": false,
+    "composer": false,
+    "approval": false,
+    "question": false,
+    "kinds": [],
+    "tools": [],
+    "tokens": {
+      "--surface-primary": "rgb(248, 248, 246)",
+      "--surface-sidebar": "rgb(235, 235, 232)",
+      "--accent-primary": "rgb(55, 59, 54)",
+      "--control-radius": "6px",
+      "--template-decoration-height": "0px",
+      "--font-display": "\"Segoe UI\", \"Microsoft YaHei UI\", sans-serif"
+    }
+  },
+  "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+}

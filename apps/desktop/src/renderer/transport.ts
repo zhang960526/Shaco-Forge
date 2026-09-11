@@ -53,7 +53,7 @@ export function createHarnessTransport(bridge: RendererTransportBridge, evidence
           const streamId = await bridge.openStream(endpoint, payload)
           evidence.activeStreams++
           evidence.maxActiveStreams = Math.max(evidence.maxActiveStreams, evidence.activeStreams)
-          evidence.userLoop.open(streamId, endpoint, payload)
+          if (endpoint === 'session/follow') evidence.userLoop.open(streamId, endpoint, payload)
           let terminal = false
           const abort = (): void => {
             evidence.abortCancels += 1
@@ -72,7 +72,7 @@ export function createHarnessTransport(bridge: RendererTransportBridge, evidence
               if (endpoint === '$events' && typeof item.value === 'object' && item.value !== null && 'type' in item.value && item.value.type === 'ready') {
                 evidence.eventsReady += 1
               }
-              evidence.userLoop.item(streamId, endpoint, item.value)
+              if (endpoint === 'session/follow') evidence.userLoop.item(streamId, endpoint, item.value)
               yield item.value
             }
           } finally {

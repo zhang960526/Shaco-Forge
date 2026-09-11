@@ -1,0 +1,186 @@
+{
+  "status": "LOCAL_SELECTED_PRESENTATION_TERMS_CHECKED",
+  "frozenHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+  "rootLicenseSha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be",
+  "selectedSources": [
+    {
+      "path": "packages/client/web/src/loader-status.ts",
+      "sha256": "030f657975cefa65ad44a735170c2894a9d1a8f545a867e84af22eb8cf442a8c",
+      "header": "/**\n * Fiber-state projection vocabulary for the framework-free boot page. The\n * boot chain subscribes to `internal/status` and projects the owning loader\n * entry's current state.\n * @module @deepseek-ai/dsh-client-web/src/loader-status\n */\nimport type { FiberState } from '@deepseek-ai/cordis'\n",
+      "disposition": "ACTIVE_CONST_ENUM_MIRROR_ADAPTED"
+    },
+    {
+      "path": "packages/client/ui-primitives/src/markdown/MarkdownText.module.css",
+      "sha256": "53e494fa25787ce7a702f0a5a786e60df02f898eb5b6c7e823c7cbba0db8cc62",
+      "header": "/* Visual baseline: deepsuite `@deepseek/md` markdown.css, adapted to CSS\n   Modules. Cite pills, header anchors, and thinking-small variants are\n   intentionally absent (no matching DOM). Token names match that sheet. */\n\n.markdown {\n  min-width: 0;\n  overflow-wrap: anywhere;\n  font: var(--dsw-font-markdown-base);",
+      "disposition": "EXISTING_PUBLIC_RUNTIME_REUSE_WITH_SHACO_THEME_OVERRIDE_NO_SOURCE_COPY"
+    },
+    {
+      "path": "packages/client/ui-primitives/src/markdown/CodeBlock.module.css",
+      "sha256": "0b2eaf99b9f9555c8c4f4c39ec9ffeb73116019902e0035d38ed6e2c370bb3ff",
+      "header": "/* Visual baseline: deepsuite `@deepseek/md` code-block.css. Highlight colors\n   stay on the existing shiki `--shiki-*` sheet (not Prism highlight.css). */\n\n.block {\n  --dsl-code-block-banner-background-color: var(--dsw-alias-markdown-code-block-banner);\n  --dsl-code-block-border-radius: 12px;\n  /* Local 11/18 instead of the shared --dsw-font-xs-13: the banner scales\n     with the markdown 0.875 ladder without shrinking every other xs-13 use. */",
+      "disposition": "EXISTING_PUBLIC_RUNTIME_REUSE_WITH_SHACO_THEME_OVERRIDE_NO_SOURCE_COPY"
+    },
+    {
+      "path": "packages/client/ui-primitives/src/markdown/CodeBlock.tsx",
+      "sha256": "f10ab28bbd53a700ad63c61533884de4248369121b0ef797ef5b6a0e4b9f945e",
+      "header": "import { Fragment, useCallback, useMemo, useRef, useState, useSyncExternalStore } from 'react'\nimport type { ReactNode } from 'react'\nimport clsx from 'clsx'\nimport { writeClipboard } from '../clipboard.ts'\nimport {\n  StreamingHighlightSession, grammarLoadCount, highlightToHtml, subscribeGrammarLoaded,\n} from './highlight.ts'\nimport type { HighlightSpan } from './highlight.ts'",
+      "disposition": "EXISTING_PUBLIC_RUNTIME_REUSE_WITH_SHACO_THEME_OVERRIDE_NO_SOURCE_COPY"
+    },
+    {
+      "path": "packages/client/ui-primitives/src/markdown/render.tsx",
+      "sha256": "f00750c82e7c9a37a87074299c8c5a2cc3a777d4e320702d78544e9550aa4e2a",
+      "header": "/**\n * Direct mdast→React markdown renderer. Replaces the react-markdown /\n * remark-rehype pipeline with one switch over parsed nodes so streaming can\n * cache frozen blocks as React elements; the rendered DOM is pinned\n * byte-for-byte by `tests/fixtures/markdown-dom` and must not drift.\n *\n * Untrusted-output policy (unchanged from the replaced pipeline): link and\n * image destinations pass a protocol allowlist, images additionally require",
+      "disposition": "EXISTING_PUBLIC_RUNTIME_REUSE_WITH_SHACO_THEME_OVERRIDE_NO_SOURCE_COPY"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "katex",
+      "version": "0.16.47",
+      "license": "MIT",
+      "disposition": "EXISTING_PUBLIC_PRIMITIVE_DEPENDENCY_NO_NEW_SOURCE_OR_ICON_COPY",
+      "licenses": [
+        {
+          "path": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness\\node_modules\\.pnpm\\katex@0.16.47\\node_modules\\katex\\LICENSE",
+          "sha256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
+          "text": "The MIT License (MIT)\n\nCopyright (c) 2013-2020 Khan Academy and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+        }
+      ]
+    },
+    {
+      "name": "shiki",
+      "version": "4.3.1",
+      "license": "MIT",
+      "disposition": "EXISTING_PUBLIC_PRIMITIVE_DEPENDENCY_NO_NEW_SOURCE_OR_ICON_COPY",
+      "licenses": [
+        {
+          "path": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness\\node_modules\\.pnpm\\shiki@4.3.1\\node_modules\\shiki\\LICENSE",
+          "sha256": "7a9d8d01038aeacf9e5bcdabbddf2a7815200dce9fc1118468cc553e00ae3eee",
+          "text": "MIT License\n\nCopyright (c) 2021 Pine Wu\nCopyright (c) 2023 Anthony Fu <https://github.com/antfu>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+        }
+      ]
+    },
+    {
+      "name": "@shikijs/langs",
+      "version": "4.3.1",
+      "license": "MIT",
+      "disposition": "EXISTING_PUBLIC_PRIMITIVE_DEPENDENCY_NO_NEW_SOURCE_OR_ICON_COPY",
+      "licenses": [
+        {
+          "path": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness\\node_modules\\.pnpm\\@shikijs+langs@4.3.1\\node_modules\\@shikijs\\langs\\LICENSE",
+          "sha256": "7a9d8d01038aeacf9e5bcdabbddf2a7815200dce9fc1118468cc553e00ae3eee",
+          "text": "MIT License\n\nCopyright (c) 2021 Pine Wu\nCopyright (c) 2023 Anthony Fu <https://github.com/antfu>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-from-markdown",
+      "version": "2.0.3",
+      "license": "MIT",
+      "disposition": "EXISTING_PUBLIC_PRIMITIVE_DEPENDENCY_NO_NEW_SOURCE_OR_ICON_COPY",
+      "licenses": [
+        {
+          "path": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness\\node_modules\\.pnpm\\mdast-util-from-markdown@2.0.3\\node_modules\\mdast-util-from-markdown\\license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+          "text": "(The MIT License)\n\nCopyright (c) Titus Wormer <tituswormer@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-gfm",
+      "version": "3.1.0",
+      "license": "MIT",
+      "disposition": "EXISTING_PUBLIC_PRIMITIVE_DEPENDENCY_NO_NEW_SOURCE_OR_ICON_COPY",
+      "licenses": [
+        {
+          "path": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness\\node_modules\\.pnpm\\mdast-util-gfm@3.1.0\\node_modules\\mdast-util-gfm\\license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+          "text": "(The MIT License)\n\nCopyright (c) Titus Wormer <tituswormer@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-math",
+      "version": "3.0.0",
+      "license": "MIT",
+      "disposition": "EXISTING_PUBLIC_PRIMITIVE_DEPENDENCY_NO_NEW_SOURCE_OR_ICON_COPY",
+      "licenses": [
+        {
+          "path": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness\\node_modules\\.pnpm\\mdast-util-math@3.0.0\\node_modules\\mdast-util-math\\license",
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+          "text": "(The MIT License)\n\nCopyright (c) 2020 Titus Wormer <tituswormer@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+        }
+      ]
+    },
+    {
+      "name": "micromark-extension-gfm",
+      "version": "3.0.0",
+      "license": "MIT",
+      "disposition": "EXISTING_PUBLIC_PRIMITIVE_DEPENDENCY_NO_NEW_SOURCE_OR_ICON_COPY",
+      "licenses": [
+        {
+          "path": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness\\node_modules\\.pnpm\\micromark-extension-gfm@3.0.0\\node_modules\\micromark-extension-gfm\\license",
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+          "text": "(The MIT License)\n\nCopyright (c) 2020 Titus Wormer <tituswormer@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+        }
+      ]
+    },
+    {
+      "name": "micromark-extension-math",
+      "version": "3.1.0",
+      "license": "MIT",
+      "disposition": "EXISTING_PUBLIC_PRIMITIVE_DEPENDENCY_NO_NEW_SOURCE_OR_ICON_COPY",
+      "licenses": [
+        {
+          "path": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness\\node_modules\\.pnpm\\micromark-extension-math@3.1.0\\node_modules\\micromark-extension-math\\license",
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+          "text": "(The MIT License)\n\nCopyright (c) 2020 Titus Wormer <tituswormer@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+        }
+      ]
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "disposition": "EXISTING_PUBLIC_PRIMITIVE_DEPENDENCY_NO_NEW_SOURCE_OR_ICON_COPY",
+      "licenses": [
+        {
+          "path": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness\\node_modules\\.pnpm\\clsx@2.1.1\\node_modules\\clsx\\license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+          "text": "MIT License\n\nCopyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "version": "18.3.1",
+      "license": "MIT",
+      "disposition": "EXISTING_PUBLIC_PRIMITIVE_DEPENDENCY_NO_NEW_SOURCE_OR_ICON_COPY",
+      "licenses": [
+        {
+          "path": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness\\node_modules\\.pnpm\\react@18.3.1\\node_modules\\react\\LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+          "text": "MIT License\n\nCopyright (c) Facebook, Inc. and its affiliates.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "18.3.1",
+      "license": "MIT",
+      "disposition": "EXISTING_PUBLIC_PRIMITIVE_DEPENDENCY_NO_NEW_SOURCE_OR_ICON_COPY",
+      "licenses": [
+        {
+          "path": "D:\\Project\\Shaco-Forge-Upstream\\deepseek-harness\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+          "text": "MIT License\n\nCopyright (c) Facebook, Inc. and its affiliates.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+        }
+      ]
+    }
+  ],
+  "copiedIcons": 0,
+  "copiedFonts": 0,
+  "newDependencies": 0,
+  "limits": "This is a selected-file local check, not a claim that the Harness root MIT license covers every third-party dependency."
+}

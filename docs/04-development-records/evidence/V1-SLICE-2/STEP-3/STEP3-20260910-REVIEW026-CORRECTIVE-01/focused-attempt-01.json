@@ -1,0 +1,29 @@
+{
+  "result": "FAIL",
+  "failure": "DESKTOP_EARLY_EXIT:2147483651",
+  "gates": {
+    "S3G16_APPROVAL": "NOT_PROVEN",
+    "S3G16_QUESTION": "NOT_PROVEN",
+    "S3G16_SESSION_BINDING": "NOT_PROVEN",
+    "S3G16_SINGLE_SETTLEMENT": "NOT_PROVEN",
+    "S3G16_DUPLICATE_PREVENTION": "NOT_PROVEN",
+    "S3G16_NO_AUTO_ANSWER": "NOT_PROVEN",
+    "S3G16_NO_AUTO_REPLAY": "NOT_PROVEN",
+    "S3G16_DISCONNECT_NOT_CANCEL": "NOT_PROVEN"
+  },
+  "cleanup": {
+    "noOrphan": true,
+    "authorityCount": 0,
+    "desktopProcessesExited": true,
+    "initialNoOrphanClaim": "INVALID_STARTUP_RACE",
+    "lateWorkerDetected": true,
+    "postCorrectiveCleanup": {
+      "noOrphan": true,
+      "worker": 56420,
+      "host": 60504,
+      "helper": 43796,
+      "gracefulStop": true
+    }
+  },
+  "providerRuns": 0
+}

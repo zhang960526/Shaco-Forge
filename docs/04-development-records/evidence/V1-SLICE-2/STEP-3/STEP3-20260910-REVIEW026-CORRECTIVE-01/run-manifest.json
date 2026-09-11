@@ -1,0 +1,220 @@
+{
+  "runId": "STEP3-20260910-REVIEW026-CORRECTIVE-01",
+  "result": "PASS",
+  "CORRECTIVE_RESULT": "PASS",
+  "completedAt": "2026-09-10T12:34:39.206Z",
+  "baseline": {
+    "branch": "master",
+    "head": "5118053f625d01faba6617cace481df3091ba5be",
+    "initialCandidate": {
+      "total": 67,
+      "tracked": 17,
+      "untracked": 50,
+      "staged": 0
+    },
+    "frozenHarness": "CLEAN",
+    "harnessHead": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+    "contractSha256": "6cad09319e8793c4cebf95c4dfae4cd04f644adbed1b0c51647e93901e42721b"
+  },
+  "REVIEW_026": "FAIL",
+  "corrective": "APPLIED_WAITING_INDEPENDENT_REREVIEW",
+  "state": "IMPLEMENTED_WAITING_INDEPENDENT_REREVIEW",
+  "nextAction": "INDEPENDENT_REREVIEW_V1_SLICE_2_STEP3_REVIEW_026_CORRECTIVE",
+  "findingsClosed": false,
+  "rereviewPerformed": false,
+  "ownerClosurePerformed": false,
+  "gates": {
+    "S3G16_APPROVAL": "PASS",
+    "S3G16_QUESTION": "PASS",
+    "S3G16_SESSION_BINDING": "PASS",
+    "S3G16_SINGLE_SETTLEMENT": "PASS",
+    "S3G16_DUPLICATE_PREVENTION": "PASS",
+    "S3G16_NO_AUTO_ANSWER": "PASS",
+    "S3G16_NO_AUTO_REPLAY": "PASS",
+    "S3G16_DISCONNECT_NOT_CANCEL": "PASS"
+  },
+  "STEP1_REGRESSION": "PASS",
+  "STEP2_RECOVERY_REGRESSION": "PASS",
+  "STEP3_DEDICATED_GATES": "PASS",
+  "CUMULATIVE_NON_PROVIDER_E2E": "PASS",
+  "composition": {
+    "changed": false,
+    "sourceInventoryUpdated": true,
+    "generatedAt": "2026-09-10T12:19:54.079Z",
+    "shacoSha256": "90596c5a746f288cc185577485c0de33a5de67ae1c0403ee4121ac0560256f14",
+    "graphRevision": "shaco-v1-slice-2-step3-cd5ef81",
+    "manifestSha256": "d861000ea0e1dbe923e9f5603f8da2865d3c62f22c0284e99e86411b428604ba",
+    "bootstrapSha256": "4e5e67c4dd9f6c19c7470f5a4c97074fd9cf08eb89734e27111a2d80bc8dbe57",
+    "applicationSha256": "8450a5ddf4a08a9a83e31cb9db6445dfac5460ddfb698fe36af06d605a6448d2"
+  },
+  "testSummary": "test-summary.json",
+  "budget": {
+    "realHostFixture": {
+      "cyclesUsed": 3,
+      "maxCycles": 3,
+      "approachesUsed": 1,
+      "maxApproaches": 2
+    },
+    "runtimeEnvironment": {
+      "cyclesUsed": 2,
+      "maxCycles": 2
+    },
+    "productDefectCorrective": {
+      "strategiesUsed": 0,
+      "sourceCyclesUsed": 0
+    },
+    "unchangedFinalConfirmationReruns": 1
+  },
+  "implementationRecord": {
+    "path": "docs/04-development-records/V1-SLICE-2-STEP3-OUTER-SHELL-NATIVE-INTERACTION-IMPLEMENTATION-RECORD.md",
+    "bytes": 18111,
+    "sha256": "b5343868e8faada2f716749e8c31f2e8334ae5870e100b0fd81d63f90e8f0814"
+  },
+  "governance": [
+    {
+      "path": "docs/00-governance/SHACO-FORGE-CURRENT-STATE.md",
+      "bytes": 70582,
+      "sha256": "22d8c9761304120f6b1f9c0b8901edda44c6700047558e1c55c9436833e764f8"
+    },
+    {
+      "path": "docs/00-governance/SHACO-FORGE-DOCUMENT-MAP.md",
+      "bytes": 40904,
+      "sha256": "2bba52c97d8422ffb1c0f1df2abd96f8653c78bc2d3fcf744d539476349c1ce3"
+    },
+    {
+      "path": "docs/03-v1.0-plan/SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md",
+      "bytes": 36512,
+      "sha256": "5222e3aed29da31397a44fcef738c646166fe421f3d0f0ab0f28716d49748b09"
+    },
+    {
+      "path": "docs/04-development-records/DEVELOPMENT-LOG.md",
+      "bytes": 109790,
+      "sha256": "37f7876e804428963e5bc16350f6c86af59ad4b636f1b20fdb74cd5df25666df"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/approval-real-host-lifecycle.json",
+      "bytes": 6844,
+      "sha256": "b70e1b5cb7633ca39de91cee455ad022baea2df6f0e5d7f38240a510e5cf503b"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/assemble-evidence.mjs",
+      "bytes": 27238,
+      "sha256": "8cb5d4d3546a66c1451516ff0a25f7e429f41a4b80ebb313e0e5d28e0fe9207d"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/baseline-preservation.json",
+      "bytes": 32937,
+      "sha256": "b6aabc7632fc35ab93a09293100e7af5197c22ea8665305bf160ee990c566412"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/changed-paths.json",
+      "bytes": 13045,
+      "sha256": "50f879a17ab215bc96e451a2afbffc9cd13eb552da28a8363b52610158b08d08"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/composition-history.json",
+      "bytes": 26487,
+      "sha256": "785452a6ec857e3ab47ab977fa461e360880a115973d4a19d119a4715bdd798d"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/composition-identity.json",
+      "bytes": 25225,
+      "sha256": "4191dfdf5366acab814260cd64fd664acf0116a9720bfad6d539db74d9bcb484"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/cumulative-e2e.json",
+      "bytes": 99455,
+      "sha256": "d68452fb8481f0a24cca7acfa964ec726b0e36ec36ecfacb634bad15dd396d21"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/environment-classification.json",
+      "bytes": 3100,
+      "sha256": "9fa119795967166d6f046d7bdc14069c5054a9b715aa2de46fed092911f81f50"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/environment-preflight-cleanup.json",
+      "bytes": 264,
+      "sha256": "bbecaf2433d626817b1337dbb08023ebd2a3c9dce5ca2e8915c5d4412268e75c"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/focused-attempt-01.json",
+      "bytes": 790,
+      "sha256": "794670b253468af05d7d0029fd9717b51b8389ed58750aa0a148a74fe35aa4b3"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/focused-attempt-02.json",
+      "bytes": 831,
+      "sha256": "a6e75819a2d84818630f614da0da95bf570f115461ae3c25ecf559534c1ec0e2"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/focused-attempt-03.json",
+      "bytes": 926,
+      "sha256": "dd8e1ff1a5d04ca7de76c4435876f0e529a84f1eb797357ec13057a345b3fe76"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/host-interaction-fixture-identity.json",
+      "bytes": 2904,
+      "sha256": "dbf56fcc034319838c0dac43fe2c27df5b999478c44d4a67cbf10dd3026b785f"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/preservation-and-changes.json",
+      "bytes": 58722,
+      "sha256": "5e85f8699b25dcb08732de8da4616b4515932458242befe0615862ae464deb14"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/question-real-host-lifecycle.json",
+      "bytes": 7375,
+      "sha256": "d8f31d8cc31eca00067c4e5621bdd44d0d5e3b0b3f8339a94e93748c0ac1bc08"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/redaction-summary.json",
+      "bytes": 582,
+      "sha256": "34c456b44020609c332dd0147ef2e1b7b424af29c0f637a14904e5813e0ee27c"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/regression-summary.json",
+      "bytes": 6113,
+      "sha256": "783894a49e945bdfaa65055802a4c3abe88789600dcc0483c3d2e90e7e7f4a1c"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/review026-findings.json",
+      "bytes": 1041,
+      "sha256": "c5a641cf45ab16fd2125787e37b81eb17ba822fdd866f405b97997f5b1bba808"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/s3g16-results.json",
+      "bytes": 849,
+      "sha256": "5437d9bc91745ec5b8c106c8873022ebe7139969d26cc47eb90a60b59a7286eb"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/step3-ui-39444-1.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-REVIEW026-CORRECTIVE-01/test-summary.json",
+      "bytes": 8364,
+      "sha256": "9b728d544703db705731d3fc35c254a14d3cbf2cb9690b67d17040f83efe1819"
+    }
+  ],
+  "originalEvidence": "36/36 EXACT_MATCH",
+  "frozenAuthorities": "74/74 EXACT_MATCH",
+  "historicalSources": "3/3 EXACT_MATCH",
+  "providerRuns": 0,
+  "cleanup": {
+    "noOrphan": true,
+    "authorityCount": 1,
+    "desktopProcessesExited": true
+  },
+  "git": {
+    "changedPaths": 94,
+    "tracked": 18,
+    "untracked": 76,
+    "staged": "NONE",
+    "commit": false,
+    "push": false
+  },
+  "selfIdentity": "The manifest excludes its own recursive hash; its final path/bytes/SHA-256 are returned by this script and in the task response."
+}

@@ -1,0 +1,214 @@
+{
+  "result": "PASS",
+  "inspected": true,
+  "sourceIdentity": "d861000ea0e1dbe923e9f5603f8da2865d3c62f22c0284e99e86411b428604ba",
+  "screenshots": [
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37596-1.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-15540-1.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37472-1.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37472-2.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    }
+  ],
+  "structural": [
+    {
+      "sidebarCount": 1,
+      "sidebarSeats": 1,
+      "brand": true,
+      "newChat": true,
+      "directory": true,
+      "currentSession": true,
+      "settingsAtBottom": true,
+      "forbiddenNavigation": false,
+      "conversation": true,
+      "conversationWidth": 1100,
+      "conversationHeight": 797.3333740234375,
+      "detailsCollapsed": true,
+      "requireAvailable": false,
+      "processAvailable": false,
+      "workspaceCapabilities": [
+        "pickDirectory"
+      ],
+      "promptRuns": 0,
+      "settings": {
+        "editor": true,
+        "fields": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "password": "password",
+        "protocolOptions": 4,
+        "error": false,
+        "localMutation": {
+          "localProfileWritten": true,
+          "modelEndpointProtocol": true,
+          "credentialSetUnset": true,
+          "secretInputCleared": true,
+          "providerCalls": 0,
+          "proof": "Frozen PiAiAdapter.listModels reads its local snapshot; no discoverModels or prompt invoked"
+        }
+      },
+      "screenshot": {
+        "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37596-1.png",
+        "bytes": 129047,
+        "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+      },
+      "providerRuns": 0
+    },
+    {
+      "sidebarCount": 1,
+      "sidebarSeats": 1,
+      "brand": true,
+      "newChat": true,
+      "directory": true,
+      "currentSession": true,
+      "settingsAtBottom": true,
+      "forbiddenNavigation": false,
+      "conversation": true,
+      "conversationWidth": 1100,
+      "conversationHeight": 797.3333740234375,
+      "detailsCollapsed": true,
+      "requireAvailable": false,
+      "processAvailable": false,
+      "workspaceCapabilities": [
+        "pickDirectory"
+      ],
+      "promptRuns": 0,
+      "settings": {
+        "editor": true,
+        "fields": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "password": "password",
+        "protocolOptions": 4,
+        "error": false,
+        "localMutation": {
+          "localProfileWritten": true,
+          "modelEndpointProtocol": true,
+          "credentialSetUnset": true,
+          "secretInputCleared": true,
+          "providerCalls": 0,
+          "proof": "Frozen PiAiAdapter.listModels reads its local snapshot; no discoverModels or prompt invoked"
+        }
+      },
+      "screenshot": {
+        "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-15540-1.png",
+        "bytes": 129047,
+        "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+      },
+      "providerRuns": 0
+    },
+    {
+      "sidebarCount": 1,
+      "sidebarSeats": 1,
+      "brand": true,
+      "newChat": true,
+      "directory": true,
+      "currentSession": true,
+      "settingsAtBottom": true,
+      "forbiddenNavigation": false,
+      "conversation": true,
+      "conversationWidth": 1100,
+      "conversationHeight": 797.3333740234375,
+      "detailsCollapsed": true,
+      "requireAvailable": false,
+      "processAvailable": false,
+      "workspaceCapabilities": [
+        "pickDirectory"
+      ],
+      "promptRuns": 0,
+      "settings": {
+        "editor": true,
+        "fields": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "password": "password",
+        "protocolOptions": 4,
+        "error": false,
+        "localMutation": {
+          "localProfileWritten": true,
+          "modelEndpointProtocol": true,
+          "credentialSetUnset": true,
+          "secretInputCleared": true,
+          "providerCalls": 0,
+          "proof": "Frozen PiAiAdapter.listModels reads its local snapshot; no discoverModels or prompt invoked"
+        }
+      },
+      "screenshot": {
+        "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37472-1.png",
+        "bytes": 129047,
+        "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+      },
+      "providerRuns": 0
+    },
+    {
+      "sidebarCount": 1,
+      "sidebarSeats": 1,
+      "brand": true,
+      "newChat": true,
+      "directory": true,
+      "currentSession": true,
+      "settingsAtBottom": true,
+      "forbiddenNavigation": false,
+      "conversation": true,
+      "conversationWidth": 1100,
+      "conversationHeight": 797.3333740234375,
+      "detailsCollapsed": true,
+      "requireAvailable": false,
+      "processAvailable": false,
+      "workspaceCapabilities": [
+        "pickDirectory"
+      ],
+      "promptRuns": 0,
+      "settings": {
+        "editor": true,
+        "fields": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "password": "password",
+        "protocolOptions": 4,
+        "error": false
+      },
+      "screenshot": {
+        "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37472-2.png",
+        "bytes": 129047,
+        "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+      },
+      "providerRuns": 0
+    }
+  ],
+  "notes": [
+    "Disposable Workspace and blank Session only",
+    "No credentials or private user content in screenshot",
+    "Earlier zero-byte screenshots retained as rejected evidence, never used for final acceptance"
+  ]
+}

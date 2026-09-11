@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { readFile, readdir } from 'node:fs/promises'
 import { extname, join } from 'node:path'
 import { paths } from './runtime-paths.mjs'
+import { scanProductionBoundary } from './production-boundary.mjs'
 
 const extensions = new Set(['.ts', '.cts', '.mjs', '.js', '.json', '.html', '.css', '.yaml', '.yml', '.cs', '.csproj'])
 const ignored = new Set(['node_modules', 'dist', '.generated-client', '.git'])
@@ -25,4 +26,6 @@ const renderedPage = await readFile(join(paths.root, 'apps/desktop/index.html'),
 assert.doesNotMatch(renderedPage, /Automation|Agent Collaboration|Knowledge Base|自动化|Agent 协作|知识库/)
 const mojibakeMarkers = ['\uFFFD', '\u953F\u65A4\u62F7', '\u00C3', '\u00C2']
 for (const marker of mojibakeMarkers) assert.ok(!joined.includes(marker), `Mojibake marker found: U+${marker.codePointAt(0)?.toString(16)}`)
-process.stdout.write(`${JSON.stringify({ result: 'PASS', scannedFiles: files.length })}\n`)
+const productionBoundary = await scanProductionBoundary(paths.root, process.env.SHACO_FORGE_HARNESS_ROOT)
+assert.deepEqual(productionBoundary.findings, [], 'UI-G14 production boundary failed')
+process.stdout.write(`${JSON.stringify({ result: 'PASS', scannedFiles: files.length, productionBoundary })}\n`)

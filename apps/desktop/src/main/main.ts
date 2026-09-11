@@ -3,7 +3,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, extname, resolve, sep } from 'node:path'
 import { promisify } from 'node:util'
 import { fileURLToPath } from 'node:url'
-import { app, BrowserWindow, ipcMain, protocol, type IpcMainInvokeEvent } from 'electron'
+import { app, BrowserWindow, dialog, ipcMain, protocol, type IpcMainInvokeEvent } from 'electron'
 import {
   isRecord,
   normalizeRendererRequest,
@@ -12,6 +12,7 @@ import {
 } from '@shaco-forge/contracts'
 import { CarrierClient } from './carrier-client.js'
 import { RecoveryCoordinator, type RecoveryProjection } from './recovery-coordinator.js'
+import { pickWorkspaceDirectory } from './workspace-picker.js'
 import { isSecureRendererConfiguration, rendererSecurityPreferences } from './security.js'
 import { sendProjectionIfAlive, snapshotLoadingUrl } from './window-lifecycle.js'
 import { readSupervisorConfig, WorkerSupervisor, type CarrierBootstrap } from './worker-supervisor.js'
@@ -46,8 +47,15 @@ let carrier: CarrierClient | undefined
 let carrierBootstrap: CarrierBootstrap | undefined
 let recovery: RecoveryCoordinator | undefined
 let mainWindow: BrowserWindow | undefined
+let documentEpoch = 0
 let finalizing = false
 let userLoopEvidence: Record<string, unknown> | undefined
+// Existing evidence-only fault mode: retain the observed attachment while it
+// is deliberately fenced. Normal Product recovery keeps its existing policy.
+let injectedFailureCarrier: CarrierClient | undefined
+let injectedFailureBootstrap: CarrierBootstrap | undefined
+let injectedHelperExited = false
+let injectionFailure: string | undefined
 
 // Main-only observation for the bounded non-Provider lifecycle runtime driver.
 // This export is never imported by preload or published to Renderer.
@@ -139,6 +147,19 @@ export async function simulateStep2CarrierLoss(): Promise<Record<string, unknown
 }
 
 function registerTransportIpc(): void {
+  ipcMain.handle('workspace:pick-directory', async (event, generation: unknown) => {
+    const capture = () => {
+      const window = mainWindow
+      const frame = event.senderFrame
+      if (!window || window.isDestroyed() || window.webContents.isDestroyed()
+        || event.sender !== window.webContents || !frame || frame !== window.webContents.mainFrame
+        || !frame.url.startsWith('shaco-forge://client/') || window.webContents.isLoadingMainFrame()
+        || !recovery || generation !== recovery.projection.generation
+        || recovery.projection.connectionState !== 'CONNECTED') throw new Error('NATIVE_PICKER_FAILED')
+      return { window, webContents: window.webContents, frame, documentEpoch, generation: recovery.projection.generation }
+    }
+    return pickWorkspaceDirectory(capture, () => dialog.showOpenDialog(mainWindow!, { properties: ['openDirectory'] }))
+  })
   ipcMain.handle('bootstrap:projection-ready', (event, generation: unknown, report: unknown) => {
     assertTrustedRenderer(event)
     requireRecovery().report(generation, report)
@@ -192,15 +213,22 @@ async function productListeners(pids: number[]): Promise<Array<{ localAddress: s
 async function maybeFinalizeEvidence(): Promise<void> {
   if (evidencePath === undefined || rendererEvidence === undefined || supervisor === undefined || finalizing) return
   if (userLoopRequested && userLoopEvidence === undefined) return
-  const carrierFailureObserved = supervisor.events.some(event => event.phase === 'carrier-failed')
+  const carrierFailureObserved = injectCarrierFailure ? injectedHelperExited : supervisor.events.some(event => event.phase === 'carrier-failed')
   const terminal = injectCarrierFailure
-    ? carrierFailureObserved
+    ? carrierFailureObserved || injectionFailure !== undefined
     : supervisor.events.some(event => event.phase === 'carrier-ready' || event.phase === 'carrier-failed' || event.phase === 'worker-failed' || event.phase === 'host-exited')
   if (!terminal) return
   finalizing = true
   await new Promise(resolveDelay => setTimeout(resolveDelay, 700))
   const evidenceWindow = mainWindow
   const loadingUrl = snapshotLoadingUrl(evidenceWindow)
+  const failurePhaseBeforeCleanup = projection.phase
+  const failureUI = injectCarrierFailure && evidenceWindow && !evidenceWindow.isDestroyed()
+    ? await evidenceWindow.webContents.executeJavaScript(`({rootInert:document.querySelector('#harness-client-root')?.inert===true,
+      rootHidden:document.querySelector('#harness-client-root')?.hidden===true,
+      shacoError:document.querySelector('[data-testid="truthful-state"]')?.innerText.includes('暂不可用')===true,
+      noHarnessBrand:!/Harness|Preview|探索未至之境/i.test(document.body.innerText)})`) as Record<string, boolean>
+    : undefined
   if (screenshotPath !== undefined
     && evidenceWindow !== undefined
     && !evidenceWindow.isDestroyed()
@@ -215,21 +243,23 @@ async function maybeFinalizeEvidence(): Promise<void> {
     ...supervisor.events.flatMap(event => [event.workerPid, event.hostPid]),
   ].filter((pid): pid is number => pid !== undefined)
   const listeners = await productListeners([...new Set(processIds)])
-  const carrierEvidence = carrier === undefined || carrierBootstrap === undefined ? undefined : {
-    helperPid: carrierBootstrap.helperPid,
+  const observedCarrier = injectedFailureCarrier ?? carrier
+  const observedBootstrap = injectedFailureBootstrap ?? carrierBootstrap
+  const carrierEvidence = observedCarrier === undefined || observedBootstrap === undefined ? undefined : {
+    helperPid: observedBootstrap.helperPid,
     pipeEndpointRedacted: true,
-    pipeEndpointHashPrefix: carrierBootstrap.pipeEndpointHashPrefix,
+    pipeEndpointHashPrefix: observedBootstrap.pipeEndpointHashPrefix,
     security: {
-      aclProtected: carrierBootstrap.security.aclProtected,
-      inheritanceDisabled: carrierBootstrap.security.inheritanceDisabled,
-      currentUserAllowRule: carrierBootstrap.security.currentUserAllowRule,
-      unintendedBroadAllowRule: carrierBootstrap.security.unintendedBroadAllowRule,
-      firstPipeInstance: carrierBootstrap.security.firstPipeInstance,
-      randomEntropyBits: carrierBootstrap.security.randomEntropyBits,
-      postCreateInspection: carrierBootstrap.security.postCreateInspection,
+      aclProtected: observedBootstrap.security.aclProtected,
+      inheritanceDisabled: observedBootstrap.security.inheritanceDisabled,
+      currentUserAllowRule: observedBootstrap.security.currentUserAllowRule,
+      unintendedBroadAllowRule: observedBootstrap.security.unintendedBroadAllowRule,
+      firstPipeInstance: observedBootstrap.security.firstPipeInstance,
+      randomEntropyBits: observedBootstrap.security.randomEntropyBits,
+      postCreateInspection: observedBootstrap.security.postCreateInspection,
     },
-    hostPreflight: carrierBootstrap.hostPreflight,
-    metrics: carrier.metrics,
+    hostPreflight: observedBootstrap.hostPreflight,
+    metrics: observedCarrier.metrics,
     secretRedacted: true,
   }
   if (evidenceWindow !== undefined && !evidenceWindow.isDestroyed()) {
@@ -250,7 +280,7 @@ async function maybeFinalizeEvidence(): Promise<void> {
     && carrierEvidence.metrics.eventsReadyObserved > 0
     && listeners.length === 0
     && cleanup.exited
-    && (!injectCarrierFailure || carrierFailureObserved)
+    && (!injectCarrierFailure || carrierFailureObserved && failureUI !== undefined && Object.values(failureUI).every(Boolean))
   const evidence = {
     result: userLoopRequested ? (result && userLoopEvidence?.result === 'PASS' ? 'PASS' : 'NOT_PROVEN') : (result ? 'PASS' : 'FAIL'),
     nonProviderResult: result ? 'PASS' : 'FAIL',
@@ -274,10 +304,14 @@ async function maybeFinalizeEvidence(): Promise<void> {
     carrier: carrierEvidence,
     failureTruthfulness: {
       injectedCarrierFailure: injectCarrierFailure,
+      method: injectCarrierFailure ? 'EVIDENCE_ONLY_FENCE_THEN_PHYSICAL_HELPER_TERMINATION' : undefined,
+      injectionFailure,
+      failureUI,
+      failurePhaseBeforeCleanup,
       carrierFailedObserved: carrierFailureObserved,
       finalProjectionPhase: projection.phase,
-      automaticWorkerRestart: false,
-      automaticCarrierRecreation: false,
+      automaticWorkerRestart: supervisor.workerLaunchAttempts > 1,
+      automaticCarrierRecreation: (recovery?.metrics.recoveries ?? 0) > 0,
       implicitAgentCancel: false,
       shacoRecovery: false,
     },
@@ -329,6 +363,9 @@ async function createMainWindow(): Promise<void> {
     webPreferences: { ...rendererSecurityPreferences, preload: preloadPath, devTools: false },
   })
   mainWindow.webContents.setWindowOpenHandler(() => ({ action: 'deny' }))
+  mainWindow.webContents.on('did-start-navigation', (_event, _url, isInPlace, isMainFrame) => {
+    if (isMainFrame && !isInPlace) documentEpoch++
+  })
   mainWindow.webContents.on('will-navigate', event => {
     if (!event.url.startsWith('shaco-forge://client/')) event.preventDefault()
   })
@@ -347,8 +384,27 @@ ipcMain.once('user-loop:complete', (_event, evidence: unknown) => {
 ipcMain.on('runtime:evidence', (_event, evidence: unknown) => {
   if (!isRecord(evidence)) return
   rendererEvidence = evidence
-  if (injectCarrierFailure && carrierBootstrap !== undefined) {
-    process.kill(carrierBootstrap.helperPid, 'SIGTERM')
+  if (injectCarrierFailure && carrierBootstrap !== undefined && injectedFailureBootstrap === undefined) {
+    injectedFailureCarrier = carrier
+    injectedFailureBootstrap = carrierBootstrap
+    // Prevent the normal automatic recovery from racing this deliberately
+    // terminal, evidence-only test. No Renderer capability is added.
+    recovery?.fail('INJECTED_CARRIER_FAILURE')
+    const helperPid = injectedFailureBootstrap.helperPid
+    void (async () => {
+      try {
+        process.kill(helperPid, 'SIGTERM')
+        for (let i = 0; i < 100; i++) {
+          try { process.kill(helperPid, 0) } catch (error) {
+            if ((error as NodeJS.ErrnoException).code !== 'ESRCH') throw error
+            injectedHelperExited = true; break
+          }
+          await new Promise(resolveDelay => setTimeout(resolveDelay, 25))
+        }
+        if (!injectedHelperExited) injectionFailure = 'INJECTED_HELPER_EXIT_TIMEOUT'
+      } catch { injectionFailure = 'INJECTED_HELPER_TERMINATION_FAILED' }
+      await maybeFinalizeEvidence()
+    })()
   }
   void maybeFinalizeEvidence()
 })

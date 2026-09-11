@@ -1,0 +1,82 @@
+{
+  "at": "2026-09-10T19:49:20.946Z",
+  "frozenAt": "2026-09-10T19:39:27.138Z",
+  "result": "PASS",
+  "classification": "IMPLEMENTER_VISUAL_QA_NOT_INDEPENDENT_FINAL_REVIEW",
+  "method": "Viewed actual final Electron PNGs with view_image, compared template direction against read-only Braun.png and FAMICOM.png.",
+  "inspected": [
+    {
+      "name": "braun-representative",
+      "path": "runs/smoke-full-shaco-2/step2/braun-representative.png"
+    },
+    {
+      "name": "famicom-representative",
+      "path": "runs/smoke-full-shaco-2/step2/famicom-representative.png"
+    },
+    {
+      "name": "narrow-window",
+      "path": "runs/smoke-full-shaco-2/step2/narrow-window.png"
+    },
+    {
+      "name": "conversation-streaming",
+      "path": "runs/smoke-full-shaco-2/step2/conversation-streaming.png"
+    },
+    {
+      "name": "conversation-tool",
+      "path": "runs/smoke-full-shaco-2/step2/conversation-tool.png"
+    },
+    {
+      "name": "tool-result-detail",
+      "path": "runs/smoke-full-shaco-2/step2/tool-result-detail.png"
+    },
+    {
+      "name": "shaco-root-error",
+      "path": "runs/smoke-full-shaco-2/step2/shaco-root-error.png"
+    },
+    {
+      "name": "bootstrap-loading",
+      "path": "runs/smoke-full-shaco-2/step2/bootstrap-loading.png"
+    },
+    {
+      "name": "no-project",
+      "path": "runs/smoke-full-shaco-2/step2/no-project.png"
+    },
+    {
+      "name": "project-blank-chat",
+      "path": "runs/smoke-full-shaco-2/step2/project-blank-chat.png"
+    },
+    {
+      "name": "approval-pending",
+      "path": "runs/smoke-full-shaco-2/step2/approval-pending.png"
+    },
+    {
+      "name": "question-pending",
+      "path": "runs/smoke-full-shaco-2/step2/question-pending.png"
+    },
+    {
+      "name": "plan-pending",
+      "path": "runs/smoke-full-shaco-2/step2/plan-pending.png"
+    },
+    {
+      "name": "multi-pending",
+      "path": "runs/smoke-full-shaco-2/step2/multi-pending.png"
+    },
+    {
+      "name": "shaco-settings",
+      "path": "runs/smoke-full-shaco-2/step2/shaco-settings.png"
+    }
+  ],
+  "observations": [
+    "Single Shaco Sidebar and work area; no visible Harness shell, Hero or product branding. Provider/model names remain legitimate catalog data.",
+    "BRAUN neutral gray/white surfaces and restrained controls; FAMICOM cream/red surfaces, top stripe and alternate typography/control recipe.",
+    "Conversation/Composer/Tool aligned; responsive controls remain reachable in narrow window; long messages scroll within their content area.",
+    "Approval, question and plan/multi forms remain distinct from Composer with explicit actions.",
+    "Command messages now show public command/args/outcome without seq/time/commandId records.",
+    "Loading and revoked-root error use Shaco-only surfaces.",
+    "Settings exposes real template and mode selectors."
+  ],
+  "limits": [
+    "Visual conformance is to frozen V1 structure and visual direction, not pixel-identical recreation of illustrative future launchers/assets.",
+    "Streaming/Tool content is explicitly marked non-Provider local Host fixture; not actual model or external Tool execution."
+  ]
+}

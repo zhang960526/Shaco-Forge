@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "source": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/runs/smoke-slice2-step1-3/step1/security-negative-results.json",
+  "staticLog": "logs/verify-static-5.log",
+  "crossUserMethod": "Deterministic evaluation of real kernel ACL; no real second-user login claimed",
+  "fixtureBoundary": "Test-only profile and entry explicitly gated; excluded from production composition",
+  "productionNewPreloadOrIpcAuthority": 0,
+  "rendererRequire": false,
+  "rendererProcess": false,
+  "providerRuns": 0
+}

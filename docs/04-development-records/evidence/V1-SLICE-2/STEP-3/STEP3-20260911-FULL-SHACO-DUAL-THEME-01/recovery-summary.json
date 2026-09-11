@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "source": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/runs/smoke-slice2-step2-4/step2/cumulative-e2e.json",
+  "chain": [
+    "PRODUCT_STARTUP_AUTHORITY_HOST_HELPER_AUTHENTICATED_CARRIER_CLIENT_CONNECTED",
+    "CURRENT_SESSION_FROM_PUBLIC_HARNESS_TRUTH",
+    "DESKTOP_GRACEFUL_CLOSE_AUTHORITY_SURVIVES",
+    "FRESH_DESKTOP_SAME_WORKER_COLD_PROJECTION",
+    "DESKTOP_CRASH_AUTHORITY_SURVIVES",
+    "FRESH_DESKTOP_AFTER_CRASH_SAME_WORKER_REATTACH",
+    "CARRIER_LOSS_REDISCOVERY_FRESH_AUTH_GENERATION_COLD_PROJECTION_CONNECTED",
+    "WORKER_CRASH_JOB_CLEANUP_REPLACEMENT_COLD_PROJECTION_CONNECTED",
+    "BOUNDED_CLEANUP_NO_ORPHAN"
+  ],
+  "cleanup": {
+    "noOrphan": true,
+    "authorityCount": 2,
+    "desktopProcessesExited": true
+  },
+  "providerRuns": 0,
+  "step3Source": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260911-FULL-SHACO-DUAL-THEME-01/runs/smoke-slice2-step3-3/step2/cumulative-e2e.json"
+}

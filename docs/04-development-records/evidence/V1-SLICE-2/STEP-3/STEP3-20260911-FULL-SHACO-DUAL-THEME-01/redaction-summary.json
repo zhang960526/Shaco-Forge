@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "scope": "Goal evidence fixtures and final logs; implementation static boundary tests",
+  "rawCredentialReadback": false,
+  "pendingProtocolIds": "Hashed before persistence; raw probes remain test-only memory",
+  "workspaceAndSessionIds": "Hashed in runtime evidence; temporary fixture directory paths and owned process PIDs retained for reproducibility/cleanup",
+  "providerCalls": 0,
+  "lossyConsoleAttempt": {
+    "source": "logs/typecheck-1.log",
+    "originalCapturedBytes": "logs/typecheck-1.original-utf8.b64",
+    "treatment": "Preserved original captured bytes as Base64 and replaced human-readable log with truthful ASCII failure explanation; original encoding loss could not be reversed. Test result remains FAIL."
+  },
+  "inheritedDevelopmentSuccessPathLabel": "Older development lifecycle JSON used inherited REAL_FROZEN_HARNESS_UI_RENDERED_CONTROL wording; actual selectors were Shaco. Final frozen scripts correctly say REAL_SHACO_UI_CONTROL_WITH_FROZEN_HARNESS_PUBLIC_PENDING_ANSWER; old evidence unchanged."
+}

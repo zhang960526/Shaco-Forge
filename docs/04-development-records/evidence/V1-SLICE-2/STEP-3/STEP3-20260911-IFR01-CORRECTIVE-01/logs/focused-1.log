@@ -1,0 +1,256 @@
+TAP version 13
+# Subtest: Renderer AsyncIterable pulls only when consumer advances and iterator.return cancels
+ok 1 - Renderer AsyncIterable pulls only when consumer advances and iterator.return cancels
+  ---
+  duration_ms: 1.8227
+  type: 'test'
+  ...
+# Subtest: Renderer AsyncIterable maps AbortSignal to bounded stream cancel
+ok 2 - Renderer AsyncIterable maps AbortSignal to bounded stream cancel
+  ---
+  duration_ms: 2.034
+  type: 'test'
+  ...
+# Subtest: Renderer forwards interaction traffic unchanged without observing private identity or settlement
+ok 3 - Renderer forwards interaction traffic unchanged without observing private identity or settlement
+  ---
+  duration_ms: 18.9606
+  type: 'test'
+  ...
+# Subtest: outer wrapper yields the single sidebar to the same-context public Product row
+ok 4 - outer wrapper yields the single sidebar to the same-context public Product row
+  ---
+  duration_ms: 5.0051
+  type: 'test'
+  ...
+# Subtest: production bootstrap bundles the tested adapter; no second Client or direct business requests
+ok 5 - production bootstrap bundles the tested adapter; no second Client or direct business requests
+  ---
+  duration_ms: 1.6711
+  type: 'test'
+  ...
+# Subtest: prompt acceptance retains hashes and timestamp, never prompt or credentials
+ok 6 - prompt acceptance retains hashes and timestamp, never prompt or credentials
+  ---
+  duration_ms: 20.4652
+  type: 'test'
+  ...
+# Subtest: live semantic ordering and pinned nested tool result shape preserve hash match
+ok 7 - live semantic ordering and pinned nested tool result shape preserve hash match
+  ---
+  duration_ms: 15.1554
+  type: 'test'
+  ...
+# Subtest: workspace proof observes the pinned nested identity and hashes the requested path even on rejection
+ok 8 - workspace proof observes the pinned nested identity and hashes the requested path even on rejection
+  ---
+  duration_ms: 15.4887
+  type: 'test'
+  ...
+# Subtest: Session creation uses the public request wrapper and redacts preset mount diagnostics
+ok 9 - Session creation uses the public request wrapper and redacts preset mount diagnostics
+  ---
+  duration_ms: 16.395
+  type: 'test'
+  ...
+# Subtest: accepted Session identity remains associated with its requested controlled Workspace
+ok 10 - accepted Session identity remains associated with its requested controlled Workspace
+  ---
+  duration_ms: 15.3689
+  type: 'test'
+  ...
+# Subtest: follow binding requires the pinned public named request and exposes its hash before Composer submission
+ok 11 - follow binding requires the pinned public named request and exposes its hash before Composer submission
+  ---
+  duration_ms: 15.8632
+  type: 'test'
+  ...
+# Subtest: child observations are bounded, deduplicated and limited to controlled prompted parents
+ok 12 - child observations are bounded, deduplicated and limited to controlled prompted parents
+  ---
+  duration_ms: 0.9794
+  type: 'test'
+  ...
+# Subtest: continuous chunks are counted without accumulating transcript or one row per chunk
+ok 13 - continuous chunks are counted without accumulating transcript or one row per chunk
+  ---
+  duration_ms: 24.7975
+  type: 'test'
+  ...
+# Subtest: browse listing evidence keeps only accepted path hashes or error codes, never directory contents
+ok 14 - browse listing evidence keeps only accepted path hashes or error codes, never directory contents
+  ---
+  duration_ms: 14.4544
+  type: 'test'
+  ...
+# Subtest: semantic metadata cap is bounded and fail-visible
+ok 15 - semantic metadata cap is bounded and fail-visible
+  ---
+  duration_ms: 1.7292
+  type: 'test'
+  ...
+# Subtest: duplicate turn terminal and invalid order are detected
+ok 16 - duplicate turn terminal and invalid order are detected
+  ---
+  duration_ms: 0.5584
+  type: 'test'
+  ...
+# Subtest: snapshot history and unprompted Sessions cannot prove live gate
+ok 17 - snapshot history and unprompted Sessions cannot prove live gate
+  ---
+  duration_ms: 0.1583
+  type: 'test'
+  ...
+# Subtest: approval/request private interaction traffic is ignored by production diagnostics
+ok 18 - approval/request private interaction traffic is ignored by production diagnostics
+  ---
+  duration_ms: 0.0947
+  type: 'test'
+  ...
+# Subtest: user-questions/request private interaction traffic is ignored by production diagnostics
+ok 19 - user-questions/request private interaction traffic is ignored by production diagnostics
+  ---
+  duration_ms: 0.0283
+  type: 'test'
+  ...
+# Subtest: background stream coexistence and iterator cleanup are measured on unchanged values
+ok 20 - background stream coexistence and iterator cleanup are measured on unchanged values
+  ---
+  duration_ms: 0.3189
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: missing API key
+ok 21 - Provider failure classification: missing API key
+  ---
+  duration_ms: 0.0415
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: provider configuration invalid
+ok 22 - Provider failure classification: provider configuration invalid
+  ---
+  duration_ms: 0.0212
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: HTTP 429
+ok 23 - Provider failure classification: HTTP 429
+  ---
+  duration_ms: 0.0167
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: TLS certificate failure
+ok 24 - Provider failure classification: TLS certificate failure
+  ---
+  duration_ms: 0.0148
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: ENOTFOUND
+ok 25 - Provider failure classification: ENOTFOUND
+  ---
+  duration_ms: 0.0199
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: 401 unauthorized
+ok 26 - Provider failure classification: 401 unauthorized
+  ---
+  duration_ms: 0.017
+  type: 'test'
+  ...
+# Subtest: UI-G14 covers recursive Renderer/Client source and production bootstrap imports
+ok 27 - UI-G14 covers recursive Renderer/Client source and production bootstrap imports
+  ---
+  duration_ms: 86.3416
+  type: 'test'
+  ...
+# Subtest: UI-G14 rejects private identity, settlement, waterfall types and fixture imports in Renderer source
+ok 28 - UI-G14 rejects private identity, settlement, waterfall types and fixture imports in Renderer source
+  ---
+  duration_ms: 1.5579
+  type: 'test'
+  ...
+# Subtest: all Shaco presentation modules use public runtime exports and own no business registries
+ok 29 - all Shaco presentation modules use public runtime exports and own no business registries
+  ---
+  duration_ms: 4.6398
+  type: 'test'
+  ...
+# Subtest: Product declares every presentation service; bootstrap remains the only Context/root owner
+ok 30 - Product declares every presentation service; bootstrap remains the only Context/root owner
+  ---
+  duration_ms: 1.5868
+  type: 'test'
+  ...
+# Subtest: prompt admission uses queue once and cancel never clears queued work
+ok 31 - prompt admission uses queue once and cancel never clears queued work
+  ---
+  duration_ms: 1.225
+  type: 'test'
+  ...
+# Subtest: unknown outcome is not replayed
+ok 32 - unknown outcome is not replayed
+  ---
+  duration_ms: 0.9211
+  type: 'test'
+  ...
+# Subtest: old generation and another selected session cannot mutate any captured object
+ok 33 - old generation and another selected session cannot mutate any captured object
+  ---
+  duration_ms: 0.3609
+  type: 'test'
+  ...
+# Subtest: approval/question settles the exact current pending object, never a replaced carrier
+ok 34 - approval/question settles the exact current pending object, never a replaced carrier
+  ---
+  duration_ms: 0.2775
+  type: 'test'
+  ...
+# Subtest: permission choices are Host-owned; custom and unknown choices cannot be submitted
+ok 35 - permission choices are Host-owned; custom and unknown choices cannot be submitted
+  ---
+  duration_ms: 0.3036
+  type: 'test'
+  ...
+# Subtest: default and singly enabled Host profiles cannot load test-only RPC; double opt-in copies exact fixture
+ok 36 - default and singly enabled Host profiles cannot load test-only RPC; double opt-in copies exact fixture
+  ---
+  duration_ms: 69.3905
+  type: 'test'
+  ...
+# Subtest: ui-approval: public composer remains reachable with exact Session binding and one settlement
+ok 37 - ui-approval: public composer remains reachable with exact Session binding and one settlement
+  ---
+  duration_ms: 5.2101
+  type: 'test'
+  ...
+# Subtest: ui-approval: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+ok 38 - ui-approval: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+  ---
+  duration_ms: 0.3555
+  type: 'test'
+  ...
+# Subtest: ui-user-questions: public composer remains reachable with exact Session binding and one settlement
+ok 39 - ui-user-questions: public composer remains reachable with exact Session binding and one settlement
+  ---
+  duration_ms: 3.6138
+  type: 'test'
+  ...
+# Subtest: ui-user-questions: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+ok 40 - ui-user-questions: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+  ---
+  duration_ms: 0.4349
+  type: 'test'
+  ...
+# Subtest: Shaco navigation/settings retain no interaction runtime or generic Renderer native capability
+ok 41 - Shaco navigation/settings retain no interaction runtime or generic Renderer native capability
+  ---
+  duration_ms: 2.5044
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 496.6688

@@ -1,0 +1,59 @@
+$ node scripts/build.mjs
+  ShacoForge.NativeCarrier -> D:\Project\Shaco-Forge\apps\native-carrier\bin\Release\net10.0-windows\ShacoForge.NativeCarrier.dll
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.50
+vite v6.4.3 building for production...
+transforming...
+✓ 11 modules transformed.
+rendering chunks...
+✓ built in 200ms
+vite v6.4.3 building for production...
+transforming...
+✓ 3 modules transformed.
+rendering chunks...
+computing gzip size...
+apps/desktop/.generated-client/static/shell-bootstrap.js  18.73 kB │ gzip: 5.14 kB
+✓ built in 38ms
+{"result":"PREPARED","graphCount":29,"react":"18.3.1"}
+vite v6.4.3 building for production...
+<script src="./static/shell-bootstrap.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="./static/boot-facade.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="./static/bootstrap.js"> in "/index.html" can't be bundled without type="module" attribute
+transforming...
+✓ 348 modules transformed.
+✗ Build failed in 1.10s
+error during build:
+apps/desktop/src/renderer/shaco-bootstrap.mjs (3:18): "FiberState" is not exported by "node_modules/.shaco-forge-build/runtime-overlay/node_modules/@deepseek-ai/cordis/lib/index.js", imported by "apps/desktop/src/renderer/shaco-bootstrap.mjs".
+file: D:/Project/Shaco-Forge/apps/desktop/src/renderer/shaco-bootstrap.mjs:3:18
+
+1: // Adapted from DeepSeek web/src/boot.ts at cd5ef8148158c3a752a658978873241fdf8e2bbc.
+2: // MIT notice: apps/desktop/THIRD_PARTY_NOTICES.md. Public imports only.
+3: import { Context, FiberState } from '@deepseek-ai/cordis'
+                     ^
+4: import Loader from '@deepseek-ai/cordis-plugin-loader'
+5: import { getStaticModules } from '@deepseek-ai/dsh-client-web'
+
+    at getRollupError (file:///D:/Project/Shaco-Forge/node_modules/.pnpm/rollup@4.63.1/node_modules/rollup/dist/es/shared/parseAst.js:317:41)
+    at error (file:///D:/Project/Shaco-Forge/node_modules/.pnpm/rollup@4.63.1/node_modules/rollup/dist/es/shared/parseAst.js:313:42)
+    at Module.error (file:///D:/Project/Shaco-Forge/node_modules/.pnpm/rollup@4.63.1/node_modules/rollup/dist/es/shared/node-entry.js:17230:16)
+    at Module.traceVariable (file:///D:/Project/Shaco-Forge/node_modules/.pnpm/rollup@4.63.1/node_modules/rollup/dist/es/shared/node-entry.js:17663:29)
+    at ModuleScope.findVariable (file:///D:/Project/Shaco-Forge/node_modules/.pnpm/rollup@4.63.1/node_modules/rollup/dist/es/shared/node-entry.js:15253:39)
+    at FunctionScope.findVariable (file:///D:/Project/Shaco-Forge/node_modules/.pnpm/rollup@4.63.1/node_modules/rollup/dist/es/shared/node-entry.js:5446:38)
+    at FunctionBodyScope.findVariable (file:///D:/Project/Shaco-Forge/node_modules/.pnpm/rollup@4.63.1/node_modules/rollup/dist/es/shared/node-entry.js:5446:38)
+    at MemberExpression.bind (file:///D:/Project/Shaco-Forge/node_modules/.pnpm/rollup@4.63.1/node_modules/rollup/dist/es/shared/node-entry.js:7171:49)
+    at Property.bind (file:///D:/Project/Shaco-Forge/node_modules/.pnpm/rollup@4.63.1/node_modules/rollup/dist/es/shared/node-entry.js:2595:23)
+    at ObjectExpression.bind (file:///D:/Project/Shaco-Forge/node_modules/.pnpm/rollup@4.63.1/node_modules/rollup/dist/es/shared/node-entry.js:2591:28)
+file:///D:/Project/Shaco-Forge/scripts/tool-runner.mjs:14
+  if (result.status !== 0) throw new Error(`${label} failed with exit code ${result.status ?? 'unknown'}`)
+                                 ^
+
+Error: renderer build failed with exit code 1
+    at runNode (file:///D:/Project/Shaco-Forge/scripts/tool-runner.mjs:14:34)
+    at file:///D:/Project/Shaco-Forge/scripts/build.mjs:17:1
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

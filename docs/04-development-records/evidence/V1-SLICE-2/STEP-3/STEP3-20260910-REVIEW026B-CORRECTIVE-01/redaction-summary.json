@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "providerRuns": 0,
+  "promptRuns": 0,
+  "toolRuns": 0,
+  "agentTurnRuns": 0,
+  "secretMatches": 0,
+  "privateTemporaryAbsolutePathMatches": 0,
+  "screenshotsAdded": 0
+}

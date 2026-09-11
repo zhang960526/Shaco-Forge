@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "command": "pnpm run smoke:slice2-step3",
+  "startedAt": "2026-09-10T13:57:47.977Z",
+  "endedAt": "2026-09-10T13:58:39.362Z",
+  "exit": 0,
+  "callerOwnedRoot": {
+    "classification": "node_modules/.review026c-caller-root-<unique>",
+    "relativePathSha256": "7d039e46616ef7dea36913ffcd7ae8210f150927455f8b02e9474d32e7e81f59",
+    "used": true,
+    "preservedAfterWrapper": true,
+    "evidenceFileCount": 5,
+    "cleanupByTest": true
+  },
+  "durableOldEvidenceWritten": false,
+  "providerRuns": 0
+}

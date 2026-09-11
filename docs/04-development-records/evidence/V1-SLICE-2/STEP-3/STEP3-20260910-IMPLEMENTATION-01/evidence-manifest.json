@@ -1,0 +1,181 @@
+{
+  "algorithm": "SHA-256",
+  "selfExcluded": true,
+  "files": [
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/assemble-evidence.mjs",
+      "bytes": 22094,
+      "sha256": "4160faeecb017f9ca9b5b1934ce87532e4644bfc3b0db5ca7ca36b3602240e25"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/baseline.json",
+      "bytes": 45708,
+      "sha256": "9979dc5821517ba1f9927614804cfd50c4dc0c5b638c86e8618b30c0c54c6140"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/changed-files.json",
+      "bytes": 17264,
+      "sha256": "bbbaebff8302a717c9f48ae2f42d599237aeda1c326ab8c3025cc2cecf23e813"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/composition-history.json",
+      "bytes": 154671,
+      "sha256": "7c9b74647c69c16b00e9131657182e278d20ce6bbc21042e6ab3af03c5e5d890"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/composition-identity.json",
+      "bytes": 24551,
+      "sha256": "6b4487be9e827d65c4cab5dd4425241f94f25a9867e9c6f9a919d936606834c8"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/corrective-history.json",
+      "bytes": 3806,
+      "sha256": "0e32c91fe8cb3848759a9da6e107d61d9403b9eeafb27a093a1b27efc3d472a3"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/cumulative-e2e.json",
+      "bytes": 216899,
+      "sha256": "9ae473cd384d7be0fa593d8d5c381d4936af316449b1da331fedc407c4ec39a6"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/deliverable-identity.json",
+      "bytes": 215,
+      "sha256": "9218e2fed8e15e829fe4778bb7a1cb6d02d530394bcfd655b29f76261d264621"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/gate-results.json",
+      "bytes": 3738,
+      "sha256": "bb2e1189343695ad3a60bd14545b3fc890b65ce1746c4bfc994b251a48737e56"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/interaction-security.json",
+      "bytes": 1394,
+      "sha256": "5073fb5583a196ec2260f6d241502a386d927906534f57e9df46846026ca8add"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/process-cleanup.json",
+      "bytes": 94,
+      "sha256": "0b8c58eebfdddd4f0cef8c7f01fa5efc3bd6ce1cbfddf8f163dd2e512c6fb509"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/redaction-summary.json",
+      "bytes": 8664,
+      "sha256": "64a1bbedff445eba7479ee157fd891a64c62a8a141a27f672f4b20e18b254996"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/attachment-sequence.json",
+      "bytes": 25585,
+      "sha256": "de2526c10b2620ad9dbb0922d8263ba44bff795c2133bcebe57b620d2487d0f1"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/authority-identity.json",
+      "bytes": 33593,
+      "sha256": "61ff54fb3083a78a02370d91e9b6db6a9f4ceb53a1d07c0649d71a168b9a397d"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/electron-regression.json",
+      "bytes": 17559,
+      "sha256": "6358f952d4ca730ec302b0afeea5d0202233f4fc00678e6ea2719beccc241388"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/powershell-resolution.json",
+      "bytes": 208,
+      "sha256": "480e47858c01026a8addb7d76052011b2cf6fa33e92e0dc92c31dff0a95ceac9"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/security-negative-results.json",
+      "bytes": 43483,
+      "sha256": "714f8436934cce49172e0f310753a0dbcaab782858080958d5c5a255a39c997c"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/regression/unit.log",
+      "bytes": 43188,
+      "sha256": "280f110e3cd96abe3b683d88e888a2e4b98a3f6b23623b359c7c7e13c023757e"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/run-manifest.json",
+      "bytes": 28194,
+      "sha256": "02926601a3f85949cdce30c0f507a3a1557cdf332feaf1d862d3ae8eb2a9ac08"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/runtime-failure-40996.json",
+      "bytes": 1183,
+      "sha256": "fff1d7c6c64d0f22f98a1bf937247313c2a69d46aeb6fab035974b63b1341468"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/shell-settings.json",
+      "bytes": 3115,
+      "sha256": "25d11bdbffbd2c78db65b2dec4239fb7ec3d4d3cf3a1e322e36321b86022f5d7"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-15540-1.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-27348-1.png",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37352-1.png",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37472-1.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37472-2.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-37596-1.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-39776-1.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-39776-2.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-40844-1.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-49760-1.png",
+      "bytes": 129047,
+      "sha256": "a0f73ea2bd89ecc5727685953d813449b6ed25a477c6cfecceeb758ea66cf835"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-60456-1.png",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/step3-ui-60456-2.png",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/test-summary.json",
+      "bytes": 7009,
+      "sha256": "f66eaef959088427fb153f47d1097cbacf5646a5a81058df3c28d07272e971d8"
+    },
+    {
+      "path": "docs/04-development-records/evidence/V1-SLICE-2/STEP-3/STEP3-20260910-IMPLEMENTATION-01/ui-evidence.json",
+      "bytes": 6660,
+      "sha256": "2cbf0cb37c37926622a26dfea63ffed15c39cedffc1601ce3760fcb2211de784"
+    }
+  ]
+}

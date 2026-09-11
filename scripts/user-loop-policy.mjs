@@ -106,7 +106,9 @@ export function assessAttempt(evidence, sessionHash, renderedMarkerMatch, carrie
   const final = events.filter(row => row.type === 'assistant/message').at(-1)
   const ordered = read && result && final && Number(read.sourceSequence) < Number(result.sourceSequence) && Number(result.sourceSequence) < Number(final.sourceSequence) && Number(final.sourceSequence) < Number(end.sourceSequence)
   if (!prompt || !events.some(row => row.type === 'turn/start') || !events.some(row => row.type === 'assistant/chunk') || !ordered || !final?.markerMatch || !renderedMarkerMatch) return 'TOOL_PROOF_NOT_PROVEN'
-  if (evidence.interactions.some(row => row.settlements !== 1 || row.accepted !== true)) return 'HUMAN_REQUIRED_INTERACTION'
+  // Historical Slice1C inputs may include interaction telemetry. Current Step3
+  // interaction proof belongs to public pending objects and Real Host fixtures.
+  if (evidence.interactions?.some(row => row.settlements !== 1 || row.accepted !== true)) return 'HUMAN_REQUIRED_INTERACTION'
   return 'PASS'
 }
 

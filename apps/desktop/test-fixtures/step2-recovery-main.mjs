@@ -3,6 +3,7 @@ import { app, BrowserWindow } from 'electron'
 import { createHash } from 'node:crypto'
 import { readFile, writeFile } from 'node:fs/promises'
 import { observeStep2Recovery, simulateStep2CarrierLoss } from '../dist/main/main.js'
+const step3 = process.env.SHACO_FORGE_STEP3_MODE === '1' ? await import('./step3-shell-driver.mjs') : undefined
 
 const control = process.env.SHACO_FORGE_STEP2_CONTROL
 const output = process.env.SHACO_FORGE_STEP2_OUTPUT
@@ -13,6 +14,7 @@ let response
 let failure
 
 async function seed(window) {
+  if (step3) return await step3.seed(window)
   // Public deterministic local mutations only: no prompt, tool, or Agent turn.
   const seeded = await window.webContents.executeJavaScript(`(async () => {
     const call = async (endpoint, args) => {
@@ -34,6 +36,8 @@ async function seed(window) {
       // Frozen Harness hides unselected blank sessions and labels selected
       // blanks as New Session regardless of title. Its existing workspace
       // New Session action reuses the registered blank and calls sessions.open.
+      const project = document.querySelector('.project-title');
+      if (project) { project.click(); document.querySelector('[data-testid="new-chat"]').click(); return true; }
       const button = [...document.querySelectorAll('#harness-client-root button[aria-label]')].find(button => {
         const label = button.getAttribute('aria-label');
         return label.includes('workspace') && (/New session in/.test(label) || /新建会话/.test(label));
@@ -59,9 +63,13 @@ const timer = setInterval(async () => {
       try {
         if (command.action === 'seed') response = await seed(window)
         else if (command.action === 'loss') response = await simulateStep2CarrierLoss()
+        else if (command.action === 'verify-shell' && step3) response = await step3.verify(window)
         else if (command.action === 'close') { clearInterval(timer); window.close(); return }
         else throw new Error('UNKNOWN_TEST_CONTROL')
-      } catch (error) { failure = error.message }
+      } catch (error) {
+        failure = error.message
+        if (step3) await step3.diagnostics(window, failure)
+      }
     }
     const observation = observeStep2Recovery()
     const authority = observation.authority

@@ -1,0 +1,275 @@
+{
+  "commands": [
+    {
+      "command": "pnpm run smoke:slice2-step3-interactions",
+      "startedAt": "2026-09-10T12:10:27.979Z",
+      "endedAt": "2026-09-10T12:10:30.820Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3-interactions",
+      "startedAt": "2026-09-10T12:11:38.478Z",
+      "endedAt": "2026-09-10T12:13:40.818Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3-interactions",
+      "startedAt": "2026-09-10T12:14:06.786Z",
+      "endedAt": "2026-09-10T12:14:42.630Z",
+      "exitCode": 1,
+      "result": "FAIL"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3-interactions",
+      "startedAt": "2026-09-10T12:17:01.839Z",
+      "endedAt": "2026-09-10T12:17:28.220Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3-interactions",
+      "startedAt": "2026-09-10T12:20:14.652Z",
+      "endedAt": "2026-09-10T12:20:37.960Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run typecheck",
+      "startedAt": "2026-09-10T12:21:11.019Z",
+      "endedAt": "2026-09-10T12:21:15.399Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-10T12:21:15.975Z",
+      "endedAt": "2026-09-10T12:21:36.905Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-10T12:21:37.493Z",
+      "endedAt": "2026-09-10T12:22:14.291Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:static",
+      "startedAt": "2026-09-10T12:22:14.955Z",
+      "endedAt": "2026-09-10T12:22:15.569Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:theme",
+      "startedAt": "2026-09-10T12:22:16.236Z",
+      "endedAt": "2026-09-10T12:22:16.855Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:worker",
+      "startedAt": "2026-09-10T12:22:17.528Z",
+      "endedAt": "2026-09-10T12:22:36.613Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:carrier",
+      "startedAt": "2026-09-10T12:22:37.255Z",
+      "endedAt": "2026-09-10T12:23:38.406Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "startedAt": "2026-09-10T12:23:39.099Z",
+      "endedAt": "2026-09-10T12:24:09.431Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-10T12:24:10.081Z",
+      "endedAt": "2026-09-10T12:27:44.277Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-10T12:27:44.907Z",
+      "endedAt": "2026-09-10T12:28:41.109Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "startedAt": "2026-09-10T12:28:41.767Z",
+      "endedAt": "2026-09-10T12:29:45.533Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3-interactions",
+      "startedAt": "2026-09-10T12:29:46.213Z",
+      "endedAt": "2026-09-10T12:30:18.290Z",
+      "exitCode": 0,
+      "result": "PASS"
+    }
+  ],
+  "correctiveHistory": [
+    {
+      "id": "F01",
+      "category": "TEST_FIXTURE",
+      "problem": "Early Desktop crash can precede detached Worker readiness; original cleanup claimed no orphan too early",
+      "rootCause": "Discovery was checked before Host readiness; late-start Worker was then observed",
+      "fix": "Wait bounded startup when no authority snapshot exists, verify the final authority-empty state, release test IPC",
+      "cycles": 1,
+      "result": "PASS; initial false cleanup claim retained and explicitly corrected in focused-attempt-01.json"
+    },
+    {
+      "id": "F02",
+      "category": "TEST_FIXTURE",
+      "problem": "Fresh Desktop Approval UI wait timed out after first Desktop succeeded",
+      "rootCause": "Fresh user-data directory has no persisted Harness current Session; test omitted Session open",
+      "fix": "Click the sole real Sidebar Session after cold Workspace/Session roster rebuild; keep a redacted failure snapshot",
+      "cycles": 1,
+      "result": "PASS"
+    },
+    {
+      "id": "F03",
+      "category": "TEST_FIXTURE",
+      "problem": "A preliminary PASS only checked stale reply ok=false, using outcome.result instead of outcome.value",
+      "rootCause": "Negative test could confuse malformed envelope rejection with old-generation rejection",
+      "fix": "Use the frozen transport valid shape and require no-active-event-stream rejection; add profile isolation tests and final source/identity fencing",
+      "cycles": 1,
+      "result": "PASS; preliminary PASS retained as superseded in focused-attempt-03.json"
+    }
+  ],
+  "result": "PASS",
+  "finalCommands": [
+    {
+      "command": "pnpm run typecheck",
+      "startedAt": "2026-09-10T12:21:11.019Z",
+      "endedAt": "2026-09-10T12:21:15.399Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run build",
+      "startedAt": "2026-09-10T12:21:15.975Z",
+      "endedAt": "2026-09-10T12:21:36.905Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm test",
+      "startedAt": "2026-09-10T12:21:37.493Z",
+      "endedAt": "2026-09-10T12:22:14.291Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:static",
+      "startedAt": "2026-09-10T12:22:14.955Z",
+      "endedAt": "2026-09-10T12:22:15.569Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run verify:theme",
+      "startedAt": "2026-09-10T12:22:16.236Z",
+      "endedAt": "2026-09-10T12:22:16.855Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:worker",
+      "startedAt": "2026-09-10T12:22:17.528Z",
+      "endedAt": "2026-09-10T12:22:36.613Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:carrier",
+      "startedAt": "2026-09-10T12:22:37.255Z",
+      "endedAt": "2026-09-10T12:23:38.406Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "startedAt": "2026-09-10T12:23:39.099Z",
+      "endedAt": "2026-09-10T12:24:09.431Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step1",
+      "startedAt": "2026-09-10T12:24:10.081Z",
+      "endedAt": "2026-09-10T12:27:44.277Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "startedAt": "2026-09-10T12:27:44.907Z",
+      "endedAt": "2026-09-10T12:28:41.109Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "startedAt": "2026-09-10T12:28:41.767Z",
+      "endedAt": "2026-09-10T12:29:45.533Z",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3-interactions",
+      "startedAt": "2026-09-10T12:29:46.213Z",
+      "endedAt": "2026-09-10T12:30:18.290Z",
+      "exitCode": 0,
+      "result": "PASS"
+    }
+  ],
+  "unit": {
+    "tests": 163,
+    "pass": 163,
+    "fail": 0,
+    "skipped": 0
+  },
+  "budget": {
+    "realHostFixture": {
+      "cyclesUsed": 3,
+      "maxCycles": 3,
+      "approachesUsed": 1,
+      "maxApproaches": 2
+    },
+    "runtimeEnvironment": {
+      "cyclesUsed": 2,
+      "maxCycles": 2
+    },
+    "productDefectCorrective": {
+      "strategiesUsed": 0,
+      "sourceCyclesUsed": 0
+    },
+    "unchangedFinalConfirmationReruns": 1
+  },
+  "adHocPreflightFailure": {
+    "command": "Pinned pnpm direct invocation before canonical wrapper",
+    "exitCode": 1,
+    "reason": "node not resolved by child PATH; no Desktop or Host started",
+    "retained": true
+  },
+  "evidenceAssembly": {
+    "initialExitCode": 1,
+    "reason": "Sandbox Git ownership check on read-only Frozen Harness during final preservation verification",
+    "correction": "Command-scoped safe.directory for the exact known Harness path; no global Git configuration or Harness bytes changed",
+    "runtimeRerun": false,
+    "finalResult": "PASS"
+  }
+}

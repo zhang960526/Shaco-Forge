@@ -39,3 +39,28 @@ test('Renderer AsyncIterable maps AbortSignal to bounded stream cancel', async (
   assert.equal(evidence.eventsReady, 1)
   await iterator.return?.()
 })
+
+test('Renderer forwards interaction traffic unchanged without observing private identity or settlement', async () => {
+  let privateReads = 0
+  const frame = Object.freeze({ type: 'waterfall', event: 'approval/request',
+    get eventId() { privateReads++; throw new Error('PRIVATE_ID_READ') } })
+  const bridge = bridgeWithItems([frame])
+  const evidence = createRendererTransportEvidence()
+  evidence.userLoop.open = () => { throw new Error('UNEXPECTED_INTERACTION_OBSERVER') }
+  evidence.userLoop.item = () => { throw new Error('UNEXPECTED_INTERACTION_OBSERVER') }
+  const transport = createHarnessTransport(bridge, evidence)
+  const iterator = transport.openStream('$events', { args: {} })[Symbol.asyncIterator]()
+  assert.equal((await iterator.next()).value, frame)
+  assert.equal((await iterator.next()).done, true)
+  const body = JSON.stringify({ payload: { args: { eventId: 'private-id', outcome: { kind: 'result', value: 'allowed-once' } } } })
+  bridge.fetch = async request => {
+    assert.equal(request.body, body)
+    return { status: 200, contentType: 'application/json', body: '{"result":{"ok":true,"value":{}}}' }
+  }
+  const reply = await transport.fetch('shaco-forge://client/api/$events/result', { method: 'POST', body })
+  assert.equal(reply.status, 200)
+  assert.equal(privateReads, 0)
+  assert.equal(evidence.userLoop.evidence.observerErrors, 0)
+  assert.equal(Object.hasOwn(evidence.userLoop.evidence, 'interactions'), false)
+  assert.doesNotMatch(JSON.stringify(evidence.userLoop.evidence), /private-id|allowed-once/)
+})

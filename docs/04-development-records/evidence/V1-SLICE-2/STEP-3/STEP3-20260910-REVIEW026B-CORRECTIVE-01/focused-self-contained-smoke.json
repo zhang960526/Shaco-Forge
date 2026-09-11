@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "command": "pnpm run smoke:slice2-step3",
+  "startedAt": "2026-09-10T13:55:06.232Z",
+  "endedAt": "2026-09-10T13:55:55.407Z",
+  "exit": 0,
+  "evidenceRootEnvInitiallyAbsent": true,
+  "wrapperOwnedRoot": {
+    "classification": "node_modules/.step3-smoke-evidence-<unique>",
+    "relativePathSha256": "3591ea1fc010defdc5c5fdd5401e509986c1ffb515217979abb25fdcf73fef05",
+    "observedDuringFinalRegression": true,
+    "cleanup": true
+  },
+  "runtime": {
+    "step1Regression": "PASS",
+    "step2DedicatedGates": "PASS",
+    "cumulativeNonProviderE2E": "PASS",
+    "verifyFrozenBefore": "PASS",
+    "verifyFrozenAfter": "PASS"
+  },
+  "pathUndefinedObserved": false,
+  "durableOldEvidenceWritten": false,
+  "providerRuns": 0
+}

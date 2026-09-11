@@ -1,0 +1,95 @@
+{
+  "result": "PASS",
+  "commands": [
+    {
+      "command": "pnpm run typecheck",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:00:12.344Z",
+      "endedAt": "2026-09-10T14:00:16.993Z"
+    },
+    {
+      "command": "pnpm run build",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:00:17.073Z",
+      "endedAt": "2026-09-10T14:00:39.766Z"
+    },
+    {
+      "command": "pnpm test",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:00:39.863Z",
+      "endedAt": "2026-09-10T14:01:03.658Z"
+    },
+    {
+      "command": "pnpm run verify:static",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:01:03.738Z",
+      "endedAt": "2026-09-10T14:01:04.282Z"
+    },
+    {
+      "command": "pnpm run verify:theme",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:01:04.355Z",
+      "endedAt": "2026-09-10T14:01:04.914Z"
+    },
+    {
+      "command": "pnpm run smoke:worker",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:01:04.989Z",
+      "endedAt": "2026-09-10T14:01:20.315Z"
+    },
+    {
+      "command": "pnpm run smoke:carrier",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:01:20.391Z",
+      "endedAt": "2026-09-10T14:02:16.783Z"
+    },
+    {
+      "command": "pnpm run smoke:electron",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:02:16.868Z",
+      "endedAt": "2026-09-10T14:02:38.543Z"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step1",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:02:38.638Z",
+      "endedAt": "2026-09-10T14:05:43.177Z"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step2",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:05:43.262Z",
+      "endedAt": "2026-09-10T14:06:31.401Z"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:06:31.481Z",
+      "endedAt": "2026-09-10T14:07:22.591Z"
+    },
+    {
+      "command": "pnpm run smoke:slice2-step3-interactions",
+      "exit": 0,
+      "result": "PASS",
+      "startedAt": "2026-09-10T14:07:22.672Z",
+      "endedAt": "2026-09-10T14:07:49.359Z"
+    }
+  ],
+  "unitTests": {
+    "total": 163,
+    "passed": 163,
+    "failed": 0
+  },
+  "providerRuns": 0
+}

@@ -1,0 +1,95 @@
+$ node --test apps/desktop/tests/presentation-lifecycle.test.mjs apps/desktop/tests/presentation-actions.test.mjs apps/desktop/tests/full-shaco-boundaries.test.mjs
+TAP version 13
+# Subtest: all Shaco presentation modules use public runtime exports and own no business registries
+ok 1 - all Shaco presentation modules use public runtime exports and own no business registries
+  ---
+  duration_ms: 13.0207
+  type: 'test'
+  ...
+# Subtest: Product declares every presentation service; bootstrap remains the only Context/root owner
+ok 2 - Product declares every presentation service; bootstrap remains the only Context/root owner
+  ---
+  duration_ms: 1.831
+  type: 'test'
+  ...
+# Subtest: prompt admission uses queue once and cancel never clears queued work
+ok 3 - prompt admission uses queue once and cancel never clears queued work
+  ---
+  duration_ms: 1.0936
+  type: 'test'
+  ...
+# Subtest: unknown outcome is not replayed
+ok 4 - unknown outcome is not replayed
+  ---
+  duration_ms: 0.7937
+  type: 'test'
+  ...
+# Subtest: old generation and another selected session cannot mutate any captured object
+ok 5 - old generation and another selected session cannot mutate any captured object
+  ---
+  duration_ms: 0.3477
+  type: 'test'
+  ...
+# Subtest: approval/question settles the exact current pending object, never a replaced carrier
+ok 6 - approval/question settles the exact current pending object, never a replaced carrier
+  ---
+  duration_ms: 0.2695
+  type: 'test'
+  ...
+# Subtest: permission choices are Host-owned; custom and unknown choices cannot be submitted
+ok 7 - permission choices are Host-owned; custom and unknown choices cannot be submitted
+  ---
+  duration_ms: 0.2839
+  type: 'test'
+  ...
+# Subtest: all 28 Harness rows active before Product/root; single facade, context and mount
+ok 8 - all 28 Harness rows active before Product/root; single facade, context and mount
+  ---
+  duration_ms: 2.4125
+  type: 'test'
+  ...
+# Subtest: quiescence does not authorize an inactive required row
+ok 9 - quiescence does not authorize an inactive required row
+  ---
+  duration_ms: 0.2616
+  type: 'test'
+  ...
+# Subtest: required business service absence prevents Product/root activation
+ok 10 - required business service absence prevents Product/root activation
+  ---
+  duration_ms: 0.2114
+  type: 'test'
+  ...
+# Subtest: rootError synchronously conceals before async root teardown
+ok 11 - rootError synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.2755
+  type: 'test'
+  ...
+# Subtest: loseRoot synchronously conceals before async root teardown
+ok 12 - loseRoot synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.3027
+  type: 'test'
+  ...
+# Subtest: loseService synchronously conceals before async root teardown
+ok 13 - loseService synchronously conceals before async root teardown
+  ---
+  duration_ms: 0.724
+  type: 'test'
+  ...
+# Subtest: slot error during synchronous React mount fails closed and disposes root
+ok 14 - slot error during synchronous React mount fails closed and disposes root
+  ---
+  duration_ms: 0.2729
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 145.143

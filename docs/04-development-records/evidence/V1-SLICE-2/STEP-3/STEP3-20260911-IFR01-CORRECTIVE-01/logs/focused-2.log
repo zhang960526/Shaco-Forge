@@ -1,0 +1,436 @@
+TAP version 13
+# Subtest: Renderer AsyncIterable pulls only when consumer advances and iterator.return cancels
+ok 1 - Renderer AsyncIterable pulls only when consumer advances and iterator.return cancels
+  ---
+  duration_ms: 2.3546
+  type: 'test'
+  ...
+# Subtest: Renderer AsyncIterable maps AbortSignal to bounded stream cancel
+ok 2 - Renderer AsyncIterable maps AbortSignal to bounded stream cancel
+  ---
+  duration_ms: 2.0554
+  type: 'test'
+  ...
+# Subtest: Renderer forwards interaction traffic unchanged without observing private identity or settlement
+ok 3 - Renderer forwards interaction traffic unchanged without observing private identity or settlement
+  ---
+  duration_ms: 18.2102
+  type: 'test'
+  ...
+# Subtest: outer wrapper yields the single sidebar to the same-context public Product row
+ok 4 - outer wrapper yields the single sidebar to the same-context public Product row
+  ---
+  duration_ms: 6.0247
+  type: 'test'
+  ...
+# Subtest: production bootstrap bundles the tested adapter; no second Client or direct business requests
+ok 5 - production bootstrap bundles the tested adapter; no second Client or direct business requests
+  ---
+  duration_ms: 1.9839
+  type: 'test'
+  ...
+# Subtest: prompt acceptance retains hashes and timestamp, never prompt or credentials
+ok 6 - prompt acceptance retains hashes and timestamp, never prompt or credentials
+  ---
+  duration_ms: 15.8745
+  type: 'test'
+  ...
+# Subtest: live semantic ordering and pinned nested tool result shape preserve hash match
+ok 7 - live semantic ordering and pinned nested tool result shape preserve hash match
+  ---
+  duration_ms: 15.9037
+  type: 'test'
+  ...
+# Subtest: workspace proof observes the pinned nested identity and hashes the requested path even on rejection
+ok 8 - workspace proof observes the pinned nested identity and hashes the requested path even on rejection
+  ---
+  duration_ms: 15.6696
+  type: 'test'
+  ...
+# Subtest: Session creation uses the public request wrapper and redacts preset mount diagnostics
+ok 9 - Session creation uses the public request wrapper and redacts preset mount diagnostics
+  ---
+  duration_ms: 16.5847
+  type: 'test'
+  ...
+# Subtest: accepted Session identity remains associated with its requested controlled Workspace
+ok 10 - accepted Session identity remains associated with its requested controlled Workspace
+  ---
+  duration_ms: 15.03
+  type: 'test'
+  ...
+# Subtest: follow binding requires the pinned public named request and exposes its hash before Composer submission
+ok 11 - follow binding requires the pinned public named request and exposes its hash before Composer submission
+  ---
+  duration_ms: 15.1319
+  type: 'test'
+  ...
+# Subtest: child observations are bounded, deduplicated and limited to controlled prompted parents
+ok 12 - child observations are bounded, deduplicated and limited to controlled prompted parents
+  ---
+  duration_ms: 1.4915
+  type: 'test'
+  ...
+# Subtest: continuous chunks are counted without accumulating transcript or one row per chunk
+ok 13 - continuous chunks are counted without accumulating transcript or one row per chunk
+  ---
+  duration_ms: 28.0314
+  type: 'test'
+  ...
+# Subtest: browse listing evidence keeps only accepted path hashes or error codes, never directory contents
+ok 14 - browse listing evidence keeps only accepted path hashes or error codes, never directory contents
+  ---
+  duration_ms: 15.3017
+  type: 'test'
+  ...
+# Subtest: semantic metadata cap is bounded and fail-visible
+ok 15 - semantic metadata cap is bounded and fail-visible
+  ---
+  duration_ms: 2.9261
+  type: 'test'
+  ...
+# Subtest: duplicate turn terminal and invalid order are detected
+ok 16 - duplicate turn terminal and invalid order are detected
+  ---
+  duration_ms: 1.1068
+  type: 'test'
+  ...
+# Subtest: snapshot history and unprompted Sessions cannot prove live gate
+ok 17 - snapshot history and unprompted Sessions cannot prove live gate
+  ---
+  duration_ms: 0.2509
+  type: 'test'
+  ...
+# Subtest: approval/request private interaction traffic is ignored by production diagnostics
+ok 18 - approval/request private interaction traffic is ignored by production diagnostics
+  ---
+  duration_ms: 0.1906
+  type: 'test'
+  ...
+# Subtest: user-questions/request private interaction traffic is ignored by production diagnostics
+ok 19 - user-questions/request private interaction traffic is ignored by production diagnostics
+  ---
+  duration_ms: 0.0547
+  type: 'test'
+  ...
+# Subtest: background stream coexistence and iterator cleanup are measured on unchanged values
+ok 20 - background stream coexistence and iterator cleanup are measured on unchanged values
+  ---
+  duration_ms: 0.5001
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: missing API key
+ok 21 - Provider failure classification: missing API key
+  ---
+  duration_ms: 0.0933
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: provider configuration invalid
+ok 22 - Provider failure classification: provider configuration invalid
+  ---
+  duration_ms: 0.0439
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: HTTP 429
+ok 23 - Provider failure classification: HTTP 429
+  ---
+  duration_ms: 0.03
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: TLS certificate failure
+ok 24 - Provider failure classification: TLS certificate failure
+  ---
+  duration_ms: 0.03
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: ENOTFOUND
+ok 25 - Provider failure classification: ENOTFOUND
+  ---
+  duration_ms: 0.0317
+  type: 'test'
+  ...
+# Subtest: Provider failure classification: 401 unauthorized
+ok 26 - Provider failure classification: 401 unauthorized
+  ---
+  duration_ms: 0.0297
+  type: 'test'
+  ...
+# Subtest: UI-G14 covers recursive Renderer/Client source and production bootstrap imports
+ok 27 - UI-G14 covers recursive Renderer/Client source and production bootstrap imports
+  ---
+  duration_ms: 89.7988
+  type: 'test'
+  ...
+# Subtest: UI-G14 rejects private identity, settlement, waterfall types and fixture imports in Renderer source
+ok 28 - UI-G14 rejects private identity, settlement, waterfall types and fixture imports in Renderer source
+  ---
+  duration_ms: 2.3371
+  type: 'test'
+  ...
+# Subtest: UI-G14 follows local imports outside seeded roots and rejects reachable test fixtures
+ok 29 - UI-G14 follows local imports outside seeded roots and rejects reachable test fixtures
+  ---
+  duration_ms: 13.5558
+  type: 'test'
+  ...
+# Subtest: all Shaco presentation modules use public runtime exports and own no business registries
+ok 30 - all Shaco presentation modules use public runtime exports and own no business registries
+  ---
+  duration_ms: 3.0935
+  type: 'test'
+  ...
+# Subtest: Product declares every presentation service; bootstrap remains the only Context/root owner
+ok 31 - Product declares every presentation service; bootstrap remains the only Context/root owner
+  ---
+  duration_ms: 1.3566
+  type: 'test'
+  ...
+# Subtest: prompt admission uses queue once and cancel never clears queued work
+ok 32 - prompt admission uses queue once and cancel never clears queued work
+  ---
+  duration_ms: 1.6758
+  type: 'test'
+  ...
+# Subtest: unknown outcome is not replayed
+ok 33 - unknown outcome is not replayed
+  ---
+  duration_ms: 2.1621
+  type: 'test'
+  ...
+# Subtest: old generation and another selected session cannot mutate any captured object
+ok 34 - old generation and another selected session cannot mutate any captured object
+  ---
+  duration_ms: 0.4729
+  type: 'test'
+  ...
+# Subtest: approval/question settles the exact current pending object, never a replaced carrier
+ok 35 - approval/question settles the exact current pending object, never a replaced carrier
+  ---
+  duration_ms: 0.3015
+  type: 'test'
+  ...
+# Subtest: permission choices are Host-owned; custom and unknown choices cannot be submitted
+ok 36 - permission choices are Host-owned; custom and unknown choices cannot be submitted
+  ---
+  duration_ms: 0.3291
+  type: 'test'
+  ...
+# Subtest: default and singly enabled Host profiles cannot load test-only RPC; double opt-in copies exact fixture
+ok 37 - default and singly enabled Host profiles cannot load test-only RPC; double opt-in copies exact fixture
+  ---
+  duration_ms: 106.2984
+  type: 'test'
+  ...
+# Subtest: ui-approval: public composer remains reachable with exact Session binding and one settlement
+ok 38 - ui-approval: public composer remains reachable with exact Session binding and one settlement
+  ---
+  duration_ms: 6.0556
+  type: 'test'
+  ...
+# Subtest: ui-approval: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+ok 39 - ui-approval: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+  ---
+  duration_ms: 0.3626
+  type: 'test'
+  ...
+# Subtest: ui-user-questions: public composer remains reachable with exact Session binding and one settlement
+ok 40 - ui-user-questions: public composer remains reachable with exact Session binding and one settlement
+  ---
+  duration_ms: 2.7241
+  type: 'test'
+  ...
+# Subtest: ui-user-questions: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+ok 41 - ui-user-questions: unbound request delegates; stale presentation aborts without answer; fresh public request rebuilds
+  ---
+  duration_ms: 0.3056
+  type: 'test'
+  ...
+# Subtest: Shaco navigation/settings retain no interaction runtime or generic Renderer native capability
+ok 42 - Shaco navigation/settings retain no interaction runtime or generic Renderer native capability
+  ---
+  duration_ms: 2.7327
+  type: 'test'
+  ...
+# Subtest: Owner exception admits exactly the second capture revalidation without modifying first history
+ok 43 - Owner exception admits exactly the second capture revalidation without modifying first history
+  ---
+  duration_ms: 4.3456
+  type: 'test'
+  ...
+# Subtest: corrective route rejects missing, invalid or consumed Owner authority and every missing prerequisite
+ok 44 - corrective route rejects missing, invalid or consumed Owner authority and every missing prerequisite
+  ---
+  duration_ms: 1.8678
+  type: 'test'
+  ...
+# Subtest: Owner exception cannot authorize Provider, Tool, mutating, subagent, ordinary failure or normal-retry outcomes
+ok 45 - Owner exception cannot authorize Provider, Tool, mutating, subagent, ordinary failure or normal-retry outcomes
+  ---
+  duration_ms: 0.8996
+  type: 'test'
+  ...
+# Subtest: corrective route requires new run, Workspace, path, marker, Session and request identities
+ok 46 - corrective route requires new run, Workspace, path, marker, Session and request identities
+  ---
+  duration_ms: 0.6407
+  type: 'test'
+  ...
+# Subtest: durable exclusive reservation survives restart, cannot be reused, and leaves Attempt 1 byte-equivalent
+ok 47 - durable exclusive reservation survives restart, cannot be reused, and leaves Attempt 1 byte-equivalent
+  ---
+  duration_ms: 25.829
+  type: 'test'
+  ...
+# Subtest: a failed rejected Prompt still consumes the one-time authority
+ok 48 - a failed rejected Prompt still consumes the one-time authority
+  ---
+  duration_ms: 14.6468
+  type: 'test'
+  ...
+# Subtest: zero-Prompt preflight fails closed for budget changes, missing real follow binding or any Prompt
+ok 49 - zero-Prompt preflight fails closed for budget changes, missing real follow binding or any Prompt
+  ---
+  duration_ms: 5.701
+  type: 'test'
+  ...
+# Subtest: live gate waits for pending evidence hashes instead of asserting a premature PASS
+ok 50 - live gate waits for pending evidence hashes instead of asserting a premature PASS
+  ---
+  duration_ms: 0.6488
+  type: 'test'
+  ...
+# Subtest: actual generated Host profile includes one approved settings entry before standard presets without configuration overrides
+ok 51 - actual generated Host profile includes one approved settings entry before standard presets without configuration overrides
+  ---
+  duration_ms: 22.0063
+  type: 'test'
+  ...
+# Subtest: Session creation distinguishes ineffective settings, another missing composition, Provider failure and Product failure
+ok 52 - Session creation distinguishes ineffective settings, another missing composition, Provider failure and Product failure
+  ---
+  duration_ms: 0.525
+  type: 'test'
+  ...
+# Subtest: unsubmitted UI reservation keeps its original number and audit; any prompt or incomplete evidence prevents reuse
+ok 53 - unsubmitted UI reservation keeps its original number and audit; any prompt or incomplete evidence prevents reuse
+  ---
+  duration_ms: 0.6107
+  type: 'test'
+  ...
+# Subtest: picker Client graph requires exactly 28 unique explicit modules and rejects missing, duplicate or unknown entries
+ok 54 - picker Client graph requires exactly 28 unique explicit modules and rejects missing, duplicate or unknown entries
+  ---
+  duration_ms: 1.6231
+  type: 'test'
+  ...
+# Subtest: production Client package loader retains exact identity, web declaration and public built-export checks
+ok 55 - production Client package loader retains exact identity, web declaration and public built-export checks
+  ---
+  duration_ms: 1.9397
+  type: 'test'
+  ...
+# Subtest: generated picker manifest preserves 28 public Harness modules plus one static observer and no native or auto picker
+ok 56 - generated picker manifest preserves 28 public Harness modules plus one static observer and no native or auto picker
+  ---
+  duration_ms: 0.6619
+  type: 'test'
+  ...
+# Subtest: controlled workspace gate requires accepted creation, exact path hash and a returned identity
+ok 57 - controlled workspace gate requires accepted creation, exact path hash and a returned identity
+  ---
+  duration_ms: 0.1631
+  type: 'test'
+  ...
+# Subtest: PASS needs correlated real read/result/final and rendered marker plus all stream gates
+ok 58 - PASS needs correlated real read/result/final and rendered marker plus all stream gates
+  ---
+  duration_ms: 0.4201
+  type: 'test'
+  ...
+# Subtest: current public transport diagnostics do not require historical interaction telemetry
+ok 59 - current public transport diagnostics do not require historical interaction telemetry
+  ---
+  duration_ms: 0.0827
+  type: 'test'
+  ...
+# Subtest: healthy no-tool retry requires accepted prompt and complete semantic stream
+ok 60 - healthy no-tool retry requires accepted prompt and complete semantic stream
+  ---
+  duration_ms: 0.0899
+  type: 'test'
+  ...
+# Subtest: real error, duplicate terminal, missing terminal and interaction duplicates never pass
+ok 61 - real error, duplicate terminal, missing terminal and interaction duplicates never pass
+  ---
+  duration_ms: 0.2088
+  type: 'test'
+  ...
+# Subtest: healthy no-tool first attempt permits exactly one new Session retry; no attempt three
+ok 62 - healthy no-tool first attempt permits exactly one new Session retry; no attempt three
+  ---
+  duration_ms: 0.1847
+  type: 'test'
+  ...
+# Subtest: PASS never gains a retry
+ok 63 - PASS never gains a retry
+  ---
+  duration_ms: 0.0679
+  type: 'test'
+  ...
+# Subtest: TOOL_EXECUTION_FAILED never gains a retry
+ok 64 - TOOL_EXECUTION_FAILED never gains a retry
+  ---
+  duration_ms: 0.0419
+  type: 'test'
+  ...
+# Subtest: UNAUTHORIZED_MUTATING_TOOL_OBSERVED never gains a retry
+ok 65 - UNAUTHORIZED_MUTATING_TOOL_OBSERVED never gains a retry
+  ---
+  duration_ms: 0.032
+  type: 'test'
+  ...
+# Subtest: UNAUTHORIZED_SUBAGENT_TOOL_OBSERVED never gains a retry
+ok 66 - UNAUTHORIZED_SUBAGENT_TOOL_OBSERVED never gains a retry
+  ---
+  duration_ms: 0.0328
+  type: 'test'
+  ...
+# Subtest: SHACO_IMPLEMENTATION_FAILURE never gains a retry
+ok 67 - SHACO_IMPLEMENTATION_FAILURE never gains a retry
+  ---
+  duration_ms: 0.0363
+  type: 'test'
+  ...
+# Subtest: HARNESS_PROVIDER_OR_NETWORK_FAILURE never gains a retry
+ok 68 - HARNESS_PROVIDER_OR_NETWORK_FAILURE never gains a retry
+  ---
+  duration_ms: 0.1223
+  type: 'test'
+  ...
+# Subtest: delegation or a child observation cannot be hidden by successful read proof; model listing alone is not read proof
+ok 69 - delegation or a child observation cannot be hidden by successful read proof; model listing alone is not read proof
+  ---
+  duration_ms: 0.2581
+  type: 'test'
+  ...
+# Subtest: write/edit observation fails even when final text matches
+ok 70 - write/edit observation fails even when final text matches
+  ---
+  duration_ms: 0.0773
+  type: 'test'
+  ...
+# Subtest: workspace integrity compares complete listing and proof bytes/hash
+ok 71 - workspace integrity compares complete listing and proof bytes/hash
+  ---
+  duration_ms: 8.3074
+  type: 'test'
+  ...
+1..71
+# tests 71
+# suites 0
+# pass 71
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 549.9119

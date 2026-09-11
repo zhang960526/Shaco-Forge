@@ -1,0 +1,31 @@
+{
+  "name": "failed-theme-switch",
+  "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-2\\STEP-3\\STEP3-20260911-FULL-SHACO-DUAL-THEME-01\\runs\\smoke-full-shaco-development-5\\step2\\failed-theme-switch.png",
+  "width": 2139,
+  "height": 1256,
+  "sha256": "ca4936c95f9fc9f2ec48237bedcb778b192fbd9f864dd9a593e97cba7a061110",
+  "ui": {
+    "rootCount": 1,
+    "sidebarCount": 1,
+    "forbiddenBrand": false,
+    "harnessSeats": 0,
+    "template": "FAMICOM",
+    "mode": "light",
+    "rootVisible": true,
+    "horizontalOverflow": false,
+    "composer": true,
+    "approval": true,
+    "question": false,
+    "kinds": [],
+    "tools": [],
+    "tokens": {
+      "--surface-primary": "rgb(251, 245, 233)",
+      "--surface-sidebar": "rgb(241, 234, 217)",
+      "--accent-primary": "rgb(146, 37, 41)",
+      "--control-radius": "4px",
+      "--template-decoration-height": "28px",
+      "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+    }
+  },
+  "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+}

@@ -1,0 +1,889 @@
+$ node scripts/smoke-electron.mjs --inject-carrier-failure
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Electron failed. stdout=
+ stderr=Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:pull-stream': Error: Carrier connection closed
+    at Socket.<anonymous> (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/carrier-client.js:224:36)
+    at Object.onceWrapper (node:events:633:26)
+    at Socket.emit (node:events:518:28)
+    at Pipe.<anonymous> (node:net:351:12)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+Error occurred in handler for 'transport:cancel-stream': Error: STALE_CLIENT_GENERATION
+    at RecoveryCoordinator.assertGeneration (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:87:19)
+    at RecoveryCoordinator.cancelStream (file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/recovery-coordinator.js:198:14)
+    at file:///D:/Project/Shaco-Forge/apps/desktop/dist/main/main.js:170:33
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:89264)
+    at WebContents.emit (node:events:518:28)
+
+
+4294967295 !== 0
+
+    at file:///D:/Project/Shaco-Forge/scripts/smoke-electron.mjs:46:8
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 4294967295,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

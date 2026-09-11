@@ -1,0 +1,34 @@
+{
+  "result": "FAIL",
+  "failure": "TEST_REAL_APPROVAL_UI_PENDING_TIMEOUT",
+  "gates": {
+    "S3G16_APPROVAL": "NOT_PROVEN",
+    "S3G16_QUESTION": "NOT_PROVEN",
+    "S3G16_SESSION_BINDING": "NOT_PROVEN",
+    "S3G16_SINGLE_SETTLEMENT": "NOT_PROVEN",
+    "S3G16_DUPLICATE_PREVENTION": "NOT_PROVEN",
+    "S3G16_NO_AUTO_ANSWER": "NOT_PROVEN",
+    "S3G16_NO_AUTO_REPLAY": "NOT_PROVEN",
+    "S3G16_DISCONNECT_NOT_CANCEL": "NOT_PROVEN"
+  },
+  "cleanup": {
+    "noOrphan": true,
+    "authorityCount": 1,
+    "desktopProcessesExited": true
+  },
+  "desktopExits": [
+    {
+      "code": 0,
+      "gpuDiagnostic": false,
+      "sandboxDiagnostic": false,
+      "ipcDiagnostic": false
+    },
+    {
+      "code": null,
+      "gpuDiagnostic": false,
+      "sandboxDiagnostic": false,
+      "ipcDiagnostic": false
+    }
+  ],
+  "providerRuns": 0
+}

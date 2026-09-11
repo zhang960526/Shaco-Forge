@@ -1,0 +1,61 @@
+{
+  "classification": "NOT_PRODUCTION_TEST_ONLY_HOST_INTERACTION_FIXTURE",
+  "files": [
+    {
+      "path": "apps/worker/src/profile.ts",
+      "bytes": 5566,
+      "sha256": "25885934647ca7fe670e613b17cc9b5db25df49c06b51554010a874b4f1df211"
+    },
+    {
+      "path": "apps/worker/test-fixtures/step3-interactions.mjs",
+      "bytes": 4917,
+      "sha256": "527e13678a3310d709ac15a70c22182a55f520b80648a6267afc5950da9c6f6e"
+    },
+    {
+      "path": "apps/desktop/test-fixtures/step3-interactions-main.mjs",
+      "bytes": 7187,
+      "sha256": "ea0219f8e0c90f18fda68fcb747982b7adf70f8a558e07b9d53ddff883261aa4"
+    },
+    {
+      "path": "scripts/smoke-slice2-step3-interactions.mjs",
+      "bytes": 10782,
+      "sha256": "60115dc4d06ae0e0ee1883de96f5952c607410b39258c625dd556f222c280088"
+    },
+    {
+      "path": "scripts/step3-fixture-boundaries.test.mjs",
+      "bytes": 2337,
+      "sha256": "fef92745b3cb08312bb57861b7aae8acff994dda75657775ddca927f517836ea"
+    }
+  ],
+  "mount": {
+    "profileName": "shaco-forge-step3-lifecycle-proof",
+    "environmentFlag": "SHACO_FORGE_STEP3_LIFECYCLE_PROOF=1",
+    "bothRequired": true
+  },
+  "route": "shacoStep3TestOnly/{ensure,trigger,status}",
+  "defaultProfileContainsRoute": false,
+  "defaultIsolationProof": "Actual materializeHarnessProfile tested across default, flag-only, profile-only and double opt-in; no export, patch entry or fixture module in any disabled case.",
+  "hostServices": [
+    "sessionController.resolveAgent",
+    "agents.get",
+    "agents.roots",
+    "approval.request",
+    "userQuestions.ask"
+  ],
+  "agentCreation": "Real native-picker/New Chat Harness session.create supplies the Session; test fixture ensures that exact registered live root Agent. Both scenarios use the same real Session.",
+  "pendingTruth": "Outstanding real Host service Promise and real Gateway waterfall; fixture counters only measure request/settlement, do not resolve or recreate pending.",
+  "auditEnclosure": "Approval requires turn/start and turn/end audit records. No Agent driver is started, no message is enqueued, no step/Tool/Provider runs.",
+  "sessionHash": "e49d1ee1c9ee2fb2e5ef4f4e03c595e825079d8aa690ccb11396a4360e0bfd8f",
+  "successSettlement": "Real Frozen rendered Approval and Question controls in embedded Main Workspace",
+  "staleDuplicateDriver": "NOT_PRODUCTION_TEST_DRIVER_ONLY; internal client/event envelopes remain in parent/child IPC memory; only hashes and booleans persisted",
+  "defaultProductDoesNotLoadDriver": true,
+  "clientRowPrivateGatewayImports": false,
+  "clientRowEventIdDependency": false,
+  "existingObservationOnlyIdReads": {
+    "path": "apps/desktop/src/renderer/user-loop-evidence.ts",
+    "unchangedFromHead": true,
+    "scope": "Existing passive bounded evidence observer; no Product UI/navigation/settlement dependency introduced"
+  },
+  "productFunctionalCorrective": false,
+  "providerRuns": 0
+}
