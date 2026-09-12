@@ -1,6 +1,45 @@
 # Shaco Forge Development Log
 
-## Current - Step2 pre-signing review passed; F-05 risk accepted; waiting Production Signing (2026-09-12)
+## Current - Release Trust Amendment frozen; Corrective authorized not started (2026-09-12)
+
+[REVIEW-031](../05-reviews/architecture/AUDIT-031-V1-SLICE-3-RELEASE-TRUST-SIGNING-AMENDMENT-INDEPENDENT-REVIEW.md)
+已按 Owner 提供的 DeepSeek Harness 只读 transcript 持久化为 `PASS`，没有 Blocking
+Findings。Architecture Owner 随后通过
+[Freeze and Corrective Authorization Decision](V1-SLICE-3-RELEASE-TRUST-SIGNING-AMENDMENT-FREEZE-AND-CORRECTIVE-AUTHORIZATION-DECISION.md)
+接受 Review、冻结 Amendment，并只授权尚未开始的 Release Trust Corrective。
+
+- `GITHUB_OPEN_SOURCE_UNSIGNED` 是 active V1 mode，`TRUSTED_AUTHENTICODE` 保持支持；
+- signing integration 保留；trusted CA signing、Windows publisher identity 与
+  SmartScreen reputation hardening 延后；
+- unsigned mode 依赖 exact source/tag、release manifest、installer/artifact SHA-256、
+  packaged-file manifest、Frozen Harness identity、compatibility 与安全事务 Evidence；
+- Integrity 不冒充 Publisher Authenticity，Windows trusted publisher identity 不提供；
+- Release Trust Mode 必须来自 immutable release/build authority，不允许 runtime bypass；
+- 当前 mandatory-reject-unsigned 行为由下一批已授权但尚未开始的 Corrective 修正；
+- `BUG-S3S2-001`、Node SQLite experimental risk 与 CSP unsafe directive removal disposition
+  均保持；Step2 不关闭，Step3/Provider/Signing 不授权，Slice4 不开始。
+
+```text
+REVIEW_031 = PASS
+AMENDMENT_STATUS = FROZEN_FOR_IMPLEMENTATION
+AMENDMENT_EFFECTIVE = YES
+PARENT_CONTRACT_SHA256 = 35152ace7e1bb85ad6ecec801e20202d55ee960acb2137340ae932777da1bf76
+V1_SLICE_3_RELEASE_TRUST_IMPLEMENTATION_CORRECTIVE_AUTHORIZATION = YES
+IMPLEMENTATION_CORRECTIVE_STATUS = AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP2 = CORRECTIVE_AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP2_BASELINE = NOT_FROZEN
+V1_SLICE_3_STEP3 = NOT_AUTHORIZED
+READY_FOR_RELEASE_TRUST_IMPLEMENTATION_CORRECTIVE = YES
+V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_3_RELEASE_TRUST_IMPLEMENTATION_CORRECTIVE
+```
+
+Runtime、Build、Tests、Packaging、Signing、Provider 与 Fresh Windows 均 `NOT RUN`；
+本记录随唯一 Governance Amendment Freeze commit 持久化；Push 为 `NO`。
+
+下方为历史 checkpoint，不构成本次之后的新授权。
+
+
+## Historical - Step2 pre-signing review passed; F-05 risk accepted; waiting Production Signing (2026-09-12)
 
 [REVIEW-030](../05-reviews/architecture/AUDIT-030-V1-SLICE-3-STEP2-PRE-SIGNING-INDEPENDENT-REVIEW.md)
 faithfully persists the Owner-supplied DeepSeek Harness read-only pre-signing review as `PASS`

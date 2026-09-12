@@ -1,6 +1,52 @@
 # Shaco Forge Document Map
 
-## Current - Step2 pre-signing review passed; F-05 risk accepted; waiting Production Signing (2026-09-12)
+## Current - Release Trust Amendment frozen; Corrective authorized not started (2026-09-12)
+
+[REVIEW-031](../05-reviews/architecture/AUDIT-031-V1-SLICE-3-RELEASE-TRUST-SIGNING-AMENDMENT-INDEPENDENT-REVIEW.md)
+为 `PASS / BLOCKING_FINDINGS_NONE`。Architecture Owner 已通过
+[Freeze and Corrective Authorization Decision](../04-development-records/V1-SLICE-3-RELEASE-TRUST-SIGNING-AMENDMENT-FREEZE-AND-CORRECTIVE-AUTHORIZATION-DECISION.md)
+冻结 [Release Trust / Signing Amendment](../03-v1.0-plan/V1-SLICE-3-RELEASE-TRUST-SIGNING-REQUIREMENT-AMENDMENT-CANDIDATE.md)
+并只授权尚未开始的最小 Release Trust Corrective。Parent Contract 字节与 SHA-256
+`35152ace7e1bb85ad6ecec801e20202d55ee960acb2137340ae932777da1bf76` 不变。
+
+```text
+AMENDMENT_ARCHITECTURE_REVIEW = REVIEW-031 / PASS
+ARCHITECTURE_OWNER_AMENDMENT_FREEZE = ACCEPTED
+SLICE3_RELEASE_TRUST_SIGNING_AMENDMENT = FROZEN_FOR_IMPLEMENTATION / EFFECTIVE
+V1_RELEASE_DISTRIBUTION_MODEL = GITHUB_OPEN_SOURCE_RELEASE
+TRUSTED_CA_AUTHENTICODE_SIGNING_REQUIRED_FOR_V1 = NO
+ACTIVE_RELEASE_TRUST_MODE = GITHUB_OPEN_SOURCE_UNSIGNED
+UNSIGNED_WINDOWS_GITHUB_RELEASE_ALLOWED = YES
+SIGNING_INTEGRATION = RETAINED / PASS
+TRUSTED_AUTHENTICODE_MODE = SUPPORTED_BUT_NOT_REQUIRED_FOR_GITHUB_OPEN_SOURCE_V1
+TRUSTED_CA_AUTHENTICODE_PRODUCTION_SIGNING = DEFERRED_RELEASE_HARDENING
+WINDOWS_PUBLISHER_IDENTITY = DEFERRED_RELEASE_HARDENING
+SMARTSCREEN_REPUTATION_HARDENING = DEFERRED_RELEASE_HARDENING
+BUG_S3S2_001 = OPEN / NON_BLOCKING_CARRY_FORWARD
+NODE_SQLITE_EXPERIMENTAL_RISK = NON_BLOCKING / DEFERRED
+CSP_UNSAFE_EVAL_INLINE_REMOVAL = DEFERRED_SECURITY_HARDENING
+V1_SLICE_3_RELEASE_TRUST_IMPLEMENTATION_CORRECTIVE_AUTHORIZATION = YES
+IMPLEMENTATION_CORRECTIVE_STATUS = AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP1_BASELINE = 99561f80629a8f9640af702fe322996bcc850906
+V1_SLICE_3_STEP2 = CORRECTIVE_AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP2_BASELINE = NOT_FROZEN
+V1_SLICE_3_STEP2_FINAL_INDEPENDENT_REVIEW = NOT_STARTED
+V1_SLICE_3_STEP2_OWNER_CLOSURE = NOT_PERFORMED
+V1_SLICE_3_STEP3 = NOT_AUTHORIZED
+V1_SLICE_4 = NOT_STARTED
+PROVIDER_GATE_AUTHORIZATION = NO
+SIGNING_EXECUTION_AUTHORIZATION = NO
+V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_3_RELEASE_TRUST_IMPLEMENTATION_CORRECTIVE
+```
+
+本次没有执行 Product Source Corrective、Runtime、Build、Tests、Packaging 或 Signing。
+
+下方为历史 checkpoint，不构成本次之后的新授权。
+
+Status: ACTIVE
+
+
+## Historical - Step2 pre-signing review passed; F-05 risk accepted; waiting Production Signing (2026-09-12)
 
 [REVIEW-030](../05-reviews/architecture/AUDIT-030-V1-SLICE-3-STEP2-PRE-SIGNING-INDEPENDENT-REVIEW.md)
 faithfully persists the Owner-supplied DeepSeek Harness read-only pre-signing review as `PASS`
@@ -672,6 +718,7 @@ UI implementation / visual decisions must read `SHACO-FORGE-UI-DESIGN-SPEC.md` w
 |---|---|---|
 | `SHACO-FORGE-V1.0-DEVELOPMENT-MAP.md` | Current four-Slice Harness-reuse implementation route plus need-driven P0.5/P1/P2-P8 taxonomy | ACTIVE |
 | [V1-SLICE-3 Architecture Contract](../03-v1.0-plan/V1-SLICE-3-PACKAGING-COMPATIBILITY-RELEASE-ARCHITECTURE-CONTRACT-CANDIDATE.md) | Single frozen Slice3 Packaging / Compatibility / Release Contract; three implementation Steps; F-05 Owner-only gate retained | FROZEN_FOR_IMPLEMENTATION; REVIEW-028 historical FAIL → REVIEW-028B PASS; implementation status follows Current State |
+| [V1-SLICE-3 Release Trust / Signing Amendment](../03-v1.0-plan/V1-SLICE-3-RELEASE-TRUST-SIGNING-REQUIREMENT-AMENDMENT-CANDIDATE.md) | Active local signing/release-trust delta for GitHub Open Source V1; preserves the frozen Parent Contract and retained signing integration | FROZEN_FOR_IMPLEMENTATION; EFFECTIVE; REVIEW-031 PASS; corrective AUTHORIZED_NOT_STARTED |
 | `V1-SLICE-2-LIFECYCLE-NATIVE-RECONNECT-CONTRACT.md` | Re-frozen Architecture Contract for Worker authority, minimal trusted discovery, reconnect, cold projection, outer shell and Native integration | FROZEN |
 | `V1-SLICE-2-CARRIER-LIFECYCLE-AMENDMENT.md` | Re-frozen local Slice 1B lifecycle/credential amendment preserving frozen wire/HMAC semantics | FROZEN |
 | [Full Shaco Presentation Corrective Contract Candidate](../03-v1.0-plan/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-CORRECTIVE-CONTRACT-CANDIDATE.md) | REVIEW-027 / 027A PASS；BRAUN/FAMICOM Delta 已接受并实现；当前技术契约由 Step3 Owner Closure 接受 | FROZEN / IMPLEMENTED / OWNER_ACCEPTED |
@@ -793,7 +840,9 @@ Baseline candidate now gates that Slice behind Independent Review.
 | [REVIEW-029B Step1 Package Content Closure Targeted Corrective Re-Review](../05-reviews/architecture/AUDIT-029B-V1-SLICE-3-STEP1-PACKAGE-CONTENT-CLOSURE-CORRECTIVE-REREVIEW.md) | Owner-supplied DeepSeek Harness READ_ONLY PASS; S3S1-IR-001 corrective verified; historical REVIEW-029 remains FAIL |
 | [Slice3 Step1 Owner Closure / Baseline Freeze Decision](../04-development-records/V1-SLICE-3-STEP1-OWNER-CLOSURE-AND-BASELINE-FREEZE-DECISION.md) | Owner acceptance of REVIEW-029B; Step1 closed/frozen at `99561f80629a8f9640af702fe322996bcc850906`; only Step2 authorized-not-started; NF-4/F-05, Provider and Signing boundaries retained |
 | [REVIEW-030 Step2 Pre-Signing Independent Review](../05-reviews/architecture/AUDIT-030-V1-SLICE-3-STEP2-PRE-SIGNING-INDEPENDENT-REVIEW.md) | Owner-supplied DeepSeek Harness READ_ONLY PASS; candidate/source/Contract/Harness identities and pre-signing technical gates verified; no Blocking Findings; no final Step2 review or closure |
-| [Slice3 Step2 F-05 Security Disposition and Signing Gate Decision](../04-development-records/V1-SLICE-3-STEP2-F05-SECURITY-DISPOSITION-AND-SIGNING-GATE-DECISION.md) | Owner accepts exact PATH B residual risk for Frozen V1 composition; F-05 closed with accepted residual risk; Signing remains NO/0 pending public signer identity and execution authorization |
+| [REVIEW-031 Release Trust / Signing Amendment Independent Review](../05-reviews/architecture/AUDIT-031-V1-SLICE-3-RELEASE-TRUST-SIGNING-AMENDMENT-INDEPENDENT-REVIEW.md) | Owner-supplied DeepSeek Harness READ_ONLY targeted Architecture Review PASS; no Blocking Findings; Amendment eligible for Owner freeze |
+| [Release Trust / Signing Amendment Freeze and Corrective Authorization Decision](../04-development-records/V1-SLICE-3-RELEASE-TRUST-SIGNING-AMENDMENT-FREEZE-AND-CORRECTIVE-AUTHORIZATION-DECISION.md) | Owner accepts REVIEW-031, freezes the local Amendment and authorizes only the not-started Product Source Release Trust Corrective; Step2 remains open, Step3/Provider/Signing NO |
+| [Slice3 Step2 F-05 Security Disposition and Signing Gate Decision](../04-development-records/V1-SLICE-3-STEP2-F05-SECURITY-DISPOSITION-AND-SIGNING-GATE-DECISION.md) | Owner accepts exact PATH B residual risk for Frozen V1 composition; F-05 closed with accepted residual risk; its former signing-only gate is locally superseded by the frozen Release Trust Amendment; signing execution remains NO/0 |
 | [Slice3 Step1 Packaged Runtime Implementation Record](../04-development-records/V1-SLICE-3-STEP1-PACKAGED-RUNTIME-FOUNDATION-IMPLEMENTATION-RECORD.md) | Executor implementation, runtime layout, attempts, evidence and handoff; no Independent Review or closure authority |
 | [Full Shaco Presentation Direction Decision](../04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md) | Owner 已接受 REVIEW-027 / 027A 与 BRAUN/FAMICOM Delta；方向保持，实施授权已消费；Step3 已 Owner Closure / Frozen |
 | [Slice2 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) | Slice2 PASS / CLOSED / FROZEN；独立 Audit PASS；NF-6 最终关闭；Provider Gate NOT_TRIGGERED；Slice3 NOT_STARTED |
@@ -832,6 +881,7 @@ Baseline candidate now gates that Slice behind Independent Review.
 
 ## 7. Reviews
 
+- [REVIEW-031](../05-reviews/architecture/AUDIT-031-V1-SLICE-3-RELEASE-TRUST-SIGNING-AMENDMENT-INDEPENDENT-REVIEW.md): PASS; Release Trust / Signing Amendment aligned; Blocking Findings NONE; Owner freeze accepted.
 - [REVIEW-028](../05-reviews/architecture/AUDIT-028-V1-SLICE-3-ARCHITECTURE-CONTRACT-INDEPENDENT-REVIEW.md): historical FAIL; sole blocker S3-AR-001; verdict preserved.
 - [REVIEW-028B](../05-reviews/architecture/AUDIT-028B-V1-SLICE-3-S3-AR-001-TARGETED-CORRECTIVE-REREVIEW.md): PASS; S3-AR-001 corrective confirmed; final Blocking Findings NONE; ready for Owner freeze assessment.
 - [REVIEW-025](../05-reviews/architecture/AUDIT-025-V1-SLICE-2-STEP3-CONTRACT-GATE-INDEPENDENT-REVIEW.md): historical FAIL; sole blocker R25-01; corrective required.
