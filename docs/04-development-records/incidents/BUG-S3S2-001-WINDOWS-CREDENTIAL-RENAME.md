@@ -1,6 +1,11 @@
 # BUG-S3S2-001 — Windows credential atomic rename refusal in cumulative regression
 
-Status: OPEN_OBSERVED_PLATFORM_FAILURE / ISOLATED_FINAL_REGRESSION_PASS
+Status: OPEN / NON_BLOCKING_CARRY_FORWARD
+
+Review Disposition: `NON_BLOCKING_CARRY_FORWARD` by
+[REVIEW-030](../../05-reviews/architecture/AUDIT-030-V1-SLICE-3-STEP2-PRE-SIGNING-INDEPENDENT-REVIEW.md)
+
+Carry-forward Target: `Slice3 Step3 cumulative observation + Slice4 Fresh Windows real acceptance`
 
 ## Discovered At / Phase
 
@@ -64,3 +69,10 @@ No contract or ADR change is proposed. Owner assessment must retain the Windows 
 ## Closure Evidence
 
 None. OPEN; no root-process identification or production-platform fix is claimed.
+
+The Windows `EPERM` rename was observed in the checkout/node_modules fixture and the
+same chain passed after OS-temp isolation. Production Known Folder reproduction evidence
+does not exist. The failure explicitly rejects rather than silently corrupting data, and
+the responsible process/filesystem condition remains unproven. If a future production-path
+reproduction requires a Frozen Harness change, stop for the Architecture Owner. REVIEW-030
+does not close this bug.

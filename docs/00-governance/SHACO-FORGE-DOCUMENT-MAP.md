@@ -1,6 +1,69 @@
 # Shaco Forge Document Map
 
-## Current - Slice3 Step2 implemented; waiting Owner gates (2026-09-12)
+## Current - Step2 pre-signing review passed; F-05 risk accepted; waiting Production Signing (2026-09-12)
+
+[REVIEW-030](../05-reviews/architecture/AUDIT-030-V1-SLICE-3-STEP2-PRE-SIGNING-INDEPENDENT-REVIEW.md)
+faithfully persists the Owner-supplied DeepSeek Harness read-only pre-signing review as `PASS`
+with no Blocking Findings. The Architecture Owner's
+[F-05 Security Disposition and Signing Gate Decision](../04-development-records/V1-SLICE-3-STEP2-F05-SECURITY-DISPOSITION-AND-SIGNING-GATE-DECISION.md)
+accepts PATH B only for the exact current Frozen V1 composition. The `unsafe-eval` and
+`unsafe-inline` exceptions and their Renderer-injection residual risk are accepted, not
+eliminated; their eventual removal remains non-blocking `DEFERRED_SECURITY_HARDENING`.
+
+The unsigned installer SHA-256 remains
+`91edf1658b734b3feca51abc082f366e0bf15442aba4e355c885a035b3f1c809`.
+It is `UNSIGNED / NOT_PRODUCTION_SIGNED / NOT_RELEASE_READY`. The public signer
+allowlist remains empty and Production Signing remains Owner-gated. Therefore the final
+Step2 Independent Review has not started, Step2 is not closed or frozen, and Step3 is not
+authorized.
+
+```text
+V1_SLICE_1 = PASS / CLOSED / FROZEN
+V1_SLICE_2 = PASS / CLOSED / FROZEN
+V1_SLICE_3 = IN_PROGRESS
+V1_SLICE_3_ARCHITECTURE_CONTRACT = FROZEN_FOR_IMPLEMENTATION
+V1_SLICE_3_STEP1 = PASS / CLOSED / FROZEN
+V1_SLICE_3_STEP1_BASELINE = 99561f80629a8f9640af702fe322996bcc850906
+V1_SLICE_3_STEP2_IMPLEMENTATION_AUTHORIZATION = CONSUMED
+V1_SLICE_3_STEP2 = IMPLEMENTED_WAITING_PRODUCTION_SIGNING
+V1_SLICE_3_STEP2_NON_HUMAN_IMPLEMENTATION_RESULT = PASS
+V1_SLICE_3_STEP2_PRE_SIGNING_TECHNICAL_REVIEW = PASS
+V1_SLICE_3_STEP2_PRE_SIGNING_BLOCKING_FINDINGS = NONE
+F05_TECHNICAL_DISPOSITION_CANDIDATE = RESIDUAL_EXCEPTION_REQUIRED
+F05_SECURITY_DISPOSITION = ARCHITECTURE_OWNER_ACCEPTED
+F05_STATUS = CLOSED_WITH_ACCEPTED_RESIDUAL_RISK
+REVIEW_012_F_05 = CLOSED_WITH_ACCEPTED_RESIDUAL_RISK
+F05_RESIDUAL_RISK = Renderer injection may still exploit dynamic JS evaluation or trusted-origin style injection.
+F05_RESIDUAL_RISK_DISPOSITION = ACCEPTED_FOR_V1_FROZEN_COMPOSITION
+BUG_S3S2_001 = OPEN / NON_BLOCKING_CARRY_FORWARD
+NODE_SQLITE_EXPERIMENTAL_RISK = NON_BLOCKING / DEFERRED
+SIGNING_INTEGRATION = PASS
+READY_FOR_OWNER_PUBLIC_SIGNER_IDENTITY = YES
+READY_FOR_PRODUCTION_SIGNING_AUTHORIZATION = YES
+PUBLIC_SIGNER_IDENTITY_STATUS = PENDING_ARCHITECTURE_OWNER_PUBLIC_SIGNER_IDENTITY
+CERTIFICATE_SHA256_ALLOWLIST = EMPTY
+SIGNING_EXECUTION_AUTHORIZATION = NO
+SIGNING_RUN_COUNT = 0
+PRODUCTION_SIGNING_STATUS = WAITING_OWNER_PUBLIC_SIGNER_IDENTITY_AND_EXECUTION_AUTHORIZATION
+V1_SLICE_3_STEP2_PRODUCTION_SIGNING_GATE = WAITING_OWNER_PUBLIC_SIGNER_IDENTITY_AND_EXECUTION_AUTHORIZATION
+V1_SLICE_3_STEP2_FINAL_INDEPENDENT_REVIEW = NOT_STARTED
+V1_SLICE_3_STEP2_OWNER_CLOSURE = NOT_PERFORMED
+V1_SLICE_3_STEP2_BASELINE = NOT_FROZEN
+V1_SLICE_3_STEP3 = NOT_AUTHORIZED
+V1_SLICE_3_CLOSURE = NO
+PROVIDER_GATE_AUTHORIZATION = NO
+PROVIDER_RUN_COUNT = 0
+V1_SLICE_4 = NOT_STARTED
+V1_CURRENT_STEP = V1_SLICE_3_STEP2_WAITING_PRODUCTION_SIGNING
+V1_CURRENT_NEXT_ACTION = ARCHITECTURE_OWNER_PUBLIC_SIGNER_IDENTITY_AND_PRODUCTION_SIGNING_GATE
+```
+
+下方为历史 checkpoint，不构成本次之后的新授权。
+
+Status: ACTIVE
+
+
+## Historical - Slice3 Step2 implemented; waiting Owner gates (2026-09-12)
 
 本次有界实现从治理 HEAD `514e1759b4991e950d5ad5169e3fc86dc3cc025f`、CLEAN 工作区开始。
 已完成兼容性、最小 SQLite Control Store、未签名安装器、签名验证边界和完整更新/恢复/卸载事务。
@@ -729,6 +792,8 @@ Baseline candidate now gates that Slice behind Independent Review.
 | [REVIEW-029 Step1 Independent Implementation Review](../05-reviews/architecture/AUDIT-029-V1-SLICE-3-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md) | Owner-supplied DeepSeek Harness READ_ONLY FAIL; sole blocking finding S3S1-IR-001; original other PASS conclusions preserved |
 | [REVIEW-029B Step1 Package Content Closure Targeted Corrective Re-Review](../05-reviews/architecture/AUDIT-029B-V1-SLICE-3-STEP1-PACKAGE-CONTENT-CLOSURE-CORRECTIVE-REREVIEW.md) | Owner-supplied DeepSeek Harness READ_ONLY PASS; S3S1-IR-001 corrective verified; historical REVIEW-029 remains FAIL |
 | [Slice3 Step1 Owner Closure / Baseline Freeze Decision](../04-development-records/V1-SLICE-3-STEP1-OWNER-CLOSURE-AND-BASELINE-FREEZE-DECISION.md) | Owner acceptance of REVIEW-029B; Step1 closed/frozen at `99561f80629a8f9640af702fe322996bcc850906`; only Step2 authorized-not-started; NF-4/F-05, Provider and Signing boundaries retained |
+| [REVIEW-030 Step2 Pre-Signing Independent Review](../05-reviews/architecture/AUDIT-030-V1-SLICE-3-STEP2-PRE-SIGNING-INDEPENDENT-REVIEW.md) | Owner-supplied DeepSeek Harness READ_ONLY PASS; candidate/source/Contract/Harness identities and pre-signing technical gates verified; no Blocking Findings; no final Step2 review or closure |
+| [Slice3 Step2 F-05 Security Disposition and Signing Gate Decision](../04-development-records/V1-SLICE-3-STEP2-F05-SECURITY-DISPOSITION-AND-SIGNING-GATE-DECISION.md) | Owner accepts exact PATH B residual risk for Frozen V1 composition; F-05 closed with accepted residual risk; Signing remains NO/0 pending public signer identity and execution authorization |
 | [Slice3 Step1 Packaged Runtime Implementation Record](../04-development-records/V1-SLICE-3-STEP1-PACKAGED-RUNTIME-FOUNDATION-IMPLEMENTATION-RECORD.md) | Executor implementation, runtime layout, attempts, evidence and handoff; no Independent Review or closure authority |
 | [Full Shaco Presentation Direction Decision](../04-development-records/V1-SLICE-2-STEP3-FULL-SHACO-PRESENTATION-DIRECTION-DECISION.md) | Owner 已接受 REVIEW-027 / 027A 与 BRAUN/FAMICOM Delta；方向保持，实施授权已消费；Step3 已 Owner Closure / Frozen |
 | [Slice2 Owner Closure / Freeze Decision](../04-development-records/V1-SLICE-2-OWNER-CLOSURE-AND-FREEZE-DECISION.md) | Slice2 PASS / CLOSED / FROZEN；独立 Audit PASS；NF-6 最终关闭；Provider Gate NOT_TRIGGERED；Slice3 NOT_STARTED |

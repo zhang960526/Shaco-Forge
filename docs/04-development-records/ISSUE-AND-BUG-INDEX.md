@@ -4,7 +4,7 @@ Status: ACTIVE
 
 | ID | Title | Phase | Severity | Status | Document |
 |---|---|---|---|---|---|
-| BUG-S3S2-001 | Windows credential atomic rename intermittently returns EPERM in cumulative regression | Slice3 Step2 / frozen Slice2 regression | Medium / runtime verification | OPEN; isolated final regression PASS | [Incident](incidents/BUG-S3S2-001-WINDOWS-CREDENTIAL-RENAME.md) |
+| BUG-S3S2-001 | Windows credential atomic rename intermittently returns EPERM in cumulative regression | Slice3 Step2 / frozen Slice2 regression | Medium / runtime verification | OPEN / NON_BLOCKING_CARRY_FORWARD; observe in Slice3 Step3 and Slice4 Fresh Windows | [Incident](incidents/BUG-S3S2-001-WINDOWS-CREDENTIAL-RENAME.md) |
 
 ## Rule
 

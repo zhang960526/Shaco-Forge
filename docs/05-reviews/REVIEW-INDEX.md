@@ -2,6 +2,43 @@
 
 Status: ACTIVE
 
+## Current - REVIEW-030 Step2 Pre-Signing Independent Review
+
+[REVIEW-030](architecture/AUDIT-030-V1-SLICE-3-STEP2-PRE-SIGNING-INDEPENDENT-REVIEW.md)
+is the next unique review ID and faithfully persists the Owner-supplied DeepSeek Harness
+read-only review. It is `PASS` with `BLOCKING_FINDINGS = NONE`. The reviewed candidate is
+`c0ddff72f494fc17c2677ab7fd78c23e6dc40a80`, and the source inventory-to-commit verdict,
+Frozen Contract identity, Frozen Harness identity, F-05 PATH B boundary, signing integration,
+transaction, recovery, and final gate matrix all pass.
+
+The Architecture Owner separately accepted F-05 PATH B in the
+[F-05 Security Disposition and Signing Gate Decision](../04-development-records/V1-SLICE-3-STEP2-F05-SECURITY-DISPOSITION-AND-SIGNING-GATE-DECISION.md).
+F-05 is now `CLOSED_WITH_ACCEPTED_RESIDUAL_RISK`, not risk-eliminated. Production Signing
+remains `NO / 0`, the public signer identity remains pending, final Step2 review is
+`NOT_STARTED`, Step2 is not closed or frozen, and Step3 remains `NOT_AUTHORIZED`.
+
+```text
+REVIEW_030 = PASS
+V1_SLICE_3_STEP2_PRE_SIGNING_TECHNICAL_REVIEW = PASS
+V1_SLICE_3_STEP2_PRE_SIGNING_BLOCKING_FINDINGS = NONE
+F05_SECURITY_DISPOSITION = ARCHITECTURE_OWNER_ACCEPTED
+F05_STATUS = CLOSED_WITH_ACCEPTED_RESIDUAL_RISK
+REVIEW_012_F_05 = CLOSED_WITH_ACCEPTED_RESIDUAL_RISK
+BUG_S3S2_001 = OPEN / NON_BLOCKING_CARRY_FORWARD
+NODE_SQLITE_EXPERIMENTAL_RISK = NON_BLOCKING / DEFERRED
+SIGNING_EXECUTION_AUTHORIZATION = NO
+SIGNING_RUN_COUNT = 0
+V1_SLICE_3_STEP2 = IMPLEMENTED_WAITING_PRODUCTION_SIGNING
+V1_SLICE_3_STEP2_FINAL_INDEPENDENT_REVIEW = NOT_STARTED
+V1_SLICE_3_STEP2_OWNER_CLOSURE = NOT_PERFORMED
+V1_SLICE_3_STEP2_BASELINE = NOT_FROZEN
+V1_SLICE_3_STEP3 = NOT_AUTHORIZED
+PROVIDER_GATE_AUTHORIZATION = NO
+PROVIDER_RUN_COUNT = 0
+```
+
+## Historical - REVIEW-029B Step1 closure checkpoint
+
 <!-- SLICE3_STEP1_CURRENT_START -->
 Parent [REVIEW-029](architecture/AUDIT-029-V1-SLICE-3-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md) remains historical **FAIL**. Owner-supplied [REVIEW-029B](architecture/AUDIT-029B-V1-SLICE-3-STEP1-PACKAGE-CONTENT-CLOSURE-CORRECTIVE-REREVIEW.md) is the independent targeted corrective re-review **PASS**. Architecture Owner accepted that result through the [Step1 Owner Closure / Baseline Freeze Decision](../04-development-records/V1-SLICE-3-STEP1-OWNER-CLOSURE-AND-BASELINE-FREEZE-DECISION.md): S3S1-IR-001 is closed, Step1 is frozen at `99561f80629a8f9640af702fe322996bcc850906`, and only Step2 is authorized-not-started.
 
@@ -113,5 +150,6 @@ V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_3_STEP2_COMPATIBILITY_DISTRIBUTION_UPG
 
 | REVIEW-029 | V1-SLICE-3 Step1 Independent Implementation Review | FAIL | S3S1-IR-001 HIGH / BLOCKING; corrective implemented waiting targeted re-review; historical verdict FAIL; no Step1 closure | [Source](architecture/AUDIT-029-V1-SLICE-3-STEP1-INDEPENDENT-IMPLEMENTATION-REVIEW.md) |
 | REVIEW-029B | V1-SLICE-3 Step1 Package Content Closure Targeted Corrective Re-Review | PASS | S3S1-IR-001 closed by targeted re-review and Owner acceptance; Step1 closed/frozen; Step2 authorized not started | [Source](architecture/AUDIT-029B-V1-SLICE-3-STEP1-PACKAGE-CONTENT-CLOSURE-CORRECTIVE-REREVIEW.md) |
+| REVIEW-030 | V1-SLICE-3 Step2 Pre-Signing Independent Review | PASS | Pre-signing technical review accepted; F-05 PATH B separately Owner-accepted with residual risk; Production Signing identity/authorization still required; no Step2 closure | [Source](architecture/AUDIT-030-V1-SLICE-3-STEP2-PRE-SIGNING-INDEPENDENT-REVIEW.md) |
 
 Future implementation reviews must be stored separately from Phase Contracts.
