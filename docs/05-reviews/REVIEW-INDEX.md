@@ -2,7 +2,40 @@
 
 Status: ACTIVE
 
-## Current - REVIEW-031 Release Trust / Signing Amendment Independent Review
+## Current - REVIEW-032 Step2 Release Trust Corrective Independent Review
+
+[REVIEW-032](architecture/AUDIT-032-V1-SLICE-3-STEP2-RELEASE-TRUST-CORRECTIVE-INDEPENDENT-REVIEW.md)
+faithfully persists the Owner-supplied DeepSeek Harness read-only review. It is `PASS` with
+`BLOCKING_FINDINGS = NONE`; reviewed HEAD, source inventory, Frozen authorities, immutable trust
+mode, centralized dispatch, unsigned integrity, installer binding, NSIS dispatch, retained Trusted
+Authenticode, frozen Step1 compatibility and the final gate matrix all pass.
+
+Architecture Owner accepts REVIEW-030 plus REVIEW-032 as the complete Step2 Independent Review
+chain through the [Step2 Owner Closure and Baseline Freeze Decision](../04-development-records/V1-SLICE-3-STEP2-OWNER-CLOSURE-AND-BASELINE-FREEZE-DECISION.md).
+Step2 is `PASS / CLOSED / FROZEN` at Product baseline
+`21b3ebf86de6df7db90ef50ddbef82da1bf4c3ba`. Step3 is authorized but not started. The new
+package-bytes durability issue remains open and non-blocking for Step3 final immutable RC Evidence.
+
+```text
+REVIEW_032 = PASS
+V1_SLICE_3_STEP2_FINAL_REVIEW = PASS_VIA_REVIEW_030_PLUS_RELEASE_TRUST_CORRECTIVE_REVIEW
+V1_SLICE_3_STEP2_REVIEW_BLOCKING_FINDINGS = NONE
+V1_SLICE_3_STEP2_OWNER_CLOSURE = ACCEPTED
+V1_SLICE_3_STEP2 = PASS / CLOSED / FROZEN
+V1_SLICE_3_STEP2_BASELINE = 21b3ebf86de6df7db90ef50ddbef82da1bf4c3ba
+V1_SLICE_3_STEP2_BASELINE_FREEZE = ACCEPTED
+ISSUE_S3S2_002 = OPEN / NON_BLOCKING_CARRY_FORWARD
+V1_SLICE_3_STEP3_IMPLEMENTATION_AUTHORIZATION = YES
+V1_SLICE_3_STEP3 = PACKAGED_RUNTIME_CUMULATIVE_ACCEPTANCE / AUTHORIZED_NOT_STARTED
+V1_SLICE_3_STEP3_IMPLEMENTATION = NOT_STARTED
+FINAL_IMMUTABLE_RC_PACKAGE_BYTES_ARCHIVED = REQUIRED
+PROVIDER_GATE_AUTHORIZATION = NO
+PROVIDER_RUN_COUNT = 0
+SIGNING_EXECUTION_AUTHORIZATION = NO
+SIGNING_RUN_COUNT = 0
+```
+
+## Historical - REVIEW-031 Release Trust / Signing Amendment Independent Review
 
 [REVIEW-031](architecture/AUDIT-031-V1-SLICE-3-RELEASE-TRUST-SIGNING-AMENDMENT-INDEPENDENT-REVIEW.md)
 faithfully persists the Owner-supplied DeepSeek Harness read-only targeted Architecture Review.
@@ -185,5 +218,6 @@ V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_3_STEP2_COMPATIBILITY_DISTRIBUTION_UPG
 | REVIEW-029B | V1-SLICE-3 Step1 Package Content Closure Targeted Corrective Re-Review | PASS | S3S1-IR-001 closed by targeted re-review and Owner acceptance; Step1 closed/frozen; Step2 authorized not started | [Source](architecture/AUDIT-029B-V1-SLICE-3-STEP1-PACKAGE-CONTENT-CLOSURE-CORRECTIVE-REREVIEW.md) |
 | REVIEW-030 | V1-SLICE-3 Step2 Pre-Signing Independent Review | PASS | Pre-signing technical review accepted; F-05 PATH B separately Owner-accepted with residual risk; Production Signing identity/authorization still required; no Step2 closure | [Source](architecture/AUDIT-030-V1-SLICE-3-STEP2-PRE-SIGNING-INDEPENDENT-REVIEW.md) |
 | REVIEW-031 | V1-SLICE-3 Release Trust / Signing Amendment Independent Review | PASS | Amendment scope and two-mode policy accepted; Owner froze Amendment and authorized only the not-started Release Trust Corrective; no Step2 closure or Step3 authorization | [Source](architecture/AUDIT-031-V1-SLICE-3-RELEASE-TRUST-SIGNING-AMENDMENT-INDEPENDENT-REVIEW.md) |
+| REVIEW-032 | V1-SLICE-3 Step2 Release Trust Corrective Independent Review | PASS | Corrective and final-source evidence accepted with no Blocking Findings; with REVIEW-030 forms final Step2 review chain; Owner closed/froze Step2 and authorized Step3 not started | [Source](architecture/AUDIT-032-V1-SLICE-3-STEP2-RELEASE-TRUST-CORRECTIVE-INDEPENDENT-REVIEW.md) |
 
 Future implementation reviews must be stored separately from Phase Contracts.
