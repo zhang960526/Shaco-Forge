@@ -1,0 +1,237 @@
+$ node --test scripts/slice3-step2.test.mjs scripts/slice3-step2-gateway.test.mjs && node scripts/slice3-step2-native.mjs
+TAP version 13
+# Subtest: actual Host gateway rejects new mutation/stream during drain and awaits pending route opens
+ok 1 - actual Host gateway rejects new mutation/stream during drain and awaits pending route opens
+  ---
+  duration_ms: 244.8701
+  type: 'test'
+  ...
+# (node:48824) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: six identities; positive compatibility admits exactly the explicit tuple
+ok 2 - six identities; positive compatibility admits exactly the explicit tuple
+  ---
+  duration_ms: 1.1894
+  type: 'test'
+  ...
+# Subtest: compatibility PRODUCT_RELEASE_MISMATCH: no credential, no Harness write, no fallback
+ok 3 - compatibility PRODUCT_RELEASE_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 1.0552
+  type: 'test'
+  ...
+# Subtest: compatibility DESKTOP_TOO_OLD: no credential, no Harness write, no fallback
+ok 4 - compatibility DESKTOP_TOO_OLD: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.2072
+  type: 'test'
+  ...
+# Subtest: compatibility WORKER_TOO_OLD: no credential, no Harness write, no fallback
+ok 5 - compatibility WORKER_TOO_OLD: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1999
+  type: 'test'
+  ...
+# Subtest: compatibility WORKER_TOO_NEW: no credential, no Harness write, no fallback
+ok 6 - compatibility WORKER_TOO_NEW: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1715
+  type: 'test'
+  ...
+# Subtest: compatibility DESKTOP_WORKER_MISMATCH: no credential, no Harness write, no fallback
+ok 7 - compatibility DESKTOP_WORKER_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1288
+  type: 'test'
+  ...
+# Subtest: compatibility CARRIER_UNSUPPORTED: no credential, no Harness write, no fallback
+ok 8 - compatibility CARRIER_UNSUPPORTED: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1369
+  type: 'test'
+  ...
+# Subtest: compatibility HARNESS_BASELINE_MISMATCH: no credential, no Harness write, no fallback
+ok 9 - compatibility HARNESS_BASELINE_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1501
+  type: 'test'
+  ...
+# Subtest: compatibility CONTROL_SCHEMA_UNSUPPORTED: no credential, no Harness write, no fallback
+ok 10 - compatibility CONTROL_SCHEMA_UNSUPPORTED: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.3197
+  type: 'test'
+  ...
+# Subtest: compatibility DSH_HOME_MISMATCH: no credential, no Harness write, no fallback
+ok 11 - compatibility DSH_HOME_MISMATCH: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.6641
+  type: 'test'
+  ...
+# Subtest: compatibility UPGRADE_IN_PROGRESS: no credential, no Harness write, no fallback
+ok 12 - compatibility UPGRADE_IN_PROGRESS: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.1786
+  type: 'test'
+  ...
+# Subtest: compatibility RESTORE_REQUIRED: no credential, no Harness write, no fallback
+ok 13 - compatibility RESTORE_REQUIRED: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.0838
+  type: 'test'
+  ...
+# Subtest: compatibility RELEASE_INTEGRITY_FAILURE: no credential, no Harness write, no fallback
+ok 14 - compatibility RELEASE_INTEGRITY_FAILURE: no credential, no Harness write, no fallback
+  ---
+  duration_ms: 0.0621
+  type: 'test'
+  ...
+# Subtest: unknown/missing identities and unlisted tuples all refuse before writes
+ok 15 - unknown/missing identities and unlisted tuples all refuse before writes
+  ---
+  duration_ms: 0.4754
+  type: 'test'
+  ...
+# Subtest: actual SQLite/journal preflight rejects incomplete state and identity before creating Harness data
+ok 16 - actual SQLite/journal preflight rejects incomplete state and identity before creating Harness data
+  ---
+  duration_ms: 55.6434
+  type: 'test'
+  ...
+# Subtest: drain waits for inflight work, all public agents idle and successful session flush; timeout fails closed
+ok 17 - drain waits for inflight work, all public agents idle and successful session flush; timeout fails closed
+  ---
+  duration_ms: 68.0489
+  type: 'test'
+  ...
+# Subtest: backup rejects actual capacity exhaustion, late durable writes and lost Worker quiescence
+ok 18 - backup rejects actual capacity exhaustion, late durable writes and lost Worker quiescence
+  ---
+  duration_ms: 83.3337
+  type: 'test'
+  ...
+# Subtest: SQLite bootstrap, current schema, ownership, missing/future/older/corrupt refusal
+ok 19 - SQLite bootstrap, current schema, ownership, missing/future/older/corrupt refusal
+  ---
+  duration_ms: 43.5329
+  type: 'test'
+  ...
+# Subtest: SQLite control transaction failure rolls back all fields and event insert
+ok 20 - SQLite control transaction failure rolls back all fields and event insert
+  ---
+  duration_ms: 23.7054
+  type: 'test'
+  ...
+# Subtest: transaction positive durable transition order and committed restart
+ok 21 - transaction positive durable transition order and committed restart
+  ---
+  duration_ms: 26.5753
+  type: 'test'
+  ...
+# Subtest: transaction failure check persists and restores only after install
+ok 22 - transaction failure check persists and restores only after install
+  ---
+  duration_ms: 9.9034
+  type: 'test'
+  ...
+# Subtest: transaction failure drain persists and restores only after install
+ok 23 - transaction failure drain persists and restores only after install
+  ---
+  duration_ms: 14.2891
+  type: 'test'
+  ...
+# Subtest: transaction failure quiescence persists and restores only after install
+ok 24 - transaction failure quiescence persists and restores only after install
+  ---
+  duration_ms: 17.4082
+  type: 'test'
+  ...
+# Subtest: transaction failure backup persists and restores only after install
+ok 25 - transaction failure backup persists and restores only after install
+  ---
+  duration_ms: 17.0365
+  type: 'test'
+  ...
+# Subtest: transaction failure verifyBackup persists and restores only after install
+ok 26 - transaction failure verifyBackup persists and restores only after install
+  ---
+  duration_ms: 16.3242
+  type: 'test'
+  ...
+# Subtest: transaction failure install persists and restores only after install
+ok 27 - transaction failure install persists and restores only after install
+  ---
+  duration_ms: 24.8232
+  type: 'test'
+  ...
+# Subtest: transaction failure migrate persists and restores only after install
+ok 28 - transaction failure migrate persists and restores only after install
+  ---
+  duration_ms: 27.2774
+  type: 'test'
+  ...
+# Subtest: transaction failure validate persists and restores only after install
+ok 29 - transaction failure validate persists and restores only after install
+  ---
+  duration_ms: 30.1969
+  type: 'test'
+  ...
+# Subtest: transaction failure commit persists and restores only after install
+ok 30 - transaction failure commit persists and restores only after install
+  ---
+  duration_ms: 31.2321
+  type: 'test'
+  ...
+# Subtest: failure during restore persists RESTORE_FAILED and blocks restart
+ok 31 - failure during restore persists RESTORE_FAILED and blocks restart
+  ---
+  duration_ms: 31.0783
+  type: 'test'
+  ...
+# Subtest: restart authority for every transaction state; cancellation is only pre-install
+ok 32 - restart authority for every transaction state; cancellation is only pre-install
+  ---
+  duration_ms: 55.7699
+  type: 'test'
+  ...
+# Subtest: backup byte integrity, missing/corrupt bytes rejection and runtime/data pair restore
+ok 33 - backup byte integrity, missing/corrupt bytes rejection and runtime/data pair restore
+  ---
+  duration_ms: 95.6506
+  type: 'test'
+  ...
+# Subtest: uninstall retains durable and unowned bytes; purge requires separate confirmation
+ok 34 - uninstall retains durable and unowned bytes; purge requires separate confirmation
+  ---
+  duration_ms: 11.3783
+  type: 'test'
+  ...
+# Subtest: uninstall binds identity to verified payload while preserving unrelated directories
+ok 35 - uninstall binds identity to verified payload while preserving unrelated directories
+  ---
+  duration_ms: 13.8365
+  type: 'test'
+  ...
+# Subtest: signature pure verification: public identity, timestamp, unsigned, invalid, tamper, wrong signer
+ok 36 - signature pure verification: public identity, timestamp, unsigned, invalid, tamper, wrong signer
+  ---
+  duration_ms: 0.3678
+  type: 'test'
+  ...
+1..36
+# tests 36
+# suites 0
+# pass 36
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 865.1357
+{
+  "result": "PASS",
+  "nativeAcl": true,
+  "realAuthenticodeVerification": true,
+  "providerRuns": 0,
+  "signingRuns": 0
+}
+

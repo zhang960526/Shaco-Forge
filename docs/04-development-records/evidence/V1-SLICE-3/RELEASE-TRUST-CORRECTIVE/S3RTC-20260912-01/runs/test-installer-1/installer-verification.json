@@ -1,0 +1,68 @@
+{
+  "result": "PASS",
+  "githubUnsignedReleasePolicyVerified": true,
+  "installerSha256AndReleaseManifestBound": true,
+  "signingIntegrationVerified": true,
+  "trustedAuthenticodeRegression": true,
+  "userRuntimeTrustModeToggle": "ABSENT",
+  "nsis": {
+    "githubUnsignedMandatoryAuthenticodePathCompiled": false,
+    "trustedAuthenticodeEnforcementCompiled": true,
+    "missingModeBuildFailsClosed": true,
+    "unknownModeBuildFailsClosed": true,
+    "trustedFixture": "D:\\Project\\Shaco-Forge\\dist\\installer-fixtures\\trusted-authenticode-1789190156008.exe",
+    "trustedFixtureSha256": "017a96f63d4cc2a1539e596be1b41399f46aeb9d3cda1ac8692d17c44d966765"
+  },
+  "candidate": {
+    "result": "GITHUB_OPEN_SOURCE_UNSIGNED_INSTALLER_CANDIDATE",
+    "releaseTrustMode": "GITHUB_OPEN_SOURCE_UNSIGNED",
+    "releaseReady": false,
+    "finalReleaseReady": false,
+    "step2ReviewPending": true,
+    "releaseTrustPolicySatisfied": true,
+    "productionSigned": false,
+    "windowsTrustedPublisherIdentity": "NOT_PROVIDED",
+    "publisherAuthenticity": "NOT_PROVIDED",
+    "smartScreenReputation": "NOT_GUARANTEED",
+    "authenticodeRequired": false,
+    "path": "D:\\Project\\Shaco-Forge\\dist\\installers\\Shaco-Forge-1.0.0-dev.1-1789189887035-github-unsigned.exe",
+    "bytes": 162941739,
+    "sha256": "6ebe10b302e3b0df7caa11ba74729bc52e7f6ed60b1f66d16edeb19697c119da",
+    "packagedArtifactDigest": "5563534484f65d0eb0b7cf31cc880dc4df5dafe947ca2fe81c3f56d6970b370f",
+    "releaseManifestDigest": "ed3ad8dfe55702f9723b9bf160a47affd1ceae2977ea574566609c78ee30419b",
+    "installerTool": {
+      "name": "NSIS",
+      "version": "3.12",
+      "archiveSha256": "56581f90db321581c5381193d796fffcf2d24b2f8fed2160a6c6a3baa67f2c4f"
+    },
+    "target": "WINDOWS_X64_PER_USER",
+    "signingRuns": 0,
+    "providerRuns": 0,
+    "evidence": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\RELEASE-TRUST-CORRECTIVE\\S3RTC-20260912-01\\runs\\package-installer-1"
+  },
+  "signature": {
+    "status": "NotSigned",
+    "signatureType": "None",
+    "signer": null,
+    "timestamp": {
+      "certificate": null,
+      "signingTimes": [],
+      "source": "WINTRUST_VERIFIED_COUNTERSIGNER"
+    },
+    "fileSha256": "6ebe10b302e3b0df7caa11ba74729bc52e7f6ed60b1f66d16edeb19697c119da",
+    "winTrustStatus": "NO_EMBEDDED_SIGNATURE"
+  },
+  "binding": {
+    "schemaVersion": 1,
+    "releaseTrustMode": "GITHUB_OPEN_SOURCE_UNSIGNED",
+    "installerPath": "D:\\Project\\Shaco-Forge\\dist\\installers\\Shaco-Forge-1.0.0-dev.1-1789189887035-github-unsigned.exe",
+    "installerSha256": "6ebe10b302e3b0df7caa11ba74729bc52e7f6ed60b1f66d16edeb19697c119da",
+    "releaseManifestDigest": "ed3ad8dfe55702f9723b9bf160a47affd1ceae2977ea574566609c78ee30419b",
+    "packagedArtifactDigest": "5563534484f65d0eb0b7cf31cc880dc4df5dafe947ca2fe81c3f56d6970b370f",
+    "publisherAuthenticity": "NOT_PROVIDED",
+    "authenticodeRequired": false
+  },
+  "realProductDataRootTouched": false,
+  "providerRuns": 0,
+  "signingRuns": 0
+}

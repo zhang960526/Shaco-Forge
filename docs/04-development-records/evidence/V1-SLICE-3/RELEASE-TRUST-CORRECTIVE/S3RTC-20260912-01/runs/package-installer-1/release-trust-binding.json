@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "releaseTrustMode": "GITHUB_OPEN_SOURCE_UNSIGNED",
+  "installerPath": "D:\\Project\\Shaco-Forge\\dist\\installers\\Shaco-Forge-1.0.0-dev.1-1789189887035-github-unsigned.exe",
+  "installerSha256": "6ebe10b302e3b0df7caa11ba74729bc52e7f6ed60b1f66d16edeb19697c119da",
+  "releaseManifestDigest": "ed3ad8dfe55702f9723b9bf160a47affd1ceae2977ea574566609c78ee30419b",
+  "packagedArtifactDigest": "5563534484f65d0eb0b7cf31cc880dc4df5dafe947ca2fe81c3f56d6970b370f",
+  "publisherAuthenticity": "NOT_PROVIDED",
+  "authenticodeRequired": false
+}

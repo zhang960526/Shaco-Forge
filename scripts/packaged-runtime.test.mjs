@@ -11,7 +11,7 @@ async function fixture(fn) {
   const root = await mkdtemp(join(tmpdir(), 'shaco-package-identity-'))
   // This fixture is identity-only. Actual PE/runtime tests use the real package.
   const release = { ProductVersion: '1.0.0-dev.1', DesktopVersion: '1.0.0-dev.1', WorkerVersion: '1.0.0-dev.1', CarrierVersion: 1,
-    HarnessBaselineVersion: '0.1.2-alpha.1', ControlStoreSchemaVersion: 'NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES', ElectronVersion: '35.7.5', WorkerNodeVersion: '22.19.0', Platform: 'win32', Architecture: 'x64', HarnessPackage: '@deepseek-ai/dsh@0.1.2-alpha.1', HarnessCommit: HARNESS_COMMIT, ProductionProfileIdentity: 'shaco-forge', SourceCommit: '19f200851c47d5ce1b93026e07d88a6d583ef7f5', FrozenContractIdentity: CONTRACT_SHA256, PackagedRuntimeLayoutVersion: 1, layout: RELEASE_LAYOUT }
+    HarnessBaselineVersion: '0.1.2-alpha.1', ControlStoreSchemaVersion: 'NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES', ElectronVersion: '35.7.5', WorkerNodeVersion: '22.19.0', Platform: 'win32', Architecture: 'x64', HarnessPackage: '@deepseek-ai/dsh@0.1.2-alpha.1', HarnessCommit: HARNESS_COMMIT, ProductionProfileIdentity: 'shaco-forge', SourceCommit: '19f200851c47d5ce1b93026e07d88a6d583ef7f5', FrozenContractIdentity: CONTRACT_SHA256, PackagedRuntimeLayoutVersion: 1, ReleaseTrustMode: 'GITHUB_OPEN_SOURCE_UNSIGNED', ProductionSignerPolicy: { certificateSha256: [], timestampRequired: true }, layout: RELEASE_LAYOUT }
   try {
     for (const path of Object.values(RELEASE_LAYOUT).filter(path => path !== RELEASE_LAYOUT.profile)) {
       const full = join(root, path)
@@ -42,6 +42,17 @@ test('complete composition and deterministic byte-derived manifests, without a s
   assert.ok(rows.some(row => row.path === 'release-manifest.json'))
   assert.ok(rows.every(row => Number.isSafeInteger(row.bytes) && /^[a-f0-9]{64}$/.test(row.sha256)))
   assert.ok(!rows.some(row => ['packaged-files.json', 'artifact-identity.json'].includes(row.path)))
+}))
+for (const value of [undefined, 'UNKNOWN_RELEASE_TRUST_MODE']) test(`${String(value)} ReleaseTrustMode fails closed`, () => fixture(async ({ root, release, seal }) => {
+  if (value === undefined) delete release.ReleaseTrustMode
+  else release.ReleaseTrustMode = value
+  await seal()
+  await assert.rejects(verifyPackagedRuntime(root), /RELEASE_INTEGRITY_FAILURE/)
+}))
+test('TRUSTED_AUTHENTICODE ReleaseTrustMode is valid', () => fixture(async ({ root, release, seal }) => {
+  release.ReleaseTrustMode = 'TRUSTED_AUTHENTICODE'
+  await seal()
+  assert.equal((await verifyPackagedRuntime(root)).ReleaseTrustMode, 'TRUSTED_AUTHENTICODE')
 }))
 for (const [name, path, operation] of [
   ['missing Node', RELEASE_LAYOUT.node, 'missing'], ['missing Harness', RELEASE_LAYOUT.harness, 'missing'],

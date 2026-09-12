@@ -1,0 +1,501 @@
+{
+  "results": [
+    {
+      "id": "FRESH_PRE_INSTALL_CANCEL",
+      "result": "PASS",
+      "transaction": {
+        "id": "799affdf-afb7-462a-bbec-53f2ad462371",
+        "state": "ABORTED",
+        "source": {
+          "artifactDigest": "0000000000000000000000000000000000000000000000000000000000000000",
+          "releaseManifestDigest": "0000000000000000000000000000000000000000000000000000000000000000",
+          "productVersion": "1.0.0-dev.1",
+          "dshHome": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\fresh-install-1789188633868-670b77fd-76df-4c96-9881-4b76dfd3291f\\data\\dsh"
+        },
+        "target": {
+          "artifactDigest": "5563534484f65d0eb0b7cf31cc880dc4df5dafe947ca2fe81c3f56d6970b370f",
+          "releaseManifestDigest": "ed3ad8dfe55702f9723b9bf160a47affd1ceae2977ea574566609c78ee30419b",
+          "productVersion": "1.0.0-dev.1",
+          "dshHome": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\fresh-install-1789188633868-670b77fd-76df-4c96-9881-4b76dfd3291f\\data\\dsh"
+        },
+        "installed": false,
+        "events": [
+          {
+            "state": "CHECKING",
+            "at": "2026-09-12T04:50:42.611Z"
+          },
+          {
+            "state": "ABORTED",
+            "at": "2026-09-12T04:50:50.805Z"
+          }
+        ]
+      },
+      "originalAbsentRuntimeAndDataRestored": true
+    },
+    {
+      "id": "FRESH_INSTALL",
+      "result": "PASS",
+      "root": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\fresh-install-1789188633868-670b77fd-76df-4c96-9881-4b76dfd3291f",
+      "transaction": {
+        "id": "8aaff18d-54c3-4e15-b466-3cfb1172f33e",
+        "state": "COMMITTED",
+        "source": {
+          "artifactDigest": "0000000000000000000000000000000000000000000000000000000000000000",
+          "releaseManifestDigest": "0000000000000000000000000000000000000000000000000000000000000000",
+          "productVersion": "1.0.0-dev.1",
+          "dshHome": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\fresh-install-1789188633868-670b77fd-76df-4c96-9881-4b76dfd3291f\\data\\dsh"
+        },
+        "target": {
+          "artifactDigest": "5563534484f65d0eb0b7cf31cc880dc4df5dafe947ca2fe81c3f56d6970b370f",
+          "releaseManifestDigest": "ed3ad8dfe55702f9723b9bf160a47affd1ceae2977ea574566609c78ee30419b",
+          "productVersion": "1.0.0-dev.1",
+          "dshHome": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\fresh-install-1789188633868-670b77fd-76df-4c96-9881-4b76dfd3291f\\data\\dsh"
+        },
+        "installed": true,
+        "events": [
+          {
+            "state": "CHECKING",
+            "at": "2026-09-12T04:50:59.016Z"
+          },
+          {
+            "state": "DRAINING",
+            "at": "2026-09-12T04:51:08.019Z"
+          },
+          {
+            "state": "BACKING_UP",
+            "at": "2026-09-12T04:51:08.675Z"
+          },
+          {
+            "state": "INSTALLING",
+            "at": "2026-09-12T04:51:10.526Z"
+          },
+          {
+            "state": "MIGRATING",
+            "at": "2026-09-12T04:52:34.570Z"
+          },
+          {
+            "state": "VALIDATING",
+            "at": "2026-09-12T04:52:34.743Z"
+          },
+          {
+            "state": "COMMITTED",
+            "at": "2026-09-12T04:53:03.733Z"
+          }
+        ],
+        "runtimeDacl": "D:P(A;OICI;FA;;;S-1-5-21-390745333-3527206759-1879520106-1001)",
+        "backupDigest": "e32c4af88046f14624e52fc43536b54510926f17186fcb86f8c53cb8538b3c62"
+      },
+      "nativeReceipts": [
+        {
+          "operation": "JOURNAL",
+          "state": "CHECKING",
+          "id": "799affdf-afb7-462a-bbec-53f2ad462371"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "ABORTED",
+          "id": "799affdf-afb7-462a-bbec-53f2ad462371"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "CHECKING",
+          "id": "8aaff18d-54c3-4e15-b466-3cfb1172f33e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "CHECKING",
+          "id": "8aaff18d-54c3-4e15-b466-3cfb1172f33e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "DRAINING",
+          "id": "8aaff18d-54c3-4e15-b466-3cfb1172f33e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "BACKING_UP",
+          "id": "8aaff18d-54c3-4e15-b466-3cfb1172f33e"
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\fresh-install-1789188633868-670b77fd-76df-4c96-9881-4b76dfd3291f\\data\\backup\\8aaff18d-54c3-4e15-b466-3cfb1172f33e",
+          "currentUserOnly": true,
+          "checkedCount": 1,
+          "reparse": false
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\fresh-install-1789188633868-670b77fd-76df-4c96-9881-4b76dfd3291f\\data\\backup\\8aaff18d-54c3-4e15-b466-3cfb1172f33e",
+          "currentUserOnly": true,
+          "checkedCount": 5,
+          "reparse": false
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\fresh-install-1789188633868-670b77fd-76df-4c96-9881-4b76dfd3291f\\data\\backup\\8aaff18d-54c3-4e15-b466-3cfb1172f33e",
+          "currentUserOnly": true,
+          "checkedCount": 5,
+          "reparse": false
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "INSTALLING",
+          "id": "8aaff18d-54c3-4e15-b466-3cfb1172f33e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "MIGRATING",
+          "id": "8aaff18d-54c3-4e15-b466-3cfb1172f33e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "VALIDATING",
+          "id": "8aaff18d-54c3-4e15-b466-3cfb1172f33e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "COMMITTED",
+          "id": "8aaff18d-54c3-4e15-b466-3cfb1172f33e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "DRAINING",
+          "id": "15111786-9d22-400c-8212-4d9082c839c7"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "COMMITTED",
+          "id": "15111786-9d22-400c-8212-4d9082c839c7"
+        }
+      ]
+    },
+    {
+      "id": "ACTUAL_VALIDATION_DRAIN",
+      "result": "PASS",
+      "receipt": {
+        "transactionId": "8aaff18d-54c3-4e15-b466-3cfb1172f33e",
+        "workerInstanceId": "bb3323f0-1bc9-4d75-9a15-afb21e89623b",
+        "hostExitCode": 0,
+        "hostGone": true,
+        "proof": {
+          "idleAgents": 0,
+          "flushedSessions": 0,
+          "pendingUnary": 0,
+          "boundary": "PUBLIC_WHEN_IDLE_AND_SESSION_FLUSH"
+        }
+      }
+    },
+    {
+      "id": "NO_WRITE_AFTER_DRAIN",
+      "result": "PASS",
+      "workerHostHelperGone": true,
+      "identicalDurableEntries": 520,
+      "observationMs": 300
+    },
+    {
+      "id": "STEP1_PAIR_RESTORE",
+      "result": "PASS",
+      "root": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c",
+      "transaction": {
+        "id": "75eacc05-fe0a-4553-9cd2-66a03b402e7e",
+        "state": "RESTORED",
+        "source": {
+          "artifactDigest": "b84beea0575404242b3979bd260cb3f98ed6c443ba9e71789e6f799c8f409b05",
+          "releaseManifestDigest": "2e1f2e203f5ceb09d0c3c9e8268db73ca9c3f81e4213e35f7c1df2883247a05d",
+          "productVersion": "1.0.0-dev.1",
+          "dshHome": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\dsh"
+        },
+        "target": {
+          "artifactDigest": "5563534484f65d0eb0b7cf31cc880dc4df5dafe947ca2fe81c3f56d6970b370f",
+          "releaseManifestDigest": "ed3ad8dfe55702f9723b9bf160a47affd1ceae2977ea574566609c78ee30419b",
+          "productVersion": "1.0.0-dev.1",
+          "dshHome": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\dsh"
+        },
+        "installed": true,
+        "events": [
+          {
+            "state": "CHECKING",
+            "at": "2026-09-12T04:54:03.117Z"
+          },
+          {
+            "state": "DRAINING",
+            "at": "2026-09-12T04:54:19.100Z"
+          },
+          {
+            "state": "BACKING_UP",
+            "at": "2026-09-12T04:54:26.275Z"
+          },
+          {
+            "state": "INSTALLING",
+            "at": "2026-09-12T04:57:57.532Z"
+          },
+          {
+            "state": "MIGRATING",
+            "at": "2026-09-12T04:59:29.661Z"
+          },
+          {
+            "state": "VALIDATING",
+            "at": "2026-09-12T04:59:30.048Z"
+          },
+          {
+            "state": "FAILED",
+            "at": "2026-09-12T04:59:30.172Z",
+            "errorCode": "VALIDATION_FAILURE_INJECTED"
+          },
+          {
+            "state": "RESTORING",
+            "at": "2026-09-12T04:59:30.288Z"
+          },
+          {
+            "state": "RESTORED",
+            "at": "2026-09-12T05:03:33.846Z"
+          }
+        ],
+        "runtimeDacl": "D:P(A;OICI;FA;;;S-1-5-21-390745333-3527206759-1879520106-1001)",
+        "backupDigest": "8e0742b495a707de5e8087017b9face0434393b566d858aea13c4f7aa02176f1",
+        "errorCode": "VALIDATION_FAILURE_INJECTED"
+      },
+      "nativeReceipts": [
+        {
+          "operation": "JOURNAL",
+          "state": "CHECKING",
+          "id": "75eacc05-fe0a-4553-9cd2-66a03b402e7e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "CHECKING",
+          "id": "75eacc05-fe0a-4553-9cd2-66a03b402e7e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "DRAINING",
+          "id": "75eacc05-fe0a-4553-9cd2-66a03b402e7e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "BACKING_UP",
+          "id": "75eacc05-fe0a-4553-9cd2-66a03b402e7e"
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\backup\\75eacc05-fe0a-4553-9cd2-66a03b402e7e",
+          "currentUserOnly": true,
+          "checkedCount": 1,
+          "reparse": false
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\backup\\75eacc05-fe0a-4553-9cd2-66a03b402e7e",
+          "currentUserOnly": true,
+          "checkedCount": 28955,
+          "reparse": false
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\backup\\75eacc05-fe0a-4553-9cd2-66a03b402e7e",
+          "currentUserOnly": true,
+          "checkedCount": 28955,
+          "reparse": false
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "INSTALLING",
+          "id": "75eacc05-fe0a-4553-9cd2-66a03b402e7e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "MIGRATING",
+          "id": "75eacc05-fe0a-4553-9cd2-66a03b402e7e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "VALIDATING",
+          "id": "75eacc05-fe0a-4553-9cd2-66a03b402e7e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "FAILED",
+          "id": "75eacc05-fe0a-4553-9cd2-66a03b402e7e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "RESTORING",
+          "id": "75eacc05-fe0a-4553-9cd2-66a03b402e7e"
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\backup\\75eacc05-fe0a-4553-9cd2-66a03b402e7e",
+          "currentUserOnly": true,
+          "checkedCount": 28955,
+          "reparse": false
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\backup\\75eacc05-fe0a-4553-9cd2-66a03b402e7e",
+          "currentUserOnly": true,
+          "checkedCount": 28955,
+          "reparse": false
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\backup\\75eacc05-fe0a-4553-9cd2-66a03b402e7e",
+          "currentUserOnly": true,
+          "checkedCount": 28955,
+          "reparse": false
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "RESTORED",
+          "id": "75eacc05-fe0a-4553-9cd2-66a03b402e7e"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "CHECKING",
+          "id": "ff90aad8-ee32-4924-9d9a-1d055dc0d618"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "CHECKING",
+          "id": "ff90aad8-ee32-4924-9d9a-1d055dc0d618"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "DRAINING",
+          "id": "ff90aad8-ee32-4924-9d9a-1d055dc0d618"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "BACKING_UP",
+          "id": "ff90aad8-ee32-4924-9d9a-1d055dc0d618"
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\backup\\ff90aad8-ee32-4924-9d9a-1d055dc0d618",
+          "currentUserOnly": true,
+          "checkedCount": 1,
+          "reparse": false
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\backup\\ff90aad8-ee32-4924-9d9a-1d055dc0d618",
+          "currentUserOnly": true,
+          "checkedCount": 28955,
+          "reparse": false
+        },
+        {
+          "operation": "ACL",
+          "path": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\backup\\ff90aad8-ee32-4924-9d9a-1d055dc0d618",
+          "currentUserOnly": true,
+          "checkedCount": 28955,
+          "reparse": false
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "INSTALLING",
+          "id": "ff90aad8-ee32-4924-9d9a-1d055dc0d618"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "MIGRATING",
+          "id": "ff90aad8-ee32-4924-9d9a-1d055dc0d618"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "VALIDATING",
+          "id": "ff90aad8-ee32-4924-9d9a-1d055dc0d618"
+        },
+        {
+          "operation": "JOURNAL",
+          "state": "COMMITTED",
+          "id": "ff90aad8-ee32-4924-9d9a-1d055dc0d618"
+        }
+      ]
+    },
+    {
+      "id": "RESTORED_RESTART",
+      "result": "PASS",
+      "unchangedOriginalDurableSha256": "8e5c969cc6df09261fbc513796875e3d53f814f7d18f41a70fdca748ad9e8a91",
+      "runtimeDataPairValidated": true,
+      "harnessDownMigration": false
+    },
+    {
+      "id": "STEP1_HAPPY_UPGRADE",
+      "result": "PASS",
+      "root": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c",
+      "transaction": {
+        "id": "ff90aad8-ee32-4924-9d9a-1d055dc0d618",
+        "state": "COMMITTED",
+        "source": {
+          "artifactDigest": "b84beea0575404242b3979bd260cb3f98ed6c443ba9e71789e6f799c8f409b05",
+          "releaseManifestDigest": "2e1f2e203f5ceb09d0c3c9e8268db73ca9c3f81e4213e35f7c1df2883247a05d",
+          "productVersion": "1.0.0-dev.1",
+          "dshHome": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\dsh"
+        },
+        "target": {
+          "artifactDigest": "5563534484f65d0eb0b7cf31cc880dc4df5dafe947ca2fe81c3f56d6970b370f",
+          "releaseManifestDigest": "ed3ad8dfe55702f9723b9bf160a47affd1ceae2977ea574566609c78ee30419b",
+          "productVersion": "1.0.0-dev.1",
+          "dshHome": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c\\data\\dsh"
+        },
+        "installed": true,
+        "events": [
+          {
+            "state": "CHECKING",
+            "at": "2026-09-12T05:04:08.441Z"
+          },
+          {
+            "state": "DRAINING",
+            "at": "2026-09-12T05:04:24.180Z"
+          },
+          {
+            "state": "BACKING_UP",
+            "at": "2026-09-12T05:04:32.363Z"
+          },
+          {
+            "state": "INSTALLING",
+            "at": "2026-09-12T05:08:03.887Z"
+          },
+          {
+            "state": "MIGRATING",
+            "at": "2026-09-12T05:09:55.174Z"
+          },
+          {
+            "state": "VALIDATING",
+            "at": "2026-09-12T05:09:55.300Z"
+          },
+          {
+            "state": "COMMITTED",
+            "at": "2026-09-12T05:10:24.587Z"
+          }
+        ],
+        "runtimeDacl": "D:PAI(A;OICI;FA;;;S-1-5-21-390745333-3527206759-1879520106-1001)",
+        "backupDigest": "ff64d6d84b0e827f83f37bcfb1f08c0d3f90140d28a8131b8e1c3c16e52c603f"
+      },
+      "originalDurableSha256": "8e5c969cc6df09261fbc513796875e3d53f814f7d18f41a70fdca748ad9e8a91"
+    },
+    {
+      "id": "REAL_PACKAGE_UNINSTALL",
+      "result": "PASS",
+      "retainedUnowned": [
+        "harness/profiles/shaco-forge/.dsh-module-fallback/node_modules/",
+        "user-unowned.txt"
+      ],
+      "durableDataRetained": true,
+      "durableSqliteSha256": "4696080f34c4a520379ad5522a6d7d9c1a1b9657788019490aeb5dd47aa4db9d",
+      "fixtureRoot": "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\fresh-install-1789188633868-670b77fd-76df-4c96-9881-4b76dfd3291f"
+    },
+    {
+      "id": "CLEANUP",
+      "result": "PASS",
+      "productAuthorityExists": false,
+      "fixturesRetainedForEvidence": [
+        "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\fresh-install-1789188633868-670b77fd-76df-4c96-9881-4b76dfd3291f",
+        "C:\\Users\\18902\\AppData\\Local\\Temp\\shaco-forge-slice3-step2-runtime-tests\\step1-restore-1789188794149-57faa4d2-ff1a-47d7-89a3-f3093b79972c"
+      ]
+    }
+  ],
+  "testMode": "EXPLICIT_NON_SHIPPED_DIRECT_ADAPTER",
+  "productionDataWrites": 0,
+  "providerRuns": 0,
+  "signingRuns": 0
+}

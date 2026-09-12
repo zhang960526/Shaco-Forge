@@ -4,10 +4,10 @@ import { cp, lstat, mkdir, readFile, readdir, rmdir, unlink } from 'node:fs/prom
 import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { NO_STORE, STEP1_ARTIFACT, assertCompatibility, sixIdentities } from '@shaco-forge/contracts/compatibility'
-import { hashFile, jsonBytes, verifyPackagedRuntime, type ReleaseManifest, RELEASE_LAYOUT } from '@shaco-forge/contracts/packaged-runtime'
+import { hashFile, jsonBytes, verifyFrozenStep1PackagedRuntime, verifyPackagedRuntime, type ReleaseManifest, RELEASE_LAYOUT } from '@shaco-forge/contracts/packaged-runtime'
 import { ControlStore, type ReleaseControl } from './control-store.js'
 import { assertCanonical, VerifiedBackup } from './durable-files.js'
-import { verifyAuthenticode, type SignerPolicy } from './signature-verification.js'
+import { verifyInstallerReleaseTrust } from './installer-release-trust.js'
 import type { TransactionRecord, UpdateOperations } from './update-transaction.js'
 
 export interface InstallerBoundary {
@@ -38,10 +38,13 @@ export class InstallerOperations implements UpdateOperations {
   #sourceAbsent = false
   readonly backups: VerifiedBackup
   constructor(readonly paths: InstallerPaths, readonly boundary: InstallerBoundary,
-    readonly signature: { installer: string; digest: string; policy: SignerPolicy; nativeHelper: string }) {
+    readonly releaseTrust: { installer: string; digest: string; nativeHelper: string }) {
     this.backups = new VerifiedBackup(paths.backup, { ...boundary, assertQuiescent: () => this.assertQuiescent() })
   }
   private helper(): string { return join(this.paths.payload, RELEASE_LAYOUT.nativeHelper) }
+  private verifySourceRuntime() {
+    return this.#source.artifactDigest === STEP1_ARTIFACT ? verifyFrozenStep1PackagedRuntime(this.paths.runtime) : verifyPackagedRuntime(this.paths.runtime)
+  }
   async readJournal(): Promise<TransactionRecord | undefined> {
     const path = join(this.paths.control, 'upgrade-journal.json')
     if (!existsSync(path)) return undefined
@@ -59,9 +62,9 @@ export class InstallerOperations implements UpdateOperations {
     this.#journal = structuredClone(record)
   }
   async initialize(recovery = false): Promise<{ source: ReleaseControl; target: ReleaseControl }> {
-    // Verify signature before even creating a transaction in Product Data Root.
-    await verifyAuthenticode(this.signature.installer, this.signature.digest, this.signature.policy, this.signature.nativeHelper)
     this.#release = await verifyPackagedRuntime(this.paths.payload)
+    // Verify immutable release trust before even creating a transaction in Product Data Root.
+    await verifyInstallerReleaseTrust({ release: this.#release, ...this.releaseTrust })
     this.#lifecycle = await import(pathToFileURL(join(this.paths.payload, 'resources/app/desktop/dist/main/lifecycle-client.js')).href) as Lifecycle
     const identity = JSON.parse(await readFile(join(this.paths.payload, 'artifact-identity.json'), 'utf8')) as { digest: string; releaseManifestSha256: string }
     const target = { artifactDigest: identity.digest, releaseManifestDigest: identity.releaseManifestSha256, productVersion: this.#release.ProductVersion, dshHome: this.paths.dsh }
@@ -77,8 +80,8 @@ export class InstallerOperations implements UpdateOperations {
       if (existsSync(this.paths.dsh) || existsSync(join(this.paths.control, 'state.sqlite'))) throw new Error('UNKNOWN_EXISTING_DURABLE_UNIVERSE')
       this.#source = { ...target, artifactDigest: '0'.repeat(64), releaseManifestDigest: '0'.repeat(64) }
     } else {
-      const sourceRelease = await verifyPackagedRuntime(this.paths.runtime)
       const old = JSON.parse(await readFile(join(this.paths.runtime, 'artifact-identity.json'), 'utf8')) as { digest: string; releaseManifestSha256: string }
+      const sourceRelease = old.digest === STEP1_ARTIFACT ? await verifyFrozenStep1PackagedRuntime(this.paths.runtime) : await verifyPackagedRuntime(this.paths.runtime)
       if (old.digest !== STEP1_ARTIFACT || sourceRelease.ControlStoreSchemaVersion !== NO_STORE) throw new Error('UNSUPPORTED_SOURCE_RELEASE_ROUTE')
       if (existsSync(join(this.paths.control, 'state.sqlite'))) throw new Error('CONTROL_SCHEMA_UNSUPPORTED')
       this.#source = { artifactDigest: old.digest, releaseManifestDigest: old.releaseManifestSha256, productVersion: sourceRelease.ProductVersion, dshHome: this.paths.dsh }
@@ -89,8 +92,8 @@ export class InstallerOperations implements UpdateOperations {
   }
   async check(source: ReleaseControl, target: ReleaseControl): Promise<void> {
     if (JSON.stringify(source) !== JSON.stringify(this.#source)) throw new Error('SOURCE_IDENTITY_MISMATCH')
-    await verifyAuthenticode(this.signature.installer, this.signature.digest, this.signature.policy, this.signature.nativeHelper)
     const release = await verifyPackagedRuntime(this.paths.payload)
+    await verifyInstallerReleaseTrust({ release, ...this.releaseTrust })
     assertCompatibility(release, sixIdentities(release), { dshHome: target.dshHome, attestedDshHome: this.paths.dsh, transactionState: 'IDLE', integrity: true })
     if (this.#sourceAbsent) {
       await this.boundary.protect(this.paths.runtime)
@@ -116,7 +119,7 @@ export class InstallerOperations implements UpdateOperations {
   async cancelBeforeInstall(): Promise<void> {
     if (!this.#journal || this.#journal.installed) throw new Error('PRE_INSTALL_CANCEL_REJECTED')
     if (!this.#sourceAbsent && await hashFile(join(this.paths.runtime, 'release-manifest.json')) !== this.#source.releaseManifestDigest) throw new Error('SOURCE_IDENTITY_MISMATCH')
-    if (!this.#sourceAbsent) await verifyPackagedRuntime(this.paths.runtime)
+    if (!this.#sourceAbsent) await this.verifySourceRuntime()
   }
   async drain(): Promise<void> {
     if (!this.#journal?.runtimeDacl) throw new Error('RUNTIME_FENCE_METADATA_MISSING')
@@ -187,7 +190,7 @@ export class InstallerOperations implements UpdateOperations {
   }
   async backup(id: string): Promise<string> {
     if (!this.#sourceAbsent) {
-      await verifyPackagedRuntime(this.paths.runtime)
+      await this.verifySourceRuntime()
       const identity = JSON.parse(await readFile(join(this.paths.runtime, 'artifact-identity.json'), 'utf8')) as { digest: string }
       if (identity.digest !== this.#source.artifactDigest) throw new Error('SOURCE_IDENTITY_MISMATCH')
     }
@@ -204,7 +207,7 @@ export class InstallerOperations implements UpdateOperations {
     // Source inventory verification ensures this directory contains only the
     // release being replaced. Removal is bounded to its manifest-owned bytes.
     if (!this.#sourceAbsent) {
-      await verifyPackagedRuntime(this.paths.runtime)
+      await this.verifySourceRuntime()
       const { durableInventory } = await import('./durable-files.js')
       for (const entry of (await durableInventory(this.paths.runtime)).reverse()) if (entry.kind === 'file') await unlink(join(this.paths.runtime, entry.path))
     }
@@ -273,7 +276,7 @@ export class InstallerOperations implements UpdateOperations {
       if ((await readdir(this.paths.runtime)).length !== 0 || (await readdir(this.paths.dsh)).length !== 0 || existsSync(join(this.paths.control, 'state.sqlite'))) throw new Error('FRESH_INSTALL_RESTORE_FAILED')
       return
     }
-    const release = await verifyPackagedRuntime(this.paths.runtime)
+    const release = await this.verifySourceRuntime()
     const identity = JSON.parse(await readFile(join(this.paths.runtime, 'artifact-identity.json'), 'utf8')) as { digest: string }
     if (identity.digest !== source.artifactDigest || release.ControlStoreSchemaVersion !== NO_STORE || release.ProductVersion !== source.productVersion || source.dshHome !== this.paths.dsh) throw new Error('RESTORE_IDENTITY_MISMATCH')
   }

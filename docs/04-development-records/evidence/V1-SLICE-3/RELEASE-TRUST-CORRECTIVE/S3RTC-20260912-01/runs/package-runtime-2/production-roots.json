@@ -1,0 +1,216 @@
+[
+  {
+    "name": "@deepseek-ai/dsh",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh",
+    "manifestSha256": "8b9dd9481018c948d6c96a837ca16b72764c3d6ce682c1b7199a00ba2ac10387",
+    "reasons": [
+      {
+        "reason": "OFFICIAL_DSH_CLI_PRODUCTION_BIN",
+        "entry": "D:/Project/Shaco-Forge/node_modules/.shaco-forge-build/runtime-overlay/node_modules/@deepseek-ai/dsh/lib/bin.js",
+        "specifier": "@deepseek-ai/dsh",
+        "entrySha256": "dc23f6c5dd7df8834e3e38bdb9609d77b459834681ae9b7133b417b0c35f3166"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-agent-presets",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-agent-presets",
+    "manifestSha256": "f65322f81ce77d7c4f8451abdf970b55fc5e5b70a1fe1889f659edbc5e201975",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@deepseek-ai/dsh-agent-presets",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-api-remotes",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-api-remotes",
+    "manifestSha256": "b5e31f6a4dc9290fb09e6030bc4e25ef7240cddbb872a4854c2e6916c1e18b3c",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@deepseek-ai/dsh-api-remotes",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-api-session-controller",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-api-session-controller",
+    "manifestSha256": "69c60c440220b2d981bc0c68e5b5a5608cdbcb139c213078849b6c2167d0e5ef",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@deepseek-ai/dsh-api-session-controller",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-api-settings-controller",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-api-settings-controller",
+    "manifestSha256": "a29b3403886a4d66d12e406754002267279e63dbc392bc447bcca08f282dea76",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@deepseek-ai/dsh-api-settings-controller",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-api-workspace-controller",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-api-workspace-controller",
+    "manifestSha256": "f7c2ca7bc98b18c6cac820ef8c2b329ef0602772c2bd085572da8088e1dc6aca",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@deepseek-ai/dsh-api-workspace-controller",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-base",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-base",
+    "manifestSha256": "5406e437c92d6f7432014ba4c8e34d08e51a6dd7af6113ba88dbf3eda0b57117",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_BUNDLE",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/package.json",
+        "specifier": "@deepseek-ai/dsh-base",
+        "entrySha256": "cf3606176b8995c92e1bdb97b1b7808850b8fb9c3dc90da10dae2920dff9fd2c"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-client-connection",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-client-connection",
+    "manifestSha256": "5f66b5befdffb55434bdaa618d7f42c88ca1b2eea1628c30232aa0d3bff01065",
+    "reasons": [
+      {
+        "reason": "SHACO_OWNED_BOOTSTRAP_RUNTIME_IMPORT",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/connection-compatibility.mjs",
+        "specifier": "@deepseek-ai/dsh-client-connection",
+        "entrySha256": "1d765b237400cc81261f76988f88caf6f9920d1a5fc4d09a3151491028796748"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-file-reference-local",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-file-reference-local",
+    "manifestSha256": "a9257b864b2a69c10661cd55ab3838684f9e113b0a7a7ec713d7e4d09c08aefc",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@deepseek-ai/dsh-file-reference-local",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-host-directory-picker-browse",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-host-directory-picker-browse",
+    "manifestSha256": "f2155bdc0729d5aa293437b019ea046a34ecc234f9a52588814a169db7b14d3e",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@deepseek-ai/dsh-host-directory-picker-browse",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-session-reference",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-session-reference",
+    "manifestSha256": "fd9c64bf1fa01cc1ce08ccd8c0ca47a0b2f70346931521ffb43312ab10d9e118",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@deepseek-ai/dsh-session-reference",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-tool-subagent",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-tool-subagent",
+    "manifestSha256": "6b7bba819e1281e41d74226535ffbe195f287553b3b25e27386cc17a80e12ba7",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@deepseek-ai/dsh-tool-subagent/model-selection-settings",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      }
+    ]
+  },
+  {
+    "name": "@deepseek-ai/dsh-workspace",
+    "version": "0.1.2-alpha.1",
+    "source": "D:\\Project\\Shaco-Forge\\node_modules\\.shaco-forge-build\\runtime-overlay\\node_modules\\@deepseek-ai\\dsh-workspace",
+    "manifestSha256": "3c595596cff864861aa72d5a279c453bbb410731ada98157524b957fc82d6254",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@deepseek-ai/dsh-workspace",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      }
+    ]
+  },
+  {
+    "name": "@shaco-forge/harness-bootstrap",
+    "version": "1.0.0-dev.1",
+    "source": "D:\\Project\\Shaco-Forge\\dist\\packaging\\1789188327151\\production-seam\\profiles\\shaco-forge\\node_modules\\@shaco-forge\\harness-bootstrap",
+    "manifestSha256": "2c5b218e0394bfb87b91ccec153bac71d7870b4299304250d645fd5aa8760cfe",
+    "reasons": [
+      {
+        "reason": "PRODUCTION_PROFILE_BUNDLE",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/package.json",
+        "specifier": "@shaco-forge/harness-bootstrap",
+        "entrySha256": "cf3606176b8995c92e1bdb97b1b7808850b8fb9c3dc90da10dae2920dff9fd2c"
+      },
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@shaco-forge/harness-bootstrap/connection-compatibility",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      },
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@shaco-forge/harness-bootstrap/readiness",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      },
+      {
+        "reason": "PRODUCTION_PROFILE_INSERT_PLUGIN",
+        "entry": "D:/Project/Shaco-Forge/dist/packaging/1789188327151/production-seam/profiles/shaco-forge/node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml",
+        "specifier": "@shaco-forge/harness-bootstrap/carrier-gateway",
+        "entrySha256": "720fbead6d4a5f9b925bee21c59bda53e4cd37e8320eceff2d37f6fe58d50306"
+      }
+    ]
+  }
+]

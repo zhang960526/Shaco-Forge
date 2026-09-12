@@ -1,0 +1,32 @@
+$ node scripts/smoke-electron.mjs
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Electron failed. stdout=
+ stderr=[48804:0912/112005.176:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515
+[48804:0912/112005.237:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515
+[48804:0912/112005.275:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515
+[48804:0912/112005.310:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515
+[48804:0912/112005.356:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515
+[48804:0912/112005.388:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515
+[48804:0912/112005.432:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515
+[48804:0912/112005.474:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515
+[48804:0912/112005.521:ERROR:gpu_process_host.cc(953)] GPU process exited unexpectedly: exit_code=-1073741515
+[48804:0912/112005.521:FATAL:gpu_data_manager_impl_private.cc(420)] GPU process isn't usable. Goodbye.
+
+
+2147483651 !== 0
+
+    at file:///D:/Project/Shaco-Forge/scripts/smoke-electron.mjs:50:8
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 2147483651,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

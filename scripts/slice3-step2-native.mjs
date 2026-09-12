@@ -4,6 +4,7 @@ import { execFileSync } from 'node:child_process'
 import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises'
 import { join, resolve } from 'node:path'
 import { inspectAuthenticode, acceptSignature } from '../apps/worker/dist/signature-verification.js'
+import { verifyInstallerReleaseTrust } from '../apps/worker/dist/installer-release-trust.js'
 import { hashFile, jsonBytes } from '../packages/contracts/dist/packaged-runtime.js'
 
 assert.equal(process.version, 'v22.19.0')
@@ -21,6 +22,8 @@ assert.equal(original.status, 'Valid')
 assert.ok(original.signer && original.timestamp.certificate && original.timestamp.signingTimes.length)
 const policy = { certificateSha256: [original.signer.sha256], timestampRequired: true }
 acceptSignature(original, await hashFile(process.execPath), policy)
+const trustedRelease = { ReleaseTrustMode: 'TRUSTED_AUTHENTICODE', ProductionSignerPolicy: policy }
+assert.equal((await verifyInstallerReleaseTrust({ release: trustedRelease, installer: process.execPath, digest: original.fileSha256, nativeHelper: helper })).publisherAuthenticity, 'VERIFIED_TRUSTED_AUTHENTICODE')
 assert.throws(() => acceptSignature(original, original.fileSha256, { ...policy, certificateSha256: ['0'.repeat(64)] }), /SIGNER_NOT_ALLOWED/)
 assert.throws(() => acceptSignature(original, '0'.repeat(64), policy), /DIGEST_MISMATCH/)
 const tampered = join(isolated, 'tampered-public-node.exe')
@@ -29,9 +32,13 @@ const bytes = await readFile(tampered); bytes[2048] ^= 1; await writeFile(tamper
 const invalid = await inspectAuthenticode(tampered, helper)
 assert.notEqual(invalid.status, 'Valid')
 assert.throws(() => acceptSignature(invalid, invalid.fileSha256, policy), /SIGNATURE_INVALID|SIGNATURE_MISSING/)
+await assert.rejects(verifyInstallerReleaseTrust({ release: trustedRelease, installer: tampered, digest: invalid.fileSha256, nativeHelper: helper }), /SIGNATURE_INVALID|SIGNATURE_MISSING/)
 const unsigned = await inspectAuthenticode(helper, helper)
 assert.equal(unsigned.status, 'NotSigned')
 assert.throws(() => acceptSignature(unsigned, unsigned.fileSha256, policy), /SIGNATURE_MISSING/)
+await assert.rejects(verifyInstallerReleaseTrust({ release: trustedRelease, installer: helper, digest: unsigned.fileSha256, nativeHelper: helper }), /SIGNATURE_MISSING/)
+assert.equal((await verifyInstallerReleaseTrust({ release: { ...trustedRelease, ReleaseTrustMode: 'GITHUB_OPEN_SOURCE_UNSIGNED' }, installer: helper, digest: unsigned.fileSha256, nativeHelper: helper })).publisherAuthenticity, 'NOT_PROVIDED')
+await assert.rejects(verifyInstallerReleaseTrust({ release: { ...trustedRelease, ReleaseTrustMode: 'UNKNOWN' }, installer: helper, digest: unsigned.fileSha256, nativeHelper: helper }), /RELEASE_INTEGRITY_FAILURE/)
 const policyFile = join(isolated, 'public-fixture-policy.json')
 await writeFile(policyFile, jsonBytes(policy), 'utf8')
 const accepted = JSON.parse(execFileSync(helper, ['--verify-installer', process.execPath, policyFile], { encoding: 'utf8', windowsHide: true }))

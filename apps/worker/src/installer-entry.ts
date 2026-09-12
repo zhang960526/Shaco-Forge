@@ -6,9 +6,9 @@ import { promisify } from 'node:util'
 import { randomUUID } from 'node:crypto'
 import { hashFile, jsonBytes, RELEASE_LAYOUT, verifyPackagedRuntime, type FileIdentity } from '@shaco-forge/contracts/packaged-runtime'
 import { InstallerOperations } from './installer-operations.js'
+import { verifyInstallerReleaseTrust } from './installer-release-trust.js'
 import { UpdateTransaction, type TransactionRecord } from './update-transaction.js'
 import { uninstall, readUninstallInventory } from './uninstall.js'
-import { verifyAuthenticode } from './signature-verification.js'
 import type { ProductControlPaths } from './control-preflight.js'
 
 const run = promisify(execFile)
@@ -31,10 +31,8 @@ export async function installerMain(): Promise<void> {
       child.stdin.on('error', () => {}); child.stdin.end(input, 'utf8')
     })
   }
-  const policy = release.ProductionSignerPolicy as { certificateSha256: string[]; timestampRequired: boolean }
-  if (!policy || !Array.isArray(policy.certificateSha256) || policy.timestampRequired !== true) throw new Error('SIGNER_POLICY_UNAVAILABLE')
-  const signature = { installer: resolve(installer), digest: await hashFile(installer), policy, nativeHelper: helper }
-  await verifyAuthenticode(signature.installer, signature.digest, signature.policy, signature.nativeHelper)
+  const releaseTrust = { installer: resolve(installer), digest: await hashFile(installer), nativeHelper: helper }
+  await verifyInstallerReleaseTrust({ release, ...releaseTrust })
   const selected = await native(['--select-product-control', payload]) as unknown as ProductControlPaths
   if (!selected.canonical || selected.writes !== 0) throw new Error('DSH_HOME_MISMATCH')
   const runtime = join(selected.installRoot, 'current')
@@ -45,7 +43,7 @@ export async function installerMain(): Promise<void> {
       await native(['--assert-install-registration-clear'])
       const retained = join(selected.installRoot, 'installer.exe')
       const info = await stat(retained).catch(error => { if (error.code === 'ENOENT') return undefined; throw error })
-      if (info && await hashFile(retained) !== signature.digest) throw new Error('UNOWNED_INSTALLER_FILE')
+      if (info && await hashFile(retained) !== releaseTrust.digest) throw new Error('UNOWNED_INSTALLER_FILE')
     },
     rollbackRegistration: async () => { await native(['--rollback-install-registration', currentVersion(release.ProductVersion)]) },
     register: async () => {
@@ -53,9 +51,9 @@ export async function installerMain(): Promise<void> {
       const retained = join(selected.installRoot, 'installer.exe')
       if (resolve(installer) !== retained) {
         try { await copyFile(installer, retained, 1) }
-        catch (error) { if ((error as NodeJS.ErrnoException).code !== 'EEXIST' || await hashFile(retained) !== signature.digest) throw error }
+        catch (error) { if ((error as NodeJS.ErrnoException).code !== 'EEXIST' || await hashFile(retained) !== releaseTrust.digest) throw error }
       }
-      if (await hashFile(retained) !== signature.digest) throw new Error('SIGNED_ARTIFACT_DIGEST_MISMATCH')
+      if (await hashFile(retained) !== releaseTrust.digest) throw new Error('INSTALLER_ARTIFACT_DIGEST_MISMATCH')
       await native(['--register-product-install', currentVersion(release.ProductVersion)])
     },
     protect: async (path: string) => { await native(['--protect-product-directory', path]) },
@@ -71,7 +69,7 @@ export async function installerMain(): Promise<void> {
       })
     },
   }
-  const operations = new InstallerOperations(paths, boundary, signature)
+  const operations = new InstallerOperations(paths, boundary, releaseTrust)
   if (mode === '--uninstall') {
     const inventory = await readUninstallInventory(runtime, payload)
     const current = release

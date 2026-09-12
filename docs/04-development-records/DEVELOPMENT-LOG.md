@@ -1,12 +1,10 @@
 # Shaco Forge Development Log
 
-## Current - Release Trust Amendment frozen; Corrective authorized not started (2026-09-12)
+## Current - Release Trust Product Source Corrective implemented; waiting independent review (2026-09-12)
 
-[REVIEW-031](../05-reviews/architecture/AUDIT-031-V1-SLICE-3-RELEASE-TRUST-SIGNING-AMENDMENT-INDEPENDENT-REVIEW.md)
-已按 Owner 提供的 DeepSeek Harness 只读 transcript 持久化为 `PASS`，没有 Blocking
-Findings。Architecture Owner 随后通过
-[Freeze and Corrective Authorization Decision](V1-SLICE-3-RELEASE-TRUST-SIGNING-AMENDMENT-FREEZE-AND-CORRECTIVE-AUTHORIZATION-DECISION.md)
-接受 Review、冻结 Amendment，并只授权尚未开始的 Release Trust Corrective。
+[Implementation Record](V1-SLICE-3-RELEASE-TRUST-CORRECTIVE-IMPLEMENTATION-RECORD.md) 与
+[Evidence](evidence/V1-SLICE-3/RELEASE-TRUST-CORRECTIVE/S3RTC-20260912-01/README.md)
+记录 `GITHUB_OPEN_SOURCE_UNSIGNED` 的 immutable build/release policy 实现：
 
 - `GITHUB_OPEN_SOURCE_UNSIGNED` 是 active V1 mode，`TRUSTED_AUTHENTICODE` 保持支持；
 - signing integration 保留；trusted CA signing、Windows publisher identity 与
@@ -15,7 +13,10 @@ Findings。Architecture Owner 随后通过
   packaged-file manifest、Frozen Harness identity、compatibility 与安全事务 Evidence；
 - Integrity 不冒充 Publisher Authenticity，Windows trusted publisher identity 不提供；
 - Release Trust Mode 必须来自 immutable release/build authority，不允许 runtime bypass；
-- 当前 mandatory-reject-unsigned 行为由下一批已授权但尚未开始的 Corrective 修正；
+- 当前 unsigned 模式不再触发 mandatory Authenticode reject；可信模式继续要求现有
+  WinVerifyTrust、signer allowlist、timestamp 与 installer digest；
+- manifest 缺失/未知模式、NSIS 缺失/未知编译模式均 fail closed，生产代码无 runtime toggle；
+- 最终安装器候选与 release manifest / packaged artifact 摘要由独立 binding 证据绑定；
 - `BUG-S3S2-001`、Node SQLite experimental risk 与 CSP unsafe directive removal disposition
   均保持；Step2 不关闭，Step3/Provider/Signing 不授权，Slice4 不开始。
 
@@ -24,17 +25,20 @@ REVIEW_031 = PASS
 AMENDMENT_STATUS = FROZEN_FOR_IMPLEMENTATION
 AMENDMENT_EFFECTIVE = YES
 PARENT_CONTRACT_SHA256 = 35152ace7e1bb85ad6ecec801e20202d55ee960acb2137340ae932777da1bf76
-V1_SLICE_3_RELEASE_TRUST_IMPLEMENTATION_CORRECTIVE_AUTHORIZATION = YES
-IMPLEMENTATION_CORRECTIVE_STATUS = AUTHORIZED_NOT_STARTED
-V1_SLICE_3_STEP2 = CORRECTIVE_AUTHORIZED_NOT_STARTED
+V1_SLICE_3_RELEASE_TRUST_IMPLEMENTATION_CORRECTIVE = PASS
+IMPLEMENTATION_CORRECTIVE_STATUS = IMPLEMENTED_WAITING_INDEPENDENT_REVIEW
+V1_SLICE_3_STEP2 = CORRECTIVE_IMPLEMENTED_WAITING_INDEPENDENT_REVIEW
 V1_SLICE_3_STEP2_BASELINE = NOT_FROZEN
 V1_SLICE_3_STEP3 = NOT_AUTHORIZED
-READY_FOR_RELEASE_TRUST_IMPLEMENTATION_CORRECTIVE = YES
-V1_CURRENT_NEXT_ACTION = EXECUTE_V1_SLICE_3_RELEASE_TRUST_IMPLEMENTATION_CORRECTIVE
+FINAL_REQUIRED_GATE_MATRIX = 23 / 23 PASS
+FINAL_SOURCE_INVENTORY_SHA256 = 3077e8bf3ed5e8731f9e9fc663be252bef2adf811b5fa9e3c1eab76d444daa48
+PROVIDER_RUN_COUNT = 0
+SIGNING_RUN_COUNT = 0
+V1_CURRENT_NEXT_ACTION = INDEPENDENT_REVIEW_OF_RELEASE_TRUST_IMPLEMENTATION_CORRECTIVE
 ```
 
-Runtime、Build、Tests、Packaging、Signing、Provider 与 Fresh Windows 均 `NOT RUN`；
-本记录随唯一 Governance Amendment Freeze commit 持久化；Push 为 `NO`。
+最终矩阵包含 Runtime、Build、Tests 与 Packaging；Production Signing、Provider、真实用户
+Product Data Root 和 Fresh Windows 均 `NOT RUN`。Step2 未关闭，Step3 未授权。
 
 下方为历史 checkpoint，不构成本次之后的新授权。
 

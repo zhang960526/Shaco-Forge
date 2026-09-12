@@ -8,7 +8,7 @@ import { fixture, workerBridge, isolatedProfileLinks } from './slice3-step2-fixt
 import { UpdateTransaction } from '../apps/worker/dist/update-transaction.js'
 import { ControlStore } from '../apps/worker/dist/control-store.js'
 import { uninstall, readUninstallInventory } from '../apps/worker/dist/uninstall.js'
-import { hashFile, jsonBytes, verifyPackagedRuntime } from '../packages/contracts/dist/packaged-runtime.js'
+import { hashFile, jsonBytes, verifyFrozenStep1PackagedRuntime, verifyPackagedRuntime } from '../packages/contracts/dist/packaged-runtime.js'
 import { inspectLocalPlatform } from '../apps/desktop/dist/main/lifecycle-client.js'
 import { durableInventory } from '../apps/worker/dist/durable-files.js'
 
@@ -58,7 +58,7 @@ const restored = await new UpdateTransaction(restore.operations).run(pair.source
 await save('STEP1_PAIR_RESTORE', { result: restored.state === 'RESTORED' ? 'PASS' : 'FAIL', root: restore.root, transaction: restored, nativeReceipts: restore.receipts })
 assert.equal(restored.state, 'RESTORED', restored.errorCode)
 assert.equal(await hashFile(join(restore.paths.dsh, 'isolated-durable-sentinel.bin')), before)
-assert.equal((await verifyPackagedRuntime(restore.paths.runtime)).ControlStoreSchemaVersion, 'NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES')
+assert.equal((await verifyFrozenStep1PackagedRuntime(restore.paths.runtime)).ControlStoreSchemaVersion, 'NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES')
 const restarted = await new UpdateTransaction(restore.operations).recover()
 assert.equal(restarted.state, 'RESTORED')
 await save('RESTORED_RESTART', { result: 'PASS', unchangedOriginalDurableSha256: before, runtimeDataPairValidated: true, harnessDownMigration: false })

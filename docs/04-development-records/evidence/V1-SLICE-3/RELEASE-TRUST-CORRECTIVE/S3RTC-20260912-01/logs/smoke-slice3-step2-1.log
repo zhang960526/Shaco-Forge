@@ -1,0 +1,18 @@
+$ node scripts/smoke-slice3-step2.mjs
+(node:39660) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+FRESH_PRE_INSTALL_CANCEL: PASS
+FRESH_INSTALL: PASS
+ACTUAL_VALIDATION_DRAIN: PASS
+NO_WRITE_AFTER_DRAIN: PASS
+file:///D:/Project/Shaco-Forge/packages/contracts/dist/packaged-runtime.js:128
+        throw new Error(`RELEASE_INTEGRITY_FAILURE: ${error instanceof Error ? error.message : 'invalid package'}`);
+              ^
+
+Error: RELEASE_INTEGRITY_FAILURE: RELEASE_INTEGRITY_FAILURE: release identity
+    at verifyPackagedRuntime (file:///D:/Project/Shaco-Forge/packages/contracts/dist/packaged-runtime.js:128:15)
+    at async fixture (file:///D:/Project/Shaco-Forge/scripts/slice3-step2-fixtures.mjs:97:5)
+    at async file:///D:/Project/Shaco-Forge/scripts/smoke-slice3-step2.mjs:49:17
+
+Node.js v22.19.0
+[ELIFECYCLE] Command failed with exit code 1.

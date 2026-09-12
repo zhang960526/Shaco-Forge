@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "sourceInventorySha256": "3077e8bf3ed5e8731f9e9fc663be252bef2adf811b5fa9e3c1eab76d444daa48",
+  "required": 23,
+  "passed": 23,
+  "result": "PASS",
+  "compositionGate": "PASS",
+  "commands": [
+    { "command": "typecheck", "attempt": 4, "result": "PASS", "log": "logs/typecheck-4.log" },
+    { "command": "build", "attempt": 3, "result": "PASS", "log": "logs/build-3.log" },
+    { "command": "test", "attempt": 3, "result": "PASS", "log": "logs/test-3.log" },
+    { "command": "verify:static", "attempt": 3, "result": "PASS", "log": "logs/verify-static-3.log" },
+    { "command": "verify:theme", "attempt": 3, "result": "PASS", "log": "logs/verify-theme-3.log" },
+    { "command": "smoke:worker", "attempt": 3, "result": "PASS", "log": "logs/smoke-worker-3.log" },
+    { "command": "smoke:carrier", "attempt": 3, "result": "PASS", "log": "logs/smoke-carrier-3.log" },
+    { "command": "smoke:electron", "attempt": 4, "result": "PASS", "log": "logs/smoke-electron-4.log" },
+    { "command": "smoke:failure", "attempt": 3, "result": "PASS", "log": "logs/smoke-failure-3.log" },
+    { "command": "smoke:slice2-step1", "attempt": 3, "result": "PASS", "log": "logs/smoke-slice2-step1-3.log" },
+    { "command": "smoke:slice2-step2", "attempt": 3, "result": "PASS", "log": "logs/smoke-slice2-step2-3.log" },
+    { "command": "smoke:slice2-step3", "attempt": 3, "result": "PASS", "log": "logs/smoke-slice2-step3-3.log" },
+    { "command": "smoke:slice2-step3-interactions", "attempt": 2, "result": "PASS", "log": "logs/smoke-slice2-step3-interactions-2.log" },
+    { "command": "test:full-shaco", "attempt": 2, "result": "PASS", "log": "logs/test-full-shaco-2.log" },
+    { "command": "smoke:full-shaco", "attempt": 2, "result": "PASS", "log": "logs/smoke-full-shaco-2.log" },
+    { "command": "package:runtime", "attempt": 2, "result": "PASS", "log": "logs/package-runtime-2.log" },
+    { "command": "test:packaged-runtime", "attempt": 2, "result": "PASS", "log": "logs/test-packaged-runtime-2.log" },
+    { "command": "smoke:packaged-runtime", "attempt": 2, "result": "PASS", "log": "logs/smoke-packaged-runtime-2.log" },
+    { "command": "test:slice3-step2", "attempt": 2, "result": "PASS", "log": "logs/test-slice3-step2-2.log" },
+    { "command": "smoke:slice3-step2", "attempt": 2, "result": "PASS", "log": "logs/smoke-slice3-step2-2.log" },
+    { "command": "package:installer", "attempt": 1, "result": "PASS", "log": "logs/package-installer-1.log" },
+    { "command": "test:installer", "attempt": 1, "result": "PASS", "log": "logs/test-installer-1.log" },
+    { "command": "verify:f05", "attempt": 1, "result": "PASS", "log": "logs/verify-f05-1.log" }
+  ]
+}

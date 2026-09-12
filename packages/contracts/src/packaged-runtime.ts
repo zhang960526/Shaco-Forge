@@ -19,14 +19,22 @@ export const RELEASE_LAYOUT = Object.freeze({
 })
 export const HARNESS_COMMIT = 'cd5ef8148158c3a752a658978873241fdf8e2bbc'
 export const CONTRACT_SHA256 = '35152ace7e1bb85ad6ecec801e20202d55ee960acb2137340ae932777da1bf76'
+export const RELEASE_TRUST_MODES = Object.freeze(['GITHUB_OPEN_SOURCE_UNSIGNED', 'TRUSTED_AUTHENTICODE'] as const)
+export type ReleaseTrustMode = typeof RELEASE_TRUST_MODES[number]
 export interface ReleaseManifest {
   ProductVersion: string; DesktopVersion: string; WorkerVersion: string
   CarrierVersion: number; HarnessBaselineVersion: string; ControlStoreSchemaVersion: string
   ElectronVersion: string; WorkerNodeVersion: string; Platform: string; Architecture: string
   HarnessPackage: string; HarnessCommit: string; ProductionProfileIdentity: string
   SourceCommit: string; FrozenContractIdentity: string; PackagedRuntimeLayoutVersion: number
+  ReleaseTrustMode: ReleaseTrustMode
+  ProductionSignerPolicy: { certificateSha256: string[]; timestampRequired: true }
   layout: typeof RELEASE_LAYOUT
   [key: string]: unknown
+}
+export type FrozenStep1ReleaseManifest = Pick<ReleaseManifest, 'ProductVersion' | 'ControlStoreSchemaVersion'> & Record<string, unknown> & {
+  ReleaseTrustMode?: never
+  ProductionSignerPolicy?: never
 }
 export interface FileIdentity { path: string; bytes: number; sha256: string }
 export function sha256(bytes: string | Buffer): string { return createHash('sha256').update(bytes).digest('hex') }
@@ -86,7 +94,8 @@ export function validateRelease(manifest: ReleaseManifest): void {
     || manifest.PackagedRuntimeLayoutVersion !== 1 || !/^[a-f0-9]{40}$/.test(manifest.SourceCommit)
     || JSON.stringify(manifest.layout) !== JSON.stringify(RELEASE_LAYOUT)
     || !manifest.ProductVersion || manifest.DesktopVersion !== manifest.ProductVersion || manifest.WorkerVersion !== manifest.ProductVersion
-    || manifest.CarrierVersion !== 1 || !['NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES', '1'].includes(manifest.ControlStoreSchemaVersion)) {
+    || manifest.CarrierVersion !== 1 || !['NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES', '1'].includes(manifest.ControlStoreSchemaVersion)
+    || !RELEASE_TRUST_MODES.includes(manifest.ReleaseTrustMode)) {
     throw new Error('RELEASE_INTEGRITY_FAILURE: release identity')
   }
   if (manifest.ControlStoreSchemaVersion === '1') {
@@ -96,7 +105,7 @@ export function validateRelease(manifest: ReleaseManifest): void {
       || policy.certificateSha256.some(value => typeof value !== 'string' || !/^[a-f0-9]{64}$/.test(value))) throw new Error('RELEASE_INTEGRITY_FAILURE: signer policy')
   }
 }
-export async function verifyPackagedRuntime(root: string): Promise<ReleaseManifest> {
+async function verifyPackagedRuntimeInternal(root: string, authority: 'CURRENT_RELEASE' | 'FROZEN_STEP1_SOURCE'): Promise<ReleaseManifest | FrozenStep1ReleaseManifest> {
   try {
     for (const name of ['release-manifest.json', 'packaged-files.json', 'artifact-identity.json']) {
       const stat = await lstat(join(root, name))
@@ -106,8 +115,14 @@ export async function verifyPackagedRuntime(root: string): Promise<ReleaseManife
     const files = await readFile(join(root, 'packaged-files.json'))
     const identity = JSON.parse(await readFile(join(root, 'artifact-identity.json'), 'utf8')) as unknown
     const manifest = JSON.parse(release.toString('utf8')) as ReleaseManifest
-    validateRelease(manifest)
-    if (JSON.stringify(identity) !== JSON.stringify(artifactIdentity(release, files))) throw new Error('artifact binding')
+    if (authority === 'CURRENT_RELEASE') validateRelease(manifest)
+    else {
+      if (Object.hasOwn(manifest, 'ReleaseTrustMode') || manifest.ControlStoreSchemaVersion !== 'NOT_IMPLEMENTED_NO_CONTROL_STORE_WRITES') throw new Error('legacy source identity')
+      validateRelease({ ...manifest, ReleaseTrustMode: 'GITHUB_OPEN_SOURCE_UNSIGNED' })
+    }
+    const boundIdentity = artifactIdentity(release, files)
+    if (JSON.stringify(identity) !== JSON.stringify(boundIdentity)) throw new Error('artifact binding')
+    if (authority === 'FROZEN_STEP1_SOURCE' && boundIdentity.digest !== STEP1_ARTIFACT) throw new Error('legacy source artifact')
     const expected = JSON.parse(files.toString('utf8')) as { schemaVersion: number; files: FileIdentity[] }
     if (expected.schemaVersion !== 1 || JSON.stringify(expected.files) !== JSON.stringify(await inventory(root))) throw new Error('file inventory')
     for (const path of Object.values(RELEASE_LAYOUT).filter(path => path !== RELEASE_LAYOUT.profile)) {
@@ -119,4 +134,12 @@ export async function verifyPackagedRuntime(root: string): Promise<ReleaseManife
   } catch (error) {
     throw new Error(`RELEASE_INTEGRITY_FAILURE: ${error instanceof Error ? error.message : 'invalid package'}`)
   }
+}
+export async function verifyPackagedRuntime(root: string): Promise<ReleaseManifest> {
+  return verifyPackagedRuntimeInternal(root, 'CURRENT_RELEASE') as Promise<ReleaseManifest>
+}
+// Compatibility-only reader for the one frozen pre-amendment Step1 artifact.
+// Current releases still fail closed when ReleaseTrustMode is missing.
+export async function verifyFrozenStep1PackagedRuntime(root: string): Promise<FrozenStep1ReleaseManifest> {
+  return verifyPackagedRuntimeInternal(root, 'FROZEN_STEP1_SOURCE') as Promise<FrozenStep1ReleaseManifest>
 }

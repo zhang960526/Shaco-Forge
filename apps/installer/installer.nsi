@@ -1,4 +1,12 @@
 Unicode true
+!ifndef RELEASE_TRUST_MODE
+  !error "RELEASE_TRUST_MODE is required"
+!endif
+!if "${RELEASE_TRUST_MODE}" != "GITHUB_OPEN_SOURCE_UNSIGNED"
+  !if "${RELEASE_TRUST_MODE}" != "TRUSTED_AUTHENTICODE"
+    !error "Unknown RELEASE_TRUST_MODE"
+  !endif
+!endif
 !include "x64.nsh"
 !include "FileFunc.nsh"
 Name "Shaco Forge"
@@ -29,20 +37,22 @@ Function .onInit
     StrCpy $Operation "--recover"
   InitPluginsDir
   SetOutPath "$PLUGINSDIR"
-  SetOutPath "$PLUGINSDIR\native"
-  File /r "${PAYLOAD}\native\*"
-  SetOutPath "$PLUGINSDIR"
-  File /oname=signer-policy.json "${SOURCE}\apps\installer\signer-policy.json"
-  ClearErrors
-  ExecWait '"$PLUGINSDIR\native\ShacoForge.NativeCarrier.exe" --verify-installer "$EXEPATH" "$PLUGINSDIR\signer-policy.json"' $R0
-  IfErrors rejected
-  StrCmp $R0 "0" accepted rejected
-  rejected:
-    IfSilent +2
-      MessageBox MB_OK|MB_ICONSTOP "Shaco Forge signature verification failed. This unsigned candidate is not release ready."
-    SetErrorLevel 1
-    Quit
-  accepted:
+!if "${RELEASE_TRUST_MODE}" == "TRUSTED_AUTHENTICODE"
+    SetOutPath "$PLUGINSDIR\native"
+    File /r "${PAYLOAD}\native\*"
+    SetOutPath "$PLUGINSDIR"
+    File /oname=signer-policy.json "${SOURCE}\apps\installer\signer-policy.json"
+    ClearErrors
+    ExecWait '"$PLUGINSDIR\native\ShacoForge.NativeCarrier.exe" --verify-installer "$EXEPATH" "$PLUGINSDIR\signer-policy.json"' $R0
+    IfErrors rejected
+    StrCmp $R0 "0" accepted rejected
+    rejected:
+      IfSilent +2
+        MessageBox MB_OK|MB_ICONSTOP "Shaco Forge Authenticode verification failed."
+      SetErrorLevel 1
+      Quit
+    accepted:
+!endif
 FunctionEnd
 
 Section

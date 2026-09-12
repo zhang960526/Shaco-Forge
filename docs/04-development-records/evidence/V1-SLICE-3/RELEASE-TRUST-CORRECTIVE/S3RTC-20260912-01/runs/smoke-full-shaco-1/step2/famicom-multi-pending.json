@@ -1,0 +1,50 @@
+{
+  "name": "famicom-multi-pending",
+  "path": "D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\RELEASE-TRUST-CORRECTIVE\\S3RTC-20260912-01\\runs\\smoke-full-shaco-1\\step2\\famicom-multi-pending.png",
+  "width": 2139,
+  "height": 1256,
+  "sha256": "a4ab7b31d736ddfc60a5ecd4118073f499af3ed5892bccf21bae070b86df74ca",
+  "ui": {
+    "rootCount": 1,
+    "sidebarCount": 1,
+    "forbiddenBrand": false,
+    "harnessSeats": 0,
+    "template": "FAMICOM",
+    "mode": "light",
+    "rootVisible": true,
+    "horizontalOverflow": false,
+    "composer": true,
+    "approval": false,
+    "question": true,
+    "kinds": [
+      "command",
+      "command"
+    ],
+    "tools": [],
+    "geometry": {
+      "conversation": {
+        "width": 1100,
+        "center": 845,
+        "maxWidth": "1100px"
+      },
+      "composer": {
+        "width": 1100,
+        "center": 845,
+        "maxWidth": "1100px"
+      },
+      "tool": null
+    },
+    "lowNoiseWorkbar": true,
+    "bootstrapVisible": false,
+    "plan": false,
+    "tokens": {
+      "--surface-primary": "rgb(251, 245, 233)",
+      "--surface-sidebar": "rgb(241, 234, 217)",
+      "--accent-primary": "rgb(146, 37, 41)",
+      "--control-radius": "4px",
+      "--template-decoration-height": "28px",
+      "--font-display": "\"Consolas\", \"Microsoft YaHei UI\", monospace"
+    }
+  },
+  "source": "REAL_ELECTRON_CURRENT_PRODUCT_WITH_LOCAL_NON_PROVIDER_HOST_FIXTURE"
+}

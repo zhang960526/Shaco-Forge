@@ -1,0 +1,3 @@
+$ node scripts/smoke-slice2-step3.mjs
+{"result":"FAIL","failure":"ENOENT: no such file or directory, open 'D:\\Project\\Shaco-Forge\\docs\\04-development-records\\evidence\\V1-SLICE-3\\RELEASE-TRUST-CORRECTIVE\\S3RTC-20260912-01\\runs\\smoke-slice2-step3-1\\step2\\step3-ui-38264-1.png'","chain":["PRODUCT_STARTUP_AUTHORITY_HOST_HELPER_AUTHENTICATED_CARRIER_CLIENT_CONNECTED","CURRENT_SESSION_FROM_PUBLIC_HARNESS_TRUTH","BOUNDED_CLEANUP_NO_ORPHAN"],"cleanup":{"noOrphan":true,"authorityCount":1,"desktopProcessesExited":true},"providerRuns":0}
+[ELIFECYCLE] Command failed with exit code 1.

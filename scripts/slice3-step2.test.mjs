@@ -18,7 +18,7 @@ await mkdir(testRoot, { recursive: true })
 const target = { artifactDigest: 'a'.repeat(64), releaseManifestDigest: 'b'.repeat(64), productVersion: '1.0.0-dev.1', dshHome: 'C:\\isolated-shaco-test\\dsh' }
 const source = { ...target, artifactDigest: STEP1_ARTIFACT }
 const manifest = { ...sixIdentities({ ProductVersion: target.productVersion, DesktopVersion: target.productVersion, WorkerVersion: target.productVersion, CarrierVersion: 1, HarnessBaselineVersion: '0.1.2-alpha.1', ControlStoreSchemaVersion: '1' }),
-  HarnessCommit: HARNESS_COMMIT, HarnessPackage: '@deepseek-ai/dsh@0.1.2-alpha.1', FrozenContractIdentity: CONTRACT_SHA256, layout: RELEASE_LAYOUT, Compatibility: declaration(target.productVersion, STEP1_ARTIFACT) }
+  HarnessCommit: HARNESS_COMMIT, HarnessPackage: '@deepseek-ai/dsh@0.1.2-alpha.1', FrozenContractIdentity: CONTRACT_SHA256, ReleaseTrustMode: 'GITHUB_OPEN_SOURCE_UNSIGNED', layout: RELEASE_LAYOUT, Compatibility: declaration(target.productVersion, STEP1_ARTIFACT) }
 const context = () => ({ dshHome: target.dshHome, attestedDshHome: target.dshHome, transactionState: 'IDLE', integrity: true })
 
 test('six identities; positive compatibility admits exactly the explicit tuple', () => {

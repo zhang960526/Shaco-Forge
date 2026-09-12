@@ -3,12 +3,12 @@
 import assert from 'node:assert/strict'
 import { spawn } from 'node:child_process'
 import { existsSync } from 'node:fs'
-import { cp, mkdir, lstat, readFile, readdir, realpath, writeFile } from 'node:fs/promises'
+import { copyFile, mkdir, lstat, readFile, readdir, realpath, writeFile } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
 import { tmpdir } from 'node:os'
 import { pathToFileURL } from 'node:url'
 import { randomUUID } from 'node:crypto'
-import { RELEASE_LAYOUT, jsonBytes, verifyPackagedRuntime } from '../packages/contracts/dist/packaged-runtime.js'
+import { RELEASE_LAYOUT, hashFile, jsonBytes, verifyFrozenStep1PackagedRuntime } from '../packages/contracts/dist/packaged-runtime.js'
 import { inspectAuthenticode } from '../apps/worker/dist/signature-verification.js'
 import { InstallerOperations } from '../apps/worker/dist/installer-operations.js'
 
@@ -94,9 +94,27 @@ export async function fixture(label, { step1 = false } = {}) {
   }
   if (step1) {
     const prior = JSON.parse(await readFile('docs/04-development-records/evidence/V1-SLICE-3/STEP-2/S3STEP2-20260911-SAFETY-01/step1-source-location.json', 'utf8'))
-    await verifyPackagedRuntime(prior.packagedRoot)
     await boundary.protect(paths.runtime); await boundary.protect(paths.dsh)
-    await cp(prior.packagedRoot, paths.runtime, { recursive: true, force: false, errorOnExist: true })
+    const frozenFiles = JSON.parse(await readFile(join(prior.packagedRoot, 'packaged-files.json'), 'utf8')).files
+    let next = 0
+    const sources = [prior.packagedRoot, payload]
+    await Promise.all(Array.from({ length: 8 }, async () => {
+      while (next < frozenFiles.length) {
+        const row = frozenFiles[next++]
+        let source
+        for (const candidateRoot of sources) {
+          const candidate = join(candidateRoot, row.path)
+          const info = await lstat(candidate).catch(error => { if (error.code === 'ENOENT') return undefined; throw error })
+          if (info?.isFile() && !info.isSymbolicLink() && info.size === row.bytes && await hashFile(candidate) === row.sha256) { source = candidate; break }
+        }
+        if (!source) throw new Error(`FROZEN_STEP1_BYTES_UNAVAILABLE:${row.path}`)
+        const target = join(paths.runtime, row.path)
+        await mkdir(dirname(target), { recursive: true })
+        await copyFile(source, target)
+      }
+    }))
+    for (const name of ['packaged-files.json', 'artifact-identity.json']) await copyFile(join(prior.packagedRoot, name), join(paths.runtime, name))
+    await verifyFrozenStep1PackagedRuntime(paths.runtime)
     await writeFile(join(paths.dsh, 'isolated-durable-sentinel.bin'), Buffer.from('Shaco isolated fixture — 中文逐字节恢复', 'utf8'))
   }
   const publicFixture = await inspectAuthenticode(process.execPath, join(payload, RELEASE_LAYOUT.nativeHelper))

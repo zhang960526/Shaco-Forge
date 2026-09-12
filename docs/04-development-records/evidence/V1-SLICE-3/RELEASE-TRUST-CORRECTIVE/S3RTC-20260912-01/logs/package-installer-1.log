@@ -1,0 +1,54 @@
+$ node scripts/package-installer.mjs
+MakeNSIS v3.12 - Copyright 1999-2026 Contributors
+See the file COPYING for license details.
+Credits can be found in the Users Manual.
+
+Command line defined: "RELEASE_TRUST_MODE=GITHUB_OPEN_SOURCE_UNSIGNED"
+Command line defined: "SOURCE=D:\Project\Shaco-Forge"
+Command line defined: "PAYLOAD=\\?\C:\Users\18902\AppData\Local\Temp\shaco-forge-s3s1-packages\1789188327151\output\Shaco Forge-win32-x64"
+Command line defined: "OUTPUT=D:\Project\Shaco-Forge\dist\installers\Shaco-Forge-1.0.0-dev.1-1789189887035-github-unsigned.exe"
+Processing config: D:\Project\Shaco-Forge\dist\installer-toolchain\nsis-3.12-verified\nsis-3.12\nsisconf.nsh
+Processing script file: "D:\Project\Shaco-Forge\apps\installer\installer.nsi" (UTF8)
+
+Processed 1 file, writing output (x86-unicode):
+
+Output: "D:\Project\Shaco-Forge\dist\installers\Shaco-Forge-1.0.0-dev.1-1789189887035-github-unsigned.exe"
+Install: 1 page (64 bytes), 1 section (1 required) (2072 bytes), 29175 instructions (816900 bytes), 12476 strings (746316 bytes), 1 language table (198 bytes).
+Datablock optimizer saved 17879 KiB (~2.6%).
+
+Using lzma (compress whole) compression.
+
+EXE header size:               37376 / 38912 bytes
+Install code:                          (1565942 bytes)
+Install data:                          (676206695 bytes)
+Compressed data:           162904359 / 677772637 bytes
+CRC (0xAD729181):                  4 / 4 bytes
+
+Total size:                162941739 / 677811553 bytes (24.0%)
+{
+  "result": "GITHUB_OPEN_SOURCE_UNSIGNED_INSTALLER_CANDIDATE",
+  "releaseTrustMode": "GITHUB_OPEN_SOURCE_UNSIGNED",
+  "releaseReady": false,
+  "finalReleaseReady": false,
+  "step2ReviewPending": true,
+  "releaseTrustPolicySatisfied": true,
+  "productionSigned": false,
+  "windowsTrustedPublisherIdentity": "NOT_PROVIDED",
+  "publisherAuthenticity": "NOT_PROVIDED",
+  "smartScreenReputation": "NOT_GUARANTEED",
+  "authenticodeRequired": false,
+  "path": "D:\\Project\\Shaco-Forge\\dist\\installers\\Shaco-Forge-1.0.0-dev.1-1789189887035-github-unsigned.exe",
+  "bytes": 162941739,
+  "sha256": "6ebe10b302e3b0df7caa11ba74729bc52e7f6ed60b1f66d16edeb19697c119da",
+  "packagedArtifactDigest": "5563534484f65d0eb0b7cf31cc880dc4df5dafe947ca2fe81c3f56d6970b370f",
+  "releaseManifestDigest": "ed3ad8dfe55702f9723b9bf160a47affd1ceae2977ea574566609c78ee30419b",
+  "installerTool": {
+    "name": "NSIS",
+    "version": "3.12",
+    "archiveSha256": "56581f90db321581c5381193d796fffcf2d24b2f8fed2160a6c6a3baa67f2c4f"
+  },
+  "target": "WINDOWS_X64_PER_USER",
+  "signingRuns": 0,
+  "providerRuns": 0
+}
+

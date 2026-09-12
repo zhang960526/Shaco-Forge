@@ -14,6 +14,7 @@ assertToolchain()
 assert.equal(process.platform, 'win32')
 assert.equal(process.arch, 'x64')
 const root = resolve(import.meta.dirname, '..')
+const ACTIVE_V1_RELEASE_TRUST_MODE = 'GITHUB_OPEN_SOURCE_UNSIGNED'
 const evidence = process.env.SHACO_FORGE_PACKAGED_EVIDENCE_ROOT
 assert.ok(evidence)
 const harness = process.env.SHACO_FORGE_HARNESS_ROOT
@@ -86,7 +87,8 @@ const nodeIdentity = JSON.parse(execFileSync(join(packagedRoot, RELEASE_LAYOUT.n
 assert.deepEqual({ ...nodeIdentity, modules: undefined }, { version: 'v22.19.0', platform: 'win32', arch: 'x64', modules: undefined })
 // Runtime self-contained .NET publication prevents the native helper from
 // silently depending on a machine-wide dotnet installation.
-execFileSync('dotnet', ['publish', 'apps/native-carrier/ShacoForge.NativeCarrier.csproj', '--no-restore', '-c', 'Release', '-r', 'win-x64', '--self-contained', 'true', '-o', join(packagedRoot, 'native')], { cwd: root, windowsHide: true, stdio: 'inherit' })
+execFileSync('dotnet', ['publish', 'apps/native-carrier/ShacoForge.NativeCarrier.csproj', '--no-restore', '-c', 'Release', '-r', 'win-x64', '--self-contained', 'true', '-p:PublishSelfContained=true', '-o', join(packagedRoot, 'native')], { cwd: root, windowsHide: true, stdio: 'inherit' })
+await readFile(join(packagedRoot, 'native/hostpolicy.dll'))
 
 const overlay = join(root, 'node_modules/.shaco-forge-build/runtime-overlay/node_modules')
 const modules = join(packagedRoot, 'harness/node_modules')
@@ -120,6 +122,7 @@ const sourceInventory = await Promise.all(sourceFiles.map(async path => ({ path,
 const release = {
   ProductVersion: product.version, DesktopVersion: product.version, WorkerVersion: product.version, CarrierVersion: 1,
   HarnessBaselineVersion: '0.1.2-alpha.1', ControlStoreSchemaVersion: '1', Compatibility: declaration(product.version, STEP1_ARTIFACT),
+  ReleaseTrustMode: ACTIVE_V1_RELEASE_TRUST_MODE,
   ProductionSignerPolicy: JSON.parse(await readFile(join(root, 'apps/installer/signer-policy.json'), 'utf8')),
   ElectronVersion: '35.7.5', WorkerNodeVersion: '22.19.0', Platform: 'win32', Architecture: 'x64',
   HarnessPackage: '@deepseek-ai/dsh@0.1.2-alpha.1', HarnessCommit: HARNESS_COMMIT, ProductionProfileIdentity: 'shaco-forge',
