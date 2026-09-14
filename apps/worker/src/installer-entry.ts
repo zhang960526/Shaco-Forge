@@ -1,5 +1,6 @@
 import { execFile, spawn } from 'node:child_process'
-import { copyFile, mkdir, readFile, stat } from 'node:fs/promises'
+import { copyFile, mkdir, readFile, stat, writeFile } from 'node:fs/promises'
+import { tmpdir } from 'node:os'
 import { dirname, join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { promisify } from 'node:util'
@@ -100,8 +101,18 @@ export async function installerMain(): Promise<void> {
 }
 function currentVersion(value: string): string { if (!/^[0-9A-Za-z.-]{1,60}$/.test(value)) throw new Error('PRODUCT_VERSION_REJECTED'); return value }
 if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
-  void installerMain().catch(error => {
+  void installerMain().catch(async error => {
     const code = error instanceof Error && /^[A-Z0-9_]+(?::|$)/.test(error.message) ? error.message.split(':')[0] : 'INSTALLER_FAILED'
     process.stderr.write(String(code) + '\n'); process.exitCode = 1
+    try {
+      const receipt = JSON.stringify({
+        format: 'SHACO_FORGE_INSTALLER_DIAGNOSTIC_V1',
+        diagnosticOnly: true,
+        capturedAtUtc: new Date().toISOString(),
+        errorCode: typeof code === 'string' && /^[A-Z0-9_]{1,80}$/.test(code) ? code : 'INSTALLER_FAILED',
+        errorType: error instanceof Error ? 'ERROR' : 'NON_ERROR_THROWN',
+      })
+      if (Buffer.byteLength(receipt, 'utf8') <= 512) await writeFile(join(tmpdir(), 'Shaco-Forge-Installer-Failure.json'), receipt, 'utf8')
+    } catch {}
   })
 }
