@@ -68,7 +68,13 @@ test('all Shaco presentation modules use public runtime exports and own no busin
   assert.match(client, /uiConversation\.binding\(binding\)/)
   assert.match(client, /conversation\.target\('chat'\)/)
   assert.match(client, /chat\.nodes\.get\(key\)/)
-  assert.doesNotMatch(client, /session\.events|events\.reduce|turn\/start|assistant\/chunk/)
+  assert.match(client, /chat\.locations\.getTurn\(/)
+  assert.match(client, /ctx\.workspaces\.(?:rename|delete|archiveSession)\(/)
+  assert.match(client, /binding\.session\.rename\(/)
+  assert.doesNotMatch(client, /session\.events|events\.reduce|turn\/start|assistant\/chunk|eventSource|rawEvent/)
+  assert.doesNotMatch(client, /\b(?:unarchive|restoreSession|unarchiveSession)\b/)
+  assert.doesNotMatch(client, /JSON\.stringify\s*\(\s*(?:node|data|block|result|arguments)/)
+  assert.doesNotMatch(client, /(?:tool|call).*(?:arguments|result).*(?:pre|code)|reasoning.*(?:text|content)/i)
 })
 
 test('Product declares every presentation service; bootstrap remains the only Context/root owner', async () => {

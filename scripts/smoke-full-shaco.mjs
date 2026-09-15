@@ -2,18 +2,21 @@
 import assert from 'node:assert/strict'
 import { spawn } from 'node:child_process'
 import { mkdtemp, mkdir } from 'node:fs/promises'
-import { join } from 'node:path'
+import { join, resolve } from 'node:path'
 import electron from 'electron'
 import { paths } from './runtime-paths.mjs'
-import { evidence } from './step2-evidence.mjs'
 import { inspectLocalPlatform, lifecycleRequest } from '../apps/desktop/dist/main/lifecycle-client.js'
 import { verifyFrozen, composition } from './step3-final-composition.mjs'
 
 assert.equal(process.version, 'v22.19.0')
+const testRoot=resolve(process.env.SHACO_FORGE_TEST_ROOT??join(paths.root,'..','Shaco-Forge-Test','SMOKE-FULL-SHACO'))
+await mkdir(testRoot,{recursive:true})
+process.env.SHACO_FORGE_STEP2_EVIDENCE_ROOT??=join(testRoot,'evidence')
+const { evidence }=await import('./step2-evidence.mjs')
 const frozenRun=!process.argv.includes('--development')
 if(frozenRun)await verifyFrozen()
 const entryComposition=await composition()
-const root = await mkdtemp(join(paths.root, 'node_modules/.full-shaco-visual-'))
+const root = await mkdtemp(join(testRoot, 'full-shaco-visual-'))
 const workspace = join(root, 'workspace')
 await mkdir(workspace)
 const children = []
@@ -98,7 +101,7 @@ let cleanup
 const scenarios={}
 const visuals=[]
 const themeSwitches=[]
-const capture=async name=>{const shot=await current.command('visual-capture',{name});visuals.push(shot);assert.equal(shot.ui.forbiddenBrand,false);assert.equal(shot.ui.harnessSeats,0);assert.equal(shot.ui.rootCount,1);assert.equal(shot.ui.sidebarCount,1);assert.equal(shot.ui.horizontalOverflow,false);return shot}
+const capture=async name=>{const shot=await current.command('visual-capture',{name});visuals.push(shot);assert.equal(shot.ui.forbiddenBrand,false);assert.equal(shot.ui.harnessSeats,0);assert.equal(shot.ui.rootCount,1);assert.equal(shot.ui.sidebarCount,1);assert.equal(shot.ui.horizontalOverflow,false);assert.ok(shot.ui.kinds.every(kind=>['user','steering','assistant-step','turn-error','turn-max-tokens'].includes(kind)),'ORDINARY_CHAT_ALLOWLIST');return shot}
 try {
   const platform=await inspectLocalPlatform(paths.nativeHelper)
   assert.equal(platform.mutexExists,false,'NO_PREEXISTING_AUTHORITY_REQUIRED')
@@ -178,8 +181,8 @@ try {
     await current.command('presentation',{state}); await delay(700)
     const shot=await capture('conversation-'+state)
     if(state==='streaming') {assert.ok(shot.ui.kinds.includes('user'));assert.ok(shot.ui.kinds.includes('assistant-step'))}
-    if(state==='tool')assert.ok(shot.ui.tools.includes('running'))
-    if(state==='result')assert.ok(shot.ui.tools.includes('settled'))
+    if(state==='tool'){assert.ok(shot.ui.tools.includes('running'));assert.ok(!shot.ui.kinds.includes('tool-call'))}
+    if(state==='result'){assert.ok(shot.ui.tools.includes('settled'));assert.ok(!shot.ui.kinds.includes('tool-call'))}
     if(state==='result')visuals.push(await current.command('expand-tool'))
     if(state==='error')assert.ok(shot.ui.kinds.includes('turn-error'))
   }
@@ -222,7 +225,7 @@ finally {
     if(!cleanup.noOrphan) {result='FAIL';failure='TEST_CLEANUP_AUTHORITY_REMAINS'}
   }
   const gates=Object.fromEntries(['APPROVAL','QUESTION','SESSION_BINDING','SINGLE_SETTLEMENT','DUPLICATE_PREVENTION','NO_AUTO_ANSWER','NO_AUTO_REPLAY','DISCONNECT_NOT_CANCEL'].map(name=>['S3G16_'+name,result==='PASS'?'PASS':'NOT_PROVEN']))
-  await evidence('full-shaco-results.json',{result,failure,failureDetails,gates,cleanup,desktopExits,providerRuns:0,scenarios,visuals,themeSwitches,composition:entryComposition,finalFrozenComposition:frozenRun})
+  await evidence('full-shaco-results.json',{result,failure,failureDetails,gates,cleanup,desktopExits,providerRuns:0,testRoot,runtimeRoot:root,scenarios,visuals,themeSwitches,composition:entryComposition,finalFrozenComposition:frozenRun})
   console.log(JSON.stringify({result,failure,gates,cleanup,desktopExits,providerRuns:0}))
   for(const child of children) {if(child.connected)child.disconnect();child.unref()}
 }

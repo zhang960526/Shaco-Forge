@@ -52,6 +52,7 @@ export async function materializeHarnessProfile(
     exports: {
       './readiness': './readiness.js',
       './connection-compatibility': './connection-compatibility.mjs',
+      './provider-execution-guard': './provider-execution-guard.mjs',
       './carrier-gateway': './carrier-gateway.mjs',
       './events-route-preflight': './events-route-preflight.mjs',
     },
@@ -108,6 +109,12 @@ export async function materializeHarnessProfile(
     '    - id: shaco-forge-host-readiness',
     "      name: '@shaco-forge/harness-bootstrap/readiness'",
     '',
+    '    - id: shaco-forge-provider-execution-guard',
+    "      name: '@shaco-forge/harness-bootstrap/provider-execution-guard'",
+    '      config:',
+    '        budget: 32',
+    '        p8Acceptance: false',
+    '',
     '    - id: shaco-forge-carrier-gateway',
     "      name: '@shaco-forge/harness-bootstrap/carrier-gateway'",
     '',
@@ -131,6 +138,7 @@ export async function materializeHarnessProfile(
   await mkdir(dirname(join(bundlePath, 'readiness.js')), { recursive: true })
   await copyFile(readinessModulePath, join(bundlePath, 'readiness.js'))
   await copyFile(connectionCompatibilityPath, join(bundlePath, 'connection-compatibility.mjs'))
+  await copyFile(join(dirname(carrierGatewayPath), 'provider-execution-guard.mjs'), join(bundlePath, 'provider-execution-guard.mjs'))
   await copyFile(carrierGatewayPath, join(bundlePath, 'carrier-gateway.mjs'))
   await copyFile(join(dirname(carrierGatewayPath), 'upgrade-drain.mjs'), join(bundlePath, 'upgrade-drain.mjs'))
   await copyFile(eventsRoutePreflightPath, join(bundlePath, 'events-route-preflight.mjs'))

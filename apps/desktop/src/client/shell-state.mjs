@@ -3,7 +3,7 @@ export function createShellState(ctx, native) {
   let generation = ctx.connection.generation.getSnapshot()
   let disposed = false
   let observedCurrent
-  let state = { selected: undefined, search: '', collapsed: [], settings: false, busy: false, error: '' }
+  let state = { selected: undefined, search: '', collapsed: [], settings: false, busy: false, error: '', dialog: null }
   const listeners = new Set()
   const publish = patch => { state = { ...state, ...patch }; for (const listener of listeners) listener() }
   const current = token => !disposed && token !== undefined && generation === token && ctx.connection.generation.getSnapshot() === token
@@ -13,7 +13,7 @@ export function createShellState(ctx, native) {
     if (next === generation) return
     generation = next
     observedCurrent = undefined
-    publish({ selected: undefined, search: '', collapsed: [], settings: false, busy: false, error: '' })
+    publish({ selected: undefined, search: '', collapsed: [], settings: false, busy: false, error: '', dialog: null })
   }
   const synchronizeSelection = () => {
     if (disposed || generation === undefined) return
@@ -40,6 +40,30 @@ export function createShellState(ctx, native) {
       }
     } finally { if (current(token)) publish({ busy: false }) }
   }
+  async function mutation(work) {
+    if (state.busy) return
+    const token = generation
+    check(token)
+    publish({ busy: true, error: '' })
+    try {
+      await work(token)
+      check(token)
+      publish({ dialog: null })
+    } catch (error) {
+      if (!current(token)) return
+      const message = String(error?.message ?? error)
+      publish({ error: /OUTCOME_UNKNOWN/.test(message)
+        ? 'OUTCOME_UNKNOWN：结果未知；不会自动重试，请等待状态刷新后确认。'
+        : '操作被 Host 拒绝，请检查名称或当前状态。' })
+    } finally { if (current(token)) publish({ busy: false }) }
+  }
+  const workspaceCall = async work => {
+    try { return await work() }
+    catch (error) {
+      if (/workspace (?:rename|delete|session archive) failed:/.test(String(error?.message ?? error))) throw new Error('REJECTED')
+      throw new Error('OUTCOME_UNKNOWN')
+    }
+  }
   async function connect(id, token) {
     check(token)
     const sessionId = await ctx.uiWorkspace.connectWorkspace(id)
@@ -64,6 +88,62 @@ export function createShellState(ctx, native) {
     toggle: id => publish({ collapsed: state.collapsed.includes(id) ? state.collapsed.filter(item => item !== id) : [...state.collapsed, id] }),
     settings: settings => publish({ settings }),
     select: id => publish({ selected: id }),
+    closeDialog: () => { if (!state.busy) publish({ dialog: null, error: '' }) },
+    setDialogTitle: title => { if (!state.busy && state.dialog && 'title' in state.dialog) publish({ dialog: { ...state.dialog, title } }) },
+    manageWorkspace: (kind, workspaceId) => {
+      if (state.busy) return
+      const workspace = ctx.workspaces.list.getSnapshot().items.find(row => row.workspaceId === workspaceId)
+      if (!workspace || !['rename-workspace', 'remove-workspace'].includes(kind)) return
+      publish({ dialog: kind === 'rename-workspace' ? { kind, workspaceId, title: workspace.title } : { kind, workspaceId }, error: '' })
+    },
+    manageSession: (kind, workspaceId, sessionId) => {
+      if (state.busy) return
+      const session = ctx.sessions.list.getSnapshot().byId[sessionId]
+      if (!session || !['rename-session', 'archive-session'].includes(kind)) return
+      publish({ dialog: kind === 'rename-session' ? { kind, workspaceId, sessionId, title: session.displayTitle } : { kind, workspaceId, sessionId }, error: '' })
+    },
+    submitDialog: () => {
+      const dialog = state.dialog
+      if (!dialog) return Promise.resolve()
+      return mutation(async token => {
+        if (dialog.kind === 'rename-workspace') {
+          const renamed = await workspaceCall(() => ctx.workspaces.rename(dialog.workspaceId, dialog.title))
+          check(token)
+          const currentRow = ctx.workspaces.list.getSnapshot().items.find(row => row.workspaceId === dialog.workspaceId)
+          if (!currentRow || currentRow.title !== renamed.title) throw new Error('OUTCOME_UNKNOWN')
+          return
+        }
+        if (dialog.kind === 'remove-workspace') {
+          const before = ctx.workspaces.list.getSnapshot().items.find(row => row.workspaceId === dialog.workspaceId)
+          if (!before) throw new Error('REJECTED')
+          const currentSession = ctx.sessions.list.getSnapshot().current
+          await workspaceCall(() => ctx.workspaces.delete(dialog.workspaceId))
+          check(token)
+          if (ctx.workspaces.list.getSnapshot().items.some(row => row.workspaceId === dialog.workspaceId)) throw new Error('OUTCOME_UNKNOWN')
+          if (currentSession && before.sessionIds.includes(currentSession)) ctx.sessions.clear()
+          if (state.selected === dialog.workspaceId) publish({ selected: undefined })
+          return
+        }
+        if (dialog.kind === 'rename-session') {
+          const binding = ctx.sessions.binding(dialog.sessionId)
+          if (!binding) throw new Error('REJECTED')
+          const result = await binding.session.rename(dialog.title)
+          check(token)
+          if (ctx.sessions.binding(dialog.sessionId) !== binding) throw new Error('STALE_GENERATION')
+          if (!result.ok) throw new Error(result.error?.code === 'internal' ? 'OUTCOME_UNKNOWN' : 'REJECTED')
+          const row = ctx.sessions.list.getSnapshot().byId[dialog.sessionId]
+          if (!row || row.displayTitle !== result.value.title) throw new Error('OUTCOME_UNKNOWN')
+          return
+        }
+        if (dialog.kind === 'archive-session') {
+          const currentSession = ctx.sessions.list.getSnapshot().current
+          await workspaceCall(() => ctx.workspaces.archiveSession(dialog.sessionId))
+          check(token)
+          if (!ctx.workspaces.list.getSnapshot().archivedSessionIds.includes(dialog.sessionId)) throw new Error('OUTCOME_UNKNOWN')
+          if (currentSession === dialog.sessionId) ctx.sessions.clear()
+        }
+      })
+    },
     openProject: () => operation(pick),
     newChat: () => operation(token => state.selected === undefined ? pick(token) : connect(state.selected, token)),
     openSession: (workspaceId, sessionId) => operation(async token => {
@@ -73,6 +153,14 @@ export function createShellState(ctx, native) {
       ctx.sessions.open(sessionId)
       publish({ selected: workspaceId })
     }),
-    dispose: () => { disposed = true; for (const off of offs) off(); listeners.clear(); state = { selected: undefined, search: '', collapsed: [], settings: false, busy: false, error: '' } },
+    openArchivedSession: sessionId => operation(async token => {
+      check(token)
+      const workspaceState = ctx.workspaces.list.getSnapshot()
+      if (!workspaceState.archivedSessionIds.includes(sessionId) || !ctx.sessions.list.getSnapshot().byId[sessionId]) throw new Error('HARNESS_FAILURE')
+      ctx.sessions.open(sessionId)
+      const workspace = workspaceState.items.find(row => row.sessionIds.includes(sessionId))
+      publish({ selected: workspace?.workspaceId })
+    }),
+    dispose: () => { disposed = true; for (const off of offs) off(); listeners.clear(); state = { selected: undefined, search: '', collapsed: [], settings: false, busy: false, error: '', dialog: null } },
   }
 }

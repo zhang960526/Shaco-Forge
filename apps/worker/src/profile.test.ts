@@ -11,11 +11,13 @@ test('S2G16 same Harness home supports replacement; mismatched profile junction 
   const source = join(root, 'module.mjs')
   await mkdir(scope, { recursive: true })
   await writeFile(source, 'export {}\n', 'utf8')
+  await writeFile(join(root, 'provider-execution-guard.mjs'), 'export const guard = true\n', 'utf8')
   await writeFile(join(root, 'upgrade-drain.mjs'), 'export {}\n', 'utf8')
   const args = [root, 'test-profile', source, source, source, source, scope, overlay] as const
   try {
     const profile = await materializeHarnessProfile(...args)
     const patch = await readFile(join(profile, 'node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml'), 'utf8')
+    assert.equal(await readFile(join(profile, 'node_modules/@shaco-forge/harness-bootstrap/provider-execution-guard.mjs'), 'utf8'), 'export const guard = true\n')
     assert.equal(await materializeHarnessProfile(...args), profile)
     assert.equal(await readFile(join(profile, 'node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml'), 'utf8'), patch)
     const target = join(profile, 'node_modules/@deepseek-ai')

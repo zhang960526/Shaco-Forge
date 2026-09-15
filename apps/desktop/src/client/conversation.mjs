@@ -4,6 +4,7 @@ import { createElement as h, useLayoutEffect, useMemo, useRef, useState } from '
 import { useSource } from './presentation-hooks.mjs'
 import { bindPresentationActions } from './presentation-actions.mjs'
 import { ShacoMessage } from './message.mjs'
+import { TurnDisclosure } from './turn-details.mjs'
 import { ShacoComposer } from './composer.mjs'
 import { ShacoApproval, ShacoQuestion } from './interactions.mjs'
 
@@ -44,7 +45,17 @@ function SessionWorkspace({ ctx, shell, binding }) {
         session.hasMore && h('button', { className: 'load-older', disabled: session.loadingOlder, onClick: older }, session.loadingOlder ? '读取中…' : '加载更早记录'),
         (error || session.openError || session.lastAgentError) && h('p', { className: 'shaco-error', role: 'status' }, error || session.lastAgentError || '会话记录读取失败'),
         !chat ? h('p', null, '正在读取对话…') : chat.order.length === 0 ? h('div', { className: 'shaco-empty' }, h('h2', null, '从一个想法开始'), h('p', null, '描述需要完成的工作，或添加图片说明。')) :
-          chat.order.map(key => { const node = chat.nodes.get(key); return node ? h(ShacoMessage, { key, node, actions }) : null }),
+          chat.order.map(key => {
+            const node = chat.nodes.get(key)
+            if (!node) return null
+            if (node.kind === 'turn-tail') return h(TurnDisclosure, { key, chat, turn: node.location.kind === 'turn' || node.location.kind === 'step' ? node.location.turn : undefined })
+            if (node.kind === 'turn-process') {
+              const turn = node.location.kind === 'turn' || node.location.kind === 'step' ? node.location.turn : undefined
+              const hasTail = turn && (chat.locations.getTurn(turn.turn) ?? []).some(candidate => chat.nodes.get(candidate)?.kind === 'turn-tail')
+              return hasTail ? null : h(TurnDisclosure, { key, chat, turn })
+            }
+            return h(ShacoMessage, { key, node, actions })
+          }),
         session.running && h('p', { className: 'running-indicator', role: 'status' }, h('span', { className: 'state-dot', 'data-state': 'running' }), '正在处理…'))),
     h('div', { className: 'composer-dock centered-content' },
       pending?.kind === 'approval' && h(ShacoApproval, { key: pendingKey, pending, actions }),
