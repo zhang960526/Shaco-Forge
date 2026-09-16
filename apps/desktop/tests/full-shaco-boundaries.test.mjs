@@ -73,6 +73,7 @@ test('all Shaco presentation modules use public runtime exports and own no busin
   assert.match(client, /binding\.session\.rename\(/)
   assert.doesNotMatch(client, /session\.events|events\.reduce|turn\/start|assistant\/chunk|eventSource|rawEvent/)
   assert.doesNotMatch(client, /\b(?:unarchive|restoreSession|unarchiveSession)\b/)
+  assert.doesNotMatch(client, /openArchivedSession|archived-sessions|archived-row|已归档/)
   assert.doesNotMatch(client, /JSON\.stringify\s*\(\s*(?:node|data|block|result|arguments)/)
   assert.doesNotMatch(client, /(?:tool|call).*(?:arguments|result).*(?:pre|code)|reasoning.*(?:text|content)/i)
 })

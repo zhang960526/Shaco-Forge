@@ -153,12 +153,24 @@ test('frozen public Workspace Host/Client and real JSONL persistence survive ren
     const renamed = await clientRuntime.workspaces.rename(workspaceId, 'Durable Workspace Title')
     assert.equal(renamed.title, 'Durable Workspace Title')
     assert.equal(clientRuntime.model.getSnapshot().items[0].title, 'Durable Workspace Title')
-    await clientRuntime.workspaces.archiveSession(sessionId)
-    assert.deepEqual([...clientRuntime.model.getSnapshot().archivedSessionIds], [sessionId])
 
     const journalPath = hostRuntime.ctx.sessionPersistence.locate(session.header).path
-    const projectHashBeforeRemove = await hashTree(project)
-    const journalHashBeforeArchiveReload = sha256(await readFile(journalPath))
+    const projectHashBeforeArchive = await hashTree(project)
+    const journalHashBeforeArchive = sha256(await readFile(journalPath))
+    const workspaceMembershipBeforeArchive = [...hostRuntime.ctx.workspaceRegistry.get(workspaceId).sessionIds]
+    const liveSessionRosterBeforeArchive = hostRuntime.ctx.sessions.list().map(item => item.id)
+    const persistedSessionRosterBeforeArchive = (await hostRuntime.ctx.sessionPersistence.list()).map(header => header.id)
+    const sessionIdentityBeforeArchive = structuredClone((await hostRuntime.ctx.sessionPersistence.inspect(sessionId)).meta)
+
+    await clientRuntime.workspaces.archiveSession(sessionId)
+    assert.deepEqual([...clientRuntime.model.getSnapshot().archivedSessionIds], [sessionId])
+    assert.equal(await hashTree(project), projectHashBeforeArchive)
+    assert.equal(sha256(await readFile(journalPath)), journalHashBeforeArchive)
+    assert.deepEqual([...hostRuntime.ctx.workspaceRegistry.get(workspaceId).sessionIds], workspaceMembershipBeforeArchive)
+    assert.equal(hostRuntime.ctx.sessions.get(sessionId), session)
+    assert.deepEqual(hostRuntime.ctx.sessions.list().map(item => item.id), liveSessionRosterBeforeArchive)
+    assert.deepEqual((await hostRuntime.ctx.sessionPersistence.list()).map(header => header.id), persistedSessionRosterBeforeArchive)
+    assert.deepEqual((await hostRuntime.ctx.sessionPersistence.inspect(sessionId)).meta, sessionIdentityBeforeArchive)
 
     await clientRuntime.ctx.fiber.dispose()
     await hostRuntime.ctx.fiber.dispose()
@@ -176,12 +188,12 @@ test('frozen public Workspace Host/Client and real JSONL persistence survive ren
     assert.equal(reloaded.items[0].sessionIds.filter(id => id === sessionId).length, 1)
     const stored = await hostRuntime.ctx.sessionPersistence.inspect(sessionId)
     assert.equal(foldSessionTitle(stored.events)?.title, 'Durable Session Title')
-    assert.equal(sha256(await readFile(journalPath)), journalHashBeforeArchiveReload)
+    assert.equal(sha256(await readFile(journalPath)), journalHashBeforeArchive)
 
     await clientRuntime.workspaces.delete(workspaceId)
     assert.equal(clientRuntime.model.getSnapshot().items.some(item => item.workspaceId === workspaceId), false)
-    assert.equal(await hashTree(project), projectHashBeforeRemove)
-    assert.equal(sha256(await readFile(journalPath)), journalHashBeforeArchiveReload)
+    assert.equal(await hashTree(project), projectHashBeforeArchive)
+    assert.equal(sha256(await readFile(journalPath)), journalHashBeforeArchive)
 
     await clientRuntime.ctx.fiber.dispose()
     await hostRuntime.ctx.fiber.dispose()
@@ -197,8 +209,8 @@ test('frozen public Workspace Host/Client and real JSONL persistence survive ren
     const recreated = await clientRuntime.workspaces.create({ path: project })
     assert.notEqual(recreated.workspaceId, workspaceId)
     assert.deepEqual([...recreated.sessionIds], [])
-    assert.equal(await hashTree(project), projectHashBeforeRemove)
-    assert.equal(sha256(await readFile(journalPath)), journalHashBeforeArchiveReload)
+    assert.equal(await hashTree(project), projectHashBeforeArchive)
+    assert.equal(sha256(await readFile(journalPath)), journalHashBeforeArchive)
 
     const reconnect = await publicClient(hostRuntime.host)
     contexts.push(reconnect.ctx)

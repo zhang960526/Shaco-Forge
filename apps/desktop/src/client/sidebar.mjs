@@ -9,8 +9,6 @@ export function Sidebar({ shell, workspaces, sessions, collapsed, toggleSidebar 
   const groups = projects.items.map(project => ({ project, items: project.sessionIds.map(id => chats.byId[id]).filter(item => item && !projects.archivedSessionIds.includes(item.id)) }))
     .map(({ project, items }) => ({ project, items: project.title.toLocaleLowerCase().includes(query) ? items : items.filter(item => item.displayTitle.toLocaleLowerCase().includes(query)) }))
     .filter(({ project, items }) => !query || project.title.toLocaleLowerCase().includes(query) || items.length)
-  const archived = projects.archivedSessionIds.map(id => chats.byId[id]).filter(item => item && (!query || item.displayTitle.toLocaleLowerCase().includes(query)))
-  const archivedWorkspace = id => projects.items.find(project => project.sessionIds.includes(id))
   if (collapsed) return h('aside', { className: 'shaco-sidebar shaco-rail', 'aria-label': 'Shaco Forge 导航', 'data-testid': 'shaco-sidebar' },
     h('button', { onClick: toggleSidebar, 'aria-label': '展开导航' }, '☰'),
     h('button', { onClick: shell.newChat, disabled: state.busy, 'aria-label': '新对话' }, '+'),
@@ -34,17 +32,10 @@ export function Sidebar({ shell, workspaces, sessions, collapsed, toggleSidebar 
             h('button', { className: 'row-action', 'aria-label': `移除项目 ${project.title}`, disabled: state.busy, onClick: () => shell.manageWorkspace('remove-workspace', project.workspaceId) }, '移除')),
           expanded && h('div', { role: 'group' }, rows), expanded && !items.length && h('p', null, '暂无对话'))
       }))
-  const archiveSection = projects.phase === 'ready' && chats.phase === 'ready' && h('section', { className: 'archived-sessions', 'aria-label': '已归档' },
-    h('h2', null, '已归档'), archived.length === 0 ? h('p', null, query ? '无匹配的归档对话' : '暂无归档对话') : archived.map(item => {
-      const workspace = archivedWorkspace(item.id)
-      return h('div', { key: item.id, className: 'archived-row' },
-        h('button', { className: 'sidebar-row', disabled: state.busy, onClick: () => shell.openArchivedSession(item.id) }, item.blank ? '新对话' : item.displayTitle),
-        h('small', null, workspace?.title ?? '未分组'))
-    }))
   const directory = h('section', { className: 'sidebar-section project-directory', 'data-testid': 'project-directory', 'aria-label': '项目目录' },
     h('div', { className: 'directory-heading' }, h('h2', null, '项目目录'), h('button', { 'data-testid': 'open-project', disabled: state.busy, onClick: shell.openProject }, '打开项目…')),
     h('input', { type: 'search', placeholder: '搜索项目与对话', 'aria-label': '搜索项目与对话', value: state.search, onChange: event => shell.setSearch(event.target.value) }),
-    tree, archiveSection, state.dialog && h(ManagementDialog, { state, shell }))
+    tree, state.dialog && h(ManagementDialog, { state, shell }))
   return h('aside', { className: 'shaco-sidebar', 'aria-label': 'Shaco Forge 导航', 'data-testid': 'shaco-sidebar' },
     h('button', { className: 'collapse-sidebar', onClick: toggleSidebar, 'aria-label': '折叠导航' }, '‹'),
     h('header', { className: 'brand' }, h('span', { className: 'brand-mark', 'aria-hidden': true }, 'S'), h('span', null, h('strong', null, 'Shaco Forge'), h('small', null, 'AI 开发工作空间'))),
@@ -62,7 +53,7 @@ function ManagementDialog({ state, shell }) {
   const title = dialog.kind === 'rename-workspace' ? '重命名项目' : dialog.kind === 'remove-workspace' ? '安全移除项目' : dialog.kind === 'rename-session' ? '重命名对话' : '归档对话'
   return h('section', { className: 'shaco-confirmation management-dialog', role: 'dialog', 'aria-modal': true, 'aria-label': title },
     h('h3', null, title), dialog.kind === 'remove-workspace' && h('p', null, REMOVE_COPY),
-    dialog.kind === 'archive-session' && h('p', null, '归档后，对话会从项目主列表移到“已归档”；会话记录不会删除。'),
+    dialog.kind === 'archive-session' && h('p', null, '归档后，对话会从 Shaco Forge 的对话列表中消失；会话记录不会删除。'),
     rename && h('label', null, '名称', h('input', { autoFocus: true, value: dialog.title, disabled: state.busy, onChange: event => shell.setDialogTitle(event.target.value) })),
     state.error && h('p', { className: 'shaco-error', role: 'alert' }, state.error),
     h('div', { className: 'management-actions' }, h('button', { disabled: state.busy, onClick: shell.closeDialog }, '取消'),

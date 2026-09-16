@@ -136,11 +136,10 @@ export function createShellState(ctx, native) {
           return
         }
         if (dialog.kind === 'archive-session') {
-          const currentSession = ctx.sessions.list.getSnapshot().current
           await workspaceCall(() => ctx.workspaces.archiveSession(dialog.sessionId))
           check(token)
           if (!ctx.workspaces.list.getSnapshot().archivedSessionIds.includes(dialog.sessionId)) throw new Error('OUTCOME_UNKNOWN')
-          if (currentSession === dialog.sessionId) ctx.sessions.clear()
+          if (ctx.sessions.list.getSnapshot().current === dialog.sessionId) ctx.sessions.clear()
         }
       })
     },
@@ -152,14 +151,6 @@ export function createShellState(ctx, native) {
       if (!workspace?.sessionIds.includes(sessionId)) throw new Error('HARNESS_FAILURE')
       ctx.sessions.open(sessionId)
       publish({ selected: workspaceId })
-    }),
-    openArchivedSession: sessionId => operation(async token => {
-      check(token)
-      const workspaceState = ctx.workspaces.list.getSnapshot()
-      if (!workspaceState.archivedSessionIds.includes(sessionId) || !ctx.sessions.list.getSnapshot().byId[sessionId]) throw new Error('HARNESS_FAILURE')
-      ctx.sessions.open(sessionId)
-      const workspace = workspaceState.items.find(row => row.sessionIds.includes(sessionId))
-      publish({ selected: workspace?.workspaceId })
     }),
     dispose: () => { disposed = true; for (const off of offs) off(); listeners.clear(); state = { selected: undefined, search: '', collapsed: [], settings: false, busy: false, error: '', dialog: null } },
   }

@@ -106,12 +106,17 @@ test('Workspace and Session rename settle only from public authoritative project
 test('safe remove and archive clear only the affected current selection after Host success', async () => {
   const archived = setup()
   archived.sessions.set({ ...archived.sessions.getSnapshot(), current: 's' })
-  archived.shell.manageSession('archive-session', 'w', 's'); await archived.shell.submitDialog()
+  archived.shell.manageSession('archive-session', 'w', 's')
+  const confirmation = renderToStaticMarkup(createElement(Sidebar, { shell: archived.shell, workspaces: archived.workspaces, sessions: archived.sessions, collapsed: false, toggleSidebar() {} }))
+  assert.match(confirmation, /从 Shaco Forge 的对话列表中消失；会话记录不会删除/)
+  assert.doesNotMatch(confirmation, /已归档|恢复|Restore|Unarchive|永久删除|Permanent Delete/)
+  await archived.shell.submitDialog()
   assert.deepEqual(archived.workspaces.getSnapshot().archivedSessionIds, ['s'])
   assert.deepEqual(archived.calls.filter(item => ['archiveSession', 'clear'].includes(item[0])), [['archiveSession', 's'], ['clear']])
-  await archived.shell.openArchivedSession('s')
-  assert.deepEqual(archived.workspaces.getSnapshot().archivedSessionIds, ['s'])
-  assert.equal(archived.calls.filter(item => item[0] === 'archiveSession').length, 1)
+  assert.equal(archived.sessions.getSnapshot().current, undefined)
+  assert.deepEqual(archived.workspaces.getSnapshot().items[0].sessionIds, ['s'])
+  assert.ok(archived.sessions.getSnapshot().byId.s)
+  assert.equal('openArchivedSession' in archived.shell, false)
   archived.shell.dispose()
 
   const removed = setup()
@@ -121,14 +126,60 @@ test('safe remove and archive clear only the affected current selection after Ho
   assert.deepEqual(removed.calls.filter(item => ['deleteWorkspace', 'clear'].includes(item[0])), [['deleteWorkspace', 'w'], ['clear']])
   removed.shell.dispose()
 })
-test('archived projection is separate, unique, open-only and carries exact safe-remove copy', () => {
+test('archive settles against the latest current selection and never clears without authoritative success', async () => {
+  const switched = setup()
+  let releaseArchive
+  switched.ctx.workspaces.archiveSession = id => new Promise(resolve => {
+    switched.calls.push(['archiveSession', id])
+    releaseArchive = () => {
+      switched.workspaces.set({ ...switched.workspaces.getSnapshot(), archivedSessionIds: [id] })
+      resolve()
+    }
+  })
+  switched.sessions.set({
+    ...switched.sessions.getSnapshot(),
+    current: 's',
+    ids: ['s', 'other-session'],
+    byId: { ...switched.sessions.getSnapshot().byId, 'other-session': { id: 'other-session', blank: false, displayTitle: 'Other Chat' } },
+  })
+  switched.shell.manageSession('archive-session', 'w', 's')
+  const pending = switched.shell.submitDialog()
+  switched.sessions.set({ ...switched.sessions.getSnapshot(), current: 'other-session' })
+  releaseArchive()
+  await pending
+  assert.equal(switched.sessions.getSnapshot().current, 'other-session')
+  assert.deepEqual(switched.calls.filter(item => ['archiveSession', 'clear'].includes(item[0])), [['archiveSession', 's']])
+  switched.shell.dispose()
+
+  const rejected = setup()
+  rejected.ctx.workspaces.archiveSession = async id => { rejected.calls.push(['archiveSessionRejected', id]); throw new Error('rejected') }
+  rejected.sessions.set({ ...rejected.sessions.getSnapshot(), current: 's' })
+  rejected.shell.manageSession('archive-session', 'w', 's')
+  await rejected.shell.submitDialog()
+  assert.equal(rejected.sessions.getSnapshot().current, 's')
+  assert.equal(rejected.calls.some(item => item[0] === 'clear'), false)
+  rejected.shell.dispose()
+
+  const unconfirmed = setup()
+  unconfirmed.ctx.workspaces.archiveSession = async id => { unconfirmed.calls.push(['archiveSessionUnconfirmed', id]) }
+  unconfirmed.sessions.set({ ...unconfirmed.sessions.getSnapshot(), current: 's' })
+  unconfirmed.shell.manageSession('archive-session', 'w', 's')
+  await unconfirmed.shell.submitDialog()
+  assert.equal(unconfirmed.sessions.getSnapshot().current, 's')
+  assert.equal(unconfirmed.calls.some(item => item[0] === 'clear'), false)
+  assert.match(unconfirmed.shell.getSnapshot().error, /OUTCOME_UNKNOWN/)
+  unconfirmed.shell.dispose()
+})
+test('archived Session remains authoritative but is completely absent from Shaco UI', () => {
   const { shell, ctx, workspaces, sessions } = setup()
   sessions.set({ ...sessions.getSnapshot(), byId: { s: { ...sessions.getSnapshot().byId.s, blank: false } } })
   workspaces.set({ ...workspaces.getSnapshot(), archivedSessionIds: ['s'] })
   let markup = renderToStaticMarkup(createElement(Sidebar, { shell, workspaces, sessions: ctx.sessions.list, collapsed: false, toggleSidebar() {} }))
-  assert.equal((markup.match(/>Chat</g) ?? []).length, 1)
-  assert.match(markup, /已归档/)
-  assert.doesNotMatch(markup, /恢复|永久删除/)
+  assert.equal(workspaces.getSnapshot().items[0].sessionIds.includes('s'), true)
+  assert.ok(sessions.getSnapshot().byId.s)
+  assert.deepEqual(workspaces.getSnapshot().archivedSessionIds, ['s'])
+  assert.doesNotMatch(markup, />Chat</)
+  assert.doesNotMatch(markup, /已归档|archived-row|恢复|Restore|Unarchive|永久删除|Permanent Delete/)
   shell.manageWorkspace('remove-workspace', 'w')
   markup = renderToStaticMarkup(createElement(Sidebar, { shell, workspaces, sessions: ctx.sessions.list, collapsed: false, toggleSidebar() {} }))
   assert.match(markup, /不会删除项目目录、其中的文件或任何会话记录/)

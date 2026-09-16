@@ -43,12 +43,8 @@ small { color:var(--text-muted); }
 .project-title { flex:1;min-width:0; }
 .chat-row { display:flex;gap:8px;width:calc(100% - 20px);margin-left:20px;font-size:12px; }
 .row-action { flex:none;padding-inline:5px !important;font-size:10px; }
-.chat-management-row,.archived-row { display:flex;align-items:center;gap:2px;min-width:0; }
-.chat-management-row .chat-row,.archived-row .sidebar-row { flex:1;min-width:0; }
-.archived-sessions { margin-top:18px;padding-top:14px;border-top:1px var(--template-rule) var(--border-default); }
-.archived-sessions h2 { margin-bottom:8px; }
-.archived-row { align-items:flex-start;flex-direction:column;margin-top:4px; }
-.archived-row small { padding-left:12px; }
+.chat-management-row { display:flex;align-items:center;gap:2px;min-width:0; }
+.chat-management-row .chat-row { flex:1;min-width:0; }
 .disclosure { flex:none;width:22px;padding-inline:2px !important; }
 .collapse-sidebar { position:absolute;right:2px;top:2px;min-height:22px;padding:0 6px !important; }
 .settings-entry { margin-top:auto;border-top:1px var(--template-rule) var(--border-default) !important;border-radius:0;padding-top:16px !important; }

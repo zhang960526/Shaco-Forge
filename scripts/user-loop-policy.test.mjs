@@ -127,6 +127,7 @@ test('actual generated Host profile includes one approved settings entry before 
     await mkdir(scope); await mkdir(overlay)
     const modulePath = join(root, 'observation-module.mjs')
     await writeFile(modulePath, 'export default {}\n', 'utf8')
+    await writeFile(join(root, 'provider-execution-guard.mjs'), 'export {}\n', 'utf8')
     await writeFile(join(root, 'upgrade-drain.mjs'), 'export {}\n', 'utf8')
     const profile = await materializeHarnessProfile(root, 'test-profile', modulePath, modulePath, modulePath, modulePath, scope, overlay)
     const patch = await readFile(join(profile, 'node_modules/@shaco-forge/harness-bootstrap/cordis.patch.yml'), 'utf8')
