@@ -1,0 +1,171 @@
+@import '../assets/famicom/fonts.css';
+
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+  --surface-transparent: rgba(0, 0, 0, 0);
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  /* Shared overlay elevation: also inherited by the protected FAMICOM dark theme. */
+  --surface-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* The no-template selector covers the initial bootstrap before the controller applies. */
+:root:not([data-theme-template]),
+:root[data-theme-template="BRAUN"] {
+  --message-border: transparent;
+  --workbar-decoration: transparent;
+  --workbar-decoration-ink: #ffffff;
+  --template-label: '';
+  --template-rule: solid;
+  --template-decoration-height: 0px;
+  --font-ui: 'Neue Haas Grotesk', 'Helvetica Neue', Arial, 'Shaco FAMICOM Noto', 'Source Han Sans SC', 'Microsoft YaHei UI', sans-serif;
+  --font-display: var(--font-ui);
+  --font-mono: 'IBM Plex Mono', Consolas, 'Courier New', 'Shaco FAMICOM Noto', monospace;
+  --control-radius: 4px;
+  --card-radius: 6px;
+  --control-height: 34px;
+  --control-weight: 500;
+  --heading-weight: 600;
+  --message-padding: 14px 21px;
+  --message-gap: 14px;
+  --nav-padding: 9px 10px;
+  --control-shadow: none;
+  --accent-stripe: none;
+}
+:root:not([data-theme-template]):not([data-theme="dark"]),
+:root[data-theme-template="BRAUN"][data-theme="light"] {
+  --surface-app: #f6f5f1;
+  --surface-sidebar: #eeeee8;
+  --surface-primary: #f6f5f1;
+  --surface-secondary: #eaeae4;
+  --surface-elevated: #fafaf7;
+  --text-primary: #272a27;
+  --text-secondary: #6c6e66;
+  --text-muted: #777b70;
+  --text-on-accent: #f6f7f1;
+  --border-default: #d6d8d0;
+  --border-subtle: #c8cbc2;
+  --border-focus: #a64b30;
+  --hover-background: #e7e7e1;
+  --selection-background: #dcded5;
+  --focus-ring: rgba(166, 75, 48, 0.25);
+  --status-success: #4c7654;
+  --status-warning: #a06324;
+  --status-error: #a3462c;
+  --status-neutral: #777b70;
+  --accent-primary: #3d4038;
+  --accent-hover: #2a2f25;
+  --message-user-surface: #e7e7e1;
+  --message-assistant-surface: #edede7;
+  --braun-indicator: #cd5938;
+  --surface-shadow: 0 8px 28px rgba(39, 42, 35, 0.15);
+  --window-chrome: #3d4038;
+}
+:root:not([data-theme-template])[data-theme="dark"],
+:root[data-theme-template="BRAUN"][data-theme="dark"] {
+  --surface-app: #20211e;
+  --surface-sidebar: #252622;
+  --surface-primary: #20211e;
+  --surface-secondary: #2c2e28;
+  --surface-elevated: #30322c;
+  --text-primary: #eeeee8;
+  --text-secondary: #c4c6bc;
+  --text-muted: #a5a99c;
+  --text-on-accent: #20211e;
+  --border-default: #51554a;
+  --border-subtle: #41453b;
+  --border-focus: #e18b69;
+  --hover-background: #393d32;
+  --selection-background: #44493c;
+  --focus-ring: rgba(225, 139, 105, 0.3);
+  --status-success: #94bc92;
+  --status-warning: #e4ba72;
+  --status-error: #efa18a;
+  --status-neutral: #a5a99c;
+  --accent-primary: #d0d4c5;
+  --accent-hover: #e7eade;
+  --message-user-surface: #363930;
+  --message-assistant-surface: #2d3028;
+  --braun-indicator: #e18b69;
+  --surface-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  --window-chrome: #20211e;
+}
+:root[data-theme-template="FAMICOM"] {
+  --font-ui: 'Shaco FAMICOM Noto', 'Microsoft YaHei UI', sans-serif;
+  --font-display: 'Shaco FAMICOM Pixel', 'Microsoft YaHei UI', monospace;
+  --font-mono: 'Shaco FAMICOM Mono', Consolas, monospace;
+  --template-label: '';
+  --template-rule: dashed;
+  --template-decoration-height: 54px;
+  --control-radius: 4px;
+  --card-radius: 9px;
+  --control-height: 36px;
+  --control-weight: 600;
+  --heading-weight: 700;
+  --message-padding: 14px 21px;
+  --message-gap: 14px;
+  --nav-padding: 10px 10px;
+  --control-shadow: none;
+  --workbar-decoration: #8e3734;
+  --workbar-decoration-ink: #fff2dd;
+  --accent-stripe: none;
+}
+:root[data-theme-template="FAMICOM"][data-theme="light"] {
+  --surface-app: #fbf8ef;
+  --surface-sidebar: #fbf7ed;
+  --surface-primary: #fbf8ef;
+  --surface-secondary: #f4eee1;
+  --surface-elevated: #fffdf7;
+  --text-primary: #171513;
+  --text-secondary: #59524d;
+  --text-muted: #77716c;
+  --text-on-accent: #fffaf1;
+  --border-default: #d9cebd;
+  --border-subtle: #e1d4c7;
+  --border-focus: #76504b;
+  --hover-background: #f5e9df;
+  --selection-background: #ead3cd;
+  --focus-ring: rgba(118, 80, 75, 0.25);
+  --status-success: #4c7654;
+  --status-warning: #a06324;
+  --status-error: #7c2c2d;
+  --status-neutral: #77716c;
+  --accent-primary: #8e3734;
+  --accent-hover: #702825;
+  --message-user-surface: #f3e5e0;
+  --message-assistant-surface: rgba(255, 253, 247, 0.5);
+  --message-border: #d9cebd;
+  --famicom-line-red: #b7655f;
+  --famicom-user-border: #d8aaa2;
+  --surface-shadow: 0 12px 30px rgba(71, 39, 31, 0.16);
+}
+:root[data-theme-template="FAMICOM"][data-theme="dark"] {
+  --surface-app: #211918;
+  --surface-sidebar: #291f1c;
+  --surface-primary: #302420;
+  --surface-secondary: #3b2c25;
+  --surface-elevated: #403028;
+  --text-primary: #f9edd6;
+  --text-secondary: #d5bfa7;
+  --text-muted: #b8a08c;
+  --text-on-accent: #fff7e8;
+  --border-default: #795345;
+  --border-subtle: #573d32;
+  --border-focus: #df8580;
+  --hover-background: #56382e;
+  --selection-background: #6c3b31;
+  --focus-ring: rgba(223, 133, 128, 0.3);
+  --status-success: #94bc92;
+  --status-warning: #e4ba72;
+  --status-error: #ffa59b;
+  --status-neutral: #d6ad94;
+  --accent-primary: #b64a48;
+  --accent-hover: #cf6660;
+  --message-user-surface: #53352d;
+  --message-assistant-surface: #382b25;
+  --message-border: #745041;
+  --famicom-line-red: #b7655f;
+  --famicom-user-border: #98685d;
+}

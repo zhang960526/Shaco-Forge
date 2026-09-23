@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="24" height="24" viewBox="0 0 24 24"
+     fill="none">
+  <!-- 红白机 / Famicom 风格：方正、低圆角、红+米白、像素阴影 -->
+  <path d="M4 3H20V4H21V20H20V21H4V20H3V4H4V3Z"
+        fill="#A33A33"/>
+  <path d="M5 5H19V19H5V5Z"
+        fill="#F3EBDD"/>
+  <path d="M8 5H10V19H8V5Z"
+        fill="#A33A33"/>
+  <!-- 像素式深色阴影 -->
+  <path d="M4 20H20V21H4V20ZM20 4H21V20H20V4Z"
+        fill="#5B2A27"/>
+  <!-- 左侧槽位高光 -->
+  <path d="M6 6H7V18H6V6Z"
+        fill="#FFF8EC"/>
+</svg>

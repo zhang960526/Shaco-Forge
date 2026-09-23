@@ -1,0 +1,17 @@
+{
+  "name": "@shaco-forge/desktop",
+  "version": "1.0.0-dev.1",
+  "private": true,
+  "type": "module",
+  "main": "dist/main/bootstrap.js",
+  "exports": { "./client": "./dist/client/recovery.js" },
+  "scripts": {
+    "build": "node scripts/prepare-harness-client.mjs && tsc -p tsconfig.node.json && vite build",
+    "typecheck": "tsc -p tsconfig.node.json --noEmit && tsc -p tsconfig.renderer.json --noEmit"
+  },
+  "dependencies": {
+    "@shaco-forge/contracts": "workspace:*",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

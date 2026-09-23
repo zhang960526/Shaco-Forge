@@ -1,0 +1,93 @@
+// Non-Provider driver around the real Product Main and real embedded Client.
+import { app, BrowserWindow } from 'electron'
+import { createHash } from 'node:crypto'
+import { readFile, writeFile } from 'node:fs/promises'
+import { startDesktop, observeStep2Recovery, simulateStep2CarrierLoss } from '../dist/main/main.js'
+void startDesktop()
+const step3 = process.env.SHACO_FORGE_STEP3_MODE === '1' ? await import('./step3-shell-driver.mjs') : undefined
+
+const control = process.env.SHACO_FORGE_STEP2_CONTROL
+const output = process.env.SHACO_FORGE_STEP2_OUTPUT
+const hash = value => typeof value === 'string' ? createHash('sha256').update(value).digest('hex') : undefined
+let commandId = 0
+let busy = false
+let response
+let failure
+
+async function seed(window) {
+  if (step3) return await step3.seed(window)
+  // Public deterministic local mutations only: no prompt, tool, or Agent turn.
+  const seeded = await window.webContents.executeJavaScript(`(async () => {
+    const call = async (endpoint, args) => {
+      const reply = await window.shacoForge.transport.fetch({ url: 'shaco-forge://client/api/' + endpoint, method: 'POST', contentType: 'application/json',
+        body: JSON.stringify({ type: 'client-request', rpcId: crypto.randomUUID(), method: endpoint, payload: { args } }) });
+      const envelope = JSON.parse(reply.body);
+      if (!envelope.result.ok) throw new Error(endpoint + ':' + envelope.result.error.code);
+      return envelope.result.value;
+    };
+    const workspace = await call('workspace/create', { request: { path: ${JSON.stringify(process.env.SHACO_FORGE_STEP2_WORKSPACE)} } });
+    const session = await call('session/create', { request: { workspaceId: workspace.workspace.workspaceId, agentPreset: 'standard' } });
+    await call('session/rename', { request: { sessionId: session.sessionId, title: 'Step2 cold projection' } });
+    return { workspaceId: workspace.workspace.workspaceId, sessionId: session.sessionId };
+  })()`)
+  const deadline = Date.now() + 10_000
+  let opened = false
+  while (Date.now() < deadline) {
+    opened = await window.webContents.executeJavaScript(`(() => {
+      // Frozen Harness hides unselected blank sessions and labels selected
+      // blanks as New Session regardless of title. Its existing workspace
+      // New Session action reuses the registered blank and calls sessions.open.
+      const project = document.querySelector('.project-title');
+      if (project) { project.click(); document.querySelector('[data-testid="new-chat"]').click(); return true; }
+      const button = [...document.querySelectorAll('#harness-client-root button[aria-label]')].find(button => {
+        const label = button.getAttribute('aria-label');
+        return label.includes('workspace') && (/New session in/.test(label) || /新建会话/.test(label));
+      });
+      if (!button) return false;
+      button.click(); return true;
+    })()`)
+    if (opened) break
+    await new Promise(resolve => setTimeout(resolve, 200))
+  }
+  if (!opened) throw new Error('COLD_SESSION_UI_SELECTION_NOT_FOUND')
+  return { workspaceHash: hash(seeded.workspaceId), sessionHash: hash(seeded.sessionId), publicMutations: ['workspace/create', 'session/create', 'session/rename'], promptRuns: 0 }
+}
+
+const timer = setInterval(async () => {
+  if (busy) return
+  busy = true
+  try {
+    const command = await readFile(control, 'utf8').then(JSON.parse).catch(() => undefined)
+    const window = BrowserWindow.getAllWindows()[0]
+    if (command && command.id > commandId && window && !window.webContents.isLoading()) {
+      commandId = command.id
+      try {
+        if (command.action === 'seed') response = await seed(window)
+        else if (command.action === 'loss') response = await simulateStep2CarrierLoss()
+        else if (command.action === 'verify-shell' && step3) response = await step3.verify(window)
+        else if (command.action === 'close') { clearInterval(timer); window.close(); return }
+        else throw new Error('UNKNOWN_TEST_CONTROL')
+      } catch (error) {
+        failure = error.message
+        if (step3) await step3.diagnostics(window, failure)
+      }
+    }
+    const observation = observeStep2Recovery()
+    const authority = observation.authority
+    const renderer = window && !window.webContents.isLoading() ? await window.webContents.executeJavaScript(`(() => ({
+      requireAvailable: typeof require !== 'undefined', processAvailable: typeof process !== 'undefined',
+      rootPresent: document.querySelector('#harness-client-root')?.children.length > 0,
+      projectionVisible: document.querySelector('#harness-client-root')?.style.visibility === 'visible',
+      currentSessionSelected: !!document.querySelector('#harness-client-root [role="treeitem"][aria-selected="true"]'),
+      eventsReady: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__?.eventsReady,
+      promptRuns: window.__SHACO_FORGE_TRANSPORT_EVIDENCE__?.userLoop.evidence.prompts.length ?? 0
+    }))()` ).catch(() => undefined) : undefined
+    await writeFile(output, JSON.stringify({ commandId, response, failure, mainPid: process.pid,
+      authority: authority ? { worker: authority.worker, host: authority.host, helper: authority.helper, workerInstanceIdHash: hash(authority.workerInstanceId) } : undefined,
+      credentialEpochHash: hash(observation.credentialEpoch), clientInstanceIdHash: hash(observation.clientInstanceId),
+      recovery: observation.recovery, transitions: observation.transitions, metrics: observation.metrics, readProof: observation.readProof,
+      retiredGenerations: observation.retiredGenerations, recoveryMetrics: observation.recoveryMetrics, renderer,
+    }), 'utf8')
+  } finally { busy = false }
+}, 200)
+app.on('before-quit', () => clearInterval(timer))

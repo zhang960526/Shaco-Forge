@@ -1,0 +1,11 @@
+node_modules/
+.pnpm-store/
+dist/
+dist-tests/
+coverage/
+.generated-client/
+*.tsbuildinfo
+apps/native-carrier/bin/
+apps/native-carrier/obj/
+apps/native-carrier-tests/bin/
+apps/native-carrier-tests/obj/

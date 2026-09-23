@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254">
+  <title>chat</title>
+  <g transform="translate(238.64983 260.87108) scale(32.404181)">
+    <path fill="none" stroke="#faf1e1" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+        d="M6 3H18C19.657 3 21 4.343 21 6V14C21 15.657 19.657 17 18 17H10.8L5.9 20.2Q5 20.8 5 19.7V16.83C3.835 16.418 3 15.306 3 14V6C3 4.343 4.343 3 6 3Z"/>
+      <g fill="#faf1e1"><circle cx="7.8" cy="10" r=".9"/><circle cx="12" cy="10" r=".9"/><circle cx="16.2" cy="10" r=".9"/></g>
+  </g>
+</svg>

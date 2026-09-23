@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'"
+    />
+    <title>Shaco Forge</title>
+    <script src="./static/shell-bootstrap.js"></script>
+    <script src="./static/boot-facade.js"></script>
+    <script src="./static/bootstrap.js"></script>
+  </head>
+  <body>
+    <div class="shaco-bootstrap" data-testid="truthful-state" role="status" aria-live="polite">
+      <strong>Shaco Forge</strong><span>正在准备工作空间…</span>
+    </div>
+    <div id="harness-client-root" data-shaco-client-mount hidden></div>
+    <div class="worker-controls" data-testid="worker-controls">
+      <output class="connection-status" data-testid="connection-status" data-connected="false" aria-live="polite">Worker · 正在连接</output>
+      <span class="worker-control-divider" aria-hidden="true"></span>
+      <div class="worker-menu-anchor">
+        <button class="worker-menu-trigger" type="button" aria-label="更多操作" aria-haspopup="menu" aria-expanded="false" aria-controls="worker-actions-menu" data-tooltip="更多操作"><span class="control-icon control-icon-dots" aria-hidden="true"></span></button>
+        <div class="worker-actions-menu" id="worker-actions-menu" role="menu" aria-label="产品控制" hidden>
+          <button type="button" role="menuitem" data-testid="stop-worker" title="停止 Worker，保持工作空间打开"><span class="control-icon control-icon-stop" aria-hidden="true"></span><span>Stop Worker</span></button>
+          <span class="worker-menu-divider" role="separator"></span>
+          <button type="button" role="menuitem" class="worker-exit-action" data-testid="exit-product" title="安全停止 Worker 后退出产品"><span class="control-icon control-icon-power" aria-hidden="true"></span><span>Exit Product</span></button>
+        </div>
+      </div>
+      <p class="worker-action-error" role="alert" hidden></p>
+    </div>
+    <script type="module" src="/src/renderer/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1254" height="1254" viewBox="0 0 1254 1254">
+<title>chat</title><g opacity="0.99608"><path d="M0,0 L452,0 L452,53 L503,53 L504,97 L503,102 L552,102 L553,135 L553,309 L552,452 L504,452 L504,516 L503,520 L133,521 L132,565 L82,565 L82,603 L37,603 L37,620 L-51,620 L-51,452 L-100,452 L-100,102 L-51,102 L-51,53 L-1,52 Z M51,54 L50,72 L50,103 L-1,104 L-1,154 L-49,154 L-49,399 L-1,399 L-1,559 L50,559 L50,513 L97,513 L98,470 L453,470 L454,400 L501,399 L501,155 L497,154 L453,154 L453,104 L402,104 L401,54 Z " fill="#F9F1E0" transform="translate(401,330)" />
+<path d="M0,0 L71,0 L72,2 L72,71 L71,74 L0,74 L-1,68 Z " fill="#F9F1E1" transform="translate(452,570)" />
+<path d="M0,0 L72,0 L72,74 L0,74 Z " fill="#F9F1E1" transform="translate(591,570)" />
+<path d="M0,0 L71,0 L72,64 L71,74 L0,74 L-1,65 L-1,10 Z " fill="#F9F1E1" transform="translate(731,570)" />
+<path d="M0,0 L2,0 L3,10 L3,184 L2,327 L-46,327 L-46,391 L-47,394 L-418,394 L-418,393 L-48,393 L-48,326 L-47,325 L-1,325 Z " fill="#FAF5E5" transform="translate(951,455)" />
+<path d="M0,0 L48,0 L48,1 L2,1 L2,347 L49,347 L50,348 L50,515 L135,515 L135,500 L136,500 L136,517 L49,517 L49,349 L0,349 Z " fill="#FBF6E7" transform="translate(301,433)" />
+<path d="M0,0 L1,0 L1,50 L-46,50 L-46,295 L1,295 L1,297 L-47,297 L-48,296 L-48,50 L-47,49 L0,49 Z " fill="#FCF8E9" transform="translate(398,434)" />
+<path d="M0,0 L49,0 L49,2 L1,2 L1,66 L0,69 L-371,69 L-371,68 L-1,68 L-1,1 Z " fill="#FCFAEE" transform="translate(904,780)" />
+</g></svg>

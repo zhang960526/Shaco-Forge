@@ -1,0 +1,177 @@
+/* Settings-only presentation: shared geometry, explicit Braun / FAMICOM finishes. */
+.settings-backdrop {
+  position:absolute;inset:0;z-index:90;display:grid;place-items:center;padding:24px;
+  background:rgba(34,31,27,.32);backdrop-filter:blur(3px);
+}
+.shaco-settings {
+  --settings-paper:var(--surface-primary);--settings-deep:var(--surface-secondary);--settings-soft:var(--surface-elevated);
+  --settings-ink:var(--text-primary);--settings-muted:var(--text-muted);--settings-line:var(--border-default);
+  --settings-line-active:var(--border-subtle);--settings-control:var(--accent-primary);--settings-control-hover:var(--accent-hover);
+  --settings-selected:var(--selection-background);--settings-accent:var(--braun-indicator);--settings-danger:var(--status-error);
+  --settings-focus:var(--border-focus);
+  width:min(800px,100%);height:min(800px,100%);min-width:0;min-height:0;overflow:hidden;
+  display:grid;grid-template-rows:64px minmax(0,1fr) 32px;text-align:left;
+  color:var(--settings-ink);background:var(--settings-paper);border:1px solid var(--settings-line);border-radius:7px;
+  box-shadow:0 8px 28px rgba(39,34,28,.16);font:400 13px/1.5 var(--font-ui);
+}
+.shaco-settings .settings-header { display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 18px 0 24px; }
+.shaco-settings h2 { margin:0;font:600 18px/1.2 var(--font-display);letter-spacing:-.025em; }
+.shaco-settings h3 { margin:0;font:500 16px/1.45 var(--font-display); }
+.shaco-settings .settings-body { min-width:0;min-height:0;display:grid;grid-template-columns:176px minmax(0,1fr);gap:24px;padding:0 24px 16px 12px; }
+.shaco-settings .settings-nav { display:flex;flex-direction:column;align-items:stretch;gap:4px; }
+.shaco-settings .settings-nav button { display:flex;align-items:center;gap:9px;min-height:40px;padding:8px 12px;border:0;box-shadow:none;background:transparent;text-align:left;font:400 14px/1.5 var(--font-display); }
+.shaco-settings .settings-nav button:hover { background:var(--settings-deep); }
+.shaco-settings .settings-nav button[aria-current='page'] { color:var(--settings-ink);background:var(--settings-selected);font-weight:600;box-shadow:inset 2px 0 0 var(--settings-accent); }
+:root[data-theme-template] .shaco-settings .settings-nav button[aria-current='page'] .theme-icon { color:inherit; }
+.shaco-settings .settings-nav :is(.theme-icon,.control-icon) { width:18px;height:18px;flex:0 0 18px;color:inherit;line-height:18px;text-align:center; }
+.shaco-settings .settings-nav .theme-icon::before { width:18px;height:18px; }
+.shaco-settings .settings-content { min-width:0;min-height:0;overflow-y:auto;overflow-x:hidden;padding:0 0 16px;scrollbar-width:thin;scrollbar-color:var(--settings-line-active) transparent; }
+.shaco-settings .settings-page-title { margin:0 0 24px;padding-top:1px; }
+.shaco-settings .settings-page-heading { position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px; }
+.shaco-settings .settings-page-heading>button { position:absolute;right:0;top:0; }
+.shaco-settings .settings-description { margin:12px 0 0;color:var(--settings-muted);font:400 13px/1.65 var(--font-ui); }
+.shaco-settings .settings-columns { min-width:0; }
+.shaco-settings .settings-provider-list { display:flex;flex-direction:column;gap:8px; }
+.shaco-settings button { min-height:30px;padding:5px 11px;border:1px solid var(--settings-line);border-radius:4px;color:var(--settings-ink);background:var(--settings-soft);font:400 12px/1.35 var(--font-ui);transition:background-color 120ms ease,border-color 120ms ease,transform 70ms ease; }
+.shaco-settings button:hover:not(:disabled) { background:var(--settings-deep);border-color:var(--settings-line-active); }
+.shaco-settings button:active:not(:disabled) { transform:translateY(1px); }
+.shaco-settings button:disabled { color:var(--settings-muted);background:var(--settings-deep);opacity:.65;cursor:not-allowed; }
+.shaco-settings .settings-close { width:30px;height:30px;min-height:30px;padding:0;border:0;border-radius:3px;box-shadow:none;display:grid;place-items:center;color:var(--settings-control);background:transparent;font:400 24px/1 var(--font-ui); }
+.shaco-settings .settings-provider-row { display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:54px;padding:10px 14px;border:1px solid var(--settings-line);border-radius:5px;background:var(--settings-soft);text-align:left; }
+.shaco-settings .settings-provider-row.is-editing { border-color:var(--settings-line-active); }
+.shaco-settings .settings-provider-name { display:flex;align-items:center;min-width:0;gap:7px; }
+.shaco-settings .settings-provider-name strong { font:600 14px/normal var(--font-ui);overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+.shaco-settings .settings-custom-label { flex-shrink:0;color:var(--settings-muted);border:1px solid var(--settings-line);padding:2px 5px;border-radius:2px;font:400 11px/1.3 var(--font-ui); }
+.shaco-settings .settings-provider-actions { display:flex;align-items:center;gap:12px;flex:none; }
+.shaco-settings .settings-delete-provider { color:var(--settings-danger);padding:5px 9px;font-size:12px;line-height:18px; }
+.shaco-settings .settings-add-actions { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px; }
+.shaco-settings .settings-add-provider { display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:8px;border-style:dashed;background:transparent;color:var(--settings-control-hover);font:400 13px/1.5 var(--font-display); }
+.shaco-settings .settings-add-provider .control-icon { width:17px;height:17px; }
+.shaco-settings .settings-editor { min-width:0;margin-top:12px;padding:16px;background:var(--settings-deep);border:1px solid transparent;border-radius:5px; }
+.shaco-settings .settings-editor h3 { margin:0 0 16px;font-size:15px;overflow-wrap:anywhere; }
+.shaco-settings .settings-editor label { display:flex;flex-direction:column;gap:6px;min-width:0;margin:0 0 14px;color:var(--settings-muted);font:400 12px/1.5 var(--font-ui); }
+.shaco-settings input { width:100%;min-width:0;height:34px;padding:6px 10px;color:var(--settings-ink);background:var(--settings-soft);border:1px solid var(--settings-line);border-radius:3px;font:400 13px/1.5 var(--font-ui); }
+.shaco-settings input:disabled { color:var(--settings-muted);background:transparent;cursor:not-allowed; }
+.shaco-settings select { width:min(240px,100%);max-width:100%;height:34px;min-height:34px;padding:5px 10px;color:var(--settings-ink);background:var(--settings-soft);border:1px solid var(--settings-line);border-radius:4px;font:400 13px/1.5 var(--font-ui); }
+.shaco-settings select:hover { border-color:var(--settings-line-active); }
+.shaco-settings :is(button,input,select):focus-visible { outline:2px solid var(--settings-focus);outline-offset:2px; }
+.shaco-settings .settings-editor fieldset { min-width:0;border:0;border-top:1px solid var(--settings-line);padding:12px 0 0;margin:18px 0 0; }
+.shaco-settings legend { padding:0 6px 0 0;color:var(--settings-muted);font:400 12px/1.5 var(--font-ui); }
+.shaco-settings .model-row { justify-content:space-between;gap:6px;margin-bottom:7px; }
+.shaco-settings .model-row span { min-width:0;overflow-wrap:anywhere; }
+.shaco-settings .model-row button { flex:none; }
+.shaco-settings .settings-form-actions { display:flex;justify-content:flex-end;align-items:center;flex-wrap:wrap;gap:8px;margin-top:18px; }
+.shaco-settings .settings-form-actions button { min-height:36px;padding-inline:14px;font-size:13px; }
+.shaco-settings .settings-primary { font-weight:600;color:var(--settings-paper);background:var(--settings-control);border-color:var(--settings-control); }
+.shaco-settings .settings-primary:hover:not(:disabled) { background:var(--settings-control-hover); }
+.shaco-settings .settings-danger,.shaco-settings [role='alert'] { color:var(--settings-danger); }
+.shaco-settings [role='status'] { margin:12px 0 0;font-size:12px;overflow-wrap:anywhere; }
+.shaco-settings .appearance-settings { min-width:0;border:0;margin:0;padding:0; }
+.shaco-settings .theme-picker { min-width:0;padding:0 0 22px;margin:0 0 6px;border:0;border-bottom:1px solid var(--settings-line); }
+.shaco-settings .theme-picker legend { padding:0;color:var(--settings-ink);font:600 16px/1.5 var(--font-display); }
+.shaco-settings .theme-picker>p { margin:8px 0 14px;color:var(--settings-muted);font:400 13px/1.7 var(--font-ui); }
+.shaco-settings .theme-options { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px; }
+.shaco-settings .theme-option { position:relative;display:flex;align-items:center;gap:10px;min-width:0;min-height:65px;padding:10px 12px;border:1px solid var(--settings-line);border-radius:4px;background:var(--settings-soft);cursor:pointer;transition:background-color 110ms,border-color 110ms; }
+.shaco-settings .theme-option:hover { background:var(--settings-deep);border-color:var(--settings-line-active); }
+.shaco-settings .theme-option.is-selected { background:var(--message-user-surface);border-color:var(--settings-control);box-shadow:inset 2px 0 var(--settings-control); }
+.shaco-settings .theme-option:focus-within { outline:2px solid var(--settings-focus);outline-offset:2px; }
+.shaco-settings .theme-option input { position:absolute;width:1px;height:1px;opacity:0; }
+.shaco-settings .theme-color { flex:0 0 13px;width:13px;height:27px;border:1px solid var(--settings-line);border-radius:2px; }
+.shaco-settings .theme-color-famicom { background:#8e3734; }
+.shaco-settings .theme-color-braun { background:#cd5938; }
+.shaco-settings .theme-option-copy { display:flex;flex-direction:column;gap:3px;min-width:0;flex:1; }
+.shaco-settings .theme-option-copy strong { font:500 14px/1.45 var(--font-ui);overflow-wrap:anywhere; }
+.shaco-settings .theme-option-copy small { color:var(--settings-muted);font:400 12px/1.4 var(--font-ui); }
+.shaco-settings .theme-option>.control-icon { color:var(--settings-control);width:17px;height:17px; }
+.shaco-settings .settings-appearance { padding:20px 0 16px;border-bottom:1px solid var(--settings-line); }
+.shaco-settings .settings-appearance h3 { font:400 14px/1.5 var(--font-display); }
+.shaco-settings .settings-appearance-options { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px; }
+.shaco-settings .settings-appearance-options button { position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:82px;padding:1px 6px;background:transparent;font:400 13px/normal var(--font-ui); }
+.shaco-settings .settings-appearance-options button.is-selected { border-color:var(--settings-line-active);background:var(--message-user-surface);box-shadow:inset 0 -2px var(--settings-accent);font-weight:400; }
+.shaco-settings .appearance-check { position:absolute;top:7px;right:7px;width:13px;height:13px;color:var(--settings-accent); }
+.shaco-settings .settings-preference-row { min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:22px;margin:0;padding:20px 0;border-bottom:1px solid var(--settings-line); }
+.shaco-settings .settings-preference-row>span { font:400 14px/1.5 var(--font-display); }
+.shaco-settings .settings-preference-row select { flex:0 1 200px;min-width:112px; }
+.shaco-settings .settings-footer { display:flex;align-items:center;padding:0 24px;border-top:1px solid var(--settings-line);color:var(--settings-muted);background:var(--settings-paper);font:400 10px/1.5 var(--font-ui); }
+
+:root[data-theme-template='BRAUN'] .shaco-settings { --settings-muted:#6c6e66;--settings-danger:#a3462c;--settings-accent:#cd5938; }
+:root[data-theme-template='BRAUN'] .shaco-settings button { box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 1px 0 rgba(39,42,35,.04); }
+:root[data-theme-template='BRAUN'] .shaco-settings button:active:not(:disabled) { box-shadow:inset 0 1px 2px rgba(39,42,35,.15); }
+:root[data-theme-template='BRAUN'] .shaco-settings :is(.settings-close,.settings-provider-row,.settings-add-provider,.settings-nav button) { box-shadow:none; }
+:root[data-theme-template='BRAUN'] .shaco-settings .settings-nav button[aria-current='page'] { background:var(--settings-selected);box-shadow:inset 2px 0 0 var(--settings-accent); }
+:root[data-theme-template='BRAUN'] .shaco-settings select { box-shadow:inset 0 1px 0 rgba(255,255,255,.5); }
+:root[data-theme-template='BRAUN'] .shaco-settings .settings-primary { color:#f6f7f1;background:#3d4038;border-color:#31342d; }
+:root[data-theme-template='BRAUN'] .shaco-settings .settings-primary:hover:not(:disabled) { background:#2a2f25; }
+:root[data-theme-template='BRAUN'] .shaco-settings .settings-delete-provider { border:0;padding:3px 0;background:transparent;box-shadow:none; }
+:root[data-theme-template='BRAUN'] .shaco-settings .settings-delete-provider:hover:not(:disabled) { background:transparent;text-decoration:underline; }
+:root[data-theme-template='BRAUN'] .shaco-settings button:disabled { color:var(--settings-muted);background:var(--settings-deep);border-color:var(--settings-line);box-shadow:none; }
+:root[data-theme-template='BRAUN'][data-theme='dark'] .shaco-settings {
+  --settings-paper:#252724;--settings-deep:#30332d;--settings-soft:#2b2e28;--settings-ink:#e6e8df;--settings-muted:#a9aea0;
+  --settings-line:#4a5043;--settings-line-active:#737e64;--settings-selected:#3f4637;--settings-focus:#d47b5e;
+}
+
+:root[data-theme-template='FAMICOM'] .shaco-settings {
+  --font-display:'Shaco FAMICOM Pixel',Zpix,monospace;
+  --settings-line-active:var(--famicom-line-red);--settings-accent:var(--settings-control);--settings-danger:var(--settings-control-hover);
+  border:3px double var(--settings-control);border-radius:3px;box-shadow:0 3px 0 var(--settings-control-hover),0 12px 28px rgba(50,25,20,.18);
+}
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-header { border-bottom:2px solid var(--settings-control);margin-bottom:12px; }
+:root[data-theme-template='FAMICOM'] .shaco-settings h2 { color:var(--settings-control-hover);font:400 24px/1.2 var(--font-display);letter-spacing:normal; }
+:root[data-theme-template='FAMICOM'] .shaco-settings h2::after { content:' //';color:var(--settings-control);font-size:18px; }
+:root[data-theme-template='FAMICOM'] .shaco-settings h3 { color:var(--settings-control-hover);font-size:18px; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-page-title h3::before { content:'▪';padding-right:10px;color:var(--settings-control); }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-nav { border-right:1px dashed var(--settings-line-active);padding-right:8px; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-nav button { min-height:44px;font:400 16px/1.5 var(--font-display);padding:6px 9px;border:3px double transparent;border-radius:2px;box-shadow:none; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-nav button[aria-current='page'] { background:var(--settings-control);color:#fff7e9;border-color:var(--settings-paper);outline:1px solid var(--settings-control);outline-offset:-1px;box-shadow:none; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-nav .control-icon { color:var(--settings-control); }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-nav button[aria-current='page'] .control-icon { color:inherit; }
+:root[data-theme-template='FAMICOM'] .shaco-settings :is(button,select) { border-color:var(--settings-control);border-radius:2px;box-shadow:1px 2px 0 var(--settings-line);font-family:var(--font-display);font-size:14px; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-provider-row { position:relative;min-height:60px;padding:10px 20px 10px 17px;border:3px double var(--settings-control);border-radius:2px;box-shadow:inset 0 0 0 2px var(--settings-deep);font:400 16px/1.5 var(--font-display); }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-provider-row::before { content:'';position:absolute;top:15px;bottom:15px;left:3px;width:3px;background:repeating-linear-gradient(to bottom,var(--settings-control) 0 2px,transparent 2px 4px); }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-provider-row::after { content:'';position:absolute;right:4px;top:calc(50% - 9px);width:7px;height:18px;background:repeating-linear-gradient(to right,var(--settings-control) 0 1px,transparent 1px 3px); }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-provider-name strong { font:400 16px/normal var(--font-display); }
+:root[data-theme-template='FAMICOM'] .shaco-settings .theme-option { border:3px double var(--settings-line);border-radius:2px; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .theme-option.is-selected { border-color:var(--settings-control); }
+:root[data-theme-template='FAMICOM'] .shaco-settings .theme-option-copy strong { font-family:var(--font-display);font-size:16px; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-appearance { border-bottom:1px dashed var(--settings-line-active); }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-appearance h3 { color:var(--settings-control-hover);font-size:18px; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-appearance-options button { border:3px double var(--settings-control);border-radius:2px;font-family:var(--font-display);font-size:16px;box-shadow:none; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-appearance-options button.is-selected { background:var(--settings-control);color:#fff7e9;box-shadow:inset 0 0 0 2px var(--settings-paper),1px 2px 0 var(--settings-control-hover); }
+:root[data-theme-template='FAMICOM'] .shaco-settings .appearance-check { color:inherit; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-danger { background:var(--settings-control);border-color:var(--settings-control-hover);color:#fff7e9; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-delete-provider { background:var(--settings-control);border-color:var(--settings-control-hover);color:#fff7e9;box-shadow:none;font-size:12px; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-add-provider { box-shadow:none; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-editor { border:1px dashed var(--settings-line-active);border-radius:2px; }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-preference-row { border-bottom:1px dashed var(--settings-line-active); }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-close { border:0;background:transparent;box-shadow:none;font:400 24px/1 var(--font-ui); }
+:root[data-theme-template='FAMICOM'] .shaco-settings .settings-footer { border-top:2px solid var(--settings-control); }
+:root[data-theme-template='FAMICOM'][data-theme='light'] .shaco-settings { --settings-line-active:#b7655f; }
+:root[data-theme-template='FAMICOM'][data-theme='dark'] .shaco-settings {
+  --settings-paper:#282120;--settings-deep:#352a28;--settings-soft:#302625;--settings-ink:#eee2d7;--settings-muted:#b6a69c;
+  --settings-line:#55423d;--settings-line-active:#966b60;--settings-control:#bd8980;--settings-control-hover:#e0b4a7;--settings-selected:#553b36;--settings-focus:#d9a79b;
+}
+
+@media (max-width:720px) {
+  .settings-backdrop { padding:12px; }
+  .shaco-settings { height:100%;max-height:850px;grid-template-rows:58px minmax(0,1fr) 36px; }
+  .shaco-settings .settings-header { padding:0 12px 0 16px; }
+  .shaco-settings .settings-body { grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr);gap:16px;padding:0 16px 12px; }
+  .shaco-settings .settings-nav { flex-direction:row;overflow-x:auto;padding:0 0 8px;border-bottom:1px solid var(--settings-line); }
+  .shaco-settings .settings-nav button { flex:1 0 auto;min-height:36px;padding:7px 8px;gap:5px;font-size:12px; }
+  .shaco-settings .settings-nav :is(.theme-icon,.control-icon) { width:16px;height:16px;flex-basis:16px; }
+  .shaco-settings .settings-content { padding-right:2px; }
+  .shaco-settings .settings-preference-row { gap:12px; }
+  .shaco-settings .settings-footer { padding-inline:16px;font-size:9px; }
+  :root[data-theme-template='FAMICOM'] .shaco-settings .settings-nav { border-right:0;padding-right:0; }
+  :root[data-theme-template='FAMICOM'] .shaco-settings .settings-nav button { min-height:36px;font-size:13px; }
+}
+@media (max-width:440px) {
+  .settings-backdrop { padding:8px; }
+  .shaco-settings .settings-body { padding-inline:12px; }
+  .shaco-settings .settings-editor { padding:12px; }
+  .shaco-settings .settings-preference-row { flex-wrap:wrap;align-items:flex-start; }
+  .shaco-settings .settings-preference-row select { margin-left:auto; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .shaco-settings * { transition:none !important; }
+}

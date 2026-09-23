@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254">
+  <title>folder</title>
+  <g transform="translate(258.25234 264.69159) scale(30.728972)">
+    <path fill="none" stroke="#f9f3e8" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"
+        d="M2 10V5.3C2 4.582 2.582 4 3.3 4H8.5Q8.95 4 9.27 4.32L11.6 6.6H20.7C21.418 6.6 22 7.182 22 7.9V10"/>
+      <rect fill="#f9f3e8" x="1.2" y="9.3" width="21.6" height="11.7" rx="1.6"/>
+  </g>
+</svg>
